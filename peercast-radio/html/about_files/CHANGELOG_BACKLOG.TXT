@@ -1,0 +1,95 @@
+Peercast Radio アドオン for Firefox のチェンジログとバックログ
+
+■済み(実装済み機能や対策済みの問題)
+[Ver. 0.1.0a1] (2010/07/02)
+- チャンネル一覧
+- 外部プレイヤーの起動
+- コンタクトURL の表示
+- Peercast URL の表示
+- 環境設定(ネットワーク、イエローページ、フィルタ、外部プレイヤー)
+[Ver. 0.1.0a2] (2010/07/04)
+- [FIXED]プレイヤーソフトに渡すURL の後ろに余計な文字列を削除
+- 外部プレイヤーへ渡すオプションを指定する設定項目を追加
+- スタイルシートのスコープを指定
+- ダイアログを表示するツールバーメニュー項目の最後に「...」を追記
+[Ver. 0.1.0a3] (2010/08/13)
+- コンテキストメニューに「チャンネル名をWeb検索」を追加
+[Ver. 0.1.0a4] (2011/02/12)
+- Firefox 4.0 対応
+- 初期設定のYP にhttp://livion.tv/yp/ を追加
+- 「Peercast Radio について」の文字化けを修正
+[Ver. 0.1.0a5] (2011/05/24)
+- Firefox 5.0 対応
+[Ver. 0.1.0a6] (2011/08/17)
+- Firefox 6.0 対応
+[Ver. 0.1.0a7] (2011/08/21)
+- Firefox 7.0 対応
+[Ver. 0.1.0a8] (2011/11/07)
+- Firefox 8.0 対応
+- 初期登録イエローページの整理
+
+■未(未実装の機能や不具合)
+- フィルタ毎に行の背景色を変える
+- 配信開始検知のよりよいロジック
+- タイムアウト処理
+- Firefox テーマおよびプラットフォーム変更時の色重なりの確認
+- コンテキストメニュー項目、ダイアログのボタンの活性/非活性
+- Windows でチャンネル読込とフィルタのアイコンが少し上に配置されている
+- 頻繁な再読込を抑止
+- (必要?)peercast: スキーマ対応
+- (必要?)通知時に音を鳴らす
+- (必要?)英語ロケール対応
+- (必要?)正規表現でフィルタ
+- (必要?)アクセスキー
+- (必要?)サイドバーを最小幅にした時のレイアウトの考慮
+- チャンネル一覧再読込は、削除＆追加ではなく、差分更新に
+- 初回インストール時にFirefox ツールバーにアドオンのアイコンを追加
+- 外部プレイヤーを複数登録
+- Mac OSX 上でのスタイルの改善
+
+■その他メモ
+- プラットフォーム/外部プレイヤーのPeercast ストリーム動作確認
+    - Windows (Vista Home SP2 32bit, peercast v0.1218(VP0026))
+                    WMP     VLC     PCWMP
+        -----------+-------+-------+-------+
+        WMV/WMA     OK      OK*2    OK
+        MP3         OK      OK      NG
+        OGG         NG      OK      NG
+    - Linux (kernel 2.6.32-22 32bit, peercast v0.1218(VP0027-1),             
+        libmms 0.4-2)
+                    Totem   VLC     SMP     MP
+        -----------+-------+-------+-------+-------+
+        WMV/WMA     NG      OK*2    OK      OK
+        MP3         OK      OK      OK      OK*1
+        OGG         OK      OK      OK      OK*1
+    *1) ウィンドウがでないので注意
+    *2) vlc でWMV/WMA を視聴する場合はmmsh: にした方がよいかも?
+- Peercast Radio
+    - フィルタの初期値
+        name                target      cond    value       active
+        -------------------+-----------+-------+-----------+-------+
+        お気に入り          channel     ex      ""          true
+        人気のチャンネル    listener    gt      100         false
+        視聴者数非公開      listener    eq      -1          false
+        新しいチャンネル    time        lt      15          false
+        高ビットレート      bitrate     gt      1000        false
+        GAME                comment     in      "GAME"      false
+        ラジオ              mediatype   ex      "OGG|MP3"   false
+        YP 運用             listener    eq      -9          false
+- XUL について
+    - プラットフォームによる差異
+        - groupbox の枠線の描画(Linux の場合、デフォルトで描画されない。
+          border を指定すると描画されるが、caption 文字と重なる)
+        - caption の背景色
+          (Windows は背景色のシステムカラーでLinux はtransparent?)
+    - toolbarbutton type=menu-button のcheked 属性は仕様にはないけど動く
+        - Windows ではchecked の状態の時にボタンのpadding が大きくなる。
+          hover させると元に戻る。
+          toolbarbutton[checked="true"] { padding: 0px !important;} を
+          指定して回避
+    - コンテキストメニューのクリック座標が親ウィンドウの矩形上にないと、
+        親ウィンドウにredraw の要求が発生しないみたいなので、
+        tree.treeBoxObject.invalidateRow() で再描画要
+    - Tree の選択行を取得するcurrentIndex は選択していなくても-1 以外が返る
+        tree.view.selection.isSelected(idx) で再確認要
+

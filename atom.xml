@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Memorandum!</title>
+  <icon>http://ktkr3d.github.io/favicon.ico</icon>
+  <subtitle>めもらん!</subtitle>
+  <link href="http://ktkr3d.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://ktkr3d.github.io/"/>
+  <updated>2021-02-20T22:15:03.000Z</updated>
+  <id>http://ktkr3d.github.io/</id>
+  
+  <author>
+    <name>ktkr3d</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GNOME 40</title>
+    <link href="http://ktkr3d.github.io/2021/02/21/GNOME-40/"/>
+    <id>http://ktkr3d.github.io/2021/02/21/GNOME-40/</id>
+    <published>2021-02-20T22:15:03.000Z</published>
+    <updated>2021-02-20T22:15:03.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/fedora_gnome_40.png&quot; alt=&quot;fedora_gnome_40.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://copr.fedorainfracloud.org/coprs/haeckerfelix/gnome-shell-40/&quot;&gt;https://copr.fedorainfracloud.org/coprs/haeckerfelix/gnome-shell-40/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GNOME 40 アルファ版を起動してみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="gnome" scheme="http://ktkr3d.github.io/tags/gnome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Electron App</title>
+    <link href="http://ktkr3d.github.io/2020/11/17/Electron-App/"/>
+    <id>http://ktkr3d.github.io/2020/11/17/Electron-App/</id>
+    <published>2020-11-16T23:16:48.000Z</published>
+    <updated>2020-11-16T23:16:48.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/wowslhp.png&quot; alt=&quot;wowslhp&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/wowslhp&quot;&gt;https://github.com/ktkr3d/wowslhp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.electronjs.org/&quot;&gt;Electron&lt;/a&gt;で簡単なアプリケーションを作成してみました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/electron/electron-quick-start-typescript&quot;&gt;electron-quick-start-typescript&lt;/a&gt; をカスタマイズ&lt;/li&gt;
+&lt;li&gt;単純に、指定したURL をBrowserWindow で表示&lt;br&gt;&lt;code&gt;https://worldofwarcraft.com/en-us/shadowlands&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/electron-userland/electron-builder&quot;&gt;electron-builder&lt;/a&gt;でインストーラを生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;World of Warcraft Shadowlands のリリース時刻までカウントダウンします。残り一週間ですね。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="electron" scheme="http://ktkr3d.github.io/tags/electron/"/>
+    
+    <category term="typescript" scheme="http://ktkr3d.github.io/tags/typescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenVPN on WSL2</title>
+    <link href="http://ktkr3d.github.io/2020/08/24/OpenVPN-on-WSL2/"/>
+    <id>http://ktkr3d.github.io/2020/08/24/OpenVPN-on-WSL2/</id>
+    <published>2020-08-24T13:55:34.000Z</published>
+    <updated>2020-08-24T13:55:34.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/openvpn_wsl.png&quot; alt=&quot;openvpn wsl&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/pritunl/pritunl&quot;&gt;https://github.com/pritunl/pritunl&lt;/a&gt;&lt;br&gt;WSL2 の環境にOpenVPN を導入してみました。&lt;br&gt;Pritunl を管理ツールとして使いました。&lt;br&gt;外出先から自宅環境のファイルサーバの参照、EPGStation の操作、WSL2 への接続、Windows 10 へのリモートデスクトップ接続、等ができます。&lt;br&gt;今まではRaspberry Pi をVPN サーバにしていました。&lt;br&gt;リスクがある気もしますが移行を検討してみます。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="wsl" scheme="http://ktkr3d.github.io/tags/wsl/"/>
+    
+    <category term="openvpn" scheme="http://ktkr3d.github.io/tags/openvpn/"/>
+    
+    <category term="pritunl" scheme="http://ktkr3d.github.io/tags/pritunl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode on Android</title>
+    <link href="http://ktkr3d.github.io/2020/08/23/VSCode-on-Android/"/>
+    <id>http://ktkr3d.github.io/2020/08/23/VSCode-on-Android/</id>
+    <published>2020-08-23T11:00:29.000Z</published>
+    <updated>2020-08-23T11:00:29.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/vscode-android.jpg&quot; alt=&quot;vscode-android&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/MFDGaming/ubuntu-in-termux&quot;&gt;https://github.com/MFDGaming/ubuntu-in-termux&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/cdr/code-server&quot;&gt;https://github.com/cdr/code-server&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Android 上でVisual Studio Code を利用してみました。&lt;br&gt;Samsung Dex でディスプレイに表示しています。&lt;br&gt;そこそこ動きますが文字入力操作が難点ですね。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="android" scheme="http://ktkr3d.github.io/tags/android/"/>
+    
+    <category term="vscode" scheme="http://ktkr3d.github.io/tags/vscode/"/>
+    
+    <category term="dex" scheme="http://ktkr3d.github.io/tags/dex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux Terminal Shortcuts</title>
+    <link href="http://ktkr3d.github.io/2020/08/09/Linux-Terminal-Shortcuts/"/>
+    <id>http://ktkr3d.github.io/2020/08/09/Linux-Terminal-Shortcuts/</id>
+    <published>2020-08-09T01:54:48.000Z</published>
+    <updated>2020-08-09T01:54:48.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/shortcuts.png&quot; alt=&quot;shortcuts&quot;&gt;&lt;br&gt;Linux 端末のショートカットのチートシートをman のように表示してみました。&lt;br&gt;&lt;code&gt;Alt+.&lt;/code&gt; (前回の引数を貼り付け) は&lt;code&gt;mkdir&lt;/code&gt; した直後に&lt;code&gt;cd&lt;/code&gt; する時に便利ですね。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="linux" scheme="http://ktkr3d.github.io/tags/linux/"/>
+    
+    <category term="bash" scheme="http://ktkr3d.github.io/tags/bash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 5.0.0</title>
+    <link href="http://ktkr3d.github.io/2020/08/03/Hexo-5-0-0/"/>
+    <id>http://ktkr3d.github.io/2020/08/03/Hexo-5-0-0/</id>
+    <published>2020-08-02T18:31:29.000Z</published>
+    <updated>2020-08-02T18:31:29.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://hexo.io/news/2020/07/29/hexo-5-released/&quot;&gt;https://hexo.io/news/2020/07/29/hexo-5-released/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hexo 5.0.0 がリリースされていたので導入してみました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;さらに高速になったようです。&lt;/li&gt;
+&lt;li&gt;メモリ使用量が減った気がします。&lt;/li&gt;
+&lt;li&gt;フロントマターに&lt;code&gt;published: false&lt;/code&gt;を設定できるようになりました。以下を追記しました。&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;figcaption&gt;&lt;span&gt;./scalfolds/post.md&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;published: true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+    <category term="hexo" scheme="http://ktkr3d.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Extraterm</title>
+    <link href="http://ktkr3d.github.io/2020/08/02/Extraterm/"/>
+    <id>http://ktkr3d.github.io/2020/08/02/Extraterm/</id>
+    <published>2020-08-02T07:38:24.000Z</published>
+    <updated>2020-08-02T07:38:24.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/extraterm_frame.png&quot; alt=&quot;extraterm_frame&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://extraterm.org/&quot;&gt;https://extraterm.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/sedwards2009/extraterm&quot;&gt;https://github.com/sedwards2009/extraterm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Extraterm を使ってみました。&lt;br&gt;シェル統合機能やカーソルモードが独特で良いです。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="extraterm" scheme="http://ktkr3d.github.io/tags/extraterm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EPGStation PVR addon for Kodi</title>
+    <link href="http://ktkr3d.github.io/2020/08/02/EPGStation-PVR-addon-for-Kodi/"/>
+    <id>http://ktkr3d.github.io/2020/08/02/EPGStation-PVR-addon-for-Kodi/</id>
+    <published>2020-08-01T20:44:47.000Z</published>
+    <updated>2020-08-01T20:44:47.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/kodi_pvr_epgstation_android.jpg&quot; alt=&quot;kodi_pvr_epgstation_android&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/Harekaze/pvr.epgstation&quot;&gt;https://github.com/Harekaze/pvr.epgstation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;EPGStation 用のKodi PVR クライントがリリースされていたのでWindows 10 とAndroid の環境で利用してみました。とても便利ですね。&lt;br&gt;また、Android NDK の環境をWSL 上に構築してAndroid 版をビルドしてみました。&lt;/p&gt;
+&lt;h4 id=&quot;2020-08-11-追記&quot;&gt;&lt;a href=&quot;#2020-08-11-追記&quot; class=&quot;headerlink&quot; title=&quot;2020-08-11 追記&quot;&gt;&lt;/a&gt;2020-08-11 追記&lt;/h4&gt;&lt;p&gt;README.md に記載のとおりVisual Studio 2019 で開発されています。&lt;br&gt;Windows 10 64bit の場合、Kodi 64bit の他にMSVC ラインタイム(vc_redist.x64.exe)をインストールしないといけないようです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;エラーログ抜粋(MSVC ラインタイムをインストールしていない環境)&lt;figure class=&quot;highlight text&quot;&gt;&lt;figcaption&gt;&lt;span&gt;%APPDATA%\Kodi\kodi.log&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ERROR: Win32DllLoader::Load: Failed to load &amp;quot;C:\Users\&amp;lt;user_name&amp;gt;\AppData\Roaming\Kodi\addons\pvr.epgstation\pvr.epgstation.dll&amp;quot; with error 126: &amp;quot;The specified module could not be found.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;利用しているDLL&lt;figure class=&quot;highlight text&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;cd %APPDATA%&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;dumpbin.exe /IMPORTS Kodi\addons\pvr.epgstation\pvr.epgstation.dll | find &amp;quot;.dll&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Dump of file Kodi\addons\pvr.epgstation\pvr.epgstation.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    KERNEL32.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    MSVCP140.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    VCRUNTIME140_1.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    VCRUNTIME140.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    api-ms-win-crt-stdio-l1-1-0.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    api-ms-win-crt-string-l1-1-0.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    api-ms-win-crt-runtime-l1-1-0.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    api-ms-win-crt-time-l1-1-0.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    api-ms-win-crt-convert-l1-1-0.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    api-ms-win-crt-heap-l1-1-0.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    api-ms-win-crt-math-l1-1-0.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    api-ms-win-crt-locale-l1-1-0.dll&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+    <category term="kodi" scheme="http://ktkr3d.github.io/tags/kodi/"/>
+    
+    <category term="epgstation" scheme="http://ktkr3d.github.io/tags/epgstation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Enabling sound in WSL</title>
+    <link href="http://ktkr3d.github.io/2020/08/01/Enabling-sound-in-WSL/"/>
+    <id>http://ktkr3d.github.io/2020/08/01/Enabling-sound-in-WSL/</id>
+    <published>2020-08-01T05:06:52.000Z</published>
+    <updated>2020-08-01T05:06:52.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/moc-on-wsl2.png&quot; alt=&quot;moc-on-wsl2&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://x410.dev/cookbook/wsl/enabling-sound-in-wsl-ubuntu-let-it-sing/&quot;&gt;https://x410.dev/cookbook/wsl/enabling-sound-in-wsl-ubuntu-let-it-sing/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/&quot;&gt;https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PulseAudio を使ってWSL2 上でサウンドを再生できるようにしてみました。&lt;br&gt;Extraterm 上でMOC(Music on Console) を利用してみました。&lt;br&gt;Visual Studio Code のターミナルでも実行できます。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="wsl" scheme="http://ktkr3d.github.io/tags/wsl/"/>
+    
+    <category term="moc" scheme="http://ktkr3d.github.io/tags/moc/"/>
+    
+    <category term="pulseaudio" scheme="http://ktkr3d.github.io/tags/pulseaudio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EPGStation/Mirakurun on WSL</title>
+    <link href="http://ktkr3d.github.io/2020/07/12/EPGStation-on-WSL/"/>
+    <id>http://ktkr3d.github.io/2020/07/12/EPGStation-on-WSL/</id>
+    <published>2020-07-11T22:04:17.000Z</published>
+    <updated>2020-07-11T22:04:17.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/epgstation.drawio.svg&quot; alt=&quot;epgstation とりあえず版&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/l3tnun/EPGStation&quot;&gt;https://github.com/l3tnun/EPGStation&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/Chinachu/Mirakurun&quot;&gt;https://github.com/Chinachu/Mirakurun&lt;/a&gt;&lt;br&gt;Chianchu の調子が悪くなったのでEPGStation に乗り換えてみました。&lt;br&gt;EPGStation とMirakurun をWSL 上に構築しました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="wsl" scheme="http://ktkr3d.github.io/tags/wsl/"/>
+    
+    <category term="mirakurun" scheme="http://ktkr3d.github.io/tags/mirakurun/"/>
+    
+    <category term="epgstation" scheme="http://ktkr3d.github.io/tags/epgstation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SheetUI</title>
+    <link href="http://ktkr3d.github.io/2020/07/10/SheetUI/"/>
+    <id>http://ktkr3d.github.io/2020/07/10/SheetUI/</id>
+    <published>2020-07-09T22:19:53.000Z</published>
+    <updated>2020-07-09T22:19:53.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/sheetui.png&quot; alt=&quot;sheetui&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://sheetui.com/&quot;&gt;https://sheetui.com/&lt;/a&gt;&lt;br&gt;SheetUI でGoogle スプレッドシートのデータをWeb ページで可視化してみました。&lt;br&gt;ARMORY ボタンでBlizzard の各キャラクタのページに遷移します。&lt;br&gt;GUIDE ボタンで各キャラクタのクラス/スペックに応じたWowHead ガイドに遷移します。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="wow" scheme="http://ktkr3d.github.io/tags/wow/"/>
+    
+    <category term="sheetui" scheme="http://ktkr3d.github.io/tags/sheetui/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>USB support to WSL2</title>
+    <link href="http://ktkr3d.github.io/2020/07/06/USB-support-to-WSL2/"/>
+    <id>http://ktkr3d.github.io/2020/07/06/USB-support-to-WSL2/</id>
+    <published>2020-07-06T09:20:40.000Z</published>
+    <updated>2020-07-06T09:20:40.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/rpasek/usbip-wsl2-instructions&quot;&gt;https://github.com/rpasek/usbip-wsl2-instructions&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/cezanne/usbip-win&quot;&gt;https://github.com/cezanne/usbip-win&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://snowstar.org/2020/06/14/wsl2-usb-via-usbip/&quot;&gt;https://snowstar.org/2020/06/14/wsl2-usb-via-usbip/&lt;/a&gt;&lt;br&gt;WSL のカーネルをカスタムしてUSB デバイスにアクセスしてみました。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ uname -r -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4.19.104-microsoft-standard &lt;span class=&quot;comment&quot;&gt;#1 SMP Mon Jul 6 18:00:19 JST 2020&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ lsusb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+    <category term="wsl" scheme="http://ktkr3d.github.io/tags/wsl/"/>
+    
+    <category term="usb" scheme="http://ktkr3d.github.io/tags/usb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ray tracing in Nim on WSL</title>
+    <link href="http://ktkr3d.github.io/2020/07/02/Ray-tracing-in-Nim-on-WSL/"/>
+    <id>http://ktkr3d.github.io/2020/07/02/Ray-tracing-in-Nim-on-WSL/</id>
+    <published>2020-07-02T08:36:31.000Z</published>
+    <updated>2020-07-02T08:36:31.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/trace-of-radiance.png&quot; alt=&quot;trace-of-radiance&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://nim-lang.org/blog/2020/06/30/ray-tracing-in-nim.html&quot;&gt;https://nim-lang.org/blog/2020/06/30/ray-tracing-in-nim.html&lt;/a&gt;&lt;br&gt;WSL 上のNim 言語でレイトレースしてみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="nim" scheme="http://ktkr3d.github.io/tags/nim/"/>
+    
+    <category term="raytrace" scheme="http://ktkr3d.github.io/tags/raytrace/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WSL - Ubuntu 20.04 LTS</title>
+    <link href="http://ktkr3d.github.io/2020/06/19/WSL-Ubuntu-20-04-LTS/"/>
+    <id>http://ktkr3d.github.io/2020/06/19/WSL-Ubuntu-20-04-LTS/</id>
+    <published>2020-06-19T09:39:10.000Z</published>
+    <updated>2020-06-19T09:39:10.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;WSL のUbuntu 20.04 LTS が公開されていたのでUbuntu 18.04 LTS から移行しました。&lt;/p&gt;
+&lt;p&gt;マイクロソフトストアには以下の3つのUbuntu が存在しています。「Ubuntu」からは&lt;code&gt;do-release-upgrade&lt;/code&gt;でバージョンアップできるけれど、「Ubuntu 18.04 LTS」からはバージョンアップできないんですね。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu&lt;/li&gt;
+&lt;li&gt;Ubuntu-18.04&lt;/li&gt;
+&lt;li&gt;Ubuntu-20.04&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="wsl" scheme="http://ktkr3d.github.io/tags/wsl/"/>
+    
+    <category term="ubuntu" scheme="http://ktkr3d.github.io/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 10 Build 19645 + WSL 2</title>
+    <link href="http://ktkr3d.github.io/2020/06/11/Windows-10-Build-19645-WSL-2/"/>
+    <id>http://ktkr3d.github.io/2020/06/11/Windows-10-Build-19645-WSL-2/</id>
+    <published>2020-06-11T14:49:48.000Z</published>
+    <updated>2020-06-11T14:49:48.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel&quot;&gt;https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Windows 10 Insider Preview Build 19645 をインストールしたらWSL2 が起動しなくなりました。Kernel の更新方法が変わったようです。&lt;/p&gt;
+&lt;p&gt;以下のMSI をインストールすると復帰しました。&lt;br&gt;&lt;a href=&quot;https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi&quot;&gt;https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2020-06-18-追記&quot;&gt;&lt;a href=&quot;#2020-06-18-追記&quot; class=&quot;headerlink&quot; title=&quot;2020-06-18 追記&quot;&gt;&lt;/a&gt;2020-06-18 追記&lt;/h4&gt;&lt;p&gt;Windows 10 Insider Preview Build 20150 へ更新することで、&lt;br&gt;コマンドプロンプトから&lt;code&gt;wsl --update&lt;/code&gt; で更新できるようになったようです。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;C:\&amp;gt;wsl --update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;更新をチェック中...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;利用できる更新はありません。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;カーネル バージョン: 4.19.104&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+    <category term="wsl" scheme="http://ktkr3d.github.io/tags/wsl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Marp for VS Code</title>
+    <link href="http://ktkr3d.github.io/2020/05/27/Marp-for-VS-Code/"/>
+    <id>http://ktkr3d.github.io/2020/05/27/Marp-for-VS-Code/</id>
+    <published>2020-05-26T18:12:18.000Z</published>
+    <updated>2020-05-26T18:12:18.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://marp.app/&quot;&gt;https://marp.app/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/marp-team/marp-vscode&quot;&gt;https://github.com/marp-team/marp-vscode&lt;/a&gt;&lt;br&gt;Marp はMarkdown でスライドショーを作成できるツールです。&lt;br&gt;Marp for VS Code を使ってみました。&lt;br&gt;Visual Studio Code 上でMarp を使えるようになったんですね。&lt;/p&gt;
+&lt;h4 id=&quot;2020-06-05-追記&quot;&gt;&lt;a href=&quot;#2020-06-05-追記&quot; class=&quot;headerlink&quot; title=&quot;2020-06-05 追記&quot;&gt;&lt;/a&gt;2020-06-05 追記&lt;/h4&gt;&lt;p&gt;Visual Studio Code 上でいろいろ書けるようになりました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;スライド本体(Markdown 形式)&lt;br&gt;Marp for VS Codeで記述&lt;/li&gt;
+&lt;li&gt;図形(Draw.io SVG形式)&lt;br&gt;Draw.io VS Code Integration で描画してSVG 形式で出力&lt;/li&gt;
+&lt;li&gt;グラフ(Vega SVG形式)&lt;br&gt;Vega Viewer でJSON データをSVG 形式で出力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2020-07-08-追記&quot;&gt;&lt;a href=&quot;#2020-07-08-追記&quot; class=&quot;headerlink&quot; title=&quot;2020-07-08 追記&quot;&gt;&lt;/a&gt;2020-07-08 追記&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;目次&lt;/li&gt;
+&lt;li&gt;無理やり感のある段組み&lt;/li&gt;
+&lt;li&gt;地図&lt;/li&gt;
+&lt;li&gt;テーマカスタマイズ&lt;/li&gt;
+&lt;li&gt;ページ番号非表示&lt;/li&gt;
+&lt;/ul&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/images/sample-presentation.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
+	&lt;/div&gt;</summary>
+    
+    
+    
+    
+    <category term="markdown" scheme="http://ktkr3d.github.io/tags/markdown/"/>
+    
+    <category term="marp" scheme="http://ktkr3d.github.io/tags/marp/"/>
+    
+    <category term="vscode" scheme="http://ktkr3d.github.io/tags/vscode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Terminus</title>
+    <link href="http://ktkr3d.github.io/2020/05/21/Terminus/"/>
+    <id>http://ktkr3d.github.io/2020/05/21/Terminus/</id>
+    <published>2020-05-21T09:50:27.000Z</published>
+    <updated>2020-05-21T09:50:27.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://eugeny.github.io/terminus/&quot;&gt;https://eugeny.github.io/terminus/&lt;/a&gt;&lt;br&gt;Windows の端末エミュレータをTerminus に切り替えました。&lt;/p&gt;
+&lt;p&gt;いろいろありますね。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ConEmu/Cmder&lt;br&gt;&lt;a href=&quot;https://conemu.github.io/&quot;&gt;https://conemu.github.io/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://cmder.net/&quot;&gt;https://cmder.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fluent Terminal&lt;br&gt;&lt;a href=&quot;https://github.com/felixse/FluentTerminal&quot;&gt;https://github.com/felixse/FluentTerminal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Terminus&lt;br&gt;&lt;a href=&quot;https://github.com/Eugeny/terminus&quot;&gt;https://github.com/Eugeny/terminus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Windows Terminal&lt;br&gt;&lt;a href=&quot;https://github.com/microsoft/terminal&quot;&gt;https://github.com/microsoft/terminal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="terminus" scheme="http://ktkr3d.github.io/tags/terminus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Diagrams - VS Code</title>
+    <link href="http://ktkr3d.github.io/2020/05/19/Diagrams-VS-Code/"/>
+    <id>http://ktkr3d.github.io/2020/05/19/Diagrams-VS-Code/</id>
+    <published>2020-05-18T20:09:14.000Z</published>
+    <updated>2020-05-18T20:09:14.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/grouped_workers.png&quot; alt=&quot;grouped_workers&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://diagrams.mingrammer.com/&quot;&gt;https://diagrams.mingrammer.com/&lt;/a&gt;&lt;br&gt;Diagrams でシステム構成図を出力してみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="vscode" scheme="http://ktkr3d.github.io/tags/vscode/"/>
+    
+    <category term="diagrams" scheme="http://ktkr3d.github.io/tags/diagrams/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Draw.io VS Code Integration</title>
+    <link href="http://ktkr3d.github.io/2020/05/18/Draw-io-VS-Code-Integration/"/>
+    <id>http://ktkr3d.github.io/2020/05/18/Draw-io-VS-Code-Integration/</id>
+    <published>2020-05-17T22:45:24.000Z</published>
+    <updated>2020-05-17T22:45:24.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/sample.drawio.svg&quot; alt=&quot;sample.drawio.svg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio&quot;&gt;https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/hediet/vscode-drawio&quot;&gt;https://github.com/hediet/vscode-drawio&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Visual Studio Code でDraw.io を使う拡張が公開されたので使ってみました。&lt;br&gt;Visio みたいで便利ですね。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="vscode" scheme="http://ktkr3d.github.io/tags/vscode/"/>
+    
+    <category term="draw.io" scheme="http://ktkr3d.github.io/tags/draw-io/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sharing Folders for VMs</title>
+    <link href="http://ktkr3d.github.io/2020/05/08/Sharing-Folders-for-VMs/"/>
+    <id>http://ktkr3d.github.io/2020/05/08/Sharing-Folders-for-VMs/</id>
+    <published>2020-05-07T17:23:50.000Z</published>
+    <updated>2020-05-07T17:23:50.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ホストOS(Windows 10) のフォルダをゲストOS(Linux)と共有してみました。&lt;/p&gt;
+&lt;div id=&quot;googleChart6252&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+  if (!window.google) {
+    document.body.innerHTML = &#39;You need to include the script //google.com/jsapi on your template&#39;;
+    throw &#39;Google JS API is needed&#39;;
+  } else {
+    (function() {
+      google.load(&#39;visualization&#39;, &#39;1.0&#39;, {&#39;packages&#39;: [&quot;corechart&quot;,&quot;geochart&quot;,&quot;table&quot;]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.Table(document.getElementById(&quot;googleChart6252&quot;))).draw(google.visualization.arrayToDataTable([[&#39;Host / Guest&#39;, &#39;Hypervisor&#39;, &#39;OS&#39;, &#39;Type&#39;, &#39;Path&#39;],[&#39;Host&#39;, &#39;-&#39;, &#39;Windows 10&#39;, &#39;ntfs&#39;, &#39;D:\\share&#39;],[&#39;Guest&#39;, &#39;VirtualBox&#39;, &#39;Ubuntu 20.04&#39;, &#39;vboxsf&#39;, &#39;/mnt/share&#39;],[&#39;Guest&#39;, &#39;Hyper-V&#39;, &#39;Ubuntu 20.04&#39;, &#39;cifs&#39;, &#39;/mnt/share&#39;]]),{&quot;title&quot;:&quot; &quot;,&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;});
+      });
+    })();
+  }
+&lt;/script&gt;</summary>
+    
+    
+    
+    
+    <category term="vm" scheme="http://ktkr3d.github.io/tags/vm/"/>
+    
+  </entry>
+  
+</feed>

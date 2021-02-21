@@ -1,0 +1,487 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>OpenVPN with Raspberry Pi | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="https://openvpn.net/OpenVPN を使ってインターネットから自宅のサーバネットワークにセキュアに接続してみました。
+
+
+
+機器
+構成
+
+
+
+VPN サーバ
+- Raspberry Pi 2- Ubuntu 14.04 (ARM) - OpenVPN 2.3.2
+
+
+Linux クライアント
+- Ubutu GNOME 15.10 (x86_64) - GNOME Shell 3.17.4
+
+
+Android クライアント
+- Android 4.4.2- OpenVPN アプリ">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="OpenVPN with Raspberry Pi"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternate" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> OpenVPN with Raspberry Pi</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p><img src="/images/openvpn.png" alt="OpenVPN" title="OpenVPN"><br><a target="_blank" rel="noopener" href="https://openvpn.net/">https://openvpn.net/</a><br>OpenVPN を使ってインターネットから自宅のサーバネットワークにセキュアに接続してみました。</p>
+<table>
+<thead>
+<tr>
+<th align="left">機器</th>
+<th align="left">構成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">VPN サーバ</td>
+<td align="left">- Raspberry Pi 2<br />- Ubuntu 14.04 (ARM) <br />- OpenVPN 2.3.2</td>
+</tr>
+<tr>
+<td align="left">Linux クライアント</td>
+<td align="left">- Ubutu GNOME 15.10 (x86_64) <br />- GNOME Shell 3.17.4</td>
+</tr>
+<tr>
+<td align="left">Android クライアント</td>
+<td align="left">- Android 4.4.2<br />- OpenVPN アプリ</td>
+</tr>
+</tbody></table>
+<a id="more"></a>
+
+<h2 id="VPN-サーバの設定"><a href="#VPN-サーバの設定" class="headerlink" title="VPN サーバの設定"></a>VPN サーバの設定</h2><p>はじめにRaspbery Pi はRTC(Real Time Clock)を持っていないので、ntp で時刻同期をしておきます。</p>
+<figure class="highlight bash"><figcaption><span>/etc/ntp.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#server 0.ubuntu.pool.ntp.org iburst</span></span><br><span class="line"><span class="comment">#server 1.ubuntu.pool.ntp.org iburst</span></span><br><span class="line"><span class="comment">#server 2.ubuntu.pool.ntp.org iburst</span></span><br><span class="line"><span class="comment">#server 3.ubuntu.pool.ntp.org iburst</span></span><br><span class="line">pool ntp.nict.jp iburst</span><br></pre></td></tr></table></figure>
+<p>必要なパッケージをインストールして、認証局用のディレクトリを作成します。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install openvpn libssl-dev openssl easy-rsa</span><br><span class="line">$ sudo su</span><br><span class="line"><span class="comment"># make-cadir /etc/openvpn/easy-rsa</span></span><br><span class="line"><span class="comment"># cd /etc/openvpn/easy-rsa</span></span><br></pre></td></tr></table></figure>
+<p>設定ファイル<code>vars</code> を編集します。</p>
+<figure class="highlight bash"><figcaption><span>/etc/openvpn/easy-rsa/vars</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> KEY_COUNTRY=<span class="string">&quot;JP&quot;</span></span><br><span class="line"><span class="built_in">export</span> KEY_PROVINCE=<span class="string">&quot;MyProvince&quot;</span></span><br><span class="line"><span class="built_in">export</span> KEY_CITY=<span class="string">&quot;MyCity&quot;</span></span><br><span class="line"><span class="built_in">export</span> KEY_ORG=<span class="string">&quot;MyOrg&quot;</span></span><br><span class="line"><span class="built_in">export</span> KEY_EMAIL=<span class="string">&quot;MyEmail&quot;</span></span><br><span class="line"><span class="built_in">export</span> KEY_OU=<span class="string">&quot;MyOU&quot;</span></span><br></pre></td></tr></table></figure>
+<p>認証局、VPN サーバおよびクライアント用の証明書等を作成します。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># source vars &amp;&amp; ./clean-all &amp;&amp; ./build-ca</span></span><br><span class="line"><span class="comment"># ./build-key-server server</span></span><br><span class="line"><span class="comment"># ./build-key client1</span></span><br><span class="line"><span class="comment"># ./build-dh</span></span><br><span class="line"><span class="comment"># cd keys</span></span><br><span class="line"><span class="comment"># openvpn --genkey --secret ta.key</span></span><br><span class="line"><span class="comment"># cp ca.crt ta.key dh2048.pem server.crt server.key /etc/openvpn/</span></span><br><span class="line"><span class="comment"># cd /etc/openvpn/</span></span><br><span class="line"><span class="comment"># cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz /etc/openvpn/</span></span><br><span class="line"><span class="comment"># gzip -d /etc/openvpn/server.conf.gz</span></span><br></pre></td></tr></table></figure>
+<p>VPN サーバの設定ファイル<code>server.conf</code> を編集します。VPN サーバのローカルアドレスは192.168.0.6/24 です。</p>
+<table>
+<thead>
+<tr>
+<th align="left">before</th>
+<th align="left">after</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">dh dh1024.pem</td>
+<td align="left">dh dh2048.pem</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">push “route 192.168.0.0 255.255.255.0”</td>
+</tr>
+<tr>
+<td align="left">;push “redirect-gateway def1 bypass-dhcp”</td>
+<td align="left">push “redirect-gateway def1 bypass-dhcp”</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">push “dhcp-option DNS 192.168.0.1”</td>
+</tr>
+<tr>
+<td align="left">;client-to-client</td>
+<td align="left">client-to-client</td>
+</tr>
+<tr>
+<td align="left">;tls-auth ta.key 0 # This file is secret</td>
+<td align="left">tls-auth ta.key 0 # This file is secret</td>
+</tr>
+<tr>
+<td align="left">;user nobody</td>
+<td align="left">user nobody</td>
+</tr>
+<tr>
+<td align="left">;group nogroup</td>
+<td align="left">group nogroup</td>
+</tr>
+<tr>
+<td align="left">;log openvpn.log</td>
+<td align="left">log /var/log/openvpn.log</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">mode server</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">tls-server</td>
+</tr>
+</tbody></table>
+<p>OpenVPN サービスを再起動します。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># service openvpn restart</span></span><br></pre></td></tr></table></figure>
+<h2 id="Linux-クライアントの設定"><a href="#Linux-クライアントの設定" class="headerlink" title="Linux クライアントの設定"></a>Linux クライアントの設定</h2><p>接続用のパッケージをインストールします。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install network-manager network-manager-openvpn network-manager-openvpn-gnome</span><br></pre></td></tr></table></figure>
+<p>VPN サーバ上のサンプルファイル<code>/usr/share/doc/openvpn/examples/sample-config-files/client.conf</code>をコピーして、<code>client1.ovpn</code>を作成します。</p>
+<table>
+<thead>
+<tr>
+<th align="left">before</th>
+<th align="left">after</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">remote my-server-1 1194</td>
+<td align="left">remote （VPN サーバのFQDN or IP アドレス） 1194</td>
+</tr>
+<tr>
+<td align="left">cert client.crt</td>
+<td align="left">cert client1.crt</td>
+</tr>
+<tr>
+<td align="left">key client.key</td>
+<td align="left">key client1.key</td>
+</tr>
+<tr>
+<td align="left">;tls-auth ta.key 1</td>
+<td align="left">tls-auth ta.key 1</td>
+</tr>
+</tbody></table>
+<p>VPN サーバ上の以下のファイルを安全な方法でクライアントに転送します。</p>
+<ul>
+<li>/etc/openvpn/easy-rsa/keys/ca.crt</li>
+<li>/etc/openvpn/easy-rsa/keys/ta.key</li>
+<li>/etc/openvpn/easy-rsa/keys/client1.crt</li>
+<li>/etc/openvpn/easy-rsa/keys/client1.key</li>
+</ul>
+<p>設定ファイルをインポートします。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gnome-control-center network</span><br></pre></td></tr></table></figure>
+<ol>
+<li><code>+</code> を選択</li>
+<li><code>VPN</code> を選択</li>
+<li><code>Import from file...</code> を選択し、<code>client1.ovpn</code> を取り込みます。</li>
+</ol>
+<h2 id="Android-クライアントの設定"><a href="#Android-クライアントの設定" class="headerlink" title="Android クライアントの設定"></a>Android クライアントの設定</h2><p>PC と同様にclient2.ovpn を作成し、OpenVPN アプリで取り込みます。</p>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\08\17\Pritunl\" title="RPi4 - Pritunl" rel="bookmark">RPi4 - Pritunl</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\24\OpenVPN-on-WSL2\" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li></ul>
+	</section>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/08/23/Compile-Kodi-for-Linux/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>前へ</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/07/25/atom-text-editor/" class="alignright next">次へ<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">コメント</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015-08-08 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/network/">network<span>1</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/openvpn/">openvpn<span>3</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2021 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p>
+
+  <script src='https://unpkg.com/mermaid@8.1.0/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+   </html>

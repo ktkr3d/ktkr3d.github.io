@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Customize Hexo Theme Freemind | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="Hexo のテーマFreemind のナビゲーションバーの右端にページを選択するドロップダウンメニューを追加しました。
+以下の２つのカスタマイズをします。
+
+ページの一覧データ
+ページ一覧を生成するコード">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Customize Hexo Theme Freemind"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternate" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Customize Hexo Theme Freemind</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>Hexo のテーマFreemind のナビゲーションバーの右端にページを選択するドロップダウンメニューを追加しました。</p>
+<p>以下の２つのカスタマイズをします。</p>
+<ul>
+<li>ページの一覧データ</li>
+<li>ページ一覧を生成するコード</li>
+</ul>
+<a id="more"></a>
+
+<p><img src="/images/freemind-navbar-dropdown.png" alt="Freemind Navbar Dropdown"></p>
+<h2 id="ページ一覧データ"><a href="#ページ一覧データ" class="headerlink" title="ページ一覧データ"></a>ページ一覧データ</h2><p><code>_config.yml</code> にページの一覧を作ります。</p>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">title</td>
+<td align="left">題名</td>
+</tr>
+<tr>
+<td align="left">url</td>
+<td align="left">相対URL</td>
+</tr>
+<tr>
+<td align="left">intro</td>
+<td align="left">ツールチップの説明文</td>
+</tr>
+<tr>
+<td align="left">icon</td>
+<td align="left">アイコン</td>
+</tr>
+</tbody></table>
+<figure class="highlight"><figcaption><span>./themes/freemind/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">pages:</span><br><span class="line">  - title: Android</span><br><span class="line">    url:   android</span><br><span class="line">    intro: &quot;Android&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br><span class="line">  - title: Android-x86</span><br><span class="line">    url:   android-x86</span><br><span class="line">    intro: &quot;Android-x86&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br><span class="line">  - title: Atom</span><br><span class="line">    url:   atom</span><br><span class="line">    intro: &quot;Atom&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br><span class="line">  - title: CA</span><br><span class="line">    url:   ca</span><br><span class="line">    intro: &quot;CA&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br><span class="line">  - title: Game</span><br><span class="line">    url:   game</span><br><span class="line">    intro: &quot;Game&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br><span class="line">  - title: Irrlicht Engine</span><br><span class="line">    url:   irrlicht</span><br><span class="line">    intro: &quot;Irrlicht Engine&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br><span class="line">  - title: Kinect</span><br><span class="line">    url:   kinect</span><br><span class="line">    intro: &quot;Kinect&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br><span class="line">  - title: Linux</span><br><span class="line">    url:   linux</span><br><span class="line">    intro: &quot;Linux&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br><span class="line">  - title: Peercast Radio</span><br><span class="line">    url:   peercast-radio</span><br><span class="line">    intro: &quot;Peercast Radio&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br><span class="line">  - title: Snippets</span><br><span class="line">    url:   snippets</span><br><span class="line">    intro: &quot;Snippets&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br><span class="line">  - title: Virtualization</span><br><span class="line">    url:   virtualization</span><br><span class="line">    intro: &quot;Virtualization&quot;</span><br><span class="line">    icon:  &quot;fa fa-file&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="ページ一覧を生成するコード"><a href="#ページ一覧を生成するコード" class="headerlink" title="ページ一覧を生成するコード"></a>ページ一覧を生成するコード</h2><figure class="highlight html"><figcaption><span>./themes/freemind/layout/_partial/navigation.ejs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">id</span>=<span class="string">&quot;main-nav&quot;</span> <span class="attr">class</span>=<span class="string">&quot;navbar navbar-inverse navbar-fixed-top&quot;</span> <span class="attr">role</span>=<span class="string">&quot;navigation&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;navbar-header navbar-toggle&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;collapse&quot;</span> <span class="attr">data-target</span>=<span class="string">&quot;.navbar-collapse&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;sr-only&quot;</span>&gt;</span>Toggle navigation<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;icon-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;navbar-brand&quot;</span> <span class="attr">href</span>=<span class="string">&quot;&lt;%- config.root %&gt;&quot;</span>&gt;</span>&lt;%= config.title %&gt;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;collapse navbar-collapse nav-menu&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav navbar-nav&quot;</span>&gt;</span></span><br><span class="line">          &lt;% theme.menu.forEach(function(m)&#123; %&gt;</span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&lt;%- config.root %&gt;&lt;%- m.url %&gt;&quot;</span> <span class="attr">title</span>=<span class="string">&quot;&lt;%- m.intro %&gt;&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;&lt;%- m.icon %&gt;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>&lt;%- m.title %&gt;</span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          &lt;% &#125;) %&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav navbar-nav navbar-right&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;dropdown&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">title</span>=<span class="string">&quot;ページ&quot;</span> <span class="attr">class</span>=<span class="string">&quot;dropdown-toggle&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;dropdown&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-folder&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>ページ <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">&quot;caret&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;dropdown-menu&quot;</span> <span class="attr">role</span>=<span class="string">&quot;menu&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;drop1&quot;</span>&gt;</span></span><br><span class="line">              &lt;% theme.pages.forEach(function(p)&#123; %&gt;</span><br><span class="line">              <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;presentation&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">role</span>=<span class="string">&quot;menuitem&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;-1&quot;</span> <span class="attr">href</span>=<span class="string">&quot;&lt;%- config.root %&gt;&lt;%- p.url %&gt;&quot;</span> <span class="attr">title</span>=<span class="string">&quot;&lt;%- p.intro %&gt;&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;&lt;%- p.icon %&gt;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>&lt;%- p.title %&gt;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">              &lt;% &#125;) %&gt;</span><br><span class="line">            <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span> <span class="comment">&lt;!-- container --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;clearfix&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="アイコンのカスタマイズ"><a href="#アイコンのカスタマイズ" class="headerlink" title="アイコンのカスタマイズ"></a>アイコンのカスタマイズ</h2><figure class="highlight"><figcaption><span>./themes/freemind/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">pages:</span><br><span class="line">  - title: Android</span><br><span class="line">    url:   android</span><br><span class="line">    intro: &quot;Android&quot;</span><br><span class="line">    icon:  &quot;fa fa-android&quot;</span><br><span class="line">  - title: Android-x86</span><br><span class="line">    url:   android-x86</span><br><span class="line">    intro: &quot;Android-x86&quot;</span><br><span class="line">    icon:  &quot;fa fa-android&quot;</span><br><span class="line">  - title: Atom</span><br><span class="line">    url:   atom</span><br><span class="line">    intro: &quot;Atom&quot;</span><br><span class="line">    icon:  &quot;fa fa-file-text&quot;</span><br><span class="line">  - title: CA</span><br><span class="line">    url:   ca</span><br><span class="line">    intro: &quot;CA&quot;</span><br><span class="line">    icon:  &quot;fa fa-certificate&quot;</span><br><span class="line">  - title: Game</span><br><span class="line">    url:   game</span><br><span class="line">    intro: &quot;Game&quot;</span><br><span class="line">    icon:  &quot;fa fa-gamepad&quot;</span><br><span class="line">  - title: Irrlicht Engine</span><br><span class="line">    url:   irrlicht</span><br><span class="line">    intro: &quot;Irrlicht Engine&quot;</span><br><span class="line">    icon:  &quot;fa fa-cube&quot;</span><br><span class="line">  - title: Kinect</span><br><span class="line">    url:   kinect</span><br><span class="line">    intro: &quot;Kinect&quot;</span><br><span class="line">    icon:  &quot;fa fa-child&quot;</span><br><span class="line">  - title: Linux</span><br><span class="line">    url:   linux</span><br><span class="line">    intro: &quot;Linux&quot;</span><br><span class="line">    icon:  &quot;fa fa-linux&quot;</span><br><span class="line">  - title: Peercast Radio</span><br><span class="line">    url:   peercast-radio</span><br><span class="line">    intro: &quot;Peercast Radio&quot;</span><br><span class="line">    icon:  &quot;fa fa-bullhorn&quot;</span><br><span class="line">  - title: Snippets</span><br><span class="line">    url:   snippets</span><br><span class="line">    intro: &quot;Snippets&quot;</span><br><span class="line">    icon:  &quot;fa fa-code&quot;</span><br><span class="line">  - title: Virtualization</span><br><span class="line">    url:   virtualization</span><br><span class="line">    intro: &quot;Virtualization&quot;</span><br><span class="line">    icon:  &quot;fa fa-desktop&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/freemind-navbar-dropdown2.png" alt="Freemind Navbar Dropdown"></p>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\02\27\hexo-related-popular-posts\" title="hexo-related-popular-posts プラグイン" rel="bookmark">hexo-related-popular-posts プラグイン</a></h3></div></li></ul>
+	</section>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2016/04/17/Blender/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>前へ</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/04/08/Visual-Studio-Code-C-C-extension/" class="alignright next">次へ<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">コメント</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-04-09 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/cms/">cms<span>14</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/freemind/">freemind<span>2</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2021 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p>
+
+  <script src='https://unpkg.com/mermaid@8.1.0/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+   </html>

@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Docker Mirakurun Chinachu | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="https://github.com/Chinachu/docker-mirakurun-chinachuUbuntu 16.10 の環境でDocker Mirakurun Chinachu を使ってみました。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Docker Mirakurun Chinachu"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternate" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Docker Mirakurun Chinachu</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p><a target="_blank" rel="noopener" href="https://github.com/Chinachu/docker-mirakurun-chinachu">https://github.com/Chinachu/docker-mirakurun-chinachu</a><br>Ubuntu 16.10 の環境でDocker Mirakurun Chinachu を使ってみました。</p>
+<a id="more"></a>
+
+<ol>
+<li>Docker のインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install curl</span><br><span class="line">$ curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
+Docker Engine がインストールされない/バージョンが古い場合は以下とすると良いかもしれない。<figure class="highlight"><figcaption><span>/etc/apt/sources.list.d/docker.list</span></figcaption><table><tr><td class="code"><pre><span class="line">deb [arch=amd64] https://apt.dockerproject.org/repo ubuntu-xenial main</span><br><span class="line">deb [arch=amd64] https://apt.dockerproject.org/repo ubuntu-xenial testing</span><br></pre></td></tr></table></figure></li>
+<li>Docker Compose のインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line">$ sudo chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
+<li>PT3 Driver のインストール<br>ホストOS(Ubuntu)にPT3ドライバをインストールする。最近のUbuntu は標準PT3 ドライバが入っているので無効にしてからインストールする。 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ lsmod | grep pt3</span><br><span class="line">earth_pt3              22846  0</span><br><span class="line">dvb_core              125865  2 tc90522,earth_pt3</span><br></pre></td></tr></table></figure>
+ <figure class="highlight"><figcaption><span>/etc/modprobe.d/blacklist-earth_pt3.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">blacklist earth_pt3</span><br></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/m-tsudo/pt3.git</span><br><span class="line">$ <span class="built_in">cd</span> pt3/</span><br><span class="line">$ make clean &amp;&amp; make</span><br><span class="line">$ sudo make install</span><br><span class="line">$ sudo <span class="variable">$&#123;SHELL&#125;</span> ./dkms.install</span><br><span class="line">$ sudo reboot</span><br></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ls -l /dev/pt*video*</span><br><span class="line">crw-rw-rw- 1 root video 246, 0 Jun 26 16:07 /dev/pt3video0</span><br><span class="line">crw-rw-rw- 1 root video 246, 1 Jun 26 16:07 /dev/pt3video1</span><br><span class="line">crw-rw-rw- 1 root video 246, 2 Jun 26 16:07 /dev/pt3video2</span><br><span class="line">crw-rw-rw- 1 root video 246, 3 Jun 26 16:07 /dev/pt3video3</span><br></pre></td></tr></table></figure></li>
+<li>pcscd の無効化<br>pcscd はDocker コンテナ内で動作するので、ホストOS では無効にする。 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo systemctl stop pcscd.socket</span><br><span class="line">$ sudo systemctl <span class="built_in">disable</span> pcscd.socket</span><br></pre></td></tr></table></figure></li>
+<li>docker-mirakurun-chinachu の取得 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/h-mineta/docker-mirakurun-chinachu.git</span><br><span class="line">$ <span class="built_in">cd</span> docker-mirakurun-chinachu</span><br></pre></td></tr></table></figure></li>
+<li>docker-compose.yml の設定<br>Ubuntu ではマルチキャストDNS(5353/tcp)が競合するので、とりあえず別のポート番号に変更する。無効にしてもよいかもしれない。<figure class="highlight yaml"><figcaption><span>./docker-compose.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">chinachu:</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;15353:5353/udp&quot;</span></span><br></pre></td></tr></table></figure>
+録画フォルダを指定<figure class="highlight yaml"><figcaption><span>./docker-compose.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">chinachu:</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/PATH/TO/RECORDED:/usr/local/chinachu/recorded</span></span><br></pre></td></tr></table></figure>
+録画フォルダのパーミッションを変更<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo chmod 777 /PATH/TO/RECORDED</span><br></pre></td></tr></table></figure></li>
+<li>chinachu の設定<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cp ./chinachu/config.sample.json ./chinachu/conf/config.json</span><br></pre></td></tr></table></figure>
+サーバをIPアドレス指定にしてみる。<figure class="highlight"><figcaption><span>./chinachu/conf/config.json</span></figcaption><table><tr><td class="code"><pre><span class="line"># &quot;mirakurunPath&quot;: &quot;http://container-mirakurun:40772/&quot;,</span><br><span class="line">  &quot;mirakurunPath&quot;: &quot;http://192.168.11.2:40772/&quot;,</span><br></pre></td></tr></table></figure></li>
+<li>一旦起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker-compose up -d</span><br></pre></td></tr></table></figure></li>
+<li><strong>mirakurun コンテナで</strong> チャンネルをスキャン<br> mirakurun コンテナ上でチャンネルをスキャンする。Kitematic 等のフロントエンドからシェルを起動してもよいです。 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it mirakurun sh</span><br><span class="line"><span class="comment"># which recpt1</span></span><br><span class="line"><span class="comment"># for var in `seq 13 62` ; do recpt1 $var 5 /tmp/$var.ts;done</span></span><br><span class="line"><span class="comment"># ls /tmp/*.ts</span></span><br><span class="line"><span class="comment"># rm /tmp/*.ts</span></span><br></pre></td></tr></table></figure></li>
+<li>チャンネル設定<br>スキャンした結果をmirakurun の設定に反映する。見つかったチャンネル数分繰り返す。<figure class="highlight yaml"><figcaption><span>./mirakurun/conf/channels.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CH13</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attr">channel:</span> <span class="string">&#x27;13&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>docker-mirakurun-chinachu の再起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker-compose down</span><br><span class="line">$ docker-compose up -d</span><br></pre></td></tr></table></figure></li>
+<li>docker-mirakurun-chinachu の自動起動化<br>安定して動作するようになったら、自動起動してもよいかもしれない。<figure class="highlight yaml"><figcaption><span>./docker-compose.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mirakurun:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">chinachu:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br></pre></td></tr></table></figure></li>
+<li>KODI アドオンの導入<br><a target="_blank" rel="noopener" href="https://github.com/Harekaze/pvr.chinachu">https://github.com/Harekaze/pvr.chinachu</a></li>
+</ol>
+<ul>
+<li>ダウンロードとビルド<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/Harekaze/pvr.chinachu.git</span><br><span class="line">$ <span class="built_in">cd</span> pvr.chinachu</span><br><span class="line">$ ./bootstrap</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ ls pvr.chinachu.*.zip</span><br></pre></td></tr></table></figure></li>
+<li>インストール<br>KODI を起動して、[システム]-[設定]-[アドオン]-[zipファイルからインストール]メニューでzipファイルを指定してインストール</li>
+<li>設定<br>[システム]-[設定]-[アドオン]-[My Add-ons]-[PVRクライアント]-[Harekaze(Chinachu PVR Client)]-[設定]<ul>
+<li>Chinachu WUI のURL<br><a target="_blank" rel="noopener" href="http://192.168.11.2:10772/">http://192.168.11.2:10772/</a></li>
+<li>MirakurunのURL(あれば)<br><a target="_blank" rel="noopener" href="http://192.168.11.2:40772/">http://192.168.11.2:40772/</a></li>
+</ul>
+</li>
+</ul>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2015\04\29\Kodi-Live-TV-with-Chinachu\" title="Kodi Live TV with Chinachu" rel="bookmark">Kodi Live TV with Chinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\06\04\Chinachu-on-WSL\" title="WSL でChinachu" rel="bookmark">WSL でChinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2016\12\30\My-Docker-Hexo\" title="My Docker Hexo" rel="bookmark">My Docker Hexo</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2017\02\04\Docker-Mist-io\" title=" Docker Mist.io" rel="bookmark"> Docker Mist.io</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2017\05\18\GitLab-CE-Japanese-Translation\" title="GitLab-CE Japanese Translation" rel="bookmark">GitLab-CE Japanese Translation</a></h3></div></li></ul>
+	</section>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2017/02/04/Docker-Mist-io/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>前へ</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/12/30/My-Docker-Hexo/" class="alignright next">次へ<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">コメント</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2017-01-24 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/dtv/">dtv<span>1</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/chinachu/">chinachu<span>3</span></a></li> <li><a href="/tags/docker/">docker<span>8</span></a></li> <li><a href="/tags/mirakurun/">mirakurun<span>2</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2021 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p>
+
+  <script src='https://unpkg.com/mermaid@8.1.0/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+   </html>
