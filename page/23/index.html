@@ -162,6 +162,74 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2013-03-17 </div>
+			<div class="article-title"><a href="/2013/03/17/create-a-shortcut-key-in-xnoise/" >Create a shortcut key in xnoise</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/xnoise_shortcut_key.png" alt="xnoise shortcut key"></p>
+<p>先日のアップデートでxnoise のメディアブラウザ表示/非表示切り替えボタンが無くなりました。ボタンがメディアブラウザの上に被っていたので邪魔ではあったのですが、無いと不便です。そこで、簡単にメディアブラウザの表示/非表示を切り替えるためのショートカットキー(F9)を追加してみました。xnoise はVala 言語で実装されているようですので、valac パッケージをインストールして、ビルドしています。</p>
+<ol>
+<li>valac のインストールとソースコードの取得</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get build-dep xnoise</span><br><span class="line">$ sudo apt-get install valac</span><br><span class="line">$ git <span class="built_in">clone</span> https://bitbucket.org/shuerhaaken/xnoise.git</span><br></pre></td></tr></table></figure>
+
+
+<ol start="2">
+<li>ソースコードの修正</li>
+</ol>
+<figure class="highlight text"><figcaption><span>./xnoise/libxnoise/MainWindow/xnoise-main-window.vala</span></figcaption><table><tr><td class="code"><pre><span class="line">case Gdk.Key.F9: &#123;</span><br><span class="line">    toggle_media_browser_visibility();</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">case Gdk.Key.F11: &#123;</span><br><span class="line">    this.toggle_mainwindow_fullscreen();</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ol start="3">
+<li>ビルドとインストール</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> xnoise</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+
+
+	
+	</div>
+  <a type="button" href="/2013/03/17/create-a-shortcut-key-in-xnoise/#more" class="btn btn-default more">続きを読む</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2013-03-14 </div>
+			<div class="article-title"><a href="/2013/03/14/ubuntu-gnome-13-04-daily-build/" >Ubuntu GNOME 13.04 daily build</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/Ubuntu_GNOME_installer.png" alt="Ubuntu GNOME installer"></p>
+<p><a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/current/">http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/current/</a><br>Ubuntu GNOME 13.04 デイリービルドのISO イメージが公開されたので試してみました。</p>
+
+	
+	</div>
+  <a type="button" href="/2013/03/14/ubuntu-gnome-13-04-daily-build/#more" class="btn btn-default more">続きを読む</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2013-03-10 </div>
 			<div class="article-title"><a href="/2013/03/10/xnoise-media-player-0-2-16-mediterraneannight-gtk-theme-2/" >Xnoise Media Player 0.2.16 + MediterraneanNight GTK+ Theme</a></div>						
 		</h3>
@@ -559,122 +627,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-01-19 </div>
-			<div class="article-title"><a href="/2013/01/19/windows-8-boot-manager-grub4dos-android-x86/" >Windows 8 Boot Manager + GRUB4DOS + Android-x86</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Windows 8 のブートマネージャからAndorid-x86 を起動する環境を、できるだけWindows 環境でできる手段で構築してみました。Andorid-x86 を起動する際にはGRUB がチェインロードされるような表示になります。Windows 8 のブートマネージャはタッチスクリーンが有効なので、キーボードを使わないで起動するOS を選択できますね。(ご質問いただいたので考えてみました)</p>
-<ol>
-<li>Windows 8 のインストール<br>Windows 8 をインストールします。私の環境では、以下のようなパーティション構成になりました。<br>第1パーティション(/dev/sda1) ntfs<br>第2パーティション(/dev/sda2) ntfs Windows 8</li>
-</ol>
-<ol start="2">
-<li>Andorid-x86 のインストール<br>Android-x86 をWindows 8 のインストールされているNTFS パーティションにインストールします。もちろん、別のパーティションにインストールしても構いません。<br>インストール先: /dev/sda2<br>フォーマット: しない<br>GRUB: インストールしない</li>
-</ol>
-<ol start="3">
-<li>GRUB4DOS のダウンロード<br><a target="_blank" rel="noopener" href="http://sourceforge.net/projects/grub4dos/files/GRUB4DOS/">http://sourceforge.net/projects/grub4dos/files/GRUB4DOS/</a> からgrub4dos-0.4.4.zip をダウンロードして、ZIP内の以下の4つのファイルをC:\ に展開します。</li>
-</ol>
-<pre><code>* default
-
-
-* grldr
-
-
-* grldr.mbr
-
-
-* menu.lst</code></pre>
-<ol start="4">
-<li>GRUB4DOS の設定<br>GRUB4DOS でAndroid-x86 を起動できるようにC:\menu.lst を編集します。</li>
-</ol>
-<figure class="highlight text"><figcaption><span>C:¥menu.lst</span></figcaption><table><tr><td class="code"><pre><span class="line">timeout 3</span><br><span class="line">default /default</span><br><span class="line"></span><br><span class="line">title Android-x86 4.2.1 on /dev/sda2</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel /android-4.2-20121205/kernel root=/dev/ram0 androidboot.hardware=android_x86 acpi_sleep=s3_bios,s3_mode SRC=/android-4.2-20121205 DATA=</span><br><span class="line">initrd /android-4.2-20121205/initrd.img</span><br><span class="line">savedefault</span><br><span class="line"></span><br><span class="line">title Android-x86 4.0.4 on /dev/sda2</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel /android-4.0-RC2/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/android-4.0-RC2 DATA=</span><br><span class="line">initrd /android-4.0-RC2/initrd.img</span><br><span class="line">savedefault</span><br></pre></td></tr></table></figure>
-<p>※ 1番目のディスクの2番目のパーティション番号は(hd0,1) のように番号を-1した値になるので要注意です。<br>※ 複数のバージョンを切り替えたい場合は複数件登録します。ただし、この起動の切り替えはタッチスクリーンが使えません。<br>※ タイムアウト時間は好みで秒数を指定します。0にするとGRUB4DOSの画面が表示されなくなります。</p>
-<ol start="5">
-<li>Windows 8 ブートマネージャにGRUB4DOS を登録<br>コマンドプロンプトアイコンを右クリックして、「管理者として実行」します。</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdedit /create /d <span class="string">&quot;Android-x86&quot;</span> /application BOOTSECTOR</span><br></pre></td></tr></table></figure>
-<p>上記コマンドで表示された値{☆}を以下のコマンドで使います。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdedit /<span class="built_in">set</span> &#123;☆&#125; device partition=C:</span><br><span class="line">&gt; bcdedit /<span class="built_in">set</span> &#123;☆&#125; path \grldr.mbr</span><br><span class="line">&gt; bcdedit /displayorder &#123;☆&#125; /addlast</span><br></pre></td></tr></table></figure>
-
-
-
-<p>ちなみに一旦別のブートローダにしてしまった後にWindows 8 のブートマネージャに戻すには、コマンドプロンプトアイコンを右クリックして、「管理者として実行」して、以下のコマンドを実行します。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdboot C:\Windows</span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2013/01/19/windows-8-boot-manager-grub4dos-android-x86/#more" class="btn btn-default more">続きを読む</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-01-12 </div>
-			<div class="article-title"><a href="/2013/01/12/ubuntu-12-10-calipso-cms-node-js-express-mongodb/" >Ubuntu 12.10 + Calipso CMS (node.js, express, MongoDB)</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/Calipso_CMS.png" alt="calipso node.js express mongodb ubuntu"></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/cliftonc/calipso">https://github.com/cliftonc/calipso</a></p>
-<p>Calipso はnode.js(サーバサイドJavaScript)、express(node.js 上のフレームワーク)、MongoDB で構築されたシンプルなCMS アプリです。node.js のお試し用にUbuntu 12.10 上でCalipso 0.3.17 の環境を構築してみました。</p>
-<ol>
-<li>パッケージのインストール<br>Ubuntu オフィシャルリポジトリのnode.js はバージョンが古いのでPPA のリポジトリを追加します。</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:chris-lea/node.js  </span><br><span class="line">$ sudo apt-get update  </span><br><span class="line">$ sudo apt-get install nodejs npm mongodb</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>Calipso のインストールの前に<br>このままの状態でCalipso のインストールを進めると、node コマンドが見つからない旨のメッセージを出力して、途中で終了してしまいます。Debian/Ubuntu には別にnode コマンドがあるため、node.js のコマンドはnodejs になっているようです。暫定的にシンボリックリンクを作成しておきます。作成したシンボリックリンク(/usr/bin/node)は後で消しておきます。</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo ln -s /usr/bin/nodejs /usr/bin/node</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="3">
-<li>Calipso のインストールと起動</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo npm install -g node-gyp</span><br><span class="line">$ sudo npm install -g calipso</span><br><span class="line">$ sudo calipso site /var/www/MySite</span><br><span class="line">$ <span class="built_in">cd</span> /var/www/MySite</span><br><span class="line">$ sudo calipso server</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="4">
-<li>ブラウザからアクセス<br><a target="_blank" rel="noopener" href="http://localhost:3000/">http://localhost:3000</a><br>表示されたウィザードに従って、データベースの作成、アカウントの作成をします。表示に関しては、一応、日本語設定が用意されています。</li>
-</ol>
-<ol start="5">
-<li>nginx からリバースプロキシで接続</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install nginx</span><br></pre></td></tr></table></figure>
-<figure class="highlight text"><figcaption><span>/etc/nginx/sites-available/default</span></figcaption><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    # First attempt to serve request as file, then</span><br><span class="line">    # as directory, then fall back to displaying a 404.</span><br><span class="line">    #try_files $uri $uri/ /index.html;</span><br><span class="line">    # Uncomment to enable naxsi on this location</span><br><span class="line">    # include /etc/nginx/naxsi.rules</span><br><span class="line">    proxy_pass http://localhost:3000/;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo /etc/init.d/nginx reload</span><br><span class="line">$ sudo /etc/init.d/nginx restart</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a> からアクセスできるようになります。</p>
-
-	
-	</div>
-  <a type="button" href="/2013/01/12/ubuntu-12-10-calipso-cms-node-js-express-mongodb/#more" class="btn btn-default more">続きを読む</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -724,6 +676,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2021/03/08/Windows-Terminal/" ><i class="fa fa-file-o"></i>Windows Terminal</a>
+      </li>
+    
+      <li>
+        <a href="/2021/03/08/flutter/" ><i class="fa fa-file-o"></i>Flutter</a>
+      </li>
+    
+      <li>
         <a href="/2021/02/21/GNOME-40/" ><i class="fa fa-file-o"></i>GNOME 40</a>
       </li>
     
@@ -755,14 +715,6 @@
         <a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" ><i class="fa fa-file-o"></i>EPGStation PVR addon for Kodi</a>
       </li>
     
-      <li>
-        <a href="/2020/08/01/Enabling-sound-in-WSL/" ><i class="fa fa-file-o"></i>Enabling sound in WSL</a>
-      </li>
-    
-      <li>
-        <a href="/2020/07/12/EPGStation-on-WSL/" ><i class="fa fa-file-o"></i>EPGStation/Mirakurun on WSL</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -770,7 +722,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\23\VSCode-on-Android\" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\06\USB-support-to-WSL2\" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\02\EPGStation-PVR-addon-for-Kodi\" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\12\EPGStation-on-WSL\" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\27\Marp-for-VS-Code\" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\01\27\Puppeteer-on-WSL\" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\06\19\WSL-Ubuntu-20-04-LTS\" title="WSL - Ubuntu 20.04 LTS" rel="bookmark">WSL - Ubuntu 20.04 LTS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\07\15\Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi\" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\24\OpenVPN-on-WSL2\" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\04\21\Feedbro-RSS-Japanese-language\" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\23\VSCode-on-Android\" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\02\EPGStation-PVR-addon-for-Kodi\" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\06\USB-support-to-WSL2\" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\12\EPGStation-on-WSL\" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\01\27\Puppeteer-on-WSL\" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\27\Marp-for-VS-Code\" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\06\19\WSL-Ubuntu-20-04-LTS\" title="WSL - Ubuntu 20.04 LTS" rel="bookmark">WSL - Ubuntu 20.04 LTS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\07\15\Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi\" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\07\APT-Hash-sum-mismatch-error\" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\04\21\Feedbro-RSS-Japanese-language\" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li></ul>
 </div>
 
 		

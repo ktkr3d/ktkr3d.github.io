@@ -162,6 +162,122 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2013-01-19 </div>
+			<div class="article-title"><a href="/2013/01/19/windows-8-boot-manager-grub4dos-android-x86/" >Windows 8 Boot Manager + GRUB4DOS + Android-x86</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Windows 8 のブートマネージャからAndorid-x86 を起動する環境を、できるだけWindows 環境でできる手段で構築してみました。Andorid-x86 を起動する際にはGRUB がチェインロードされるような表示になります。Windows 8 のブートマネージャはタッチスクリーンが有効なので、キーボードを使わないで起動するOS を選択できますね。(ご質問いただいたので考えてみました)</p>
+<ol>
+<li>Windows 8 のインストール<br>Windows 8 をインストールします。私の環境では、以下のようなパーティション構成になりました。<br>第1パーティション(/dev/sda1) ntfs<br>第2パーティション(/dev/sda2) ntfs Windows 8</li>
+</ol>
+<ol start="2">
+<li>Andorid-x86 のインストール<br>Android-x86 をWindows 8 のインストールされているNTFS パーティションにインストールします。もちろん、別のパーティションにインストールしても構いません。<br>インストール先: /dev/sda2<br>フォーマット: しない<br>GRUB: インストールしない</li>
+</ol>
+<ol start="3">
+<li>GRUB4DOS のダウンロード<br><a target="_blank" rel="noopener" href="http://sourceforge.net/projects/grub4dos/files/GRUB4DOS/">http://sourceforge.net/projects/grub4dos/files/GRUB4DOS/</a> からgrub4dos-0.4.4.zip をダウンロードして、ZIP内の以下の4つのファイルをC:\ に展開します。</li>
+</ol>
+<pre><code>* default
+
+
+* grldr
+
+
+* grldr.mbr
+
+
+* menu.lst</code></pre>
+<ol start="4">
+<li>GRUB4DOS の設定<br>GRUB4DOS でAndroid-x86 を起動できるようにC:\menu.lst を編集します。</li>
+</ol>
+<figure class="highlight text"><figcaption><span>C:¥menu.lst</span></figcaption><table><tr><td class="code"><pre><span class="line">timeout 3</span><br><span class="line">default /default</span><br><span class="line"></span><br><span class="line">title Android-x86 4.2.1 on /dev/sda2</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel /android-4.2-20121205/kernel root=/dev/ram0 androidboot.hardware=android_x86 acpi_sleep=s3_bios,s3_mode SRC=/android-4.2-20121205 DATA=</span><br><span class="line">initrd /android-4.2-20121205/initrd.img</span><br><span class="line">savedefault</span><br><span class="line"></span><br><span class="line">title Android-x86 4.0.4 on /dev/sda2</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel /android-4.0-RC2/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/android-4.0-RC2 DATA=</span><br><span class="line">initrd /android-4.0-RC2/initrd.img</span><br><span class="line">savedefault</span><br></pre></td></tr></table></figure>
+<p>※ 1番目のディスクの2番目のパーティション番号は(hd0,1) のように番号を-1した値になるので要注意です。<br>※ 複数のバージョンを切り替えたい場合は複数件登録します。ただし、この起動の切り替えはタッチスクリーンが使えません。<br>※ タイムアウト時間は好みで秒数を指定します。0にするとGRUB4DOSの画面が表示されなくなります。</p>
+<ol start="5">
+<li>Windows 8 ブートマネージャにGRUB4DOS を登録<br>コマンドプロンプトアイコンを右クリックして、「管理者として実行」します。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdedit /create /d <span class="string">&quot;Android-x86&quot;</span> /application BOOTSECTOR</span><br></pre></td></tr></table></figure>
+<p>上記コマンドで表示された値{☆}を以下のコマンドで使います。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdedit /<span class="built_in">set</span> &#123;☆&#125; device partition=C:</span><br><span class="line">&gt; bcdedit /<span class="built_in">set</span> &#123;☆&#125; path \grldr.mbr</span><br><span class="line">&gt; bcdedit /displayorder &#123;☆&#125; /addlast</span><br></pre></td></tr></table></figure>
+
+
+
+<p>ちなみに一旦別のブートローダにしてしまった後にWindows 8 のブートマネージャに戻すには、コマンドプロンプトアイコンを右クリックして、「管理者として実行」して、以下のコマンドを実行します。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdboot C:\Windows</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2013/01/19/windows-8-boot-manager-grub4dos-android-x86/#more" class="btn btn-default more">続きを読む</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2013-01-12 </div>
+			<div class="article-title"><a href="/2013/01/12/ubuntu-12-10-calipso-cms-node-js-express-mongodb/" >Ubuntu 12.10 + Calipso CMS (node.js, express, MongoDB)</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/Calipso_CMS.png" alt="calipso node.js express mongodb ubuntu"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/cliftonc/calipso">https://github.com/cliftonc/calipso</a></p>
+<p>Calipso はnode.js(サーバサイドJavaScript)、express(node.js 上のフレームワーク)、MongoDB で構築されたシンプルなCMS アプリです。node.js のお試し用にUbuntu 12.10 上でCalipso 0.3.17 の環境を構築してみました。</p>
+<ol>
+<li>パッケージのインストール<br>Ubuntu オフィシャルリポジトリのnode.js はバージョンが古いのでPPA のリポジトリを追加します。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:chris-lea/node.js  </span><br><span class="line">$ sudo apt-get update  </span><br><span class="line">$ sudo apt-get install nodejs npm mongodb</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li>Calipso のインストールの前に<br>このままの状態でCalipso のインストールを進めると、node コマンドが見つからない旨のメッセージを出力して、途中で終了してしまいます。Debian/Ubuntu には別にnode コマンドがあるため、node.js のコマンドはnodejs になっているようです。暫定的にシンボリックリンクを作成しておきます。作成したシンボリックリンク(/usr/bin/node)は後で消しておきます。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo ln -s /usr/bin/nodejs /usr/bin/node</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li>Calipso のインストールと起動</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo npm install -g node-gyp</span><br><span class="line">$ sudo npm install -g calipso</span><br><span class="line">$ sudo calipso site /var/www/MySite</span><br><span class="line">$ <span class="built_in">cd</span> /var/www/MySite</span><br><span class="line">$ sudo calipso server</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="4">
+<li>ブラウザからアクセス<br><a target="_blank" rel="noopener" href="http://localhost:3000/">http://localhost:3000</a><br>表示されたウィザードに従って、データベースの作成、アカウントの作成をします。表示に関しては、一応、日本語設定が用意されています。</li>
+</ol>
+<ol start="5">
+<li>nginx からリバースプロキシで接続</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/etc/nginx/sites-available/default</span></figcaption><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    # First attempt to serve request as file, then</span><br><span class="line">    # as directory, then fall back to displaying a 404.</span><br><span class="line">    #try_files $uri $uri/ /index.html;</span><br><span class="line">    # Uncomment to enable naxsi on this location</span><br><span class="line">    # include /etc/nginx/naxsi.rules</span><br><span class="line">    proxy_pass http://localhost:3000/;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo /etc/init.d/nginx reload</span><br><span class="line">$ sudo /etc/init.d/nginx restart</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a> からアクセスできるようになります。</p>
+
+	
+	</div>
+  <a type="button" href="/2013/01/12/ubuntu-12-10-calipso-cms-node-js-express-mongodb/#more" class="btn btn-default more">続きを読む</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2013-01-04 </div>
 			<div class="article-title"><a href="/2013/01/04/moc-2-5-0-beta1-patch-r2519r2520/" >moc 2.5.0 beta1 + patch r2519/r2520</a></div>						
 		</h3>
@@ -598,111 +714,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-10-13 </div>
-			<div class="article-title"><a href="/2012/10/13/android-x86-4-0-4-firefox-fennec-19-0a1-16-0-1/" >Android-x86 4.0.4 + Firefox (Fennec) 19.0a1 / 16.0.1</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/android-x86_firefox_19.0a1.png" alt="android-x86 firefoex fennec 19.0a1 16.0.1"></p>
-<p><a target="_blank" rel="noopener" href="https://wiki.mozilla.org/Mobile/Fennec/Android">https://wiki.mozilla.org/Mobile/Fennec/Android</a></p>
-<p>Android-x86 4.0.4 (i386-linux-android) 向けにFirefox の開発バージョン19.0a1 と最新リリース版16.0.1 をビルドしてみました。ビルド環境はUbuntu 12.10 x86_64 です。手順は、<a href="/2012/06/23/android-x86-4-0-3-firefoxfennec-16-0a1/">前回</a>とほとんど同じです。</p>
-<h3 id="ビルド用SDK-の配置"><a href="#ビルド用SDK-の配置" class="headerlink" title="ビルド用SDK の配置"></a>ビルド用SDK の配置</h3><ul>
-<li>/tools/android-sdk-linux</li>
-</ul>
-<ul>
-<li>/tools/android-ndk-r7c</li>
-</ul>
-<ul>
-<li>/tools/jdk1.6.0_35</li>
-</ul>
-<h3 id="ビルド用依存パッケージの取得"><a href="#ビルド用依存パッケージの取得" class="headerlink" title="ビルド用依存パッケージの取得"></a>ビルド用依存パッケージの取得</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install mercurial ccache</span><br><span class="line">$ sudo apt-get build-dep firefox</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="開発版-19-0a1-をビルドする場合"><a href="#開発版-19-0a1-をビルドする場合" class="headerlink" title="開発版(19.0a1)をビルドする場合"></a>開発版(19.0a1)をビルドする場合</h3><ol>
-<li>開発版ソースコードの取得</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /tools/apps/firefox/</span><br><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/mozilla-central/ src-central</span><br><span class="line">$ <span class="built_in">cd</span> src-central</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>mozconfig のカスタマイズ</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ cp ./mobile/android/config/mozconfigs/android-x86/nightly .mozconfig</span><br></pre></td></tr></table></figure>
-<figure class="highlight text"><figcaption><span>/tools/apps/firefox/src-central/.mozconfig</span></figcaption><table><tr><td class="code"><pre><span class="line">. &quot;$topsrcdir/mobile/android/config/mozconfigs/common&quot;</span><br><span class="line"></span><br><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-android-ndk=&quot;/tools/android-ndk-r7c&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;/tools/android-sdk-linux/platforms/android-14&quot;</span><br><span class="line">ac_add_options --with-android-version=14</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line">#ac_add_options --enable-update-channel=$&#123;MOZ_UPDATE_CHANNEL&#125;</span><br><span class="line"></span><br><span class="line"># IonMonkey disabled in bug 789373</span><br><span class="line">ac_add_options --disable-ion</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/tools/jdk1.6.0_35</span><br><span class="line">#export MOZILLA_OFFICIAL=1</span><br><span class="line">#export MOZ_TELEMETRY_REPORTING=1</span><br><span class="line"></span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/nightly</span><br><span class="line"></span><br><span class="line"># Treat warnings as errors in directories with FAIL_ON_WARNINGS.</span><br><span class="line">ac_add_options --enable-warnings-as-errors</span><br><span class="line"></span><br><span class="line"># Use ccache</span><br><span class="line">ac_add_options --with-ccache=/usr/bin/ccache</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="リリース版-16-0-1-をビルドする場合"><a href="#リリース版-16-0-1-をビルドする場合" class="headerlink" title="リリース版(16.0.1)をビルドする場合"></a>リリース版(16.0.1)をビルドする場合</h3><ol>
-<li>リリース版ソースコードの取得</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /tools/apps/firefox/</span><br><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/releases/mozilla-release src-release</span><br><span class="line">$ <span class="built_in">cd</span> src-release</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>mozconfig のカスタマイズ</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ cp ./mobile/android/config/mozconfigs/android-x86/release .mozconfig</span><br></pre></td></tr></table></figure>
-<figure class="highlight text"><figcaption><span>/tools/apps/firefox/src-release/.mozconfig</span></figcaption><table><tr><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-android-ndk=&quot;/tools/android-ndk-r7c&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;/tools/android-sdk-linux/platforms/android-14&quot;</span><br><span class="line">ac_add_options --with-android-version=14</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line">#ac_add_options --enable-updater</span><br><span class="line">#ac_add_options --enable-update-channel=$&#123;MOZ_UPDATE_CHANNEL&#125;</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/tools/jdk1.6.0_35</span><br><span class="line">#export MOZILLA_OFFICIAL=1</span><br><span class="line">#export MOZ_TELEMETRY_REPORTING=1</span><br><span class="line"></span><br><span class="line">#ac_add_options --enable-official-branding</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/unofficial</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="firefox-のビルド"><a href="#firefox-のビルド" class="headerlink" title="firefox のビルド"></a>firefox のビルド</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make -f client.mk build_and_deploy</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><p>以下のフォルダに生成された.apk ファイルをAndroid-x86 でインストールします。</p>
-<figure class="highlight text"><figcaption><span>出力先</span></figcaption><table><tr><td class="code"><pre><span class="line">./obj-x86_64-unknown-linux-gnu/dist/</span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2012/10/13/android-x86-4-0-4-firefox-fennec-19-0a1-16-0-1/#more" class="btn btn-default more">続きを読む</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-10-11 </div>
-			<div class="article-title"><a href="/2012/10/11/openshot-video-editor-1-4-3/" >Openshot Video Editor 1.4.3</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/openshot_3d_text.png" alt="openshot 1.4.3 3d text"><br><a target="_blank" rel="noopener" href="http://www.openshot.org/">http://www.openshot.org/</a></p>
-<p>Openshot はオープンソースな動画編集ソフトウェアです。バージョン1.4.3 では、Blender と連携して、3D 効果やアニメーションが強化されたようです。テキストの3D 効果では日本語フォントもレンダリングできました。</p>
-<figure class="highlight sh"><figcaption><span>Openshot のインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:jonoomph/openshot-edge</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install openshot openshot-doc</span><br></pre></td></tr></table></figure>
-<figure class="highlight sh"><figcaption><span>Blender のインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:irie/blender</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install blender</span><br></pre></td></tr></table></figure>
-<p>例えば、[タイトル]-[新しい動画タイトル]メニューを選択して、テンプレートから「飛び散るテキスト」を選択します。タイトルには適当な文字列を入力し、フォントを指定して、[レンダリング]を実行します。時間がかかりますが、TrueType フォントが3D 化され、アニメーションしました。</p>
-
-	
-	</div>
-  <a type="button" href="/2012/10/11/openshot-video-editor-1-4-3/#more" class="btn btn-default more">続きを読む</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -752,6 +763,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2021/03/08/Windows-Terminal/" ><i class="fa fa-file-o"></i>Windows Terminal</a>
+      </li>
+    
+      <li>
+        <a href="/2021/03/08/flutter/" ><i class="fa fa-file-o"></i>Flutter</a>
+      </li>
+    
+      <li>
         <a href="/2021/02/21/GNOME-40/" ><i class="fa fa-file-o"></i>GNOME 40</a>
       </li>
     
@@ -783,14 +802,6 @@
         <a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" ><i class="fa fa-file-o"></i>EPGStation PVR addon for Kodi</a>
       </li>
     
-      <li>
-        <a href="/2020/08/01/Enabling-sound-in-WSL/" ><i class="fa fa-file-o"></i>Enabling sound in WSL</a>
-      </li>
-    
-      <li>
-        <a href="/2020/07/12/EPGStation-on-WSL/" ><i class="fa fa-file-o"></i>EPGStation/Mirakurun on WSL</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -798,7 +809,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\23\VSCode-on-Android\" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\06\USB-support-to-WSL2\" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\02\EPGStation-PVR-addon-for-Kodi\" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\12\EPGStation-on-WSL\" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\27\Marp-for-VS-Code\" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\01\27\Puppeteer-on-WSL\" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\06\19\WSL-Ubuntu-20-04-LTS\" title="WSL - Ubuntu 20.04 LTS" rel="bookmark">WSL - Ubuntu 20.04 LTS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\07\15\Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi\" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\24\OpenVPN-on-WSL2\" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\04\21\Feedbro-RSS-Japanese-language\" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\23\VSCode-on-Android\" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\02\EPGStation-PVR-addon-for-Kodi\" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\06\USB-support-to-WSL2\" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\12\EPGStation-on-WSL\" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\01\27\Puppeteer-on-WSL\" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\27\Marp-for-VS-Code\" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\06\19\WSL-Ubuntu-20-04-LTS\" title="WSL - Ubuntu 20.04 LTS" rel="bookmark">WSL - Ubuntu 20.04 LTS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\07\15\Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi\" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\07\APT-Hash-sum-mismatch-error\" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\04\21\Feedbro-RSS-Japanese-language\" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li></ul>
 </div>
 
 		

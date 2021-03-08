@@ -6,7 +6,7 @@
   <link href="http://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="http://ktkr3d.github.io/"/>
-  <updated>2021-02-20T22:15:03.000Z</updated>
+  <updated>2021-03-08T11:00:05.000Z</updated>
   <id>http://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows Terminal</title>
+    <link href="http://ktkr3d.github.io/2021/03/08/Windows-Terminal/"/>
+    <id>http://ktkr3d.github.io/2021/03/08/Windows-Terminal/</id>
+    <published>2021-03-08T11:00:05.000Z</published>
+    <updated>2021-03-08T11:00:05.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;久しぶりにWindows Terminal を使ってみました。&lt;br&gt;背景透過の設定、ドロップダウンターミナル的な使い方の設定をしてみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="windows-terminal" scheme="http://ktkr3d.github.io/tags/windows-terminal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter</title>
+    <link href="http://ktkr3d.github.io/2021/03/08/flutter/"/>
+    <id>http://ktkr3d.github.io/2021/03/08/flutter/</id>
+    <published>2021-03-08T09:57:25.000Z</published>
+    <updated>2021-03-08T09:57:25.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/flutter-web-app.png&quot; alt=&quot;flutter-web-app&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Flutter の環境を構築してサンプルアプリケーションを実行してみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="android" scheme="http://ktkr3d.github.io/tags/android/"/>
+    
+    <category term="vscode" scheme="http://ktkr3d.github.io/tags/vscode/"/>
+    
+    <category term="flutter" scheme="http://ktkr3d.github.io/tags/flutter/"/>
+    
+  </entry>
   
   <entry>
     <title>GNOME 40</title>
@@ -413,57 +452,6 @@
     <category term="vscode" scheme="http://ktkr3d.github.io/tags/vscode/"/>
     
     <category term="diagrams" scheme="http://ktkr3d.github.io/tags/diagrams/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Draw.io VS Code Integration</title>
-    <link href="http://ktkr3d.github.io/2020/05/18/Draw-io-VS-Code-Integration/"/>
-    <id>http://ktkr3d.github.io/2020/05/18/Draw-io-VS-Code-Integration/</id>
-    <published>2020-05-17T22:45:24.000Z</published>
-    <updated>2020-05-17T22:45:24.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/sample.drawio.svg&quot; alt=&quot;sample.drawio.svg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio&quot;&gt;https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/hediet/vscode-drawio&quot;&gt;https://github.com/hediet/vscode-drawio&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Visual Studio Code でDraw.io を使う拡張が公開されたので使ってみました。&lt;br&gt;Visio みたいで便利ですね。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="vscode" scheme="http://ktkr3d.github.io/tags/vscode/"/>
-    
-    <category term="draw.io" scheme="http://ktkr3d.github.io/tags/draw-io/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sharing Folders for VMs</title>
-    <link href="http://ktkr3d.github.io/2020/05/08/Sharing-Folders-for-VMs/"/>
-    <id>http://ktkr3d.github.io/2020/05/08/Sharing-Folders-for-VMs/</id>
-    <published>2020-05-07T17:23:50.000Z</published>
-    <updated>2020-05-07T17:23:50.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;ホストOS(Windows 10) のフォルダをゲストOS(Linux)と共有してみました。&lt;/p&gt;
-&lt;div id=&quot;googleChart6252&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-  if (!window.google) {
-    document.body.innerHTML = &#39;You need to include the script //google.com/jsapi on your template&#39;;
-    throw &#39;Google JS API is needed&#39;;
-  } else {
-    (function() {
-      google.load(&#39;visualization&#39;, &#39;1.0&#39;, {&#39;packages&#39;: [&quot;corechart&quot;,&quot;geochart&quot;,&quot;table&quot;]});
-      google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById(&quot;googleChart6252&quot;))).draw(google.visualization.arrayToDataTable([[&#39;Host / Guest&#39;, &#39;Hypervisor&#39;, &#39;OS&#39;, &#39;Type&#39;, &#39;Path&#39;],[&#39;Host&#39;, &#39;-&#39;, &#39;Windows 10&#39;, &#39;ntfs&#39;, &#39;D:\\share&#39;],[&#39;Guest&#39;, &#39;VirtualBox&#39;, &#39;Ubuntu 20.04&#39;, &#39;vboxsf&#39;, &#39;/mnt/share&#39;],[&#39;Guest&#39;, &#39;Hyper-V&#39;, &#39;Ubuntu 20.04&#39;, &#39;cifs&#39;, &#39;/mnt/share&#39;]]),{&quot;title&quot;:&quot; &quot;,&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;});
-      });
-    })();
-  }
-&lt;/script&gt;</summary>
-    
-    
-    
-    
-    <category term="vm" scheme="http://ktkr3d.github.io/tags/vm/"/>
     
   </entry>
   
