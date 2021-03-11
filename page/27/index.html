@@ -162,6 +162,34 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-06-09 </div>
+			<div class="article-title"><a href="/2012/06/09/firefox-13-newsfox/" >Firefox 13 + NewsFox </a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Firefox のアドオンNewsFox を使ってRSS を購読しているのだけど、Firefox を13.0 にアップデートしてから、時々マウスのボタンダウンイベントがキャプチャーされて無効化されてしまうような挙動があったので、やっつけで暫定対策してみた。<del>Linux でもWindows でも発生する(?)ので、NewsFox 側に問題がありそう。いろいろFirefox のバグ回避もしているようだし。</del>とりあえず、ドラッグ開始しないようにreturn してしまうことにした。NewsFox でドラッグアンドドロップなんて飾りですよ。</p>
+<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dragIt</span>(<span class="params">evt</span>) </span>&#123; <span class="keyword">return</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dragArt</span>(<span class="params">evt</span>) </span>&#123; <span class="keyword">return</span>; </span><br></pre></td></tr></table></figure>
+<p>他に古いAPI を使っているところもあるようだし、早くアップデート版がリリースされるといいな。</p>
+<p>newsfox.xpi = {899DF1F8-2F43-4394-8315-37F6744E6319}.xpi</p>
+
+	
+	</div>
+  <a type="button" href="/2012/06/09/firefox-13-newsfox/#more" class="btn btn-default more">続きを読む</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-06-06 </div>
 			<div class="article-title"><a href="/2012/06/06/burg-ubuntu-12-04-windows-8-android-x86-4-0/" >Burg + Ubuntu 12.04 + Windows 8 + Android-x86 4.0</a></div>						
 		</h3>
@@ -474,33 +502,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-05-02 </div>
-			<div class="article-title"><a href="/2012/05/02/irrlicht-chopper-scene-node-control/" >Irrlicht + Chopper Scene Node &amp; Control</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/irrlicht_chopper.png" alt="irrlicht chopper scene node simple chopper control"></p>
-<p><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=46226">http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=46226</a><br><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=46250">http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=46250</a></p>
-<p>Irrlicht Forum にヘリコプターを操縦するデモがあったので、動かしてみた。ヘリコプターのモデルはBell UH-1 Iroquois (<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Bell_UH-1_Iroquois)%E3%81%A8%E3%81%84%E3%81%86%E6%A9%9F%E4%BD%93%E3%81%BF%E3%81%9F%E3%81%84%E3%80%82%E6%85%A3%E6%80%A7%E3%81%8C%E3%81%82%E3%81%A3%E3%81%A6%E3%80%81%E3%82%86%E3%81%A3%E3%81%9F%E3%82%8A%E3%81%A8%E5%8B%95%E3%81%8D%E5%87%BA%E3%81%99%E3%80%82%E8%B5%A4%E3%81%84%E7%B7%9A%E3%81%8C%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E7%94%A8%E3%81%AE%E5%9E%82%E7%9B%B4%E7%B7%9A%E3%80%82%E3%82%AD%E3%83%BC%E6%93%8D%E4%BD%9C%E3%81%AF%E4%BB%A5%E4%B8%8B%E3%80%82">http://en.wikipedia.org/wiki/Bell_UH-1_Iroquois)という機体みたい。慣性があって、ゆったりと動き出す。赤い線がデバッグ用の垂直線。キー操作は以下。</a><br>F1〜F10: カメラの切り替え<br>W/S: pitchDown/pitchUp<br>H: hover<br>Q/E: rollLeft/rollRight<br>R: resetRoll &amp; resetPitch<br>A/D: turnLeft/turnRight<br>Z: brake<br>X: stop<br>C: throttle</p>
-<p>Blender 2.4 を使って、ヘリコプターのモデルを.ac 形式から.obj 形式に変換した。</p>
-
-	
-	</div>
-  <a type="button" href="/2012/05/02/irrlicht-chopper-scene-node-control/#more" class="btn btn-default more">続きを読む</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -550,6 +551,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2021/03/11/Utterances/" ><i class="fa fa-file-o"></i>Utterances</a>
+      </li>
+    
+      <li>
         <a href="/2021/03/08/Windows-Terminal/" ><i class="fa fa-file-o"></i>Windows Terminal</a>
       </li>
     
@@ -585,10 +590,6 @@
         <a href="/2020/08/02/Extraterm/" ><i class="fa fa-file-o"></i>Extraterm</a>
       </li>
     
-      <li>
-        <a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" ><i class="fa fa-file-o"></i>EPGStation PVR addon for Kodi</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -596,7 +597,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\23\VSCode-on-Android\" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\02\EPGStation-PVR-addon-for-Kodi\" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\06\USB-support-to-WSL2\" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\12\EPGStation-on-WSL\" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\01\27\Puppeteer-on-WSL\" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\27\Marp-for-VS-Code\" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\06\19\WSL-Ubuntu-20-04-LTS\" title="WSL - Ubuntu 20.04 LTS" rel="bookmark">WSL - Ubuntu 20.04 LTS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\07\15\Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi\" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\07\APT-Hash-sum-mismatch-error\" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\04\21\Feedbro-RSS-Japanese-language\" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\23\VSCode-on-Android\" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\02\EPGStation-PVR-addon-for-Kodi\" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\06\USB-support-to-WSL2\" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\12\EPGStation-on-WSL\" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\27\Marp-for-VS-Code\" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\01\27\Puppeteer-on-WSL\" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\06\19\WSL-Ubuntu-20-04-LTS\" title="WSL - Ubuntu 20.04 LTS" rel="bookmark">WSL - Ubuntu 20.04 LTS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\07\15\Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi\" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\07\APT-Hash-sum-mismatch-error\" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\01\Enabling-sound-in-WSL\" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li></ul>
 </div>
 
 		
