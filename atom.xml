@@ -6,7 +6,7 @@
   <link href="http://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="http://ktkr3d.github.io/"/>
-  <updated>2021-03-11T13:33:15.000Z</updated>
+  <updated>2021-03-28T11:14:52.000Z</updated>
   <id>http://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu 21.04 Hirsute</title>
+    <link href="http://ktkr3d.github.io/2021/03/28/Ubuntu-21-04-Hirsute/"/>
+    <id>http://ktkr3d.github.io/2021/03/28/Ubuntu-21-04-Hirsute/</id>
+    <published>2021-03-28T11:14:52.000Z</published>
+    <updated>2021-03-28T11:14:52.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;video src=&quot;/images/ubuntu_2104_gnome40.mp4&quot; controls&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu 21.04 にGNOME 40 のPPA を設定してみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="gnome" scheme="http://ktkr3d.github.io/tags/gnome/"/>
+    
+    <category term="ubuntu" scheme="http://ktkr3d.github.io/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EPGStation Settings</title>
+    <link href="http://ktkr3d.github.io/2021/03/18/EPGStation-Settings/"/>
+    <id>http://ktkr3d.github.io/2021/03/18/EPGStation-Settings/</id>
+    <published>2021-03-18T10:40:25.000Z</published>
+    <updated>2021-03-18T10:40:25.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;EPGStation でストリーミングが失敗するので対策してみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="epgstation" scheme="http://ktkr3d.github.io/tags/epgstation/"/>
+    
+  </entry>
   
   <entry>
     <title>Utterances</title>
@@ -388,69 +425,6 @@
     
     
     <category term="wsl" scheme="http://ktkr3d.github.io/tags/wsl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Marp for VS Code</title>
-    <link href="http://ktkr3d.github.io/2020/05/27/Marp-for-VS-Code/"/>
-    <id>http://ktkr3d.github.io/2020/05/27/Marp-for-VS-Code/</id>
-    <published>2020-05-26T18:12:18.000Z</published>
-    <updated>2020-05-26T18:12:18.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://marp.app/&quot;&gt;https://marp.app/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/marp-team/marp-vscode&quot;&gt;https://github.com/marp-team/marp-vscode&lt;/a&gt;&lt;br&gt;Marp はMarkdown でスライドショーを作成できるツールです。&lt;br&gt;Marp for VS Code を使ってみました。&lt;br&gt;Visual Studio Code 上でMarp を使えるようになったんですね。&lt;/p&gt;
-&lt;h4 id=&quot;2020-06-05-追記&quot;&gt;&lt;a href=&quot;#2020-06-05-追記&quot; class=&quot;headerlink&quot; title=&quot;2020-06-05 追記&quot;&gt;&lt;/a&gt;2020-06-05 追記&lt;/h4&gt;&lt;p&gt;Visual Studio Code 上でいろいろ書けるようになりました。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;スライド本体(Markdown 形式)&lt;br&gt;Marp for VS Codeで記述&lt;/li&gt;
-&lt;li&gt;図形(Draw.io SVG形式)&lt;br&gt;Draw.io VS Code Integration で描画してSVG 形式で出力&lt;/li&gt;
-&lt;li&gt;グラフ(Vega SVG形式)&lt;br&gt;Vega Viewer でJSON データをSVG 形式で出力&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2020-07-08-追記&quot;&gt;&lt;a href=&quot;#2020-07-08-追記&quot; class=&quot;headerlink&quot; title=&quot;2020-07-08 追記&quot;&gt;&lt;/a&gt;2020-07-08 追記&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;目次&lt;/li&gt;
-&lt;li&gt;無理やり感のある段組み&lt;/li&gt;
-&lt;li&gt;地図&lt;/li&gt;
-&lt;li&gt;テーマカスタマイズ&lt;/li&gt;
-&lt;li&gt;ページ番号非表示&lt;/li&gt;
-&lt;/ul&gt;
-
-
-	&lt;div class=&quot;row&quot;&gt;
-    &lt;embed src=&quot;/images/sample-presentation.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
-	&lt;/div&gt;</summary>
-    
-    
-    
-    
-    <category term="markdown" scheme="http://ktkr3d.github.io/tags/markdown/"/>
-    
-    <category term="marp" scheme="http://ktkr3d.github.io/tags/marp/"/>
-    
-    <category term="vscode" scheme="http://ktkr3d.github.io/tags/vscode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Terminus</title>
-    <link href="http://ktkr3d.github.io/2020/05/21/Terminus/"/>
-    <id>http://ktkr3d.github.io/2020/05/21/Terminus/</id>
-    <published>2020-05-21T09:50:27.000Z</published>
-    <updated>2020-05-21T09:50:27.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://eugeny.github.io/terminus/&quot;&gt;https://eugeny.github.io/terminus/&lt;/a&gt;&lt;br&gt;Windows の端末エミュレータをTerminus に切り替えました。&lt;/p&gt;
-&lt;p&gt;いろいろありますね。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ConEmu/Cmder&lt;br&gt;&lt;a href=&quot;https://conemu.github.io/&quot;&gt;https://conemu.github.io/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://cmder.net/&quot;&gt;https://cmder.net/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fluent Terminal&lt;br&gt;&lt;a href=&quot;https://github.com/felixse/FluentTerminal&quot;&gt;https://github.com/felixse/FluentTerminal&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Terminus&lt;br&gt;&lt;a href=&quot;https://github.com/Eugeny/terminus&quot;&gt;https://github.com/Eugeny/terminus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Windows Terminal&lt;br&gt;&lt;a href=&quot;https://github.com/microsoft/terminal&quot;&gt;https://github.com/microsoft/terminal&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    
-    <category term="terminus" scheme="http://ktkr3d.github.io/tags/terminus/"/>
     
   </entry>
   

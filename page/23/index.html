@@ -162,6 +162,74 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2013-06-01 </div>
+			<div class="article-title"><a href="/2013/06/01/android-studio/" >Android Studio</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/android-studio.png" alt="android-studo"><br><a target="_blank" rel="noopener" href="http://developer.android.com/sdk/installing/studio.html">http://developer.android.com/sdk/installing/studio.html</a></p>
+<p>Android Studio でサンプルアプリを作って動かしてみました。<br>Linux 版のアーカイブをダウンロードして展開し、android-studio/bin/studio.sh を実行します。ウィザードに従っていくと、サンプルアプリのapk ファイルが生成されます。</p>
+<p><a href="/images/uploads/2013/06/android_studio_project.png"><img src="/images/uploads/2013/06/android_studio_project.png" alt="android_studio_project"></a></p>
+<p>インストールして実行すると、こんな感じになりました。実行環境はAndroid 4.1.2 です。</p>
+<p><a href="/images/uploads/2013/06/my_app.png"><img src="/images/uploads/2013/06/my_app.png" alt="my_app"></a></p>
+
+	
+	</div>
+  <a type="button" href="/2013/06/01/android-studio/#more" class="btn btn-default more">続きを読む</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2013-03-24 </div>
+			<div class="article-title"><a href="/2013/03/24/conkyforecast-japanese-translation/" >ConkyForecast Japanese Translation</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/conkyforecast_japanese.png" alt="conkyforecast japanese"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/conkyforecast-ja">https://github.com/ktkr3d/conkyforecast-ja</a></p>
+<p>ConkyForecast 用の日本語PO ファイルを作成して、Conky-HTC を日本語化してみました。また、Conky-HTC の表示用スクリプトを整理してみました。</p>
+<h4 id="パッケージのインストール"><a href="#パッケージのインストール" class="headerlink" title="パッケージのインストール"></a>パッケージのインストール</h4><p><a target="_blank" rel="noopener" href="http://ktkr3d.site11.com/2011/10/09/conky-htc/">http://ktkr3d.site11.com/2011/10/09/conky-htc/</a><br>conky, conkyForecast, Conky-HTC パッケージをインストールして以下の構成にしておきます。</p>
+<figure class="highlight text"><figcaption><span>フォルダ/ファイル構成</span></figcaption><table><tr><td class="code"><pre><span class="line">~/</span><br><span class="line">├── .fonts/</span><br><span class="line">├── .images/</span><br><span class="line">├── .conkyForecast.config</span><br><span class="line">├── .conkyrc</span><br><span class="line">├── .conky_start</span><br><span class="line">└── .vreme.template</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="conkyForecast-の日本語化"><a href="#conkyForecast-の日本語化" class="headerlink" title="conkyForecast の日本語化"></a>conkyForecast の日本語化</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ wget https://github.com/ktkr3d/conkyforecast-ja/raw/master/locale/ja/LC_MESSAGES/conkyForecast.po</span><br><span class="line">$ wget https://github.com/ktkr3d/conkyforecast-ja/raw/master/locale/ja/LC_MESSAGES/conkyForecastWU.po</span><br><span class="line">$ msgfmt -o conkyForecast.mo conkyForecast.po</span><br><span class="line">$ msgfmt -o conkyForecastWU.mo conkyForecastWU.po</span><br><span class="line">$ sudo mkdir -p /usr/share/conkyforecast/locale/ja/LC_MESSAGES/</span><br><span class="line">$ sudo cp *.mo /usr/share/conkyforecast/locale/ja/LC_MESSAGES/</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="conkyForecast-config-の編集"><a href="#conkyForecast-config-の編集" class="headerlink" title="~/.conkyForecast.config の編集"></a>~/.conkyForecast.config の編集</h4><figure class="highlight text"><figcaption><span>~/.conkyForecast.config</span></figcaption><table><tr><td class="code"><pre><span class="line">#=============================================#</span><br><span class="line"># EXPERT SETTINGS, NOT REQUIRED TO BE ALTERED #</span><br><span class="line">#=============================================#</span><br><span class="line">#BASE_XOAP_URL = http://xoap.weather.com/weather/local/&lt;LOCATION&gt;?cc=*&amp;dayf=5&amp;link=xoap&amp;prod=xoap&amp;par=&lt;XOAP_PARTNER_ID&gt;&amp;key=&lt;XOAP_LICENCE_KEY&gt;&amp;unit=m</span><br><span class="line">BASE_XOAP_URL = http://xml.weather.com/weather/local/&lt;LOCATION&gt;?cc=*&amp;dayf=10&amp;link=xoap&amp;prod=xoap&amp;par=&lt;XOAP_PARTNER_ID&gt;&amp;key=&lt;XOAP_LICENCE_KEY&gt;&amp;unit=m</span><br><span class="line">MAXIMUM_DAYS_FORECAST = 10</span><br><span class="line"></span><br><span class="line">#===============================================#</span><br><span class="line"># USER SETTINGS, EDIT BASED ON DOCUMENTED SETUP #</span><br><span class="line">#===============================================#</span><br><span class="line">CACHE_FOLDERPATH = /tmp/</span><br><span class="line">CONNECTION_TIMEOUT = 5</span><br><span class="line">EXPIRY_MINUTES = 30</span><br><span class="line">TIME_FORMAT = %H:%M</span><br><span class="line">DATE_FORMAT = %Y-%m-%d</span><br><span class="line">LOCALE = ja</span><br><span class="line">XOAP_PARTNER_ID =</span><br><span class="line">XOAP_LICENCE_KEY =</span><br><span class="line">DEFAULT_LOCATION = JAXX0085</span><br><span class="line">AUTO_NIGHT = False</span><br><span class="line">PROXY_HOST = </span><br><span class="line">PROXY_PORT = 8080</span><br><span class="line">PROXY_USERNAME = </span><br><span class="line">PROXY_PASSWORD = </span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="conkyrc-の編集"><a href="#conkyrc-の編集" class="headerlink" title="~/.conkyrc の編集"></a>~/.conkyrc の編集</h4><figure class="highlight text"><figcaption><span>~/.conkyrc</span></figcaption><table><tr><td class="code"><pre><span class="line"> # Time</span><br><span class="line">$&#123;voffset 35&#125;$&#123;goto 39&#125;$&#123;font Helvetica LT Std:style=Condensed:size=60&#125;$&#123;color 434343&#125;$&#123;time %H&#125;$&#123;goto 140&#125;$&#123;color 434343&#125;$&#123;time %M&#125;$&#123;font Helvetica LT Std:style=Condensed:size=18&#125;$&#123;color ffffff&#125;$&#123;goto 225&#125;$&#123;time %S&#125;</span><br><span class="line"> # Date</span><br><span class="line">$&#123;voffset 47&#125;$&#123;font TakaoPGothic:size=8&#125;$&#123;alignr 80&#125;$&#123;time %G&#125;/$&#123;time %m&#125;/$&#123;time %d&#125; ($&#123;time %a&#125;)</span><br><span class="line"> # City Name</span><br><span class="line">$&#123;voffset -40&#125;$&#123;goto 22&#125;$&#123;exec conkyForecast --datatype=CN&#125;</span><br><span class="line"> # Conditions Text, Current Temp</span><br><span class="line">$&#123;goto 22&#125;$&#123;execi 1800 conkyForecast --datatype=CT&#125;$&#123;voffset -20&#125;$&#123;goto 200&#125;$&#123;font Helvetica LT Std:size=24&#125;$&#123;execi 1800 conkyForecast -u --datatype=HT&#125;</span><br><span class="line"> # High Temp, Low Temp of Today</span><br><span class="line">$&#123;voffset -15&#125;$&#123;font Helvetica LT Std:style=Condensed:size=10&#125;#</span><br><span class="line">$&#123;goto 200&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=0&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=0&#125;</span><br><span class="line"> # High Temp, Low Temp of Next 5 Days</span><br><span class="line">$&#123;voffset 53&#125;$&#123;font Helvetica LT Std:style=Condensed:size=8&#125;#</span><br><span class="line">$&#123;goto  25&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=1&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=1&#125;#</span><br><span class="line">$&#123;goto  70&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=2&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=2&#125;#</span><br><span class="line">$&#123;goto 115&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=3&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=3&#125;#</span><br><span class="line">$&#123;goto 160&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=4&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=4&#125;#</span><br><span class="line">$&#123;goto 205&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=5&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=5&#125;</span><br><span class="line"> # Day of Week</span><br><span class="line">$&#123;font TakaoPGothic:size=8&#125;$&#123;color ffffff&#125;#</span><br><span class="line">$&#123;goto  37&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=1&#125;#</span><br><span class="line">$&#123;goto  82&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=2&#125;#</span><br><span class="line">$&#123;goto 127&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=3&#125;#</span><br><span class="line">$&#123;goto 172&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=4&#125;#</span><br><span class="line">$&#123;goto 217&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=5&#125; </span><br><span class="line">$&#123;image ~/.images/base.png -p 12,30 -s 238x140&#125;</span><br><span class="line">$&#123;image ~/.images/base.png -p 12,190 -s 238x55&#125;</span><br><span class="line">$&#123;image ~/.images/flip_bg.png -p 30,10 -s 100x110&#125;</span><br><span class="line">$&#123;image ~/.images/flip_bg.png -p 130,10 -s 100x110&#125;</span><br><span class="line">$&#123;execpi 1800 conkyForecast --template=~/.vreme.template&#125;</span><br></pre></td></tr></table></figure>
+<p>行中/行末に# を挿入すると次の行と連結(改行をエスケープ)できます。<br>今日の最高/最低気温を取得するために「–startday=0」を指定してみましたが、値は無効かもしれません。</p>
+
+	
+	</div>
+  <a type="button" href="/2013/03/24/conkyforecast-japanese-translation/#more" class="btn btn-default more">続きを読む</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2013-03-17 </div>
 			<div class="article-title"><a href="/2013/03/17/bittorrent-live-beta/" >BitTorrent Live Beta</a></div>						
 		</h3>
@@ -522,91 +590,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-02-09 </div>
-			<div class="article-title"><a href="/2013/02/09/cloud9-ide/" >Cloud9 IDE</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/cloud9_ide.png" alt="Cloud9 IDE"></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/ajaxorg/cloud9">https://github.com/ajaxorg/cloud9</a><br><a target="_blank" rel="noopener" href="http://nodejs.org/dist/">http://nodejs.org/dist/</a></p>
-<p>Node.js の統合開発環境であるCloude9 IDE をローカル環境に構築してみました。Cloude9 IDE の動作前提となるNode.js のバージョンは古めなので、nvm(Node Version Manager)を利用して、Node.js v0.6.21 をインストールしました。ちなみに現在の最新のNode.js のバージョンはv0.9.9 のようです。</p>
-<h3 id="Node-Version-Manager-のインストール"><a href="#Node-Version-Manager-のインストール" class="headerlink" title="Node Version Manager のインストール"></a>Node Version Manager のインストール</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install build-essential libssl-dev curl git</span><br><span class="line">$ git <span class="built_in">clone</span> git://github.com/creationix/nvm.git ~/.nvm</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="Node-js-v0-6-21-とsourcemint-のインストール"><a href="#Node-js-v0-6-21-とsourcemint-のインストール" class="headerlink" title="Node.js v0.6.21 とsourcemint のインストール"></a>Node.js v0.6.21 とsourcemint のインストール</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">$ nvm install v0.6.21</span><br><span class="line">$ nvm use v0.6.21</span><br><span class="line">$ npm install -g sm</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="Cound9-IDE-のインストール"><a href="#Cound9-IDE-のインストール" class="headerlink" title="Cound9 IDE のインストール"></a>Cound9 IDE のインストール</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/ajaxorg/cloud9.git ~/cloud9</span><br><span class="line">$ <span class="built_in">cd</span> ~/cloud9</span><br><span class="line">$ sm install</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="Cound9-IDE-の実行"><a href="#Cound9-IDE-の実行" class="headerlink" title="Cound9 IDE の実行"></a>Cound9 IDE の実行</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">$ nvm use v0.6.21</span><br><span class="line">$ <span class="built_in">cd</span> ~/cloud9/bin &amp;&amp; ./cloud9.sh</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="Cound9-IDE-画面の表示"><a href="#Cound9-IDE-画面の表示" class="headerlink" title="Cound9 IDE 画面の表示"></a>Cound9 IDE 画面の表示</h3><p>ブラウザで<a target="_blank" rel="noopener" href="http://localhost:3131/">http://localhost:3131/</a> を開く。</p>
-
-	
-	</div>
-  <a type="button" href="/2013/02/09/cloud9-ide/#more" class="btn btn-default more">続きを読む</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-02-07 </div>
-			<div class="article-title"><a href="/2013/02/07/ubuntu-13-04-gnome-shell-3-7-5/" >Ubuntu 13.04 + GNOME Shell 3.7.5</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/ubuntu_13.04_gnome_shell_3.7.5-600x337.png" alt="ubuntu_13.04_gnome_shell_3.7.5">](/images/uploads/2013/02/ubuntu_13.04_gnome_shell_3.7.5.png)</p>
-<p><a target="_blank" rel="noopener" href="https://launchpad.net/~gnome3-team/+archive/gnome3">https://launchpad.net/~gnome3-team/+archive/gnome3</a><br><a target="_blank" rel="noopener" href="https://launchpad.net/~ricotz/+archive/testing">https://launchpad.net/~ricotz/+archive/testing</a></p>
-<p>Ubuntu 13.04 x86_64 デイリービルドにGNOME Shell 3.7.5 をインストールしてみました。</p>
-<h3 id="手順"><a href="#手順" class="headerlink" title="手順"></a>手順</h3><p>以下のPPA をソフトウェアソースに追加して、gnome-shell パッケージをインストール/アップデートします。</p>
-<ul>
-<li>ppa:gnome3-team/gnome3</li>
-</ul>
-<ul>
-<li>ppa:ricotz/testing</li>
-</ul>
-<h3 id="GNOME-Shell-3-7-5-のチェンジログ"><a href="#GNOME-Shell-3-7-5-のチェンジログ" class="headerlink" title="GNOME Shell 3.7.5 のチェンジログ"></a>GNOME Shell 3.7.5 のチェンジログ</h3><p><a target="_blank" rel="noopener" href="http://ftp.acc.umu.se/pub/GNOME/sources/gnome-shell/3.7/gnome-shell-3.7.5.news">http://ftp.acc.umu.se/pub/GNOME/sources/gnome-shell/3.7/gnome-shell-3.7.5.news</a></p>
-<ul>
-<li>MessageTray: pass keyboard events to tray icons</li>
-<li>network: add support for virtual devices</li>
-<li>gdm: Allow right-clicking buttons for left-handed users</li>
-<li>Make list search results span all available horizontal space</li>
-<li>Make Show-Applications button depress when held down</li>
-<li>Set a max width on search results</li>
-<li>Reserve scrollbar allocation for automatic policy</li>
-<li>Improve scaling algorithm for window thumbnails</li>
-</ul>
-<h3 id="GNOME-Shell-Extension-のバージョン指定の更新"><a href="#GNOME-Shell-Extension-のバージョン指定の更新" class="headerlink" title="GNOME Shell Extension のバージョン指定の更新"></a>GNOME Shell Extension のバージョン指定の更新</h3><p>Auto hide the top panel GNOME Shell Extension のバージョン指定を更新して、暫定的に動作させてみました。</p>
-<figure class="highlight text"><figcaption><span>.local/share/gnome-shell/extensions/autohidetopbar2@werewolves.us/metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  &quot;description&quot;: &quot;Auto hide the top panel&quot;,</span><br><span class="line">  &quot;extension-id&quot;: &quot;auto-hide-top-panel&quot;, </span><br><span class="line">  &quot;gettext-domain&quot;: &quot;gnome-shell-extensions&quot;, </span><br><span class="line">  &quot;name&quot;: &quot;Auto Hide Top Panel&quot;,</span><br><span class="line">  &quot;settings-schema&quot;: &quot;org.gnome.shell.extensions.auto-hide-top-panel&quot;, </span><br><span class="line">  &quot;shell-version&quot;: [</span><br><span class="line">    &quot;3.5.92&quot;, &quot;3.6.1&quot;, &quot;3.6&quot;, &quot;3.7.5&quot;</span><br><span class="line">  ], </span><br><span class="line">  &quot;url&quot;: &quot;http://fpmurphy.com/gnome-shell-extensions&quot;,</span><br><span class="line">  &quot;uuid&quot;: &quot;autohidetopbar2@werewolves.us&quot;,</span><br><span class="line">  &quot;version&quot;: 1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2013/02/07/ubuntu-13-04-gnome-shell-3-7-5/#more" class="btn btn-default more">続きを読む</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -656,6 +639,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2021/03/28/Ubuntu-21-04-Hirsute/" ><i class="fa fa-file-o"></i>Ubuntu 21.04 Hirsute</a>
+      </li>
+    
+      <li>
+        <a href="/2021/03/18/EPGStation-Settings/" ><i class="fa fa-file-o"></i>EPGStation Settings</a>
+      </li>
+    
+      <li>
         <a href="/2021/03/11/Utterances/" ><i class="fa fa-file-o"></i>Utterances</a>
       </li>
     
@@ -687,14 +678,6 @@
         <a href="/2020/08/09/Linux-Terminal-Shortcuts/" ><i class="fa fa-file-o"></i>Linux Terminal Shortcuts</a>
       </li>
     
-      <li>
-        <a href="/2020/08/03/Hexo-5-0-0/" ><i class="fa fa-file-o"></i>Hexo 5.0.0</a>
-      </li>
-    
-      <li>
-        <a href="/2020/08/02/Extraterm/" ><i class="fa fa-file-o"></i>Extraterm</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -702,7 +685,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\23\VSCode-on-Android\" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\02\EPGStation-PVR-addon-for-Kodi\" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\06\USB-support-to-WSL2\" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\12\EPGStation-on-WSL\" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\27\Marp-for-VS-Code\" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\01\27\Puppeteer-on-WSL\" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\06\19\WSL-Ubuntu-20-04-LTS\" title="WSL - Ubuntu 20.04 LTS" rel="bookmark">WSL - Ubuntu 20.04 LTS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\07\15\Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi\" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\07\APT-Hash-sum-mismatch-error\" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\01\Enabling-sound-in-WSL\" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\23\VSCode-on-Android\" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\02\EPGStation-PVR-addon-for-Kodi\" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\06\USB-support-to-WSL2\" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\07\12\EPGStation-on-WSL\" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\05\27\Marp-for-VS-Code\" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\07\15\Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi\" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\06\19\WSL-Ubuntu-20-04-LTS\" title="WSL - Ubuntu 20.04 LTS" rel="bookmark">WSL - Ubuntu 20.04 LTS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\01\27\Puppeteer-on-WSL\" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2019\08\21\RPi4-Redmine\" title="RPi4 - Docker Redmine" rel="bookmark">RPi4 - Docker Redmine</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\2020\08\01\Enabling-sound-in-WSL\" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li></ul>
 </div>
 
 		
