@@ -11,7 +11,7 @@
 GNOME 40.0 でDash to Dock 拡張を導入してみました。
 https://github.com/philippun1/dash-to-panel/tree/update-to-gnome40https://github.com/home-sweet-gnome/dash-to-panel/pull/1303
 GNOME 40.0 でDash to Panel 拡張を導入してみました。
-2021-04-08 追記https://launchpad.net/~webupd8team/+archive/ubuntu/gnome3/+sourcefiles/gnome-shell-extensions-autohidetopbar/0.2+1-1~webupd8~precise/gnome-shell-extensions-autohidetopbar_0.2+1-1~webupd8~precise.tar.gz
+2021-04-08 追記http://www.webupd8.org/2012/05/gnome-shell-autohide-top-bar-for-gnome.html
 Auto Hide Top Panel 拡張をGNOME 40 に対応させてみました。マウスを画面上部に近づけるとパネルが表示されます。パネルをダブルクリックすることで固定と固定解除を切り替えます。">
   
   
@@ -173,7 +173,7 @@ Auto Hide Top Panel 拡張をGNOME 40 に対応させてみました。マウス
 <p>GNOME 40.0 でDash to Dock 拡張を導入してみました。</p>
 <p><img src="/images/gnome40-dashtopanel.png" alt="gnome40 dashtopanel"><br><a target="_blank" rel="noopener" href="https://github.com/philippun1/dash-to-panel/tree/update-to-gnome40">https://github.com/philippun1/dash-to-panel/tree/update-to-gnome40</a><br><a target="_blank" rel="noopener" href="https://github.com/home-sweet-gnome/dash-to-panel/pull/1303">https://github.com/home-sweet-gnome/dash-to-panel/pull/1303</a></p>
 <p>GNOME 40.0 でDash to Panel 拡張を導入してみました。</p>
-<h4 id="2021-04-08-追記"><a href="#2021-04-08-追記" class="headerlink" title="2021-04-08 追記"></a>2021-04-08 追記</h4><p><img src="/images/gnome40-autohidetoppanel.png" alt="gnome40 gnome40-autohidetoppanel"><br><a target="_blank" rel="noopener" href="https://launchpad.net/~webupd8team/+archive/ubuntu/gnome3/+sourcefiles/gnome-shell-extensions-autohidetopbar/0.2+1-1~webupd8~precise/gnome-shell-extensions-autohidetopbar_0.2+1-1~webupd8~precise.tar.gz">https://launchpad.net/~webupd8team/+archive/ubuntu/gnome3/+sourcefiles/gnome-shell-extensions-autohidetopbar/0.2+1-1~webupd8~precise/gnome-shell-extensions-autohidetopbar_0.2+1-1~webupd8~precise.tar.gz</a></p>
+<h4 id="2021-04-08-追記"><a href="#2021-04-08-追記" class="headerlink" title="2021-04-08 追記"></a>2021-04-08 追記</h4><p><img src="/images/gnome40-autohidetoppanel.png" alt="gnome40 gnome40-autohidetoppanel"><br><a target="_blank" rel="noopener" href="http://www.webupd8.org/2012/05/gnome-shell-autohide-top-bar-for-gnome.html">http://www.webupd8.org/2012/05/gnome-shell-autohide-top-bar-for-gnome.html</a></p>
 <p>Auto Hide Top Panel 拡張をGNOME 40 に対応させてみました。<br>マウスを画面上部に近づけるとパネルが表示されます。<br>パネルをダブルクリックすることで固定と固定解除を切り替えます。</p>
 <a id="more"></a>
 
@@ -192,7 +192,7 @@ Auto Hide Top Panel 拡張をGNOME 40 に対応させてみました。マウス
 <p>GNOME Shell を再起動した後に拡張機能を有効化します。</p>
 </li>
 <li><p>Auto Hide Top Panel の導入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget https://launchpad.net/~webupd8team/+archive/ubuntu/gnome3/+sourcefiles/gnome-shell-extensions-autohidetopbar/0.2+1-1~webupd8~precise/gnome-shell-extensions-autohidetopbar_0.2+1-1~webupd8~precise.tar.gz</span><br><span class="line">$ tar xvfz gnome-shell-extensions-autohidetopbar_0.2+1-1~webupd8~precise.tar.gz</span><br><span class="line">$ cp -r gnome-shell-extensions-autohidetopbar-0.2/autohidetopbar2@werewolves.us/ ~/.<span class="built_in">local</span>/share/gnome-shell/extensions/</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget https://launchpad.net/~webupd8team/+archive/gnome3/+files/gnome-shell-extensions-autohidetopbar_0.2%2B1-1~webupd8~precise.tar.gz</span><br><span class="line">$ tar xvfz gnome-shell-extensions-autohidetopbar_0.2+1-1~webupd8~precise.tar.gz</span><br><span class="line">$ cp -r gnome-shell-extensions-autohidetopbar-0.2/autohidetopbar2@werewolves.us/ ~/.<span class="built_in">local</span>/share/gnome-shell/extensions/</span><br></pre></td></tr></table></figure></li>
 </ol>
 <ul>
 <li>extension.js の修正<br><code>imports.ui.tweener</code>を<code>imports.tweener.tweener</code>で置換します。<figure class="highlight javascript"><figcaption><span>~/.local/share/gnome-shell/extensions/autohidetopbar2@werewolves.us/extension.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// const Tweener = imports.ui.tweener;</span></span><br><span class="line"><span class="keyword">const</span> Tweener = imports.tweener.tweener;</span><br></pre></td></tr></table></figure></li>
