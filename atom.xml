@@ -28,7 +28,9 @@
 &lt;h4 id=&quot;2021-04-07-追記&quot;&gt;&lt;a href=&quot;#2021-04-07-追記&quot; class=&quot;headerlink&quot; title=&quot;2021-04-07 追記&quot;&gt;&lt;/a&gt;2021-04-07 追記&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/images/gnome40-dashtodock.png&quot; alt=&quot;gnome40 dashtodock&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40&quot;&gt;https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/micheleg/dash-to-dock/pull/1402&quot;&gt;https://github.com/micheleg/dash-to-dock/pull/1402&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;GNOME 40.0 でDash to Dock 拡張を導入してみました。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/gnome40-dashtopanel.png&quot; alt=&quot;gnome40 dashtopanel&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/philippun1/dash-to-panel/tree/update-to-gnome40&quot;&gt;https://github.com/philippun1/dash-to-panel/tree/update-to-gnome40&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/home-sweet-gnome/dash-to-panel/pull/1303&quot;&gt;https://github.com/home-sweet-gnome/dash-to-panel/pull/1303&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;GNOME 40.0 でDash to Panel 拡張を導入してみました。&lt;/p&gt;</summary>
+&lt;p&gt;GNOME 40.0 でDash to Panel 拡張を導入してみました。&lt;/p&gt;
+&lt;h4 id=&quot;2021-04-08-追記&quot;&gt;&lt;a href=&quot;#2021-04-08-追記&quot; class=&quot;headerlink&quot; title=&quot;2021-04-08 追記&quot;&gt;&lt;/a&gt;2021-04-08 追記&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/images/gnome40-autohidetoppanel.png&quot; alt=&quot;gnome40 gnome40-autohidetoppanel&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Auto Hide Top Panel 拡張をGNOME 40 に対応させてみました。&lt;br&gt;マウスを画面上部に近づけると近づけるとパネルが表示されます。&lt;/p&gt;</summary>
     
     
     
