@@ -7,8 +7,10 @@
   <meta name="author" content="ktkr3d">
   
   <meta name="description" content="https://launchpad.net/~shemgp/+archive/ubuntu/gnome-40Ubuntu 21.04 にGNOME 40 のPPA を設定してみました。
-https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40https://github.com/micheleg/dash-to-dock/pull/1402
-GNOME 40.0 でDash to Dock 拡張を導入してみました。">
+2021-04-07 追記https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40https://github.com/micheleg/dash-to-dock/pull/1402
+GNOME 40.0 でDash to Dock 拡張を導入してみました。
+https://github.com/philippun1/dash-to-panel/tree/update-to-gnome40https://github.com/home-sweet-gnome/dash-to-panel/pull/1303
+GNOME 40.0 でDash to Panel 拡張を導入してみました。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -165,8 +167,10 @@ GNOME 40.0 でDash to Dock 拡張を導入してみました。">
 	  		
 
 	  <p><video src="/images/ubuntu_2104_gnome40.mp4" controls></video><br><a target="_blank" rel="noopener" href="https://launchpad.net/~shemgp/+archive/ubuntu/gnome-40">https://launchpad.net/~shemgp/+archive/ubuntu/gnome-40</a><br>Ubuntu 21.04 にGNOME 40 のPPA を設定してみました。</p>
-<p><img src="/images/gnome40-dashtodock.png" alt="gnome40 dashtodock"><br><a target="_blank" rel="noopener" href="https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40">https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40</a><br><a target="_blank" rel="noopener" href="https://github.com/micheleg/dash-to-dock/pull/1402">https://github.com/micheleg/dash-to-dock/pull/1402</a></p>
+<h4 id="2021-04-07-追記"><a href="#2021-04-07-追記" class="headerlink" title="2021-04-07 追記"></a>2021-04-07 追記</h4><p><img src="/images/gnome40-dashtodock.png" alt="gnome40 dashtodock"><br><a target="_blank" rel="noopener" href="https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40">https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40</a><br><a target="_blank" rel="noopener" href="https://github.com/micheleg/dash-to-dock/pull/1402">https://github.com/micheleg/dash-to-dock/pull/1402</a></p>
 <p>GNOME 40.0 でDash to Dock 拡張を導入してみました。</p>
+<p><img src="/images/gnome40-dashtopanel.png" alt="gnome40 dashtopanel"><br><a target="_blank" rel="noopener" href="https://github.com/philippun1/dash-to-panel/tree/update-to-gnome40">https://github.com/philippun1/dash-to-panel/tree/update-to-gnome40</a><br><a target="_blank" rel="noopener" href="https://github.com/home-sweet-gnome/dash-to-panel/pull/1303">https://github.com/home-sweet-gnome/dash-to-panel/pull/1303</a></p>
+<p>GNOME 40.0 でDash to Panel 拡張を導入してみました。</p>
 <a id="more"></a>
 
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
@@ -175,7 +179,11 @@ GNOME 40.0 でDash to Dock 拡張を導入してみました。">
 <li><p>PPA の追加<br><a target="_blank" rel="noopener" href="https://launchpad.net/~shemgp/+archive/ubuntu/gnome-40">https://launchpad.net/~shemgp/+archive/ubuntu/gnome-40</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:shemgp/gnome-40</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure></li>
 <li><p>Dash to Dock の導入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install git build-essentials gettext</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/ewlsh/dash-to-dock.git -b ewlsh/gnome-40</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install git build-essentials gettext</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/ewlsh/dash-to-dock.git -b ewlsh/gnome-40</span><br><span class="line">$ <span class="built_in">cd</span> dash-to-dock</span><br><span class="line">$ make</span><br><span class="line">$ make install</span><br></pre></td></tr></table></figure>
+<p>GNOME Shell を再起動した後に拡張機能を有効化します。</p>
+</li>
+<li><p>Dash to Panel の導入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/philippun1/dash-to-panel.git -b update-to-gnome40</span><br><span class="line">$ <span class="built_in">cd</span> dash-to-panel</span><br><span class="line">$ make install</span><br></pre></td></tr></table></figure>
 <p>GNOME Shell を再起動した後に拡張機能を有効化します。</p>
 </li>
 </ol>
