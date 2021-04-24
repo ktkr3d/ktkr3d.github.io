@@ -6,7 +6,7 @@
   <link href="http://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="http://ktkr3d.github.io/"/>
-  <updated>2021-03-28T11:14:52.000Z</updated>
+  <updated>2021-04-24T12:11:45.000Z</updated>
   <id>http://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fedora 34 Beta</title>
+    <link href="http://ktkr3d.github.io/2021/04/24/Fedora-34-Beta/"/>
+    <id>http://ktkr3d.github.io/2021/04/24/Fedora-34-Beta/</id>
+    <published>2021-04-24T12:11:45.000Z</published>
+    <updated>2021-04-24T12:11:45.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/fedora34_gnome40.png&quot; alt=&quot;fedora34 gnome40&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://getfedora.org/ja/workstation/download/&quot;&gt;https://getfedora.org/ja/workstation/download/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="fedora" scheme="http://ktkr3d.github.io/tags/fedora/"/>
+    
+    <category term="gnome" scheme="http://ktkr3d.github.io/tags/gnome/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu 21.04 Hirsute</title>
@@ -412,27 +431,6 @@
     <category term="wsl" scheme="http://ktkr3d.github.io/tags/wsl/"/>
     
     <category term="ubuntu" scheme="http://ktkr3d.github.io/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 10 Build 19645 + WSL 2</title>
-    <link href="http://ktkr3d.github.io/2020/06/11/Windows-10-Build-19645-WSL-2/"/>
-    <id>http://ktkr3d.github.io/2020/06/11/Windows-10-Build-19645-WSL-2/</id>
-    <published>2020-06-11T14:49:48.000Z</published>
-    <updated>2020-06-11T14:49:48.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel&quot;&gt;https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Windows 10 Insider Preview Build 19645 をインストールしたらWSL2 が起動しなくなりました。Kernel の更新方法が変わったようです。&lt;/p&gt;
-&lt;p&gt;以下のMSI をインストールすると復帰しました。&lt;br&gt;&lt;a href=&quot;https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi&quot;&gt;https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;2020-06-18-追記&quot;&gt;&lt;a href=&quot;#2020-06-18-追記&quot; class=&quot;headerlink&quot; title=&quot;2020-06-18 追記&quot;&gt;&lt;/a&gt;2020-06-18 追記&lt;/h4&gt;&lt;p&gt;Windows 10 Insider Preview Build 20150 へ更新することで、&lt;br&gt;コマンドプロンプトから&lt;code&gt;wsl --update&lt;/code&gt; で更新できるようになったようです。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;C:\&amp;gt;wsl --update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;更新をチェック中...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;利用できる更新はありません。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;カーネル バージョン: 4.19.104&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    
-    <category term="wsl" scheme="http://ktkr3d.github.io/tags/wsl/"/>
     
   </entry>
   
