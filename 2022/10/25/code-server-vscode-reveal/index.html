@@ -175,10 +175,13 @@ reveal.js 本体はポート番号を指定可能ですが、残念ながらvsco
 <span id="more"></span>
 
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
-<li><p>vscode-reveal (reveal.js) で利用するポート番号(例えば 443039)を決めます。</p>
-</li>
-<li><p>vscode-reveal でreveal.js のポート番号を固定</p>
-</li>
+<li>vscode-reveal (reveal.js) で利用するポート番号(例えば 43039)を決めます。</li>
+</ol>
+<ul>
+<li>FW でポート番号43039の受信を許可します</li>
+</ul>
+<ol start="2">
+<li>vscode-reveal でreveal.js のポート番号を固定</li>
 </ol>
 <ul>
 <li>修正ファイル<br>~&#x2F;.local&#x2F;share&#x2F;code-server&#x2F;extensions&#x2F;evilz.vscode-reveal-4.3.3-universal&#x2F;dist&#x2F;extension.js</li>
@@ -199,6 +202,7 @@ reveal.js 本体はポート番号を指定可能ですが、残念ながらvsco
 <li>リモートLinux PCのポートフォワード設定</li>
 </ol>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redir -n 0.0.0.0:43039 192.168.11.2:43039</span><br></pre></td></tr></table></figure>
+
 
 <h3 id="オプション"><a href="#オプション" class="headerlink" title="オプション"></a>オプション</h3><ol>
 <li>Activitus Bar にアイコン追加 (オプション)</li>
