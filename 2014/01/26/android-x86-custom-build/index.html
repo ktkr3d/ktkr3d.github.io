@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android-x86 Custom Build | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="https://groups.google.com/forum/#!msg/android-x86/yJXD4CeHWC4/RG2p3QzZlBgJ
+Android-x86 Custom Build for DELL Inspiron Duo
+
+Acellerometer&amp;#x2F;magnetometer(lsm303dlh) driver
+Physical keyboard layout
+Product Information">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Android-x86 Custom Build"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Visual-Studio-Code" title="Visual Studio Code"><i class="fas fa-code"></i>Visual Studio Code</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Android-x86 Custom Build</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p><a href="/images/android-x86_custom_build.png"><img src="/images/android-x86_custom_build.png" alt="Android-x86 custom build" title="Android-x86 custom build"></a></p>
+<p><a target="_blank" rel="noopener" href="https://groups.google.com/forum/#!msg/android-x86/yJXD4CeHWC4/RG2p3QzZlBgJ">https://groups.google.com/forum/#!msg/android-x86/yJXD4CeHWC4/RG2p3QzZlBgJ</a></p>
+<p>Android-x86 Custom Build for DELL Inspiron Duo</p>
+<ul>
+<li>Acellerometer&#x2F;magnetometer(lsm303dlh) driver</li>
+<li>Physical keyboard layout</li>
+<li>Product Information</li>
+</ul>
+<span id="more"></span>
+
+<h4 id="Get-Source"><a href="#Get-Source" class="headerlink" title="Get Source"></a>Get Source</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> ics-x86</span><br><span class="line">$ <span class="built_in">cd</span> ics-x86</span><br><span class="line">$ repo init -u http://git.android-x86.org/manifest -b ics-x86</span><br><span class="line">$ repo <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Download-patch-and-Extract"><a href="#Download-patch-and-Extract" class="headerlink" title="Download patch and Extract"></a>Download patch and Extract</h4><p><code>https://groups.google.com/group/android-x86/attach/1894d90cdda96d44/ics-x86-DellDuo-patches.tar?part=4&amp;view=1</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar xvf ics-x86-DellDuo-patches.tar</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">$ tree -F .</span><br><span class="line">.</span><br><span class="line">├── device/</span><br><span class="line">│   └── dell/</span><br><span class="line">│       └── duo/</span><br><span class="line">│           ├── AT_Translated_Set_2_keyboard.kl</span><br><span class="line">│           ├── AndroidBoard.mk</span><br><span class="line">│           ├── AndroidProducts.mk</span><br><span class="line">│           ├── BoardConfig.mk</span><br><span class="line">│           ├── duo.mk</span><br><span class="line">│           ├── duo_defconfig</span><br><span class="line">│           ├── duo_info</span><br><span class="line">│           ├── init.duo.rc</span><br><span class="line">│           ├── init.duo.sh</span><br><span class="line">│           ├── io_switch/</span><br><span class="line">│           │   ├── Android.mk</span><br><span class="line">│           │   └── io_switch.c</span><br><span class="line">│           ├── overlays/</span><br><span class="line">│           │   ├── frameworks/</span><br><span class="line">│           │   │   └── base/</span><br><span class="line">│           │   │       └── core/</span><br><span class="line">│           │   │           └── res/</span><br><span class="line">│           │   │               └── res/</span><br><span class="line">│           │   │                   └── xml/</span><br><span class="line">│           │   │                       └── storage_list.xml</span><br><span class="line">│           │   └── packages/</span><br><span class="line">│           │       └── apps/</span><br><span class="line">│           │           └── Browser/</span><br><span class="line">│           │               └── res/</span><br><span class="line">│           │                   └── values/</span><br><span class="line">│           │                       └── strings.xml</span><br><span class="line">│           ├── system.prop</span><br><span class="line">│           ├── vendorsetup.sh</span><br><span class="line">│           └── vold.fstab</span><br><span class="line">├── hardware/</span><br><span class="line">│   └── libsensors/</span><br><span class="line">│       ├── Android.mk</span><br><span class="line">│       └── lsm303dlh_a_sensor.c</span><br><span class="line">└── kernel/</span><br><span class="line">    ├── drivers/</span><br><span class="line">    │   └── hwmon/</span><br><span class="line">    │       ├── Kconfig</span><br><span class="line">    │       ├── Makefile</span><br><span class="line">    │       ├── lsm303dlh_a.c</span><br><span class="line">    │       └── lsm303dlh_m.c</span><br><span class="line">    └── include/</span><br><span class="line">        └── linux/</span><br><span class="line">            └── lsm303dlh.h</span><br><span class="line"></span><br><span class="line">23 directories, 23 files</span><br></pre></td></tr></table></figure>
+
+<h4 id="Build"><a href="#Build" class="headerlink" title="Build"></a>Build</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ make -j4 iso_img TARGET_PRODUCT=duo</span><br></pre></td></tr></table></figure>
+
+<h4 id="Ad-hoc-solution-1"><a href="#Ad-hoc-solution-1" class="headerlink" title="Ad hoc solution 1"></a>Ad hoc solution 1</h4><p>Downgrade Bison 3.0.2 to 2.7.1</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get remove bison</span><br><span class="line">$ wget https://launchpad.net/bison/head/2.7.1/+download/bison-2.7.1.tar.gz</span><br><span class="line">$ tar zxvf bison-2.7.1.tar.gz</span><br><span class="line">$ <span class="built_in">cd</span> bison-2.7.1</span><br><span class="line">$ ./configure</span><br><span class="line">$ make -j4</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<h4 id="Ad-hoc-solution-2"><a href="#Ad-hoc-solution-2" class="headerlink" title="Ad hoc solution 2"></a>Ad hoc solution 2</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">ln</span> -s /usr/include/x86_64-linux-gnu/zconf.h /usr/include</span><br></pre></td></tr></table></figure>
+	  
+	</div>
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+	
+	</section>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2014/02/06/girlfriend-prototype/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2014/01/25/android-x86-4-dot-4-2-local-build/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2014-01-26 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/android/">android<span>25</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

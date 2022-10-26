@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Raspberry Pi 4B + Ubuntu 18.04.2 64bit | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="https://blog.cloudkernels.net/posts/rpi4-64bit-virt/https://news.ycombinator.com/item?id=20410169Raspberry Pi 4B 用のUbuntu Server 18.04.2 64bit のイメージが公開されていたので試してみました。Docker 環境も構築されています。
+UPDATE: 2019&amp;#x2F;7&amp;#x2F;14 軽量なイメージが公開されました。  
+  https://cloudkernels.net/ubuntu-18.04.2-preinstalled-server-arm64+raspi4+kvm.img.xz">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Raspberry Pi 4B + Ubuntu 18.04.2 64bit"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Visual-Studio-Code" title="Visual Studio Code"><i class="fas fa-code"></i>Visual Studio Code</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Raspberry Pi 4B + Ubuntu 18.04.2 64bit</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p><img src="/images/rpi4_docker_portainer.png" alt="rpi4 docker portainer"><br><a target="_blank" rel="noopener" href="https://blog.cloudkernels.net/posts/rpi4-64bit-virt/">https://blog.cloudkernels.net/posts/rpi4-64bit-virt/</a><br><a target="_blank" rel="noopener" href="https://news.ycombinator.com/item?id=20410169">https://news.ycombinator.com/item?id=20410169</a><br>Raspberry Pi 4B 用のUbuntu Server 18.04.2 64bit のイメージが公開されていたので試してみました。<br>Docker 環境も構築されています。</p>
+<h4 id="UPDATE-2019-x2F-7-x2F-14-軽量なイメージが公開されました。"><a href="#UPDATE-2019-x2F-7-x2F-14-軽量なイメージが公開されました。" class="headerlink" title="UPDATE: 2019&#x2F;7&#x2F;14 軽量なイメージが公開されました。"></a><strong>UPDATE:</strong> 2019&#x2F;7&#x2F;14 軽量なイメージが公開されました。</h4>  <div class="twitter-wrapper"><blockquote class="twitter-tweet"><a target="_blank" rel="noopener" href="https://twitter.com/CloudKernels/status/1150447087391318018"></a></blockquote></div><script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="noopener" href="https://cloudkernels.net/ubuntu-18.04.2-preinstalled-server-arm64+raspi4+kvm.img.xz">https://cloudkernels.net/ubuntu-18.04.2-preinstalled-server-arm64+raspi4+kvm.img.xz</a></p>
+<span id="more"></span>
+
+<h3 id="環境構築"><a href="#環境構築" class="headerlink" title="環境構築"></a>環境構築</h3><h4 id="準備"><a href="#準備" class="headerlink" title="準備"></a>準備</h4><ul>
+<li>Raspberry Pi 4B</li>
+<li>SDカード 32GB</li>
+<li><a target="_blank" rel="noopener" href="https://cloudkernels.net/rpi4-64-bit-kvm-docker.img.xz">https://cloudkernels.net/rpi4-64-bit-kvm-docker.img.xz</a></li>
+<li>etcher で書き込み(2.5GB が8.07GB に展開される)</li>
+<li>初回ブートに時間がかかる or reboot しないといけないかも</li>
+<li>root のパスワードは無し</li>
+<li>pi, ubuntu アカウントが存在する</li>
+<li>port 80 nginx</li>
+</ul>
+<h4 id="設定-オプション"><a href="#設定-オプション" class="headerlink" title="設定(オプション)"></a>設定(オプション)</h4><ul>
+<li>&#x2F;etc&#x2F;hosts にpi4 を追加<figure class="highlight text"><figcaption><span>/etc/hosts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost pi4</span><br></pre></td></tr></table></figure></li>
+<li>sshd のポリシー設定変更<br><code>/etc/ssh/sshd_config</code></li>
+<li>ユーザの追加<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo adduser hoge</span><br><span class="line">$ sudo gpasswd -a hoge docker</span><br><span class="line">$ sudo systemctl daemon-reload</span><br><span class="line">$ sudo systemctl restart docker</span><br></pre></td></tr></table></figure></li>
+<li>nginx 無効化<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl stop nginx</span><br><span class="line">$ sudo systemctl <span class="built_in">disable</span> nginx</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="実行結果"><a href="#実行結果" class="headerlink" title="実行結果"></a>実行結果</h3><h4 id="OS-情報"><a href="#OS-情報" class="headerlink" title="OS 情報"></a>OS 情報</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">uname</span> -a</span><br><span class="line">Linux pi4 4.19.57-v8+ <span class="comment">#2 SMP PREEMPT Tue Jul 9 20:31:37 UTC 2019 aarch64 aarch64 aarch64 GNU/Linux</span></span><br><span class="line">$ <span class="built_in">cat</span> /etc/lsb-release</span><br><span class="line">DISTRIB_ID=Ubuntu</span><br><span class="line">DISTRIB_RELEASE=18.04</span><br><span class="line">DISTRIB_CODENAME=bionic</span><br><span class="line">DISTRIB_DESCRIPTION=<span class="string">&quot;Ubuntu 18.04.2 LTS&quot;</span></span><br></pre></td></tr></table></figure>
+<h4 id="CPU-情報"><a href="#CPU-情報" class="headerlink" title="CPU 情報"></a>CPU 情報</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ lscpu</span><br><span class="line">Architecture:        aarch64</span><br><span class="line">Byte Order:          Little Endian</span><br><span class="line">CPU(s):              4</span><br><span class="line">On-line CPU(s) list: 0-3</span><br><span class="line">Thread(s) per core:  1</span><br><span class="line">Core(s) per socket:  4</span><br><span class="line">Socket(s):           1</span><br><span class="line">Vendor ID:           ARM</span><br><span class="line">Model:               3</span><br><span class="line">Model name:          Cortex-A72</span><br><span class="line">Stepping:            r0p3</span><br><span class="line">CPU max MHz:         1500.0000</span><br><span class="line">CPU min MHz:         600.0000</span><br><span class="line">BogoMIPS:            108.00</span><br><span class="line">Flags:               fp asimd evtstrm crc32 cpuid</span><br></pre></td></tr></table></figure>
+<h4 id="メモリ情報"><a href="#メモリ情報" class="headerlink" title="メモリ情報"></a>メモリ情報</h4><p>現時点ではメモリを1GBに制限しています。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ free -m -h</span><br><span class="line">              total        used        free      shared  buff/cache   available</span><br><span class="line">Mem:           917M        204M        203M         12M        509M        687M</span><br><span class="line">Swap:            0B          0B          0B</span><br></pre></td></tr></table></figure>
+<h4 id="ストレージ情報"><a href="#ストレージ情報" class="headerlink" title="ストレージ情報"></a>ストレージ情報</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">df</span> -h</span><br><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/root       7.1G  3.7G  3.1G  54% /</span><br><span class="line">devtmpfs        331M     0  331M   0% /dev</span><br><span class="line">tmpfs           459M     0  459M   0% /dev/shm</span><br><span class="line">tmpfs           459M   13M  447M   3% /run</span><br><span class="line">tmpfs           5.0M     0  5.0M   0% /run/lock</span><br><span class="line">tmpfs           459M     0  459M   0% /sys/fs/cgroup</span><br><span class="line">/dev/loop0       79M   79M     0 100% /snap/core/7172</span><br><span class="line">/dev/loop1       83M   83M     0 100% /snap/go/4095</span><br><span class="line">/dev/loop2       79M   79M     0 100% /snap/core/7275</span><br><span class="line">/dev/loop3       83M   83M     0 100% /snap/go/3956</span><br><span class="line">/dev/mmcblk0p1  253M  112M  141M  45% /boot</span><br><span class="line">tmpfs            92M     0   92M   0% /run/user/0</span><br><span class="line">tmpfs            92M     0   92M   0% /run/user/1001</span><br></pre></td></tr></table></figure>
+<h4 id="Docker-バージョン"><a href="#Docker-バージョン" class="headerlink" title="Docker バージョン"></a>Docker バージョン</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker --version</span><br><span class="line">Docker version 18.09.7, build 2d0083d</span><br><span class="line">$ docker-compose --version</span><br><span class="line">docker-compose version 1.17.1, build unknown</span><br></pre></td></tr></table></figure>
+<h4 id="Docker-システム情報"><a href="#Docker-システム情報" class="headerlink" title="Docker システム情報"></a>Docker システム情報</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">$ docker system info                                                             </span><br><span class="line">Containers: 29</span><br><span class="line"> Running: 0</span><br><span class="line"> Paused: 0</span><br><span class="line"> Stopped: 29</span><br><span class="line">Images: 6</span><br><span class="line">Server Version: 18.09.7</span><br><span class="line">Storage Driver: overlay2</span><br><span class="line"> Backing Filesystem: extfs</span><br><span class="line"> Supports d_type: <span class="literal">true</span></span><br><span class="line"> Native Overlay Diff: <span class="literal">true</span></span><br><span class="line">Logging Driver: json-file</span><br><span class="line">Cgroup Driver: cgroupfs</span><br><span class="line">Plugins:</span><br><span class="line"> Volume: <span class="built_in">local</span></span><br><span class="line"> Network: bridge host macvlan null overlay</span><br><span class="line"> Log: awslogs fluentd gcplogs gelf journald json-file <span class="built_in">local</span> logentries splunk syslog</span><br><span class="line">Swarm: inactive</span><br><span class="line">Runtimes: runc runnc</span><br><span class="line">Default Runtime: runc</span><br><span class="line">Init Binary: docker-init</span><br><span class="line">containerd version: 894b81a4b802e4eb2a91d1ce216b8817763c29fb</span><br><span class="line">runc version: 425e105d5a03fabd737a126ad93d62a9eeede87f</span><br><span class="line">init version: fec3683</span><br><span class="line">Security Options:</span><br><span class="line"> seccomp</span><br><span class="line">  Profile: default</span><br><span class="line">Kernel Version: 4.19.57-v8+</span><br><span class="line">Operating System: Ubuntu 18.04.2 LTS</span><br><span class="line">OSType: linux</span><br><span class="line">Architecture: aarch64</span><br><span class="line">CPUs: 4</span><br><span class="line">Total Memory: 917MiB</span><br><span class="line">Name: pi4</span><br><span class="line">ID: 63DU:AQ23:GYZI:IPZ7:M7XX:JJTI:O33H:IND4:HH46:7YPL:RISU:LYZF</span><br><span class="line">Docker Root Dir: /var/lib/docker</span><br><span class="line">Debug Mode (client): <span class="literal">false</span></span><br><span class="line">Debug Mode (server): <span class="literal">false</span></span><br><span class="line">Registry: https://index.docker.io/v1/</span><br><span class="line">Labels:</span><br><span class="line">Experimental: <span class="literal">false</span></span><br><span class="line">Insecure Registries:</span><br><span class="line"> 127.0.0.0/8</span><br><span class="line">Live Restore Enabled: <span class="literal">false</span></span><br><span class="line">Product License: Community Engine</span><br><span class="line"></span><br><span class="line">WARNING: No swap <span class="built_in">limit</span> support</span><br><span class="line">WARNING: No cpu cfs quota support</span><br><span class="line">WARNING: No cpu cfs period support</span><br></pre></td></tr></table></figure>
+
+<h4 id="Docker-イメージ情報"><a href="#Docker-イメージ情報" class="headerlink" title="Docker イメージ情報"></a>Docker イメージ情報</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker image <span class="built_in">ls</span></span><br><span class="line">REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">redis                        latest              a05cff133c70        3 days ago          90.1MB</span><br><span class="line">cloudkernels/memcached-hvt   aarch64             416c7328ae41        3 months ago        25.7MB</span><br><span class="line">cloudkernels/nginx-nabla     aarch64             c9d5acb805d4        3 months ago        39.7MB</span><br><span class="line">cloudkernels/nginx-hvt       aarch64             53ebcae8baa6        3 months ago        39.8MB</span><br><span class="line">cloudkernels/redis-hvt       aarch64             5d5dbb5439f6        3 months ago        27MB</span><br><span class="line">cloudkernels/redis-nabla     aarch64             e05a0c30fa58        3 months ago        26.9MB</span><br></pre></td></tr></table></figure>
+
+<h3 id="Docker-コンテナの追加"><a href="#Docker-コンテナの追加" class="headerlink" title="Docker コンテナの追加"></a>Docker コンテナの追加</h3><h4 id="Portainer"><a href="#Portainer" class="headerlink" title="Portainer"></a>Portainer</h4><ul>
+<li>docker-compose.yml<figure class="highlight yaml"><figcaption><span>docker-portainer/docker-compose.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;2&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">portainer:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">portainer/portainer</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">portainer</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;9000:9000&quot;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/data</span></span><br></pre></td></tr></table></figure></li>
+<li>起動<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> docker-portainer</span><br><span class="line">$ docker-compose up -d</span><br></pre></td></tr></table></figure></li>
+<li>アクセス<br><a target="_blank" rel="noopener" href="http://192.168.11.14:9000/">http://192.168.11.14:9000/</a><br>admin に8文字以上のパスワードを設定</li>
+</ul>
+	  
+	</div>
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/27/RPi4-Docker-Open-Project-CE/" title="RPi4 - Docker OpenProject CE" rel="bookmark">RPi4 - Docker OpenProject CE</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/21/USL-5P-to-Raspberry-Pi-2/" title="USL-5P to Raspberry Pi 2" rel="bookmark">USL-5P to Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/23/Irrlicht-on-Raspberry-Pi-2/" title="Irrlicht on Raspberry Pi 2" rel="bookmark">Irrlicht on Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2018/11/25/Upgrade-to-Ubuntu-18-04-on-Raspberry-Pi/" title="Upgrade to Ubuntu 18.04 on Raspberry Pi" rel="bookmark">Upgrade to Ubuntu 18.04 on Raspberry Pi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/01/Raspberry-Pi-4/" title="Raspberry Pi 4" rel="bookmark">Raspberry Pi 4</a></h3></div></li></ul>
+	</section>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2019/07/15/Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2019/07/01/Raspberry-Pi-4/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2019-07-13 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/raspberry-pi/">raspberry-pi<span>17</span></a></li> <li><a href="/tags/docker/">docker<span>8</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

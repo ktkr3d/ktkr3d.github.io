@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Docker + Kitematic on Ubuntu | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="https://github.com/docker/kitematic/releases
+
+Ubuntu 16.04 の環境にDocker とKitematic を入れてみました。これは楽ちん！">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Docker + Kitematic on Ubuntu"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Visual-Studio-Code" title="Visual Studio Code"><i class="fas fa-code"></i>Visual Studio Code</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Docker + Kitematic on Ubuntu</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p><img src="/images/kitematic.png" alt="kitematic"></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/docker/kitematic/releases">https://github.com/docker/kitematic/releases</a></li>
+</ul>
+<p>Ubuntu 16.04 の環境にDocker とKitematic を入れてみました。<br>これは楽ちん！</p>
+<span id="more"></span>
+
+<h2 id="Docker-のインストール"><a href="#Docker-のインストール" class="headerlink" title="Docker のインストール"></a>Docker のインストール</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install curl</span><br><span class="line">$ curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="Kitematic-のインストール"><a href="#Kitematic-のインストール" class="headerlink" title="Kitematic のインストール"></a>Kitematic のインストール</h2><p><a target="_blank" rel="noopener" href="https://github.com/docker/kitematic/releases">https://github.com/docker/kitematic/releases</a> からUbuntu 用zip (Kitematic-0.13.0-RC3-Ubuntu.zip)をダウンロードして展開</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gdebi Kitematic_0.12.9_amd64.deb</span><br></pre></td></tr></table></figure>
+
+<h2 id="サンプルインストール"><a href="#サンプルインストール" class="headerlink" title="サンプルインストール"></a>サンプルインストール</h2><p>例えば、<a target="_blank" rel="noopener" href="https://hub.docker.com/r/takezoe/gitbucket/">takezoe&#x2F;gitbucket</a>を選択してみたところ、簡単に立ち上がりました。</p>
+<p><img src="/images/kitematic-home.png" alt="kitematic-home"></p>
+<p>気になるポート番号、環境変数の設定もGUI から実行できます。</p>
+<p><img src="/images/kitematic-settings.png" alt="kitematic-home"></p>
+<p>ブラウザから<code>http://localhost:32769</code>にアクセスするとGitBucket のページが表示されます。</p>
+<h2 id="これから試してみたいDocker-イメージ"><a href="#これから試してみたいDocker-イメージ" class="headerlink" title="これから試してみたいDocker イメージ"></a>これから試してみたいDocker イメージ</h2><p><a target="_blank" rel="noopener" href="https://hub.docker.com/explore/">Docker Hub</a>や<a target="_blank" rel="noopener" href="https://store.docker.com/">Docker Store</a>には多くのDocker イメージが公開されています。</p>
+<h3 id="Officail"><a href="#Officail" class="headerlink" title="Officail"></a>Officail</h3><ul>
+<li>nginx</li>
+<li>jenkins</li>
+<li>ghost</li>
+<li>redmine</li>
+<li>rocket.chat</li>
+</ul>
+<h3 id="Public"><a href="#Public" class="headerlink" title="Public"></a>Public</h3><ul>
+<li>chinachu</li>
+<li>hexo</li>
+<li>gitbucket</li>
+<li>gitlab-ce</li>
+<li><a target="_blank" rel="noopener" href="https://hub.docker.com/r/docker/ucp/">docker&#x2F;ucp</a></li>
+</ul>
+<h2 id="おまけ-Docker-Universal-Control-Plane-docker-x2F-ucp"><a href="#おまけ-Docker-Universal-Control-Plane-docker-x2F-ucp" class="headerlink" title="おまけ: Docker Universal Control Plane (docker&#x2F;ucp)"></a>おまけ: Docker Universal Control Plane (docker&#x2F;ucp)</h2><p>公式のWeb UI であるUniversal Control Plane を使うためには、docker-engine 1.30 以上が要件になっている。リポジトリtesting を使用することで要件を満たすことができる。</p>
+<p><img src="/images/docker-ucp.png" alt="docker-ucp"><br><img src="/images/docker-ucp-containers.png" alt="docker-ucp-containers"></p>
+<figure class="highlight ini"><figcaption><span>/etc/apt/sources.list.d/docker.list</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial main</span><br><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial testing</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt upgrade</span><br><span class="line">$ docker run \</span><br><span class="line">    --<span class="built_in">rm</span> \</span><br><span class="line">    -it \</span><br><span class="line">    --name ucp</span><br><span class="line">    -v /var/run/docker.sock:/var/run/docker.sock docker/ucp</span><br><span class="line">    install \</span><br><span class="line">    --host-address 192.168.11.2</span><br></pre></td></tr></table></figure>
+<p>ブラウザで<code>https://localhost/</code>にアクセスする。<br>ログインIDとパスワードはコンソール上の起動メッセージに表示される。<br>30日間の評価ができるみたい。サブスクリプションの購入は以下から。<br><a target="_blank" rel="noopener" href="https://store.docker.com/bundles/docker-datacenter?tab=description">https://store.docker.com/bundles/docker-datacenter?tab=description</a></p>
+<p>アンインストールには少しテクニックが必要です。ここを参考に。<br><a target="_blank" rel="noopener" href="https://docs.docker.com/datacenter/ucp/1.1/installation/uninstall/">https://docs.docker.com/datacenter/ucp/1.1/installation/uninstall/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --<span class="built_in">rm</span> -it \</span><br><span class="line">  -v /var/run/docker.sock:/var/run/docker.sock \</span><br><span class="line">  --name ucp \</span><br><span class="line">  docker/ucp uninstall-ucp -i</span><br><span class="line">$ docker images</span><br><span class="line">$ docker rmi docker/ucp</span><br><span class="line">$ sudo service docker restart</span><br></pre></td></tr></table></figure>
+	  
+	</div>
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+	
+	</section>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2016/12/08/Simple-Docker-UI/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/11/08/Bridge-with-virt-manager/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-12-07 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

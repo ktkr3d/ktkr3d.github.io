@@ -1,0 +1,516 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CA | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="Ubuntu 12.10 で自己認証局(Self-signed Certificate Authority)を構築して遊んでみよう。
+設定内容(こんな雰囲気で)
+
+
+分類
+項目
+値
+
+
+
+認証局
+Common Name
+ca
+
+
+認証局証明書
+cacert.pem
+
+
+
+パスフレーズ
+capassw">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="CA"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Visual-Studio-Code" title="Visual Studio Code"><i class="fas fa-code"></i>Visual Studio Code</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> CA</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row page">
+	<!-- cols -->
+	
+	<div class="col-md-12">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p><a href="/images/tinyca.png"><img src="/images/tinyca.png" alt="tiny ca"></a></p>
+<p>Ubuntu 12.10 で自己認証局(Self-signed Certificate Authority)を構築して遊んでみよう。</p>
+<h3 id="設定内容-こんな雰囲気で"><a href="#設定内容-こんな雰囲気で" class="headerlink" title="設定内容(こんな雰囲気で)"></a>設定内容(こんな雰囲気で)</h3><table>
+<thead>
+<tr>
+<th align="left">分類</th>
+<th align="left">項目</th>
+<th align="left">値</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">認証局</td>
+<td align="left">Common Name</td>
+<td align="left">ca</td>
+</tr>
+<tr>
+<td align="left">認証局証明書</td>
+<td align="left">cacert.pem</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">パスフレーズ</td>
+<td align="left">capassword</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">サーバ</td>
+<td align="left">Common Name</td>
+<td align="left">server</td>
+</tr>
+<tr>
+<td align="left">サーバ証明書</td>
+<td align="left">servercert.pem</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">サーバ秘密鍵</td>
+<td align="left">serverkey_nopass.pem</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">パスフレーズ</td>
+<td align="left">serverpassword</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">クライアント</td>
+<td align="left">Common Name</td>
+<td align="left">client</td>
+</tr>
+<tr>
+<td align="left">クライアント証明書</td>
+<td align="left">clientcert.p12</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">パスフレーズ</td>
+<td align="left">clientpassword</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">初期値</td>
+<td align="left">Country</td>
+<td align="left">JP</td>
+</tr>
+<tr>
+<td align="left">stateOrProvinceName</td>
+<td align="left">MyState</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">localityName</td>
+<td align="left">MyCity</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0.organizationName</td>
+<td align="left">MyCompany</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">organizationalUnitName</td>
+<td align="left">MySection</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">ディレクトリ</td>
+<td align="left">Tiny CA</td>
+<td align="left">~&#x2F;.TinyCA&#x2F;ca&#x2F;</td>
+</tr>
+<tr>
+<td align="left">認証局証明書</td>
+<td align="left">&#x2F;etc&#x2F;ssl&#x2F;CA&#x2F;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">サーバ証明書</td>
+<td align="left">&#x2F;etc&#x2F;ssl&#x2F;CA&#x2F;certs&#x2F;server&#x2F;</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="認証局の構築と証明書の発行（Tiny-CA-編）"><a href="#認証局の構築と証明書の発行（Tiny-CA-編）" class="headerlink" title="認証局の構築と証明書の発行（Tiny CA 編）"></a>認証局の構築と証明書の発行（Tiny CA 編）</h3><h4 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h4><p>Tiny CA のインストールと起動</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install tinyca</span><br><span class="line">$ tinyca2</span><br></pre></td></tr></table></figure>
+
+<h4 id="認証局証明書"><a href="#認証局証明書" class="headerlink" title="認証局証明書"></a>認証局証明書</h4><p>「CA」-「New CA」メニューで認証局「ca」を作成する。<br>~&#x2F;.TinyCA&#x2F;ca&#x2F;cacert.pem に格納された認証局証明書をコピーする。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">mkdir</span> -p /etc/ssl/CA</span><br><span class="line">$ sudo <span class="built_in">cp</span> ~/.TinyCA/ca/cacert.pem /etc/ssl/CA/</span><br></pre></td></tr></table></figure>
+
+<h4 id="サーバ証明書"><a href="#サーバ証明書" class="headerlink" title="サーバ証明書"></a>サーバ証明書</h4><ol>
+<li><p>Certificates タブを選択して、ツールバーの新規作成ボタン(右側の方)を押して、「Create Key and Certificate (Server)」を選択する。</p>
+</li>
+<li><p>Certificates タブで、「server」の行を選択して、下記設定でエクスポートする。</p>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">値</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">File</td>
+<td align="left">servercert.pem</td>
+</tr>
+<tr>
+<td align="left">Export Format</td>
+<td align="left">PEM(Certificate)</td>
+</tr>
+<tr>
+<td align="left">Include Key(PEM)</td>
+<td align="left">No</td>
+</tr>
+<tr>
+<td align="left">Include Fingerprint(PEM)</td>
+<td align="left">No</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Keys タブで、「server」の行を選択して、下記設定でエクスポートする。</p>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">値</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">File</td>
+<td align="left">serverkey_nopass.pem</td>
+</tr>
+<tr>
+<td align="left">Export Format</td>
+<td align="left">PEM(Key)</td>
+</tr>
+<tr>
+<td align="left">Without Passphrase(PEM&#x2F;PKCS#12)</td>
+<td align="left">Yes</td>
+</tr>
+<tr>
+<td align="left">Include Certificate(PEM)</td>
+<td align="left">Yes</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>サーバ証明書とサーバ秘密鍵をコピーする。</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">mkdir</span> -p /etc/ssl/CA/server/certs</span><br><span class="line">$ sudo <span class="built_in">cp</span> ~/servercert.pem /etc/ssl/CA/server/certs/</span><br><span class="line">$ sudo <span class="built_in">cp</span> ~/serverkey_nopass.pem /etc/ssl/CA/server/certs/</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="クライアント証明書"><a href="#クライアント証明書" class="headerlink" title="クライアント証明書"></a>クライアント証明書</h4><ol>
+<li><p>Certificates タブを選択して、ツールバーの新規作成ボタン(右側の方)を押して、「Create Key and Certificate (Client)」を選択する。</p>
+</li>
+<li><p>Certificates タブで、「client」の行を選択して、下記設定でエクスポートする。</p>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">値</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">File</td>
+<td align="left">clientcert.p12</td>
+</tr>
+<tr>
+<td align="left">Export Format</td>
+<td align="left">PKCS#12(Certificate &amp; Key)</td>
+</tr>
+<tr>
+<td align="left">Include Key(PEM)</td>
+<td align="left">Yes</td>
+</tr>
+<tr>
+<td align="left">Include Fingerprint(PEM)</td>
+<td align="left">Yes</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h3 id="Web-サーバの設定"><a href="#Web-サーバの設定" class="headerlink" title="Web サーバの設定"></a>Web サーバの設定</h3><ol>
+<li><p>Web サーバApache 2 をインストールする。</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install apache2</span><br><span class="line">$ sudo a2enmod ssl</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>クライアント証明書がある場合のみ接続可能に設定する。</p>
+ <figure class="highlight text"><figcaption><span>/etc/apache2/sites-available/default-ssl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#SSLCertificateFile     /etc/ssl/certs/ssl-cert-snakeoil.pem</span><br><span class="line">SSLCertificateFile      /etc/ssl/CA/certs/server/servercert.pem</span><br><span class="line"></span><br><span class="line">#SSLCertificateKeyFile  /etc/ssl/private/ssl-cert-snakeoil.key</span><br><span class="line">SSLCertificateKeyFile   /etc/ssl/CA/certs/server/serverkey_nopass.pem</span><br><span class="line"></span><br><span class="line">#SSLCACertificateFile   /etc/apache2/ssl.crt/ca-bundle.crt</span><br><span class="line">SSLCACertificateFile    /etc/ssl/CA/cacert.pem</span><br><span class="line"></span><br><span class="line">#SSLVerifyClient        require</span><br><span class="line">SSLVerifyClient         require</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Web サーバを再起動して、443 ポートの状態を確認する。</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo a2ensite default-ssl</span><br><span class="line">$ sudo /etc/init.d/apache2 restart</span><br><span class="line">$ netstat -an | grep 443</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="クライアントブラウザの設定"><a href="#クライアントブラウザの設定" class="headerlink" title="クライアントブラウザの設定"></a>クライアントブラウザの設定</h3><ol>
+<li><p>ブラウザにクライアント証明書をインポートする。<br>Firefox の場合は、[編集]-[設定]-[詳細化]-[暗号化]-[証明書を表示…]-[あなたの証明書]-[インポート…]でclientcert.p12 を指定してインポートする。</p>
+</li>
+<li><p>接続テストする。<br>ブラウザで<a target="_blank" rel="noopener" href="https://server/">https://server/</a> にアクセスする。証明書の選択画面が表示される。</p>
+</li>
+</ol>
+<h3 id="認証局の構築と証明書の発行（コマンドライン編）"><a href="#認証局の構築と証明書の発行（コマンドライン編）" class="headerlink" title="認証局の構築と証明書の発行（コマンドライン編）"></a>認証局の構築と証明書の発行（コマンドライン編）</h3><ol>
+<li><p>環境設定<br>オリジナルのスクリプト、設定ファイルを退避する。</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> /usr/lib/ssl/misc/CA.sh /usr/lib/ssl/misc/CA.sh.original</span><br><span class="line">$ sudo <span class="built_in">cp</span> /etc/ssl/openssl.cnf /etc/ssl/openssl.cnf.original</span><br></pre></td></tr></table></figure>
+
+<p> スクリプト、設定ファイルを編集する。</p>
+ <figure class="highlight text"><figcaption><span>/usr/lib/ssl/misc/CA.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DAYS=&quot;-days 365&quot;</span><br><span class="line">CADAYS=&quot;-days 1095&quot;</span><br><span class="line">CATOP=/etc/ssl/CA</span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight text"><figcaption><span>/etc/ssl/openssl.cnf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dir                             = /etc/ssl/CA   # Where everything is kept</span><br><span class="line">default_days                    = 365           # how long to certify for</span><br><span class="line">countryName_default             = JP</span><br><span class="line">stateOrProvinceName_default     = MyState</span><br><span class="line">localityName_default            = MyCity</span><br><span class="line">0.organizationName_default      = MyCompany</span><br><span class="line">organizationalUnitName_default  = MySection</span><br><span class="line">commonName_default              = ca_or_server_or_client</span><br><span class="line">emailAddress_default            = mail_address</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>認証局証明書</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /usr/lib/ssl/misc/CA.sh -newca</span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo openssl x509 -<span class="keyword">in</span> /etc/ssl/CA/cacert.pem -out /etc/ssl/CA/cacert.pem</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>サーバ証明書</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">mkdir</span> /etc/ssl/CA/certs/server</span><br><span class="line">$ <span class="built_in">cd</span> /etc/ssl/CA/certs/server</span><br><span class="line">$ sudo /usr/lib/ssl/misc/CA.sh -newreq</span><br><span class="line">$ sudo /usr/lib/ssl/misc/CA.sh -sign</span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo openssl x509 -<span class="keyword">in</span> newcert.pem -out servercert.pem</span><br><span class="line">$ sudo openssl rsa -<span class="keyword">in</span> newkey.pem -out serverkey_nopass.pem</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>クライアント証明書</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">mkdir</span> /etc/ssl/CA/certs/client</span><br><span class="line">$ <span class="built_in">cd</span> /etc/ssl/CA/certs/client</span><br><span class="line">$ sudo /usr/lib/ssl/misc/CA.sh -newreq</span><br><span class="line">$ sudo /usr/lib/ssl/misc/CA.sh -sign </span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo openssl pkcs12 -<span class="built_in">export</span> -<span class="keyword">in</span> newcert.pem -inkey newkey.pem -certfile /etc/ssl/CA/cacert.pem -out client.p12</span><br></pre></td></tr></table></figure></li>
+</ol>
+	  
+	</div>
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+	
+	</section>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+	
+	<!-- comment -->
+	
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

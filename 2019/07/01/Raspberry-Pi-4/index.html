@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Raspberry Pi 4 | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="Raspberry Pi 4 が発売されたので移行を検討してみます。
+Raspberry Pi 2 Model B (2015&amp;#x2F;2&amp;#x2F;1 発売)からRaspberry Pi 4 Model B (2019&amp;#x2F;6&amp;#x2F;24 発売)への移行になりますので、4年間の大きな機能向上、性能向上が期待できそうです。反面、消費電力が大きくなってそうですが、Wi-Fi やBluetooth をオフにしておけば抑えることができるのかな。
+ともかく、やっと32bit から抜け出せそうです！">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Raspberry Pi 4"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Visual-Studio-Code" title="Visual Studio Code"><i class="fas fa-code"></i>Visual Studio Code</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Raspberry Pi 4</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>Raspberry Pi 4 が発売されたので移行を検討してみます。</p>
+<p>Raspberry Pi 2 Model B (2015&#x2F;2&#x2F;1 発売)からRaspberry Pi 4 Model B (2019&#x2F;6&#x2F;24 発売)への移行になりますので、4年間の大きな機能向上、性能向上が期待できそうです。反面、消費電力が大きくなってそうですが、Wi-Fi やBluetooth をオフにしておけば抑えることができるのかな。</p>
+<p>ともかく、やっと32bit から抜け出せそうです！</p>
+<span id="more"></span>
+
+<h3 id="スペック比較"><a href="#スペック比較" class="headerlink" title="スペック比較"></a>スペック比較</h3><table>
+<thead>
+<tr>
+<th align="left">Model</th>
+<th align="left">Raspberry Pi 2 Model B</th>
+<th align="left">Raspberry Pi 4 Model B</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">発売日</td>
+<td align="left">2015年2月1日</td>
+<td align="left">2019年6月24日</td>
+</tr>
+<tr>
+<td align="left">SoC</td>
+<td align="left">Broadcom BCM2836</td>
+<td align="left">Broadcom BCM2711</td>
+</tr>
+<tr>
+<td align="left">CPU</td>
+<td align="left">ARM Cortex-A7</td>
+<td align="left">ARM Cortex-A72</td>
+</tr>
+<tr>
+<td align="left">900 MHz</td>
+<td align="left">1.5GHz</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">ARMv7(32bit)</td>
+<td align="left">ARMv8(64bit)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">メモリ</td>
+<td align="left">1GB</td>
+<td align="left">4GB</td>
+</tr>
+<tr>
+<td align="left">USB</td>
+<td align="left">USB 2 x4</td>
+<td align="left">USB 2 x2, USB 3 x2</td>
+</tr>
+<tr>
+<td align="left">映像出力</td>
+<td align="left">HDMI x1</td>
+<td align="left">micro-HDMI x2</td>
+</tr>
+<tr>
+<td align="left">音声出力</td>
+<td align="left">3.5mm stereo</td>
+<td align="left">3.5mm stereo</td>
+</tr>
+<tr>
+<td align="left">LAN</td>
+<td align="left">10&#x2F;100 Mbps</td>
+<td align="left">Gigabit</td>
+</tr>
+<tr>
+<td align="left">Wi-Fi</td>
+<td align="left">-</td>
+<td align="left">2.4GHz and 5GHz IEEE 802.11.b&#x2F;g&#x2F;n&#x2F;ac</td>
+</tr>
+<tr>
+<td align="left">Bluetooth</td>
+<td align="left">-</td>
+<td align="left">5.0</td>
+</tr>
+<tr>
+<td align="left">消費電力</td>
+<td align="left">350mA(1.75 W)</td>
+<td align="left">？</td>
+</tr>
+<tr>
+<td align="left">電源</td>
+<td align="left">1.8A(9.0 W)</td>
+<td align="left">3A(15W)</td>
+</tr>
+<tr>
+<td align="left">電源ソース</td>
+<td align="left">USB micro-B</td>
+<td align="left">USB Type-C</td>
+</tr>
+</tbody></table>
+<h3 id="気になること"><a href="#気になること" class="headerlink" title="気になること"></a>気になること</h3><ul>
+<li>Ubuntu Server 18.04 LTS 64bit ARM イメージの公開時期<br><a target="_blank" rel="noopener" href="https://wiki.ubuntu.com/ARM/RaspberryPi">https://wiki.ubuntu.com/ARM/RaspberryPi</a></li>
+<li>日本における技術基準適合証明の時期<br>raspbian は国を指定するまでWi-Fiは有効にならないみたいですね</li>
+<li>消費電力<br>どこまで低消費電力に設定できるかな</li>
+<li>積層ケース<br>2F をRPi2に、4F をRPi4 に</li>
+</ul>
+<h3 id="構成"><a href="#構成" class="headerlink" title="構成"></a>構成</h3><pre class="mermaid">graph LR;
+    linkStyle default interpolate basis
+    B(fas:fa-network-wired v6対応ルータ)-->C[fas:fa-server PC];
+    C-->D[fas:fa-tv ディスプレイ];
+    C-->K[fas:fa-keyboard キーボード];
+    C-->L[fas:fa-mouse-pointer マウス];
+    B-->E[fas:fa-laptop ノートPC];
+    B-->H[fab:fa-raspberry-pi RPi4];
+    H-->M[fas:fa-tv ディスプレイ];
+    H-->J[fas:fa-hdd 電源付 USB HDD];
+    B-->F(fas:fa-network-wired 一般ルータ);
+    F-->B;
+    F-->G[fab:fa-raspberry-pi RPi2];
+    H-. 給電 .-I{fas:fa-plug 電源付 USB HUB};
+    G-. 給電 .-I;
+    C-. USBデータリンク .-H;
+    style H fill:#f9f,stroke:#333,stroke-width:4px</pre>
+	  
+	</div>
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/21/USL-5P-to-Raspberry-Pi-2/" title="USL-5P to Raspberry Pi 2" rel="bookmark">USL-5P to Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/23/Irrlicht-on-Raspberry-Pi-2/" title="Irrlicht on Raspberry Pi 2" rel="bookmark">Irrlicht on Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2018/11/25/Upgrade-to-Ubuntu-18-04-on-Raspberry-Pi/" title="Upgrade to Ubuntu 18.04 on Raspberry Pi" rel="bookmark">Upgrade to Ubuntu 18.04 on Raspberry Pi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/13/Raspberry-Pi-4B-Ubuntu-18-04-2-64bit/" title="Raspberry Pi 4B + Ubuntu 18.04.2 64bit" rel="bookmark">Raspberry Pi 4B + Ubuntu 18.04.2 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/31/Raspbian-Buster-64bit/" title="Raspbian Buster 64bit" rel="bookmark">Raspbian Buster 64bit</a></h3></div></li></ul>
+	</section>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2019/07/13/Raspberry-Pi-4B-Ubuntu-18-04-2-64bit/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2019/06/26/Hexo-Tag-Google-Charts/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2019-07-01 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/raspberry-pi/">raspberry-pi<span>17</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

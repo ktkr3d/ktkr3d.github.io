@@ -1,0 +1,578 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Ubuntu 21.10 on RPi4B | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="Ubuntu 21.10 を Raspberry Pi 4B にインストールしてみました。
+2021-10-23 以下の問題の修正が期待されます。
+HDMI output freezes under current&amp;#x2F;proposed impish kernelshttps://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368
+現在のバージョンは
+12$ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`
+
+2021-11-08 に Updates に修正がリリースされるらしい。proposed リポジトリをウォッチしよう。
+
+
+2021-10-30 proposed で修正版が公開されたようです。https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Ubuntu 21.10 on RPi4B"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Visual-Studio-Code" title="Visual Studio Code"><i class="fas fa-code"></i>Visual Studio Code</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Ubuntu 21.10 on RPi4B</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p><img src="/images/ubuntu_2110_rpi4b.png"></p>
+<p>Ubuntu 21.10 を Raspberry Pi 4B にインストールしてみました。</p>
+<h4 id="2021-10-23-以下の問題の修正が期待されます。"><a href="#2021-10-23-以下の問題の修正が期待されます。" class="headerlink" title="2021-10-23 以下の問題の修正が期待されます。"></a>2021-10-23 以下の問題の修正が期待されます。</h4><ul>
+<li><p>HDMI output freezes under current&#x2F;proposed impish kernels<br><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a></p>
+<p>現在のバージョンは</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ uname -r -v</span><br><span class="line">5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`</span><br></pre></td></tr></table></figure>
+
+<p>2021-11-08 に Updates に修正がリリースされるらしい。<a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/46"></a><br>proposed リポジトリをウォッチしよう。<a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/48"></a></p>
+</li>
+</ul>
+<h4 id="2021-10-30-proposed-で修正版が公開されたようです。"><a href="#2021-10-30-proposed-で修正版が公開されたようです。" class="headerlink" title="2021-10-30 proposed で修正版が公開されたようです。"></a>2021-10-30 proposed で修正版が公開されたようです。</h4><p><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60</a></p>
+<span id="more"></span>
+
+<h3 id="Ubuntu-のバージョンとパッケージバージョンの整理"><a href="#Ubuntu-のバージョンとパッケージバージョンの整理" class="headerlink" title="Ubuntu のバージョンとパッケージバージョンの整理"></a>Ubuntu のバージョンとパッケージバージョンの整理</h3><table>
+<thead>
+<tr>
+<th align="left">Ubuntu</th>
+<th align="left">21.10</th>
+<th align="left">21.04</th>
+<th align="left">20.10</th>
+<th align="left">20.04</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Codename</td>
+<td align="left">impish</td>
+<td align="left">hirsute</td>
+<td align="left">groovy</td>
+<td align="left">focal</td>
+</tr>
+<tr>
+<td align="left">Release Date</td>
+<td align="left">2021-10-14</td>
+<td align="left">2021-04-22</td>
+<td align="left">2020-10-22</td>
+<td align="left">2020-04-23</td>
+</tr>
+<tr>
+<td align="left">End of Life</td>
+<td align="left">2022-07</td>
+<td align="left">2022-01</td>
+<td align="left">2021-07</td>
+<td align="left">2025-04</td>
+</tr>
+<tr>
+<td align="left">linux</td>
+<td align="left">5.13.0</td>
+<td align="left">5.8.0</td>
+<td align="left">5.4.0</td>
+<td align="left">5.3</td>
+</tr>
+<tr>
+<td align="left">gnome-shell</td>
+<td align="left">40.5</td>
+<td align="left">3.38.1</td>
+<td align="left">3.36.1</td>
+<td align="left">3.34.1</td>
+</tr>
+<tr>
+<td align="left">xorg-server</td>
+<td align="left">1.20.13</td>
+<td align="left">1.20.9</td>
+<td align="left">1.20.8</td>
+<td align="left">1.20.5</td>
+</tr>
+<tr>
+<td align="left">xrdp</td>
+<td align="left">9.15</td>
+<td align="left">9.12</td>
+<td align="left">-</td>
+<td align="left">9.12</td>
+</tr>
+<tr>
+<td align="left">pulseaudio</td>
+<td align="left">15.0</td>
+<td align="left">14.2</td>
+<td align="left">-</td>
+<td align="left">13.99</td>
+</tr>
+<tr>
+<td align="left">pulseaudio-module-xrdp</td>
+<td align="left">-</td>
+<td align="left">0.5</td>
+<td align="left">0.5</td>
+<td align="left">0.5</td>
+</tr>
+</tbody></table>
+<h3 id="環境構築"><a href="#環境構築" class="headerlink" title="環境構築"></a>環境構築</h3><h4 id="Ubuntu-メディアの作成"><a href="#Ubuntu-メディアの作成" class="headerlink" title="Ubuntu メディアの作成"></a>Ubuntu メディアの作成</h4><ol>
+<li><p>Raspberry Pi Imager で SD カードに Ubuntu Server 21.10 (64bit) を書き込む。</p>
+</li>
+<li><p>Raspberry Pi 4B に SD カードを挿入して電源オンする。</p>
+</li>
+<li><p>ルータの DHCP サーバログから IP アドレスを確認する。(例: 192.168.11.4)</p>
+</li>
+<li><p>SSH で接続してパスワードを更新する。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh ubuntu@192.168.11.4</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>パッケージを更新する。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt udpate</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Raspberry Pi 関連ツール</p>
+<ul>
+<li>ツールのインストール<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install raspi-config</span><br></pre></td></tr></table></figure></li>
+<li>ツールの実行<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vcgencmd bootloader_version</span><br><span class="line">sudo rpi-eeprom-update</span><br><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>config.txt の修正<br><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a><br>下の 2 行を追加する。</p>
+<figure class="highlight bash"><figcaption><span>/boot/firmware/config.txt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Config settings specific to arm64</span></span><br><span class="line">arm_64bit=1</span><br><span class="line">dtoverlay=dwc2</span><br><span class="line">gpu_mem=512</span><br><span class="line">dtoverlay=vc4-fkms-v3d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ビルド用パッケージのインストール</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install build-essential gettext meson m4</span><br><span class="line">sudo apt install gdebi</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>デスクトップ環境をインストールする。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ubuntu-desktop-minimal</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>日本語化</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install language-pack-ja</span><br><span class="line">sudo update-locale LANG=ja_JP.UTF8</span><br><span class="line">sudo dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>XRDP をインストール</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install xrdp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>netplan から network manager に切り替える。</p>
+<figure class="highlight yaml"><figcaption><span>/etc/netplan/99-my-config.yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">renderer:</span> <span class="string">NetworkManager</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="Ubuntu-Desktop-の設定"><a href="#Ubuntu-Desktop-の設定" class="headerlink" title="Ubuntu Desktop の設定"></a>Ubuntu Desktop の設定</h4><ol start="13">
+<li><p>ルータの DHCP サーバログから IP アドレスを確認する。(例: 192.168.11.4)</p>
+</li>
+<li><p>RDP で接続する。</p>
+</li>
+<li><p>ホームディレクトリの各フォルダ名を英語名に変更</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>テキストテンプレートファイルの作成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>日本語化の続き</p>
+<p>Settings &#x2F; Region and Language &#x2F; Manage Installed Languages<br>を選択すると不足パッケージがインストールされる。</p>
+</li>
+<li><p>「カラーマネジメントされたデバイスを作成するには認証が必要です。」の対策</p>
+<figure class="highlight text"><figcaption><span>/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Allow Colord all Users]</span><br><span class="line">Identity=unix-user:*</span><br><span class="line">Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile</span><br><span class="line">ResultAny=no</span><br><span class="line">ResultInactive=no</span><br><span class="line">ResultActive=yes</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart polkit.service</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>「Authentication is required to refresh the system repositories」対策</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># echo &quot;X-GNOME-Autostart-enabled=false&quot; &gt;&gt; /etc/xdg/autostart/gnome-software-service.desktop</span></span><br><span class="line"><span class="comment"># echo &quot;X-GNOME-Autostart-enabled=false&quot; &gt;&gt; /etc/xdg/autostart/gnome-settings-daemon.desktop</span></span><br></pre></td></tr></table></figure>
+
+<p>または</p>
+<figure class="highlight text"><figcaption><span>/etc/polkit-1/localauthority/50-local.d/50-allow-package-management.pkla</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Allow Package Management all Users]</span><br><span class="line">Identity=unix-user:*</span><br><span class="line">Action=org.debian.apt.*;io.snapcraft.*;org.freedesktop.packagekit.*;com.ubuntu.update-notifier.*</span><br><span class="line">ResultAny=no</span><br><span class="line">ResultInactive=no</span><br><span class="line">ResultActive=yes</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart polkit.service</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="GNOME-Shell-の設定"><a href="#GNOME-Shell-の設定" class="headerlink" title="GNOME Shell の設定"></a>GNOME Shell の設定</h4><ol start="20">
+<li><p>Tweaks のインストール</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gnome-tweaks</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>GNOME Shell 拡張のインストール</p>
+<ul>
+<li><p>GNOME Shell Extensions</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gnome-shell-extensions</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Arch Menu</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://gitlab.com/arcmenu/ArcMenu.git</span><br><span class="line"><span class="built_in">cd</span> ArcMenu</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Argos</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/mwilck/argos.git</span><br><span class="line"><span class="built_in">cp</span> -r argos/argos@pew.worldwidemann.com ~/.local/share/gnome-shell/extensions</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Dash to Panel</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gnome-shell-extension-dash-to-panel</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Tweaks &amp; Extensions in System Menu</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/F-i-f/tweaks-system-menu.git</span><br><span class="line">cd tweaks-system-menu</span><br><span class="line">meson build</span><br><span class="line">ninja -C build install</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>ログアウトしてログイン</p>
+</li>
+<li><p><code>Extensions</code> を起動し、インストールした Gnome Shell 拡張を有効化する</p>
+</li>
+</ol>
+<h4 id="アプリケーション"><a href="#アプリケーション" class="headerlink" title="アプリケーション"></a>アプリケーション</h4><ol start="24">
+<li><p>アプリケーションのインストール</p>
+<ul>
+<li><p>Audacious</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install audacious</span><br></pre></td></tr></table></figure></li>
+<li><p>Chromium</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo snap install chromium</span><br></pre></td></tr></table></figure></li>
+<li><p>Visual Studio Code<br><a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a><br>Download .deb package</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gdebi code_*_arm64.deb</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h4 id="XRDP-のサウンド転送"><a href="#XRDP-のサウンド転送" class="headerlink" title="XRDP のサウンド転送"></a>XRDP のサウンド転送</h4><ol start="25">
+<li><p>XRDP でサウンド転送</p>
+<ul>
+<li><p>前提パッケージ</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt build-dep pulseaudio</span><br><span class="line">sudo apt install libpulse-dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ソースリポジトリの有効化</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">software-properties-gtk</span><br></pre></td></tr></table></figure>
+
+<p>「ソースコード」をチェック</p>
+</li>
+<li><p>インストール済みの pulseaudio (バージョン 15.0) のソースを展開</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/ubuntu/repos</span><br><span class="line">apt <span class="built_in">source</span> pulseaudio</span><br><span class="line"><span class="built_in">cd</span> pulseaudio-15.0+dfsg1</span><br><span class="line">meson build</span><br></pre></td></tr></table></figure></li>
+<li><p>(pulseaudio-module-xrdp がサポートする) pulseaudio 14.x のソースを展開</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/ubuntu/repos</span><br><span class="line">git <span class="built_in">clone</span> -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git</span><br><span class="line"><span class="built_in">cd</span> pulseaudio</span><br><span class="line">./bootstrap.sh</span><br><span class="line">./configure</span><br></pre></td></tr></table></figure></li>
+<li><p>config.h の移植(14.2 から 15.0 へ)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /home/ubuntu/repos</span><br><span class="line">cp pulseaudio/config.h pulseaudio-15.0+dfsg1/config.h</span><br><span class="line">sed -i -e &#x27;s/14.2/15.0/g&#x27; pulseaudio-15.0+dfsg1/config.h</span><br></pre></td></tr></table></figure></li>
+<li><p>pulseaudio-module-xrdp のインストール</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/ubuntu/repos</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/neutrinolabs/pulseaudio-module-xrdp.git</span><br><span class="line"><span class="built_in">cd</span> pulseaudio-module-xrdp</span><br><span class="line">./bootstrap &amp;&amp; ./configure PULSE_DIR=/home/ubuntu/repos/pulseaudio-15.0+dfsg1</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line"><span class="built_in">ls</span> $(pkg-config --variable=modlibexecdir libpulse)</span><br></pre></td></tr></table></figure>
+<p>ログアウトしてログインすると、サウンドの出力デバイスが<code>xrdp sink</code>になる。<br>内蔵ヘッドフォンに戻った場合は<code>pulseaudio -k</code>で回復する。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="Wi-Fi-アクセスポイント"><a href="#Wi-Fi-アクセスポイント" class="headerlink" title="Wi-Fi アクセスポイント"></a>Wi-Fi アクセスポイント</h4><ol start="26">
+<li><p>アクセスポイント化</p>
+<p><a target="_blank" rel="noopener" href="https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140">https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140</a></p>
+</li>
+</ol>
+<h4 id="Bluetooth"><a href="#Bluetooth" class="headerlink" title="Bluetooth"></a>Bluetooth</h4><ol start="27">
+<li><p>Bluetooth の有効化</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install pi-bluetooth bluetooth bluez</span><br><span class="line">sudo usermod -a -G bluetooth ubuntu</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Flatpak</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="接続構成検討"><a href="#接続構成検討" class="headerlink" title="接続構成検討"></a>接続構成検討</h3><h4 id="インターネット経由接続"><a href="#インターネット経由接続" class="headerlink" title="インターネット経由接続"></a>インターネット経由接続</h4><p>クライアントから OpenVPN のトンネルを通して RPi4 に接続する方式。接続できた。</p>
+<p><img src="/images/rpi4_from_internet.drawio.svg"></p>
+<h4 id="ルータ経由接続"><a href="#ルータ経由接続" class="headerlink" title="ルータ経由接続"></a>ルータ経由接続</h4><p>クライアントから Wi-Fi ルータ経由で RPi4 に接続する方式。接続できた。</p>
+<p><img src="/images/rpi4_from_router.drawio.svg"></p>
+<h4 id="直接接続"><a href="#直接接続" class="headerlink" title="直接接続"></a>直接接続</h4><p>RPi4 を Wi-Fi アクセスポイント化して直接接続する方式。<br>ルータがない場合でも RPi4 と Android スマートフォンは接続が可能。接続できた。</p>
+<p><img src="/images/rpi4_from_direct.drawio.svg"></p>
+<p><a target="_blank" rel="noopener" href="https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140">https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140</a></p>
+<h4 id="画面転送"><a href="#画面転送" class="headerlink" title="画面転送"></a>画面転送</h4><p>RPi4 の画面出力を HDMI キャプチャ機器からクライアント端末の入力とする。<br>マウスとキーボードは本体に接続する。接続できたがクライアントのバッテリーの消費が激しい。</p>
+<p><img src="/images/rpi4_from_capture.drawio.svg"></p>
+<h3 id="メモ"><a href="#メモ" class="headerlink" title="メモ"></a>メモ</h3><h4 id="SD-カード起動"><a href="#SD-カード起動" class="headerlink" title="SD カード起動"></a>SD カード起動</h4><ul>
+<li>Ubuntu Server を入れてから Ubuntu Desktop をインストールした方がよいかもしれない。</li>
+<li>物理ディスプレイを HDMI 接続した環境では GDM からログイン直後に再起動してしまう。<br>以下の問題かもしれない。<br><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a></li>
+<li>USB HUB を接続すると Ubuntu がうまく起動しない。</li>
+</ul>
+<h4 id="USB-起動"><a href="#USB-起動" class="headerlink" title="USB 起動"></a>USB 起動</h4><ul>
+<li>Raspberry Pi OS は USB ブートできた</li>
+<li>Ubuntu Server &#x2F; Desktop は USB ブート中に再起動がかかってループ。</li>
+</ul>
+	  
+	</div>
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" title="RPi4 - Ubuntu Server 19.10 64bit" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/15/RPi4-Ubuntu-Server-19-10-64bit-更新/" title="RPi4 - Ubuntu Server 19.10 64bit 更新" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit 更新</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/09/16/RPi4-Ubuntu-Server-18-04-3-64bit/" title="RPi4 - Ubuntu Server 18.04.3 64bit" rel="bookmark">RPi4 - Ubuntu Server 18.04.3 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2021/10/24/Minecraft-Java-Edition-on-Raspberry-Pi-4B-Ubuntu-21-10/" title="Minecraft Java Edition on Raspberry Pi 4B / Ubuntu 21.10" rel="bookmark">Minecraft Java Edition on Raspberry Pi 4B / Ubuntu 21.10</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/21/USL-5P-to-Raspberry-Pi-2/" title="USL-5P to Raspberry Pi 2" rel="bookmark">USL-5P to Raspberry Pi 2</a></h3></div></li></ul>
+	</section>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2021/10/24/Minecraft-Java-Edition-on-Raspberry-Pi-4B-Ubuntu-21-10/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2021/10/05/Neutralinojs/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2021-10-17 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/raspberry-pi/">raspberry-pi<span>17</span></a></li> <li><a href="/tags/ubuntu/">ubuntu<span>15</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

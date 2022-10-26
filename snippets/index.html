@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>snippets | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="My gistshttps://gist.github.com/ktkr3d
+SSH ログインコマンドの短縮設定
+alias (~&amp;#x2F;.bash_aliases) を利用する方法
+function (~&amp;#x2F;.bash_aliases) を利用する方法
+ssh config (~&amp;#x">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="snippets"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Visual-Studio-Code" title="Visual Studio Code"><i class="fas fa-code"></i>Visual Studio Code</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> snippets</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row page">
+	<!-- cols -->
+	
+	<div class="col-md-12">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <!-- toc -->
+
+<h3 id="My-gists"><a href="#My-gists" class="headerlink" title="My gists"></a>My gists</h3><p><a target="_blank" rel="noopener" href="https://gist.github.com/ktkr3d">https://gist.github.com/ktkr3d</a></p>
+<h3 id="SSH-ログインコマンドの短縮設定"><a href="#SSH-ログインコマンドの短縮設定" class="headerlink" title="SSH ログインコマンドの短縮設定"></a>SSH ログインコマンドの短縮設定</h3><ul>
+<li>alias (~&#x2F;.bash_aliases) を利用する方法</li>
+<li>function (~&#x2F;.bash_aliases) を利用する方法</li>
+<li>ssh config (~&#x2F;.ssh&#x2F;config) を利用する方法</li>
+</ul>
+<h3 id="SSH-のログインメッセージを抑止"><a href="#SSH-のログインメッセージを抑止" class="headerlink" title="SSH のログインメッセージを抑止"></a>SSH のログインメッセージを抑止</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> ~/.hushlogin</span><br></pre></td></tr></table></figure>
+
+<h3 id="1KB-未満のファイルを移動"><a href="#1KB-未満のファイルを移動" class="headerlink" title="1KB 未満のファイルを移動"></a>1KB 未満のファイルを移動</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ~/trash</span><br><span class="line">$ find . -size -1024c -<span class="built_in">exec</span> <span class="built_in">mv</span> -b &#123;&#125; ~/trash \;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find . -maxdepth 0 -size -1024c -<span class="built_in">exec</span> <span class="built_in">mv</span> -b &#123;&#125; ./failed/ \;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="ファイルの重複検出"><a href="#ファイルの重複検出" class="headerlink" title="ファイルの重複検出"></a>ファイルの重複検出</h3><h4 id="fdupes-を利用したファイルの重複を検出"><a href="#fdupes-を利用したファイルの重複を検出" class="headerlink" title="fdupes を利用したファイルの重複を検出"></a>fdupes を利用したファイルの重複を検出</h4><ol>
+<li><p>インストール</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install fdupes</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>検出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ fdupes -r &lt;TARGET_DIR&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最初以外を移動</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ../trash/ &amp;&amp; fdupes -fr . | xargs <span class="built_in">mv</span> ../trash/</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h4 id="先頭1MB-のMD5-ハッシュで重複ファイルを検出"><a href="#先頭1MB-のMD5-ハッシュで重複ファイルを検出" class="headerlink" title="先頭1MB のMD5 ハッシュで重複ファイルを検出"></a>先頭1MB のMD5 ハッシュで重複ファイルを検出</h4><ol>
+<li><p>スクリプト</p>
+<figure class="highlight bash"><figcaption><span>~/test.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /dev/null /tmp/list0.txt</span><br><span class="line">find . -<span class="built_in">type</span> f -<span class="built_in">exec</span> <span class="built_in">dd</span> <span class="keyword">if</span>=&#123;&#125; bs=1024 count=1000 of=/tmp/work.bin \; -<span class="built_in">exec</span> <span class="built_in">md5sum</span> /tmp/work.bin &gt;&gt; /tmp/list0.txt \; -<span class="built_in">exec</span> <span class="built_in">du</span> &#123;&#125;  &gt;&gt; /tmp/list0.txt \;</span><br><span class="line">sed <span class="string">&#x27;:loop; N; $!b loop; ;s/\/tmp\/work.bin\n//g&#x27;</span> /tmp/list0.txt &gt; /tmp/list1.txt</span><br><span class="line"><span class="built_in">sort</span> /tmp/list1.txt | <span class="built_in">uniq</span> -D -w 32  &gt; /tmp/list2.txt</span><br><span class="line"><span class="built_in">rm</span> /tmp/work.bin /tmp/list0.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>実行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /PATH/TO/TARGET</span><br><span class="line">$ time ~/test.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>結果</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">出力されるファイル</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#x2F;tmp&#x2F;list1.txt</td>
+<td align="left">全ファイルのハッシュ, サイズ, パス</td>
+</tr>
+<tr>
+<td align="left">&#x2F;tmp&#x2F;list2.txt</td>
+<td align="left">重複ファイルのハッシュ, サイズ, パス</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="x2F-bash-aliases"><a href="#x2F-bash-aliases" class="headerlink" title="~&#x2F;.bash_aliases"></a>~&#x2F;.bash_aliases</h3><script src="//gist.github.com/ktkr3d/deb64a43aa13feb9cbcf.js?file=.bash_aliases"></script>
+
+<h3 id="flv-ファイルをmp4-に変換"><a href="#flv-ファイルをmp4-に変換" class="headerlink" title="flv ファイルをmp4 に変換"></a>flv ファイルをmp4 に変換</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> f <span class="keyword">in</span> *.flv ; <span class="keyword">do</span> ffmpeg -i <span class="variable">$f</span> <span class="variable">$f</span>.mp4; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+	  
+	</div>
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+	
+	</section>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+	
+	<!-- comment -->
+	
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* tool bar */
+
+#peercastRadioSideBar toolbarbutton[checked="true"]
+{
+	padding:		0px		!important;
+}
+
+/* column align */
+
+#peercastRadioSideBar .columnchannel
+{
+	text-align: left;
+}
+#peercastRadioSideBar .columncomment
+{
+	text-align: left;
+}
+#peercastRadioSideBar .columnlistener
+{
+	text-align: right;
+}
+#peercastRadioSideBar .columntime
+{
+	text-align: right;
+}
+#peercastRadioSideBar .columnbitrate
+{
+	text-align: right;
+}
+#peercastRadioSideBar .columnmediatype
+{
+	text-align: center;
+}
+
+/* channel list (tree) */
+
+#peercastRadioSideBar treechildren::-moz-tree-row(selected)
+{
+	background-color: #FFFFAA;
+}
+#peercastRadioSideBar treechildren::-moz-tree-row(odd)
+{
+	background-color: #EEEEEE;
+}
+#peercastRadioSideBar treechildren::-moz-tree-row(odd, selected)
+{
+	background-color: #FFFFAA;
+}
+#peercastRadioSideBar treechildren::-moz-tree-cell-text(selected)
+{
+	color: #000000;
+}
+#peercastRadioSideBar treechildren::-moz-tree-cell-text(odd, selected)
+{
+	color: #000000;
+}
+#peercastRadioSideBar treechildren::-moz-tree-image(title)
+{
+	list-style-image: url(chrome://peercast-radio/skin/nav-button-heart.png);
+}
+
+/* notification box */
+
+#peercastRadioSideBar notificationbox notification
+{
+	background-color: #EBEAB8;
+	height: 3.5em;
+}
+#peercastRadioSideBar notificationbox button
+{
+	min-width: 3em;
+}
+
+/* panel */
+
+#peercastRadioSideBar .peercast-radio-panel
+{
+	width: 250px;
+}
+#peercastRadioSideBar .peercast-radio-panel-description
+{
+	padding: 2px 4px 0px 4px; 
+	color: #FFFFFF;
+	background-color: #3C3B37;
+	margin-bottom: 1px;
+}
+#peercastRadioSideBar .peercast-radio-panel-description-caption
+{
+	color: #FFFFFF;
+	background-color: transparent;
+}
+#peercastRadioSideBar .peercast-radio-panel-content
+{
+	padding: 5px 5px;
+}
+#peercastRadioSideBar #peercast-radio-channel-information-channel
+{
+	font-weight: bold;
+	font-size: 10pt;
+}
+#peercastRadioSideBar .peercast-radio-channel-information-icon
+{
+	padding: 2px 4px 2px 0px;
+	vertical-align: middle;
+}
+#peercastRadioSideBar .peercast-radio-channel-information-detail
+{
+	font-size: 9pt;
+}
+#peercastRadioSideBar #peercast-radio-channel-information-chat
+{
+	padding: 2px;
+}
+#peercastRadioSideBar #peercast-radio-channel-information-comment
+{
+	font-size: 9pt;
+}
+#peercastRadioSideBar #peercast-radio-channel-information-all-channel
+{
+}
+#peercastRadioSideBar #peercast-radio-channel-information-all
+{
+	border-top: 1px solid gray;
+	padding-top: 5pt;
+}

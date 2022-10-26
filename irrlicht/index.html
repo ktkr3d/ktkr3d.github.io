@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Irrlicht Engine | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="http://irrlicht.sourceforge.net/Irrlicht Engine はクロスプラットホームでオープンソースな3D エンジンです。Irrlicht Engine フォーラムやチュートリアルのコードに少しアレンジを加えて実行してみました。動画版はこちら。ソースコードはこちら。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Irrlicht Engine"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Visual-Studio-Code" title="Visual Studio Code"><i class="fas fa-code"></i>Visual Studio Code</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Irrlicht Engine</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row page">
+	<!-- cols -->
+	
+	<div class="col-md-12">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/">http://irrlicht.sourceforge.net/</a><br>Irrlicht Engine はクロスプラットホームでオープンソースな3D エンジンです。Irrlicht Engine フォーラムやチュートリアルのコードに少しアレンジを加えて実行してみました。動画版は<a target="_blank" rel="noopener" href="http://www.nicovideo.jp/mylist/20556972">こちら</a>。ソースコードは<a target="_blank" rel="noopener" href="https://github.com/ktkr3d/irrlicht-sandbox">こちら</a>。</p>
+<h3 id="XEffects-HLSL-x2F-GLSL-シェーダ"><a href="#XEffects-HLSL-x2F-GLSL-シェーダ" class="headerlink" title="XEffects: HLSL&#x2F;GLSL シェーダ"></a>XEffects: HLSL&#x2F;GLSL シェーダ</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=30631">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=30631</a></li>
+</ul>
+<p><a href="/images/xeffects.png"><img src="/images/xeffects.png" alt="xeffects"></a></p>
+<h3 id="IrrAR-ARToolKit-ラッパ"><a href="#IrrAR-ARToolKit-ラッパ" class="headerlink" title="IrrAR: ARToolKit ラッパ"></a>IrrAR: ARToolKit ラッパ</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=30000">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=30000</a></li>
+</ul>
+<p><a href="/images/artoolkit.png"><img src="/images/artoolkit.png" alt="artoolkit irrlicht"></a></p>
+<h3 id="CPhysics-物理エンジンBullet"><a href="#CPhysics-物理エンジンBullet" class="headerlink" title="CPhysics: 物理エンジンBullet"></a>CPhysics: 物理エンジンBullet</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=39007">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=39007</a></li>
+</ul>
+<p><a href="/images/bullet.png"><img src="/images/bullet.png" alt="bullet irrlicht"></a></p>
+<h3 id="Freeflight-物理エンジンODE-等"><a href="#Freeflight-物理エンジンODE-等" class="headerlink" title="Freeflight: 物理エンジンODE 等"></a>Freeflight: 物理エンジンODE 等</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=26526">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=26526</a></li>
+</ul>
+<p><a href="/images/flight.png"><img src="/images/flight.png" alt="irrlicht ode"></a></p>
+<h3 id="IrrMMD-PMD-x2F-VMD-x2F-MQO-インポータ"><a href="#IrrMMD-PMD-x2F-VMD-x2F-MQO-インポータ" class="headerlink" title="IrrMMD: PMD&#x2F;VMD&#x2F;MQO インポータ"></a>IrrMMD: PMD&#x2F;VMD&#x2F;MQO インポータ</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://gunload.web.fc2.com/irrlicht/download.html">http://gunload.web.fc2.com/irrlicht/download.html</a></li>
+</ul>
+<p><a href="/images/char_select.png"><img src="/images/char_select.png" alt="irrlicht pmd vmd"></a></p>
+<h3 id="VideoMaster-Theora-形式動画再生-ビデオ-オーディオ"><a href="#VideoMaster-Theora-形式動画再生-ビデオ-オーディオ" class="headerlink" title="VideoMaster: Theora 形式動画再生(ビデオ+オーディオ)"></a>VideoMaster: Theora 形式動画再生(ビデオ+オーディオ)</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=39693">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=39693</a></li>
+</ul>
+<p><a href="/images/VideoPlayer.png"><img src="/images/VideoPlayer.png" alt="irrlicht theora"></a></p>
+<h3 id="libIRC-x2F-Tircd-IRC-クライアント-x2F-ツイッターブリッジ"><a href="#libIRC-x2F-Tircd-IRC-クライアント-x2F-ツイッターブリッジ" class="headerlink" title="libIRC&#x2F;Tircd: IRC クライアント&#x2F;ツイッターブリッジ"></a>libIRC&#x2F;Tircd: IRC クライアント&#x2F;ツイッターブリッジ</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="http://libirc.sourceforge.net/">http://libirc.sourceforge.net/</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://code.google.com/p/tircd/">http://code.google.com/p/tircd/</a></p>
+</li>
+</ul>
+<p><a href="/images/IRC-half2.png"><img src="/images/IRC-half2.png" alt="irrlicht irc twitter"></a></p>
+<h3 id="StateT-amp-GraphT-State-Machine"><a href="#StateT-amp-GraphT-State-Machine" class="headerlink" title="StateT &amp; GraphT : State Machine"></a>StateT &amp; GraphT : State Machine</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=19949#109893">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=19949#109893</a></li>
+</ul>
+<h3 id="cAudio-OpenAL-ラッパ"><a href="#cAudio-OpenAL-ラッパ" class="headerlink" title="cAudio : OpenAL ラッパ"></a>cAudio : OpenAL ラッパ</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=37754">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=37754</a></li>
+</ul>
+<h3 id="IrrlichtML-x2F-irrlicht-i18n"><a href="#IrrlichtML-x2F-irrlicht-i18n" class="headerlink" title="IrrlichtML &#x2F; irrlicht i18n"></a>IrrlichtML &#x2F; irrlicht i18n</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="http://etwas.wolfish.org/Irrlicht/irrlichtml.html">http://etwas.wolfish.org/Irrlicht/irrlichtml.html</a></p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=3995">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=3995</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=6513">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=6513</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=37296">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=37296</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Blood-amp-Water-Effects"><a href="#Blood-amp-Water-Effects" class="headerlink" title="Blood &amp; Water Effects"></a>Blood &amp; Water Effects</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=39624">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=39624</a></li>
+</ul>
+<p><a href="/images/water.png"><img src="/images/water.png" alt="irrlicht blood water"></a></p>
+<h3 id="SPARK-Particle-System"><a href="#SPARK-Particle-System" class="headerlink" title="SPARK - Particle System"></a>SPARK - Particle System</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=35754">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=35754</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://spark.developpez.com/">http://spark.developpez.com/</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.youtube.com/watch?v=7lJu2rf3Ras">http://www.youtube.com/watch?v=7lJu2rf3Ras</a></p>
+</li>
+</ul>
+<p><a href="/images/SPARKFire.png"><img src="/images/SPARKFire.png" alt="irrlicht SPARK"></a></p>
+<h3 id="irrCg"><a href="#irrCg" class="headerlink" title="irrCg"></a>irrCg</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=23676">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=23676</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://code.google.com/p/irrcg/">http://code.google.com/p/irrcg/</a></p>
+</li>
+</ul>
+<p><a href="/images/cg.png"><img src="/images/cg.png" alt="irrcg irrlicht"></a></p>
+<h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><p><a href="/images/android_ndk_irrlicht_pmd_vmd_freetype.png"><img src="/images/android_ndk_irrlicht_pmd_vmd_freetype.png" alt="android ndk irrlicht pmd vmd freetype"></a><br><a href="/images/proton_android_irrlicht_quake_map.png"><img src="/images/proton_android_irrlicht_quake_map.png" alt="proton android irrlicht quake map"></a></p>
+<h3 id="Lens-Flare"><a href="#Lens-Flare" class="headerlink" title="Lens Flare"></a>Lens Flare</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=44728">http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=44728</a></li>
+</ul>
+<p><a href="/images/irrlicht_lensflare.png"><img src="/images/irrlicht_lensflare.png" alt="irrlicht lens flare"></a></p>
+<h3 id="Irrlicht-Engine-アプリケーション開発環境構築"><a href="#Irrlicht-Engine-アプリケーション開発環境構築" class="headerlink" title="Irrlicht Engine アプリケーション開発環境構築"></a>Irrlicht Engine アプリケーション開発環境構築</h3><ol>
+<li>私の開発環境の概要<ul>
+<li>OS はUbuntu (Linux)<br>  Ubuntu では各種前提パッケージの新しいバージョンが提供されていて、パッケージマネージャから簡単にインストールすることができます。Irrlicht Engine 自体も安定版パッケージ(libirrlicht-dev)が登録されています。また、Irrlicht の最新開発版のソースコードを取得して、簡単にコンパイルして導入することもできます。</li>
+<li>統合開発環境はCode::Blocks<br>  Code::Blocks はクロスプラットホームで日本語化も可能なC&#x2F;C++ の統合開発環境で、古いVisual Studio に操作性が似ています。Irrlicht Engine アプリケーションプロジェクトのウィザードもついています。Irrlicht Engine のサンプルはCode::Blocks 形式プロジェクトでも提供されています。</li>
+</ul>
+</li>
+<li>前提パッケージ&#x2F;関連パッケージのインストール <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get -y install build-essential xserver-xorg-dev x11proto-xf86vidmode-dev libxxf86vm-dev mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev libxext-dev libxcursor-dev</span><br><span class="line">$ sudo apt-get install libfreetype6-dev freeglut3-dev libboost-dev libglew1.5-dev libtheora-dev libopenal-dev codeblocks </span><br></pre></td></tr></table></figure></li>
+<li>Irrlicht Engine Nightly Builds の取得とビルド<br> <a target="_blank" rel="noopener" href="http://sourceforge.net/p/irrlicht/code/HEAD/tree/">http://sourceforge.net/p/irrlicht/code/HEAD/tree/</a> から最新版をダウンロードして展開する。 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="built_in">source</span>/Irrlicht</span><br><span class="line">$ make </span><br></pre></td></tr></table></figure></li>
+<li>コンパイラ(include パス)の追加設定(必要に応じて)<ul>
+<li>&#x2F;usr&#x2F;include&#x2F;freetype2</li>
+</ul>
+</li>
+<li>リンカ(lib パス)の追加設定(必要に応じて)</li>
+<li>その他の興味深いライブラリ<ul>
+<li>ARToolKit (<a target="_blank" rel="noopener" href="http://www.hitl.washington.edu/artoolkit/download/">http://www.hitl.washington.edu/artoolkit/download/</a>)</li>
+<li>bullet (<a target="_blank" rel="noopener" href="http://code.google.com/p/bullet/downloads/">http://code.google.com/p/bullet/downloads/</a>)</li>
+<li>libtheoraplayer (<a target="_blank" rel="noopener" href="http://sourceforge.net/projects/libtheoraplayer/">http://sourceforge.net/projects/libtheoraplayer/</a>)</li>
+</ul>
+</li>
+</ol>
+	  
+	</div>
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+	
+	</section>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+	
+	<!-- comment -->
+	
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

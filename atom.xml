@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Memorandum!</title>
+  <icon>https://ktkr3d.github.io/favicon.ico</icon>
+  <subtitle>めもらん!</subtitle>
+  <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://ktkr3d.github.io/"/>
+  <updated>2022-10-25T14:13:56.000Z</updated>
+  <id>https://ktkr3d.github.io/</id>
+  
+  <author>
+    <name>ktkr3d</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>code-server + vscode-reveal</title>
+    <link href="https://ktkr3d.github.io/2022/10/25/code-server-vscode-reveal/"/>
+    <id>https://ktkr3d.github.io/2022/10/25/code-server-vscode-reveal/</id>
+    <published>2022-10-25T14:13:56.000Z</published>
+    <updated>2022-10-25T14:13:56.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/vscode-reveal.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;code-server とvscode-reveal 拡張を組み合わせて利用してみました。&lt;/p&gt;
+&lt;p&gt;vscode-reveal はクライアント毎にポート番号を自動で生成します。ローカルPC上で利用する場合は問題ありませんが、リモートPCから利用する場合はポート番号が毎回変動してしまうため、PC間のポリシー許可設定が変動して面倒です。&lt;/p&gt;
+&lt;p&gt;reveal.js 本体はポート番号を指定可能ですが、残念ながらvscode-reveal にはポート番号を指定する設定項目がありませんでした。&lt;/p&gt;
+&lt;p&gt;調べたところ、vscode-reveal がlisten を開始する処理内でポート番号を固定に設定することでリモートから同じポート番号でアクセスできるようになりました。なお、ポート番号を1つに固定するため、複数のクライアントに対応できません。1つのクライアントからのアクセスのみが有効です。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="code-server" scheme="https://ktkr3d.github.io/tags/code-server/"/>
+    
+    <category term="reveal.js" scheme="https://ktkr3d.github.io/tags/reveal-js/"/>
+    
+    <category term="vscode-reveal" scheme="https://ktkr3d.github.io/tags/vscode-reveal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 11 - WSL 2 - systemd</title>
+    <link href="https://ktkr3d.github.io/2022/10/22/Windows-11-WSL-2-systemd/"/>
+    <id>https://ktkr3d.github.io/2022/10/22/Windows-11-WSL-2-systemd/</id>
+    <published>2022-10-22T08:42:42.000Z</published>
+    <updated>2022-10-22T08:42:42.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/wsl2_systemd.drawio.svg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Windows 11 のWSL でsystemd を有効にしてみました。&lt;br&gt;構成がすっきりしました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="wsl" scheme="https://ktkr3d.github.io/tags/wsl/"/>
+    
+    <category term="windows" scheme="https://ktkr3d.github.io/tags/windows/"/>
+    
+    <category term="hexo" scheme="https://ktkr3d.github.io/tags/hexo/"/>
+    
+    <category term="pritunl" scheme="https://ktkr3d.github.io/tags/pritunl/"/>
+    
+    <category term="code-server" scheme="https://ktkr3d.github.io/tags/code-server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 11</title>
+    <link href="https://ktkr3d.github.io/2022/09/21/Windows-11/"/>
+    <id>https://ktkr3d.github.io/2022/09/21/Windows-11/</id>
+    <published>2022-09-21T12:31:34.000Z</published>
+    <updated>2022-09-21T12:31:34.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/windows11.png&quot;&gt;&lt;br&gt;Windows 11 にアップグレードしました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Windows11" scheme="https://ktkr3d.github.io/tags/Windows11/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Neutralinojs + Nuxt3 + MMD + Audio</title>
+    <link href="https://ktkr3d.github.io/2022/07/30/Neutralinojs-Nuxt3-MMD-Audio/"/>
+    <id>https://ktkr3d.github.io/2022/07/30/Neutralinojs-Nuxt3-MMD-Audio/</id>
+    <published>2022-07-29T15:31:42.000Z</published>
+    <updated>2022-07-29T15:31:42.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3_mmd_audio4.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_mmd_audio.html&quot;&gt;https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_mmd_audio.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MMD の音声再生付きサンプルが掲載されていたのでNuxt3 に移植してみました。&lt;br&gt;カメラ用のVMDでカメラアングルが目まぐるしく展開します。&lt;br&gt;PMDファイルとVMDファイルは以下の階層に配置します。&lt;br&gt;ファイル名は半角英数字にします。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;nene&amp;#x2F;PMX&amp;#x2F;nene_BEA.pmx&lt;/li&gt;
+&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;nene&amp;#x2F;texture&amp;#x2F;TGA&amp;#x2F;*&lt;/li&gt;
+&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;vmds&amp;#x2F;wavefile_v2.vmd&lt;/li&gt;
+&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;vmds&amp;#x2F;wavefile_camera.vmd&lt;/li&gt;
+&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;audio&amp;#x2F;wavefile_short.mp3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;利用させていただいたデータ。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PMD: hololive さん、桃鈴ねね公式mmd_ver1.0&lt;/li&gt;
+&lt;li&gt;VMD: hino さん、ＷＡＶＥＦＩＬＥ &lt;/li&gt;
+&lt;li&gt;音声：ラマーズP さん、WAVEFILE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;まだ途中です。今日はここまで。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="mmd" scheme="https://ktkr3d.github.io/tags/mmd/"/>
+    
+    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
+    
+    <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
+    
+    <category term="threejs" scheme="https://ktkr3d.github.io/tags/threejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Neutralinojs + Nuxt3 + Three.js</title>
+    <link href="https://ktkr3d.github.io/2022/07/28/Neutralinojs-Nuxt3-Three-js/"/>
+    <id>https://ktkr3d.github.io/2022/07/28/Neutralinojs-Nuxt3-Three-js/</id>
+    <published>2022-07-27T17:05:12.000Z</published>
+    <updated>2022-07-27T17:05:12.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3_threejs.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://threejs.org/&quot;&gt;https://threejs.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3&lt;/a&gt;&lt;br&gt;Nuxt3 でThree.js を利用して3Dオブジェクトを描画してみました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3_mmd.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_mmd.html&quot;&gt;https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_mmd.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MMD のサンプルが掲載されていたのでNuxt3 に移植してみました。&lt;br&gt;PMDファイルとVMDファイルは以下の階層に配置します。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;miku&amp;#x2F;miku_v2.pmd&lt;/li&gt;
+&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;vmds&amp;#x2F;wavefile_v2.vmd&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;適当に組み込んだら動きました。まだ途中です。今日はここまで。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PMD: Lat さん、Lat式ミクVer.2.31&lt;/li&gt;
+&lt;li&gt;VMD: せっけんP さん、恋愛サーキュレーション モーション&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="mmd" scheme="https://ktkr3d.github.io/tags/mmd/"/>
+    
+    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
+    
+    <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
+    
+    <category term="threejs" scheme="https://ktkr3d.github.io/tags/threejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Neutralinojs + Nuxt3 + Vuetify3</title>
+    <link href="https://ktkr3d.github.io/2022/07/14/Neutralinojs-Nuxt3-Vuetify3/"/>
+    <id>https://ktkr3d.github.io/2022/07/14/Neutralinojs-Nuxt3-Vuetify3/</id>
+    <published>2022-07-14T13:31:11.000Z</published>
+    <updated>2022-07-14T13:31:11.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3_vuetify3.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://next.vuetifyjs.com/en/components/cards/&quot;&gt;https://next.vuetifyjs.com/en/components/cards/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Nuetralinojs + Nuxt3 でVuetify3 のCards を使ってみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
+    
+    <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
+    
+    <category term="vuetify" scheme="https://ktkr3d.github.io/tags/vuetify/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Neutralinojs + Nuxt3</title>
+    <link href="https://ktkr3d.github.io/2022/07/12/Neutralinojs-Nuxt3/"/>
+    <id>https://ktkr3d.github.io/2022/07/12/Neutralinojs-Nuxt3/</id>
+    <published>2022-07-12T11:46:34.000Z</published>
+    <updated>2022-07-12T11:46:34.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/neutralinojs/neutralinojs&quot;&gt;https://github.com/neutralinojs/neutralinojs&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://v3.nuxtjs.org/&quot;&gt;https://v3.nuxtjs.org/&lt;/a&gt;&lt;br&gt;Neutralinojs でNuxt3 を使ってみました。&lt;br&gt;Windows 10 (x64)、Ubuntu 22.04 (x64)、Ubuntu 22.04 (arm64)で動作しました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
+    
+    <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
+    
+    <category term="vue" scheme="https://ktkr3d.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Neutralinojs + Vue3</title>
+    <link href="https://ktkr3d.github.io/2022/07/10/Neutralinojs-Vue3/"/>
+    <id>https://ktkr3d.github.io/2022/07/10/Neutralinojs-Vue3/</id>
+    <published>2022-07-10T11:53:55.000Z</published>
+    <updated>2022-07-10T11:53:55.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs-vue3.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-vue&quot;&gt;https://github.com/ktkr3d/neutralinojs-vue&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/neutralinojs/neutralinojs&quot;&gt;https://github.com/neutralinojs/neutralinojs&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://neutralino.js.org/docs/how-to/use-a-frontend-library/&quot;&gt;https://neutralino.js.org/docs/how-to/use-a-frontend-library/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Neutralinojs でVue3 を使ってみました。&lt;br&gt;React を導入する手順を参考にしてVue3 に置き換えてみました。&lt;br&gt;Windows 10 (x64)、Ubuntu 22.04 (x64)、Ubuntu 22.04 (arm64)で動作しました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
+    
+    <category term="vuejs" scheme="https://ktkr3d.github.io/tags/vuejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tauri</title>
+    <link href="https://ktkr3d.github.io/2022/06/19/Tauri/"/>
+    <id>https://ktkr3d.github.io/2022/06/19/Tauri/</id>
+    <published>2022-06-19T13:51:08.000Z</published>
+    <updated>2022-06-19T13:51:08.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/tauri.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tauri-apps/tauri&quot;&gt;https://github.com/tauri-apps/tauri&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tauri を試してみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="tauri" scheme="https://ktkr3d.github.io/tags/tauri/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CHUWI Hi 10 Go</title>
+    <link href="https://ktkr3d.github.io/2022/04/06/CHUWI-Hi-10-Go/"/>
+    <id>https://ktkr3d.github.io/2022/04/06/CHUWI-Hi-10-Go/</id>
+    <published>2022-04-05T18:35:48.000Z</published>
+    <updated>2022-04-05T18:35:48.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/hi10go.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://www.chuwi.com/jp/product/items/Chuwi-Hi10-Go.html&quot;&gt;https://www.chuwi.com/jp/product/items/Chuwi-Hi10-Go.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CHUWI Hi 10 Go + Ubuntu 22.04&lt;/p&gt;
+&lt;h4 id=&quot;CHUWI-Hi-10-Go-の新旧スペック比較&quot;&gt;&lt;a href=&quot;#CHUWI-Hi-10-Go-の新旧スペック比較&quot; class=&quot;headerlink&quot; title=&quot;CHUWI Hi 10 Go の新旧スペック比較&quot;&gt;&lt;/a&gt;CHUWI Hi 10 Go の新旧スペック比較&lt;/h4&gt;&lt;p&gt;Hi 10 Go は一つの型式で２つのスペックがあるようです。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;旧 Hi 10 Go&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;新Hi 10 Go&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;CPU&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Celoron N4500&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Celeron N5100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;イヤフォンジャック&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;あり&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;なし&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;スタイラス&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;対応&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;非対応?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;カバーキーボードのファンクションキー修飾配置も若干異なるみたいです。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
+    
+    <category term="gnome" scheme="https://ktkr3d.github.io/tags/gnome/"/>
+    
+    <category term="hi10go" scheme="https://ktkr3d.github.io/tags/hi10go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Argos GNOME 42 Support</title>
+    <link href="https://ktkr3d.github.io/2022/03/19/Argos-GNOME-42-Support/"/>
+    <id>https://ktkr3d.github.io/2022/03/19/Argos-GNOME-42-Support/</id>
+    <published>2022-03-19T02:12:28.000Z</published>
+    <updated>2022-03-19T02:12:28.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/argos_gnome42.png&quot; alt=&quot;argos_gnome42.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/argos&quot;&gt;https://github.com/ktkr3d/argos&lt;/a&gt;&lt;br&gt;GNOME Shell Extension のArgos をGNOME Shell 42 で実行できるようにしてみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="gnome-shell" scheme="https://ktkr3d.github.io/tags/gnome-shell/"/>
+    
+    <category term="argos" scheme="https://ktkr3d.github.io/tags/argos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Draw.io on code-server</title>
+    <link href="https://ktkr3d.github.io/2022/02/22/Draw-io-on-Code-Server/"/>
+    <id>https://ktkr3d.github.io/2022/02/22/Draw-io-on-Code-Server/</id>
+    <published>2022-02-22T13:13:14.000Z</published>
+    <updated>2022-02-22T13:13:14.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/drawio_codeserver.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;WSL 上で実行しているcode-server でdraw.io integration 拡張を利用する方法を考えてみました。&lt;/p&gt;
+&lt;p&gt;はじめに以下の挙動になりました。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;利用ホスト&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;OS&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;URL&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Draw.io の状態&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;ローカル&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Windows&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;http://localhost:8080/&quot;&gt;http://localhost:8080&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;有効&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;ローカル&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Windows&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;http://127.0.0.1:8080/&quot;&gt;http://127.0.0.1:8080&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;有効&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;ローカル&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Windows&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;http://192.168.11.2:8080/&quot;&gt;http://192.168.11.2:8080&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;無効&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;リモート&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Windows&amp;#x2F;Linux&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;http://192.168.11.2:8080/&quot;&gt;http://192.168.11.2:8080&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;無効&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;リモート&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Windows&amp;#x2F;Linux&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;http://server:8080/&quot;&gt;http://server:8080&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;無効&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;localhost 指定の場合に有効になるようです。&lt;br&gt;利用するOS(localhost) の特定ポートをWSL のcode-server のポートに転送してあげればよいようです。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="vscode" scheme="https://ktkr3d.github.io/tags/vscode/"/>
+    
+    <category term="draw.io" scheme="https://ktkr3d.github.io/tags/draw-io/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Development Environment on WSL</title>
+    <link href="https://ktkr3d.github.io/2022/02/08/Develop-Environment-on-WSL/"/>
+    <id>https://ktkr3d.github.io/2022/02/08/Develop-Environment-on-WSL/</id>
+    <published>2022-02-07T17:24:24.000Z</published>
+    <updated>2022-02-07T17:24:24.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/wsl-dev.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/coder/code-server&quot;&gt;https://github.com/coder/code-server&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;WSL にこっそり開発環境を構築しようと思います。&lt;br&gt;Microsoft Store が利用不可、インターネットアクセスに認証プロキシが存在する環境とします。&lt;/p&gt;
+&lt;h4 id=&quot;実現する機能&quot;&gt;&lt;a href=&quot;#実現する機能&quot; class=&quot;headerlink&quot; title=&quot;実現する機能&quot;&gt;&lt;/a&gt;実現する機能&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;WSL2 (Ubuntu 20.04, systemd 有効化)&lt;/li&gt;
+&lt;li&gt;Code Server (Web版Visual Studio Code)をPWA化&lt;/li&gt;
+&lt;li&gt;Code Server の拡張機能&lt;ul&gt;
+&lt;li&gt;Japanese Language Pack (日本語化)&lt;/li&gt;
+&lt;li&gt;Project Manager&lt;/li&gt;
+&lt;li&gt;Activitus Bar&lt;/li&gt;
+&lt;li&gt;Draw.io (図形エディタ)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Gitea (Git リポジトリ管理)&lt;/li&gt;
+&lt;li&gt;SliDev (スライド)&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="wsl" scheme="https://ktkr3d.github.io/tags/wsl/"/>
+    
+    <category term="code-server" scheme="https://ktkr3d.github.io/tags/code-server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Slidev</title>
+    <link href="https://ktkr3d.github.io/2021/12/19/Slidev/"/>
+    <id>https://ktkr3d.github.io/2021/12/19/Slidev/</id>
+    <published>2021-12-19T02:24:36.000Z</published>
+    <updated>2021-12-19T02:24:36.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://sli.dev/&quot;&gt;https://sli.dev/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/slidevjs/slidev&quot;&gt;https://github.com/slidevjs/slidev&lt;/a&gt;&lt;br&gt;Slidev でスライドを作成してみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="markdown" scheme="https://ktkr3d.github.io/tags/markdown/"/>
+    
+    <category term="slidev" scheme="https://ktkr3d.github.io/tags/slidev/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu Mate 21.10 on Raspberry Pi 4B</title>
+    <link href="https://ktkr3d.github.io/2021/11/08/Ubuntu-Mate-21-10-on-Raspberry-Pi-4B/"/>
+    <id>https://ktkr3d.github.io/2021/11/08/Ubuntu-Mate-21-10-on-Raspberry-Pi-4B/</id>
+    <published>2021-11-08T13:51:12.000Z</published>
+    <updated>2021-11-08T13:51:12.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ubuntu_mate_21_10_rpi4b.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://ubuntu-mate.org/download/arm64/impish/&quot;&gt;https://ubuntu-mate.org/download/arm64/impish/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Minecraft Java Edition on Raspberry Pi 4B / Ubuntu 21.10</title>
+    <link href="https://ktkr3d.github.io/2021/10/24/Minecraft-Java-Edition-on-Raspberry-Pi-4B-Ubuntu-21-10/"/>
+    <id>https://ktkr3d.github.io/2021/10/24/Minecraft-Java-Edition-on-Raspberry-Pi-4B-Ubuntu-21-10/</id>
+    <published>2021-10-24T03:15:20.000Z</published>
+    <updated>2021-10-24T03:15:20.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/minecraft_raspi4b_ubuntu2110.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/MultiMC/Launcher&quot;&gt;https://github.com/MultiMC/Launcher&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://forums.raspberrypi.com/viewtopic.php?f=78&amp;amp;t=321888&quot;&gt;https://forums.raspberrypi.com/viewtopic.php?f=78&amp;amp;t=321888&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Raspberry Pi 4B + Ubuntu 21.10 に Minecraft をインストールしてみました。マイクロソフトアカウントでログインできます。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="raspberry-pi" scheme="https://ktkr3d.github.io/tags/raspberry-pi/"/>
+    
+    <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
+    
+    <category term="minecraft" scheme="https://ktkr3d.github.io/tags/minecraft/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 21.10 on RPi4B</title>
+    <link href="https://ktkr3d.github.io/2021/10/17/Ubuntu-21-10-on-RPi4B/"/>
+    <id>https://ktkr3d.github.io/2021/10/17/Ubuntu-21-10-on-RPi4B/</id>
+    <published>2021-10-17T07:10:52.000Z</published>
+    <updated>2021-10-17T07:10:52.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ubuntu_2110_rpi4b.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu 21.10 を Raspberry Pi 4B にインストールしてみました。&lt;/p&gt;
+&lt;h4 id=&quot;2021-10-23-以下の問題の修正が期待されます。&quot;&gt;&lt;a href=&quot;#2021-10-23-以下の問題の修正が期待されます。&quot; class=&quot;headerlink&quot; title=&quot;2021-10-23 以下の問題の修正が期待されます。&quot;&gt;&lt;/a&gt;2021-10-23 以下の問題の修正が期待されます。&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;HDMI output freezes under current&amp;#x2F;proposed impish kernels&lt;br&gt;&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368&quot;&gt;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;現在のバージョンは&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ uname -r -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;2021-11-08 に Updates に修正がリリースされるらしい。&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/46&quot;&gt;&lt;/a&gt;&lt;br&gt;proposed リポジトリをウォッチしよう。&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/48&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2021-10-30-proposed-で修正版が公開されたようです。&quot;&gt;&lt;a href=&quot;#2021-10-30-proposed-で修正版が公開されたようです。&quot; class=&quot;headerlink&quot; title=&quot;2021-10-30 proposed で修正版が公開されたようです。&quot;&gt;&lt;/a&gt;2021-10-30 proposed で修正版が公開されたようです。&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60&quot;&gt;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="raspberry-pi" scheme="https://ktkr3d.github.io/tags/raspberry-pi/"/>
+    
+    <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Neutralinojs</title>
+    <link href="https://ktkr3d.github.io/2021/10/05/Neutralinojs/"/>
+    <id>https://ktkr3d.github.io/2021/10/05/Neutralinojs/</id>
+    <published>2021-10-04T19:20:35.000Z</published>
+    <updated>2021-10-04T19:20:35.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs.png&quot; alt=&quot;Neutralinojs&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/neutralinojs/neutralinojs&quot;&gt;https://github.com/neutralinojs/neutralinojs&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://neutralino.js.org/docs/getting-started/your-first-neutralinojs-app&quot;&gt;https://neutralino.js.org/docs/getting-started/your-first-neutralinojs-app&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Neutralinojs(ニュートラリーノ JS)は Electron の代替となるクロスプラットフォームアプリケーションフレームワークです。Neutralinojs は Chromium をバンドルせず、オペレーティングシステムの既存の Web ブラウザライブラリを使用しているため実行モジュールのサイズが小さいです。hello-world のリリース用のアーカイブファイル hello-world-release.zip のサイズは 1.87 MB (1,961,616 バイト)でした。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Electron Minecraft Mod Manager</title>
+    <link href="https://ktkr3d.github.io/2021/09/25/Electron-Minecraft-Mods-Manager/"/>
+    <id>https://ktkr3d.github.io/2021/09/25/Electron-Minecraft-Mods-Manager/</id>
+    <published>2021-09-25T08:49:27.000Z</published>
+    <updated>2021-09-25T08:49:27.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/emcmm_m_list.png&quot; alt=&quot;electron minecraft mod manager&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/electron-mcmm&quot;&gt;https://github.com/ktkr3d/electron-mcmm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Electron でマインクラフトの Mod 管理アプリケーションを作ってみました。&lt;br&gt;Mods 情報収集のために mc-curseforge-api を使っています。&lt;br&gt;Electron の IPC 通信の仕様を勉強中です。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="electron" scheme="https://ktkr3d.github.io/tags/electron/"/>
+    
+    <category term="minecraft" scheme="https://ktkr3d.github.io/tags/minecraft/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Decode / Encode URI</title>
+    <link href="https://ktkr3d.github.io/2021/09/17/Decode-Encode-URI/"/>
+    <id>https://ktkr3d.github.io/2021/09/17/Decode-Encode-URI/</id>
+    <published>2021-09-17T12:36:23.000Z</published>
+    <updated>2021-09-17T12:36:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;エンコードされたURI のデコード、デコードされたURI のエンコードを簡単に実行できるツールを作ってみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="javascript" scheme="https://ktkr3d.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+</feed>

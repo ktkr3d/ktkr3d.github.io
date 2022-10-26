@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Extraterm | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="https://extraterm.org/https://github.com/sedwards2009/extraterm
+Extraterm を使ってみました。シェル統合機能やカーソルモードが独特で良いです。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Extraterm"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Visual-Studio-Code" title="Visual Studio Code"><i class="fas fa-code"></i>Visual Studio Code</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Extraterm</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p><img src="/images/extraterm_frame.png" alt="extraterm_frame"><br><a target="_blank" rel="noopener" href="https://extraterm.org/">https://extraterm.org/</a><br><a target="_blank" rel="noopener" href="https://github.com/sedwards2009/extraterm">https://github.com/sedwards2009/extraterm</a></p>
+<p>Extraterm を使ってみました。<br>シェル統合機能やカーソルモードが独特で良いです。</p>
+<span id="more"></span>
+
+<h3 id="私の要件"><a href="#私の要件" class="headerlink" title="私の要件"></a>私の要件</h3><ul>
+<li>Quake モード</li>
+<li>WSL 対応</li>
+<li>背景の透過率設定</li>
+<li>横分割</li>
+<li>タブ</li>
+<li>テーマ</li>
+<li>マウスホイールで拡大縮小</li>
+<li>できればローカライズ<br><a target="_blank" rel="noopener" href="https://github.com/sedwards2009/extraterm/issues/247">https://github.com/sedwards2009/extraterm/issues/247</a></li>
+</ul>
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Windows 10 Insider Preview Build 20180<ul>
+<li>Extraterm 0.52.0</li>
+<li>WSL (Ubuntu)</li>
+</ul>
+</li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
+<li>ダウンロード<br>  <a target="_blank" rel="noopener" href="https://github.com/sedwards2009/extraterm/releases">https://github.com/sedwards2009/extraterm/releases</a><br>  Assets から<code>extraterm-setup-0.52.0.exe</code> をダウンロード</li>
+<li>インストール<br>  <code>extraterm-setup-0.52.0.exe</code> を実行</li>
+</ol>
+<h3 id="シェル統合機能の構築"><a href="#シェル統合機能の構築" class="headerlink" title="シェル統合機能の構築"></a>シェル統合機能の構築</h3><ol>
+<li>ダウンロード<br>  <a target="_blank" rel="noopener" href="https://github.com/sedwards2009/extraterm/releases">https://github.com/sedwards2009/extraterm/releases</a><br>  Assets から<code>extraterm-commands-0.52.0.zip</code> をダウンロード</li>
+<li><code>~/bin</code> に展開</li>
+<li><code>. ~/bin/setup_extraterm_bash.sh</code> を実行</li>
+</ol>
+<h3 id="基本的な使い方"><a href="#基本的な使い方" class="headerlink" title="基本的な使い方"></a>基本的な使い方</h3><ul>
+<li>機能<br><a target="_blank" rel="noopener" href="https://extraterm.org/features.html">https://extraterm.org/features.html</a></li>
+<li>ユーザガイド<br><a target="_blank" rel="noopener" href="https://extraterm.org/guide.html">https://extraterm.org/guide.html</a></li>
+<li>FAQ<br><a target="_blank" rel="noopener" href="https://extraterm.org/faq.html">https://extraterm.org/faq.html</a></li>
+</ul>
+<h3 id="ショートカット"><a href="#ショートカット" class="headerlink" title="ショートカット"></a>ショートカット</h3><ul>
+<li><p>≡(ハンバーガーメニュー) → <code>Settings</code> → <code>Keybindings</code></p>
+<table>
+<thead>
+<tr>
+<th align="left">処理</th>
+<th align="left">キーバインド</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">新しいタブ</td>
+<td align="left"><code>Ctrl+Shift+T</code></td>
+</tr>
+<tr>
+<td align="left">タブを直接閉じる</td>
+<td align="left"><code>Ctrl+Shift+Q</code></td>
+</tr>
+<tr>
+<td align="left">タブ間を左右に移動</td>
+<td align="left"><code>Ctrl+,</code> <code>Ctrl+.</code></td>
+</tr>
+<tr>
+<td align="left">スクロール</td>
+<td align="left"><code>Shift+PageUp</code> <code>Shift+PageDown</code></td>
+</tr>
+<tr>
+<td align="left">選択&amp;コピー</td>
+<td align="left">マウスドラッグ</td>
+</tr>
+<tr>
+<td align="left">矩形選択&amp;コピー</td>
+<td align="left"><code>Alt</code>+マウスドラッグ</td>
+</tr>
+<tr>
+<td align="left">ペースト</td>
+<td align="left"><code>Shift+Insert</code></td>
+</tr>
+<tr>
+<td align="left">カーソルモード切り替え</td>
+<td align="left"><code>Ctrl+Shift+Space</code></td>
+</tr>
+<tr>
+<td align="left">コマンドパレット</td>
+<td align="left"><code>Ctrl+Shift+P</code></td>
+</tr>
+<tr>
+<td align="left">ウィンドウ表示の切り替え</td>
+<td align="left">ユーザ定義(私は<code>Ctrl+F12</code>を設定)</td>
+</tr>
+<tr>
+<td align="left">横分割(Vertical Split)</td>
+<td align="left">ユーザ定義(私は<code>Ctrl+Shift+Right</code>を設定)</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="実行例"><a href="#実行例" class="headerlink" title="実行例"></a>実行例</h3><ul>
+<li>フレームとfrom<br><img src="/images/extraterm_frame.png" alt="extraterm_frame"><ul>
+<li>コマンドを実行した結果が長い場合にフレーム化されます。デフォルトの閾値は10行です。</li>
+<li>フレームには実行結果(成功✔、失敗❌)とコマンド文字列が表示されます。</li>
+<li>フレームには現在の表示位置が%で表されます。これはスクロールにより動的に変化します。</li>
+<li>フレーム毎にタグ番号が採番されます。これはfrom コマンドで再利用できます。</li>
+<li>その隣のアイコンでフレームの内容を別のタブに表示することができます。</li>
+</ul>
+</li>
+<li>show<br><img src="/images/extraterm_show.png" alt="extraterm_show"><ul>
+<li>一般的な画像形式のファイルを表示できます。</li>
+</ul>
+</li>
+</ul>
+	  
+	</div>
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+	
+	</section>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2020/08/03/Hexo-5-0-0/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2020-08-02 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/extraterm/">extraterm<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>

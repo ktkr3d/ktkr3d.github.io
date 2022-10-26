@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="361px" height="261px" viewBox="-0.5 -0.5 361 261" content="&lt;mxfile host=&quot;&quot; modified=&quot;2020-05-30T03:17:03.113Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.45.1 Chrome/78.0.3904.130 Electron/7.2.4 Safari/537.36&quot; etag=&quot;STXW8jZJck4TQKiUvbcP&quot; version=&quot;13.1.3&quot;&gt;&lt;diagram id=&quot;6hGFLwfOUW9BJ-s0fimq&quot; name=&quot;Page-1&quot;&gt;zZfLrtowEIafJluUC7ktD7e2UitVYtG1iSeJVSdGxjShT18b20BIaJCaQ09AyP7HJvE34xnHCZZV+4mjffmNYaCO7+LWCVaO7/uRK3+VcNJCnKZaKDjBWvKuwpb8BiOaecWRYDh0BgrGqCD7rpixuoZMdDTEOWu6w3JGu3fdowJ6wjZDtK/+IFiUWk38+Kp/BlKU9s5eZNZXITvYrORQIsyaGylYO8GSMyZ0q2qXQBU7y0XP2zywXh6MQy2emuDrGb8QPZrFmQcTJ7tazo41BjXBdYJFUxIB2z3KlLWR7pVaKSoqe55s5oTSJaOMn+cGeag+Uj8Izn6CtdSsBjWY1eJmsL6kbp4JuID24cK8Cy4ZZsAqEPwkh9gYM4BP3W5zdVdgo7C8cdUlNJEJkeLyz1eKsmFADkMNx5nKCTJYYZwnOux1BOekVT5YFBxhAh1uOIyDFPfhQ4RdDD340pKmkZeEF9I9rAPwH5Ked0nP+6STAdDJBJyjcc6CE1QX9AnQmHAJmrD6HJ5cPfsQ6zTGbhz3WeMQEjwfYp34uyCKpmHtRV3Y4XOwpwjqeBz2BKEcA4rAHcCLIMmzIbxRlsAunwbvBd7rYznp4V1x1MwIk+KXWoBkdQ5OmcjWgZN4zlvsrCMn2aivVpK5NUWmsbCmxdo00tg2Nv29Aq248xglhdoPmUQKkvdCoSSyDr4ZQ0Uwfri5unVD5XpTyb3Y9s3Nw34tcM/Xu2Qob6gY+AN+nU/g13R82+iQtgcJv+sCeUDYq3FVW6ij1CynrMlKxMUMI4F26GENuef90euGF79us9lz5D8ks3u/SE+QbEYOLDvuFDrZetOFZ+WFY7nufmt8hNz3Un944/6wqecr2gH9zg7E1OodE4JVA7lJsKdclumj6F9L/Yh//kvpf0f/yO71DeRsu3mNC9Z/AA==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-e6d0de-1-d5739d-1-s-0">
+            <stop offset="0%" style="stop-color:#e6d0de"/>
+            <stop offset="100%" style="stop-color:#d5739d"/>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-d5e8d4-1-97d077-1-s-0">
+            <stop offset="0%" style="stop-color:#d5e8d4"/>
+            <stop offset="100%" style="stop-color:#97d077"/>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-dae8fc-1-7ea6e0-1-s-0">
+            <stop offset="0%" style="stop-color:#dae8fc"/>
+            <stop offset="100%" style="stop-color:#7ea6e0"/>
+        </linearGradient>
+    </defs>
+    <g>
+        <rect x="0" y="0" width="360" height="260" fill="#f5f5f5" stroke="none" pointer-events="all"/>
+        <ellipse cx="60" cy="60" rx="40" ry="40" fill="url(#mx-gradient-e6d0de-1-d5739d-1-s-0)" stroke="#996185" pointer-events="all"/>
+        <path d="M 150 20 L 210 60 L 150 100 Z" fill="url(#mx-gradient-d5e8d4-1-97d077-1-s-0)" stroke="#82b366" stroke-miterlimit="10" transform="rotate(270,180,60)" pointer-events="all"/>
+        <rect x="260" y="20" width="80" height="80" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="all"/>
+        <rect x="20" y="100" width="320" height="40" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 318px; height: 1px; padding-top: 120px; margin-left: 21px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 17px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; text-decoration: underline; white-space: normal; word-wrap: normal; ">
+                                Draw.io Integration で描いてみました
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="180" y="125" fill="#000000" font-family="Helvetica" font-size="17px" text-anchor="middle" font-weight="bold" text-decoration="underline">
+                    Draw.io Integration で描いてみました
+                </text>
+            </switch>
+        </g>
+        <path d="M 20 216.67 L 20 163.33 C 20 155.97 37.91 150 60 150 C 82.09 150 100 155.97 100 163.33 L 100 216.67 C 100 224.03 82.09 230 60 230 C 37.91 230 20 224.03 20 216.67 Z" fill="url(#mx-gradient-e6d0de-1-d5739d-1-s-0)" stroke="#996185" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 20 163.33 C 20 170.7 37.91 176.67 60 176.67 C 82.09 176.67 100 170.7 100 163.33" fill="none" stroke="#996185" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 300 150 L 340 169.21 L 340 210.79 L 300 230 L 260 210.79 L 260 169.21 Z" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 260 169.21 L 300 188.41 L 340 169.21 M 300 188.41 L 300 230" fill="none" stroke="#6c8ebf" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 180 150 L 220 222.64 C 220 226.71 202.09 230 180 230 C 157.91 230 140 226.71 140 222.64 Z" fill="url(#mx-gradient-d5e8d4-1-97d077-1-s-0)" stroke="#82b366" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 140 222.64 C 140 218.58 157.91 215.29 180 215.29 C 202.09 215.29 220 218.58 220 222.64" fill="url(#mx-gradient-d5e8d4-1-97d077-1-s-0)" stroke="#82b366" stroke-miterlimit="10" pointer-events="all"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>

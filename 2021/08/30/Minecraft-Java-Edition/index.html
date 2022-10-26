@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Minecraft Java Edition | Memorandum!</title>
+  <meta name="author" content="ktkr3d">
+  
+  <meta name="description" content="Windows 10 環境でMinecraft Java Edition を設定してみました。
+
+Iris Shaders (Sodium 内包による負荷軽減、シェーダーのサポート&amp;#x2F;高速切り替え)
+ズーム表示
+防具の耐久度表示
+方位表示
+地図 (ミニマップ、ワールドマップ)
+ミニHUD の表示とカスタマイズ
+日本語丸ゴシックTrueType フォント (Rounded M+ 1c bold)">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Minecraft Java Edition"/>
+  <meta property="og:site_name" content="Memorandum!"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Memorandum!" type="application/atom+xml">
+  
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-41927897-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Memorandum!</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="feed">
+			  <i class="fa fa-rss"></i>Subscribe
+			</a>
+		  </li>
+		  
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="dropdown"><a href="#" title="Pages" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder"></i>Pages<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android" title="Android"><i class="fa fa-android"></i>Android</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/android-x86" title="Android-x86"><i class="fa fa-android"></i>Android-x86</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/antergos" title="Antergos"><i class="fa fa-linux"></i>Antergos</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/atom" title="Atom"><i class="fa fa-file-text"></i>Atom</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ca" title="CA"><i class="fa fa-certificate"></i>CA</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Docker" title="Docker"><i class="fa fa-desktop"></i>Docker</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/game" title="Game"><i class="fa fa-gamepad"></i>Game</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/irrlicht" title="Irrlicht Engine"><i class="fa fa-cube"></i>Irrlicht Engine</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/kinect" title="Kinect"><i class="fa fa-child"></i>Kinect</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/peercast-radio" title="Peercast Radio"><i class="fa fa-bullhorn"></i>Peercast Radio</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/raspberry-pi" title="Raspberry Pi"><i class="fab fa-raspberry-pi"></i>Raspberry Pi</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/snippets" title="Snippets"><i class="fa fa-code"></i>Snippets</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/ubuntu" title="Ubuntu"><i class="fa fa-linux"></i>Ubuntu</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/virtualization" title="Virtualization"><i class="fa fa-desktop"></i>Virtualization</a></li>
+		      
+		      <li role="presentation"><a role="menuitem" tabindex="-1" href="/Visual-Studio-Code" title="Visual Studio Code"><i class="fas fa-code"></i>Visual Studio Code</a></li>
+		      
+		    </ul>
+		  </li>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Minecraft Java Edition</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p><img src="/images/mc_title.png" alt="minecraft title"></p>
+<p>Windows 10 環境でMinecraft Java Edition を設定してみました。</p>
+<ul>
+<li>Iris Shaders (Sodium 内包による負荷軽減、シェーダーのサポート&#x2F;高速切り替え)</li>
+<li>ズーム表示</li>
+<li>防具の耐久度表示</li>
+<li>方位表示</li>
+<li>地図 (ミニマップ、ワールドマップ)</li>
+<li>ミニHUD の表示とカスタマイズ</li>
+<li>日本語丸ゴシックTrueType フォント (Rounded M+ 1c bold)</li>
+</ul>
+<span id="more"></span>
+
+<p><img src="/images/mc_customize.png" alt="minecraft customize"></p>
+<h3 id="Minecraft-と-Fabric-Loader"><a href="#Minecraft-と-Fabric-Loader" class="headerlink" title="Minecraft と Fabric Loader"></a>Minecraft と Fabric Loader</h3><p>インストーラをダウンロードして実行します。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.minecraft.net/ja-jp/store/minecraft-java-edition">Minecraft Java Edition</a></li>
+<li><a target="_blank" rel="noopener" href="https://fabricmc.net/use/">Fabric Loader</a></li>
+</ul>
+<h3 id="Fabric-系Mods-とショートカット操作"><a href="#Fabric-系Mods-とショートカット操作" class="headerlink" title="Fabric 系Mods とショートカット操作"></a>Fabric 系Mods とショートカット操作</h3><p><code>%APPDATA%\.minecraft\mods\</code> フォルダに格納します。</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mod</th>
+<th align="left">ショートカット操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/fabric-api">Fabric API</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/irisshaders">Iris Shaders</a></td>
+<td align="left"><code>O</code> シェーダーパックの選択<br><code>K</code> シェーダーのオン&#x2F;オフ</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/ok-zoomer">Ok Zoomer</a></td>
+<td align="left"><code>C</code> ズーム</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/rpg-hud-fabric">RPG-Hud</a> <a target="_blank" rel="noopener" href="https://github.com/KurodaAkira/RPG-Hud/issues/79">⚠️ V1.17 対策版</a></td>
+<td align="left"><code>Esc</code> で右上の<code>RPG-Hud</code>ボタンで設定</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap">Xaero’s Minimap</a></td>
+<td align="left"><code>Y</code> Xaero’s Minimap の設定</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map">Xaero’s World Map</a></td>
+<td align="left"><code>M</code> WorldMap の表示<br><code>[</code> Xaero’s World Map の設定</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/malilib">MaLiLib</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/minihud">MiniHUD</a></td>
+<td align="left"><code>H</code> MiniHUD のオン&#x2F;オフ<br><code>H</code>+<code>C</code> MiniHUDの設定</td>
+</tr>
+</tbody></table>
+<h3 id="シェーダーパック"><a href="#シェーダーパック" class="headerlink" title="シェーダーパック"></a>シェーダーパック</h3><p><code>%APPDATA%\.minecraft\shaderpacks\</code> フォルダに格納します。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://sildurs-shaders.github.io/">Sildur’s Vibrant Shaders</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/customization/complementary-shaders">Complementary Shaders</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bitslablab.com/bslshaders/">BSL Shaders</a></li>
+<li><a target="_blank" rel="noopener" href="https://sildurs-shaders.github.io/">Sildur’s Enhanced Default</a></li>
+<li><a target="_blank" rel="noopener" href="https://sonicether.com/shaders/download/renewed-v1-0-1/">SEUS Renewed</a></li>
+<li><a target="_blank" rel="noopener" href="https://sonicether.com/shaders/download/v11-0/">SEUS v11</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/customization/skylec-shader">Skylec Shader</a></li>
+</ul>
+<h3 id="日本語TrueType-フォント切り替え"><a href="#日本語TrueType-フォント切り替え" class="headerlink" title="日本語TrueType フォント切り替え"></a>日本語TrueType フォント切り替え</h3><p><code>%APPDATA%\.minecraft\resourcepacks\</code> フォルダにリソースパックを作成して有効化します。</p>
+<h4 id="⛏️-リソースパックの作成"><a href="#⛏️-リソースパックの作成" class="headerlink" title="⛏️ リソースパックの作成"></a>⛏️ リソースパックの作成</h4><p>以下の3つのファイルを準備します。</p>
+<ol>
+<li><p>日本語TrueType フォント<br>私はM+ の丸ゴシック体<code>rounded-mplus-1c-bold.ttf</code> を準備しました。以下のフォルダに格納します。<br><code>%APPDATA%\.minecraft\resourcepacks\rounded-mplus-1c-bold\assets\minecraft\font\</code></p>
+</li>
+<li><p>default.json</p>
+<figure class="highlight json"><figcaption><span>%APPDATA%\.minecraft\resourcepacks\rounded-mplus-1c-bold\assets\minecraft\font\default.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;providers&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ttf&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;file&quot;</span><span class="punctuation">:</span> <span class="string">&quot;minecraft:rounded-mplus-1c-bold.ttf&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;shift&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">-0.5</span><span class="punctuation">,</span> <span class="number">0.5</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;size&quot;</span><span class="punctuation">:</span> <span class="number">12.0</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;oversample&quot;</span><span class="punctuation">:</span> <span class="number">8.0</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pack.mcmeta</p>
+<figure class="highlight json"><figcaption><span>%APPDATA%\.minecraft\resourcepacks\rounded-mplus-1c-bold\pack.mcmeta</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;pack&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Rounded M+ 1c bold&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;pack_format&quot;</span><span class="punctuation">:</span> <span class="number">7</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="⛏️-言語設定の変更"><a href="#⛏️-言語設定の変更" class="headerlink" title="⛏️ 言語設定の変更"></a>⛏️ 言語設定の変更</h4><ul>
+<li>[設定…]-[言語設定…]で[Unicode フォントを強制する]をオフにします。</li>
+</ul>
+<h4 id="⛏️-リソースパックの有効化"><a href="#⛏️-リソースパックの有効化" class="headerlink" title="⛏️ リソースパックの有効化"></a>⛏️ リソースパックの有効化</h4><ul>
+<li>[設定…]-[リソースパック…]で[rounded-mplus-1c-bold]を有効にします。</li>
+</ul>
+<h3 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h3><h4 id="⛏️-シェーダーなし"><a href="#⛏️-シェーダーなし" class="headerlink" title="⛏️ シェーダーなし"></a>⛏️ シェーダーなし</h4><p><img src="/images/mc_without_shader.png" alt="minecraft without shader"></p>
+<h4 id="⛏️-シェーダーあり"><a href="#⛏️-シェーダーあり" class="headerlink" title="⛏️ シェーダーあり"></a>⛏️ シェーダーあり</h4><p><img src="/images/mc_with_shader.png" alt="minecraft with shader"></p>
+<h4 id="⛏️-シェーダー選択"><a href="#⛏️-シェーダー選択" class="headerlink" title="⛏️ シェーダー選択"></a>⛏️ シェーダー選択</h4><p><img src="/images/mc_shaders.png" alt="minecraft shaders"></p>
+<h3 id="シェーダー比較"><a href="#シェーダー比較" class="headerlink" title="シェーダー比較"></a>シェーダー比較</h3><h4 id="⛏️-Sildur’s-Vibrant-Shaders"><a href="#⛏️-Sildur’s-Vibrant-Shaders" class="headerlink" title="⛏️ Sildur’s Vibrant Shaders"></a>⛏️ Sildur’s Vibrant Shaders</h4><p><img src="/images/mc_shader_svs.png" alt="minecraft shaders"></p>
+<h4 id="⛏️-Complementary-Shaders"><a href="#⛏️-Complementary-Shaders" class="headerlink" title="⛏️ Complementary Shaders"></a>⛏️ Complementary Shaders</h4><p><img src="/images/mc_shader_cs.png" alt="minecraft shaders"></p>
+<h4 id="⛏️-BSL-Shaders"><a href="#⛏️-BSL-Shaders" class="headerlink" title="⛏️ BSL Shaders"></a>⛏️ BSL Shaders</h4><p><img src="/images/mc_shader_bsl.png" alt="minecraft shaders"></p>
+<h4 id="⛏️-Sildur’s-Enhanced-Default"><a href="#⛏️-Sildur’s-Enhanced-Default" class="headerlink" title="⛏️ Sildur’s Enhanced Default"></a>⛏️ Sildur’s Enhanced Default</h4><p><img src="/images/mc_shader_ed.png" alt="minecraft shaders"></p>
+<h4 id="⛏️-SEUS-Renewed"><a href="#⛏️-SEUS-Renewed" class="headerlink" title="⛏️ SEUS Renewed"></a>⛏️ SEUS Renewed</h4><p><img src="/images/mc_shader_sr.png" alt="minecraft shaders"></p>
+	  
+	</div>
+
+	<!-- related posts -->
+	<section id="related_posts">
+	<h2 class="title">関連記事</h2>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2021/09/25/Electron-Minecraft-Mods-Manager/" title="Electron Minecraft Mod Manager" rel="bookmark">Electron Minecraft Mod Manager</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2021/10/24/Minecraft-Java-Edition-on-Raspberry-Pi-4B-Ubuntu-21-10/" title="Minecraft Java Edition on Raspberry Pi 4B / Ubuntu 21.10" rel="bookmark">Minecraft Java Edition on Raspberry Pi 4B / Ubuntu 21.10</a></h3></div></li></ul>
+	</section>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2021/09/17/Decode-Encode-URI/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2021/04/24/Fedora-34-Beta/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2021-08-30 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/minecraft/">minecraft<span>3</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'ktkr3d';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2022 ktkr3d
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+</body>
+</html>
