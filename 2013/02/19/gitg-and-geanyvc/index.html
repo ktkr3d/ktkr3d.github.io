@@ -175,7 +175,7 @@ Git クライアント一覧https://git.wiki.kernel.org/index.php/InterfacesFron
 </li>
 </ul>
 <h3 id="gitg"><a href="#gitg" class="headerlink" title="gitg"></a>gitg</h3><p>プッシュもできて使いやすそうです。日本語のpo を公開されている方がいらっしゃいましたので、利用させていただきました。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install gitg</span><br><span class="line">$ wget https://raw.github.com/miyucy/gitg-ja/master/ja.po</span><br><span class="line">$ sed -e <span class="string">&quot;s/, fuzzy//&quot;</span> ja.po | grep -v <span class="string">&quot;^#$&quot;</span> &gt; ja.po.cf</span><br><span class="line">$ msgfmt -o gitg.mo ja.po.cf</span><br><span class="line">$ sudo <span class="built_in">cp</span> gitg.mo /usr/share/locale/ja/LC_MESSAGES/</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install gitg</span><br><span class="line">$ wget https://raw.github.com/miyucy/gitg-ja/master/ja.po</span><br><span class="line">$ sed -e <span class="string">&quot;s/, fuzzy//&quot;</span> ja.po | grep -v <span class="string">&quot;^#$&quot;</span> &gt; ja.po.cf</span><br><span class="line">$ msgfmt -o gitg.mo ja.po.cf</span><br><span class="line">$ sudo <span class="built_in">cp</span> gitg.mo /usr/share/locale/ja/LC_MESSAGES/</span><br></pre></td></tr></table></figure>
 
 <p><a target="_blank" rel="noopener" href="http://sourceforge.jp/projects/freshmeat_gitg/howto/usage">http://sourceforge.jp/projects/freshmeat_gitg/howto/usage</a></p>
 <ul>
@@ -185,11 +185,11 @@ Git クライアント一覧https://git.wiki.kernel.org/index.php/InterfacesFron
 </li>
 </ul>
 <p>ただし、オーバーレイスクロールバーが有効になっていると、各ペインの背景色が黒くなってしまうようです。オーバーレイスクロールバーを無効にしておきます。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="built_in">export</span> LIBOVERLAY_SCROLLBAR=0 &gt;&gt; ~/.xprofile</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="built_in">export</span> LIBOVERLAY_SCROLLBAR=0 &gt;&gt; ~/.xprofile</span><br></pre></td></tr></table></figure>
 
 <p>&#x2F;usr&#x2F;share&#x2F;gitg&#x2F;ui&#x2F;gitg-window.ui をカスタマイズすれば対処できるのかもしれませんが、よくわかりませんでした。</p>
 <h3 id="GeanyVC"><a href="#GeanyVC" class="headerlink" title="GeanyVC"></a>GeanyVC</h3><p>私はテキストエディタにGeany を利用しているので、コミットならGeanyVC プラグインが利用できます。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install geany-plugin-vc</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install geany-plugin-vc</span><br></pre></td></tr></table></figure>
 
 <p>インストールしたら、Geany の[ツール]-[プラグインマネージャ]でGeanyVC プラグインを有効にした後で、[ツール]-[VC]メニューから操作します。</p>
 <h3 id="RabbitVCS"><a href="#RabbitVCS" class="headerlink" title="RabbitVCS"></a>RabbitVCS</h3><p>Ubuntu 13.04 のリポジトリにはパッケージがなく、12.10 のパッケージもNautilus のバージョンが新しいため(?)にうまく動きませんでした。</p>

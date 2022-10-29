@@ -167,7 +167,7 @@
 	  <p><img src="/images/gnome_shell_catalyst_12.1.png" alt="gnome shell catalyst 12.1 fglrx 8.930 ubuntu 11.10"></p>
 <p>AMD Catalyst™ Proprietary Display Driver - Linux x86 &amp; Linux x86_64 の12.1 (fglrx 8.930)がリリースされたのでUbuntu 11.10 x86_64 の環境にインストールしてみた。GNOME Shell での画面のちらつきが無くなり、これでUnity とはサヨナラだ。</p>
 <p>既にfglrx やfglrx-updates がインストールされていたらアンインストールしておいて、</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://www2.ati.com/drivers/linux/amd-driver-installer-12-1-x86.x86_64.run</span><br><span class="line">$ <span class="built_in">chmod</span> 755 amd-driver-installer-12-1-x86.x86_64.run</span><br><span class="line">$ ./amd-driver-installer-12-1-x86.x86_64.run --buildpkg Ubuntu/oneiric</span><br><span class="line">$ sudo dpkg -i fglrx_8.930-0ubuntu1_amd64.deb fglrx-amdcccle_8.930-0ubuntu1_amd64.deb fglrx-dev_8.930-0ubuntu1_amd64.deb</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ wget http://www2.ati.com/drivers/linux/amd-driver-installer-12-1-x86.x86_64.run</span><br><span class="line">$ <span class="built_in">chmod</span> 755 amd-driver-installer-12-1-x86.x86_64.run</span><br><span class="line">$ ./amd-driver-installer-12-1-x86.x86_64.run --buildpkg Ubuntu/oneiric</span><br><span class="line">$ sudo dpkg -i fglrx_8.930-0ubuntu1_amd64.deb fglrx-amdcccle_8.930-0ubuntu1_amd64.deb fglrx-dev_8.930-0ubuntu1_amd64.deb</span><br></pre></td></tr></table></figure>
 
 <p>GNOME Shell に切り替えてAuto Hide Top Panel 拡張を入れれば、トップパネルを隠せる。</p>
 	  

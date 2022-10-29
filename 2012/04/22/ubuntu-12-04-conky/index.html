@@ -166,7 +166,7 @@
 
 	  <p><img src="/images/ubuntu_12.04_conky.png" alt="ubuntu 12.04 conky"></p>
 <p>Ubuntu 12.04 のConky 1.8.1 の環境で、自前の.conkyrc の文字が表示されなくなったので、暫定対策してみた。試してみたところ、Droid Sans が認識されなくなっているみたいなので、省略してみた。fonts-droid はインストール済みでフォント名も変わってないと思うのだけど。</p>
-<figure class="highlight text"><figcaption><span>~/.conkyrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#    xftfont Droid Sans:size=10</span><br><span class="line">    xftfont :size=10</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>~/.conkyrc</span></figcaption><table><tr><td class="code"><pre><span class="line">#    xftfont Droid Sans:size=10</span><br><span class="line">    xftfont :size=10</span><br></pre></td></tr></table></figure>
 
 <p>Ubuntu 11.10 + Conky 1.8.1 では正常に表示されるし、DejaVu Sans はうまく処理されているようなので、Conky 自体の問題ではないかもしれない。ConkyForecast やパブリックIP アドレス取得スクリプト等の通信処理も若干不安定みたいだけど、Ubuntu 12.04 リリース時には安定していたらいいな。</p>
 	  

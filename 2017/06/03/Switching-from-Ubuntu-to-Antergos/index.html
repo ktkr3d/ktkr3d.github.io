@@ -187,15 +187,15 @@
 <h3 id="かな漢字変換の設定"><a href="#かな漢字変換の設定" class="headerlink" title="かな漢字変換の設定"></a>かな漢字変換の設定</h3><ul>
 <li>fcitx-mozc</li>
 <li>fcitx-configtool</li>
-<li>設定<figure class="highlight bash"><figcaption><span>~/.xprofile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=@im=fcitx</span><br><span class="line"><span class="built_in">export</span> DefaultIMModule=fcitx</span><br></pre></td></tr></table></figure></li>
+<li>設定<figure class="highlight bash"><figcaption><span>~/.xprofile</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=@im=fcitx</span><br><span class="line"><span class="built_in">export</span> DefaultIMModule=fcitx</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="ディスプレイマネージャの設定"><a href="#ディスプレイマネージャの設定" class="headerlink" title="ディスプレイマネージャの設定"></a>ディスプレイマネージャの設定</h3><p>デフォルトのLightDMのwebkit-greeterのテーマは日本語が考慮されていないので、LightDMの言語をenに変えるか、時刻の文字のサイズを変更しないといけません。特にこだわりがなければGDMに乗り換えてしまってよいと思います。</p>
 <ul>
 <li>gdm</li>
-<li>切り替え<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl <span class="built_in">disable</span> lightdm &amp;&amp; sudo systemctl <span class="built_in">enable</span> gdm</span><br></pre></td></tr></table></figure></li>
+<li>切り替え<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo systemctl <span class="built_in">disable</span> lightdm &amp;&amp; sudo systemctl <span class="built_in">enable</span> gdm</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="ホームディレクトリ下のディレクトリの英語化"><a href="#ホームディレクトリ下のディレクトリの英語化" class="headerlink" title="ホームディレクトリ下のディレクトリの英語化"></a>ホームディレクトリ下のディレクトリの英語化</h3><p>英語名の方が端末で使いやすいので変更します。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
 
 <h3 id="時刻の設定"><a href="#時刻の設定" class="headerlink" title="時刻の設定"></a>時刻の設定</h3><p>日付と時刻の設定(<code>gnome-control-center datetime</code>)で自動タイムゾーン設定をオンにします。</p>
 <h3 id="GTKテーマ、GNOME-Shellテーマ、アイコンの設定"><a href="#GTKテーマ、GNOME-Shellテーマ、アイコンの設定" class="headerlink" title="GTKテーマ、GNOME Shellテーマ、アイコンの設定"></a>GTKテーマ、GNOME Shellテーマ、アイコンの設定</h3><p>日本語に関してではないですが、<code>gnome-tweak-tool</code>でカスタマイズします。Numixも悪くないです。</p>

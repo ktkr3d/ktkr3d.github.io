@@ -171,7 +171,7 @@ Android 4.1 Jelly Bean のソースが公開されたのでビルドしてみた
 <ol>
 <li>前提パッケージをインストール</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev libc6-dev lib32ncurses5-dev ia32-libs x11proto-core-dev libx11-dev lib32readline-gplv2-dev lib32z1-dev</span><br><span class="line">$ sudo apt-get install gcc-multilib g++-multilib libc6-i386 libc6-dev-i386</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev libc6-dev lib32ncurses5-dev ia32-libs x11proto-core-dev libx11-dev lib32readline-gplv2-dev lib32z1-dev</span><br><span class="line">$ sudo apt-get install gcc-multilib g++-multilib libc6-i386 libc6-dev-i386</span><br></pre></td></tr></table></figure>
 
 
 <ol start="2">
@@ -180,23 +180,23 @@ Android 4.1 Jelly Bean のソースが公開されたのでビルドしてみた
 <li><p>repo をインストール</p>
 </li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> ~/bin</span><br><span class="line">$ PATH=~/bin:<span class="variable">$PATH</span></span><br><span class="line">$ curl http://android.git.kernel.org/repo &gt; ~/bin/repo</span><br><span class="line">$ <span class="built_in">chmod</span> a+x ~/bin/repo</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> ~/bin</span><br><span class="line">$ PATH=~/bin:<span class="variable">$PATH</span></span><br><span class="line">$ curl http://android.git.kernel.org/repo &gt; ~/bin/repo</span><br><span class="line">$ <span class="built_in">chmod</span> a+x ~/bin/repo</span><br></pre></td></tr></table></figure>
 
 
 <ol start="4">
 <li>ソースを取得(Android 4.1(Jelly Bean) の場合)</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> jellybean-x86</span><br><span class="line">$ <span class="built_in">cd</span> jellybean-x86</span><br><span class="line">$ repo init -u https://android.googlesource.com/platform/manifest -b android-4.1.1_r1</span><br><span class="line">$ repo <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> jellybean-x86</span><br><span class="line">$ <span class="built_in">cd</span> jellybean-x86</span><br><span class="line">$ repo init -u https://android.googlesource.com/platform/manifest -b android-4.1.1_r1</span><br><span class="line">$ repo <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
 
 
 <ol start="5">
 <li>ビルド</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch generic_x86-eng</span><br><span class="line">$ make -j8</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch generic_x86-eng</span><br><span class="line">$ make -j8</span><br></pre></td></tr></table></figure>
 
 <p>.&#x2F;out&#x2F;target&#x2F;product&#x2F;generic_x86&#x2F; にバイナリが作成されるので、GRUB から起動してあげればOK!、と思うけど、時間が掛かりそうなので、明日の朝確認しようzzz。</p>
 <p>generic_x86-eng で失敗したので、lunch の選択肢に従って、full_x86-eng でやり直してみよう。make の実行は、C&#x2F;C++ の部分は多重度を8 にして、Java の部分は多重度を1 にできるとCPU とメモリが有効活用できて効率的なんだけど、できないのかな。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch vbox_x86-eng</span><br><span class="line">$ make android_disk_vdi -j1</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch vbox_x86-eng</span><br><span class="line">$ make android_disk_vdi -j1</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
 
 <p>VirtualBox イメージ(android_data_disk.vdi, android_system_disk.vdi)の生成と起動はできた。</p>
 	  

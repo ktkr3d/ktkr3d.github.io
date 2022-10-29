@@ -7,7 +7,7 @@
   <meta name="author" content="ktkr3d">
   
   <meta name="description" content="SimpleScreenRecorder とPeerCastStation を使って、Linux デスクトップのスクリーンキャストをPeercast ネットワークに配信してみました。
-123SimpleScreenRecorder (Linux)    -&amp;gt; PeerCastStation (Linux)        -&amp;gt; Internet
+SimpleScreenRecorder (Linux)    -&amp;gt; PeerCastStation (Linux)        -&amp;gt; Internet
 
 http://www.maartenbaert.be/simplescreenrecorder/http://www.pecastation.org/">
   
@@ -168,16 +168,16 @@ http://www.maartenbaert.be/simplescreenrecorder/http://www.pecastation.org/">
 	  		
 
 	  <p>SimpleScreenRecorder とPeerCastStation を使って、Linux デスクトップのスクリーンキャストをPeercast ネットワークに配信してみました。</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SimpleScreenRecorder (Linux)</span><br><span class="line">    -&gt; PeerCastStation (Linux)</span><br><span class="line">        -&gt; Internet</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">SimpleScreenRecorder (Linux)</span><br><span class="line">    -&gt; PeerCastStation (Linux)</span><br><span class="line">        -&gt; Internet</span><br></pre></td></tr></table></figure>
 
 <p><a target="_blank" rel="noopener" href="http://www.maartenbaert.be/simplescreenrecorder/">http://www.maartenbaert.be/simplescreenrecorder/</a><br><a target="_blank" rel="noopener" href="http://www.pecastation.org/">http://www.pecastation.org/</a></p>
 <span id="more"></span>
 
 <h4 id="PeerCastStation-の起動"><a href="#PeerCastStation-の起動" class="headerlink" title="PeerCastStation の起動"></a>PeerCastStation の起動</h4><p><a target="_blank" rel="noopener" href="http://www.pecastation.org/">http://www.pecastation.org/</a> からPeerCastStation 開発版（1.7.9.1）のアーカイブをダウンロードして、展開します。以下のコマンドで起動します。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mono PeerCastStation.exe</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mono PeerCastStation.exe</span><br></pre></td></tr></table></figure>
 
 <p>mono をサービスとして起動するには、</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mono-service -d:/PATH_TO_PEERCASTSTATION -m:PeerCastStaion /PATH_TO_PEERCASTSTATION/PeerCastStation.exe</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mono-service -d:/PATH_TO_PEERCASTSTATION -m:PeerCastStaion /PATH_TO_PEERCASTSTATION/PeerCastStation.exe</span><br></pre></td></tr></table></figure>
 
 <h4 id="PeerCastStation-の配信設定"><a href="#PeerCastStation-の配信設定" class="headerlink" title="PeerCastStation の配信設定"></a>PeerCastStation の配信設定</h4><p>ブラウザで<code>http://localhost:7144</code>を開きます。開けない場合は、<code>lsof -i -P</code> で<code>mono</code> プロセスがリッスンしているポート番号を指定します。</p>
 <p>リレー画面で「配信」ボタンを押して、以下を指定します。</p>
@@ -210,7 +210,7 @@ http://www.maartenbaert.be/simplescreenrecorder/http://www.pecastation.org/">
 <td align="left">（任意のチェンネル名）</td>
 </tr>
 </tbody></table>
-<h4 id="SimpleScreenRecorder-の起動"><a href="#SimpleScreenRecorder-の起動" class="headerlink" title="SimpleScreenRecorder の起動"></a>SimpleScreenRecorder の起動</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install simplescreenrecorder</span><br><span class="line">$ simplescreenrecorder</span><br></pre></td></tr></table></figure>
+<h4 id="SimpleScreenRecorder-の起動"><a href="#SimpleScreenRecorder-の起動" class="headerlink" title="SimpleScreenRecorder の起動"></a>SimpleScreenRecorder の起動</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install simplescreenrecorder</span><br><span class="line">$ simplescreenrecorder</span><br></pre></td></tr></table></figure>
 
 <h4 id="SimpleScreenRecorder-でエンコード開始"><a href="#SimpleScreenRecorder-でエンコード開始" class="headerlink" title="SimpleScreenRecorder でエンコード開始"></a>SimpleScreenRecorder でエンコード開始</h4><p><a href="/images/02_SSR.png"><img src="/images/02_SSR.png" alt="02_SSR.png" title="02_SSR.png"></a></p>
 <p><a href="/images/03_SSR.png"><img src="/images/03_SSR.png" alt="03_SSR.png" title="03_SSR.png"></a></p>

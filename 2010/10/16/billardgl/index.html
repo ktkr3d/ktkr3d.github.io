@@ -165,7 +165,7 @@
 	  		
 
 	  <p><img src="/images/biilardgl.png" alt="billardgl"><br><a target="_blank" rel="noopener" href="http://www.billardgl.de/">http://www.billardgl.de/</a><br>3D のビリヤードゲーム<br>F1〜F8 キーで画面がかっこよくくるくる回転する<br>Ubuntu のタブレットPC デモ動画に載っていたのでリポジトリにあるのかと思いきや無く、ホームページのdeb パッケージのリンクも切れていて、alien もdeb パッケージを生成できなかったのでソースからビルドしてみた<br>src&#x2F;bmp.cpp の修正</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 
 <p>リンクするライブラリ<br>Xxf86vm; GL; GLU; glut;<br>リソースファイルのコピー<br>src&#x2F;Texturen → &#x2F;usr&#x2F;share&#x2F;BillardGL&#x2F;Texturen<br>src&#x2F;lang → &#x2F;usr&#x2F;share&#x2F;BillardGL&#x2F;lang<br>追記: Ubuntu でのパッケージ名はbillard-gl だった<br>追記2: openSUSE にあるfoobillard も同様によくできている</p>

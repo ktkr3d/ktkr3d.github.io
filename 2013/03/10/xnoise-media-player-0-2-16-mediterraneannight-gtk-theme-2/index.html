@@ -166,7 +166,7 @@
 
 	  <p><img src="/images/xnoise.png" alt="xnoise media player 0.2.16"></p>
 <h3 id="xnoise"><a href="#xnoise" class="headerlink" title="xnoise"></a>xnoise</h3><p><a target="_blank" rel="noopener" href="http://www.xnoise-media-player.com/">http://www.xnoise-media-player.com/</a><br>xnoise 0.2.16 がリリースされたのでUbuntu 13.04 x86_64 + GNOME Shell 3.7.90 の環境で試してみました。GStreamer を利用した音楽、ビデオ、インターネットストリームの再生が可能で、軽快に動作します。シンプルで整ったデザインになっています。また、コンテキストメニューに登録されている機能(ID3 タグ編集、親フォルダ表示)が便利です。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:shkn/xnoise</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install xnoise</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:shkn/xnoise</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install xnoise</span><br></pre></td></tr></table></figure>
 
 <p><strong>主な機能:</strong></p>
 <ul>
@@ -206,7 +206,7 @@
 <li><p>日本語化用のja.po を作って(作りかけて)みました。<br><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/xnoise-ja">https://github.com/ktkr3d/xnoise-ja</a></p>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ msgfmt -o ja.mo ja.po</span><br><span class="line">$ sudo <span class="built_in">cp</span> ja.mo /usr/share/locale/ja/LC_MESSAGES/xnoise.mo</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ msgfmt -o ja.mo ja.po</span><br><span class="line">$ sudo <span class="built_in">cp</span> ja.mo /usr/share/locale/ja/LC_MESSAGES/xnoise.mo</span><br></pre></td></tr></table></figure>
 
 
 
@@ -214,7 +214,7 @@
 
 
 <h3 id="MediterraneanNight"><a href="#MediterraneanNight" class="headerlink" title="MediterraneanNight"></a>MediterraneanNight</h3><p><a target="_blank" rel="noopener" href="http://gnome-look.org/content/show.php/?content=156782">http://gnome-look.org/content/show.php/?content=156782</a><br>今までGTK+ のテーマにGNOME Shell 標準のAdwaita を利用していましたが、選択箇所の文字が背景色と同じになって読めなくて困っていました。そこで、<a target="_blank" rel="noopener" href="http://gnome-look.org/">http://gnome-look.org/</a> でGTK+ テーマを探したところ、MediterraneanNight がよさそうでしたので、あわせて利用してみました。ダウンロードしたアーカイブを<del>&#x2F;.themes&#x2F; と</del>&#x2F;.local&#x2F;share&#x2F;themes&#x2F; に展開して、gnome-tweak-tool の[テーマ]-[GTK+ テーマ]からテーマを選択して、適用します。<br>なお、このテーマは、GTK3 にunico-engine を、GTK2 にgtk2-engines-murrine とgtk2-engines-pixbuf を使用しますが、Ubuntu ではgtk2-engines-pixbuf がインストールされていませんでしたので、追加しておきます。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install gtk2-engines-pixbuf</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install gtk2-engines-pixbuf</span><br></pre></td></tr></table></figure>
 	  
 	</div>
 

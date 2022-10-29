@@ -164,6 +164,40 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-11-15 </div>
+			<div class="article-title"><a href="/2011/11/15/android-4-0/" >Android 4.0 をビルドしてみよう（その1）</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><a target="_blank" rel="noopener" href="http://source.android.com/source/download.html">http://source.android.com/source/download.html</a><br>Android 4.0 のソースコード（android-4.0.1_r1）が公開されたので、Ubuntu 11.10 64bit の環境でビルドしてみよう。手順はAndroid 2.3 の時と同じみたい。今回から（?）実験的に32bit 環境での手順も記載されている。<br>はやくAndroid-x86 にも取り込まれないかな。</p>
+<ol>
+<li><p>環境の構築<br><a target="_blank" rel="noopener" href="http://source.android.com/source/initializing.html">http://source.android.com/source/initializing.html</a><br>前提パッケージlib32readline5-dev が見つからないのは、とりあえず無視してみる。</p>
+</li>
+<li><p>ソースコードのダウンロード<br><a target="_blank" rel="noopener" href="http://source.android.com/source/downloading.html">http://source.android.com/source/downloading.html</a><br>今回もrepo を使ったダウンロードが遅い。</p>
+</li>
+<li><p>ソースコードのビルド<br><a target="_blank" rel="noopener" href="http://source.android.com/source/building.html">http://source.android.com/source/building.html</a></p>
+</li>
+</ol>
+<p>source.android.com に繋がりにくい時があるので、手順はhtml で保存しておいた方がよさそう。<br>ダウンロードが終わらないので、今日（今朝）はここまで。</p>
+<p><strong>update:</strong><br>エミュレータでAndroid 4.0 Ice Cream Sandwich を動かしてみた。<br><img src="/images/android_4_ics.png" alt="android 4 ice cream sandwich"></p>
+
+	
+	</div>
+  <a type="button" href="/2011/11/15/android-4-0/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-11-06 </div>
 			<div class="article-title"><a href="/2011/11/06/linux-mint-12/" >Linux Mint 12 を試してみた</a></div>						
 		</h3>
@@ -361,7 +395,7 @@
 		<p><img src="/images/proton_android_irrlicht_quake_map.png" alt="proton android irrlicht quake map"></p>
 <p><a target="_blank" rel="noopener" href="http://www.protonsdk.com/">http://www.protonsdk.com/</a></p>
 <p>Proton SDK を使って、Android NDK で実装されたIrrlicht のQuake マップデモをAndroid 端末実機で実行してみた。スクリーン上に「方向キー」、「ポインティング用のパッド」、「メニュー画面へ戻るボタン」などのGUI の他、サウンドも実装されている。<br>デモ用のRT3DApp.apk が提供されているけれど、自分でビルドする場合はAndroid SDK, Android NDK の環境を構築しておいて、以下のコマンドを投入するとAndroid 端末(android-8: Android 2.2)への転送までやってくれるみたい。Android 端末側では、「設定」-「アプリケーション」-「USBデバッグ」を許可しておく。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ svn checkout svn://rtsoft.com/rtsvn/proton</span><br><span class="line">$ <span class="built_in">cd</span> proton</span><br><span class="line">$ <span class="built_in">mv</span> ./shared/GUI/rtfontfileformat.h ./shared/GUI/RTFontFileFormat.h</span><br><span class="line">$ <span class="built_in">cp</span> -r ./shared/util ./shared/Util</span><br><span class="line">$ <span class="built_in">cd</span> ./RT3DApp/android</span><br><span class="line">$ ndk-build</span><br><span class="line">$ ant install</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ svn checkout svn://rtsoft.com/rtsvn/proton</span><br><span class="line">$ <span class="built_in">cd</span> proton</span><br><span class="line">$ <span class="built_in">mv</span> ./shared/GUI/rtfontfileformat.h ./shared/GUI/RTFontFileFormat.h</span><br><span class="line">$ <span class="built_in">cp</span> -r ./shared/util ./shared/Util</span><br><span class="line">$ <span class="built_in">cd</span> ./RT3DApp/android</span><br><span class="line">$ ndk-build</span><br><span class="line">$ ant install</span><br></pre></td></tr></table></figure>
 
 <p>.&#x2F;RT3DApp&#x2F;android&#x2F;local.properties の中のsdk.dir にはAndroid SDK のパスを指定する。アプリケーション本体のソースコードは、.&#x2F;RT3DApp&#x2F;source&#x2F; で、アウトプットは.&#x2F;RT3DApp&#x2F;android&#x2F;bin&#x2F;RT3DApp-debug.apk に生成された。</p>
 <p>ant install の前に.&#x2F;RT3DApp&#x2F;media&#x2F;update_media.bat と.&#x2F;RT3DApp&#x2F;android&#x2F;build.bat 相当を実行して、.&#x2F;RT3DApp&#x2F;android&#x2F;assets&#x2F; にリソースを展開しておく必要があるみたい。<br>ant install の代わりにant debug でパッケージを生成して止まるみたい。</p>
@@ -398,41 +432,6 @@
 	
 	</div>
   <a type="button" href="/2011/06/27/proun-3/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-06-25 </div>
-			<div class="article-title"><a href="/2011/06/25/proun-2/" >Proun で遊んでみた2</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/proun_ss2.png" alt="proun"></p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="http://www.proun-game.com/">http://www.proun-game.com/</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://blog.oogst3d.net/">http://blog.oogst3d.net/</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://www.ronimo-games.com/forum/viewforum.php?f=7">http://www.ronimo-games.com/forum/viewforum.php?f=7</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://www.proun-game.com/UserTracks.html">http://www.proun-game.com/UserTracks.html</a></p>
-</li>
-</ul>
-<p>Proun が2011.6.24 にリリースされたので遊んでみた。<br>抽象的なコースが綺麗でBGM も軽快なのが楽しい。<br>ゲームを進めていくとスピードがアップ(Fast -&gt; Sonic -&gt; Supersonic -&gt; Speed of light)していってかなり難しくなる。<br>ネットワーク上でのランキングやユーザトラック（コース）の拡張ができるようなので、長く遊べそう。<br>正式版になって、フリーダウンロードとPay what you want($2, $5, $10, $20, any) から選択できるようになったので、PayPal で購入してみた。</p>
-
-	
-	</div>
-  <a type="button" href="/2011/06/25/proun-2/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -486,6 +485,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
+      </li>
+    
+      <li>
         <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
       </li>
     
@@ -521,10 +524,6 @@
         <a href="/2022/06/19/Tauri/" ><i class="fa fa-file-o"></i>Tauri</a>
       </li>
     
-      <li>
-        <a href="/2022/04/06/CHUWI-Hi-10-Go/" ><i class="fa fa-file-o"></i>CHUWI Hi 10 Go</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -532,7 +531,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
 </div>
 
 		

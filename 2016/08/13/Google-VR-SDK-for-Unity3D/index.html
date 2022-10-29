@@ -219,11 +219,11 @@
 <h2 id="必要なファイルのダウンロード"><a href="#必要なファイルのダウンロード" class="headerlink" title="必要なファイルのダウンロード"></a>必要なファイルのダウンロード</h2><h3 id="Android-SDK-コマンドライン-ツール"><a href="#Android-SDK-コマンドライン-ツール" class="headerlink" title="Android SDK コマンドライン ツール"></a>Android SDK コマンドライン ツール</h3><ul>
 <li>以下のURL をChrome で開く。Firefox だとダウンロードボタンが表示されない。<br><a target="_blank" rel="noopener" href="https://developer.android.com/studio/index.html#downloads">https://developer.android.com/studio/index.html#downloads</a><br>から<code>android-sdk_r24.4.1-linux.tgz</code> を選択</li>
 <li><code>/tools/android-sdk-linux/</code> に展開</li>
-<li>環境変数の設定<figure class="highlight bash"><figcaption><span>~/.bashrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PATH=/tools/android-sdk-linux/tools:<span class="variable">$PATH</span></span><br><span class="line">PATH=/tools/android-sdk-linux/platform-tools:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ . ~/.bashrc</span><br></pre></td></tr></table></figure></li>
-<li>32 ビット用のライブラリの追加  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install lib32z1 lib32ncurses5  lib32stdc++6</span><br><span class="line">$ sudo apt-get install libbz2-1.0:i386</span><br></pre></td></tr></table></figure></li>
+<li>環境変数の設定<figure class="highlight bash"><figcaption><span>~/.bashrc</span></figcaption><table><tr><td class="code"><pre><span class="line">PATH=/tools/android-sdk-linux/tools:<span class="variable">$PATH</span></span><br><span class="line">PATH=/tools/android-sdk-linux/platform-tools:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ . ~/.bashrc</span><br></pre></td></tr></table></figure></li>
+<li>32 ビット用のライブラリの追加  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install lib32z1 lib32ncurses5  lib32stdc++6</span><br><span class="line">$ sudo apt-get install libbz2-1.0:i386</span><br></pre></td></tr></table></figure></li>
 <li>API レベルを確認<br><a target="_blank" rel="noopener" href="http://source.android.com/source/build-numbers.html">http://source.android.com/source/build-numbers.html</a><br>私のスマートフォンはAndroid 4.4 Kitkat なのでAPI レベルは19 です。</li>
-<li>Android SDK のアップデートとプラットフォームのインストール<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ android update sdk</span><br></pre></td></tr></table></figure>
+<li>Android SDK のアップデートとプラットフォームのインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ android update sdk</span><br></pre></td></tr></table></figure>
 コンパイル時にAPI 23 のSDK Platform を要求されたので追加しました。</li>
 </ul>
 <table>
@@ -269,7 +269,7 @@
 <h3 id="Unity3D"><a href="#Unity3D" class="headerlink" title="Unity3D"></a>Unity3D</h3><ul>
 <li><a href="http://ktkr3d.github.io/2016/08/11/Unity3D-5-4-0p1/">http://ktkr3d.github.io/2016/08/11/Unity3D-5-4-0p1/</a></li>
 </ul>
-<h3 id="Google-VR-SDK-for-Unity3D"><a href="#Google-VR-SDK-for-Unity3D" class="headerlink" title="Google VR SDK for Unity3D"></a>Google VR SDK for Unity3D</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/googlevr/gvr-unity-sdk.git</span><br></pre></td></tr></table></figure>
+<h3 id="Google-VR-SDK-for-Unity3D"><a href="#Google-VR-SDK-for-Unity3D" class="headerlink" title="Google VR SDK for Unity3D"></a>Google VR SDK for Unity3D</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/googlevr/gvr-unity-sdk.git</span><br></pre></td></tr></table></figure>
 
 <h2 id="デモのインポート"><a href="#デモのインポート" class="headerlink" title="デモのインポート"></a>デモのインポート</h2><ol>
 <li>Unity で3D プロジェクトを作成</li>

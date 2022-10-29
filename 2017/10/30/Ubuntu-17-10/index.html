@@ -170,9 +170,9 @@
 <ol>
 <li>ISO イメージのダウンロード<br> <a target="_blank" rel="noopener" href="https://www.ubuntu.com/desktop/1710">https://www.ubuntu.com/desktop/1710</a></li>
 <li>ISO をUSB メモリに書き込み、ブートしてインストール</li>
-<li>GNOME セッションのインストール<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install gnome-session</span><br></pre></td></tr></table></figure></li>
+<li>GNOME セッションのインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install gnome-session</span><br></pre></td></tr></table></figure></li>
 <li>ログアウトして、デスクトップ環境に’GNOME on Xorg’を選択してログイン</li>
-<li>ヘッドフォンジャックの検出に不具合がありそうなので、設定を追加<br> <a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/alsa-driver/+bug/1575078/comments/30">https://bugs.launchpad.net/ubuntu/+source/alsa-driver/+bug/1575078/comments/30</a><figure class="highlight ini"><figcaption><span>/etc/modprobe.d/alsa.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">options snd-hda-intel <span class="attr">single_cmd</span>=<span class="number">1</span> probe_mask=<span class="number">1</span> model=dell-headset-multi</span><br></pre></td></tr></table></figure></li>
+<li>ヘッドフォンジャックの検出に不具合がありそうなので、設定を追加<br> <a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/alsa-driver/+bug/1575078/comments/30">https://bugs.launchpad.net/ubuntu/+source/alsa-driver/+bug/1575078/comments/30</a><figure class="highlight ini"><figcaption><span>/etc/modprobe.d/alsa.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">options snd-hda-intel <span class="attr">single_cmd</span>=<span class="number">1</span> probe_mask=<span class="number">1</span> model=dell-headset-multi</span><br></pre></td></tr></table></figure></li>
 <li>後は普通に環境設定</li>
 </ol>
 <p>久しぶりにUbuntu をクリーンインストールしてみましたが、個別に外部リポジトリを追加しなくても、インストールできるアプリケーションが増えている気がします。</p>

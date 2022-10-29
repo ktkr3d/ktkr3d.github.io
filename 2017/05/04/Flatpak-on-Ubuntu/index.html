@@ -167,7 +167,7 @@
 	  <p><img src="/images/gnome-builder-flatpak.png" alt="GNOME Builder Flatpak"><br>Ubuntu 上のGNOME Builder でFlatpak アプリケーションを作成してみました。<br>予備知識もなくやっているので変なところがあるかもしれません。</p>
 <span id="more"></span>
 
-<h2 id="GNOME-Builder-のインストール"><a href="#GNOME-Builder-のインストール" class="headerlink" title="GNOME Builder のインストール"></a>GNOME Builder のインストール</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install gnome-builder</span><br></pre></td></tr></table></figure>
+<h2 id="GNOME-Builder-のインストール"><a href="#GNOME-Builder-のインストール" class="headerlink" title="GNOME Builder のインストール"></a>GNOME Builder のインストール</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install gnome-builder</span><br></pre></td></tr></table></figure>
 
 <h2 id="サンプルアプリケーションの作成"><a href="#サンプルアプリケーションの作成" class="headerlink" title="サンプルアプリケーションの作成"></a>サンプルアプリケーションの作成</h2><p>GNOME Builder のプロジェクトウィザードに従って、C アプリケーションのプロジェクトを作成してビルドします。</p>
 <h2 id="Flatpak-パッケージのエクスポート"><a href="#Flatpak-パッケージのエクスポート" class="headerlink" title="Flatpak パッケージのエクスポート"></a>Flatpak パッケージのエクスポート</h2><ol>
@@ -175,11 +175,11 @@
 <li>Flatpak &gt; Export as bundle を選択すると、以下が生成される。</li>
 </ol>
 <p><code>$HOME/.cache/gnome-builder/flatpak/staging/sample/flatpak:org.gnome.Platform-x86_64-3.22/org.gnome.Sample.flatpak</code></p>
-<h2 id="Flatpak-ランタイムのインストール"><a href="#Flatpak-ランタイムのインストール" class="headerlink" title="Flatpak ランタイムのインストール"></a>Flatpak ランタイムのインストール</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo</span><br><span class="line">$ flatpak install gnome org.gnome.Platform//3.22</span><br></pre></td></tr></table></figure>
+<h2 id="Flatpak-ランタイムのインストール"><a href="#Flatpak-ランタイムのインストール" class="headerlink" title="Flatpak ランタイムのインストール"></a>Flatpak ランタイムのインストール</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo</span><br><span class="line">$ flatpak install gnome org.gnome.Platform//3.22</span><br></pre></td></tr></table></figure>
 
-<h2 id="Flatpak-アプリのインストール"><a href="#Flatpak-アプリのインストール" class="headerlink" title="Flatpak アプリのインストール"></a>Flatpak アプリのインストール</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ flatpak install <span class="variable">$HOME</span>/.cache/gnome-builder/flatpak/staging/sample/flatpak:org.gnome.Platform-x86_64-3.22/org.gnome.Sample.flatpak</span><br></pre></td></tr></table></figure>
+<h2 id="Flatpak-アプリのインストール"><a href="#Flatpak-アプリのインストール" class="headerlink" title="Flatpak アプリのインストール"></a>Flatpak アプリのインストール</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ flatpak install <span class="variable">$HOME</span>/.cache/gnome-builder/flatpak/staging/sample/flatpak:org.gnome.Platform-x86_64-3.22/org.gnome.Sample.flatpak</span><br></pre></td></tr></table></figure>
 
-<h2 id="Flatpak-アプリの実行"><a href="#Flatpak-アプリの実行" class="headerlink" title="Flatpak アプリの実行"></a>Flatpak アプリの実行</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ flatpak run org.gnome.Sample.flatpak</span><br></pre></td></tr></table></figure>
+<h2 id="Flatpak-アプリの実行"><a href="#Flatpak-アプリの実行" class="headerlink" title="Flatpak アプリの実行"></a>Flatpak アプリの実行</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ flatpak run org.gnome.Sample.flatpak</span><br></pre></td></tr></table></figure>
 	  
 	</div>
 

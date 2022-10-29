@@ -195,7 +195,7 @@ KVM をlibvirt 経由でWeb インタフェースから操作できるWebVirtClo
 <li>基本的にUbuntu 用の手順でやっていきます。</li>
 <li>sudo su してやった方がいいと思います。一般ユーザでエラーになる箇所がありました。</li>
 <li>既にApache2 を導入済みの場合はnginx のインストール時に競合するので、あらかじめApache２ のポートを変える&#x2F;無効化する等の事前対処が必要かもしれません。</li>
-<li>ブラウザからコンソールにアクセスするためには以下を実行しておきます。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ufw allow 6080/tcp</span><br></pre></td></tr></table></figure></li>
+<li>ブラウザからコンソールにアクセスするためには以下を実行しておきます。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo ufw allow 6080/tcp</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="KVM-ホストの準備"><a href="#KVM-ホストの準備" class="headerlink" title="KVM ホストの準備"></a>KVM ホストの準備</h2><ul>
 <li>libvirt 環境をそのまま使えます。</li>

@@ -169,28 +169,28 @@
 <ol>
 <li>Android 4.0.3 のターゲット情報は以下のとおり。ID は10。</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ android list target</span><br><span class="line"><span class="built_in">id</span>: 10 or <span class="string">&quot;android-15&quot;</span></span><br><span class="line">     Name: Android 4.0.3</span><br><span class="line">     Type: Platform</span><br><span class="line">     API level: 15</span><br><span class="line">     Revision: 3</span><br><span class="line">     Skins: WXGA720, QVGA, WSVGA, WQVGA400, WQVGA432, HVGA, WVGA854, WXGA800, WVGA800 (default)</span><br><span class="line">     ABIs : armeabi-v7a, x86</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android list target</span><br><span class="line"><span class="built_in">id</span>: 10 or <span class="string">&quot;android-15&quot;</span></span><br><span class="line">     Name: Android 4.0.3</span><br><span class="line">     Type: Platform</span><br><span class="line">     API level: 15</span><br><span class="line">     Revision: 3</span><br><span class="line">     Skins: WXGA720, QVGA, WSVGA, WQVGA400, WQVGA432, HVGA, WVGA854, WXGA800, WVGA800 (default)</span><br><span class="line">     ABIs : armeabi-v7a, x86</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="2">
 <li>Application.mk でx86 を指定</li>
 </ol>
-<figure class="highlight text"><figcaption><span>Application.mk</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#APP_ABI := armeabi armeabi-v7a</span><br><span class="line">APP_ABI := armeabi-v7a x86</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>Application.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">#APP_ABI := armeabi armeabi-v7a</span><br><span class="line">APP_ABI := armeabi-v7a x86</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="3">
 <li>プロジェクトをアップデート</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ android update project --path . --target 10</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android update project --path . --target 10</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="4">
 <li>ビルド</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ndk-build clean</span><br><span class="line">$ ndk-build -j 4</span><br><span class="line">$ ant clean</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ndk-build clean</span><br><span class="line">$ ndk-build -j 4</span><br><span class="line">$ ant clean</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
 
 
 

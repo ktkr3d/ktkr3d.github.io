@@ -179,7 +179,7 @@
 <li><p>タッチスクリーンで画面左端から中央へのスワイプの挙動が変更された<br>三本指&#x2F;四本指で上にスワイプでウインドウ一覧</p>
 </li>
 <li><p>リモートWindowsからCode-Server にアクセスできない<br>以下を再実行する</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenport=8080 listenaddr=127.0.0.1 connectport=8080 connectaddress=192.168.11.2</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenport=8080 listenaddr=127.0.0.1 connectport=8080 connectaddress=192.168.11.2</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Mirakurun アップデート後にTuner が有効にならない<br><code>C:\Users\ユーザー名\.Mirakurun\tuners.yml</code>で対象のチューナに対して<code>isDisabled: false</code>を設定</p>
 </li>

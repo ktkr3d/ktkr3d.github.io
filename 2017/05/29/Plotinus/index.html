@@ -168,12 +168,12 @@
 <span id="more"></span>
 
 <h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><ul>
-<li>前提ライブラリ<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git cmake valac libgtk-3-dev</span><br></pre></td></tr></table></figure></li>
-<li>Plotinus<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/p-e-w/plotinus.git</span><br><span class="line">$ <span class="built_in">cd</span> plotinus</span><br><span class="line">$ <span class="built_in">mkdir</span> build</span><br><span class="line">$ <span class="built_in">cd</span> build</span><br><span class="line">$ cmake ..</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure></li>
+<li>前提ライブラリ<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install git cmake valac libgtk-3-dev</span><br></pre></td></tr></table></figure></li>
+<li>Plotinus<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/p-e-w/plotinus.git</span><br><span class="line">$ <span class="built_in">cd</span> plotinus</span><br><span class="line">$ <span class="built_in">mkdir</span> build</span><br><span class="line">$ <span class="built_in">cd</span> build</span><br><span class="line">$ cmake ..</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h2><ul>
-<li>現在のロケールで実行<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GTK3_MODULES=<span class="variable">$PWD</span>/libplotinus.so gedit</span><br></pre></td></tr></table></figure></li>
-<li>LANG&#x3D;C で実行<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LANG=C GTK3_MODULES=<span class="variable">$PWD</span>/libplotinus.so gedit</span><br></pre></td></tr></table></figure>
+<li>現在のロケールで実行<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">GTK3_MODULES=<span class="variable">$PWD</span>/libplotinus.so gedit</span><br></pre></td></tr></table></figure></li>
+<li>LANG&#x3D;C で実行<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LANG=C GTK3_MODULES=<span class="variable">$PWD</span>/libplotinus.so gedit</span><br></pre></td></tr></table></figure>
 <img src="/images/plotinus.png" alt="plotinus"></li>
 </ul>
 <h2 id="コマンドパレットの表示"><a href="#コマンドパレットの表示" class="headerlink" title="コマンドパレットの表示"></a>コマンドパレットの表示</h2><p><code>Ctrl</code>+<code>Shift</code>+<code>P</code> を押下します。</p>

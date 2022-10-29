@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2022-10-25T14:13:56.000Z</updated>
+  <updated>2022-10-29T19:17:38.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WoW DragonFlight Addons</title>
+    <link href="https://ktkr3d.github.io/2022/10/30/WoW-DragonFlight-Addons/"/>
+    <id>https://ktkr3d.github.io/2022/10/30/WoW-DragonFlight-Addons/</id>
+    <published>2022-10-29T19:17:38.000Z</published>
+    <updated>2022-10-29T19:17:38.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt563e16b3504e5808/62545b180afb5024ae74b677/rc-logo-na.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;DragonFlight のパッチが適用されたことに伴って、従来のアドオンの更新が活発化しています。&lt;br&gt;現時点のLUIにおいて、一部のクラスの設定が新バージョンに移行されなかったので暫定的に補正をしました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="WoW" scheme="https://ktkr3d.github.io/tags/WoW/"/>
+    
+  </entry>
   
   <entry>
     <title>code-server + vscode-reveal</title>
@@ -476,7 +494,7 @@
 &lt;h4 id=&quot;2021-10-23-以下の問題の修正が期待されます。&quot;&gt;&lt;a href=&quot;#2021-10-23-以下の問題の修正が期待されます。&quot; class=&quot;headerlink&quot; title=&quot;2021-10-23 以下の問題の修正が期待されます。&quot;&gt;&lt;/a&gt;2021-10-23 以下の問題の修正が期待されます。&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;HDMI output freezes under current&amp;#x2F;proposed impish kernels&lt;br&gt;&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368&quot;&gt;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;現在のバージョンは&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ uname -r -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ uname -r -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;2021-11-08 に Updates に修正がリリースされるらしい。&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/46&quot;&gt;&lt;/a&gt;&lt;br&gt;proposed リポジトリをウォッチしよう。&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/48&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -528,23 +546,6 @@
     <category term="electron" scheme="https://ktkr3d.github.io/tags/electron/"/>
     
     <category term="minecraft" scheme="https://ktkr3d.github.io/tags/minecraft/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Decode / Encode URI</title>
-    <link href="https://ktkr3d.github.io/2021/09/17/Decode-Encode-URI/"/>
-    <id>https://ktkr3d.github.io/2021/09/17/Decode-Encode-URI/</id>
-    <published>2021-09-17T12:36:23.000Z</published>
-    <updated>2021-09-17T12:36:23.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;エンコードされたURI のデコード、デコードされたURI のエンコードを簡単に実行できるツールを作ってみました。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="javascript" scheme="https://ktkr3d.github.io/tags/javascript/"/>
     
   </entry>
   

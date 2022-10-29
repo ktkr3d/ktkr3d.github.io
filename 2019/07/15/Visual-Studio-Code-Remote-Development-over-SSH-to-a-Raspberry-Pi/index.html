@@ -182,8 +182,8 @@
 <li>Remote SSH (Nightly) をインストール</li>
 </ul>
 <h4 id="SSH-接続の設定"><a href="#SSH-接続の設定" class="headerlink" title="SSH 接続の設定"></a>SSH 接続の設定</h4><ul>
-<li>WSL2 から鍵登録<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-copy-id -i /mnt/c/Users/hoge/.ssh/id_rsa.pub ubuntu@192.168.11.106</span><br></pre></td></tr></table></figure></li>
-<li>接続情報<figure class="highlight text"><figcaption><span>C:\Users\hoge\.ssh\ssh_config</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Read more about SSH config files: https://linux.die.net/man/5/ssh_config</span><br><span class="line">Host pi2</span><br><span class="line">    HostName 192.168.11.106</span><br><span class="line">    User ubuntu</span><br><span class="line">    IdentityFile C:\Users\hoge\.ssh\id_rsa</span><br></pre></td></tr></table></figure></li>
+<li>WSL2 から鍵登録<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-copy-id -i /mnt/c/Users/hoge/.ssh/id_rsa.pub ubuntu@192.168.11.106</span><br></pre></td></tr></table></figure></li>
+<li>接続情報<figure class="highlight text"><figcaption><span>C:\Users\hoge\.ssh\ssh_config</span></figcaption><table><tr><td class="code"><pre><span class="line"># Read more about SSH config files: https://linux.die.net/man/5/ssh_config</span><br><span class="line">Host pi2</span><br><span class="line">    HostName 192.168.11.106</span><br><span class="line">    User ubuntu</span><br><span class="line">    IdentityFile C:\Users\hoge\.ssh\id_rsa</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><h4 id="接続"><a href="#接続" class="headerlink" title="接続"></a>接続</h4><ul>
 <li>左下の「<code>&gt;&lt;</code>」アイコンをクリック</li>
@@ -197,7 +197,7 @@
 <li>Shortcuts</li>
 </ul>
 <h3 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h3><ul>
-<li>aarch64 対応<br>接続しようとすると以下のメッセージが表示されます。<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Unsupported architecture</span><br><span class="line">The remote server architecture is not supported</span><br></pre></td></tr></table></figure>
+<li>aarch64 対応<br>接続しようとすると以下のメッセージが表示されます。<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Unsupported architecture</span><br><span class="line">The remote server architecture is not supported</span><br></pre></td></tr></table></figure>
 <a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode-remote-release/issues/60">https://github.com/microsoft/vscode-remote-release/issues/60</a><br>vscode-server でaarch64 がサポートされるといいですね。</li>
 <li>別の手段<ul>
 <li>sshfs で接続</li>

@@ -8,7 +8,7 @@
   
   <meta name="description" content="meego.com 版のMeeGo Tablet 1.2 でマウスポインタが表示されなかったので、表示するように設定を変えてみた。
 &amp;#x2F;etc&amp;#x2F;sysconfig&amp;#x2F;uxlaunch
-1234session=/usr/bin/mutter --sm-disableuser=">
+session=/usr/bin/mutter --sm-disableuser=meeg">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -168,7 +168,7 @@
 
 	  <p>meego.com 版のMeeGo Tablet 1.2 でマウスポインタが表示されなかったので、表示するように設定を変えてみた。</p>
 <p>&#x2F;etc&#x2F;sysconfig&#x2F;uxlaunch</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">session=/usr/bin/mutter --sm-disable</span><br><span class="line">user=meego</span><br><span class="line">session=/usr/bin/mcompositor</span><br><span class="line">#xopts=-nocursor</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">session=/usr/bin/mutter --sm-disable</span><br><span class="line">user=meego</span><br><span class="line">session=/usr/bin/mcompositor</span><br><span class="line">#xopts=-nocursor</span><br></pre></td></tr></table></figure>
 
 <p>-nocursor を無効にする。</p>
 <p><img src="/images/meego.png" alt="meego tablet 1.2 lock"></p>

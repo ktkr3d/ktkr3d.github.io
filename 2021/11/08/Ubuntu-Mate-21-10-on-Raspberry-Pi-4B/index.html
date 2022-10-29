@@ -178,7 +178,7 @@
 <li><p>“could not acquire name on session bus” 対策</p>
 </li>
 </ol>
-<figure class="highlight sh"><figcaption><span>/etc/xrdp/startwm.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unset</span> DBUS_SESSION_BUS_ADDRESS</span><br><span class="line"><span class="built_in">exec</span> mate-session</span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> -x /etc/X11/Xsession &amp;&amp; <span class="built_in">exec</span> /etc/X11/Xsession</span><br><span class="line"><span class="built_in">exec</span> /bin/sh /etc/X11/Xsession</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>/etc/xrdp/startwm.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">unset</span> DBUS_SESSION_BUS_ADDRESS</span><br><span class="line"><span class="built_in">exec</span> mate-session</span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> -x /etc/X11/Xsession &amp;&amp; <span class="built_in">exec</span> /etc/X11/Xsession</span><br><span class="line"><span class="built_in">exec</span> /bin/sh /etc/X11/Xsession</span><br></pre></td></tr></table></figure>
 
 <h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3>	  
 	</div>

@@ -176,11 +176,11 @@ Ubuntu Livepatch も設定してみました。">
 <h3 id="インストールメディア"><a href="#インストールメディア" class="headerlink" title="インストールメディア"></a>インストールメディア</h3><p><a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/daily-live/current/">http://cdimage.ubuntu.com/daily-live/current/</a></p>
 <p>デイリービルドのライブISOをEtcher でUSBメモリに格納しました。</p>
 <h3 id="GNOME-の設定"><a href="#GNOME-の設定" class="headerlink" title="GNOME の設定"></a>GNOME の設定</h3><ul>
-<li>ホームディレクトリの各フォルダ名を英語名に変更<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure></li>
-<li>テキストテンプレートファイルの作成<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure></li>
-<li>alias の設定  <figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo apt update -y &amp;&amp; sudo apt dist-upgrade &amp;&amp; sudo apt autoremove -y&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> en=<span class="string">&#x27;export LC_ALL=en_US.UTF8&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> ja=<span class="string">&#x27;export LC_ALL=ja_JP.UTF8&#x27;</span></span><br></pre></td></tr></table></figure></li>
-<li>基本的なパッケージのインストール<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install curl gdebi geany gnome-tweak-tool gparted guake openssh-server seahorse synaptic</span><br></pre></td></tr></table></figure></li>
-<li>デスクトップ共有(Vino)の設定<br>gnome-control-center で<code>共有</code>-<code>画面共有</code>をアクティブにする。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gsettings <span class="built_in">set</span> org.gnome.desktop.remote-access require-encryption <span class="literal">false</span></span><br></pre></td></tr></table></figure></li>
+<li>ホームディレクトリの各フォルダ名を英語名に変更<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure></li>
+<li>テキストテンプレートファイルの作成<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure></li>
+<li>alias の設定  <figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo apt update -y &amp;&amp; sudo apt dist-upgrade &amp;&amp; sudo apt autoremove -y&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> en=<span class="string">&#x27;export LC_ALL=en_US.UTF8&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> ja=<span class="string">&#x27;export LC_ALL=ja_JP.UTF8&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>基本的なパッケージのインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install curl gdebi geany gnome-tweak-tool gparted guake openssh-server seahorse synaptic</span><br></pre></td></tr></table></figure></li>
+<li>デスクトップ共有(Vino)の設定<br>gnome-control-center で<code>共有</code>-<code>画面共有</code>をアクティブにする。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gsettings <span class="built_in">set</span> org.gnome.desktop.remote-access require-encryption <span class="literal">false</span></span><br></pre></td></tr></table></figure></li>
 <li>gnome-tweak-tool 関連<ul>
 <li>トップバー アプリケーションメニュー をオフ</li>
 <li>トップバー 時計 日時 をオン</li>
@@ -190,7 +190,7 @@ Ubuntu Livepatch も設定してみました。">
 </ul>
 <h3 id="GNOME-Shell-の設定"><a href="#GNOME-Shell-の設定" class="headerlink" title="GNOME Shell の設定"></a>GNOME Shell の設定</h3><ul>
 <li>ブラウザ拡張のインストール<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/">https://extensions.gnome.org/</a><br><code>Click here to install browser extension. </code>をクリックしてインストール</li>
-<li>chrome-gnome-shell パッケージのインストール<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install chrome-gnome-shell</span><br></pre></td></tr></table></figure></li>
+<li>chrome-gnome-shell パッケージのインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install chrome-gnome-shell</span><br></pre></td></tr></table></figure></li>
 <li>Extension のインストール<ul>
 <li>Dash to Panel</li>
 <li>Argos</li>
@@ -198,13 +198,13 @@ Ubuntu Livepatch も設定してみました。">
 </li>
 </ul>
 <h3 id="デスクトップのテーマの変更"><a href="#デスクトップのテーマの変更" class="headerlink" title="デスクトップのテーマの変更"></a>デスクトップのテーマの変更</h3><ul>
-<li>Ubuntu コミュニティテーマのインストール<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:communitheme/ppa</span><br><span class="line">$ sudo apt update &amp;&amp; sudo apt install ubuntu-communitheme-session</span><br></pre></td></tr></table></figure>
+<li>Ubuntu コミュニティテーマのインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:communitheme/ppa</span><br><span class="line">$ sudo apt update &amp;&amp; sudo apt install ubuntu-communitheme-session</span><br></pre></td></tr></table></figure>
 gnome-tweak-tool でアプリケーションに<code>Communitheme</code>を、アイコンに<code>Suru</code>を選択する。</li>
 </ul>
 <h3 id="アプリケーションのインストール"><a href="#アプリケーションのインストール" class="headerlink" title="アプリケーションのインストール"></a>アプリケーションのインストール</h3><ul>
-<li>Google Chrome<br><a target="_blank" rel="noopener" href="https://www.google.co.jp/chrome/index.html">https://www.google.co.jp/chrome/index.html</a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gdebi google-chrome-stable_current_amd64.deb</span><br><span class="line">$ seahorse</span><br></pre></td></tr></table></figure>
+<li>Google Chrome<br><a target="_blank" rel="noopener" href="https://www.google.co.jp/chrome/index.html">https://www.google.co.jp/chrome/index.html</a><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo gdebi google-chrome-stable_current_amd64.deb</span><br><span class="line">$ seahorse</span><br></pre></td></tr></table></figure>
 <code>seahorse</code>でパスワードをクリアしておく</li>
-<li>Kodi<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install kodi</span><br></pre></td></tr></table></figure></li>
+<li>Kodi<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install kodi</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="Ubuntu-Livepatch-の設定"><a href="#Ubuntu-Livepatch-の設定" class="headerlink" title="Ubuntu Livepatch の設定"></a>Ubuntu Livepatch の設定</h3><p><code>software-properties-gtk</code>のアップデートタブで、Ubuntu One にサインインし、<code>Use Canonical Livepatch to increase security between restarts</code>にチェックを入れる。<br>6年前に作ったきりのアカウントでも問題なくログインできました。</p>
 <h3 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h3><ul>

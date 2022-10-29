@@ -168,11 +168,11 @@
 <p><a target="_blank" rel="noopener" href="http://moc.daper.net/">http://moc.daper.net/</a><br>軽量なコンソール型のメディアプレーヤーMOC(Music On Console)を使ってみた。コマンドはmocp で、mocp を実行するとメディアを再生するサーバと操作用のクライアント画面が同時に起動する。クライアント画面を終了してもサーバはメディアの再生を継続するような仕組みになっている。moc-ffmpeg-plugin をインストールするとWMA, RealAudio, MP4, AAC 等のフォーマットの再生も可能。イコライザがついていたり、歌詞表示ができたり、テーマ変更もできたりする。日本語のタグやファイル名も表示可能。軽量だからwine で動かしているアプリケーションへの影響も少ないようだ。</p>
 <span id="more"></span>
 
-<h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install moc moc-ffmpeg-plugin</span><br></pre></td></tr></table></figure>
+<h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install moc moc-ffmpeg-plugin</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="起動とサーバの停止"><a href="#起動とサーバの停止" class="headerlink" title="起動とサーバの停止"></a>起動とサーバの停止</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mocp </span><br><span class="line">$ mocp -x</span><br></pre></td></tr></table></figure>
+<h3 id="起動とサーバの停止"><a href="#起動とサーバの停止" class="headerlink" title="起動とサーバの停止"></a>起動とサーバの停止</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ mocp </span><br><span class="line">$ mocp -x</span><br></pre></td></tr></table></figure>
 
 <p>オプションの詳細はman mocp で。</p>
 <h3 id="よく使うキー操作"><a href="#よく使うキー操作" class="headerlink" title="よく使うキー操作"></a>よく使うキー操作</h3><table>
@@ -241,14 +241,14 @@
 </tbody></table>
 <h3 id="インターネットラジオの聞き方"><a href="#インターネットラジオの聞き方" class="headerlink" title="インターネットラジオの聞き方"></a>インターネットラジオの聞き方</h3><p>SHOUTcast で探して、ローカルにpls ファイルを保存して、開いたり、[o]で直接URL を入力したり。</p>
 <h3 id="moc-で再生中のメディアの情報をConky-に表示するには"><a href="#moc-で再生中のメディアの情報をConky-に表示するには" class="headerlink" title="moc で再生中のメディアの情報をConky に表示するには"></a>moc で再生中のメディアの情報をConky に表示するには</h3><p>mocp -Q でいろいろな情報を取得して表示することができる。</p>
-<figure class="highlight text"><figcaption><span>~/.conkyrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&#123;if_running mocp&#125;$&#123;font DejaVu Sans&#125;MUSIC (moc)$&#123;font&#125; $&#123;hr 2&#125;</span><br><span class="line">$&#123;font :size=10&#125;$&#123;execi 5 mocp -Q %title | nkf -w -F36-0&#125;$&#123;endif&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>~/.conkyrc</span></figcaption><table><tr><td class="code"><pre><span class="line">$&#123;if_running mocp&#125;$&#123;font DejaVu Sans&#125;MUSIC (moc)$&#123;font&#125; $&#123;hr 2&#125;</span><br><span class="line">$&#123;font :size=10&#125;$&#123;execi 5 mocp -Q %title | nkf -w -F36-0&#125;$&#123;endif&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="テーマの変更"><a href="#テーマの変更" class="headerlink" title="テーマの変更"></a>テーマの変更</h3><p><a target="_blank" rel="noopener" href="https://moc.daper.net/node/1408">https://moc.daper.net/node/1408</a></p>
 <ol>
 <li><p><code>/usr/share/doc/moc/examples/config.example.gz</code> を展開して<code>~/.moc/config</code> を作成</p>
 </li>
 <li><p><code>~/.moc/config</code> を編集してテーマを設定</p>
-  <figure class="highlight ini"><figcaption><span>~/.moc/config</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Theme file to use.  This can be absolute path or relative to</span></span><br><span class="line"><span class="comment"># /usr/share/moc/themes/ (depends on installation prefix) or</span></span><br><span class="line"><span class="comment"># ~/.moc/themes/ .</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Example:    Theme = laras_theme</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#Theme =</span></span><br><span class="line"><span class="attr">Theme</span> = transparent-background</span><br></pre></td></tr></table></figure>
+  <figure class="highlight ini"><figcaption><span>~/.moc/config</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Theme file to use.  This can be absolute path or relative to</span></span><br><span class="line"><span class="comment"># /usr/share/moc/themes/ (depends on installation prefix) or</span></span><br><span class="line"><span class="comment"># ~/.moc/themes/ .</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Example:    Theme = laras_theme</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#Theme =</span></span><br><span class="line"><span class="attr">Theme</span> = transparent-background</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>他のテーマを試してみる</p>
 </li>

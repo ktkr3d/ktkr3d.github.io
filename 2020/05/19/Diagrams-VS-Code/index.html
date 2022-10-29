@@ -182,12 +182,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install -y python3 python3-pip graphviz</span><br><span class="line">$ pip3 install diagrams</span><br></pre></td></tr></table></figure>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install -y python3 python3-pip graphviz</span><br><span class="line">$ pip3 install diagrams</span><br></pre></td></tr></table></figure>
 
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><h4 id="サンプル"><a href="#サンプル" class="headerlink" title="サンプル"></a>サンプル</h4><p><a target="_blank" rel="noopener" href="https://diagrams.mingrammer.com/docs/getting-started/examples">https://diagrams.mingrammer.com/docs/getting-started/examples</a></p>
 <h4 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h4><ol>
-<li>Python で記述します。<figure class="highlight python"><figcaption><span>sample1.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> diagrams <span class="keyword">import</span> Diagram</span><br><span class="line"><span class="keyword">from</span> diagrams.aws.compute <span class="keyword">import</span> EC2</span><br><span class="line"><span class="keyword">from</span> diagrams.aws.database <span class="keyword">import</span> RDS</span><br><span class="line"><span class="keyword">from</span> diagrams.aws.network <span class="keyword">import</span> ELB</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> Diagram(<span class="string">&quot;Grouped Workers&quot;</span>, show=<span class="literal">False</span>, direction=<span class="string">&quot;TB&quot;</span>):</span><br><span class="line">    ELB(<span class="string">&quot;lb&quot;</span>) &gt;&gt; [EC2(<span class="string">&quot;worker1&quot;</span>),</span><br><span class="line">                  EC2(<span class="string">&quot;worker2&quot;</span>),</span><br><span class="line">                  EC2(<span class="string">&quot;worker3&quot;</span>),</span><br><span class="line">                  EC2(<span class="string">&quot;worker4&quot;</span>),</span><br><span class="line">                  EC2(<span class="string">&quot;worker5&quot;</span>)] &gt;&gt; RDS(<span class="string">&quot;events&quot;</span>)</span><br></pre></td></tr></table></figure></li>
-<li>実行します。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python3 sample1.py</span><br></pre></td></tr></table></figure></li>
+<li>Python で記述します。<figure class="highlight python"><figcaption><span>sample1.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> diagrams <span class="keyword">import</span> Diagram</span><br><span class="line"><span class="keyword">from</span> diagrams.aws.compute <span class="keyword">import</span> EC2</span><br><span class="line"><span class="keyword">from</span> diagrams.aws.database <span class="keyword">import</span> RDS</span><br><span class="line"><span class="keyword">from</span> diagrams.aws.network <span class="keyword">import</span> ELB</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> Diagram(<span class="string">&quot;Grouped Workers&quot;</span>, show=<span class="literal">False</span>, direction=<span class="string">&quot;TB&quot;</span>):</span><br><span class="line">    ELB(<span class="string">&quot;lb&quot;</span>) &gt;&gt; [EC2(<span class="string">&quot;worker1&quot;</span>),</span><br><span class="line">                  EC2(<span class="string">&quot;worker2&quot;</span>),</span><br><span class="line">                  EC2(<span class="string">&quot;worker3&quot;</span>),</span><br><span class="line">                  EC2(<span class="string">&quot;worker4&quot;</span>),</span><br><span class="line">                  EC2(<span class="string">&quot;worker5&quot;</span>)] &gt;&gt; RDS(<span class="string">&quot;events&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>実行します。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python3 sample1.py</span><br></pre></td></tr></table></figure></li>
 <li>grouped_workers.png というファイルが出力されます。</li>
 </ol>
 <h4 id="Diagram-options"><a href="#Diagram-options" class="headerlink" title="Diagram options"></a>Diagram options</h4><ul>
@@ -206,7 +206,7 @@
 <li>node_attr</li>
 <li>edge_attr</li>
 </ul>
-<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart3376"></div>
+<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart7274"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -215,7 +215,7 @@
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.PieChart(document.getElementById("googleChart3376"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
+        (new google.visualization.PieChart(document.getElementById("googleChart7274"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
       });
     })();
   }

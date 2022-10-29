@@ -167,7 +167,7 @@
 	  <p><img src="/images/resize-kvm-disk.png" alt="resize-kvm-disk"><br>KVM の仮想マシンのディスク空き容量が少なくなってきたので、ディスク容量を8GBから10GBに拡張しました。</p>
 <span id="more"></span>
 <h3 id="スナップショットの削除"><a href="#スナップショットの削除" class="headerlink" title="スナップショットの削除"></a>スナップショットの削除</h3><p>仮想マシンを停止した後に、仮想マシンマネージャーでスナップショットを削除します。<br>スナップショットがあるとディスク容量を拡張できないようです。</p>
-<h3 id="仮想イメージファイルの拡張"><a href="#仮想イメージファイルの拡張" class="headerlink" title="仮想イメージファイルの拡張"></a>仮想イメージファイルの拡張</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo qemu-img resize ubuntu-gnome-16.04.img 10G</span><br><span class="line">Image resized.</span><br></pre></td></tr></table></figure>
+<h3 id="仮想イメージファイルの拡張"><a href="#仮想イメージファイルの拡張" class="headerlink" title="仮想イメージファイルの拡張"></a>仮想イメージファイルの拡張</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo qemu-img resize ubuntu-gnome-16.04.img 10G</span><br><span class="line">Image resized.</span><br></pre></td></tr></table></figure>
 <p>絶対値の場合は10GBのように指定し、相対値の場合は+2GBのように偏差を指定します。</p>
 <h3 id="Live-ISO-起動に設定変更"><a href="#Live-ISO-起動に設定変更" class="headerlink" title="Live ISO 起動に設定変更"></a>Live ISO 起動に設定変更</h3><p>仮想マシンマネージャーで、gparted を含むLive ISO で起動するように設定変更します。</p>
 <ul>

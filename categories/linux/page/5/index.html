@@ -197,18 +197,18 @@
 	
 	
 		<p>Inspiron duo 上のUbuntu 11.10 x86_64 にBroadcom Crystal HD Decoder Driver を組み込んでみた。</p>
-<figure class="highlight sh"><figcaption><span>必要なパッケージのインストール</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install build-essential g++ automake autoconf libtool libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>必要なパッケージのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install build-essential g++ automake autoconf libtool libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><figcaption><span>ソースの取得</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://linuxtv.org/jarod/crystalhd.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>ソースの取得</span></figcaption><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://linuxtv.org/jarod/crystalhd.git</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><figcaption><span>ドライバーのインストール</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> driver/linux/</span><br><span class="line">$ autoconf</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>ドライバーのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> driver/linux/</span><br><span class="line">$ autoconf</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
 
 <p>コンパイル時に警告がでるので、とりあえず-w をつけた。</p>
-<figure class="highlight sh"><figcaption><span>ライブラリのインストール</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> linux_lib/libcrystalhd/</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>ライブラリのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> linux_lib/libcrystalhd/</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><figcaption><span>gstreamer プラグインのインストール</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> filters/gst/gst-plugin/</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>gstreamer プラグインのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> filters/gst/gst-plugin/</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><figcaption><span>ファームウェアのコピー</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> firmware/fwbin/70015/* /lib/firmware/</span><br><span class="line">$ sudo <span class="built_in">cp</span> firmware/fwbin/70012/* /lib/firmware/</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>ファームウェアのコピー</span></figcaption><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> firmware/fwbin/70015/* /lib/firmware/</span><br><span class="line">$ sudo <span class="built_in">cp</span> firmware/fwbin/70012/* /lib/firmware/</span><br></pre></td></tr></table></figure>
 
 
 	
@@ -270,7 +270,7 @@
 		<p><img src="/images/gnome_shell_catalyst_12.1.png" alt="gnome shell catalyst 12.1 fglrx 8.930 ubuntu 11.10"></p>
 <p>AMD Catalyst™ Proprietary Display Driver - Linux x86 &amp; Linux x86_64 の12.1 (fglrx 8.930)がリリースされたのでUbuntu 11.10 x86_64 の環境にインストールしてみた。GNOME Shell での画面のちらつきが無くなり、これでUnity とはサヨナラだ。</p>
 <p>既にfglrx やfglrx-updates がインストールされていたらアンインストールしておいて、</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://www2.ati.com/drivers/linux/amd-driver-installer-12-1-x86.x86_64.run</span><br><span class="line">$ <span class="built_in">chmod</span> 755 amd-driver-installer-12-1-x86.x86_64.run</span><br><span class="line">$ ./amd-driver-installer-12-1-x86.x86_64.run --buildpkg Ubuntu/oneiric</span><br><span class="line">$ sudo dpkg -i fglrx_8.930-0ubuntu1_amd64.deb fglrx-amdcccle_8.930-0ubuntu1_amd64.deb fglrx-dev_8.930-0ubuntu1_amd64.deb</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ wget http://www2.ati.com/drivers/linux/amd-driver-installer-12-1-x86.x86_64.run</span><br><span class="line">$ <span class="built_in">chmod</span> 755 amd-driver-installer-12-1-x86.x86_64.run</span><br><span class="line">$ ./amd-driver-installer-12-1-x86.x86_64.run --buildpkg Ubuntu/oneiric</span><br><span class="line">$ sudo dpkg -i fglrx_8.930-0ubuntu1_amd64.deb fglrx-amdcccle_8.930-0ubuntu1_amd64.deb fglrx-dev_8.930-0ubuntu1_amd64.deb</span><br></pre></td></tr></table></figure>
 
 <p>GNOME Shell に切り替えてAuto Hide Top Panel 拡張を入れれば、トップパネルを隠せる。</p>
 
@@ -406,19 +406,19 @@
 <ul>
 <li>リポジトリの追加</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:mozillateam/firefox-next</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:mozillateam/firefox-next</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
 
 
 <ul>
 <li>firefox をインストール</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install firefox</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install firefox</span><br></pre></td></tr></table></figure>
 
 
 <ul>
 <li>または既存のFirefox 4 からアップグレード</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
 
 
 
@@ -562,6 +562,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
+      </li>
+    
+      <li>
         <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
       </li>
     
@@ -597,10 +601,6 @@
         <a href="/2022/06/19/Tauri/" ><i class="fa fa-file-o"></i>Tauri</a>
       </li>
     
-      <li>
-        <a href="/2022/04/06/CHUWI-Hi-10-Go/" ><i class="fa fa-file-o"></i>CHUWI Hi 10 Go</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -608,7 +608,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
 </div>
 
 		

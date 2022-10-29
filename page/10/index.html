@@ -164,6 +164,34 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2018-12-04 </div>
+			<div class="article-title"><a href="/2018/12/04/Unity-Development-with-VS-Code/" >Unity Development with VS Code</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+           
+              <div class="thumbnail"><a href="/2018/12/04/Unity-Development-with-VS-Code/"><img src="https://unity3d.com/profiles/unity3d/themes/unity/images/pages/virtual-rooms/unity-logo-black.svg" alt="Unity Development with VS Code"  class="nofancybox"></a>
+           
+		</div>
+	
+	
+		<p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/other/unity">https://code.visualstudio.com/docs/other/unity</a><br>Unity とVisual Studio Code を連携してみました。</p>
+	
+	</div>
+  <a type="button" href="/2018/12/04/Unity-Development-with-VS-Code/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2018-11-30 </div>
 			<div class="article-title"><a href="/2018/11/30/Nextcloud-on-Raspberry-Pi/" >Nextcloud on Raspberry Pi</a></div>						
 		</h3>
@@ -411,31 +439,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2018-04-06 </div>
-			<div class="article-title"><a href="/2018/04/06/HDD-List/" >HDD List</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="Before"><a href="#Before" class="headerlink" title="Before"></a>Before</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$ lsblk --output NAME,FSTYPE,LABEL,SIZE,HOTPLUG,MODEL</span><br><span class="line">NAME   FSTYPE LABEL       SIZE HOTPLUG MODEL</span><br><span class="line">sda                     894.3G       0 Patriot Blast   </span><br><span class="line">├─sda1 vfat                 1G       0</span><br><span class="line">├─sda2 ntfs   vol01       500G       0</span><br><span class="line">├─sda3 ext4   artful      200G       0</span><br><span class="line">└─sda4 ext4   antergos  193.3G       0</span><br><span class="line">sdb                       7.3T       0 WDC WD80EFZX-68U</span><br><span class="line">├─sdb1 ext4   media02     7.3T       0</span><br><span class="line">└─sdb2 swap                16G       0</span><br><span class="line">sdc                       2.7T       0 WDC WD30EZRX-00D</span><br><span class="line">├─sdc1 vfat                 1G       0</span><br><span class="line">├─sdc2 ext4   common      1.9T       0</span><br><span class="line">├─sdc3 ext4   yakkety     200G       0</span><br><span class="line">├─sdc4 ext4   xenial      200G       0</span><br><span class="line">├─sdc5 ntfs   windows10 299.6G       0</span><br><span class="line">├─sdc6 ntfs               459M       0</span><br><span class="line">└─sdc7 ext4   zesty       200G       0</span><br><span class="line">sdd                       3.7T       0 WDC WD40EZRX-00S</span><br><span class="line">└─sdd1 ext4   media       3.7T       0</span><br><span class="line">sde                       7.3T       1 0002-1NA17Z     </span><br><span class="line">└─sde1 ext4   media04     7.3T       1</span><br><span class="line">sdf                       5.5T       1 EZRX-00MVLB1    </span><br><span class="line">└─sdf1 ext2   media03     5.5T       1</span><br></pre></td></tr></table></figure>
-<h3 id="After"><a href="#After" class="headerlink" title="After"></a>After</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ lsblk --output NAME,FSTYPE,LABEL,SIZE,HOTPLUG,MODEL</span><br><span class="line">NAME   FSTYPE LABEL       SIZE HOTPLUG MODEL</span><br><span class="line">sda                     894.3G       0 Patriot Blast   </span><br><span class="line">├─sda1 vfat                 1G       0</span><br><span class="line">├─sda2 ntfs   vol01       500G       0</span><br><span class="line">├─sda3 ext4   artful      200G       0</span><br><span class="line">└─sda4 ext4   antergos  193.3G       0</span><br><span class="line">sdb                       2.7T       0 WDC WD30EZRX-00D</span><br><span class="line">├─sdb1 vfat                 1G       0</span><br><span class="line">├─sdb2 ext4   common      1.9T       0</span><br><span class="line">├─sdb3 ext4   yakkety     200G       0</span><br><span class="line">├─sdb4 ext4   xenial      200G       0</span><br><span class="line">├─sdb5 ntfs   windows10 299.6G       0</span><br><span class="line">├─sdb6 ntfs               459M       0</span><br><span class="line">└─sdb7 ext4   zesty       200G       0</span><br><span class="line">sdc                       7.3T       0 TOSHIBA MD05ACA8</span><br><span class="line">├─sdc1                    128M       0</span><br><span class="line">└─sdc2 ntfs   media05     7.3T       0</span><br><span class="line">sdd                       7.3T       0 WDC WD80EFZX-68U</span><br><span class="line">├─sdd1 ext4   media02     7.3T       0</span><br><span class="line">└─sdd2 swap                16G       0</span><br><span class="line">sde                       7.3T       1 0002-1NA17Z     </span><br><span class="line">└─sde1 ext4   media04     7.3T       1</span><br><span class="line">sdf                       5.5T       1 EZRX-00MVLB1    </span><br><span class="line">└─sdf1 ext2   media03     5.5T       1</span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2018/04/06/HDD-List/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -485,6 +488,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
+      </li>
+    
+      <li>
         <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
       </li>
     
@@ -520,10 +527,6 @@
         <a href="/2022/06/19/Tauri/" ><i class="fa fa-file-o"></i>Tauri</a>
       </li>
     
-      <li>
-        <a href="/2022/04/06/CHUWI-Hi-10-Go/" ><i class="fa fa-file-o"></i>CHUWI Hi 10 Go</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -531,7 +534,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
 </div>
 
 		

@@ -10,23 +10,23 @@
 
 ビルドするための依存関係の取得
 
-12$ sudo apt-get install mercurial ccache$ sudo apt-get build-dep firefox
+$ sudo apt-get install mercurial ccache$ sudo apt-get build-dep firefox
 
 
 
 
 Firefox のソースの取得
 
-1$ hg clone http://hg.mozilla.org/mozilla-central/ src
+$ hg clone http://hg.mozilla.org/mozilla-central/ src
 
 
 
 
 MOZCONFIG のカスタマイズ
 
-12$ cd src$ gedit mozconfig-android-x86
+$ cd src$ gedit mozconfig-android-x86
 
-mozconfig-android-x8612345678910111213141516171819202122232425262728293031323334353637383940# Global optionsmk_add_options MOZ_MAKE_FLAGS=&amp;quot;-j4&amp;quot;# Build Fennecac_add_options --enable-application=mobile/android# Androidac_add_options --target=i386-linux-androidac_add_options --with-endian=littleac_add_options --with-android-ndk=&amp;quot;$HOME/Projects/Android/android-ndk-r8&amp;quot;ac_add_options --with-android-sdk=&amp;quot;$HOME/Projects/Android/android-sdk-linux/platforms/android-15&amp;quot;ac_add_options --with-android-version=10ac_add_options --with-android-platform=&amp;quot;$HOME/Projects/Android/android-ndk-r8/platforms/android-14/arch-x86&amp;quot;ac_add_options --with-system-zlib# ac_add_options --disable-auto-depsac_add_options --disable-debugac_add_options --disable-debug-symbolsac_add_options --disable-testsac_add_options --disable-ipdl-testsac_add_options --enable-stripac_add_options --enable-install-strip# updaterac_add_options --disable-updaterac_add_options --disable-update-channelac_add_options --disable-update-packaging# crash reporterac_add_options --disable-crashreporter# maintenance serviceac_add_options --disable-maintenance-service# JDKexport JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64# brandingac_add_options --with-branding=mobile/android/branding/beta
+mozconfig-android-x86# Global optionsmk_add_options MOZ_MAKE_FLAGS=&amp;quot;-j4&amp;quot;# Build Fennecac_add_options --enable-application=mobile/android# Androidac_add_options --target=i386-linux-androidac_add_options --with-endian=littleac_add_options --with-android-ndk=&amp;quot;$HOME/Projects/Android/android-ndk-r8&amp;quot;ac_add_options --with-android-sdk=&amp;quot;$HOME/Projects/Android/android-sdk-linux/platforms/android-15&amp;quot;ac_add_options --with-android-version=10ac_add_options --with-android-platform=&amp;quot;$HOME/Projects/Android/android-ndk-r8/platforms/android-14/arch-x86&amp;quot;ac_add_options --with-system-zlib# ac_add_options --disable-auto-depsac_add_options --disable-debugac_add_options --disable-debug-symbolsac_add_options --disable-testsac_add_options --disable-ipdl-testsac_add_options --enable-stripac_add_options --enable-install-strip# updaterac_add_options --disable-updaterac_add_options --disable-update-channelac_add_options --disable-update-packaging# crash reporterac_add_options --disable-crashreporter# maintenance serviceac_add_options --disable-maintenance-service# JDKexport JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64# brandingac_add_options --with-branding=mobile/android/branding/beta
 
 
 
@@ -36,20 +36,20 @@ mozconfig-android-x8612345678910111213141516171819202122232425262728293031323334
 インストール先のAndroid 端末を無線LAN で接続する。
 
 
-12$ export ADBHOST=192.168.0.4$ adb devices
+$ export ADBHOST=192.168.0.4$ adb devices
 
 
 
 
 ビルドとインストール
 
-123$ export MOZCONFIG=./mozconfig-android-x86$ make -f client.mk build_and_deploy$
+$ export MOZCONFIG=./mozconfig-android-x86$ make -f client.mk build_and_deploy$
 
 インストーラパッケージは以下に生成される。.&amp;#x2F;obj-x86_64-unknown-linux-gnu&amp;#x2F;dist&amp;#x2F;fennec-16.0a1.en-US.android-i386.apk
 
 次回ビルド時にソースを最新の状態にするには
 
-1$ hg pull -u">
+$ hg pull -u">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -212,23 +212,23 @@ mozconfig-android-x8612345678910111213141516171819202122232425262728293031323334
 <ol>
 <li>ビルドするための依存関係の取得</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install mercurial ccache</span><br><span class="line">$ sudo apt-get build-dep firefox</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install mercurial ccache</span><br><span class="line">$ sudo apt-get build-dep firefox</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="2">
 <li>Firefox のソースの取得</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/mozilla-central/ src</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/mozilla-central/ src</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="3">
 <li>MOZCONFIG のカスタマイズ</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> src</span><br><span class="line">$ gedit mozconfig-android-x86</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> src</span><br><span class="line">$ gedit mozconfig-android-x86</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight text"><figcaption><span>mozconfig-android-x86</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-endian=little</span><br><span class="line">ac_add_options --with-android-ndk=&quot;$HOME/Projects/Android/android-ndk-r8&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;$HOME/Projects/Android/android-sdk-linux/platforms/android-15&quot;</span><br><span class="line">ac_add_options --with-android-version=10</span><br><span class="line">ac_add_options --with-android-platform=&quot;$HOME/Projects/Android/android-ndk-r8/platforms/android-14/arch-x86&quot;</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">ac_add_options --disable-auto-deps</span><br><span class="line">ac_add_options --disable-debug</span><br><span class="line">ac_add_options --disable-debug-symbols</span><br><span class="line">ac_add_options --disable-tests</span><br><span class="line">ac_add_options --disable-ipdl-tests</span><br><span class="line">ac_add_options --enable-strip</span><br><span class="line">ac_add_options --enable-install-strip</span><br><span class="line"></span><br><span class="line"># updater</span><br><span class="line">ac_add_options --disable-updater</span><br><span class="line">ac_add_options --disable-update-channel</span><br><span class="line">ac_add_options --disable-update-packaging</span><br><span class="line"></span><br><span class="line"># crash reporter</span><br><span class="line">ac_add_options --disable-crashreporter</span><br><span class="line"></span><br><span class="line"># maintenance service</span><br><span class="line">ac_add_options --disable-maintenance-service</span><br><span class="line"></span><br><span class="line"># JDK</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64</span><br><span class="line"></span><br><span class="line"># branding</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/beta</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>mozconfig-android-x86</span></figcaption><table><tr><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-endian=little</span><br><span class="line">ac_add_options --with-android-ndk=&quot;$HOME/Projects/Android/android-ndk-r8&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;$HOME/Projects/Android/android-sdk-linux/platforms/android-15&quot;</span><br><span class="line">ac_add_options --with-android-version=10</span><br><span class="line">ac_add_options --with-android-platform=&quot;$HOME/Projects/Android/android-ndk-r8/platforms/android-14/arch-x86&quot;</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">ac_add_options --disable-auto-deps</span><br><span class="line">ac_add_options --disable-debug</span><br><span class="line">ac_add_options --disable-debug-symbols</span><br><span class="line">ac_add_options --disable-tests</span><br><span class="line">ac_add_options --disable-ipdl-tests</span><br><span class="line">ac_add_options --enable-strip</span><br><span class="line">ac_add_options --enable-install-strip</span><br><span class="line"></span><br><span class="line"># updater</span><br><span class="line">ac_add_options --disable-updater</span><br><span class="line">ac_add_options --disable-update-channel</span><br><span class="line">ac_add_options --disable-update-packaging</span><br><span class="line"></span><br><span class="line"># crash reporter</span><br><span class="line">ac_add_options --disable-crashreporter</span><br><span class="line"></span><br><span class="line"># maintenance service</span><br><span class="line">ac_add_options --disable-maintenance-service</span><br><span class="line"></span><br><span class="line"># JDK</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64</span><br><span class="line"></span><br><span class="line"># branding</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/beta</span><br></pre></td></tr></table></figure>
 
 
 
@@ -238,20 +238,20 @@ mozconfig-android-x8612345678910111213141516171819202122232425262728293031323334
 <li><p>インストール先のAndroid 端末を無線LAN で接続する。</p>
 </li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> ADBHOST=192.168.0.4</span><br><span class="line">$ adb devices</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> ADBHOST=192.168.0.4</span><br><span class="line">$ adb devices</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="6">
 <li>ビルドとインストール</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> MOZCONFIG=./mozconfig-android-x86</span><br><span class="line">$ make -f client.mk build_and_deploy</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> MOZCONFIG=./mozconfig-android-x86</span><br><span class="line">$ make -f client.mk build_and_deploy</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
 
 <p>インストーラパッケージは以下に生成される。<br>.&#x2F;obj-x86_64-unknown-linux-gnu&#x2F;dist&#x2F;fennec-16.0a1.en-US.android-i386.apk</p>
 <ol start="7">
 <li>次回ビルド時にソースを最新の状態にするには</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hg pull -u</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hg pull -u</span><br></pre></td></tr></table></figure>
 
 
 
@@ -266,7 +266,7 @@ mozconfig-android-x8612345678910111213141516171819202122232425262728293031323334
 <li><p>ロゴ画像を追加するのをやめた。（必要なかった。）</p>
 </li>
 </ul>
-<figure class="highlight text"><figcaption><span>mozconfig-android-x86</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-endian=little</span><br><span class="line">ac_add_options --with-android-ndk=&quot;/tools/android-ndk-r8&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;/tools/android-sdk-linux/platforms/android-15&quot;</span><br><span class="line">ac_add_options --with-android-version=10</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line">ac_add_options --with-android-platform=&quot;/tools/android-ndk-r8/platforms/android-14/arch-x86&quot;</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">ac_add_options --disable-auto-deps</span><br><span class="line">ac_add_options --disable-debug</span><br><span class="line">ac_add_options --disable-debug-symbols</span><br><span class="line">ac_add_options --disable-tests</span><br><span class="line">ac_add_options --disable-ipdl-tests</span><br><span class="line">ac_add_options --enable-strip</span><br><span class="line">ac_add_options --enable-install-strip</span><br><span class="line"></span><br><span class="line"># updater</span><br><span class="line">ac_add_options --disable-updater</span><br><span class="line">ac_add_options --disable-update-channel</span><br><span class="line">ac_add_options --disable-update-packaging</span><br><span class="line"></span><br><span class="line"># crash reporter</span><br><span class="line">ac_add_options --disable-crashreporter</span><br><span class="line"></span><br><span class="line"># maintenance service</span><br><span class="line">ac_add_options --disable-maintenance-service</span><br><span class="line"></span><br><span class="line"># JDK</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64</span><br><span class="line"></span><br><span class="line"># mozilla</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/nightly</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>mozconfig-android-x86</span></figcaption><table><tr><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-endian=little</span><br><span class="line">ac_add_options --with-android-ndk=&quot;/tools/android-ndk-r8&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;/tools/android-sdk-linux/platforms/android-15&quot;</span><br><span class="line">ac_add_options --with-android-version=10</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line">ac_add_options --with-android-platform=&quot;/tools/android-ndk-r8/platforms/android-14/arch-x86&quot;</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">ac_add_options --disable-auto-deps</span><br><span class="line">ac_add_options --disable-debug</span><br><span class="line">ac_add_options --disable-debug-symbols</span><br><span class="line">ac_add_options --disable-tests</span><br><span class="line">ac_add_options --disable-ipdl-tests</span><br><span class="line">ac_add_options --enable-strip</span><br><span class="line">ac_add_options --enable-install-strip</span><br><span class="line"></span><br><span class="line"># updater</span><br><span class="line">ac_add_options --disable-updater</span><br><span class="line">ac_add_options --disable-update-channel</span><br><span class="line">ac_add_options --disable-update-packaging</span><br><span class="line"></span><br><span class="line"># crash reporter</span><br><span class="line">ac_add_options --disable-crashreporter</span><br><span class="line"></span><br><span class="line"># maintenance service</span><br><span class="line">ac_add_options --disable-maintenance-service</span><br><span class="line"></span><br><span class="line"># JDK</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64</span><br><span class="line"></span><br><span class="line"># mozilla</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/nightly</span><br></pre></td></tr></table></figure>
 
 <p>about:buildconfig の内容<br><a href="/images/uploads/2012/06/android-x86_firefox_fennec_16.0a1_buildconfig.png"><img src="/images/uploads/2012/06/android-x86_firefox_fennec_16.0a1_buildconfig.png" alt="android-x86 firefox fennec 16.0a1 buildconfig"></a></p>
 	  

@@ -198,7 +198,7 @@ nautilus のGUI が変更されたみたい。">
 </ul>
 <p>EDIT:<br>nVidia のGPU でも起動時のカーネルパラメータにnouveau.modeset&#x3D;0 を追加したら普通に起動できた。</p>
 <p>EDIT2:<br>overlay-scrollbar を削除するとログインできなくなるみたいだ。あわてず、Ctrl+Alt+F1 で、sudo apt-cache search overlay-scrollbar してパッケージ名を探して、sudo apt-get install でインストール。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="built_in">export</span> LIBOVERLAY_SCROLLBAR=0 &gt;&gt; ~/.xprofile</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="built_in">export</span> LIBOVERLAY_SCROLLBAR=0 &gt;&gt; ~/.xprofile</span><br></pre></td></tr></table></figure>
 
 <p>EDIT3:<br>nautilus でファイルの新規作成をするには、$HOME&#x2F;Templates にテンプレートファイルを入れておくとアプリケーションメニューやコンテキストメニューにNew Document メニューが表示されるようになるみたい。</p>
 	  

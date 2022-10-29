@@ -173,7 +173,7 @@
 		<p><img src="/images/proton_android_irrlicht_quake_map.png" alt="proton android irrlicht quake map"></p>
 <p><a target="_blank" rel="noopener" href="http://www.protonsdk.com/">http://www.protonsdk.com/</a></p>
 <p>Proton SDK を使って、Android NDK で実装されたIrrlicht のQuake マップデモをAndroid 端末実機で実行してみた。スクリーン上に「方向キー」、「ポインティング用のパッド」、「メニュー画面へ戻るボタン」などのGUI の他、サウンドも実装されている。<br>デモ用のRT3DApp.apk が提供されているけれど、自分でビルドする場合はAndroid SDK, Android NDK の環境を構築しておいて、以下のコマンドを投入するとAndroid 端末(android-8: Android 2.2)への転送までやってくれるみたい。Android 端末側では、「設定」-「アプリケーション」-「USBデバッグ」を許可しておく。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ svn checkout svn://rtsoft.com/rtsvn/proton</span><br><span class="line">$ <span class="built_in">cd</span> proton</span><br><span class="line">$ <span class="built_in">mv</span> ./shared/GUI/rtfontfileformat.h ./shared/GUI/RTFontFileFormat.h</span><br><span class="line">$ <span class="built_in">cp</span> -r ./shared/util ./shared/Util</span><br><span class="line">$ <span class="built_in">cd</span> ./RT3DApp/android</span><br><span class="line">$ ndk-build</span><br><span class="line">$ ant install</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ svn checkout svn://rtsoft.com/rtsvn/proton</span><br><span class="line">$ <span class="built_in">cd</span> proton</span><br><span class="line">$ <span class="built_in">mv</span> ./shared/GUI/rtfontfileformat.h ./shared/GUI/RTFontFileFormat.h</span><br><span class="line">$ <span class="built_in">cp</span> -r ./shared/util ./shared/Util</span><br><span class="line">$ <span class="built_in">cd</span> ./RT3DApp/android</span><br><span class="line">$ ndk-build</span><br><span class="line">$ ant install</span><br></pre></td></tr></table></figure>
 
 <p>.&#x2F;RT3DApp&#x2F;android&#x2F;local.properties の中のsdk.dir にはAndroid SDK のパスを指定する。アプリケーション本体のソースコードは、.&#x2F;RT3DApp&#x2F;source&#x2F; で、アウトプットは.&#x2F;RT3DApp&#x2F;android&#x2F;bin&#x2F;RT3DApp-debug.apk に生成された。</p>
 <p>ant install の前に.&#x2F;RT3DApp&#x2F;media&#x2F;update_media.bat と.&#x2F;RT3DApp&#x2F;android&#x2F;build.bat 相当を実行して、.&#x2F;RT3DApp&#x2F;android&#x2F;assets&#x2F; にリソースを展開しておく必要があるみたい。<br>ant install の代わりにant debug でパッケージを生成して止まるみたい。</p>
@@ -226,7 +226,7 @@
 	
 	
 		<p><img src="/images/gingerbread-x86.png" alt="android android-x86 2.3 gingerbread"><br><a target="_blank" rel="noopener" href="http://www.android-x86.org/getsourcecode">http://www.android-x86.org/getsourcecode</a><br>android-x86 のサイトでAndroid 2.3(gingerbread)版のリポジトリが公開されているものの、ISO イメージが公開されていないので、自分でビルドしてみた。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">uname</span> -a</span><br><span class="line">Linux localhost 2.6.37-android-x86+ <span class="comment">#1 SMP PREEMPT Fri Feb 11 18:01:30 JST 2011 i686 GNU/Linux</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">uname</span> -a</span><br><span class="line">Linux localhost 2.6.37-android-x86+ <span class="comment">#1 SMP PREEMPT Fri Feb 11 18:01:30 JST 2011 i686 GNU/Linux</span></span><br></pre></td></tr></table></figure>
 
 <p>カーネルが2.6.37 系になったみたい。<br>2.2版(Froyo-x86)にあったethernet 関連のモジュールが入っていない(?)せいか、そのままでは有線LAN がうまく動かないみたいだ。<br>マウスの挙動も少し変かもしれない。</p>
 
@@ -273,7 +273,7 @@
 	
 	
 		<p><img src="/images/android-x86_hdmi.png" alt="android android-x86"><br><a target="_blank" rel="noopener" href="http://www.android-x86.org/">http://www.android-x86.org/</a><br>Android をx86 にポートしたAndroid-x86 のバージョン2.2(Froyo-x86) をネットブック実機と仮想環境の両方で試してみた。<br>バージョン2.3(Gingerbread-x86) のブランチもあったけれど、さすがにAndroid 3.0 版(Honeycomb)はなかった。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">uname</span> -a</span><br><span class="line">Linux localhost 2.6.35.7-android-x86+ <span class="comment">#3 SMP PREEMPT Thu Jan 13 18:03:15 CST 2011 i686 GNU/Linux</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">uname</span> -a</span><br><span class="line">Linux localhost 2.6.35.7-android-x86+ <span class="comment">#3 SMP PREEMPT Thu Jan 13 18:03:15 CST 2011 i686 GNU/Linux</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -340,6 +340,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
+      </li>
+    
+      <li>
         <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
       </li>
     
@@ -375,10 +379,6 @@
         <a href="/2022/06/19/Tauri/" ><i class="fa fa-file-o"></i>Tauri</a>
       </li>
     
-      <li>
-        <a href="/2022/04/06/CHUWI-Hi-10-Go/" ><i class="fa fa-file-o"></i>CHUWI Hi 10 Go</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -386,7 +386,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
 </div>
 
 		

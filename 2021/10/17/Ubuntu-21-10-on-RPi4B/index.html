@@ -10,7 +10,7 @@
 2021-10-23 以下の問題の修正が期待されます。
 HDMI output freezes under current&amp;#x2F;proposed impish kernelshttps://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368
 現在のバージョンは
-12$ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`
+$ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`
 
 2021-11-08 に Updates に修正がリリースされるらしい。proposed リポジトリをウォッチしよう。
 
@@ -178,7 +178,7 @@ HDMI output freezes under current&amp;#x2F;proposed impish kernelshttps://bugs.l
 <h4 id="2021-10-23-以下の問題の修正が期待されます。"><a href="#2021-10-23-以下の問題の修正が期待されます。" class="headerlink" title="2021-10-23 以下の問題の修正が期待されます。"></a>2021-10-23 以下の問題の修正が期待されます。</h4><ul>
 <li><p>HDMI output freezes under current&#x2F;proposed impish kernels<br><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a></p>
 <p>現在のバージョンは</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ uname -r -v</span><br><span class="line">5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ uname -r -v</span><br><span class="line">5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`</span><br></pre></td></tr></table></figure>
 
 <p>2021-11-08 に Updates に修正がリリースされるらしい。<a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/46"></a><br>proposed リポジトリをウォッチしよう。<a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/48"></a></p>
 </li>
@@ -268,36 +268,36 @@ HDMI output freezes under current&amp;#x2F;proposed impish kernelshttps://bugs.l
 <li><p>ルータの DHCP サーバログから IP アドレスを確認する。(例: 192.168.11.4)</p>
 </li>
 <li><p>SSH で接続してパスワードを更新する。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh ubuntu@192.168.11.4</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh ubuntu@192.168.11.4</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>パッケージを更新する。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt udpate</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt udpate</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Raspberry Pi 関連ツール</p>
 <ul>
-<li>ツールのインストール<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install raspi-config</span><br></pre></td></tr></table></figure></li>
-<li>ツールの実行<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vcgencmd bootloader_version</span><br><span class="line">sudo rpi-eeprom-update</span><br><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure></li>
+<li>ツールのインストール<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install raspi-config</span><br></pre></td></tr></table></figure></li>
+<li>ツールの実行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vcgencmd bootloader_version</span><br><span class="line">sudo rpi-eeprom-update</span><br><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>config.txt の修正<br><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a><br>下の 2 行を追加する。</p>
-<figure class="highlight bash"><figcaption><span>/boot/firmware/config.txt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Config settings specific to arm64</span></span><br><span class="line">arm_64bit=1</span><br><span class="line">dtoverlay=dwc2</span><br><span class="line">gpu_mem=512</span><br><span class="line">dtoverlay=vc4-fkms-v3d</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>/boot/firmware/config.txt</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Config settings specific to arm64</span></span><br><span class="line">arm_64bit=1</span><br><span class="line">dtoverlay=dwc2</span><br><span class="line">gpu_mem=512</span><br><span class="line">dtoverlay=vc4-fkms-v3d</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>ビルド用パッケージのインストール</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install build-essential gettext meson m4</span><br><span class="line">sudo apt install gdebi</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install build-essential gettext meson m4</span><br><span class="line">sudo apt install gdebi</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>デスクトップ環境をインストールする。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ubuntu-desktop-minimal</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install ubuntu-desktop-minimal</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>日本語化</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install language-pack-ja</span><br><span class="line">sudo update-locale LANG=ja_JP.UTF8</span><br><span class="line">sudo dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install language-pack-ja</span><br><span class="line">sudo update-locale LANG=ja_JP.UTF8</span><br><span class="line">sudo dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>XRDP をインストール</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install xrdp</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install xrdp</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>netplan から network manager に切り替える。</p>
-<figure class="highlight yaml"><figcaption><span>/etc/netplan/99-my-config.yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">renderer:</span> <span class="string">NetworkManager</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>/etc/netplan/99-my-config.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">renderer:</span> <span class="string">NetworkManager</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="Ubuntu-Desktop-の設定"><a href="#Ubuntu-Desktop-の設定" class="headerlink" title="Ubuntu Desktop の設定"></a>Ubuntu Desktop の設定</h4><ol start="13">
 <li><p>ルータの DHCP サーバログから IP アドレスを確認する。(例: 192.168.11.4)</p>
@@ -305,47 +305,47 @@ HDMI output freezes under current&amp;#x2F;proposed impish kernelshttps://bugs.l
 <li><p>RDP で接続する。</p>
 </li>
 <li><p>ホームディレクトリの各フォルダ名を英語名に変更</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>テキストテンプレートファイルの作成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>日本語化の続き</p>
 <p>Settings &#x2F; Region and Language &#x2F; Manage Installed Languages<br>を選択すると不足パッケージがインストールされる。</p>
 </li>
 <li><p>「カラーマネジメントされたデバイスを作成するには認証が必要です。」の対策</p>
-<figure class="highlight text"><figcaption><span>/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Allow Colord all Users]</span><br><span class="line">Identity=unix-user:*</span><br><span class="line">Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile</span><br><span class="line">ResultAny=no</span><br><span class="line">ResultInactive=no</span><br><span class="line">ResultActive=yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla</span></figcaption><table><tr><td class="code"><pre><span class="line">[Allow Colord all Users]</span><br><span class="line">Identity=unix-user:*</span><br><span class="line">Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile</span><br><span class="line">ResultAny=no</span><br><span class="line">ResultInactive=no</span><br><span class="line">ResultActive=yes</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart polkit.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart polkit.service</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>「Authentication is required to refresh the system repositories」対策</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># echo &quot;X-GNOME-Autostart-enabled=false&quot; &gt;&gt; /etc/xdg/autostart/gnome-software-service.desktop</span></span><br><span class="line"><span class="comment"># echo &quot;X-GNOME-Autostart-enabled=false&quot; &gt;&gt; /etc/xdg/autostart/gnome-settings-daemon.desktop</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># echo &quot;X-GNOME-Autostart-enabled=false&quot; &gt;&gt; /etc/xdg/autostart/gnome-software-service.desktop</span></span><br><span class="line"><span class="comment"># echo &quot;X-GNOME-Autostart-enabled=false&quot; &gt;&gt; /etc/xdg/autostart/gnome-settings-daemon.desktop</span></span><br></pre></td></tr></table></figure>
 
 <p>または</p>
-<figure class="highlight text"><figcaption><span>/etc/polkit-1/localauthority/50-local.d/50-allow-package-management.pkla</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Allow Package Management all Users]</span><br><span class="line">Identity=unix-user:*</span><br><span class="line">Action=org.debian.apt.*;io.snapcraft.*;org.freedesktop.packagekit.*;com.ubuntu.update-notifier.*</span><br><span class="line">ResultAny=no</span><br><span class="line">ResultInactive=no</span><br><span class="line">ResultActive=yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/etc/polkit-1/localauthority/50-local.d/50-allow-package-management.pkla</span></figcaption><table><tr><td class="code"><pre><span class="line">[Allow Package Management all Users]</span><br><span class="line">Identity=unix-user:*</span><br><span class="line">Action=org.debian.apt.*;io.snapcraft.*;org.freedesktop.packagekit.*;com.ubuntu.update-notifier.*</span><br><span class="line">ResultAny=no</span><br><span class="line">ResultInactive=no</span><br><span class="line">ResultActive=yes</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart polkit.service</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart polkit.service</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="GNOME-Shell-の設定"><a href="#GNOME-Shell-の設定" class="headerlink" title="GNOME Shell の設定"></a>GNOME Shell の設定</h4><ol start="20">
 <li><p>Tweaks のインストール</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gnome-tweaks</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install gnome-tweaks</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>GNOME Shell 拡張のインストール</p>
 <ul>
 <li><p>GNOME Shell Extensions</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gnome-shell-extensions</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install gnome-shell-extensions</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Arch Menu</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://gitlab.com/arcmenu/ArcMenu.git</span><br><span class="line"><span class="built_in">cd</span> ArcMenu</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://gitlab.com/arcmenu/ArcMenu.git</span><br><span class="line"><span class="built_in">cd</span> ArcMenu</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Argos</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/mwilck/argos.git</span><br><span class="line"><span class="built_in">cp</span> -r argos/argos@pew.worldwidemann.com ~/.local/share/gnome-shell/extensions</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/mwilck/argos.git</span><br><span class="line"><span class="built_in">cp</span> -r argos/argos@pew.worldwidemann.com ~/.local/share/gnome-shell/extensions</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Dash to Panel</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gnome-shell-extension-dash-to-panel</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install gnome-shell-extension-dash-to-panel</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Tweaks &amp; Extensions in System Menu</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/F-i-f/tweaks-system-menu.git</span><br><span class="line">cd tweaks-system-menu</span><br><span class="line">meson build</span><br><span class="line">ninja -C build install</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/F-i-f/tweaks-system-menu.git</span><br><span class="line">cd tweaks-system-menu</span><br><span class="line">meson build</span><br><span class="line">ninja -C build install</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>ログアウトしてログイン</p>
@@ -357,11 +357,11 @@ HDMI output freezes under current&amp;#x2F;proposed impish kernelshttps://bugs.l
 <li><p>アプリケーションのインストール</p>
 <ul>
 <li><p>Audacious</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install audacious</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install audacious</span><br></pre></td></tr></table></figure></li>
 <li><p>Chromium</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo snap install chromium</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo snap install chromium</span><br></pre></td></tr></table></figure></li>
 <li><p>Visual Studio Code<br><a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a><br>Download .deb package</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gdebi code_*_arm64.deb</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gdebi code_*_arm64.deb</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ol>
@@ -369,21 +369,21 @@ HDMI output freezes under current&amp;#x2F;proposed impish kernelshttps://bugs.l
 <li><p>XRDP でサウンド転送</p>
 <ul>
 <li><p>前提パッケージ</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt build-dep pulseaudio</span><br><span class="line">sudo apt install libpulse-dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt build-dep pulseaudio</span><br><span class="line">sudo apt install libpulse-dev</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>ソースリポジトリの有効化</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">software-properties-gtk</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">software-properties-gtk</span><br></pre></td></tr></table></figure>
 
 <p>「ソースコード」をチェック</p>
 </li>
 <li><p>インストール済みの pulseaudio (バージョン 15.0) のソースを展開</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/ubuntu/repos</span><br><span class="line">apt <span class="built_in">source</span> pulseaudio</span><br><span class="line"><span class="built_in">cd</span> pulseaudio-15.0+dfsg1</span><br><span class="line">meson build</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/ubuntu/repos</span><br><span class="line">apt <span class="built_in">source</span> pulseaudio</span><br><span class="line"><span class="built_in">cd</span> pulseaudio-15.0+dfsg1</span><br><span class="line">meson build</span><br></pre></td></tr></table></figure></li>
 <li><p>(pulseaudio-module-xrdp がサポートする) pulseaudio 14.x のソースを展開</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/ubuntu/repos</span><br><span class="line">git <span class="built_in">clone</span> -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git</span><br><span class="line"><span class="built_in">cd</span> pulseaudio</span><br><span class="line">./bootstrap.sh</span><br><span class="line">./configure</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/ubuntu/repos</span><br><span class="line">git <span class="built_in">clone</span> -b stable-14.x https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git</span><br><span class="line"><span class="built_in">cd</span> pulseaudio</span><br><span class="line">./bootstrap.sh</span><br><span class="line">./configure</span><br></pre></td></tr></table></figure></li>
 <li><p>config.h の移植(14.2 から 15.0 へ)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /home/ubuntu/repos</span><br><span class="line">cp pulseaudio/config.h pulseaudio-15.0+dfsg1/config.h</span><br><span class="line">sed -i -e &#x27;s/14.2/15.0/g&#x27; pulseaudio-15.0+dfsg1/config.h</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /home/ubuntu/repos</span><br><span class="line">cp pulseaudio/config.h pulseaudio-15.0+dfsg1/config.h</span><br><span class="line">sed -i -e &#x27;s/14.2/15.0/g&#x27; pulseaudio-15.0+dfsg1/config.h</span><br></pre></td></tr></table></figure></li>
 <li><p>pulseaudio-module-xrdp のインストール</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/ubuntu/repos</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/neutrinolabs/pulseaudio-module-xrdp.git</span><br><span class="line"><span class="built_in">cd</span> pulseaudio-module-xrdp</span><br><span class="line">./bootstrap &amp;&amp; ./configure PULSE_DIR=/home/ubuntu/repos/pulseaudio-15.0+dfsg1</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line"><span class="built_in">ls</span> $(pkg-config --variable=modlibexecdir libpulse)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/ubuntu/repos</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/neutrinolabs/pulseaudio-module-xrdp.git</span><br><span class="line"><span class="built_in">cd</span> pulseaudio-module-xrdp</span><br><span class="line">./bootstrap &amp;&amp; ./configure PULSE_DIR=/home/ubuntu/repos/pulseaudio-15.0+dfsg1</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line"><span class="built_in">ls</span> $(pkg-config --variable=modlibexecdir libpulse)</span><br></pre></td></tr></table></figure>
 <p>ログアウトしてログインすると、サウンドの出力デバイスが<code>xrdp sink</code>になる。<br>内蔵ヘッドフォンに戻った場合は<code>pulseaudio -k</code>で回復する。</p>
 </li>
 </ul>
@@ -396,10 +396,10 @@ HDMI output freezes under current&amp;#x2F;proposed impish kernelshttps://bugs.l
 </ol>
 <h4 id="Bluetooth"><a href="#Bluetooth" class="headerlink" title="Bluetooth"></a>Bluetooth</h4><ol start="27">
 <li><p>Bluetooth の有効化</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install pi-bluetooth bluetooth bluez</span><br><span class="line">sudo usermod -a -G bluetooth ubuntu</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install pi-bluetooth bluetooth bluez</span><br><span class="line">sudo usermod -a -G bluetooth ubuntu</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Flatpak</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="接続構成検討"><a href="#接続構成検討" class="headerlink" title="接続構成検討"></a>接続構成検討</h3><h4 id="インターネット経由接続"><a href="#インターネット経由接続" class="headerlink" title="インターネット経由接続"></a>インターネット経由接続</h4><p>クライアントから OpenVPN のトンネルを通して RPi4 に接続する方式。接続できた。</p>
 <p><img src="/images/rpi4_from_internet.drawio.svg"></p>

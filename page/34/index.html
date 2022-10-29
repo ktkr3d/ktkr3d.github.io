@@ -164,6 +164,41 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-06-25 </div>
+			<div class="article-title"><a href="/2011/06/25/proun-2/" >Proun で遊んでみた2</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/proun_ss2.png" alt="proun"></p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="http://www.proun-game.com/">http://www.proun-game.com/</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://blog.oogst3d.net/">http://blog.oogst3d.net/</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.ronimo-games.com/forum/viewforum.php?f=7">http://www.ronimo-games.com/forum/viewforum.php?f=7</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.proun-game.com/UserTracks.html">http://www.proun-game.com/UserTracks.html</a></p>
+</li>
+</ul>
+<p>Proun が2011.6.24 にリリースされたので遊んでみた。<br>抽象的なコースが綺麗でBGM も軽快なのが楽しい。<br>ゲームを進めていくとスピードがアップ(Fast -&gt; Sonic -&gt; Supersonic -&gt; Speed of light)していってかなり難しくなる。<br>ネットワーク上でのランキングやユーザトラック（コース）の拡張ができるようなので、長く遊べそう。<br>正式版になって、フリーダウンロードとPay what you want($2, $5, $10, $20, any) から選択できるようになったので、PayPal で購入してみた。</p>
+
+	
+	</div>
+  <a type="button" href="/2011/06/25/proun-2/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-06-22 </div>
 			<div class="article-title"><a href="/2011/06/22/haiku-r1-a3/" >HAIKU R1 a3を試してみた</a></div>						
 		</h3>
@@ -306,7 +341,7 @@
 <ul>
 <li>現在の気温の単位(摂氏&#x2F;華氏)が設定と逆になってしまう単純なバグがある(以下のように修正してみた)</li>
 </ul>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let currTemperature = new St.Label(&#123; text: (MUNITS &gt; 0 ? curr[0].temp_C + &#x27;C&#x27; : curr[0].temp_F + &#x27;F&#x27;) &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">let currTemperature = new St.Label(&#123; text: (MUNITS &gt; 0 ? curr[0].temp_C + &#x27;C&#x27; : curr[0].temp_F + &#x27;F&#x27;) &#125;);</span><br></pre></td></tr></table></figure>
 
 
 <ul>
@@ -364,18 +399,18 @@
 	
 		<p>GNOME Shell を3.0.2 にしたらdock が消えたので復活させてみた。</p>
 <ul>
-<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#x6f;&#x63;&#107;&#64;&#103;&#x6e;&#x6f;&#x6d;&#101;&#45;&#115;&#x68;&#101;&#x6c;&#108;&#x2d;&#101;&#120;&#x74;&#x65;&#x6e;&#115;&#x69;&#x6f;&#110;&#115;&#x2e;&#x67;&#110;&#111;&#x6d;&#101;&#x2e;&#x6f;&#x72;&#x67;">&#x64;&#x6f;&#x63;&#107;&#64;&#103;&#x6e;&#x6f;&#x6d;&#101;&#45;&#115;&#x68;&#101;&#x6c;&#108;&#x2d;&#101;&#120;&#x74;&#x65;&#x6e;&#115;&#x69;&#x6f;&#110;&#115;&#x2e;&#x67;&#110;&#111;&#x6d;&#101;&#x2e;&#x6f;&#x72;&#x67;</a>&#x2F;metadata.json</p>
+<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#111;&#x63;&#x6b;&#x40;&#103;&#110;&#111;&#109;&#x65;&#x2d;&#115;&#x68;&#x65;&#x6c;&#108;&#45;&#x65;&#120;&#116;&#101;&#x6e;&#115;&#105;&#x6f;&#110;&#115;&#x2e;&#x67;&#110;&#111;&#109;&#x65;&#x2e;&#111;&#114;&#x67;">&#x64;&#111;&#x63;&#x6b;&#x40;&#103;&#110;&#111;&#109;&#x65;&#x2d;&#115;&#x68;&#x65;&#x6c;&#108;&#45;&#x65;&#120;&#116;&#101;&#x6e;&#115;&#105;&#x6f;&#110;&#115;&#x2e;&#x67;&#110;&#111;&#109;&#x65;&#x2e;&#111;&#114;&#x67;</a>&#x2F;metadata.json</p>
 </li>
-<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#x6f;&#99;&#107;&#x40;&#x67;&#x6e;&#x6f;&#109;&#x65;&#x2d;&#115;&#x68;&#101;&#x6c;&#108;&#x2d;&#101;&#120;&#x74;&#101;&#x6e;&#x73;&#105;&#x6f;&#110;&#x73;&#46;&#x67;&#110;&#111;&#x6d;&#101;&#x2e;&#x6f;&#x72;&#103;">&#x64;&#x6f;&#99;&#107;&#x40;&#x67;&#x6e;&#x6f;&#109;&#x65;&#x2d;&#115;&#x68;&#101;&#x6c;&#108;&#x2d;&#101;&#120;&#x74;&#101;&#x6e;&#x73;&#105;&#x6f;&#110;&#x73;&#46;&#x67;&#110;&#111;&#x6d;&#101;&#x2e;&#x6f;&#x72;&#103;</a>&#x2F;metadata.json</p>
+<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#x6f;&#99;&#107;&#x40;&#103;&#110;&#111;&#x6d;&#101;&#x2d;&#x73;&#104;&#x65;&#108;&#x6c;&#45;&#101;&#x78;&#x74;&#x65;&#x6e;&#x73;&#x69;&#x6f;&#x6e;&#115;&#x2e;&#x67;&#110;&#111;&#x6d;&#101;&#x2e;&#111;&#114;&#x67;">&#100;&#x6f;&#99;&#107;&#x40;&#103;&#110;&#111;&#x6d;&#101;&#x2d;&#x73;&#104;&#x65;&#108;&#x6c;&#45;&#101;&#x78;&#x74;&#x65;&#x6e;&#x73;&#x69;&#x6f;&#x6e;&#115;&#x2e;&#x67;&#110;&#111;&#x6d;&#101;&#x2e;&#111;&#114;&#x67;</a>&#x2F;metadata.json</p>
 </li>
 </ul>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;uuid&quot;: &quot;dock@gnome-shell-extensions.gnome.org&quot;,</span><br><span class="line">&quot;name&quot;: &quot;Dock&quot;,</span><br><span class="line">&quot;description&quot;: &quot;A dock for the GNOME Shell -- displays favorite and running applications&quot;,</span><br><span class="line">&quot;original-author&quot;: &quot;tclaesson@gmail.com&quot;,</span><br><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot; ],</span><br><span class="line">&quot;localedir&quot;: &quot;/usr/local/share/locale&quot;,</span><br><span class="line">&quot;url&quot;: &quot;http://git.gnome.org/gnome-shell-extensions&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;uuid&quot;: &quot;dock@gnome-shell-extensions.gnome.org&quot;,</span><br><span class="line">&quot;name&quot;: &quot;Dock&quot;,</span><br><span class="line">&quot;description&quot;: &quot;A dock for the GNOME Shell -- displays favorite and running applications&quot;,</span><br><span class="line">&quot;original-author&quot;: &quot;tclaesson@gmail.com&quot;,</span><br><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot; ],</span><br><span class="line">&quot;localedir&quot;: &quot;/usr/local/share/locale&quot;,</span><br><span class="line">&quot;url&quot;: &quot;http://git.gnome.org/gnome-shell-extensions&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>を以下のように修正した。</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;shell-version&quot;: [ &quot;3.0&quot; ],</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&quot;shell-version&quot;: [ &quot;3.0&quot; ],</span><br></pre></td></tr></table></figure>
 
 <p>または、</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot;, &quot;3.0.2&quot; ],</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot;, &quot;3.0.2&quot; ],</span><br></pre></td></tr></table></figure>
 
 	
 	</div>
@@ -410,19 +445,19 @@
 <ul>
 <li>リポジトリの追加</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:mozillateam/firefox-next</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:mozillateam/firefox-next</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
 
 
 <ul>
 <li>firefox をインストール</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install firefox</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install firefox</span><br></pre></td></tr></table></figure>
 
 
 <ul>
 <li>または既存のFirefox 4 からアップグレード</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
 
 
 
@@ -515,38 +550,13 @@
 </li>
 </ul>
 <p>天気を表示する拡張を入れてみた。<br><a target="_blank" rel="noopener" href="http://weather.yahoo.com/">http://weather.yahoo.com/</a> で地域を検索して、RSS のリンクに含まれる地域コードをextension.js に設定する。東京はJAXX0085、大阪はJAXX0071 になる。</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const UNITS = &#x27;c&#x27;; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius</span><br><span class="line">const YAHOO_ID = &#x27;JAXX0085&#x27;;</span><br><span class="line">const WEATHER_URL = &#x27;http://weather.yahooapis.com/forecastjson?u=&#x27; + UNITS + &#x27;&amp;p=&#x27; + YAHOO_ID;</span><br><span class="line">const FORECAST_URL = &#x27;http://query.yahooapis.com/v1/public/yql?format=json&amp;q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22&#x27; + YAHOO_ID + &#x27;%22%20%20and%20u=&quot;&#x27; + UNITS + &#x27;&quot;&#x27;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">const UNITS = &#x27;c&#x27;; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius</span><br><span class="line">const YAHOO_ID = &#x27;JAXX0085&#x27;;</span><br><span class="line">const WEATHER_URL = &#x27;http://weather.yahooapis.com/forecastjson?u=&#x27; + UNITS + &#x27;&amp;p=&#x27; + YAHOO_ID;</span><br><span class="line">const FORECAST_URL = &#x27;http://query.yahooapis.com/v1/public/yql?format=json&amp;q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22&#x27; + YAHOO_ID + &#x27;%22%20%20and%20u=&quot;&#x27; + UNITS + &#x27;&quot;&#x27;;</span><br></pre></td></tr></table></figure>
 
 <p>リアルタイムの気温が怪しいんだけど、どこから拾ってきているんだろう…</p>
 
 	
 	</div>
   <a type="button" href="/2011/05/23/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f4/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-05-23 </div>
-			<div class="article-title"><a href="/2011/05/23/gnome-tweak-tool-3-0-4-e38292e8a9a6e38197e381a6e381bfe3819f/" >gnome-tweak-tool 3.0.4 を試してみた</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/Screenshot-Tweak-Tool.png" alt="gnome tweak tool 3.0.4 extension"></p>
-<p><a target="_blank" rel="noopener" href="http://git.gnome.org/browse/gnome-tweak-tool">http://git.gnome.org/browse/gnome-tweak-tool</a><br>予告通り、3.0.4 でGNOME Shell Extensions の拡張の管理ができるようになっていた。<br>ON&#x2F;OFF を切り替えると、再起動を促すボタンが表示されるので便利。</p>
-
-	
-	</div>
-  <a type="button" href="/2011/05/23/gnome-tweak-tool-3-0-4-e38292e8a9a6e38197e381a6e381bfe3819f/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -600,6 +610,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
+      </li>
+    
+      <li>
         <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
       </li>
     
@@ -635,10 +649,6 @@
         <a href="/2022/06/19/Tauri/" ><i class="fa fa-file-o"></i>Tauri</a>
       </li>
     
-      <li>
-        <a href="/2022/04/06/CHUWI-Hi-10-Go/" ><i class="fa fa-file-o"></i>CHUWI Hi 10 Go</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -646,7 +656,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
 </div>
 
 		

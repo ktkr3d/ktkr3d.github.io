@@ -164,6 +164,60 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-07-06 </div>
+			<div class="article-title"><a href="/2012/07/06/burg-clonezilla-iso/" >Burg + Clonezilla ISO</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/burg_clonezilla_iso.png" alt="burg clonezilla iso"></p>
+<p>パーティション&#x2F;ディスククローンツールClonezilla のISO をBurg から起動してみた。ブートローダから直接ISO を指定するので、起動デバイスが不要で楽チン。Clonezilla は日本語表示も選択できるし、バックアップも簡単で速くていいかも。<br>GRUB 1.99 以降と違って、Burg は有効なカーネルのエントリーをすべて表示してしまうので、表示したい起動エントリーについてはGrub Customizer で選択した。</p>
+<ol>
+<li>Clonezilla 用の起動エントリーを追加。</li>
+</ol>
+<figure class="highlight text"><figcaption><span>/etc/burg.d/40_custom</span></figcaption><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">exec tail -n +3 $0</span><br><span class="line"># This file provides an easy way to add custom menu entries.  Simply type the</span><br><span class="line"># menu entries you want to add after this comment.  Be careful not to change</span><br><span class="line"># the &#x27;exec tail&#x27; line above.</span><br><span class="line">menuentry &quot;Android-x86 4.0.3&quot; --class android --class os &#123;</span><br><span class="line">	insmod ext2</span><br><span class="line">	set root=&#x27;(hd0,3)&#x27;</span><br><span class="line">	echo	&#x27;Loading Android-x86 4.0.3 ...&#x27;</span><br><span class="line">	linux /android-4.0-RC1/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/android-4.0-RC1 DATA=</span><br><span class="line">	initrd /android-4.0-RC1/initrd.img</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">menuentry &quot;Clonezilla 20120620&quot; --class iso --class os &#123;</span><br><span class="line">	insmod ext2</span><br><span class="line">	set root=&#x27;(hd0,3)&#x27;</span><br><span class="line">	loopback loop &quot;/Clonezilla/clonezilla-live-20120620-precise.iso&quot; </span><br><span class="line">	linux (loop)/live/vmlinuz boot=live live-config union=aufs nolocales noprompt gfxpayload=800x600x16 ip=frommedia findiso=&quot;/Clonezilla/clonezilla-live-20120620-precise.iso&quot;</span><br><span class="line">	initrd (loop)/live/initrd.img</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ol start="2">
+<li>ISO 用のアイコンが表示されるようにBurg のテーマを修正。</li>
+</ol>
+<figure class="highlight text"><figcaption><span>/boot/burg/themes/fortune/icons/hover</span></figcaption><table><tr><td class="code"><pre><span class="line">+class</span><br><span class="line">&#123;</span><br><span class="line">  -windows &#123; image = &quot;$$/grey_windows.png:$$/large_windows.png&quot; &#125;</span><br><span class="line">  -ubuntu &#123; image = &quot;$$/grey_ubuntu.png:$$/large_ubuntu.png&quot; &#125;</span><br><span class="line">  -debian &#123; image = &quot;$$/grey_debian.png:$$/large_debian.png&quot; &#125;</span><br><span class="line">  -suse &#123; image = &quot;$$/grey_opensuse.png:$$/large_opensuse.png&quot; &#125;</span><br><span class="line">  -freebsd &#123; image = &quot;$$/grey_freebsd.png:$$/large_freebsd.png&quot; &#125;</span><br><span class="line">  -macosx &#123; image = &quot;$$/grey_osx.png:$$/large_osx.png&quot; &#125;</span><br><span class="line">  -gentoo &#123; image = &quot;$$/grey_gentoo.png:$$/large_gentoo.png&quot; &#125;</span><br><span class="line">  -linuxmint &#123; image = &quot;$$/grey_linuxmint.png:$$/large_linuxmint.png&quot; &#125;</span><br><span class="line">  -mandrake &#123; image = &quot;$$/grey_mandrake.png:$$/large_mandrake.png&quot; &#125;</span><br><span class="line">  -arch &#123; image = &quot;$$/grey_arch.png:$$/large_arch.png&quot; &#125;</span><br><span class="line">  -fedora &#123; image = &quot;$$/grey_fedora.png:$$/large_fedora.png&quot; &#125;</span><br><span class="line">  -pclinuxos &#123; image = &quot;$$/grey_pclinuxos.png:$$/large_pclinuxos.png&quot; &#125;</span><br><span class="line">  -sabayon &#123; image = &quot;$$/grey_sabayon.png:$$/large_sabayon.png&quot; &#125;</span><br><span class="line">  -slackware &#123; image = &quot;$$/grey_slackware.png:$$/large_slackware.png&quot; &#125;</span><br><span class="line">  -android &#123; image = &quot;$$/grey_android.png:$$/large_android.png&quot; &#125;</span><br><span class="line">  -iso &#123; image = &quot;$$/grey_iso.png:$$/large_iso.png&quot; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-include &quot;../custom/icon_hover&quot;</span><br></pre></td></tr></table></figure>
+
+
+<ol start="3">
+<li>burg.cfg を更新</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo update-burg</span><br></pre></td></tr></table></figure>
+
+
+<ol start="4">
+<li><p>Grub Customizer で表示したい起動エントリーを選択する。<br>Grub Customizer はBurg が有効である場合に検知して、確認してくるので、Burg を更新するように選択する。</p>
+</li>
+<li><p>設定の確認</p>
+</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo burg-emu -D</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+	
+	</div>
+  <a type="button" href="/2012/07/06/burg-clonezilla-iso/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-07-03 </div>
 			<div class="article-title"><a href="/2012/07/03/playing_diablo_3/" >Playing Diablo 3</a></div>						
 		</h3>
@@ -201,7 +255,7 @@
 	
 		<p><img src="/images/irrlicht_1.8_xeffects.png" alt="irrlicht 1.8 xeffects"></p>
 <p>Irrlicht 1.8 trunk でXEffects の影が有効にならなくなっていたので、XEffects のヘッダを修正してみた。Irrlicht 側のインタフェースが変わったのが原因かな。Irrlicht 1.8 ではXEffects を使っても画像が反転しないし、CGUITTFONT とも同時に使えるし、便利になったなぁ。環境はUbuntu 12.04 x86_64 + Irrlicht 1.8 trunk (SVN rev: 4170 ) + XEffects v1.3。</p>
-<figure class="highlight cpp"><figcaption><span>EffectCB.h</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">OnSetConstants</span><span class="params">(irr::video::IMaterialRendererServices* services, irr::s32 userData)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(services-&gt;<span class="built_in">getVideoDriver</span>()-&gt;<span class="built_in">getDriverType</span>() == irr::video::EDT_OPENGL)</span><br><span class="line">	&#123;</span><br><span class="line"><span class="comment">//		irr::f32 TexVar = 0;</span></span><br><span class="line">		irr::s32 TexVar = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;ColorMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;ColorMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;ScreenMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;ScreenMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;DepthMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;DepthMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">3</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;UserMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;UserMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><figcaption><span>EffectCB.h</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">OnSetConstants</span><span class="params">(irr::video::IMaterialRendererServices* services, irr::s32 userData)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(services-&gt;<span class="built_in">getVideoDriver</span>()-&gt;<span class="built_in">getDriverType</span>() == irr::video::EDT_OPENGL)</span><br><span class="line">	&#123;</span><br><span class="line"><span class="comment">//		irr::f32 TexVar = 0;</span></span><br><span class="line">		irr::s32 TexVar = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;ColorMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;ColorMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;ScreenMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;ScreenMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;DepthMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;DepthMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">3</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;UserMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;UserMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
 	
 	</div>
@@ -230,23 +284,23 @@
 <ol>
 <li>ビルドするための依存関係の取得</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install mercurial ccache</span><br><span class="line">$ sudo apt-get build-dep firefox</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install mercurial ccache</span><br><span class="line">$ sudo apt-get build-dep firefox</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="2">
 <li>Firefox のソースの取得</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/mozilla-central/ src</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/mozilla-central/ src</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="3">
 <li>MOZCONFIG のカスタマイズ</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> src</span><br><span class="line">$ gedit mozconfig-android-x86</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> src</span><br><span class="line">$ gedit mozconfig-android-x86</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight text"><figcaption><span>mozconfig-android-x86</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-endian=little</span><br><span class="line">ac_add_options --with-android-ndk=&quot;$HOME/Projects/Android/android-ndk-r8&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;$HOME/Projects/Android/android-sdk-linux/platforms/android-15&quot;</span><br><span class="line">ac_add_options --with-android-version=10</span><br><span class="line">ac_add_options --with-android-platform=&quot;$HOME/Projects/Android/android-ndk-r8/platforms/android-14/arch-x86&quot;</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">ac_add_options --disable-auto-deps</span><br><span class="line">ac_add_options --disable-debug</span><br><span class="line">ac_add_options --disable-debug-symbols</span><br><span class="line">ac_add_options --disable-tests</span><br><span class="line">ac_add_options --disable-ipdl-tests</span><br><span class="line">ac_add_options --enable-strip</span><br><span class="line">ac_add_options --enable-install-strip</span><br><span class="line"></span><br><span class="line"># updater</span><br><span class="line">ac_add_options --disable-updater</span><br><span class="line">ac_add_options --disable-update-channel</span><br><span class="line">ac_add_options --disable-update-packaging</span><br><span class="line"></span><br><span class="line"># crash reporter</span><br><span class="line">ac_add_options --disable-crashreporter</span><br><span class="line"></span><br><span class="line"># maintenance service</span><br><span class="line">ac_add_options --disable-maintenance-service</span><br><span class="line"></span><br><span class="line"># JDK</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64</span><br><span class="line"></span><br><span class="line"># branding</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/beta</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>mozconfig-android-x86</span></figcaption><table><tr><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-endian=little</span><br><span class="line">ac_add_options --with-android-ndk=&quot;$HOME/Projects/Android/android-ndk-r8&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;$HOME/Projects/Android/android-sdk-linux/platforms/android-15&quot;</span><br><span class="line">ac_add_options --with-android-version=10</span><br><span class="line">ac_add_options --with-android-platform=&quot;$HOME/Projects/Android/android-ndk-r8/platforms/android-14/arch-x86&quot;</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">ac_add_options --disable-auto-deps</span><br><span class="line">ac_add_options --disable-debug</span><br><span class="line">ac_add_options --disable-debug-symbols</span><br><span class="line">ac_add_options --disable-tests</span><br><span class="line">ac_add_options --disable-ipdl-tests</span><br><span class="line">ac_add_options --enable-strip</span><br><span class="line">ac_add_options --enable-install-strip</span><br><span class="line"></span><br><span class="line"># updater</span><br><span class="line">ac_add_options --disable-updater</span><br><span class="line">ac_add_options --disable-update-channel</span><br><span class="line">ac_add_options --disable-update-packaging</span><br><span class="line"></span><br><span class="line"># crash reporter</span><br><span class="line">ac_add_options --disable-crashreporter</span><br><span class="line"></span><br><span class="line"># maintenance service</span><br><span class="line">ac_add_options --disable-maintenance-service</span><br><span class="line"></span><br><span class="line"># JDK</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64</span><br><span class="line"></span><br><span class="line"># branding</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/beta</span><br></pre></td></tr></table></figure>
 
 
 
@@ -256,20 +310,20 @@
 <li><p>インストール先のAndroid 端末を無線LAN で接続する。</p>
 </li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> ADBHOST=192.168.0.4</span><br><span class="line">$ adb devices</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> ADBHOST=192.168.0.4</span><br><span class="line">$ adb devices</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="6">
 <li>ビルドとインストール</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> MOZCONFIG=./mozconfig-android-x86</span><br><span class="line">$ make -f client.mk build_and_deploy</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> MOZCONFIG=./mozconfig-android-x86</span><br><span class="line">$ make -f client.mk build_and_deploy</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
 
 <p>インストーラパッケージは以下に生成される。<br>.&#x2F;obj-x86_64-unknown-linux-gnu&#x2F;dist&#x2F;fennec-16.0a1.en-US.android-i386.apk</p>
 <ol start="7">
 <li>次回ビルド時にソースを最新の状態にするには</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hg pull -u</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hg pull -u</span><br></pre></td></tr></table></figure>
 	
 	</div>
   <a type="button" href="/2012/06/23/android-x86-4-0-3-firefoxfennec-16-0a1/#more" class="btn btn-default more">Read More</a>
@@ -297,28 +351,28 @@
 <ol>
 <li>Android 4.0.3 のターゲット情報は以下のとおり。ID は10。</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ android list target</span><br><span class="line"><span class="built_in">id</span>: 10 or <span class="string">&quot;android-15&quot;</span></span><br><span class="line">     Name: Android 4.0.3</span><br><span class="line">     Type: Platform</span><br><span class="line">     API level: 15</span><br><span class="line">     Revision: 3</span><br><span class="line">     Skins: WXGA720, QVGA, WSVGA, WQVGA400, WQVGA432, HVGA, WVGA854, WXGA800, WVGA800 (default)</span><br><span class="line">     ABIs : armeabi-v7a, x86</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android list target</span><br><span class="line"><span class="built_in">id</span>: 10 or <span class="string">&quot;android-15&quot;</span></span><br><span class="line">     Name: Android 4.0.3</span><br><span class="line">     Type: Platform</span><br><span class="line">     API level: 15</span><br><span class="line">     Revision: 3</span><br><span class="line">     Skins: WXGA720, QVGA, WSVGA, WQVGA400, WQVGA432, HVGA, WVGA854, WXGA800, WVGA800 (default)</span><br><span class="line">     ABIs : armeabi-v7a, x86</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="2">
 <li>Application.mk でx86 を指定</li>
 </ol>
-<figure class="highlight text"><figcaption><span>Application.mk</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#APP_ABI := armeabi armeabi-v7a</span><br><span class="line">APP_ABI := armeabi-v7a x86</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>Application.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">#APP_ABI := armeabi armeabi-v7a</span><br><span class="line">APP_ABI := armeabi-v7a x86</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="3">
 <li>プロジェクトをアップデート</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ android update project --path . --target 10</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android update project --path . --target 10</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="4">
 <li>ビルド</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ndk-build clean</span><br><span class="line">$ ndk-build -j 4</span><br><span class="line">$ ant clean</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ndk-build clean</span><br><span class="line">$ ndk-build -j 4</span><br><span class="line">$ ant clean</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
 
 
 
@@ -346,9 +400,9 @@
 	
 	
 		<p>Firefox のアドオンNewsFox を使ってRSS を購読しているのだけど、Firefox を13.0 にアップデートしてから、時々マウスのボタンダウンイベントがキャプチャーされて無効化されてしまうような挙動があったので、やっつけで暫定対策してみた。<del>Linux でもWindows でも発生する(?)ので、NewsFox 側に問題がありそう。いろいろFirefox のバグ回避もしているようだし。</del>とりあえず、ドラッグ開始しないようにreturn してしまうことにした。NewsFox でドラッグアンドドロップなんて飾りですよ。</p>
-<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragIt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragIt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragArt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>; </span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragArt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>; </span><br></pre></td></tr></table></figure>
 
 <p>他に古いAPI を使っているところもあるようだし、早くアップデート版がリリースされるといいな。</p>
 <p>newsfox.xpi &#x3D; {899DF1F8-2F43-4394-8315-37F6744E6319}.xpi</p>
@@ -397,44 +451,44 @@
 * system.sfs
 </code></pre>
 <p>設定保存用のフォルダも作成</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> /PATHTO/Android-x86/tegav2/data</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> /PATHTO/Android-x86/tegav2/data</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="4">
 <li>Burg のインストール</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:n-muench/burg</span><br><span class="line">$ sudo apt-get update </span><br><span class="line">$ sudo apt-get install burg burg-themes</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:n-muench/burg</span><br><span class="line">$ sudo apt-get update </span><br><span class="line">$ sudo apt-get install burg burg-themes</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="5">
 <li>Burg のテーマfortune とAndroid 用アイコンをgnome-look.org からダウンロードしてテーマ変更</li>
 </ol>
-<figure class="highlight text"><figcaption><span>/etc/default/burg</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GRUB_GFXMODE=1366x768</span><br><span class="line">GRUB_THEME=fortune</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/etc/default/burg</span></figcaption><table><tr><td class="code"><pre><span class="line">GRUB_GFXMODE=1366x768</span><br><span class="line">GRUB_THEME=fortune</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight text"><figcaption><span>/boot/burg/themes/fortune/icons/hover</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  -slackware &#123; image = &quot;$$/grey_slackware.png:$$/large_slackware.png&quot; &#125;</span><br><span class="line">  -android &#123; image = &quot;$$/grey_android.png:$$/large_android.png&quot; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/boot/burg/themes/fortune/icons/hover</span></figcaption><table><tr><td class="code"><pre><span class="line">  -slackware &#123; image = &quot;$$/grey_slackware.png:$$/large_slackware.png&quot; &#125;</span><br><span class="line">  -android &#123; image = &quot;$$/grey_android.png:$$/large_android.png&quot; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="6">
 <li>Android-x86 用のブートエントリを追加</li>
 </ol>
-<figure class="highlight text"><figcaption><span>/etc/burg.d/40_custom</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">menuentry &quot;Android-x86 4.0&quot; --class android --class os &#123;</span><br><span class="line">    insmod ext2</span><br><span class="line">    set root=&#x27;(hd0,3)&#x27;</span><br><span class="line">    search --no-floppy --fs-uuid --set MY-UU-ID</span><br><span class="line">    echo &#x27;Loading Android-x86 4.0 ...&#x27;</span><br><span class="line">    linux /PATHTO/Android-x86/tegav2/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/PATHTO/Android-x86/tegav2 DATA=</span><br><span class="line">    initrd /PATHTO/Android-x86/tegav2/initrd.img</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/etc/burg.d/40_custom</span></figcaption><table><tr><td class="code"><pre><span class="line">menuentry &quot;Android-x86 4.0&quot; --class android --class os &#123;</span><br><span class="line">    insmod ext2</span><br><span class="line">    set root=&#x27;(hd0,3)&#x27;</span><br><span class="line">    search --no-floppy --fs-uuid --set MY-UU-ID</span><br><span class="line">    echo &#x27;Loading Android-x86 4.0 ...&#x27;</span><br><span class="line">    linux /PATHTO/Android-x86/tegav2/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/PATHTO/Android-x86/tegav2 DATA=</span><br><span class="line">    initrd /PATHTO/Android-x86/tegav2/initrd.img</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="7">
 <li>Burg の設定を更新</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo burg-install /dev/sda</span><br><span class="line">$ sudo update-burg</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo burg-install /dev/sda</span><br><span class="line">$ sudo update-burg</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="8">
 <li>設定が有効になっているかを確認</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo burg-emu -D</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo burg-emu -D</span><br></pre></td></tr></table></figure>
 
 
 
@@ -541,34 +595,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-05-23 </div>
-			<div class="article-title"><a href="/2012/05/23/ubuntu-12-04-owncloud-4-0/" >Ubuntu 12.04 + ownCloud 4.0</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/owncloud_android.png" alt="owncloud android"></p>
-<p><a target="_blank" rel="noopener" href="http://owncloud.org/">http://owncloud.org/</a></p>
-<p>ownCloud 4.0 が公開されたので、Ubuntu 12.04 をサーバにして、LAN 上のUbuntu とAndroid からアクセスしてみた。</p>
-<p><a target="_blank" rel="noopener" href="http://www.webupd8.org/2011/10/owncloud-2-your-personal-cloud-server.html">http://www.webupd8.org/2011/10/owncloud-2-your-personal-cloud-server.html</a><br>インストール方法はownCloud2 のインストール手順を参考にしてみたら、なんの迷いもなくできた。いつもwebupd8 はわかりやすくて便利だなぁ。日本語化は左下の「設定アイコン」-&gt;「Personal(個人設定)」で「Language(言語)」を「Japanese(日本語)」に設定する。</p>
-<p><a href="/images/uploads/2012/05/owncloud_ubuntu.png"><img src="/images/uploads/2012/05/owncloud_ubuntu.png" alt="owncloud ubuntu chromium"></a></p>
-
-	
-	</div>
-  <a type="button" href="/2012/05/23/ubuntu-12-04-owncloud-4-0/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -618,6 +644,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
+      </li>
+    
+      <li>
         <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
       </li>
     
@@ -653,10 +683,6 @@
         <a href="/2022/06/19/Tauri/" ><i class="fa fa-file-o"></i>Tauri</a>
       </li>
     
-      <li>
-        <a href="/2022/04/06/CHUWI-Hi-10-Go/" ><i class="fa fa-file-o"></i>CHUWI Hi 10 Go</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -664,7 +690,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
 </div>
 
 		

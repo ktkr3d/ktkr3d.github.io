@@ -172,12 +172,12 @@ Ubuntu のLTS サポート期間が10年になるらしいですし。">
 <span id="more"></span>
 
 <h3 id="リモート接続"><a href="#リモート接続" class="headerlink" title="リモート接続"></a>リモート接続</h3><p>私はWindows 10 上のConEmu でRaspberry Pi にSSH 接続してます。念のため、2セッションを横並びに表示しておきました。</p>
-<h3 id="16-04-LTS-のパッケージの更新"><a href="#16-04-LTS-のパッケージの更新" class="headerlink" title="16.04 LTS のパッケージの更新"></a>16.04 LTS のパッケージの更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt dist-upgrade</span><br><span class="line">$ sudo apt autoremove</span><br></pre></td></tr></table></figure>
+<h3 id="16-04-LTS-のパッケージの更新"><a href="#16-04-LTS-のパッケージの更新" class="headerlink" title="16.04 LTS のパッケージの更新"></a>16.04 LTS のパッケージの更新</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt dist-upgrade</span><br><span class="line">$ sudo apt autoremove</span><br></pre></td></tr></table></figure>
 
-<h3 id="18-04-LTS-へのアップグレード"><a href="#18-04-LTS-へのアップグレード" class="headerlink" title="18.04 LTS へのアップグレード"></a>18.04 LTS へのアップグレード</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ufw allow 1022</span><br><span class="line">$ sudo apt install update-manager-core</span><br><span class="line">$ sudo do-release-upgrade</span><br></pre></td></tr></table></figure>
+<h3 id="18-04-LTS-へのアップグレード"><a href="#18-04-LTS-へのアップグレード" class="headerlink" title="18.04 LTS へのアップグレード"></a>18.04 LTS へのアップグレード</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo ufw allow 1022</span><br><span class="line">$ sudo apt install update-manager-core</span><br><span class="line">$ sudo do-release-upgrade</span><br></pre></td></tr></table></figure>
 
 <p>しばらく待ちます。<br>リスタート後にSSH接続で問題なければufw の設定を戻します。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ufw deny 1022</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo ufw deny 1022</span><br></pre></td></tr></table></figure>
 
 <h3 id="OpenVPN-の確認"><a href="#OpenVPN-の確認" class="headerlink" title="OpenVPN の確認"></a>OpenVPN の確認</h3><p>そのままでインターネットからVPN できました。</p>
 <h3 id="Samba-の確認"><a href="#Samba-の確認" class="headerlink" title="Samba の確認"></a>Samba の確認</h3><p>そのままでローカルネットワーク上から接続できました。</p>

@@ -173,30 +173,30 @@ ssh config (~&amp;#x">
 <li>function (~&#x2F;.bash_aliases) を利用する方法</li>
 <li>ssh config (~&#x2F;.ssh&#x2F;config) を利用する方法</li>
 </ul>
-<h3 id="SSH-のログインメッセージを抑止"><a href="#SSH-のログインメッセージを抑止" class="headerlink" title="SSH のログインメッセージを抑止"></a>SSH のログインメッセージを抑止</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> ~/.hushlogin</span><br></pre></td></tr></table></figure>
+<h3 id="SSH-のログインメッセージを抑止"><a href="#SSH-のログインメッセージを抑止" class="headerlink" title="SSH のログインメッセージを抑止"></a>SSH のログインメッセージを抑止</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> ~/.hushlogin</span><br></pre></td></tr></table></figure>
 
-<h3 id="1KB-未満のファイルを移動"><a href="#1KB-未満のファイルを移動" class="headerlink" title="1KB 未満のファイルを移動"></a>1KB 未満のファイルを移動</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ~/trash</span><br><span class="line">$ find . -size -1024c -<span class="built_in">exec</span> <span class="built_in">mv</span> -b &#123;&#125; ~/trash \;</span><br></pre></td></tr></table></figure>
+<h3 id="1KB-未満のファイルを移動"><a href="#1KB-未満のファイルを移動" class="headerlink" title="1KB 未満のファイルを移動"></a>1KB 未満のファイルを移動</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ~/trash</span><br><span class="line">$ find . -size -1024c -<span class="built_in">exec</span> <span class="built_in">mv</span> -b &#123;&#125; ~/trash \;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find . -maxdepth 0 -size -1024c -<span class="built_in">exec</span> <span class="built_in">mv</span> -b &#123;&#125; ./failed/ \;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ find . -maxdepth 0 -size -1024c -<span class="built_in">exec</span> <span class="built_in">mv</span> -b &#123;&#125; ./failed/ \;</span><br></pre></td></tr></table></figure>
 
 
 <h3 id="ファイルの重複検出"><a href="#ファイルの重複検出" class="headerlink" title="ファイルの重複検出"></a>ファイルの重複検出</h3><h4 id="fdupes-を利用したファイルの重複を検出"><a href="#fdupes-を利用したファイルの重複を検出" class="headerlink" title="fdupes を利用したファイルの重複を検出"></a>fdupes を利用したファイルの重複を検出</h4><ol>
 <li><p>インストール</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install fdupes</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install fdupes</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>検出</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ fdupes -r &lt;TARGET_DIR&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ fdupes -r &lt;TARGET_DIR&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>最初以外を移動</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ../trash/ &amp;&amp; fdupes -fr . | xargs <span class="built_in">mv</span> ../trash/</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ../trash/ &amp;&amp; fdupes -fr . | xargs <span class="built_in">mv</span> ../trash/</span><br></pre></td></tr></table></figure></li>
 </ol>
 <hr>
 <h4 id="先頭1MB-のMD5-ハッシュで重複ファイルを検出"><a href="#先頭1MB-のMD5-ハッシュで重複ファイルを検出" class="headerlink" title="先頭1MB のMD5 ハッシュで重複ファイルを検出"></a>先頭1MB のMD5 ハッシュで重複ファイルを検出</h4><ol>
 <li><p>スクリプト</p>
-<figure class="highlight bash"><figcaption><span>~/test.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /dev/null /tmp/list0.txt</span><br><span class="line">find . -<span class="built_in">type</span> f -<span class="built_in">exec</span> <span class="built_in">dd</span> <span class="keyword">if</span>=&#123;&#125; bs=1024 count=1000 of=/tmp/work.bin \; -<span class="built_in">exec</span> <span class="built_in">md5sum</span> /tmp/work.bin &gt;&gt; /tmp/list0.txt \; -<span class="built_in">exec</span> <span class="built_in">du</span> &#123;&#125;  &gt;&gt; /tmp/list0.txt \;</span><br><span class="line">sed <span class="string">&#x27;:loop; N; $!b loop; ;s/\/tmp\/work.bin\n//g&#x27;</span> /tmp/list0.txt &gt; /tmp/list1.txt</span><br><span class="line"><span class="built_in">sort</span> /tmp/list1.txt | <span class="built_in">uniq</span> -D -w 32  &gt; /tmp/list2.txt</span><br><span class="line"><span class="built_in">rm</span> /tmp/work.bin /tmp/list0.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>~/test.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /dev/null /tmp/list0.txt</span><br><span class="line">find . -<span class="built_in">type</span> f -<span class="built_in">exec</span> <span class="built_in">dd</span> <span class="keyword">if</span>=&#123;&#125; bs=1024 count=1000 of=/tmp/work.bin \; -<span class="built_in">exec</span> <span class="built_in">md5sum</span> /tmp/work.bin &gt;&gt; /tmp/list0.txt \; -<span class="built_in">exec</span> <span class="built_in">du</span> &#123;&#125;  &gt;&gt; /tmp/list0.txt \;</span><br><span class="line">sed <span class="string">&#x27;:loop; N; $!b loop; ;s/\/tmp\/work.bin\n//g&#x27;</span> /tmp/list0.txt &gt; /tmp/list1.txt</span><br><span class="line"><span class="built_in">sort</span> /tmp/list1.txt | <span class="built_in">uniq</span> -D -w 32  &gt; /tmp/list2.txt</span><br><span class="line"><span class="built_in">rm</span> /tmp/work.bin /tmp/list0.txt</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>実行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /PATH/TO/TARGET</span><br><span class="line">$ time ~/test.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /PATH/TO/TARGET</span><br><span class="line">$ time ~/test.sh</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>結果</p>
 </li>
@@ -220,7 +220,7 @@ ssh config (~&amp;#x">
 <hr>
 <h3 id="x2F-bash-aliases"><a href="#x2F-bash-aliases" class="headerlink" title="~&#x2F;.bash_aliases"></a>~&#x2F;.bash_aliases</h3><script src="//gist.github.com/ktkr3d/deb64a43aa13feb9cbcf.js?file=.bash_aliases"></script>
 
-<h3 id="flv-ファイルをmp4-に変換"><a href="#flv-ファイルをmp4-に変換" class="headerlink" title="flv ファイルをmp4 に変換"></a>flv ファイルをmp4 に変換</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> f <span class="keyword">in</span> *.flv ; <span class="keyword">do</span> ffmpeg -i <span class="variable">$f</span> <span class="variable">$f</span>.mp4; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="flv-ファイルをmp4-に変換"><a href="#flv-ファイルをmp4-に変換" class="headerlink" title="flv ファイルをmp4 に変換"></a>flv ファイルをmp4 に変換</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">for</span> f <span class="keyword">in</span> *.flv ; <span class="keyword">do</span> ffmpeg -i <span class="variable">$f</span> <span class="variable">$f</span>.mp4; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 
 	  
 	</div>

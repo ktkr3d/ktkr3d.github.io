@@ -7,7 +7,7 @@
   <meta name="author" content="ktkr3d">
   
   <meta name="description" content="Inspiron duo 上のUbuntu 11.10 x86_64 にBroadcom Crystal HD Decoder Driver を組み込んでみた。
-必要なパッケージのインストール1$ sudo apt-get install build-essential g++ automake a">
+必要なパッケージのインストール$ sudo apt-get install build-essential g++ automake au">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -166,18 +166,18 @@
 	  		
 
 	  <p>Inspiron duo 上のUbuntu 11.10 x86_64 にBroadcom Crystal HD Decoder Driver を組み込んでみた。</p>
-<figure class="highlight sh"><figcaption><span>必要なパッケージのインストール</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install build-essential g++ automake autoconf libtool libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>必要なパッケージのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install build-essential g++ automake autoconf libtool libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><figcaption><span>ソースの取得</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://linuxtv.org/jarod/crystalhd.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>ソースの取得</span></figcaption><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://linuxtv.org/jarod/crystalhd.git</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><figcaption><span>ドライバーのインストール</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> driver/linux/</span><br><span class="line">$ autoconf</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>ドライバーのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> driver/linux/</span><br><span class="line">$ autoconf</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
 
 <p>コンパイル時に警告がでるので、とりあえず-w をつけた。</p>
-<figure class="highlight sh"><figcaption><span>ライブラリのインストール</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> linux_lib/libcrystalhd/</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>ライブラリのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> linux_lib/libcrystalhd/</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><figcaption><span>gstreamer プラグインのインストール</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> filters/gst/gst-plugin/</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>gstreamer プラグインのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> filters/gst/gst-plugin/</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight sh"><figcaption><span>ファームウェアのコピー</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> firmware/fwbin/70015/* /lib/firmware/</span><br><span class="line">$ sudo <span class="built_in">cp</span> firmware/fwbin/70012/* /lib/firmware/</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>ファームウェアのコピー</span></figcaption><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> firmware/fwbin/70015/* /lib/firmware/</span><br><span class="line">$ sudo <span class="built_in">cp</span> firmware/fwbin/70012/* /lib/firmware/</span><br></pre></td></tr></table></figure>
 
 	  
 	</div>

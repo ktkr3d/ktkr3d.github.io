@@ -9,7 +9,7 @@
   <meta name="description" content="http://getnightingale.comNightingale 1.8.1 が公開されたのでUbuntu 11.10 で使ってみた。アドオンも続々移植されているので期待。Linux x86_64 にもネイティブで対応。OGV 以外のビデオも再生可能。
 
 実行するには
-1$ ./nighti">
+$ ./nightin">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -170,18 +170,18 @@
 	  <p><img src="/images/nightingale_linux.png" alt="nightingale linux"><br><a target="_blank" rel="noopener" href="http://getnightingale.com/">http://getnightingale.com</a><br>Nightingale 1.8.1 が公開されたのでUbuntu 11.10 で使ってみた。アドオンも続々移植されているので期待。Linux x86_64 にもネイティブで対応。OGV 以外のビデオも再生可能。</p>
 <ol>
 <li><p>実行するには</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./nightingale</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ./nightingale</span><br></pre></td></tr></table></figure>
 
 </li>
 <li><p>日本語表示に切り替えるには<br>[File]-[Language]-[日本語]を選択して再起動</p>
 </li>
 <li><p>アイコンをアプリケーションメニューに登録するには</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alacarte</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ alacarte</span><br></pre></td></tr></table></figure></li>
 </ol>
 <p>または、</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">ln</span> -s <span class="variable">$PWD</span>/nightingale /usr/bin/nightingale</span><br><span class="line">$ sudo <span class="built_in">cp</span> <span class="variable">$PWD</span>/chrome/icons/default/default.xpm /usr/share/pixmaps/nightingale.xpm</span><br><span class="line">$ sudo vi /usr/share/applications/nightingale.desktop</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">ln</span> -s <span class="variable">$PWD</span>/nightingale /usr/bin/nightingale</span><br><span class="line">$ sudo <span class="built_in">cp</span> <span class="variable">$PWD</span>/chrome/icons/default/default.xpm /usr/share/pixmaps/nightingale.xpm</span><br><span class="line">$ sudo vi /usr/share/applications/nightingale.desktop</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight text"><figcaption><span>/usr/share/applications/nightingale.desktop</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=Nightingale</span><br><span class="line">Comment=Nightingale Media Player</span><br><span class="line">Exec=nightingale</span><br><span class="line">Icon=nightingale.xpm</span><br><span class="line">Terminal=0</span><br><span class="line">Type=Application</span><br><span class="line">Encoding=UTF-8</span><br><span class="line">Categories=AudioVideo;Player;</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/usr/share/applications/nightingale.desktop</span></figcaption><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=Nightingale</span><br><span class="line">Comment=Nightingale Media Player</span><br><span class="line">Exec=nightingale</span><br><span class="line">Icon=nightingale.xpm</span><br><span class="line">Terminal=0</span><br><span class="line">Type=Application</span><br><span class="line">Encoding=UTF-8</span><br><span class="line">Categories=AudioVideo;Player;</span><br></pre></td></tr></table></figure>
 
 
 

@@ -168,12 +168,12 @@ Ubuntu 12.04&amp;#x2F;12.10 のAvant Window Navigator で表示され">
 	  <p><img src="/images/awn_without_plus_icon.png" alt="avant window navigator without a green plus icon"></p>
 <p><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/awn/+bug/990774">https://bugs.launchpad.net/awn/+bug/990774</a><br><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/awn/+bug/990774/comments/15">https://bugs.launchpad.net/awn/+bug/990774/comments/15</a></p>
 <p>Ubuntu 12.04&#x2F;12.10 のAvant Window Navigator で表示される謎のプラスアイコンを消してみた。これですっきり。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get build-dep avant-window-navigator</span><br><span class="line">$ sudo apt-get -b <span class="built_in">source</span> avant-window-navigator</span><br><span class="line">$ sudo dpkg -i *.deb</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get build-dep avant-window-navigator</span><br><span class="line">$ sudo apt-get -b <span class="built_in">source</span> avant-window-navigator</span><br><span class="line">$ sudo dpkg -i *.deb</span><br></pre></td></tr></table></figure>
 
 
 
 <h3 id="追記-2012-x2F-11-x2F-10"><a href="#追記-2012-x2F-11-x2F-10" class="headerlink" title="追記(2012&#x2F;11&#x2F;10)"></a>追記(2012&#x2F;11&#x2F;10)</h3><p><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/awn/+bug/990774/comments/21">https://bugs.launchpad.net/awn/+bug/990774/comments/21</a><br>リビルドしなくても、以下のコマンドで解決しました。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install libdesktop-agnostic-cfg-gconf</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install libdesktop-agnostic-cfg-gconf</span><br></pre></td></tr></table></figure>
 	  
 	</div>
 

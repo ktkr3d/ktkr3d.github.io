@@ -170,21 +170,21 @@ Node.js で実装された掲示板アプリscrumblr をインストールして
 <ol>
 <li>nvm のインストール</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install build-essential libssl-dev curl git</span><br><span class="line">$ git <span class="built_in">clone</span> git://github.com/creationix/nvm.git ~/.nvm</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install build-essential libssl-dev curl git</span><br><span class="line">$ git <span class="built_in">clone</span> git://github.com/creationix/nvm.git ~/.nvm</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="2">
 <li>scrumblr のインストール</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install redis-server</span><br><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">$ nvm install v0.9.9</span><br><span class="line">$ nvm use v0.9.9</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/aliasaria/scrumblr ~/scrumblr</span><br><span class="line">$ <span class="built_in">cd</span> ~/scrumblr</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install redis-server</span><br><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">$ nvm install v0.9.9</span><br><span class="line">$ nvm use v0.9.9</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/aliasaria/scrumblr ~/scrumblr</span><br><span class="line">$ <span class="built_in">cd</span> ~/scrumblr</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="3">
 <li>scrumblr サーバの実行</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Start Scrumblr Server</span></span><br><span class="line"><span class="comment"># http://localhost:3132</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">nvm use v0.9.9</span><br><span class="line"><span class="built_in">cd</span> ~/scrumblr</span><br><span class="line">node server.js 3132</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Start Scrumblr Server</span></span><br><span class="line"><span class="comment"># http://localhost:3132</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">nvm use v0.9.9</span><br><span class="line"><span class="built_in">cd</span> ~/scrumblr</span><br><span class="line">node server.js 3132</span><br></pre></td></tr></table></figure>
 
 
 

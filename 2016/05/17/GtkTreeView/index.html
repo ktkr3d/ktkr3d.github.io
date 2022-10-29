@@ -169,7 +169,7 @@
 <span id="more"></span>
 
 <h2 id="ポイント"><a href="#ポイント" class="headerlink" title="ポイント"></a>ポイント</h2><ul>
-<li>スクロールバー付きリストボックスの構成<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GtkScrolledWindow</span><br><span class="line">  GtkTreeView</span><br></pre></td></tr></table></figure></li>
+<li>スクロールバー付きリストボックスの構成<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line">GtkScrolledWindow</span><br><span class="line">  GtkTreeView</span><br></pre></td></tr></table></figure></li>
 <li>モデルとビューの連携<br>GtkTreeView の全般「ツリービューのモデル」にGtkListStore のオブジェクトを指定する</li>
 <li>モデルとビューの項目の対応付け<ol>
 <li>GtkView を右クリックして「Edit」を選択</li>
@@ -182,7 +182,7 @@
 <li>表ヘッダの表示</li>
 <li>表データの表示</li>
 <li>ダブルクリックのシグナル<br><code>row-activated</code> にハンドラを割り当てる</li>
-<li>ダブルクリックのハンドラ<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">on___glade_unnamed_28_row_activated</span>(<span class="params">self, liststore, treepath, treeviewcolumn</span>):</span><br><span class="line">  <span class="built_in">iter</span> = liststore.get_iter(treepath)</span><br><span class="line">  stream_url = liststore[<span class="built_in">iter</span>][<span class="number">2</span>]</span><br></pre></td></tr></table></figure></li>
+<li>ダブルクリックのハンドラ<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">on___glade_unnamed_28_row_activated</span>(<span class="params">self, liststore, treepath, treeviewcolumn</span>):</span><br><span class="line">  <span class="built_in">iter</span> = liststore.get_iter(treepath)</span><br><span class="line">  stream_url = liststore[<span class="built_in">iter</span>][<span class="number">2</span>]</span><br></pre></td></tr></table></figure></li>
 </ul>
 	  
 	</div>

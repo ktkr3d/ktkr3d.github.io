@@ -180,10 +180,10 @@
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="SSH-接続の設定"><a href="#SSH-接続の設定" class="headerlink" title="SSH 接続の設定"></a>SSH 接続の設定</h4><ul>
 <li><p>WSL2 から鍵登録</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-copy-id -i /mnt/c/Users/hoge/.ssh/id_rsa.pub ubuntu@192.168.11.26</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-copy-id -i /mnt/c/Users/hoge/.ssh/id_rsa.pub ubuntu@192.168.11.26</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>接続情報</p>
-<figure class="highlight ini"><figcaption><span>C:\Users\hoge\.ssh\ssh_config</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Read more about SSH config files: https://linux.die.net/man/5/ssh_config</span></span><br><span class="line">Host pi2</span><br><span class="line">    HostName 192.168.11.106</span><br><span class="line">    User ubuntu</span><br><span class="line">    IdentityFile C:\Users\hoge\.ssh\id_rsa</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight ini"><figcaption><span>C:\Users\hoge\.ssh\ssh_config</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Read more about SSH config files: https://linux.die.net/man/5/ssh_config</span></span><br><span class="line">Host pi2</span><br><span class="line">    HostName 192.168.11.106</span><br><span class="line">    User ubuntu</span><br><span class="line">    IdentityFile C:\Users\hoge\.ssh\id_rsa</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>前回の記事はこちら<br><a href="https://ktkr3d.github.io/2019/07/15/Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi/">https://ktkr3d.github.io/2019/07/15/Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi/</a></li>

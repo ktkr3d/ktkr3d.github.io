@@ -169,21 +169,21 @@
 <ol>
 <li>valac のインストールとソースコードの取得</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get build-dep xnoise</span><br><span class="line">$ sudo apt-get install valac</span><br><span class="line">$ git <span class="built_in">clone</span> https://bitbucket.org/shuerhaaken/xnoise.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get build-dep xnoise</span><br><span class="line">$ sudo apt-get install valac</span><br><span class="line">$ git <span class="built_in">clone</span> https://bitbucket.org/shuerhaaken/xnoise.git</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="2">
 <li>ソースコードの修正</li>
 </ol>
-<figure class="highlight text"><figcaption><span>./xnoise/libxnoise/MainWindow/xnoise-main-window.vala</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">case Gdk.Key.F9: &#123;</span><br><span class="line">    toggle_media_browser_visibility();</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">case Gdk.Key.F11: &#123;</span><br><span class="line">    this.toggle_mainwindow_fullscreen();</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>./xnoise/libxnoise/MainWindow/xnoise-main-window.vala</span></figcaption><table><tr><td class="code"><pre><span class="line">case Gdk.Key.F9: &#123;</span><br><span class="line">    toggle_media_browser_visibility();</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">case Gdk.Key.F11: &#123;</span><br><span class="line">    this.toggle_mainwindow_fullscreen();</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="3">
 <li>ビルドとインストール</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> xnoise</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> xnoise</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
 
 
 

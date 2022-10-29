@@ -176,10 +176,10 @@
 <li>Ubuntu GNOME 14.04 alpha1 + XBMC 12.0</li>
 </ul>
 <p>Linux の場合はsshfs でマウントしておいた方が何かと便利</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen</span><br><span class="line">$ ssh-copy-id -i .ssh/id_rsa.pub useranme@hostname -p 22222</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen</span><br><span class="line">$ ssh-copy-id -i .ssh/id_rsa.pub useranme@hostname -p 22222</span><br></pre></td></tr></table></figure>
 
 <p><code>gnome-session-properties</code> で自動起動するアプリケーションに以下を追加</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshfs username@hostname:/mnt/common /mnt/common -p 22222 -o reconnect</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sshfs username@hostname:/mnt/common /mnt/common -p 22222 -o reconnect</span><br></pre></td></tr></table></figure>
 
 
 	  

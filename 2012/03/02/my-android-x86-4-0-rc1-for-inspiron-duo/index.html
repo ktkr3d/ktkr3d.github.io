@@ -10,7 +10,7 @@
 
 repo でandroid-x86 のソースコードを拾ってきて展開する。
 
-12$ repo init -u http://git.android-x86.org/manif">
+$ repo init -u http://git.android-x86.org/manifes">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -172,7 +172,7 @@ repo でandroid-x86 のソースコードを拾ってきて展開する。
 <ol>
 <li>repo でandroid-x86 のソースコードを拾ってきて展開する。</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ repo init -u http://git.android-x86.org/manifest -b ics-x86</span><br><span class="line">$ repo <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo init -u http://git.android-x86.org/manifest -b ics-x86</span><br><span class="line">$ repo <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -180,10 +180,10 @@ repo でandroid-x86 のソースコードを拾ってきて展開する。
 <ol start="2">
 <li>キーボードの調整<br>tegav2 ビルドではキーレイアウトは以下のようになっている。</li>
 </ol>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/AT_Translated_Set_2_keyboard.kl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">key 1     HOME          WAKE_DROPPED</span><br><span class="line">key 114   VOLUME_DOWN</span><br><span class="line">key 115   VOLUME_UP</span><br><span class="line">key 125   APP_SWITCH</span><br><span class="line">key 127   ESCAPE        WAKE_DROPPED</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/AT_Translated_Set_2_keyboard.kl</span></figcaption><table><tr><td class="code"><pre><span class="line">key 1     HOME          WAKE_DROPPED</span><br><span class="line">key 114   VOLUME_DOWN</span><br><span class="line">key 115   VOLUME_UP</span><br><span class="line">key 125   APP_SWITCH</span><br><span class="line">key 127   ESCAPE        WAKE_DROPPED</span><br></pre></td></tr></table></figure>
 
 <p>それ以外のキーも動作するように、このファイルをコピーしないようにする。</p>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2.mk</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PRODUCT_COPY_FILES := \</span><br><span class="line">    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab \</span><br><span class="line"></span><br><span class="line">#    $(LOCAL_PATH)/AT_Translated_Set_2_keyboard.kl:system/usr/keylayout/AT_Translated_Set_2_keyboard.kl \</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">PRODUCT_COPY_FILES := \</span><br><span class="line">    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab \</span><br><span class="line"></span><br><span class="line">#    $(LOCAL_PATH)/AT_Translated_Set_2_keyboard.kl:system/usr/keylayout/AT_Translated_Set_2_keyboard.kl \</span><br></pre></td></tr></table></figure>
 
 
 
@@ -191,13 +191,13 @@ repo でandroid-x86 のソースコードを拾ってきて展開する。
 <ol start="3">
 <li>SDCARD の認識<br>tegav2 ビルドではfstab の設定が以下のようになっている。</li>
 </ol>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/vold.fstab</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dev_mount sdcard  /mnt/MicroSD auto /devices/pci0000:00/0000:00:1d.7/usb1/1-5/1-5:1.0</span><br><span class="line">dev_mount usb     /mnt/USB     auto</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/vold.fstab</span></figcaption><table><tr><td class="code"><pre><span class="line">dev_mount sdcard  /mnt/MicroSD auto /devices/pci0000:00/0000:00:1d.7/usb1/1-5/1-5:1.0</span><br><span class="line">dev_mount usb     /mnt/USB     auto</span><br></pre></td></tr></table></figure>
 
 <p>デバイスの指定を外す。</p>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/vold.fstab</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dev_mount sdcard  /mnt/MicroSD auto</span><br><span class="line">dev_mount usb     /mnt/USB     auto</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/vold.fstab</span></figcaption><table><tr><td class="code"><pre><span class="line">dev_mount sdcard  /mnt/MicroSD auto</span><br><span class="line">dev_mount usb     /mnt/USB     auto</span><br></pre></td></tr></table></figure>
 
 <p>または、このファイルもコピーしないようにする。</p>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2.mk</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PRODUCT_COPY_FILES := \</span><br><span class="line"></span><br><span class="line">#    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab \</span><br><span class="line">#    $(LOCAL_PATH)/AT_Translated_Set_2_keyboard.kl:system/usr/keylayout/AT_Translated_Set_2_keyboard.kl \</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">PRODUCT_COPY_FILES := \</span><br><span class="line"></span><br><span class="line">#    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab \</span><br><span class="line">#    $(LOCAL_PATH)/AT_Translated_Set_2_keyboard.kl:system/usr/keylayout/AT_Translated_Set_2_keyboard.kl \</span><br></pre></td></tr></table></figure>
 
 
 
@@ -205,13 +205,13 @@ repo でandroid-x86 のソースコードを拾ってきて展開する。
 <ol start="4">
 <li>スピーカーの調整<br>ヘッドフォンを繋いでもPC のスピーカーがミュートしない。</li>
 </ol>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2_defconfig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">CONFIG_SND_HDA_INTEL=m</span><br><span class="line">CONFIG_SND_HDA_HWDEP=y</span><br><span class="line">CONFIG_SND_HDA_RECONFIG=y</span><br><span class="line"># CONFIG_SND_HDA_INPUT_BEEP is not set</span><br><span class="line"># CONFIG_SND_HDA_INPUT_JACK=y</span><br><span class="line"># CONFIG_SND_HDA_PATCH_LOADER=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_REALTEK=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_ANALOG is not set</span><br><span class="line">CONFIG_SND_HDA_CODEC_SIGMATEL=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_VIA=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_HDMI=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CIRRUS=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CONEXANT=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CA0110=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CMEDIA=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_SI3054=y</span><br><span class="line"># CONFIG_SND_HDA_GENERIC is not set</span><br><span class="line">CONFIG_SND_HDA_GENERIC=y</span><br><span class="line">CONFIG_SND_HDA_POWER_SAVE=y</span><br><span class="line">CONFIG_SND_HDA_POWER_SAVE_DEFAULT=3</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2_defconfig</span></figcaption><table><tr><td class="code"><pre><span class="line">CONFIG_SND_HDA_INTEL=m</span><br><span class="line">CONFIG_SND_HDA_HWDEP=y</span><br><span class="line">CONFIG_SND_HDA_RECONFIG=y</span><br><span class="line"># CONFIG_SND_HDA_INPUT_BEEP is not set</span><br><span class="line"># CONFIG_SND_HDA_INPUT_JACK=y</span><br><span class="line"># CONFIG_SND_HDA_PATCH_LOADER=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_REALTEK=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_ANALOG is not set</span><br><span class="line">CONFIG_SND_HDA_CODEC_SIGMATEL=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_VIA=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_HDMI=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CIRRUS=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CONEXANT=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CA0110=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CMEDIA=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_SI3054=y</span><br><span class="line"># CONFIG_SND_HDA_GENERIC is not set</span><br><span class="line">CONFIG_SND_HDA_GENERIC=y</span><br><span class="line">CONFIG_SND_HDA_POWER_SAVE=y</span><br><span class="line">CONFIG_SND_HDA_POWER_SAVE_DEFAULT=3</span><br></pre></td></tr></table></figure>
 
 <p>とりあえず過去のsparta_defconfig を参考にsnd_hda 関連を書き換える。</p>
 <ol start="5">
 <li>ISO イメージの作成<br>ファイルの編集が済んだらビルド。メモリが少ないので多重度は1に。</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ make -j1 iso_img TARGET_PRODUCT=tegav2</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make -j1 iso_img TARGET_PRODUCT=tegav2</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
 
 
 
@@ -219,7 +219,7 @@ repo でandroid-x86 のソースコードを拾ってきて展開する。
 
 <p>キーボード入力ができるようになったけれど、仮想キーボードが表示されなくなったので、キーマッピングを追加するようにした方がよさそう。また、スピーカーの音は改善されなく、初期インストールアプリも減ってしまったので、見直しが必要だ。<br>tegav2.mk を見て、電源ボタンダブルクリックでシャットダウンする設定になっているのに気がついた。</p>
 <p>EDIT1:<br>他のLinux と同様にオプションを追加してみよう。</p>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2_info</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SNDDEV=&quot;snd-hda-intel model=ideapad&quot; </span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2_info</span></figcaption><table><tr><td class="code"><pre><span class="line">SNDDEV=&quot;snd-hda-intel model=ideapad&quot; </span><br></pre></td></tr></table></figure>
 	  
 	</div>
 

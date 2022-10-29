@@ -193,7 +193,7 @@ http://www.fpmurphy.com/gnome-shell-extensions/
 <ul>
 <li>現在の気温の単位(摂氏&#x2F;華氏)が設定と逆になってしまう単純なバグがある(以下のように修正してみた)</li>
 </ul>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let currTemperature = new St.Label(&#123; text: (MUNITS &gt; 0 ? curr[0].temp_C + &#x27;C&#x27; : curr[0].temp_F + &#x27;F&#x27;) &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">let currTemperature = new St.Label(&#123; text: (MUNITS &gt; 0 ? curr[0].temp_C + &#x27;C&#x27; : curr[0].temp_F + &#x27;F&#x27;) &#125;);</span><br></pre></td></tr></table></figure>
 
 
 <ul>

@@ -182,39 +182,39 @@ Tauri を試してみました。">
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
 <li>Node.js のインストール</li>
 </ol>
-<figure class="highlight bash"><figcaption><span>~/.bashrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> N_PREFIX=<span class="variable">$HOME</span>/.n</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$N_PREFIX</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ . ~/.bashrc</span><br><span class="line">$ sudo apt install nodejs npm</span><br><span class="line">$ sudo npm install n -g</span><br><span class="line">$ sudo apt purge nodejs npm</span><br><span class="line">$ n latest</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>~/.bashrc</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> N_PREFIX=<span class="variable">$HOME</span>/.n</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$N_PREFIX</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ . ~/.bashrc</span><br><span class="line">$ sudo apt install nodejs npm</span><br><span class="line">$ sudo npm install n -g</span><br><span class="line">$ sudo apt purge nodejs npm</span><br><span class="line">$ n latest</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li>Tauri 前提ライブラリのインストール</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install libwebkit2gtk-4.0-dev \</span><br><span class="line">    build-essential \</span><br><span class="line">    curl \</span><br><span class="line">    wget \</span><br><span class="line">    libssl-dev \</span><br><span class="line">    libgtk-3-dev \</span><br><span class="line">    libayatana-appindicator3-dev \</span><br><span class="line">    librsvg2-dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install libwebkit2gtk-4.0-dev \</span><br><span class="line">    build-essential \</span><br><span class="line">    curl \</span><br><span class="line">    wget \</span><br><span class="line">    libssl-dev \</span><br><span class="line">    libgtk-3-dev \</span><br><span class="line">    libayatana-appindicator3-dev \</span><br><span class="line">    librsvg2-dev</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>rust のインストール</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl --proto <span class="string">&#x27;=https&#x27;</span> --tlsv1.2 https://sh.rustup.rs -sSf | sh</span><br><span class="line">$ . ~/.bashrc</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl --proto <span class="string">&#x27;=https&#x27;</span> --tlsv1.2 https://sh.rustup.rs -sSf | sh</span><br><span class="line">$ . ~/.bashrc</span><br></pre></td></tr></table></figure>
 
 <ol start="4">
 <li>tauri-app の作成と実行</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm create tauri-app</span><br><span class="line">$ <span class="built_in">cd</span> tauri-app</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run tauri dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm create tauri-app</span><br><span class="line">$ <span class="built_in">cd</span> tauri-app</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run tauri dev</span><br></pre></td></tr></table></figure>
 
 <ol start="5">
 <li>identifier の変更</li>
 </ol>
-<figure class="highlight json"><figcaption><span>./src-tauri/tauri.conf.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;identifier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;com.tauri.dev&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight json"><figcaption><span>./src-tauri/tauri.conf.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;identifier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;io.github.ktkr3d&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><figcaption><span>./src-tauri/tauri.conf.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;identifier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;com.tauri.dev&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><figcaption><span>./src-tauri/tauri.conf.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;identifier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;io.github.ktkr3d&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
 
 <ol start="6">
 <li>ビルドと実行</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm run tauri build</span><br><span class="line">$ ./src-tauri/target/release/tauri-app</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run tauri build</span><br><span class="line">$ ./src-tauri/target/release/tauri-app</span><br></pre></td></tr></table></figure>
 
 <ol start="7">
 <li>ロードモジュールとパッケージのファイルサイズ</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ find . -name tauri-app -<span class="built_in">ls</span></span><br><span class="line">  2265545  13264 -rwxrwxr-x   1 ubuntu   ubuntu   13578488  6月 20 00:20 ./src-tauri/target/release/bundle/deb/tauri-app_0.1.0_amd64/data/usr/bin/tauri-app</span><br><span class="line">  2379736  13264 -rwxrwxr-x   2 ubuntu   ubuntu   13578488  6月 20 00:20 ./src-tauri/target/release/tauri-app</span><br><span class="line">$ find . -name *.deb -<span class="built_in">ls</span></span><br><span class="line">  2265566   4828 -rw-rw-r--   1 ubuntu   ubuntu    4942278  6月 20 00:20 ./src-tauri/target/release/bundle/deb/tauri-app_0.1.0_amd64.deb</span><br><span class="line">$ find . -name *.AppImage -<span class="built_in">ls</span></span><br><span class="line">  2137245  73344 -rwxr-xr-x   1 ubuntu   ubuntu   75101376  6月 20 00:22 ./src-tauri/target/release/bundle/appimage/tauri-app_0.1.0_amd64.AppImage</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ find . -name tauri-app -<span class="built_in">ls</span></span><br><span class="line">  2265545  13264 -rwxrwxr-x   1 ubuntu   ubuntu   13578488  6月 20 00:20 ./src-tauri/target/release/bundle/deb/tauri-app_0.1.0_amd64/data/usr/bin/tauri-app</span><br><span class="line">  2379736  13264 -rwxrwxr-x   2 ubuntu   ubuntu   13578488  6月 20 00:20 ./src-tauri/target/release/tauri-app</span><br><span class="line">$ find . -name *.deb -<span class="built_in">ls</span></span><br><span class="line">  2265566   4828 -rw-rw-r--   1 ubuntu   ubuntu    4942278  6月 20 00:20 ./src-tauri/target/release/bundle/deb/tauri-app_0.1.0_amd64.deb</span><br><span class="line">$ find . -name *.AppImage -<span class="built_in">ls</span></span><br><span class="line">  2137245  73344 -rwxr-xr-x   1 ubuntu   ubuntu   75101376  6月 20 00:22 ./src-tauri/target/release/bundle/appimage/tauri-app_0.1.0_amd64.AppImage</span><br></pre></td></tr></table></figure>
 	  
 	</div>
 

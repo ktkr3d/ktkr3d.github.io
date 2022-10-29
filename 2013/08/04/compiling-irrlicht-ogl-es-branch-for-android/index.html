@@ -190,10 +190,10 @@ OpenSL ES (Native Audio)">
 <li>Download.</li>
 <li>Extract.</li>
 </ol>
-<h4 id="Compile-Irrlicht-Library"><a href="#Compile-Irrlicht-Library" class="headerlink" title="Compile Irrlicht Library"></a>Compile Irrlicht Library</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="built_in">source</span>/Irrlicht/Andorid</span><br><span class="line">$ ndk-build -j4</span><br></pre></td></tr></table></figure>
+<h4 id="Compile-Irrlicht-Library"><a href="#Compile-Irrlicht-Library" class="headerlink" title="Compile Irrlicht Library"></a>Compile Irrlicht Library</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="built_in">source</span>/Irrlicht/Andorid</span><br><span class="line">$ ndk-build -j4</span><br></pre></td></tr></table></figure>
 
 <p>-&gt; <code>lib/Android/libirrlicht.a</code></p>
-<h4 id="Build-example"><a href="#Build-example" class="headerlink" title="Build example"></a>Build example</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> examples/17.HelloWorld_Mobile</span><br><span class="line">$ android update project --path . --target android-16</span><br><span class="line">$ ndk-build -j4</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
+<h4 id="Build-example"><a href="#Build-example" class="headerlink" title="Build example"></a>Build example</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> examples/17.HelloWorld_Mobile</span><br><span class="line">$ android update project --path . --target android-16</span><br><span class="line">$ ndk-build -j4</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
 
 <p>-&gt; <code>examples/17.HellowWorld_Mobile/HelloWorldMobile-debug.apk</code></p>
 <h4 id="TrueType-Font"><a href="#TrueType-Font" class="headerlink" title="TrueType Font"></a>TrueType Font</h4><p><code>include/irrUString.h</code>, <code>jni/CGUITTFont.h</code>, <code>jni/CGUITTFont.cpp</code> </p>

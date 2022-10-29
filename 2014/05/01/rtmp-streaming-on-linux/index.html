@@ -176,14 +176,14 @@ http://www.maartenbaert.be/simplescreenrecorder/live-streaming/http://www.rtmpd.
 <li>C++ RTMP Server<br />RTMP プロトコルで、FLV 形式のデータを受信し、RTMP プロトコルで配信します。</li>
 <li>PeerCastStation<br />RTMP サーバに接続し、Peercast ネットワークにストリームを配信します。</li>
 </ul>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SimpleScreenRecorder (Linux)</span><br><span class="line">    -&gt; C++ RTMP Server (Linux)</span><br><span class="line">        -&gt; PeerCastStation (Linux)</span><br><span class="line">            -&gt; Internet</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">SimpleScreenRecorder (Linux)</span><br><span class="line">    -&gt; C++ RTMP Server (Linux)</span><br><span class="line">        -&gt; PeerCastStation (Linux)</span><br><span class="line">            -&gt; Internet</span><br></pre></td></tr></table></figure>
 
 <p>上記が目標とする構成で、RTMP サーバへの接続と公開まではできました。<br>Linux 環境上で、PeerCastStation 1.7.9.1 がRTMP サーバからうまく受信できなかったので、Peercast ネットワークへの配信については<a href="#temporary">暫定構成</a>で実行しました。</p>
 <h4 id="C-RTMP-Server-のビルドと起動"><a href="#C-RTMP-Server-のビルドと起動" class="headerlink" title="C++ RTMP Server のビルドと起動"></a>C++ RTMP Server のビルドと起動</h4><p><a target="_blank" rel="noopener" href="http://wiki.rtmpd.com/quickbuild">http://wiki.rtmpd.com/quickbuild</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install g++ subversion cmake make libssl-dev</span><br><span class="line">$ svn co --username anonymous --password <span class="string">&quot;&quot;</span> https://svn.rtmpd.com/crtmpserver/trunk crtmpserver</span><br><span class="line">$ <span class="built_in">cd</span> crtmpserver/builders/cmake/</span><br><span class="line">$ ./run</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install g++ subversion cmake make libssl-dev</span><br><span class="line">$ svn co --username anonymous --password <span class="string">&quot;&quot;</span> https://svn.rtmpd.com/crtmpserver/trunk crtmpserver</span><br><span class="line">$ <span class="built_in">cd</span> crtmpserver/builders/cmake/</span><br><span class="line">$ ./run</span><br></pre></td></tr></table></figure>
 
 <p>もしくは、<code>crtmpserver</code> というパッケージを利用してもよいかもしれません。</p>
-<h4 id="SimpleScreenRecorder-の設定"><a href="#SimpleScreenRecorder-の設定" class="headerlink" title="SimpleScreenRecorder の設定"></a>SimpleScreenRecorder の設定</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install simplescreenrecorder</span><br></pre></td></tr></table></figure>
+<h4 id="SimpleScreenRecorder-の設定"><a href="#SimpleScreenRecorder-の設定" class="headerlink" title="SimpleScreenRecorder の設定"></a>SimpleScreenRecorder の設定</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install simplescreenrecorder</span><br></pre></td></tr></table></figure>
 
 <table>
 <thead>
@@ -251,15 +251,15 @@ http://www.maartenbaert.be/simplescreenrecorder/live-streaming/http://www.rtmpd.
 <li><code>livestream</code> を選択して、<code>Play</code> ボタン押下でデスクトップの映像と音声が再生されること</li>
 </ul>
 <h4 id="動作確認2"><a href="#動作確認2" class="headerlink" title="動作確認2"></a>動作確認2</h4><p>以下のコマンドで、デスクトップの映像と音声が再生されるか確認します。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ffplay <span class="string">&quot;rtmp://localhost/flvplayback/livestream&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ffplay <span class="string">&quot;rtmp://localhost/flvplayback/livestream&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>以下のエラーは後で調べておこう。</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[rtmp @ 0x7f4008001600] Server error: call to function _checkbw failed</span><br><span class="line">[flv @ 0x7f40080008c0] Stream discovered after head already parsed  </span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">[rtmp @ 0x7f4008001600] Server error: call to function _checkbw failed</span><br><span class="line">[flv @ 0x7f40080008c0] Stream discovered after head already parsed  </span><br></pre></td></tr></table></figure>
 
 <h4 id="動作確認3"><a href="#動作確認3" class="headerlink" title="動作確認3"></a>動作確認3</h4><p>Android のBSPlayer FREE で<code>rtmp://192.168.0.2/flvplayback/livestream</code> を開くと再生されます。</p>
 <p><a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.bsplayer.bspandroid.free&amp;hl=ja">https://play.google.com/store/apps/details?id=com.bsplayer.bspandroid.free&amp;hl=ja</a></p>
 <h4 id="PeerCastStation-の設定"><a href="#PeerCastStation-の設定" class="headerlink" title="PeerCastStation の設定"></a>PeerCastStation の設定</h4><p>PeerCastStation の開発版(1.7.9.1)をダウンロードして展開します。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mono PeerCastStation.exe</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mono PeerCastStation.exe</span><br></pre></td></tr></table></figure>
 
 <p>ブラウザで<code>http://localhost:7144</code> にアクセスします。ページが開けない場合は、<code>lsof -i -P</code> で<code>mono</code> のプロセスがリッスンしているポート番号を指定します。</p>
 <p>「リレー」ページの「配信」ボタンを押下します。</p>
@@ -292,7 +292,7 @@ http://www.maartenbaert.be/simplescreenrecorder/live-streaming/http://www.rtmpd.
 
 <h4 id="暫定構成"><a href="#暫定構成" class="headerlink" title="暫定構成"></a>暫定構成</h4><p><a target="_blank" rel="noopener" href="http://fukure.sakura.ne.jp/wordpress/archives/1168">http://fukure.sakura.ne.jp/wordpress/archives/1168</a></p>
 <p>Peercast がうまくRTMP を受信できなかったので、HTTP で受信できるような構成にしました。<br>そのために必要なFlazrDumper がLinux でうまく動かなかったので、途中からWindows PC を経由するようにしました。</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SimpleScreenRecorder (Linux)</span><br><span class="line">    -&gt; FlazrDumper (Windiows)</span><br><span class="line">        -&gt; PeerCastStation (Windows)</span><br><span class="line">            -&gt; Internet</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">SimpleScreenRecorder (Linux)</span><br><span class="line">    -&gt; FlazrDumper (Windiows)</span><br><span class="line">        -&gt; PeerCastStation (Windows)</span><br><span class="line">            -&gt; Internet</span><br></pre></td></tr></table></figure>
 
 <table>
 <thead>

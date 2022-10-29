@@ -172,18 +172,18 @@
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
 <li><p>nkf パッケージのインストール</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install nkf</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install nkf</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>function(関数)の定義</p>
-<figure class="highlight text"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL Encode / Decode</span><br><span class="line">function urlencode &#123;</span><br><span class="line">  echo $1 | nkf -WwMQ | tr = % | sed &#x27;:a;N;$!ba;s/%\n//g&#x27;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function urldecode &#123;</span><br><span class="line">  echo $1 | nkf -w --url-input</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight text"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"># URL Encode / Decode</span><br><span class="line">function urlencode &#123;</span><br><span class="line">  echo $1 | nkf -WwMQ | tr = % | sed &#x27;:a;N;$!ba;s/%\n//g&#x27;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function urldecode &#123;</span><br><span class="line">  echo $1 | nkf -w --url-input</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><ul>
 <li>再ログインする</li>
-<li>即時反映したい場合<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ . ~/.bash_aliases</span><br></pre></td></tr></table></figure></li>
+<li>即時反映したい場合<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ . ~/.bash_aliases</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
-<li>URL エンコード (対象のURL文字列をダブルクォートで囲います)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ urlencode <span class="string">&quot;https://ktkr3d.github.io/こんな URL/そんな階層/&quot;</span></span><br><span class="line">https%3A%2F%2Fktkr3d%2Egithub%2Eio%2F%E3%81%93%E3%82%93%E3%81%AA%20URL%2F%E3%81%9D%E3%82%93%E3%81%AA%E9%9A%8E%E5%B1%A4%2F</span><br></pre></td></tr></table></figure></li>
-<li>URL デコード (対象のURL文字列をダブルクォートで囲います)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ urldecode <span class="string">&quot;https%3A%2F%2Fktkr3d%2Egithub%2Eio%2F%E3%81%93%E3%82%93%E3%81%AA%20URL%2F%E3%81%9D%E3%82%93%E3%81%AA%E9%9A%8E%E5%B1%A4%2F&quot;</span></span><br><span class="line">https://ktkr3d.github.io/こんな URL/そんな階層/</span><br></pre></td></tr></table></figure></li>
+<li>URL エンコード (対象のURL文字列をダブルクォートで囲います)<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ urlencode <span class="string">&quot;https://ktkr3d.github.io/こんな URL/そんな階層/&quot;</span></span><br><span class="line">https%3A%2F%2Fktkr3d%2Egithub%2Eio%2F%E3%81%93%E3%82%93%E3%81%AA%20URL%2F%E3%81%9D%E3%82%93%E3%81%AA%E9%9A%8E%E5%B1%A4%2F</span><br></pre></td></tr></table></figure></li>
+<li>URL デコード (対象のURL文字列をダブルクォートで囲います)<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ urldecode <span class="string">&quot;https%3A%2F%2Fktkr3d%2Egithub%2Eio%2F%E3%81%93%E3%82%93%E3%81%AA%20URL%2F%E3%81%9D%E3%82%93%E3%81%AA%E9%9A%8E%E5%B1%A4%2F&quot;</span></span><br><span class="line">https://ktkr3d.github.io/こんな URL/そんな階層/</span><br></pre></td></tr></table></figure></li>
 </ul>
 	  
 	</div>

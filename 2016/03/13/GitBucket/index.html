@@ -167,7 +167,7 @@
 	  <p><img src="/images/gitbucket.png" alt="GitBucket"><br><a target="_blank" rel="noopener" href="https://github.com/gitbucket/gitbucket">https://github.com/gitbucket/gitbucket</a><br>GitHub のようなインタフェースのリポジトリ管理サイト構築ツールGitBucket を使ってみました。</p>
 <span id="more"></span>
 
-<h2 id="JRE-のインストール"><a href="#JRE-のインストール" class="headerlink" title="JRE のインストール"></a>JRE のインストール</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install default-jre</span><br></pre></td></tr></table></figure>
+<h2 id="JRE-のインストール"><a href="#JRE-のインストール" class="headerlink" title="JRE のインストール"></a>JRE のインストール</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install default-jre</span><br></pre></td></tr></table></figure>
 <p>GitBucket の動作にはJava8 が必要とのことです。</p>
 <h2 id="GitBucket-のダウンロード"><a href="#GitBucket-のダウンロード" class="headerlink" title="GitBucket のダウンロード"></a>GitBucket のダウンロード</h2><p><a target="_blank" rel="noopener" href="https://github.com/gitbucket/gitbucket/releases">https://github.com/gitbucket/gitbucket/releases</a></p>
 <h2 id="プラグインのインストール"><a href="#プラグインのインストール" class="headerlink" title="プラグインのインストール"></a>プラグインのインストール</h2><p><a target="_blank" rel="noopener" href="http://gitbucket-plugins.github.io/">http://gitbucket-plugins.github.io/</a> からダウンロードして、<code>~/.gitbucket/plugins/</code> に格納する。</p>
@@ -175,7 +175,7 @@
 <li><a target="_blank" rel="noopener" href="https://github.com/gitbucket/gitbucket-gist-plugin/releases">https://github.com/gitbucket/gitbucket-gist-plugin/releases</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/yaroot/gitbucket-pages-plugin/releases">https://github.com/yaroot/gitbucket-pages-plugin/releases</a></li>
 </ul>
-<h2 id="GitBucket-の起動"><a href="#GitBucket-の起動" class="headerlink" title="GitBucket の起動"></a>GitBucket の起動</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar gitbucket.war --port=18080</span><br></pre></td></tr></table></figure>
+<h2 id="GitBucket-の起動"><a href="#GitBucket-の起動" class="headerlink" title="GitBucket の起動"></a>GitBucket の起動</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ java -jar gitbucket.war --port=18080</span><br></pre></td></tr></table></figure>
 
 <pre><code>--port=[NUMBER]
 --prefix=[CONTEXTPATH]
@@ -210,9 +210,9 @@
 </tr>
 </tbody></table>
 <h2 id="アカウントの追加"><a href="#アカウントの追加" class="headerlink" title="アカウントの追加"></a>アカウントの追加</h2><p>右上のアイコンから<code>System administration</code>を選択する。<br>User Management で<code>New User</code>を選択する。</p>
-<h2 id="git-ユーザの設定"><a href="#git-ユーザの設定" class="headerlink" title="git ユーザの設定"></a>git ユーザの設定</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;me&quot;</span></span><br><span class="line">$ git config --global user.email me@mail_domain_name</span><br></pre></td></tr></table></figure>
+<h2 id="git-ユーザの設定"><a href="#git-ユーザの設定" class="headerlink" title="git ユーザの設定"></a>git ユーザの設定</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;me&quot;</span></span><br><span class="line">$ git config --global user.email me@mail_domain_name</span><br></pre></td></tr></table></figure>
 
-<h2 id="SSH-Key-の登録"><a href="#SSH-Key-の登録" class="headerlink" title="SSH Key の登録"></a>SSH Key の登録</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen</span><br></pre></td></tr></table></figure>
+<h2 id="SSH-Key-の登録"><a href="#SSH-Key-の登録" class="headerlink" title="SSH Key の登録"></a>SSH Key の登録</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen</span><br></pre></td></tr></table></figure>
 
 <p>登録したユーザアカウントでログインして、<code>Account settings</code> - <code>SSH Keys</code></p>
 <table>
@@ -232,10 +232,10 @@
 </tr>
 </tbody></table>
 <h2 id="リポジトリの作成"><a href="#リポジトリの作成" class="headerlink" title="リポジトリの作成"></a>リポジトリの作成</h2><p><code>New repository</code> ボタンを押下する。</p>
-<h2 id="リポジトリのクローン"><a href="#リポジトリのクローン" class="headerlink" title="リポジトリのクローン"></a>リポジトリのクローン</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> http://localhost:18080/git/me/my-repo.git</span><br><span class="line">Cloning into <span class="string">&#x27;my-repo&#x27;</span>...</span><br><span class="line">Username <span class="keyword">for</span> <span class="string">&#x27;http://localhost:18080&#x27;</span>: me</span><br><span class="line">Password <span class="keyword">for</span> <span class="string">&#x27;http://me@localhost:18080&#x27;</span>:</span><br></pre></td></tr></table></figure>
+<h2 id="リポジトリのクローン"><a href="#リポジトリのクローン" class="headerlink" title="リポジトリのクローン"></a>リポジトリのクローン</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> http://localhost:18080/git/me/my-repo.git</span><br><span class="line">Cloning into <span class="string">&#x27;my-repo&#x27;</span>...</span><br><span class="line">Username <span class="keyword">for</span> <span class="string">&#x27;http://localhost:18080&#x27;</span>: me</span><br><span class="line">Password <span class="keyword">for</span> <span class="string">&#x27;http://me@localhost:18080&#x27;</span>:</span><br></pre></td></tr></table></figure>
 
 <p>または、</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> ssh://me@localhost:10022/me/my-repo.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> ssh://me@localhost:10022/me/my-repo.git</span><br></pre></td></tr></table></figure>
 	  
 	</div>
 

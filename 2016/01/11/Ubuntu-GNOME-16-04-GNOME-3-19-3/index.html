@@ -8,7 +8,7 @@
   
   <meta name="description" content="http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3?field.series_filter=xenialhttps://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging?field.series_filter=xenialUbuntu GNOME 16.04 のデイリービルドにppa:gnome3-team&amp;#x2F;gnome3-staging を適用してGNOME Shell 3.19.3 の環境を構築してみました。gdm3 の更新版が公開されていないので、ディスプレイマネージャをlightdm に切り替えました。
 EDIT:gdm3 はppa:ricotz&amp;#x2F;testing で提供されていました。
-1234$ sudo add-apt-repository ppa:ricotz/testing$ sudo apt-get update$ sudo apt-get dist-upgrade$ sudo dpkg-reconfigure gdm3">
+$ sudo add-apt-repository ppa:ricotz/testing$ sudo apt-get update$ sudo apt-get dist-upgrade$ sudo dpkg-reconfigure gdm3">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -168,20 +168,20 @@ EDIT:gdm3 はppa:ricotz&amp;#x2F;testing で提供されていました。
 
 	  <p><img src="/images/ubuntu_gnome_16.04_gnome_3.19.3.png" alt="ubuntu_gnome_16.04_gnome_3.19.3"><br><a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/">http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/</a><br><a target="_blank" rel="noopener" href="https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3?field.series_filter=xenial">https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3?field.series_filter=xenial</a><br><a target="_blank" rel="noopener" href="https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging?field.series_filter=xenial">https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging?field.series_filter=xenial</a><br>Ubuntu GNOME 16.04 のデイリービルドにppa:gnome3-team&#x2F;gnome3-staging を適用してGNOME Shell 3.19.3 の環境を構築してみました。gdm3 の更新版が公開されていないので、ディスプレイマネージャをlightdm に切り替えました。</p>
 <p>EDIT:<br>gdm3 はppa:ricotz&#x2F;testing で提供されていました。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:ricotz/testing</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get dist-upgrade</span><br><span class="line">$ sudo dpkg-reconfigure gdm3</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:ricotz/testing</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get dist-upgrade</span><br><span class="line">$ sudo dpkg-reconfigure gdm3</span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
 <h2 id="Ubuntu-GNOME-16-04-Xenial-デイリービルドのインストール"><a href="#Ubuntu-GNOME-16-04-Xenial-デイリービルドのインストール" class="headerlink" title="Ubuntu GNOME 16.04 Xenial デイリービルドのインストール"></a>Ubuntu GNOME 16.04 Xenial デイリービルドのインストール</h2><p><a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/">http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/</a></p>
-<h2 id="gnome3-team-のPPA-を適用"><a href="#gnome3-team-のPPA-を適用" class="headerlink" title="gnome3-team のPPA を適用"></a>gnome3-team のPPA を適用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:gnome3-team/gnome3</span><br><span class="line">$ sudo add-apt-repository ppa:gnome3-team/gnome3-staging</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get dist-upgrade</span><br></pre></td></tr></table></figure>
+<h2 id="gnome3-team-のPPA-を適用"><a href="#gnome3-team-のPPA-を適用" class="headerlink" title="gnome3-team のPPA を適用"></a>gnome3-team のPPA を適用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:gnome3-team/gnome3</span><br><span class="line">$ sudo add-apt-repository ppa:gnome3-team/gnome3-staging</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get dist-upgrade</span><br></pre></td></tr></table></figure>
 
 <h2 id="lightdm-の適用"><a href="#lightdm-の適用" class="headerlink" title="lightdm の適用"></a>lightdm の適用</h2><p>リリース前のUbuntu ではGDM が原因でログインできないことがよくあるので、暫定的にLightDM に切り替えます。GDM からログインできなくなってしまった場合は、Ctrl-Alt-F1 からログインしてインストールを実行します。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install lightdm</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install lightdm</span><br></pre></td></tr></table></figure>
 
 <p>GDM とLightDM のどちらを選択するかの問い合わせではlightdm を選択します。</p>
-<h2 id="再起動"><a href="#再起動" class="headerlink" title="再起動"></a>再起動</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ reboot</span><br></pre></td></tr></table></figure>
+<h2 id="再起動"><a href="#再起動" class="headerlink" title="再起動"></a>再起動</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ reboot</span><br></pre></td></tr></table></figure>
 
-<h2 id="最低限の環境設定"><a href="#最低限の環境設定" class="headerlink" title="最低限の環境設定"></a>最低限の環境設定</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ LANG=C xdg-user-dirs-gtk-update</span><br><span class="line">$ gsettings <span class="built_in">set</span> org.gnome.shell disable-extension-version-validation <span class="string">&quot;true&quot;</span></span><br><span class="line">$ sudo apt-get install guake</span><br></pre></td></tr></table></figure>
+<h2 id="最低限の環境設定"><a href="#最低限の環境設定" class="headerlink" title="最低限の環境設定"></a>最低限の環境設定</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ LANG=C xdg-user-dirs-gtk-update</span><br><span class="line">$ gsettings <span class="built_in">set</span> org.gnome.shell disable-extension-version-validation <span class="string">&quot;true&quot;</span></span><br><span class="line">$ sudo apt-get install guake</span><br></pre></td></tr></table></figure>
 
 <h2 id="GNOME-Shell-のカスタマイズ"><a href="#GNOME-Shell-のカスタマイズ" class="headerlink" title="GNOME Shell のカスタマイズ"></a>GNOME Shell のカスタマイズ</h2><ul>
 <li>Activities Configurator<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/358/activities-configurator/">https://extensions.gnome.org/extension/358/activities-configurator/</a></li>

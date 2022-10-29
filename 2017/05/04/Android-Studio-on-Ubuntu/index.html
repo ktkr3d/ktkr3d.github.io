@@ -167,11 +167,11 @@
 	  <p><img src="/images/android-studio-japanese.png" alt="Android Studio Japanese"><br><a target="_blank" rel="noopener" href="http://qiita.com/cypher256/items/a87179fbe8dd7f63ec4e">http://qiita.com/cypher256/items/a87179fbe8dd7f63ec4e</a><br>Ubuntu 17.10 (daily build) 上のAndroid Studio を日本語化してみました。</p>
 <span id="more"></span>
 
-<h2 id="Ubuntu-Make-のインストール"><a href="#Ubuntu-Make-のインストール" class="headerlink" title="Ubuntu Make のインストール"></a>Ubuntu Make のインストール</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make</span><br><span class="line">$ sudo software-properties-gtk</span><br></pre></td></tr></table></figure>
+<h2 id="Ubuntu-Make-のインストール"><a href="#Ubuntu-Make-のインストール" class="headerlink" title="Ubuntu Make のインストール"></a>Ubuntu Make のインストール</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make</span><br><span class="line">$ sudo software-properties-gtk</span><br></pre></td></tr></table></figure>
 <p>まだ17.10 用のパッケージが存在しないので、「ディストリビューション」の値を<code>artful</code>から<code>zesty</code>に変更する。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install ubuntu-make</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install ubuntu-make</span><br></pre></td></tr></table></figure>
 
-<h2 id="Android-Studio-のインストール"><a href="#Android-Studio-のインストール" class="headerlink" title="Android Studio のインストール"></a>Android Studio のインストール</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ umake android android-studio</span><br></pre></td></tr></table></figure>
+<h2 id="Android-Studio-のインストール"><a href="#Android-Studio-のインストール" class="headerlink" title="Android Studio のインストール"></a>Android Studio のインストール</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ umake android android-studio</span><br></pre></td></tr></table></figure>
 
 <p>Ubuntu Make を使った場合、以下の構成になります。</p>
 <table>
@@ -207,7 +207,7 @@
 <li>Android Studio を起動して、Help &gt; Edit Custom VM Options… を選択する。<br>  <code>/home/USERID/.AndroidStudio2.3/studio64.vmoptions</code> が表示される。</li>
 <li>初期インストール時のオプション <code>/home/USERID/.local/share/umake/android/android-studio/bin/studio64.vmoptions</code> の中身を貼り付ける。</li>
 <li>pleiades.zip の中の<code>./plugins/jp.sourceforge.mergedoc.pleiades</code>のみを以下の階層になるように展開する。<br>  <code>/home/USERID/.AndroidStudio2.3/jp.sourceforge.mergedoc.pleiades</code></li>
-<li>以下を最終行の後に貼り付ける。  <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-Xverify:none</span><br><span class="line">-javaagent:/home/USERID/.AndroidStudio2.3/jp.sourceforge.mergedoc.pleiades/pleiades.jar</span><br></pre></td></tr></table></figure></li>
+<li>以下を最終行の後に貼り付ける。  <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line">-Xverify:none</span><br><span class="line">-javaagent:/home/USERID/.AndroidStudio2.3/jp.sourceforge.mergedoc.pleiades/pleiades.jar</span><br></pre></td></tr></table></figure></li>
 <li>Android Studio を再起動する。</li>
 </ol>
 <h2 id="Android-NDK-のインストール"><a href="#Android-NDK-のインストール" class="headerlink" title="Android NDK のインストール"></a>Android NDK のインストール</h2><ol>

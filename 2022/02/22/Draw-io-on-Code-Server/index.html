@@ -256,13 +256,13 @@ localhost 指定の場合に有効になるようです。利用するOS(localho
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ul>
 <li><p>ローカルWindows の設定</p>
 <p>WSL 上で以下を実行しておく。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">IP=$(ip -f inet -o addr show eth0 | cut -d\  -f 7 | cut -d/ -f 1)</span><br><span class="line"></span><br><span class="line">for PORT in 8080; do</span><br><span class="line">  /mnt/c/Windows/system32/netsh.exe interface portproxy delete v4tov4 listenport=$PORT</span><br><span class="line">  /mnt/c/Windows/system32/netsh.exe interface portproxy add    v4tov4 listenport=$PORT connectaddress=$IP</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">IP=$(ip -f inet -o addr show eth0 | cut -d\  -f 7 | cut -d/ -f 1)</span><br><span class="line"></span><br><span class="line">for PORT in 8080; do</span><br><span class="line">  /mnt/c/Windows/system32/netsh.exe interface portproxy delete v4tov4 listenport=$PORT</span><br><span class="line">  /mnt/c/Windows/system32/netsh.exe interface portproxy add    v4tov4 listenport=$PORT connectaddress=$IP</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>リモートWindows の場合</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenport=8080 listenaddr=127.0.0.1 connectport=8080 connectaddress=192.168.11.2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenport=8080 listenaddr=127.0.0.1 connectport=8080 connectaddress=192.168.11.2</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>リモートLinux の場合</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redir -n 0.0.0.0:8080 192.168.11.2:8080</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redir -n 0.0.0.0:8080 192.168.11.2:8080</span><br></pre></td></tr></table></figure>
 <p><code>gnome-session-properties</code> でスタートアップ登録しておくと便利</p>
 </li>
 </ul>

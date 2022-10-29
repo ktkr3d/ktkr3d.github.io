@@ -165,9 +165,9 @@
 	  		
 
 	  <p>Firefox のアドオンNewsFox を使ってRSS を購読しているのだけど、Firefox を13.0 にアップデートしてから、時々マウスのボタンダウンイベントがキャプチャーされて無効化されてしまうような挙動があったので、やっつけで暫定対策してみた。<del>Linux でもWindows でも発生する(?)ので、NewsFox 側に問題がありそう。いろいろFirefox のバグ回避もしているようだし。</del>とりあえず、ドラッグ開始しないようにreturn してしまうことにした。NewsFox でドラッグアンドドロップなんて飾りですよ。</p>
-<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragIt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragIt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragArt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>; </span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragArt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>; </span><br></pre></td></tr></table></figure>
 
 <p>他に古いAPI を使っているところもあるようだし、早くアップデート版がリリースされるといいな。</p>
 <p>newsfox.xpi &#x3D; {899DF1F8-2F43-4394-8315-37F6744E6319}.xpi</p>

@@ -178,10 +178,10 @@ Raspbery Pi 4 をエッジゲートウェイにしてみました。どうやっ
 <li>Ubuntu Server 19.10 イメージのダウンロード<br><a target="_blank" rel="noopener" href="https://ubuntu.com/download/raspberry-pi">https://ubuntu.com/download/raspberry-pi</a><br><code>64-bit for Raspberry Pi 3 and 4</code></li>
 <li>SD カードに書き込み</li>
 <li>Raspberry Pi 4 起動</li>
-<li>接続とパスワード更新<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh ubuntu@192.168.11.24</span><br></pre></td></tr></table></figure></li>
-<li>再接続とパッケージの更新<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh ubuntu@192.168.11.24</span><br><span class="line">pi4$ sudo apt update</span><br><span class="line">pi4$ sudo apt upgrade</span><br></pre></td></tr></table></figure></li>
-<li>Edge Gateway のインストール<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pi4$ sudo snap install edgexfoundry</span><br></pre></td></tr></table></figure></li>
-<li>Edge Gateway の Web UI のインストール<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pi4$ sudo snap install edgex-ui-go --channel=latest/beta</span><br></pre></td></tr></table></figure></li>
+<li>接続とパスワード更新<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh ubuntu@192.168.11.24</span><br></pre></td></tr></table></figure></li>
+<li>再接続とパッケージの更新<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh ubuntu@192.168.11.24</span><br><span class="line">pi4$ sudo apt update</span><br><span class="line">pi4$ sudo apt upgrade</span><br></pre></td></tr></table></figure></li>
+<li>Edge Gateway のインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pi4$ sudo snap install edgexfoundry</span><br></pre></td></tr></table></figure></li>
+<li>Edge Gateway の Web UI のインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pi4$ sudo snap install edgex-ui-go --channel=latest/beta</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ol start="8">
 <li>Edge Gateway へリモート接続<br><a target="_blank" rel="noopener" href="http://192.168.11.24:4000/">http://192.168.11.24:4000</a><br>admin &#x2F; admin</li>

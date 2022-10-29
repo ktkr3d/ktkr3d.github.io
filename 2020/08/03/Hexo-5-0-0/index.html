@@ -11,7 +11,7 @@ Hexo 5.0.0 がリリースされていたので導入してみました。
 
 さらに高速になったようです。
 メモリ使用量が減った気がします。
-フロントマターにpublished: falseを設定できるようになりました。以下を追記しました。./scalfolds/post.md1published: true">
+フロントマターにpublished: falseを設定できるようになりました。以下を追記しました。./scalfolds/post.mdpublished: true">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -174,7 +174,7 @@ Hexo 5.0.0 がリリースされていたので導入してみました。
 <ul>
 <li>さらに高速になったようです。</li>
 <li>メモリ使用量が減った気がします。</li>
-<li>フロントマターに<code>published: false</code>を設定できるようになりました。以下を追記しました。<figure class="highlight markdown"><figcaption><span>./scalfolds/post.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">published: true</span><br></pre></td></tr></table></figure></li>
+<li>フロントマターに<code>published: false</code>を設定できるようになりました。以下を追記しました。<figure class="highlight markdown"><figcaption><span>./scalfolds/post.md</span></figcaption><table><tr><td class="code"><pre><span class="line">published: true</span><br></pre></td></tr></table></figure></li>
 </ul>
 <span id="more"></span>
 
@@ -193,11 +193,11 @@ Hexo 5.0.0 がリリースされていたので導入してみました。
 </li>
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
-<li>バックアップ  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mv</span> blog _blog</span><br></pre></td></tr></table></figure></li>
-<li>node の更新  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ n latest</span><br><span class="line">$ node --version</span><br><span class="line">v14.7.0</span><br><span class="line">$ npm --version</span><br><span class="line">6.14.7</span><br><span class="line">$ n --version</span><br><span class="line">6.5.1</span><br></pre></td></tr></table></figure></li>
-<li>Hexo のインストール  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure></li>
-<li>blog の初期化  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npx hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></li>
-<li>プラグインのインストール  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ npm i -S hexo-deployer-git</span><br><span class="line">$ npm i -S hexo-filter-mermaid-diagrams</span><br><span class="line">$ npm i -S hexo-generator-feed</span><br><span class="line">$ npm i -S hexo-generator-search</span><br><span class="line">$ npm i -S hexo-pdf</span><br><span class="line">$ npm i -S hexo-related-popular-posts</span><br><span class="line">$ npm i -S hexo-tag-googlecharts</span><br><span class="line">$ npm i -S hexo-tag-table-bootstrap</span><br><span class="line">$ npm i -S hexo-tag-twitter</span><br></pre></td></tr></table></figure></li>
+<li>バックアップ  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mv</span> blog _blog</span><br></pre></td></tr></table></figure></li>
+<li>node の更新  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ n latest</span><br><span class="line">$ node --version</span><br><span class="line">v14.7.0</span><br><span class="line">$ npm --version</span><br><span class="line">6.14.7</span><br><span class="line">$ n --version</span><br><span class="line">6.5.1</span><br></pre></td></tr></table></figure></li>
+<li>Hexo のインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure></li>
+<li>blog の初期化  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npx hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></li>
+<li>プラグインのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm i -S hexo-deployer-git</span><br><span class="line">$ npm i -S hexo-filter-mermaid-diagrams</span><br><span class="line">$ npm i -S hexo-generator-feed</span><br><span class="line">$ npm i -S hexo-generator-search</span><br><span class="line">$ npm i -S hexo-pdf</span><br><span class="line">$ npm i -S hexo-related-popular-posts</span><br><span class="line">$ npm i -S hexo-tag-googlecharts</span><br><span class="line">$ npm i -S hexo-tag-table-bootstrap</span><br><span class="line">$ npm i -S hexo-tag-twitter</span><br></pre></td></tr></table></figure></li>
 <li>モジュールの修正</li>
 </ol>
 <ul>
@@ -249,10 +249,10 @@ Hexo 5.0.0 がリリースされていたので導入してみました。
 </li>
 </ul>
 <ol start="7">
-<li>バージョンの確認  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --version</span><br><span class="line">INFO  Validating config</span><br><span class="line">hexo: 5.0.0</span><br><span class="line">hexo-cli: 4.1.0</span><br><span class="line">os: Linux 4.19.121-microsoft-standard linux x64</span><br><span class="line">node: 14.7.0</span><br><span class="line">v8: 8.4.371.19-node.12</span><br><span class="line">uv: 1.38.1</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.7</span><br><span class="line">ares: 1.16.0</span><br><span class="line">modules: 83</span><br><span class="line">nghttp2: 1.41.0</span><br><span class="line">napi: 6</span><br><span class="line">llhttp: 2.0.4</span><br><span class="line">openssl: 1.1.1g</span><br><span class="line">cldr: 37.0</span><br><span class="line">icu: 67.1</span><br><span class="line">tz: 2020a</span><br><span class="line">unicode: 13.0</span><br></pre></td></tr></table></figure></li>
+<li>バージョンの確認  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo --version</span><br><span class="line">INFO  Validating config</span><br><span class="line">hexo: 5.0.0</span><br><span class="line">hexo-cli: 4.1.0</span><br><span class="line">os: Linux 4.19.121-microsoft-standard linux x64</span><br><span class="line">node: 14.7.0</span><br><span class="line">v8: 8.4.371.19-node.12</span><br><span class="line">uv: 1.38.1</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.7</span><br><span class="line">ares: 1.16.0</span><br><span class="line">modules: 83</span><br><span class="line">nghttp2: 1.41.0</span><br><span class="line">napi: 6</span><br><span class="line">llhttp: 2.0.4</span><br><span class="line">openssl: 1.1.1g</span><br><span class="line">cldr: 37.0</span><br><span class="line">icu: 67.1</span><br><span class="line">tz: 2020a</span><br><span class="line">unicode: 13.0</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="データの移行"><a href="#データの移行" class="headerlink" title="データの移行"></a>データの移行</h3><ul>
-<li>バックアップからインポート<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/blog</span><br><span class="line">$ <span class="built_in">cp</span> ../_blog/google-services.pem .</span><br><span class="line">$ <span class="built_in">cp</span> -r ../_blog/source .</span><br><span class="line">$ <span class="built_in">cp</span> -r ../_blog/scalfolds .</span><br><span class="line">$ <span class="built_in">cp</span> -r ../_blog/theme .</span><br><span class="line">$ <span class="built_in">mv</span> ./blog/themes/freemind/_config.yml ./_config.freemind.yml</span><br></pre></td></tr></table></figure>
+<li>バックアップからインポート<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/blog</span><br><span class="line">$ <span class="built_in">cp</span> ../_blog/google-services.pem .</span><br><span class="line">$ <span class="built_in">cp</span> -r ../_blog/source .</span><br><span class="line">$ <span class="built_in">cp</span> -r ../_blog/scalfolds .</span><br><span class="line">$ <span class="built_in">cp</span> -r ../_blog/theme .</span><br><span class="line">$ <span class="built_in">mv</span> ./blog/themes/freemind/_config.yml ./_config.freemind.yml</span><br></pre></td></tr></table></figure>
 ⚠️Hexo 5.0.0 からテーマの設定ファイルをルートに<code>./_config.[theme].yml</code> の名称で配置することが推奨されているようです。設定内容は <code>./_config.[theme].yml</code> &gt; <code>./[theme]/_config.yml</code> の優先順位でマージされます。混乱を避けるために移動しておいた方がよさそうです。</li>
 </ul>
 <h3 id="config-yml-の更新"><a href="#config-yml-の更新" class="headerlink" title="_config.yml の更新"></a>_config.yml の更新</h3><ul>
@@ -262,7 +262,7 @@ Hexo 5.0.0 がリリースされていたので導入してみました。
 <li><code>use_date_for_updated</code> は<code>updated_option</code> に仕様変更</li>
 </ul>
 <h3 id="生成とデプロイ"><a href="#生成とデプロイ" class="headerlink" title="生成とデプロイ"></a>生成とデプロイ</h3><ul>
-<li>生成とデプロイ<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></li>
+<li>生成とデプロイ<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></li>
 </ul>
 	  
 	</div>

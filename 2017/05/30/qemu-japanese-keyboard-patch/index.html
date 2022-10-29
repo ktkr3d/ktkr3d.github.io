@@ -167,10 +167,10 @@
 	  <p><img src="/images/qemu-patch.png" alt="qemu patch"><br><a target="_blank" rel="noopener" href="https://patchwork.kernel.org/patch/9489845/">https://patchwork.kernel.org/patch/9489845/</a><br>Ubuntu 17.10 のqemu-kvm 仮想環境で日本語キーボードのバックスペースの隣の<code>\</code>,<code>|</code>キーが入力できませんでした。<br>調べてみたところ、qemu 2.8 に原因があるようでしたので、パッチを当ててみました。</p>
 <span id="more"></span>
 
-<h2 id="qemu-のソースを取得"><a href="#qemu-のソースを取得" class="headerlink" title="qemu のソースを取得"></a>qemu のソースを取得</h2>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> qemu; <span class="built_in">cd</span> <span class="variable">$_</span></span><br><span class="line">$ apt <span class="built_in">source</span> qemu</span><br><span class="line">$ sudo apt build-dep qemu</span><br></pre></td></tr></table></figure>
+<h2 id="qemu-のソースを取得"><a href="#qemu-のソースを取得" class="headerlink" title="qemu のソースを取得"></a>qemu のソースを取得</h2>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> qemu; <span class="built_in">cd</span> <span class="variable">$_</span></span><br><span class="line">$ apt <span class="built_in">source</span> qemu</span><br><span class="line">$ sudo apt build-dep qemu</span><br></pre></td></tr></table></figure>
 
 <h2 id="パッチを当てる"><a href="#パッチを当てる" class="headerlink" title="パッチを当てる"></a>パッチを当てる</h2><p>  <a target="_blank" rel="noopener" href="https://patchwork.kernel.org/patch/9489845/">https://patchwork.kernel.org/patch/9489845/</a></p>
-<h2 id="パッケージの作成"><a href="#パッケージの作成" class="headerlink" title="パッケージの作成"></a>パッケージの作成</h2>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> qemu-2.8+dfsg</span><br><span class="line">$ dpkg-buildpackage -rfakeroot -uc -b</span><br></pre></td></tr></table></figure>
+<h2 id="パッケージの作成"><a href="#パッケージの作成" class="headerlink" title="パッケージの作成"></a>パッケージの作成</h2>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> qemu-2.8+dfsg</span><br><span class="line">$ dpkg-buildpackage -rfakeroot -uc -b</span><br></pre></td></tr></table></figure>
 
 <p>  以下のパッケージが作成されました。</p>
 <ul>
@@ -191,7 +191,7 @@
 <li>qemu-utils_2.8+dfsg-3ubuntu4_amd64.deb</li>
 <li>qemu_2.8+dfsg-3ubuntu4_amd64.deb</li>
 </ul>
-<h2 id="パッケージのインストール"><a href="#パッケージのインストール" class="headerlink" title="パッケージのインストール"></a>パッケージのインストール</h2>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ..</span><br><span class="line">$ sudo dpkg -i *.deb</span><br></pre></td></tr></table></figure>
+<h2 id="パッケージのインストール"><a href="#パッケージのインストール" class="headerlink" title="パッケージのインストール"></a>パッケージのインストール</h2>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ..</span><br><span class="line">$ sudo dpkg -i *.deb</span><br></pre></td></tr></table></figure>
 	  
 	</div>
 

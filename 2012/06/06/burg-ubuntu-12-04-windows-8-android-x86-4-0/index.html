@@ -190,44 +190,44 @@ Ubuntu 12.04 を&amp;#x2F;dev&amp;#x2F;sda">
 * system.sfs
 </code></pre>
 <p>設定保存用のフォルダも作成</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> /PATHTO/Android-x86/tegav2/data</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> /PATHTO/Android-x86/tegav2/data</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="4">
 <li>Burg のインストール</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:n-muench/burg</span><br><span class="line">$ sudo apt-get update </span><br><span class="line">$ sudo apt-get install burg burg-themes</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:n-muench/burg</span><br><span class="line">$ sudo apt-get update </span><br><span class="line">$ sudo apt-get install burg burg-themes</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="5">
 <li>Burg のテーマfortune とAndroid 用アイコンをgnome-look.org からダウンロードしてテーマ変更</li>
 </ol>
-<figure class="highlight text"><figcaption><span>/etc/default/burg</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GRUB_GFXMODE=1366x768</span><br><span class="line">GRUB_THEME=fortune</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/etc/default/burg</span></figcaption><table><tr><td class="code"><pre><span class="line">GRUB_GFXMODE=1366x768</span><br><span class="line">GRUB_THEME=fortune</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight text"><figcaption><span>/boot/burg/themes/fortune/icons/hover</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  -slackware &#123; image = &quot;$$/grey_slackware.png:$$/large_slackware.png&quot; &#125;</span><br><span class="line">  -android &#123; image = &quot;$$/grey_android.png:$$/large_android.png&quot; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/boot/burg/themes/fortune/icons/hover</span></figcaption><table><tr><td class="code"><pre><span class="line">  -slackware &#123; image = &quot;$$/grey_slackware.png:$$/large_slackware.png&quot; &#125;</span><br><span class="line">  -android &#123; image = &quot;$$/grey_android.png:$$/large_android.png&quot; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="6">
 <li>Android-x86 用のブートエントリを追加</li>
 </ol>
-<figure class="highlight text"><figcaption><span>/etc/burg.d/40_custom</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">menuentry &quot;Android-x86 4.0&quot; --class android --class os &#123;</span><br><span class="line">    insmod ext2</span><br><span class="line">    set root=&#x27;(hd0,3)&#x27;</span><br><span class="line">    search --no-floppy --fs-uuid --set MY-UU-ID</span><br><span class="line">    echo &#x27;Loading Android-x86 4.0 ...&#x27;</span><br><span class="line">    linux /PATHTO/Android-x86/tegav2/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/PATHTO/Android-x86/tegav2 DATA=</span><br><span class="line">    initrd /PATHTO/Android-x86/tegav2/initrd.img</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/etc/burg.d/40_custom</span></figcaption><table><tr><td class="code"><pre><span class="line">menuentry &quot;Android-x86 4.0&quot; --class android --class os &#123;</span><br><span class="line">    insmod ext2</span><br><span class="line">    set root=&#x27;(hd0,3)&#x27;</span><br><span class="line">    search --no-floppy --fs-uuid --set MY-UU-ID</span><br><span class="line">    echo &#x27;Loading Android-x86 4.0 ...&#x27;</span><br><span class="line">    linux /PATHTO/Android-x86/tegav2/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/PATHTO/Android-x86/tegav2 DATA=</span><br><span class="line">    initrd /PATHTO/Android-x86/tegav2/initrd.img</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="7">
 <li>Burg の設定を更新</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo burg-install /dev/sda</span><br><span class="line">$ sudo update-burg</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo burg-install /dev/sda</span><br><span class="line">$ sudo update-burg</span><br></pre></td></tr></table></figure>
 
 
 
 <ol start="8">
 <li>設定が有効になっているかを確認</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo burg-emu -D</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo burg-emu -D</span><br></pre></td></tr></table></figure>
 
 
 

@@ -13,9 +13,9 @@ Ubuntu 18.10http://cdimage.ubuntu.com/ubuntu/releases/
 
 環境設定
 ホームディレクトリの各フォルダ名を英語名に変更  
-  1$ LANG=C xdg-user-dirs-gtk-update
+  $ LANG=C xdg-user-dirs-gtk-update
 
-テキストテンプレー">
+テキストテンプレート">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -177,19 +177,19 @@ Ubuntu 18.10http://cdimage.ubuntu.com/ubuntu/releases/
 </ul>
 <h2 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h2><ul>
 <li><p>ホームディレクトリの各フォルダ名を英語名に変更  </p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>テキストテンプレートファイルの作成</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>alias の設定</p>
-  <figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo apt update -y &amp;&amp; sudo apt dist-upgrade &amp;&amp; sudo apt autoremove -y&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> en=<span class="string">&#x27;export LC_ALL=en_US.UTF8&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> ja=<span class="string">&#x27;export LC_ALL=ja_JP.UTF8&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">sshu</span></span>() &#123;</span><br><span class="line">  <span class="built_in">command</span> ssh ubuntu@192.168.11.<span class="variable">$1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">sshh</span></span>() &#123;</span><br><span class="line">  <span class="built_in">command</span> ssh hoge@192.168.11.<span class="variable">$1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo apt update -y &amp;&amp; sudo apt dist-upgrade &amp;&amp; sudo apt autoremove -y&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> en=<span class="string">&#x27;export LC_ALL=en_US.UTF8&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> ja=<span class="string">&#x27;export LC_ALL=ja_JP.UTF8&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">sshu</span></span>() &#123;</span><br><span class="line">  <span class="built_in">command</span> ssh ubuntu@192.168.11.<span class="variable">$1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">sshh</span></span>() &#123;</span><br><span class="line">  <span class="built_in">command</span> ssh hoge@192.168.11.<span class="variable">$1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>パワーオフアイコン</p>
-  <figure class="highlight ini"><figcaption><span>~/.local/share/applications/gnome-session-quit.desktop</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Desktop Entry]</span></span><br><span class="line"><span class="attr">Name</span>=Power <span class="literal">Off</span></span><br><span class="line"><span class="attr">TryExec</span>=/usr/bin/gnome-session-quit</span><br><span class="line"><span class="attr">Exec</span>=/usr/bin/gnome-session-quit --power-<span class="literal">off</span></span><br><span class="line"><span class="attr">Icon</span>=system-shutdown</span><br><span class="line"><span class="attr">Terminal</span>=<span class="literal">false</span></span><br><span class="line"><span class="attr">Type</span>=Application</span><br><span class="line"><span class="attr">Categories</span>=System<span class="comment">;</span></span><br><span class="line"><span class="attr">Version</span>=<span class="number">1.0</span></span><br><span class="line"><span class="attr">X-Ubuntu-Gettext-Domain</span>=indicator-session</span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight ini"><figcaption><span>~/.local/share/applications/gnome-session-quit.desktop</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[Desktop Entry]</span></span><br><span class="line"><span class="attr">Name</span>=Power <span class="literal">Off</span></span><br><span class="line"><span class="attr">TryExec</span>=/usr/bin/gnome-session-quit</span><br><span class="line"><span class="attr">Exec</span>=/usr/bin/gnome-session-quit --power-<span class="literal">off</span></span><br><span class="line"><span class="attr">Icon</span>=system-shutdown</span><br><span class="line"><span class="attr">Terminal</span>=<span class="literal">false</span></span><br><span class="line"><span class="attr">Type</span>=Application</span><br><span class="line"><span class="attr">Categories</span>=System<span class="comment">;</span></span><br><span class="line"><span class="attr">Version</span>=<span class="number">1.0</span></span><br><span class="line"><span class="attr">X-Ubuntu-Gettext-Domain</span>=indicator-session</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="GNOME-Shell-関連"><a href="#GNOME-Shell-関連" class="headerlink" title="GNOME Shell 関連"></a>GNOME Shell 関連</h2><ul>
-<li>GNOME Shell 拡張連携パッケージ  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install -y chrome-gnome-shell gnome-tweak</span><br></pre></td></tr></table></figure></li>
+<li>GNOME Shell 拡張連携パッケージ  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install -y chrome-gnome-shell gnome-tweak</span><br></pre></td></tr></table></figure></li>
 <li>Google Chrome ブラウザ拡張の追加  <ul>
 <li>GNOME Shell Integration</li>
 </ul>
@@ -201,7 +201,7 @@ Ubuntu 18.10http://cdimage.ubuntu.com/ubuntu/releases/
 </li>
 </ul>
 <h2 id="壁紙"><a href="#壁紙" class="headerlink" title="壁紙"></a>壁紙</h2><ul>
-<li>GNOME 壁紙のインストール  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install ubuntu-wall-papers-artful</span><br></pre></td></tr></table></figure></li>
+<li>GNOME 壁紙のインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install ubuntu-wall-papers-artful</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="優先パッケージ"><a href="#優先パッケージ" class="headerlink" title="優先パッケージ"></a>優先パッケージ</h2><ul>
 <li>curl</li>
@@ -212,7 +212,7 @@ Ubuntu 18.10http://cdimage.ubuntu.com/ubuntu/releases/
 <h2 id="デスクトップパッケージ"><a href="#デスクトップパッケージ" class="headerlink" title="デスクトップパッケージ"></a>デスクトップパッケージ</h2><ul>
 <li>gimp</li>
 <li>kodi</li>
-<li>ssh  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen</span><br><span class="line">$ ssh-copy-id -i ~/.ssh/id_rsa.pub username@hostname -p 22222</span><br><span class="line">$ ssh username@hostname -p 22222</span><br></pre></td></tr></table></figure></li>
+<li>ssh  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen</span><br><span class="line">$ ssh-copy-id -i ~/.ssh/id_rsa.pub username@hostname -p 22222</span><br><span class="line">$ ssh username@hostname -p 22222</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="サーバパッケージ"><a href="#サーバパッケージ" class="headerlink" title="サーバパッケージ"></a>サーバパッケージ</h2><ul>
 <li>openssh-server</li>
@@ -222,17 +222,17 @@ Ubuntu 18.10http://cdimage.ubuntu.com/ubuntu/releases/
 <li>make</li>
 <li>perl</li>
 <li>build-essential</li>
-<li>git  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">$ git config --global user.email mail_account_name@mail_domain_name</span><br></pre></td></tr></table></figure></li>
+<li>git  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">$ git config --global user.email mail_account_name@mail_domain_name</span><br></pre></td></tr></table></figure></li>
 <li>gitg</li>
 </ul>
 <h2 id="外部インストーラパッケージ"><a href="#外部インストーラパッケージ" class="headerlink" title="外部インストーラパッケージ"></a>外部インストーラパッケージ</h2><ul>
 <li>Chrome  </li>
 <li>vscode</li>
 <li>Node.js<br><a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a><br><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions</a><br>setup_?.x を対象のバージョンに読み替える</li>
-<li>Docker<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install curl</span><br><span class="line">$ curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
-<figure class="highlight ini"><figcaption><span>/etc/apt/sources.list.d/docker.list</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial main</span><br><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial testing</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gpasswd -a <span class="variable">$USER</span> docker</span><br><span class="line">$ sudo systemctl daemon-reload</span><br><span class="line">$ sudo systemctl restart docker</span><br></pre></td></tr></table></figure></li>
-<li>Docker Compose<br><a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases">https://github.com/docker/compose/releases</a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line">$ sudo <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
+<li>Docker<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install curl</span><br><span class="line">$ curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><figcaption><span>/etc/apt/sources.list.d/docker.list</span></figcaption><table><tr><td class="code"><pre><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial main</span><br><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial testing</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo gpasswd -a <span class="variable">$USER</span> docker</span><br><span class="line">$ sudo systemctl daemon-reload</span><br><span class="line">$ sudo systemctl restart docker</span><br></pre></td></tr></table></figure></li>
+<li>Docker Compose<br><a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases">https://github.com/docker/compose/releases</a><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line">$ sudo <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
 <li>Unity 3D<br><a target="_blank" rel="noopener" href="http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/">http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/</a> の最新トピック<br><a href="http://ktkr3d.github.io/2015/08/30/Unity-5-Standard-Assets-Example-Project-on-Linux/">http://ktkr3d.github.io/2015/08/30/Unity-5-Standard-Assets-Example-Project-on-Linux/</a></li>
 </ul>
 <h2 id="vscode-拡張"><a href="#vscode-拡張" class="headerlink" title="vscode 拡張"></a>vscode 拡張</h2><h2 id="Chrome-拡張"><a href="#Chrome-拡張" class="headerlink" title="Chrome 拡張"></a>Chrome 拡張</h2><h2 id="GNOME-Shell-拡張"><a href="#GNOME-Shell-拡張" class="headerlink" title="GNOME Shell 拡張"></a>GNOME Shell 拡張</h2><ul>

@@ -8,7 +8,7 @@
   
   <meta name="description" content="bash で認証プロキシを使うためのエイリアスを作ってみました。
 認証プロキシサーバがproxy.example.com で、ポート番号が8080 の場合、以下のように設定します。なお、~/.bash_aliases は~/.bashrc から読み込まれるようになっています。
-~/.bash_aliases1alias proxy=&amp;#x27;read -p &amp;quot;user: &amp;quot; proxy_user &amp;amp;&amp;amp; read -sp &amp;quot;pass: &amp;quot; proxy_pass &amp;amp;&amp;amp; echo &amp;amp;&amp;amp; export &amp;#123;http,https,ftp&amp;#125;_proxy=&amp;quot;http://$proxy_user:$proxy_pass@proxy.example.com:8080&amp;quot;&amp;#x27;">
+~/.bash_aliasesalias proxy=&amp;#x27;read -p &amp;quot;user: &amp;quot; proxy_user &amp;amp;&amp;amp; read -sp &amp;quot;pass: &amp;quot; proxy_pass &amp;amp;&amp;amp; echo &amp;amp;&amp;amp; export &amp;#123;http,https,ftp&amp;#125;_proxy=&amp;quot;http://$proxy_user:$proxy_pass@proxy.example.com:8080&amp;quot;&amp;#x27;">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -168,13 +168,13 @@
 
 	  <p>bash で認証プロキシを使うためのエイリアスを作ってみました。</p>
 <p>認証プロキシサーバが<code>proxy.example.com</code> で、ポート番号が<code>8080</code> の場合、以下のように設定します。<br>なお、<code>~/.bash_aliases</code> は<code>~/.bashrc</code> から読み込まれるようになっています。</p>
-<figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> proxy=<span class="string">&#x27;read -p &quot;user: &quot; proxy_user &amp;&amp; read -sp &quot;pass: &quot; proxy_pass &amp;&amp; echo &amp;&amp; export &#123;http,https,ftp&#125;_proxy=&quot;http://$proxy_user:$proxy_pass@proxy.example.com:8080&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> proxy=<span class="string">&#x27;read -p &quot;user: &quot; proxy_user &amp;&amp; read -sp &quot;pass: &quot; proxy_pass &amp;&amp; echo &amp;&amp; export &#123;http,https,ftp&#125;_proxy=&quot;http://$proxy_user:$proxy_pass@proxy.example.com:8080&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ proxy</span><br><span class="line">user: hoge</span><br><span class="line">pass:</span><br><span class="line">$ <span class="built_in">env</span> | grep proxy</span><br><span class="line">http_proxy=http://hoge:fuga@proxy.example.com:8080</span><br><span class="line">ftp_proxy=http://hoge:fuga@proxy.example.com:8080</span><br><span class="line">https_proxy=http://hoge:fuga@proxy.example.com:8080</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ proxy</span><br><span class="line">user: hoge</span><br><span class="line">pass:</span><br><span class="line">$ <span class="built_in">env</span> | grep proxy</span><br><span class="line">http_proxy=http://hoge:fuga@proxy.example.com:8080</span><br><span class="line">ftp_proxy=http://hoge:fuga@proxy.example.com:8080</span><br><span class="line">https_proxy=http://hoge:fuga@proxy.example.com:8080</span><br></pre></td></tr></table></figure>
 
-<h2 id="sudo-で環境を引き継ぐ場合、-E-を指定します。"><a href="#sudo-で環境を引き継ぐ場合、-E-を指定します。" class="headerlink" title="sudo で環境を引き継ぐ場合、-E を指定します。"></a>sudo で環境を引き継ぐ場合、<code>-E</code> を指定します。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ proxy</span><br><span class="line">user: hoge</span><br><span class="line">pass:</span><br><span class="line">$ sudo -E apt-get update</span><br></pre></td></tr></table></figure>
+<h2 id="sudo-で環境を引き継ぐ場合、-E-を指定します。"><a href="#sudo-で環境を引き継ぐ場合、-E-を指定します。" class="headerlink" title="sudo で環境を引き継ぐ場合、-E を指定します。"></a>sudo で環境を引き継ぐ場合、<code>-E</code> を指定します。</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ proxy</span><br><span class="line">user: hoge</span><br><span class="line">pass:</span><br><span class="line">$ sudo -E apt-get update</span><br></pre></td></tr></table></figure>
 	  
 	</div>
 

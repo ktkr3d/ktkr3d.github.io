@@ -187,22 +187,22 @@
 <ol start="4">
 <li>GRUB4DOS の設定<br>GRUB4DOS でAndroid-x86 を起動できるようにC:\menu.lst を編集します。</li>
 </ol>
-<figure class="highlight text"><figcaption><span>C:¥menu.lst</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">timeout 3</span><br><span class="line">default /default</span><br><span class="line"></span><br><span class="line">title Android-x86 4.2.1 on /dev/sda2</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel /android-4.2-20121205/kernel root=/dev/ram0 androidboot.hardware=android_x86 acpi_sleep=s3_bios,s3_mode SRC=/android-4.2-20121205 DATA=</span><br><span class="line">initrd /android-4.2-20121205/initrd.img</span><br><span class="line">savedefault</span><br><span class="line"></span><br><span class="line">title Android-x86 4.0.4 on /dev/sda2</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel /android-4.0-RC2/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/android-4.0-RC2 DATA=</span><br><span class="line">initrd /android-4.0-RC2/initrd.img</span><br><span class="line">savedefault</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>C:¥menu.lst</span></figcaption><table><tr><td class="code"><pre><span class="line">timeout 3</span><br><span class="line">default /default</span><br><span class="line"></span><br><span class="line">title Android-x86 4.2.1 on /dev/sda2</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel /android-4.2-20121205/kernel root=/dev/ram0 androidboot.hardware=android_x86 acpi_sleep=s3_bios,s3_mode SRC=/android-4.2-20121205 DATA=</span><br><span class="line">initrd /android-4.2-20121205/initrd.img</span><br><span class="line">savedefault</span><br><span class="line"></span><br><span class="line">title Android-x86 4.0.4 on /dev/sda2</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel /android-4.0-RC2/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/android-4.0-RC2 DATA=</span><br><span class="line">initrd /android-4.0-RC2/initrd.img</span><br><span class="line">savedefault</span><br></pre></td></tr></table></figure>
 
 <p>※ 1番目のディスクの2番目のパーティション番号は(hd0,1) のように番号を-1した値になるので要注意です。<br>※ 複数のバージョンを切り替えたい場合は複数件登録します。ただし、この起動の切り替えはタッチスクリーンが使えません。<br>※ タイムアウト時間は好みで秒数を指定します。0にするとGRUB4DOSの画面が表示されなくなります。</p>
 <ol start="5">
 <li>Windows 8 ブートマネージャにGRUB4DOS を登録<br>コマンドプロンプトアイコンを右クリックして、「管理者として実行」します。</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; bcdedit /create /d <span class="string">&quot;Android-x86&quot;</span> /application BOOTSECTOR</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdedit /create /d <span class="string">&quot;Android-x86&quot;</span> /application BOOTSECTOR</span><br></pre></td></tr></table></figure>
 
 <p>上記コマンドで表示された値{☆}を以下のコマンドで使います。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; bcdedit /set &#123;☆&#125; device partition=C:</span><br><span class="line">&gt; bcdedit /set &#123;☆&#125; path \grldr.mbr</span><br><span class="line">&gt; bcdedit /displayorder &#123;☆&#125; /addlast</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdedit /set &#123;☆&#125; device partition=C:</span><br><span class="line">&gt; bcdedit /set &#123;☆&#125; path \grldr.mbr</span><br><span class="line">&gt; bcdedit /displayorder &#123;☆&#125; /addlast</span><br></pre></td></tr></table></figure>
 
 
 
 
 <p>ちなみに一旦別のブートローダにしてしまった後にWindows 8 のブートマネージャに戻すには、コマンドプロンプトアイコンを右クリックして、「管理者として実行」して、以下のコマンドを実行します。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; bcdboot C:\Windows</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdboot C:\Windows</span><br></pre></td></tr></table></figure>
 
 	  
 	</div>
