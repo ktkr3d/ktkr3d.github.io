@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2022-10-29T19:17:38.000Z</updated>
+  <updated>2022-11-24T23:13:35.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WoW Addon - LoggingChat</title>
+    <link href="https://ktkr3d.github.io/2022/11/25/WoW-Addon-LoggingChat/"/>
+    <id>https://ktkr3d.github.io/2022/11/25/WoW-Addon-LoggingChat/</id>
+    <published>2022-11-24T23:13:35.000Z</published>
+    <updated>2022-11-24T23:13:35.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/wow_loggingchat.jpg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/LoggingChat&quot;&gt;https://github.com/ktkr3d/LoggingChat&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;World of Warcraft でチャット表示内容をファイルにロギングするアドオンを作ってみました。&lt;br&gt;処理はログイン時にチャットを保存を有効にしているだけです。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>WoW DragonFlight Addons</title>
@@ -526,26 +542,6 @@
     
     
     <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Electron Minecraft Mod Manager</title>
-    <link href="https://ktkr3d.github.io/2021/09/25/Electron-Minecraft-Mods-Manager/"/>
-    <id>https://ktkr3d.github.io/2021/09/25/Electron-Minecraft-Mods-Manager/</id>
-    <published>2021-09-25T08:49:27.000Z</published>
-    <updated>2021-09-25T08:49:27.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/emcmm_m_list.png&quot; alt=&quot;electron minecraft mod manager&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/electron-mcmm&quot;&gt;https://github.com/ktkr3d/electron-mcmm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Electron でマインクラフトの Mod 管理アプリケーションを作ってみました。&lt;br&gt;Mods 情報収集のために mc-curseforge-api を使っています。&lt;br&gt;Electron の IPC 通信の仕様を勉強中です。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="electron" scheme="https://ktkr3d.github.io/tags/electron/"/>
-    
-    <category term="minecraft" scheme="https://ktkr3d.github.io/tags/minecraft/"/>
     
   </entry>
   

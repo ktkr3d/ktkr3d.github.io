@@ -164,6 +164,38 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-11-21 </div>
+			<div class="article-title"><a href="/2011/11/21/android-x86-3-2-honeycomb/" >Android-x86 3.2 Honeycomb を試してみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/android-x86_3.2.png" alt="android-x86 3.2 honeycomb"></p>
+<p><a target="_blank" rel="noopener" href="http://code.google.com/p/android-x86/downloads/list">http://code.google.com/p/android-x86/downloads/list</a><br><a target="_blank" rel="noopener" href="http://code.google.com/p/android-x86/downloads/detail?name=android-x86-3.2-RC2-asus_laptop.iso">http://code.google.com/p/android-x86/downloads/detail?name=android-x86-3.2-RC2-asus_laptop.iso</a></p>
+<p>Android のx86 ポート、Android-x86 3.2 Honeycomb RC2 のISO イメージが公開されていたので、android-x86-3.2-RC2-asus_laptop.iso を実機(DELL Inspiron Duo)と仮想環境で実行してみた。<br>DELL Inspiron Duo では最大解像度表示(1366x768)、無線LAN接続、日本語表示、サウンド、YouTube での動画再生等が動作した。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">app_68@laptop:/ $ <span class="built_in">uname</span> -a</span><br><span class="line">Linux localhost 3.0.1-android-x86-asus-laptop+ <span class="comment">#3 SMP PREEMPT Sun Nov 13 04:33:58 CST 2011 i686 GNU/Linux</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>update:</strong><br><a href="/images/uploads/2011/11/android-x86_3.2_inspiron_duo.png"><img src="/images/uploads/2011/11/android-x86_3.2_inspiron_duo.png" alt="android-x86 3.2 inspiron duo"></a><br>実機のスクリーンキャプチャは、Wi-Fi 接続してから、Android SDK をインストールしたPC から</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> ADBHOST=192.168.0.4</span><br><span class="line">$ adb devices</span><br><span class="line">* daemon not running. starting it now on port 5037 *</span><br><span class="line">* daemon started successfully *</span><br><span class="line">List of devices attached </span><br><span class="line">emulator-5554	device</span><br><span class="line"></span><br><span class="line">$ ddms</span><br></pre></td></tr></table></figure>
+
+<p>でddms を起動して、「Device」-「Screen Capture…」メニューから取得する。</p>
+
+	
+	</div>
+  <a type="button" href="/2011/11/21/android-x86-3-2-honeycomb/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-11-15 </div>
 			<div class="article-title"><a href="/2011/11/15/android-4-0/" >Android 4.0 をビルドしてみよう（その1）</a></div>						
 		</h3>
@@ -409,33 +441,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-06-27 </div>
-			<div class="article-title"><a href="/2011/06/27/proun-3/" >Proun で遊んでみた3</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/proun_archipelago.png" alt="proun archipelago"></p>
-<p><a target="_blank" rel="noopener" href="http://www.ronimo-games.com/forum/viewtopic.php?f=7&t;=1074&sid;=5db794ee543f3b1f8a0ee10f51774acd">http://www.ronimo-games.com/forum/viewtopic.php?f=7&t;=1074&sid;=5db794ee543f3b1f8a0ee10f51774acd</a></p>
-<p>proun のユーザトラックArchipelago がフォーラムに掲載されていたので遊んでみた。<br>ファンタジーっぽいコースに見えるけど、なかなか難しくておもしろい。<br>しかもこのコースはInspiron duo でも発生していた<a target="_blank" rel="noopener" href="http://www.ronimo-games.com/forum/viewtopic.php?f=7&t=1038&sid=a2b52fd4f493e88335b57fa70b5ba637">このエラー</a>が発生しないみたいなので、ビデオ環境が弱いPC　にも優しいかもしれない。<br>これからもおもしろいコースが増えるといいな。</p>
-<p>クレジットを見ると、Proun はOgre3D で作られているけどサウンドはirrKlang だった。</p>
-
-	
-	</div>
-  <a type="button" href="/2011/06/27/proun-3/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -485,6 +490,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2022/11/25/WoW-Addon-LoggingChat/" ><i class="fa fa-file-o"></i>WoW Addon - LoggingChat</a>
+      </li>
+    
+      <li>
         <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
       </li>
     
@@ -520,10 +529,6 @@
         <a href="/2022/07/10/Neutralinojs-Vue3/" ><i class="fa fa-file-o"></i>Neutralinojs + Vue3</a>
       </li>
     
-      <li>
-        <a href="/2022/06/19/Tauri/" ><i class="fa fa-file-o"></i>Tauri</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -531,7 +536,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/30/WoW-DragonFlight-Addons/" title="WoW DragonFlight Addons" rel="bookmark">WoW DragonFlight Addons</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li></ul>
 </div>
 
 		
