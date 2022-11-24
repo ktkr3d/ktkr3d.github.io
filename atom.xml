@@ -25,7 +25,7 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/wow_loggingchat.jpg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/LoggingChat&quot;&gt;https://github.com/ktkr3d/LoggingChat&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;World of Warcraft でチャット表示内容をファイルにロギングするアドオンを作ってみました。&lt;br&gt;処理はログイン時にチャットを保存を有効にしているだけです。&lt;/p&gt;</summary>
+&lt;p&gt;World of Warcraft でチャット表示内容をファイルにロギングするアドオンを作ってみました。&lt;br&gt;処理はログイン時にチャットの保存設定を有効にしているだけです。&lt;/p&gt;</summary>
     
     
     
