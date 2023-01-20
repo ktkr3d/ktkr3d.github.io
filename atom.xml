@@ -64,7 +64,7 @@
 &lt;li&gt;maintank フレームのPadding の設定(PowerBar の高さを追加)  &lt;figure class=&quot;highlight lua&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;string&quot;&gt;&amp;quot;maintank&amp;quot;&lt;/span&gt;] = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	[&lt;span class=&quot;string&quot;&gt;&amp;quot;Padding&amp;quot;&lt;/span&gt;] = &lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;追記-2023-01-18&quot;&gt;&lt;a href=&quot;#追記-2023-01-18&quot; class=&quot;headerlink&quot; title=&quot;追記: 2023-01-18&quot;&gt;&lt;/a&gt;追記: 2023-01-18&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;Guild MOTD (Message of the Day) の長さ調整&lt;br&gt;&lt;a href=&quot;https://github.com/FireSiku/LUI/commit/8059be8c58853271c96820320dbc5d8bde6b6365&quot;&gt;https://github.com/FireSiku/LUI/commit/8059be8c58853271c96820320dbc5d8bde6b6365&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Guild MOTD (Message of the Day) の長さ調整&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/LUI/commit/8059be8c58853271c96820320dbc5d8bde6b6365&quot;&gt;https://github.com/ktkr3d/LUI/commit/8059be8c58853271c96820320dbc5d8bde6b6365&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</summary>
     
     
