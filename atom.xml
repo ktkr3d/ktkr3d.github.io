@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2022-11-24T23:13:35.000Z</updated>
+  <updated>2023-02-26T15:43:46.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>code-server with SSL</title>
+    <link href="https://ktkr3d.github.io/2023/02/27/code-server-with-SSL/"/>
+    <id>https://ktkr3d.github.io/2023/02/27/code-server-with-SSL/</id>
+    <published>2023-02-26T15:43:46.000Z</published>
+    <updated>2023-02-26T15:43:46.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/code-server-with-ssl.png&quot;&gt;&lt;br&gt;Raspberry Pi 上のcode-server でSSL通信を有効にしてみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="code-server" scheme="https://ktkr3d.github.io/tags/code-server/"/>
+    
+  </entry>
   
   <entry>
     <title>WoW Addon - LoggingChat</title>
@@ -547,25 +564,6 @@
     <category term="raspberry-pi" scheme="https://ktkr3d.github.io/tags/raspberry-pi/"/>
     
     <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Neutralinojs</title>
-    <link href="https://ktkr3d.github.io/2021/10/05/Neutralinojs/"/>
-    <id>https://ktkr3d.github.io/2021/10/05/Neutralinojs/</id>
-    <published>2021-10-04T19:20:35.000Z</published>
-    <updated>2021-10-04T19:20:35.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs.png&quot; alt=&quot;Neutralinojs&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/neutralinojs/neutralinojs&quot;&gt;https://github.com/neutralinojs/neutralinojs&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://neutralino.js.org/docs/getting-started/your-first-neutralinojs-app&quot;&gt;https://neutralino.js.org/docs/getting-started/your-first-neutralinojs-app&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Neutralinojs(ニュートラリーノ JS)は Electron の代替となるクロスプラットフォームアプリケーションフレームワークです。Neutralinojs は Chromium をバンドルせず、オペレーティングシステムの既存の Web ブラウザライブラリを使用しているため実行モジュールのサイズが小さいです。hello-world のリリース用のアーカイブファイル hello-world-release.zip のサイズは 1.87 MB (1,961,616 バイト)でした。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
     
   </entry>
   
