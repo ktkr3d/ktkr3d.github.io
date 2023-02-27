@@ -24,7 +24,12 @@
     <updated>2023-02-26T15:43:46.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/code-server-with-ssl.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://coder.com/docs/code-server/latest/guide#using-a-self-signed-certificate&quot;&gt;https://coder.com/docs/code-server/latest/guide#using-a-self-signed-certificate&lt;/a&gt;&lt;br&gt;Raspberry Pi 上のcode-server でSSL通信を有効にしてみました。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/code-server-with-ssl.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://coder.com/docs/code-server/latest/guide#using-a-self-signed-certificate&quot;&gt;https://coder.com/docs/code-server/latest/guide#using-a-self-signed-certificate&lt;/a&gt;&lt;br&gt;Raspberry Pi 上のcode-server でSSL通信を有効にしてみました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Webアプリとしてのインストールは問題ありませんでした。&lt;/li&gt;
+&lt;li&gt;Draw.ioは問題なく表示できました。&lt;/li&gt;
+&lt;li&gt;vscode-revealのプレビューはブラウザ表示ボタンで動作しました。&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
