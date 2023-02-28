@@ -164,6 +164,34 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-04-22 </div>
+			<div class="article-title"><a href="/2012/04/22/ubuntu-12-04-conky/" >Ubuntu 12.04 + Conky</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/ubuntu_12.04_conky.png" alt="ubuntu 12.04 conky"></p>
+<p>Ubuntu 12.04 のConky 1.8.1 の環境で、自前の.conkyrc の文字が表示されなくなったので、暫定対策してみた。試してみたところ、Droid Sans が認識されなくなっているみたいなので、省略してみた。fonts-droid はインストール済みでフォント名も変わってないと思うのだけど。</p>
+<figure class="highlight text"><figcaption><span>~/.conkyrc</span></figcaption><table><tr><td class="code"><pre><span class="line">#    xftfont Droid Sans:size=10</span><br><span class="line">    xftfont :size=10</span><br></pre></td></tr></table></figure>
+
+<p>Ubuntu 11.10 + Conky 1.8.1 では正常に表示されるし、DejaVu Sans はうまく処理されているようなので、Conky 自体の問題ではないかもしれない。ConkyForecast やパブリックIP アドレス取得スクリプト等の通信処理も若干不安定みたいだけど、Ubuntu 12.04 リリース時には安定していたらいいな。</p>
+
+	
+	</div>
+  <a type="button" href="/2012/04/22/ubuntu-12-04-conky/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-04-19 </div>
 			<div class="article-title"><a href="/2012/04/19/gnome-shell-3-4-autohide-top-panel-extension/" >GNOME Shell 3.4 + Autohide Top Panel extension</a></div>						
 		</h3>
@@ -529,38 +557,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-02-10 </div>
-			<div class="article-title"><a href="/2012/02/10/ubuntu-11-10-ogre-1-7-3-kinect/" >Ubuntu 11.10 + Ogre 1.7.3 + Kinect</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/ubuntu_ogre_kinect.png" alt="ubuntu ogre kinect sampleappsinbad openni nite "></p>
-<p><a target="_blank" rel="noopener" href="http://ktkr3d.site11.com/2010/12/24/linux_kinect/">一年くらい前にポーティング</a>したOpenNI&#x2F;NITE のデモSampleAppSinbad をUbuntu 11.10 x86_64 の環境で動かしてみた。</p>
-<p>Ubuntu 11.10 x86_64 (Linux kernel 3.0.0-16)<br>OpenNI&#x2F;NITE 1.5.2<br>avin2-sensor 5.1.0.25<br>Ogre3d 1.7.3<br>gcc&#x2F;g++ 4.6.1<br>codeblocks 10.05</p>
-<p>ソースコードとロードモジュール: <a target="_blank" rel="noopener" href="https://github.com/ktkr3d/sample-app-sinbad">https://github.com/ktkr3d/sample-app-sinbad</a></p>
-<p>Sample_Character.so のビルド時に以下のエラーがでるようになったけれど、</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">コンパイル中: src/CharacterSample.cpp</span><br><span class="line">リンク中 動的ライブラリ: ../bin/Sample_Character.so</span><br><span class="line">/usr/bin/ld: obj/Release/src/CharacterSample.o: relocation R_X86_64_32 against `.rodata.str1.1&#x27; can not be used when making a shared object; recompile with -fPIC</span><br><span class="line">obj/Release/src/CharacterSample.o: could not read symbols: Bad value</span><br><span class="line">collect2: ld はステータス 1 で終了しました</span><br><span class="line">プロセスはステータス 1 で終了しました (0 分 10 秒)</span><br><span class="line">0 個のエラー、 0 個の警告</span><br></pre></td></tr></table></figure>
-
-<p>-fPIC オプションをつけたらビルドできた。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">コンパイル中: src/CharacterSample.cpp</span><br><span class="line">リンク中 動的ライブラリ: ../bin/Sample_Character.so</span><br><span class="line">出力サイズは 232.84 KB</span><br><span class="line">プロセスはステータス 0 で終了しました (0 分 5 秒)</span><br><span class="line">0 個のエラー、 0 個の警告</span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2012/02/10/ubuntu-11-10-ogre-1-7-3-kinect/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -610,6 +606,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/" ><i class="fa fa-file-o"></i>Ubuntu 23.04 on Raspberry P...</a>
+      </li>
+    
+      <li>
         <a href="/2023/02/27/code-server-with-SSL/" ><i class="fa fa-file-o"></i>code-server with SSL</a>
       </li>
     
@@ -643,10 +643,6 @@
     
       <li>
         <a href="/2022/07/14/Neutralinojs-Nuxt3-Vuetify3/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + Vuet...</a>
-      </li>
-    
-      <li>
-        <a href="/2022/07/12/Neutralinojs-Nuxt3/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3</a>
       </li>
     
   </ul>

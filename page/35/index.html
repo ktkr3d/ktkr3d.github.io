@@ -164,6 +164,43 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-05-30 </div>
+			<div class="article-title"><a href="/2011/05/30/gnome-shell-extension-e38292e5bea9e6b4bbe38195e3819be381a6e381bfe3819f/" >GNOME Shell Extension を復活させてみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>GNOME Shell を3.0.2 にしたらdock が消えたので復活させてみた。</p>
+<ul>
+<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#111;&#x63;&#x6b;&#x40;&#x67;&#x6e;&#x6f;&#109;&#x65;&#x2d;&#x73;&#x68;&#101;&#108;&#108;&#45;&#x65;&#x78;&#x74;&#101;&#x6e;&#x73;&#105;&#x6f;&#110;&#x73;&#46;&#x67;&#110;&#x6f;&#x6d;&#101;&#46;&#111;&#114;&#x67;">&#100;&#111;&#x63;&#x6b;&#x40;&#x67;&#x6e;&#x6f;&#109;&#x65;&#x2d;&#x73;&#x68;&#101;&#108;&#108;&#45;&#x65;&#x78;&#x74;&#101;&#x6e;&#x73;&#105;&#x6f;&#110;&#x73;&#46;&#x67;&#110;&#x6f;&#x6d;&#101;&#46;&#111;&#114;&#x67;</a>&#x2F;metadata.json</p>
+</li>
+<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#111;&#99;&#x6b;&#x40;&#103;&#110;&#111;&#x6d;&#x65;&#45;&#115;&#104;&#x65;&#108;&#108;&#x2d;&#x65;&#120;&#x74;&#x65;&#110;&#115;&#105;&#111;&#110;&#115;&#x2e;&#103;&#x6e;&#111;&#x6d;&#101;&#46;&#x6f;&#x72;&#103;">&#100;&#111;&#99;&#x6b;&#x40;&#103;&#110;&#111;&#x6d;&#x65;&#45;&#115;&#104;&#x65;&#108;&#108;&#x2d;&#x65;&#120;&#x74;&#x65;&#110;&#115;&#105;&#111;&#110;&#115;&#x2e;&#103;&#x6e;&#111;&#x6d;&#101;&#46;&#x6f;&#x72;&#103;</a>&#x2F;metadata.json</p>
+</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;uuid&quot;: &quot;dock@gnome-shell-extensions.gnome.org&quot;,</span><br><span class="line">&quot;name&quot;: &quot;Dock&quot;,</span><br><span class="line">&quot;description&quot;: &quot;A dock for the GNOME Shell -- displays favorite and running applications&quot;,</span><br><span class="line">&quot;original-author&quot;: &quot;tclaesson@gmail.com&quot;,</span><br><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot; ],</span><br><span class="line">&quot;localedir&quot;: &quot;/usr/local/share/locale&quot;,</span><br><span class="line">&quot;url&quot;: &quot;http://git.gnome.org/gnome-shell-extensions&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>を以下のように修正した。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&quot;shell-version&quot;: [ &quot;3.0&quot; ],</span><br></pre></td></tr></table></figure>
+
+<p>または、</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot;, &quot;3.0.2&quot; ],</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2011/05/30/gnome-shell-extension-e38292e5bea9e6b4bbe38195e3819be381a6e381bfe3819f/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-05-24 </div>
 			<div class="article-title"><a href="/2011/05/24/firefox-5-beta-2-e38292e8a9a6e38197e381a6e381bfe3819f/" >Firefox 5 beta 2 を試してみた</a></div>						
 		</h3>
@@ -540,42 +577,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-05-09 </div>
-			<div class="article-title"><a href="/2011/05/09/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f2/" >GNOME Shell を拡張してみた2</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/gnome-shell-extensions2.png" alt="gnome shell extensions"></p>
-<p><a target="_blank" rel="noopener" href="http://intgat.tigress.co.uk/rmy/extensions/index.html">http://intgat.tigress.co.uk/rmy/extensions/index.html</a></p>
-<p>GNOME Shell をさらに拡張してみた。</p>
-<ul>
-<li><p>Move the clock<br>時計の位置を変更</p>
-</li>
-<li><p>Favourites in panel<br>お気に入りをパネルに表示</p>
-</li>
-<li><p>Applications menu in panel<br>アプリケーションメニューをパネルに表示</p>
-</li>
-<li><p>Disable dynamic workspaces<br>ダイナミックワークスペースを無効に</p>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2011/05/09/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f2/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -625,6 +626,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/" ><i class="fa fa-file-o"></i>Ubuntu 23.04 on Raspberry P...</a>
+      </li>
+    
+      <li>
         <a href="/2023/02/27/code-server-with-SSL/" ><i class="fa fa-file-o"></i>code-server with SSL</a>
       </li>
     
@@ -658,10 +663,6 @@
     
       <li>
         <a href="/2022/07/14/Neutralinojs-Nuxt3-Vuetify3/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + Vuet...</a>
-      </li>
-    
-      <li>
-        <a href="/2022/07/12/Neutralinojs-Nuxt3/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3</a>
       </li>
     
   </ul>

@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-02-26T15:43:46.000Z</updated>
+  <updated>2023-02-28T13:56:45.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu 23.04 on Raspberry Pi 4</title>
+    <link href="https://ktkr3d.github.io/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/"/>
+    <id>https://ktkr3d.github.io/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/</id>
+    <published>2023-02-28T13:56:45.000Z</published>
+    <updated>2023-02-28T13:56:45.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ubuntu2304_raspi4.png&quot;&gt;&lt;br&gt;Raspberry Pi 4 にUbuntu 23.04 をインストールしました。&lt;br&gt;リモートからRDPで接続しました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
+    
+    <category term="raspberrypi" scheme="https://ktkr3d.github.io/tags/raspberrypi/"/>
+    
+  </entry>
   
   <entry>
     <title>code-server with SSL</title>
@@ -26,7 +45,7 @@
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/code-server-with-ssl.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://coder.com/docs/code-server/latest/guide#using-a-self-signed-certificate&quot;&gt;https://coder.com/docs/code-server/latest/guide#using-a-self-signed-certificate&lt;/a&gt;&lt;br&gt;Raspberry Pi 上のcode-server でSSL通信を有効にしてみました。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Webアプリとしてのインストールは問題ありませんでした。&lt;/li&gt;
+&lt;li&gt;Webアプリ(PWA)としてのインストールは問題ありませんでした。&lt;/li&gt;
 &lt;li&gt;Draw.ioは問題なく表示できました。&lt;/li&gt;
 &lt;li&gt;vscode-revealのプレビューはブラウザ表示ボタンで動作しました。&lt;/li&gt;
 &lt;/ul&gt;</summary>
@@ -540,35 +559,6 @@
     <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
     
     <category term="minecraft" scheme="https://ktkr3d.github.io/tags/minecraft/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu 21.10 on RPi4B</title>
-    <link href="https://ktkr3d.github.io/2021/10/17/Ubuntu-21-10-on-RPi4B/"/>
-    <id>https://ktkr3d.github.io/2021/10/17/Ubuntu-21-10-on-RPi4B/</id>
-    <published>2021-10-17T07:10:52.000Z</published>
-    <updated>2021-10-17T07:10:52.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ubuntu_2110_rpi4b.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Ubuntu 21.10 を Raspberry Pi 4B にインストールしてみました。&lt;/p&gt;
-&lt;h4 id=&quot;2021-10-23-以下の問題の修正が期待されます。&quot;&gt;&lt;a href=&quot;#2021-10-23-以下の問題の修正が期待されます。&quot; class=&quot;headerlink&quot; title=&quot;2021-10-23 以下の問題の修正が期待されます。&quot;&gt;&lt;/a&gt;2021-10-23 以下の問題の修正が期待されます。&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;HDMI output freezes under current&amp;#x2F;proposed impish kernels&lt;br&gt;&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368&quot;&gt;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;現在のバージョンは&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ uname -r -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;2021-11-08 に Updates に修正がリリースされるらしい。&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/46&quot;&gt;&lt;/a&gt;&lt;br&gt;proposed リポジトリをウォッチしよう。&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/48&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2021-10-30-proposed-で修正版が公開されたようです。&quot;&gt;&lt;a href=&quot;#2021-10-30-proposed-で修正版が公開されたようです。&quot; class=&quot;headerlink&quot; title=&quot;2021-10-30 proposed で修正版が公開されたようです。&quot;&gt;&lt;/a&gt;2021-10-30 proposed で修正版が公開されたようです。&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60&quot;&gt;https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="raspberry-pi" scheme="https://ktkr3d.github.io/tags/raspberry-pi/"/>
-    
-    <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
     
   </entry>
   
