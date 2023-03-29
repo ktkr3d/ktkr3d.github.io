@@ -173,10 +173,10 @@
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
 <li>Ubuntu Server のインストール</li>
-<li>ubuntu-desktop  のインストール</li>
-<li>xrdp のインストール<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install xrdp</span><br></pre></td></tr></table></figure>
+<li>ubuntu-desktop パッケージのインストール</li>
+<li>xrdp パッケージのインストール<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install xrdp</span><br></pre></td></tr></table></figure>
 <figure class="highlight ini"><figcaption><span>/etc/xrdp/startwm.sh</span></figcaption><table><tr><td class="code"><pre><span class="line">unset DBUS_SESSION_BUS_ADDRESS</span><br><span class="line">exec gnome-session</span><br><span class="line"></span><br><span class="line">test -x /etc/X11/Xsession &amp;&amp; exec /etc/X11/Xsession</span><br><span class="line">exec /bin/sh /etc/X11/Xsession</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo systemctl enable --noe xrdp</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo systemctl enable --now xrdp</span><br></pre></td></tr></table></figure></li>
 <li>Chromium のインストール<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install chromium-browser</span><br></pre></td></tr></table></figure></li>
 <li>Gnome Shell 拡張機能のインストール</li>
 </ol>
