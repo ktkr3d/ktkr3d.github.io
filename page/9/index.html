@@ -164,6 +164,35 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2019-06-22 </div>
+			<div class="article-title"><a href="/2019/06/22/Compile-Kodi-for-Ubuntu/" >Compile Kodi for Ubuntu</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><a target="_blank" rel="noopener" href="https://github.com/Harekaze/pvr.chinachu/issues/30">https://github.com/Harekaze/pvr.chinachu/issues/30</a></p>
+<p>Kodi 18.2 にバージョンアップしたらpvr.chinchu がうまく動かなくなってしまいました。<br>Kodi のcurl 処理に変更があったようです。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I 172.17.69.68:20772</span><br><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Accept-Ranges: bytes</span><br><span class="line">Last-Modified: Mon, 03 Jun 2019 14:41:30 GMT</span><br><span class="line">Content-Length: 2311</span><br><span class="line">Content-Type: text/html</span><br><span class="line">Server: Chinachu (Node)</span><br><span class="line">Cache-Control: no-cache</span><br><span class="line">X-Content-Type-Options: nosniff</span><br><span class="line">X-Frame-Options: SAMEORIGIN</span><br><span class="line">X-UA-Compatible: IE=Edge,chrome=1</span><br><span class="line">X-XSS-Protection: 1; mode=block</span><br><span class="line">Date: Sat, 22 Jun 2019 08:48:09 GMT</span><br><span class="line">Connection: keep-alive</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I --http2 172.17.69.68:20772</span><br><span class="line">curl: (52) Empty reply from server</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md">https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md</a></p>
+<p>バージョン18.1 を再インストールしようと思いましが、残念なことにUbuntu のdeb パッケージは見つかりませんでした。仕方が無いのでリポジトリの18.3 のソースコードにパッチを当ててビルドすることにしました。</p>
+	
+	</div>
+  <a type="button" href="/2019/06/22/Compile-Kodi-for-Ubuntu/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2019-06-21 </div>
 			<div class="article-title"><a href="/2019/06/21/Puppeteer/" >Puppeteer</a></div>						
 		</h3>
@@ -420,40 +449,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2018-12-14 </div>
-			<div class="article-title"><a href="/2018/12/14/Tilix/" >Tilix</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-           
-              <div class="thumbnail"><a href="/2018/12/14/Tilix/"><img src="https://gnunn1.github.io/tilix-web/assets/images/logo.png" alt="Tilix"  class="nofancybox"></a>
-           
-		</div>
-	
-	
-		<p><a target="_blank" rel="noopener" href="https://gnunn1.github.io/tilix-web/">https://gnunn1.github.io/tilix-web/</a></p>
-<p>ターミナルエミュレータTilix を使ってみました。</p>
-<ul>
-<li>Ubuntu 18.10 x86_64</li>
-<li>Tilix 1.8.1</li>
-</ul>
-<p>Quake スタイルのドロップダウンターミナルとして、GNOME Shell 拡張のDropDownTerminal &#x2F; DropDownTerminalX、Guake、Terminator 等を使ってきました。それらと比べて、Tilix はターミナルのタブ化の他、画面分割が柔軟にできて、とても便利です。 </p>
-	
-	</div>
-  <a type="button" href="/2018/12/14/Tilix/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -503,6 +498,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>bottles</a>
+      </li>
+    
+      <li>
         <a href="/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/" ><i class="fa fa-file-o"></i>Ubuntu 23.04 on Raspberry P...</a>
       </li>
     
@@ -538,10 +537,6 @@
         <a href="/2022/07/28/Neutralinojs-Nuxt3-Three-js/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + Thre...</a>
       </li>
     
-      <li>
-        <a href="/2022/07/14/Neutralinojs-Nuxt3-Vuetify3/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + Vuet...</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -549,7 +544,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/" title="Ubuntu 23.04 on Raspberry Pi 4" rel="bookmark">Ubuntu 23.04 on Raspberry Pi 4</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/01/24/Docker-Mirakurun-Chinachu/" title="Docker Mirakurun Chinachu" rel="bookmark">Docker Mirakurun Chinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/04/18/Be-Careful-using-Ext2Fsd/" title="Be Careful using Ext2Fsd" rel="bookmark">Be Careful using Ext2Fsd</a></h3></div></li></ul>
 </div>
 
 		

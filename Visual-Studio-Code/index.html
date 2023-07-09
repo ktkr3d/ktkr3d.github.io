@@ -192,6 +192,8 @@ $ sudo apt update$ sudo apt upgrade$ sudo apt install n">
 <code>0.0.0.0:443</code>や<code>127.0.0.1:443</code>が既に利用済で利用できない場合は<code>&lt;ローカルIPアドレス&gt;:443</code>を指定する</li>
 <li>code-server に443&#x2F;tcp (1024以下のポート)へのバインドを許可<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">setcap</span> cap_net_bind_service=+ep /usr/lib/code-server/lib/node</span><br></pre></td></tr></table></figure></li>
 <li>code-server の再起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart --now code-server@<span class="variable">$USER</span></span><br></pre></td></tr></table></figure></li>
+<li>Power Shell Policy</li>
+<li>Port forward</li>
 </ul>
 <h4 id="クライアント側の環境設定"><a href="#クライアント側の環境設定" class="headerlink" title="クライアント側の環境設定"></a>クライアント側の環境設定</h4><ul>
 <li>ブラウザの「信頼されたルート証明機関」に<code>rootCA.pem</code>を登録</li>
