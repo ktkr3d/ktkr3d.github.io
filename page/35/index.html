@@ -164,6 +164,92 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-06-04 </div>
+			<div class="article-title"><a href="/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f7/" >GNOME Shell を拡張してみた7</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<ul>
+<li><p><a target="_blank" rel="noopener" href="https://bugzilla.gnome.org/show_bug.cgi?id=643662">https://bugzilla.gnome.org/show_bug.cgi?id=643662</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://bugzilla.gnome.org/attachment.cgi?id=186893">https://bugzilla.gnome.org/attachment.cgi?id=186893</a></p>
+</li>
+</ul>
+<p>GNOME Shell の上部パネルをauto hide にしてみた。<br>将来的には設定を切り替えられるようになるのかな。</p>
+<p>dock 拡張もauto hide にしたいなぁ。</p>
+
+	
+	</div>
+  <a type="button" href="/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f7/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2011-06-04 </div>
+			<div class="article-title"><a href="/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f6/" >GNOME Shell を拡張してみた6</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/gnome-shell-extension-weather2.png" alt="gnome shell extension weather"></p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="http://www.webupd8.org/2011/06/another-gnome-shell-weather-extension.html">http://www.webupd8.org/2011/06/another-gnome-shell-weather-extension.html</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.fpmurphy.com/gnome-shell-extensions/">http://www.fpmurphy.com/gnome-shell-extensions/</a></p>
+</li>
+</ul>
+<p>別のお天気拡張に変更してみた。</p>
+<p>こちらの拡張では、</p>
+<ul>
+<li><p>現在の天気が正しく動作する</p>
+</li>
+<li><p>5日分の天気予報が表示される</p>
+</li>
+<li><p>現在地の指定が簡単(‘tokyo’ のように)</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.worldweatheronline.com/">http://www.worldweatheronline.com</a> の利用キーが必要(無料で登録はとても簡単)</p>
+</li>
+</ul>
+<p>今後修正されると思うけれど、バージョン1.1 では、</p>
+<ul>
+<li>現在の気温の単位(摂氏&#x2F;華氏)が設定と逆になってしまう単純なバグがある(以下のように修正してみた)</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">let currTemperature = new St.Label(&#123; text: (MUNITS &gt; 0 ? curr[0].temp_C + &#x27;C&#x27; : curr[0].temp_F + &#x27;F&#x27;) &#125;);</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><p>動作や表示スタイルが他の拡張の影響を受けてしまうことがある</p>
+</li>
+<li><p>ローカルタイムが考慮されてない?</p>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f6/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-06-02 </div>
 			<div class="article-title"><a href="/2011/06/02/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f5/" >GNOME Shell を拡張してみた5</a></div>						
 		</h3>
@@ -200,9 +286,9 @@
 	
 		<p>GNOME Shell を3.0.2 にしたらdock が消えたので復活させてみた。</p>
 <ul>
-<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#x6f;&#x63;&#107;&#x40;&#103;&#x6e;&#x6f;&#x6d;&#101;&#45;&#115;&#104;&#x65;&#108;&#108;&#x2d;&#x65;&#120;&#116;&#x65;&#x6e;&#x73;&#105;&#x6f;&#x6e;&#x73;&#x2e;&#x67;&#110;&#111;&#x6d;&#101;&#46;&#x6f;&#114;&#x67;">&#x64;&#x6f;&#x63;&#107;&#x40;&#103;&#x6e;&#x6f;&#x6d;&#101;&#45;&#115;&#104;&#x65;&#108;&#108;&#x2d;&#x65;&#120;&#116;&#x65;&#x6e;&#x73;&#105;&#x6f;&#x6e;&#x73;&#x2e;&#x67;&#110;&#111;&#x6d;&#101;&#46;&#x6f;&#114;&#x67;</a>&#x2F;metadata.json</p>
+<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#111;&#x63;&#107;&#x40;&#x67;&#x6e;&#x6f;&#x6d;&#x65;&#45;&#x73;&#104;&#x65;&#x6c;&#x6c;&#x2d;&#x65;&#x78;&#x74;&#101;&#x6e;&#115;&#105;&#111;&#x6e;&#115;&#x2e;&#x67;&#110;&#111;&#x6d;&#101;&#x2e;&#x6f;&#x72;&#x67;">&#x64;&#111;&#x63;&#107;&#x40;&#x67;&#x6e;&#x6f;&#x6d;&#x65;&#45;&#x73;&#104;&#x65;&#x6c;&#x6c;&#x2d;&#x65;&#x78;&#x74;&#101;&#x6e;&#115;&#105;&#111;&#x6e;&#115;&#x2e;&#x67;&#110;&#111;&#x6d;&#101;&#x2e;&#x6f;&#x72;&#x67;</a>&#x2F;metadata.json</p>
 </li>
-<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#x6f;&#99;&#107;&#x40;&#103;&#x6e;&#x6f;&#109;&#101;&#x2d;&#115;&#x68;&#x65;&#108;&#108;&#x2d;&#x65;&#120;&#x74;&#101;&#x6e;&#x73;&#x69;&#x6f;&#x6e;&#x73;&#46;&#x67;&#x6e;&#x6f;&#x6d;&#101;&#x2e;&#x6f;&#x72;&#x67;">&#100;&#x6f;&#99;&#107;&#x40;&#103;&#x6e;&#x6f;&#109;&#101;&#x2d;&#115;&#x68;&#x65;&#108;&#108;&#x2d;&#x65;&#120;&#x74;&#101;&#x6e;&#x73;&#x69;&#x6f;&#x6e;&#x73;&#46;&#x67;&#x6e;&#x6f;&#x6d;&#101;&#x2e;&#x6f;&#x72;&#x67;</a>&#x2F;metadata.json</p>
+<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#111;&#99;&#107;&#x40;&#x67;&#110;&#x6f;&#109;&#101;&#45;&#115;&#x68;&#x65;&#108;&#108;&#x2d;&#101;&#120;&#116;&#101;&#x6e;&#x73;&#105;&#x6f;&#x6e;&#x73;&#46;&#103;&#x6e;&#111;&#x6d;&#x65;&#x2e;&#x6f;&#114;&#x67;">&#x64;&#111;&#99;&#107;&#x40;&#x67;&#110;&#x6f;&#109;&#101;&#45;&#115;&#x68;&#x65;&#108;&#108;&#x2d;&#101;&#120;&#116;&#101;&#x6e;&#x73;&#105;&#x6f;&#x6e;&#x73;&#46;&#103;&#x6e;&#111;&#x6d;&#x65;&#x2e;&#x6f;&#114;&#x67;</a>&#x2F;metadata.json</p>
 </li>
 </ul>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;uuid&quot;: &quot;dock@gnome-shell-extensions.gnome.org&quot;,</span><br><span class="line">&quot;name&quot;: &quot;Dock&quot;,</span><br><span class="line">&quot;description&quot;: &quot;A dock for the GNOME Shell -- displays favorite and running applications&quot;,</span><br><span class="line">&quot;original-author&quot;: &quot;tclaesson@gmail.com&quot;,</span><br><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot; ],</span><br><span class="line">&quot;localedir&quot;: &quot;/usr/local/share/locale&quot;,</span><br><span class="line">&quot;url&quot;: &quot;http://git.gnome.org/gnome-shell-extensions&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -485,7 +571,7 @@
 <ol start="3">
 <li><p>$HOME&#x2F;.themes&#x2F; ディレクトリを作成して、アーカイブの中のテーマを展開する。</p>
 </li>
-<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#116;&#104;&#101;&#x6d;&#101;&#x73;&#x65;&#x6c;&#101;&#x63;&#116;&#x6f;&#x72;&#64;&#x66;&#x70;&#109;&#x75;&#x72;&#x70;&#104;&#x79;&#x2e;&#x63;&#111;&#109;">&#116;&#104;&#101;&#x6d;&#101;&#x73;&#x65;&#x6c;&#101;&#x63;&#116;&#x6f;&#x72;&#64;&#x66;&#x70;&#109;&#x75;&#x72;&#x70;&#104;&#x79;&#x2e;&#x63;&#111;&#109;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
+<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#116;&#x68;&#x65;&#x6d;&#101;&#115;&#x65;&#x6c;&#101;&#99;&#x74;&#x6f;&#114;&#x40;&#x66;&#x70;&#109;&#x75;&#114;&#x70;&#x68;&#x79;&#x2e;&#99;&#111;&#x6d;">&#116;&#x68;&#x65;&#x6d;&#101;&#115;&#x65;&#x6c;&#101;&#99;&#x74;&#x6f;&#114;&#x40;&#x66;&#x70;&#109;&#x75;&#114;&#x70;&#x68;&#x79;&#x2e;&#99;&#111;&#x6d;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
 </li>
 <li><p>[Alt]+[F2]を押して、r を入力して、[Enter] を押す。</p>
 </li>
@@ -494,77 +580,6 @@
 	
 	</div>
   <a type="button" href="/2011/05/15/gnome-shell-e381aee38386e383bce3839ee38292e5a489e69bb4e38197e381a6e381bfe3819f/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-05-13 </div>
-			<div class="article-title"><a href="/2011/05/13/gnome-shell-e68ba1e5bcb5e38292e4bd9ce3828de38186/" >GNOME Shell 拡張を作ってみよう</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/my_gnome_shell_extension.png" alt="gnome shell extension"></p>
-<p><a target="_blank" rel="noopener" href="http://live.gnome.org/GnomeShell/Extensions">http://live.gnome.org/GnomeShell/Extensions</a><br><a target="_blank" rel="noopener" href="http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html">http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html</a></p>
-<p>まずは、上部のパネルをクリックすると一定時間メッセージを表示するHello World 的な物から！！とりあえず日本語はunescape() してみた。</p>
-<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#104;&#101;&#x6c;&#x6c;&#111;&#45;&#119;&#x6f;&#x72;&#108;&#100;&#x40;&#x6b;&#116;&#107;&#114;&#x33;&#100;&#46;&#x73;&#x69;&#x74;&#x65;&#49;&#49;&#x2e;&#99;&#x6f;&#x6d;">&#104;&#101;&#x6c;&#x6c;&#111;&#45;&#119;&#x6f;&#x72;&#108;&#100;&#x40;&#x6b;&#116;&#107;&#114;&#x33;&#100;&#46;&#x73;&#x69;&#x74;&#x65;&#49;&#49;&#x2e;&#99;&#x6f;&#x6d;</a>&#x2F;</p>
-<h3 id="extension-js-ファイル"><a href="#extension-js-ファイル" class="headerlink" title="extension.js ファイル"></a>extension.js ファイル</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">// Sample extension code, makes clicking on the panel show a message</span><br><span class="line">const St = imports.gi.St;</span><br><span class="line">const Mainloop = imports.mainloop;</span><br><span class="line"></span><br><span class="line">const Gettext = imports.gettext.domain(&#x27;gnome-shell-extensions&#x27;);</span><br><span class="line">const _ = Gettext.gettext;</span><br><span class="line"></span><br><span class="line">const Main = imports.ui.main;</span><br><span class="line"></span><br><span class="line">function _showHello() &#123;</span><br><span class="line">    let text = new St.Label(&#123; style_class: &#x27;helloworld-label&#x27;, text: _(unescape(&quot;%uFF0F%u4EBA%u25D5%u203F%u203F%u25D5%u4EBA%uFF3C%u300C%u50D5%u3068%u5951%u7D04%u3057%u3066%u9B54%u6CD5%u5C11%u5973%u306B%u306A%u3063%u3066%u3088%uFF01%uFF01%u300D&quot;)) &#125;);</span><br><span class="line">    let monitor = global.get_primary_monitor();</span><br><span class="line">    global.stage.add_actor(text);</span><br><span class="line">    text.set_position(Math.floor (monitor.width / 2 - text.width / 2), Math.floor(monitor.height / 2 - text.height / 2));</span><br><span class="line">    Mainloop.timeout_add(3000, function () &#123; text.destroy(); &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Put your extension initialization code here</span><br><span class="line">function main(metadata) &#123;</span><br><span class="line">    imports.gettext.bindtextdomain(&#x27;gnome-shell-extensions&#x27;, metadata.localedir);</span><br><span class="line"></span><br><span class="line">    Main.panel.actor.reactive = true;</span><br><span class="line">    Main.panel.actor.connect(&#x27;button-release-event&#x27;, _showHello);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="metadata-json-ファイル"><a href="#metadata-json-ファイル" class="headerlink" title="metadata.json ファイル"></a>metadata.json ファイル</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> &quot;uuid&quot;: &quot;hello-world@ktkr3d.site11.com&quot;,</span><br><span class="line"> &quot;name&quot;: &quot;Hello, World!&quot;,</span><br><span class="line"> &quot;description&quot;: &quot;An example extension to show how it works. Shows Hello, world when clicking on the top panel.&quot;,</span><br><span class="line"> &quot;shell-version&quot;: [ &quot;3.0&quot; ],</span><br><span class="line"> &quot;localedir&quot;: &quot;/usr/local/share/locale&quot;,</span><br><span class="line"> &quot;url&quot;: &quot;http://ktkr3d.site11.com&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="stylesheet-class-ファイル"><a href="#stylesheet-class-ファイル" class="headerlink" title="stylesheet.class ファイル"></a>stylesheet.class ファイル</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">/* Example stylesheet */</span><br><span class="line">.helloworld-label &#123;</span><br><span class="line">    font-size: 36px;</span><br><span class="line">    font-weight: bold;</span><br><span class="line">    color: #ffffff;</span><br><span class="line">    background-color: rgba(10,10,10,0.7);</span><br><span class="line">    border-radius: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>拡張を有効にするには、[Alt]+[F2]でrを入力して[Enter] </p>
-
-	
-	</div>
-  <a type="button" href="/2011/05/13/gnome-shell-e68ba1e5bcb5e38292e4bd9ce3828de38186/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-05-12 </div>
-			<div class="article-title"><a href="/2011/05/12/pc-bsd-e38292e8a9a6e38197e381a6e381bfe3819f/" >PC-BSD を試してみた</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/pc-bsd.png" alt="PC-BSD 8.2"></p>
-<p><a target="_blank" rel="noopener" href="http://www.pcbsd.org/">http://www.pcbsd.org/</a></p>
-<p>FreeBSD をインストールしてみたけれど、PC-BSD の方が何かと楽そうなので、PC-BSD 8.2 をインストールしてみた。インストール前に基本パーティションを作っておくと、インストールが楽かも。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; <span class="built_in">uname</span> -a</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#114;&#x6f;&#x6f;&#x74;&#64;&#x62;&#117;&#x69;&#108;&#100;&#56;&#x78;&#51;&#50;&#x2e;&#x70;&#x63;&#98;&#115;&#100;&#46;&#x6f;&#x72;&#103;">&#114;&#x6f;&#x6f;&#x74;&#64;&#x62;&#117;&#x69;&#108;&#100;&#56;&#x78;&#51;&#50;&#x2e;&#x70;&#x63;&#98;&#115;&#100;&#46;&#x6f;&#x72;&#103;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
-</blockquote>
-<p>デスクトップ環境はKDE で、Firefox, Thunderbird, VLC 等をインストール時に追加できる。特に設定しなくても日本語も使えるし、mp3 も再生できる。GRUB からのチェインロードも問題無し。すごく頑張ってると思う。<br>Inspiron duo の1366x768 の解像度に設定すると、ディスプレイが表示されなくなってしまうので、とりあえずVESA で凌ごう。Linux と比べてドライバ(ディスプレイ、ファイルシステム)の情報は少ないかも。<br>ps コマンドやdf コマンドがBSD っぽくて少し懐かしい感じがした。</p>
-
-	
-	</div>
-  <a type="button" href="/2011/05/12/pc-bsd-e38292e8a9a6e38197e381a6e381bfe3819f/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -618,6 +633,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
+      </li>
+    
+      <li>
+        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
+      </li>
+    
+      <li>
         <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
@@ -649,14 +672,6 @@
         <a href="/2022/09/21/Windows-11/" ><i class="fa fa-file-o"></i>Windows 11</a>
       </li>
     
-      <li>
-        <a href="/2022/07/30/Neutralinojs-Nuxt3-MMD-Audio/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + MMD ...</a>
-      </li>
-    
-      <li>
-        <a href="/2022/07/28/Neutralinojs-Nuxt3-Three-js/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + Thre...</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -664,7 +679,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/04/18/Be-Careful-using-Ext2Fsd/" title="Be Careful using Ext2Fsd" rel="bookmark">Be Careful using Ext2Fsd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/02/08/Develop-Environment-on-WSL/" title="Development Environment on WSL" rel="bookmark">Development Environment on WSL</a></h3></div></li></ul>
 </div>
 
 		

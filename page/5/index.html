@@ -164,6 +164,59 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-08-02 </div>
+			<div class="article-title"><a href="/2020/08/02/Extraterm/" >Extraterm</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/extraterm_frame.png" alt="extraterm_frame"><br><a target="_blank" rel="noopener" href="https://extraterm.org/">https://extraterm.org/</a><br><a target="_blank" rel="noopener" href="https://github.com/sedwards2009/extraterm">https://github.com/sedwards2009/extraterm</a></p>
+<p>Extraterm を使ってみました。<br>シェル統合機能やカーソルモードが独特で良いです。</p>
+	
+	</div>
+  <a type="button" href="/2020/08/02/Extraterm/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2020-08-02 </div>
+			<div class="article-title"><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" >EPGStation PVR addon for Kodi</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/kodi_pvr_epgstation_android.jpg" alt="kodi_pvr_epgstation_android"><br><a target="_blank" rel="noopener" href="https://github.com/Harekaze/pvr.epgstation">https://github.com/Harekaze/pvr.epgstation</a></p>
+<p>EPGStation 用のKodi PVR クライントがリリースされていたのでWindows 10 とAndroid の環境で利用してみました。とても便利ですね。<br>また、Android NDK の環境をWSL 上に構築してAndroid 版をビルドしてみました。</p>
+<h4 id="2020-08-11-追記"><a href="#2020-08-11-追記" class="headerlink" title="2020-08-11 追記"></a>2020-08-11 追記</h4><p>README.md に記載のとおりVisual Studio 2019 で開発されています。<br>Windows 10 64bit の場合、Kodi 64bit の他にMSVC ラインタイム(vc_redist.x64.exe)をインストールしないといけないようです。</p>
+<ul>
+<li>エラーログ抜粋(MSVC ラインタイムをインストールしていない環境)<figure class="highlight text"><figcaption><span>%APPDATA%\Kodi\kodi.log</span></figcaption><table><tr><td class="code"><pre><span class="line">ERROR: Win32DllLoader::Load: Failed to load &quot;C:\Users\&lt;user_name&gt;\AppData\Roaming\Kodi\addons\pvr.epgstation\pvr.epgstation.dll&quot; with error 126: &quot;The specified module could not be found.</span><br></pre></td></tr></table></figure></li>
+<li>利用しているDLL<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&gt;cd %APPDATA%</span><br><span class="line"></span><br><span class="line">&gt;dumpbin.exe /IMPORTS Kodi\addons\pvr.epgstation\pvr.epgstation.dll | find &quot;.dll&quot;</span><br><span class="line">Dump of file Kodi\addons\pvr.epgstation\pvr.epgstation.dll</span><br><span class="line">    KERNEL32.dll</span><br><span class="line">    MSVCP140.dll</span><br><span class="line">    VCRUNTIME140_1.dll</span><br><span class="line">    VCRUNTIME140.dll</span><br><span class="line">    api-ms-win-crt-stdio-l1-1-0.dll</span><br><span class="line">    api-ms-win-crt-string-l1-1-0.dll</span><br><span class="line">    api-ms-win-crt-runtime-l1-1-0.dll</span><br><span class="line">    api-ms-win-crt-time-l1-1-0.dll</span><br><span class="line">    api-ms-win-crt-convert-l1-1-0.dll</span><br><span class="line">    api-ms-win-crt-heap-l1-1-0.dll</span><br><span class="line">    api-ms-win-crt-math-l1-1-0.dll</span><br><span class="line">    api-ms-win-crt-locale-l1-1-0.dll</span><br></pre></td></tr></table></figure></li>
+</ul>
+	
+	</div>
+  <a type="button" href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-08-01 </div>
 			<div class="article-title"><a href="/2020/08/01/Enabling-sound-in-WSL/" >Enabling sound in WSL</a></div>						
 		</h3>
@@ -388,64 +441,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-21 </div>
-			<div class="article-title"><a href="/2020/05/21/Terminus/" >Terminus</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-           
-              <div class="thumbnail"><a href="/2020/05/21/Terminus/"><img src="/images/terminus.png" alt="Terminus"  class="nofancybox"></a>
-           
-		</div>
-	
-	
-		<p><a target="_blank" rel="noopener" href="https://eugeny.github.io/terminus/">https://eugeny.github.io/terminus/</a><br>Windows の端末エミュレータをTerminus に切り替えました。</p>
-<p>いろいろありますね。</p>
-<ul>
-<li>ConEmu&#x2F;Cmder<br><a target="_blank" rel="noopener" href="https://conemu.github.io/">https://conemu.github.io/</a><br><a target="_blank" rel="noopener" href="https://cmder.net/">https://cmder.net/</a></li>
-<li>Fluent Terminal<br><a target="_blank" rel="noopener" href="https://github.com/felixse/FluentTerminal">https://github.com/felixse/FluentTerminal</a></li>
-<li>Terminus<br><a target="_blank" rel="noopener" href="https://github.com/Eugeny/terminus">https://github.com/Eugeny/terminus</a></li>
-<li>Windows Terminal<br><a target="_blank" rel="noopener" href="https://github.com/microsoft/terminal">https://github.com/microsoft/terminal</a></li>
-</ul>
-	
-	</div>
-  <a type="button" href="/2020/05/21/Terminus/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-19 </div>
-			<div class="article-title"><a href="/2020/05/19/Diagrams-VS-Code/" >Diagrams - VS Code</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/grouped_workers.png" alt="grouped_workers"><br><a target="_blank" rel="noopener" href="https://diagrams.mingrammer.com/">https://diagrams.mingrammer.com/</a><br>Diagrams でシステム構成図を出力してみました。</p>
-	
-	</div>
-  <a type="button" href="/2020/05/19/Diagrams-VS-Code/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -495,6 +490,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
+      </li>
+    
+      <li>
+        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
+      </li>
+    
+      <li>
         <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
@@ -526,14 +529,6 @@
         <a href="/2022/09/21/Windows-11/" ><i class="fa fa-file-o"></i>Windows 11</a>
       </li>
     
-      <li>
-        <a href="/2022/07/30/Neutralinojs-Nuxt3-MMD-Audio/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + MMD ...</a>
-      </li>
-    
-      <li>
-        <a href="/2022/07/28/Neutralinojs-Nuxt3-Three-js/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + Thre...</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -541,7 +536,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/04/18/Be-Careful-using-Ext2Fsd/" title="Be Careful using Ext2Fsd" rel="bookmark">Be Careful using Ext2Fsd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/02/08/Develop-Environment-on-WSL/" title="Development Environment on WSL" rel="bookmark">Development Environment on WSL</a></h3></div></li></ul>
 </div>
 
 		

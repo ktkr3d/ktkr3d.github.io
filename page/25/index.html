@@ -164,6 +164,60 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2013-08-11 </div>
+			<div class="article-title"><a href="/2013/08/11/irrlicht-android-media-player/" >Irrlicht Android Media Player</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><a href="/images/irrlicht_android_player_tab.png"><img src="/images/irrlicht_android_player_tab_tn.png" class=""></a></p>
+<p>Android のNative Activity で実装したアプリからオーディオの再生ができたので、ミクさんが踊ってくれるメディアプレイヤー的なものにしてみました。</p>
+	
+	</div>
+  <a type="button" href="/2013/08/11/irrlicht-android-media-player/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2013-08-04 </div>
+			<div class="article-title"><a href="/2013/08/04/compiling-irrlicht-ogl-es-branch-for-android/" >Compiling Irrlicht ogl-es branch for Android</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><a href="/images/irrlicht_ogl-es_android.png"><img src="/images/irrlicht_ogl-es_android_tn.png" class=""></a></p>
+<ul>
+<li>Compiling Irrlicht ogl-es branch for Android on Ubuntu GNOME 13.10 x86_64.</li>
+<li>Native C&#x2F;C++ Android Application (Native Activity).</li>
+<li>Fullscreen (1080x1920)</li>
+<li>Input Event Receiver</li>
+<li>True Type Font (FreeType2)</li>
+<li>OpenSL ES (Native Audio)
+	
+	</div>
+  <a type="button" href="/2013/08/04/compiling-irrlicht-ogl-es-branch-for-android/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2013-07-15 </div>
 			<div class="article-title"><a href="/2013/07/15/zenity-octopress-helper/" >Zenity OctoPress Helper</a></div>						
 		</h3>
@@ -364,85 +418,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-03-24 </div>
-			<div class="article-title"><a href="/2013/03/24/conkyforecast-japanese-translation/" >ConkyForecast Japanese Translation</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/conkyforecast_japanese.png" alt="conkyforecast japanese"></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/conkyforecast-ja">https://github.com/ktkr3d/conkyforecast-ja</a></p>
-<p>ConkyForecast 用の日本語PO ファイルを作成して、Conky-HTC を日本語化してみました。また、Conky-HTC の表示用スクリプトを整理してみました。</p>
-<h4 id="パッケージのインストール"><a href="#パッケージのインストール" class="headerlink" title="パッケージのインストール"></a>パッケージのインストール</h4><p><a target="_blank" rel="noopener" href="http://ktkr3d.site11.com/2011/10/09/conky-htc/">http://ktkr3d.site11.com/2011/10/09/conky-htc/</a><br>conky, conkyForecast, Conky-HTC パッケージをインストールして以下の構成にしておきます。</p>
-<figure class="highlight text"><figcaption><span>フォルダ/ファイル構成</span></figcaption><table><tr><td class="code"><pre><span class="line">~/</span><br><span class="line">├── .fonts/</span><br><span class="line">├── .images/</span><br><span class="line">├── .conkyForecast.config</span><br><span class="line">├── .conkyrc</span><br><span class="line">├── .conky_start</span><br><span class="line">└── .vreme.template</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="conkyForecast-の日本語化"><a href="#conkyForecast-の日本語化" class="headerlink" title="conkyForecast の日本語化"></a>conkyForecast の日本語化</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ wget https://github.com/ktkr3d/conkyforecast-ja/raw/master/locale/ja/LC_MESSAGES/conkyForecast.po</span><br><span class="line">$ wget https://github.com/ktkr3d/conkyforecast-ja/raw/master/locale/ja/LC_MESSAGES/conkyForecastWU.po</span><br><span class="line">$ msgfmt -o conkyForecast.mo conkyForecast.po</span><br><span class="line">$ msgfmt -o conkyForecastWU.mo conkyForecastWU.po</span><br><span class="line">$ sudo <span class="built_in">mkdir</span> -p /usr/share/conkyforecast/locale/ja/LC_MESSAGES/</span><br><span class="line">$ sudo <span class="built_in">cp</span> *.mo /usr/share/conkyforecast/locale/ja/LC_MESSAGES/</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h4 id="x2F-conkyForecast-config-の編集"><a href="#x2F-conkyForecast-config-の編集" class="headerlink" title="~&#x2F;.conkyForecast.config の編集"></a>~&#x2F;.conkyForecast.config の編集</h4><figure class="highlight text"><figcaption><span>~/.conkyForecast.config</span></figcaption><table><tr><td class="code"><pre><span class="line">#=============================================#</span><br><span class="line"># EXPERT SETTINGS, NOT REQUIRED TO BE ALTERED #</span><br><span class="line">#=============================================#</span><br><span class="line">#BASE_XOAP_URL = http://xoap.weather.com/weather/local/&lt;LOCATION&gt;?cc=*&amp;dayf=5&amp;link=xoap&amp;prod=xoap&amp;par=&lt;XOAP_PARTNER_ID&gt;&amp;key=&lt;XOAP_LICENCE_KEY&gt;&amp;unit=m</span><br><span class="line">BASE_XOAP_URL = http://xml.weather.com/weather/local/&lt;LOCATION&gt;?cc=*&amp;dayf=10&amp;link=xoap&amp;prod=xoap&amp;par=&lt;XOAP_PARTNER_ID&gt;&amp;key=&lt;XOAP_LICENCE_KEY&gt;&amp;unit=m</span><br><span class="line">MAXIMUM_DAYS_FORECAST = 10</span><br><span class="line"></span><br><span class="line">#===============================================#</span><br><span class="line"># USER SETTINGS, EDIT BASED ON DOCUMENTED SETUP #</span><br><span class="line">#===============================================#</span><br><span class="line">CACHE_FOLDERPATH = /tmp/</span><br><span class="line">CONNECTION_TIMEOUT = 5</span><br><span class="line">EXPIRY_MINUTES = 30</span><br><span class="line">TIME_FORMAT = %H:%M</span><br><span class="line">DATE_FORMAT = %Y-%m-%d</span><br><span class="line">LOCALE = ja</span><br><span class="line">XOAP_PARTNER_ID =</span><br><span class="line">XOAP_LICENCE_KEY =</span><br><span class="line">DEFAULT_LOCATION = JAXX0085</span><br><span class="line">AUTO_NIGHT = False</span><br><span class="line">PROXY_HOST = </span><br><span class="line">PROXY_PORT = 8080</span><br><span class="line">PROXY_USERNAME = </span><br><span class="line">PROXY_PASSWORD = </span><br></pre></td></tr></table></figure>
-
-
-
-
-<h4 id="x2F-conkyrc-の編集"><a href="#x2F-conkyrc-の編集" class="headerlink" title="~&#x2F;.conkyrc の編集"></a>~&#x2F;.conkyrc の編集</h4><figure class="highlight text"><figcaption><span>~/.conkyrc</span></figcaption><table><tr><td class="code"><pre><span class="line"> # Time</span><br><span class="line">$&#123;voffset 35&#125;$&#123;goto 39&#125;$&#123;font Helvetica LT Std:style=Condensed:size=60&#125;$&#123;color 434343&#125;$&#123;time %H&#125;$&#123;goto 140&#125;$&#123;color 434343&#125;$&#123;time %M&#125;$&#123;font Helvetica LT Std:style=Condensed:size=18&#125;$&#123;color ffffff&#125;$&#123;goto 225&#125;$&#123;time %S&#125;</span><br><span class="line"> # Date</span><br><span class="line">$&#123;voffset 47&#125;$&#123;font TakaoPGothic:size=8&#125;$&#123;alignr 80&#125;$&#123;time %G&#125;/$&#123;time %m&#125;/$&#123;time %d&#125; ($&#123;time %a&#125;)</span><br><span class="line"> # City Name</span><br><span class="line">$&#123;voffset -40&#125;$&#123;goto 22&#125;$&#123;exec conkyForecast --datatype=CN&#125;</span><br><span class="line"> # Conditions Text, Current Temp</span><br><span class="line">$&#123;goto 22&#125;$&#123;execi 1800 conkyForecast --datatype=CT&#125;$&#123;voffset -20&#125;$&#123;goto 200&#125;$&#123;font Helvetica LT Std:size=24&#125;$&#123;execi 1800 conkyForecast -u --datatype=HT&#125;</span><br><span class="line"> # High Temp, Low Temp of Today</span><br><span class="line">$&#123;voffset -15&#125;$&#123;font Helvetica LT Std:style=Condensed:size=10&#125;#</span><br><span class="line">$&#123;goto 200&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=0&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=0&#125;</span><br><span class="line"> # High Temp, Low Temp of Next 5 Days</span><br><span class="line">$&#123;voffset 53&#125;$&#123;font Helvetica LT Std:style=Condensed:size=8&#125;#</span><br><span class="line">$&#123;goto  25&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=1&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=1&#125;#</span><br><span class="line">$&#123;goto  70&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=2&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=2&#125;#</span><br><span class="line">$&#123;goto 115&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=3&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=3&#125;#</span><br><span class="line">$&#123;goto 160&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=4&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=4&#125;#</span><br><span class="line">$&#123;goto 205&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=5&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=5&#125;</span><br><span class="line"> # Day of Week</span><br><span class="line">$&#123;font TakaoPGothic:size=8&#125;$&#123;color ffffff&#125;#</span><br><span class="line">$&#123;goto  37&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=1&#125;#</span><br><span class="line">$&#123;goto  82&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=2&#125;#</span><br><span class="line">$&#123;goto 127&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=3&#125;#</span><br><span class="line">$&#123;goto 172&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=4&#125;#</span><br><span class="line">$&#123;goto 217&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=5&#125; </span><br><span class="line">$&#123;image ~/.images/base.png -p 12,30 -s 238x140&#125;</span><br><span class="line">$&#123;image ~/.images/base.png -p 12,190 -s 238x55&#125;</span><br><span class="line">$&#123;image ~/.images/flip_bg.png -p 30,10 -s 100x110&#125;</span><br><span class="line">$&#123;image ~/.images/flip_bg.png -p 130,10 -s 100x110&#125;</span><br><span class="line">$&#123;execpi 1800 conkyForecast --template=~/.vreme.template&#125;</span><br></pre></td></tr></table></figure>
-
-<p>行中&#x2F;行末に# を挿入すると次の行と連結(改行をエスケープ)できます。<br>今日の最高&#x2F;最低気温を取得するために「–startday&#x3D;0」を指定してみましたが、値は無効かもしれません。</p>
-
-	
-	</div>
-  <a type="button" href="/2013/03/24/conkyforecast-japanese-translation/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-03-17 </div>
-			<div class="article-title"><a href="/2013/03/17/bittorrent-live-beta/" >BitTorrent Live Beta</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/BitTorrentLive_Beta.png" alt="BitTorrent Live"></p>
-<p><a target="_blank" rel="noopener" href="http://live.bittorrent.com/">http://live.bittorrent.com/</a><br>P2P 技術を使ったWeb 型ライブストリーミングサービス「BitTorrent Live」のオープンベータテストが開始されたので、試してみました。Windows&#x2F;Mac&#x2F;Ubuntu 用のクライアントプログラムBTLive が配布されており、私はUbuntu 64bit 用をダウンロードしてインストールしました。インストールから視聴までの手順は以下のとおりです。</p>
-<ol>
-<li><p><a target="_blank" rel="noopener" href="http://live.bittorrent.com/">http://live.bittorrent.com/</a> の一番下のリンクから各OS 用のクライアントプログラムをダウンロードして、インストールします。</p>
-</li>
-<li><p>[アプリケーション]-[インターネット]-[BTLive]を起動します。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://live.bittorrent.com/">http://live.bittorrent.com/</a> で公開されているチャンネルを視聴します。アカウントを登録すれば、配信もできます。配信はWebCam かエンコーダ等のアプリが利用できます。</p>
-</li>
-</ol>
-<p>P2P なので、視聴者が増えた時に有利なようです。Peercast と同じような原理でしょうか。ポートを開ける手間がないのが、お手軽でよいかもしれません。手動でポートを開ける場合はUDP ports 31400-31499 らしいです。トレイアイコンをクリックすると、送受信のビットレートが表示されます。btlive コマンドのパラメタは以下のとおり。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ btlive --<span class="built_in">help</span></span><br><span class="line">usage: btlive [-h] [-v] [--force-version FORCED_VER] [-o OFFSET]</span><br><span class="line">              [-j TRACKER|SWARMPUBKEY] [--no-crashlog-reporting]</span><br><span class="line">              [--no-stats-thread] [--no-bench-thread] [--no-update-thread]</span><br><span class="line">              [--no-headless-thread] [--no-nat-detection] [--no-rtmp-server]</span><br><span class="line">              [--no-http-server] [--no-local-discovery] [--no-sysreqs]</span><br><span class="line">              [--ignore-headless | --force-headless] [--staging-bench]</span><br><span class="line">              [--staging-dau] [--staging-onair] [--testing-mode] [--nogui]</span><br><span class="line"></span><br><span class="line">optional arguments:</span><br><span class="line">  -h, --<span class="built_in">help</span>            show this <span class="built_in">help</span> message and <span class="built_in">exit</span></span><br><span class="line">  -v, --version         show program<span class="string">&#x27;s version number and exit</span></span><br><span class="line"><span class="string">  --force-version FORCED_VER</span></span><br><span class="line"><span class="string">                        Forces Live to think that it is another version</span></span><br><span class="line"><span class="string">                        number. Must follow format 0.4.11.1234.</span></span><br><span class="line"><span class="string">  -o OFFSET, --offset OFFSET</span></span><br><span class="line"><span class="string">                        RTMP Server port offset (from 1935). A value of 100 is</span></span><br><span class="line"><span class="string">                        commonly used for sourcing.</span></span><br><span class="line"><span class="string">  -j TRACKER|SWARMPUBKEY, --join TRACKER|SWARMPUBKEY</span></span><br><span class="line"><span class="string">                        Swarm to autojoin on launch. Specify the tracker and</span></span><br><span class="line"><span class="string">                        the swarm public key, separated by a pipe symbol</span></span><br><span class="line"><span class="string">                        (&#x27;</span>|<span class="string">&#x27;).</span></span><br><span class="line"><span class="string">  --no-crashlog-reporting</span></span><br><span class="line"><span class="string">                        Disable all communication with the crashlog server.</span></span><br><span class="line"><span class="string">  --no-stats-thread     Disable debugging statistics being reported to</span></span><br><span class="line"><span class="string">                        graphite/statsd.</span></span><br><span class="line"><span class="string">  --no-bench-thread     Disable bench statistics.</span></span><br><span class="line"><span class="string">  --no-update-thread    Disable autoupdate checking.</span></span><br><span class="line"><span class="string">  --no-headless-thread  Disable all communication with the automation server.</span></span><br><span class="line"><span class="string">  --no-nat-detection    Disable NAT detection on launch.</span></span><br><span class="line"><span class="string">  --no-rtmp-server      Disable RTMP server.</span></span><br><span class="line"><span class="string">  --no-http-server      Disable HTTP server.</span></span><br><span class="line"><span class="string">  --no-local-discovery  Disable local peer discovery.</span></span><br><span class="line"><span class="string">  --no-sysreqs          Disable system requirements for launch/install.</span></span><br><span class="line"><span class="string">  --ignore-headless     Set headless_enabled pref to off and ignore any</span></span><br><span class="line"><span class="string">                        scheduled tests.</span></span><br><span class="line"><span class="string">  --force-headless      Set headless_enabled pref to on and join any scheduled</span></span><br><span class="line"><span class="string">                        tests.</span></span><br><span class="line"><span class="string">  --staging-bench       Use staging bench server for bench statistics.</span></span><br><span class="line"><span class="string">  --staging-dau         Use staging server for autoupdate.</span></span><br><span class="line"><span class="string">  --staging-onair       Use staging server for on-air messaging.</span></span><br><span class="line"><span class="string">  --testing-mode        Disable all non-essential network communication.</span></span><br><span class="line"><span class="string">                        Implies --no-crashlog-reporting, --no-nat-detection,</span></span><br><span class="line"><span class="string">                        --no-stats-thread, --no-update-thread, --no-headless-</span></span><br><span class="line"><span class="string">                        thread, and --no-sysreqs.</span></span><br><span class="line"><span class="string">  --nogui               Disable GUI/icon.</span></span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2013/03/17/bittorrent-live-beta/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -492,6 +467,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
+      </li>
+    
+      <li>
+        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
+      </li>
+    
+      <li>
         <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
@@ -523,14 +506,6 @@
         <a href="/2022/09/21/Windows-11/" ><i class="fa fa-file-o"></i>Windows 11</a>
       </li>
     
-      <li>
-        <a href="/2022/07/30/Neutralinojs-Nuxt3-MMD-Audio/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + MMD ...</a>
-      </li>
-    
-      <li>
-        <a href="/2022/07/28/Neutralinojs-Nuxt3-Three-js/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + Thre...</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -538,7 +513,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/04/18/Be-Careful-using-Ext2Fsd/" title="Be Careful using Ext2Fsd" rel="bookmark">Be Careful using Ext2Fsd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/02/08/Develop-Environment-on-WSL/" title="Development Environment on WSL" rel="bookmark">Development Environment on WSL</a></h3></div></li></ul>
 </div>
 
 		

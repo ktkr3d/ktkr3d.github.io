@@ -7,14 +7,11 @@
   <meta name="author" content="ktkr3d">
   
   <meta name="description" content="ディストリビューション
-Ubuntuhttp://cdimage.ubuntu.com/ubuntu/releases/
+Ubuntuhttps://jp.ubuntu.com/downloadhttp://cdimage.ubuntu.com/ubuntu/releases/
 
 環境設定
 ホームディレクトリの各フォルダ名を英語名に変更
-$ LANG=C xdg-user-dirs-gtk-update
-
-テキストテンプレートファイルの作成
-$ touc">
+LANG=C xdg-user-dirs-gtk-upda">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -170,55 +167,62 @@ $ touc">
 	  		
 
 	  <h2 id="ディストリビューション"><a href="#ディストリビューション" class="headerlink" title="ディストリビューション"></a>ディストリビューション</h2><ul>
-<li>Ubuntu<br><a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/ubuntu/releases/">http://cdimage.ubuntu.com/ubuntu/releases/</a></li>
+<li>Ubuntu<br><a target="_blank" rel="noopener" href="https://jp.ubuntu.com/download">https://jp.ubuntu.com/download</a><br><a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/ubuntu/releases/">http://cdimage.ubuntu.com/ubuntu/releases/</a></li>
 </ul>
 <h2 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h2><ul>
 <li><p>ホームディレクトリの各フォルダ名を英語名に変更</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>テキストテンプレートファイルの作成</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>alias &#x2F; function の設定</p>
-<figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo apt update -y &amp;&amp; sudo apt dist-upgrade &amp;&amp; sudo apt autoremove -y&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo apt update -y &amp;&amp; sudo apt dist-upgrade &amp;&amp; sudo apt autoremove -y&#x27;</span>; flatpak update</span><br><span class="line"><span class="built_in">alias</span> en=<span class="string">&#x27;LANG=&quot;en_US.UTF-8&quot;&#x27;</span>ty</span><br><span class="line"><span class="built_in">alias</span> ja=<span class="string">&#x27;LANG=&quot;ja_JP.UTF-8&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>マルチブート時の時刻ズレ調整</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo timedatectl set-local-rtc <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo timedatectl set-local-rtc <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>デフォルトブートの設定</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ grep <span class="string">&quot;^menuentry\|^submenu&quot;</span> /boot/grub/grub.cfg</span><br><span class="line">menuentry <span class="string">&#x27;Ubuntu&#x27;</span> --class ubuntu --class gnu-linux --class gnu --class os <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;gnulinux-simple-62e49b0d-cba3-41df-867d-25c8175582d5&#x27;</span> &#123;</span><br><span class="line">submenu <span class="string">&#x27;Advanced options for Ubuntu&#x27;</span> <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;gnulinux-advanced-62e49b0d-cba3-41df-867d-25c8175582d5&#x27;</span> &#123;</span><br><span class="line">menuentry <span class="string">&#x27;Windows Boot Manager (on /dev/sda1)&#x27;</span> --class windows --class os <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;osprober-efi-32E3-84BC&#x27;</span> &#123;</span><br><span class="line">menuentry <span class="string">&#x27;UEFI Firmware Settings&#x27;</span> <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;uefi-firmware&#x27;</span> &#123;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grep <span class="string">&quot;^menuentry\|^submenu&quot;</span> /boot/grub/grub.cfg</span><br><span class="line">menuentry <span class="string">&#x27;Ubuntu&#x27;</span> --class ubuntu --class gnu-linux --class gnu --class os <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;gnulinux-simple-62e49b0d-cba3-41df-867d-25c8175582d5&#x27;</span> &#123;</span><br><span class="line">submenu <span class="string">&#x27;Advanced options for Ubuntu&#x27;</span> <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;gnulinux-advanced-62e49b0d-cba3-41df-867d-25c8175582d5&#x27;</span> &#123;</span><br><span class="line">menuentry <span class="string">&#x27;Windows Boot Manager (on /dev/sda1)&#x27;</span> --class windows --class os <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;osprober-efi-32E3-84BC&#x27;</span> &#123;</span><br><span class="line">menuentry <span class="string">&#x27;UEFI Firmware Settings&#x27;</span> <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;uefi-firmware&#x27;</span> &#123;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight ini"><figcaption><span>/etc/default/grub</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#GRUB_DEFAULT=0</span></span><br><span class="line"><span class="attr">GRUB_DEFAULT</span>=<span class="string">&#x27;Windows Boot Manager (on /dev/sda1)&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo update-grub</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo update-grub</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>背景用単色画像のダウンロード</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/Pictures</span><br><span class="line">$ wget https://ktkr3d.github.io/images/white.png</span><br><span class="line">$ wget https://ktkr3d.github.io/images/black.png</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Pictures</span><br><span class="line">wget https://ktkr3d.github.io/images/white.png</span><br><span class="line">wget https://ktkr3d.github.io/images/black.png</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>デスクトップのホームフォルダの削除<br>[設定]-[外観]-[Show Personal Folder]をオフ</p>
 </li>
-<li><p>Google Chrome のインストール</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo sh -c <span class="string">&#x27;echo &quot;deb http://dl.google.com/linux/chrome/deb/ stable main&quot; &gt;&gt; /etc/apt/sources.list.d/google.list&#x27;</span></span><br><span class="line">sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt-get install google-chrome-stable</span><br></pre></td></tr></table></figure>
-</li>
 <li><p>curl, gettext, git, make</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install curl gettext git make</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="固定IPアドレス"><a href="#固定IPアドレス" class="headerlink" title="固定IPアドレス"></a>固定IPアドレス</h2><figure class="highlight yaml"><figcaption><span>50-cloud-init.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">ethernets:</span></span><br><span class="line">    <span class="attr">eth0:</span></span><br><span class="line">      <span class="attr">dhcp4:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">dhcp6:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.11</span><span class="number">.7</span><span class="string">/24</span>]</span><br><span class="line">      <span class="attr">routes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">to:</span> <span class="string">default</span></span><br><span class="line">          <span class="attr">via:</span> <span class="number">192.168</span><span class="number">.11</span><span class="number">.1</span></span><br><span class="line">      <span class="attr">nameservers:</span></span><br><span class="line">        <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.11</span><span class="number">.1</span>]</span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install curl gettext git make</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>固定IPアドレスにする場合</p>
+<figure class="highlight yaml"><figcaption><span>50-cloud-init.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">ethernets:</span></span><br><span class="line">    <span class="attr">eth0:</span></span><br><span class="line">      <span class="attr">dhcp4:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">dhcp6:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.11</span><span class="number">.7</span><span class="string">/24</span>]</span><br><span class="line">      <span class="attr">routes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">to:</span> <span class="string">default</span></span><br><span class="line">          <span class="attr">via:</span> <span class="number">192.168</span><span class="number">.11</span><span class="number">.1</span></span><br><span class="line">      <span class="attr">nameservers:</span></span><br><span class="line">        <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.11</span><span class="number">.1</span>]</span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure>
-
-<h2 id="ISOイメージからパッケージを導入する場合"><a href="#ISOイメージからパッケージを導入する場合" class="headerlink" title="ISOイメージからパッケージを導入する場合"></a>ISOイメージからパッケージを導入する場合</h2><ul>
-<li>ISO ダウンロード<br><a target="_blank" rel="noopener" href="https://ubuntu.com/download/server">https://ubuntu.com/download/server</a></li>
-<li>ISO をリポジトリに追加<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mkdir /media/cdrom</span><br><span class="line">sudo mount -o loop -t iso9660 DVD1.iso /media/cdrom</span><br><span class="line">sudo apt-cdrom add -m</span><br></pre></td></tr></table></figure></li>
+</li>
+<li><p>オフライン環境でISOイメージからパッケージを導入する場合</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mkdir /media/cdrom</span><br><span class="line">sudo mount -o loop -t iso9660 DVD1.iso /media/cdrom</span><br><span class="line">sudo apt-cdrom add -m</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自己署名証明書向けのルートCA証明書を追加する場合(Google Chrome)<br><a target="_blank" rel="noopener" href="https://chromium.googlesource.com/chromium/src/+/master/docs/linux/cert_management.md">https://chromium.googlesource.com/chromium/src/+/master/docs/linux/cert_management.md</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install libnss3-tools</span><br><span class="line">certutil -d sql:<span class="variable">$HOME</span>/.pki/nssdb -A -t <span class="string">&quot;P,,&quot;</span> -n <span class="string">&quot;My Root CA1&quot;</span> -i <span class="string">&quot;rootCA.pem&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>フォントのインストール<br><code>$HOME/.fonts/SourceHanCodeJP.ttc</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fc-cache -fv</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="GNOME-Shell-関連"><a href="#GNOME-Shell-関連" class="headerlink" title="GNOME Shell 関連"></a>GNOME Shell 関連</h2><ul>
-<li>GNOME Shell 拡張連携パッケージ<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install -y chrome-gnome-shell gnome-tweaks</span><br></pre></td></tr></table></figure></li>
+<li>GNOME Shell 拡張連携パッケージ<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install -y chrome-gnome-shell gnome-tweaks</span><br></pre></td></tr></table></figure></li>
 <li>Google Chrome 拡張 : GNOME Shell Integration<br><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep">https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep</a></li>
 <li>GNOME Shell 拡張機能 : Dash to Panel<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1160/dash-to-panel/">https://extensions.gnome.org/extension/1160/dash-to-panel/</a><br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1653/tweaks-in-system-menu/">https://extensions.gnome.org/extension/1653/tweaks-in-system-menu/</a><br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/3628/arcmenu/">https://extensions.gnome.org/extension/3628/arcmenu/</a></li>
 </ul>
-<h2 id="デスクトップパッケージ"><a href="#デスクトップパッケージ" class="headerlink" title="デスクトップパッケージ"></a>デスクトップパッケージ</h2><ul>
-<li>audacious</li>
-<li>gimp</li>
-<li>kodi</li>
+<h2 id="Flatpak-アプリケーションパッケージ"><a href="#Flatpak-アプリケーションパッケージ" class="headerlink" title="Flatpak アプリケーションパッケージ"></a>Flatpak アプリケーションパッケージ</h2><ul>
+<li>Flatpak の準備<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository -y ppa:alexlarsson/flatpak</span><br><span class="line">sudo apt install flatpak gnome-software-plugin-flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br></pre></td></tr></table></figure></li>
+<li>Update<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak update</span><br></pre></td></tr></table></figure></li>
+<li>Audacious<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/org.atheme.audacious">https://flathub.org/apps/org.atheme.audacious</a></li>
+<li>Gimp<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/org.gimp.GIMP">https://flathub.org/apps/org.gimp.GIMP</a></li>
+<li>Google Chrome<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/com.google.Chrome">https://flathub.org/apps/com.google.Chrome</a><br>PWA には<code>$HOME/.local/share/applications/</code>, <code>$HOME/.local/share/icons/</code> にアクセス権が必要<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak override --user --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.google.Chrome</span><br></pre></td></tr></table></figure></li>
+<li>Kodi<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/tv.kodi.Kodi">https://flathub.org/apps/tv.kodi.Kodi</a></li>
+<li>Visual Studio Code<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/com.visualstudio.code">https://flathub.org/apps/com.visualstudio.code</a></li>
 </ul>
 <h2 id="基本パッケージ"><a href="#基本パッケージ" class="headerlink" title="基本パッケージ"></a>基本パッケージ</h2><ul>
 <li>curl</li>
@@ -226,26 +230,29 @@ $ touc">
 <li>geany</li>
 <li>gparted</li>
 <li>openssh-server</li>
-<li>ssh の設定<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen</span><br><span class="line">$ ssh-copy-id -i ~/.ssh/id_rsa.pub username@hostname -p 22222</span><br><span class="line">$ ssh username@hostname -p 22222</span><br></pre></td></tr></table></figure></li>
+<li>ssh の設定<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub username@hostname -p 22222</span><br><span class="line">ssh username@hostname -p 22222</span><br></pre></td></tr></table></figure></li>
 <li>synaptic</li>
 </ul>
 <h2 id="開発用パッケージ"><a href="#開発用パッケージ" class="headerlink" title="開発用パッケージ"></a>開発用パッケージ</h2><ul>
 <li>build-essential</li>
-<li>git の設定<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install git</span><br><span class="line">$ git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">$ git config --global user.email mail_account_name@mail_domain_name</span><br></pre></td></tr></table></figure></li>
+<li>git の設定<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install git</span><br><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email mail_account_name@mail_domain_name</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="外部インストーラパッケージ"><a href="#外部インストーラパッケージ" class="headerlink" title="外部インストーラパッケージ"></a>外部インストーラパッケージ</h2><ul>
+<li><p>Google Chrome </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo sh -c <span class="string">&#x27;echo &quot;deb http://dl.google.com/linux/chrome/deb/ stable main&quot; &gt;&gt; /etc/apt/sources.list.d/google.list&#x27;</span></span><br><span class="line">sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt-get install google-chrome-stable</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Visual Studio Code</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; microsoft.gpg</span><br><span class="line">sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/</span><br><span class="line">sudo sh -c &#x27;echo &quot;deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main&quot; &gt; /etc/apt/sources.list.d/vscode.list&#x27;</span><br><span class="line">sudo apt install apt-transport-https</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install code</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Node.js</p>
 <figure class="highlight bash"><figcaption><span>~/.bashrc</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> N_PREFIX=<span class="variable">$HOME</span>/.n</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$N_PREFIX</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install nodejs npm</span><br><span class="line">$ sudo npm install n -g</span><br><span class="line">$ sudo apt purge nodejs npm</span><br><span class="line">$ n latest</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install nodejs npm</span><br><span class="line">sudo npm install n -g</span><br><span class="line">sudo apt purge nodejs npm</span><br><span class="line">n latest</span><br></pre></td></tr></table></figure></li>
 <li><p>Docker</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install curl</span><br><span class="line">$ curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install curl</span><br><span class="line">curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
 <figure class="highlight ini"><figcaption><span>/etc/apt/sources.list.d/docker.list</span></figcaption><table><tr><td class="code"><pre><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial main</span><br><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial testing</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo gpasswd -a <span class="variable">$USER</span> docker</span><br><span class="line">$ sudo systemctl daemon-reload</span><br><span class="line">$ sudo systemctl restart docker</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gpasswd -a <span class="variable">$USER</span> docker</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure></li>
 <li><p>Docker Compose<br><a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases">https://github.com/docker/compose/releases</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line">$ sudo <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
 <li><p>Unity 3D<br><a target="_blank" rel="noopener" href="http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/">http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/</a> の最新トピック<br><a href="http://ktkr3d.github.io/2015/08/30/Unity-5-Standard-Assets-Example-Project-on-Linux/">http://ktkr3d.github.io/2015/08/30/Unity-5-Standard-Assets-Example-Project-on-Linux/</a></p>
 </li>
 </ul>

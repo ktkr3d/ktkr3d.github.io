@@ -164,6 +164,89 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-08-21 </div>
+			<div class="article-title"><a href="/2012/08/21/gnome-shell-focus-effect-extension/" >GNOME Shell Focus Effect Extension</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/gnome_shell_extension_focus_effect.png" alt="gnome shell extensio focus effect"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/paradoxxxzero/gnome-shell-focus-effects-extension">https://github.com/paradoxxxzero/gnome-shell-focus-effects-extension</a>  </p>
+<p><a target="_blank" rel="noopener" href="http://www.upubuntu.com/2012/08/how-to-install-gnome-shell-focus-effect.html">http://www.upubuntu.com/2012/08/how-to-install-gnome-shell-focus-effect.html</a></p>
+<p>GNOME Shell のFocus Effect 拡張を使ってみた。フォーカスの切り替えでウィンドウがアニメーションする。なんか楽しい。非アクティブなウィンドウは少し傾いて、サイズが小さく、色はグレーになる。スクリプトはとても小さいので、何かに応用できるかもしれない。<br>副作用としては、非アクティブなウィンドウの選択に少しコツがいるようだ。また、何回か切り替えを繰り返した時に、ウィンドウが画面外に移動してしまう。その時は、[Alt]-[Space]で「移動」を選択して、ウィンドウを元の位置に動かすと回復できる。</p>
+
+	
+	</div>
+  <a type="button" href="/2012/08/21/gnome-shell-focus-effect-extension/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2012-08-05 </div>
+			<div class="article-title"><a href="/2012/08/05/ubuntu-12-10-alpha3-gnome-shell-3-5-4/" >Ubuntu 12.10 alpha3 + GNOME Shell 3.5.4</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/ubuntu_12_10_alpha3_gnome_shell_3_5_4.png" alt="ubuntu 12.10 alpha3 GNOME Shell 3.5.4"><br><a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/releases/quantal/">http://cdimage.ubuntu.com/releases/quantal/</a><br>Ubuntu 12.10 alpha 3 x86_64 にGNOME Shell 3.5.4 を入れてみた。</p>
+<ul>
+<li><p>Linux Kernel が3.5.0 になった。</p>
+</li>
+<li><p>nautilus のGUI が変更されたみたい。</p>
+</li>
+<li><p>マウントポイントが&#x2F;media から&#x2F;run&#x2F;media&#x2F;$USER に移動したみたい。</p>
+</li>
+<li><p>firefox が15.0 に。Tab Utilities アドオンの挙動が少し変かもしれないので、Tab Mix Plus に移行。</p>
+</li>
+<li><p>GIMP が2.8 に。</p>
+</li>
+<li><p>アップデートマネージャがSoftware Updater に名前が変わった。</p>
+</li>
+<li><p>alpha3 時点でnVidia のGPU 環境でLive CD うまくブートしないみたい。</p>
+</li>
+</ul>
+<p>いつものようにカスタマイズ</p>
+<ul>
+<li><p>フォルダを英語名に。</p>
+</li>
+<li><p>Avant Window Navigator を常駐。</p>
+</li>
+<li><p>conky を設定。conkyforecast は古いバージョンのものを使用。</p>
+</li>
+<li><p>Gnome Shell のAuto Hide Top Panel 拡張はmetadata.json の対応バージョンを3.5.4 にした。</p>
+</li>
+</ul>
+<p>EDIT:<br>nVidia のGPU でも起動時のカーネルパラメータにnouveau.modeset&#x3D;0 を追加したら普通に起動できた。</p>
+<p>EDIT2:<br>overlay-scrollbar を削除するとログインできなくなるみたいだ。あわてず、Ctrl+Alt+F1 で、sudo apt-cache search overlay-scrollbar してパッケージ名を探して、sudo apt-get install でインストール。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="built_in">export</span> LIBOVERLAY_SCROLLBAR=0 &gt;&gt; ~/.xprofile</span><br></pre></td></tr></table></figure>
+
+<p>EDIT3:<br>nautilus でファイルの新規作成をするには、$HOME&#x2F;Templates にテンプレートファイルを入れておくとアプリケーションメニューやコンテキストメニューにNew Document メニューが表示されるようになるみたい。</p>
+
+	
+	</div>
+  <a type="button" href="/2012/08/05/ubuntu-12-10-alpha3-gnome-shell-3-5-4/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-07-29 </div>
 			<div class="article-title"><a href="/2012/07/29/ubuntu-12-04-pov-ray-3-7-0-rc6-2/" >Ubuntu 12.04 + POV-Ray 3.7.0 RC6</a></div>						
 		</h3>
@@ -519,89 +602,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-06-17 </div>
-			<div class="article-title"><a href="/2012/06/17/android-ndk-android-x86-4-0-3/" >Android NDK + Android-x86 4.0.3</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/android_ndk_android-x86.png" alt="android ndk android-x86 irrlicht"></p>
-<p>Android 2.3 用のアプリをAndroid-x86 4.0.3 用にリビルドして、Inspiron duo 実機で動かしてみた。さすがにスマートフォンより動作が非常に軽快だけど、画面がiPod の広告みたいになってしまった。画像やフォントが表示されてないのは、なんでだろう。パスがずれているのかな。パスが違っていたらエラーになるはずなんだけど。ボタンイベントはタッチスクリーン上を指で押したら正しく動作した。</p>
-<ol>
-<li>Android 4.0.3 のターゲット情報は以下のとおり。ID は10。</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android list target</span><br><span class="line"><span class="built_in">id</span>: 10 or <span class="string">&quot;android-15&quot;</span></span><br><span class="line">     Name: Android 4.0.3</span><br><span class="line">     Type: Platform</span><br><span class="line">     API level: 15</span><br><span class="line">     Revision: 3</span><br><span class="line">     Skins: WXGA720, QVGA, WSVGA, WQVGA400, WQVGA432, HVGA, WVGA854, WXGA800, WVGA800 (default)</span><br><span class="line">     ABIs : armeabi-v7a, x86</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>Application.mk でx86 を指定</li>
-</ol>
-<figure class="highlight text"><figcaption><span>Application.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">#APP_ABI := armeabi armeabi-v7a</span><br><span class="line">APP_ABI := armeabi-v7a x86</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="3">
-<li>プロジェクトをアップデート</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android update project --path . --target 10</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="4">
-<li>ビルド</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ndk-build clean</span><br><span class="line">$ ndk-build -j 4</span><br><span class="line">$ ant clean</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
-
-
-
-
-	
-	</div>
-  <a type="button" href="/2012/06/17/android-ndk-android-x86-4-0-3/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-06-09 </div>
-			<div class="article-title"><a href="/2012/06/09/firefox-13-newsfox/" >Firefox 13 + NewsFox </a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Firefox のアドオンNewsFox を使ってRSS を購読しているのだけど、Firefox を13.0 にアップデートしてから、時々マウスのボタンダウンイベントがキャプチャーされて無効化されてしまうような挙動があったので、やっつけで暫定対策してみた。<del>Linux でもWindows でも発生する(?)ので、NewsFox 側に問題がありそう。いろいろFirefox のバグ回避もしているようだし。</del>とりあえず、ドラッグ開始しないようにreturn してしまうことにした。NewsFox でドラッグアンドドロップなんて飾りですよ。</p>
-<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragIt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragArt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>; </span><br></pre></td></tr></table></figure>
-
-<p>他に古いAPI を使っているところもあるようだし、早くアップデート版がリリースされるといいな。</p>
-<p>newsfox.xpi &#x3D; {899DF1F8-2F43-4394-8315-37F6744E6319}.xpi</p>
-
-	
-	</div>
-  <a type="button" href="/2012/06/09/firefox-13-newsfox/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -651,6 +651,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
+      </li>
+    
+      <li>
+        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
+      </li>
+    
+      <li>
         <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
@@ -682,14 +690,6 @@
         <a href="/2022/09/21/Windows-11/" ><i class="fa fa-file-o"></i>Windows 11</a>
       </li>
     
-      <li>
-        <a href="/2022/07/30/Neutralinojs-Nuxt3-MMD-Audio/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + MMD ...</a>
-      </li>
-    
-      <li>
-        <a href="/2022/07/28/Neutralinojs-Nuxt3-Three-js/" ><i class="fa fa-file-o"></i>Neutralinojs + Nuxt3 + Thre...</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -697,7 +697,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/04/18/Be-Careful-using-Ext2Fsd/" title="Be Careful using Ext2Fsd" rel="bookmark">Be Careful using Ext2Fsd</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/02/08/Develop-Environment-on-WSL/" title="Development Environment on WSL" rel="bookmark">Development Environment on WSL</a></h3></div></li></ul>
 </div>
 
 		

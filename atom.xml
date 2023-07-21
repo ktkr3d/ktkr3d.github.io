@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-07-09T13:47:09.000Z</updated>
+  <updated>2023-07-18T03:27:10.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flatpak</title>
+    <link href="https://ktkr3d.github.io/2023/07/18/Flatpak/"/>
+    <id>https://ktkr3d.github.io/2023/07/18/Flatpak/</id>
+    <published>2023-07-18T03:27:10.000Z</published>
+    <updated>2023-07-18T03:27:10.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/flatpak_flatseal.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://flatpak.org/&quot;&gt;https://flatpak.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://flathub.org/&quot;&gt;https://flathub.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;FlatpakでGUIアプリケーションをインストールしてみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="flatpak" scheme="https://ktkr3d.github.io/tags/flatpak/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ventoy</title>
+    <link href="https://ktkr3d.github.io/2023/07/18/Ventoy/"/>
+    <id>https://ktkr3d.github.io/2023/07/18/Ventoy/</id>
+    <published>2023-07-18T03:08:27.000Z</published>
+    <updated>2023-07-18T03:08:27.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ventoy.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://www.ventoy.net/&quot;&gt;https://www.ventoy.net/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ventoy/Ventoy/releases&quot;&gt;https://github.com/ventoy/Ventoy/releases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;USBメモリにOSのブート用イメージファイルをコピーしておくと、選択してブートできるというものです。複数ISOファイルにも対応しています。これは便利。&lt;br&gt;MBR用とGPT用で２つ用意しておけば困ることはないでしょう。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="ventoy" scheme="https://ktkr3d.github.io/tags/ventoy/"/>
+    
+  </entry>
   
   <entry>
     <title>Bottles</title>
@@ -32,7 +68,9 @@
     
     <category term="bottles" scheme="https://ktkr3d.github.io/tags/bottles/"/>
     
-    <category term="flatpack" scheme="https://ktkr3d.github.io/tags/flatpack/"/>
+    <category term="flatpak" scheme="https://ktkr3d.github.io/tags/flatpak/"/>
+    
+    <category term="wine" scheme="https://ktkr3d.github.io/tags/wine/"/>
     
   </entry>
   
@@ -522,40 +560,6 @@
     <category term="wsl" scheme="https://ktkr3d.github.io/tags/wsl/"/>
     
     <category term="code-server" scheme="https://ktkr3d.github.io/tags/code-server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Slidev</title>
-    <link href="https://ktkr3d.github.io/2021/12/19/Slidev/"/>
-    <id>https://ktkr3d.github.io/2021/12/19/Slidev/</id>
-    <published>2021-12-19T02:24:36.000Z</published>
-    <updated>2021-12-19T02:24:36.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://sli.dev/&quot;&gt;https://sli.dev/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/slidevjs/slidev&quot;&gt;https://github.com/slidevjs/slidev&lt;/a&gt;&lt;br&gt;Slidev でスライドを作成してみました。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="markdown" scheme="https://ktkr3d.github.io/tags/markdown/"/>
-    
-    <category term="slidev" scheme="https://ktkr3d.github.io/tags/slidev/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu Mate 21.10 on Raspberry Pi 4B</title>
-    <link href="https://ktkr3d.github.io/2021/11/08/Ubuntu-Mate-21-10-on-Raspberry-Pi-4B/"/>
-    <id>https://ktkr3d.github.io/2021/11/08/Ubuntu-Mate-21-10-on-Raspberry-Pi-4B/</id>
-    <published>2021-11-08T13:51:12.000Z</published>
-    <updated>2021-11-08T13:51:12.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ubuntu_mate_21_10_rpi4b.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://ubuntu-mate.org/download/arm64/impish/&quot;&gt;https://ubuntu-mate.org/download/arm64/impish/&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
     
   </entry>
   
