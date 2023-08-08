@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-07-18T03:27:10.000Z</updated>
+  <updated>2023-08-08T07:30:00.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CHUWI MiniBook X N100</title>
+    <link href="https://ktkr3d.github.io/2023/08/08/CHUWI-Minibook-X-N100/"/>
+    <id>https://ktkr3d.github.io/2023/08/08/CHUWI-Minibook-X-N100/</id>
+    <published>2023-08-08T07:30:00.000Z</published>
+    <updated>2023-08-08T07:30:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://ae01.alicdn.com/kf/S26d8f55afec54e329da770e143340e3ac.jpg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://store.chuwi.jp/products/minibook-x-n100&quot;&gt;https://store.chuwi.jp/products/minibook-x-n100&lt;/a&gt;&lt;br&gt;CHUWI MiniBook X N100が届いたから環境設定と動作確認をしてみよう。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="windows" scheme="https://ktkr3d.github.io/tags/windows/"/>
+    
+    <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
+    
+    <category term="minibook-x" scheme="https://ktkr3d.github.io/tags/minibook-x/"/>
+    
+  </entry>
   
   <entry>
     <title>Flatpak</title>
@@ -527,39 +548,6 @@
     <category term="vscode" scheme="https://ktkr3d.github.io/tags/vscode/"/>
     
     <category term="draw.io" scheme="https://ktkr3d.github.io/tags/draw-io/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Development Environment on WSL</title>
-    <link href="https://ktkr3d.github.io/2022/02/08/Develop-Environment-on-WSL/"/>
-    <id>https://ktkr3d.github.io/2022/02/08/Develop-Environment-on-WSL/</id>
-    <published>2022-02-07T17:24:24.000Z</published>
-    <updated>2022-02-07T17:24:24.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/wsl-dev.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/coder/code-server&quot;&gt;https://github.com/coder/code-server&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;WSL にこっそり開発環境を構築しようと思います。&lt;br&gt;Microsoft Store が利用不可、インターネットアクセスに認証プロキシが存在する環境とします。&lt;/p&gt;
-&lt;h4 id=&quot;実現する機能&quot;&gt;&lt;a href=&quot;#実現する機能&quot; class=&quot;headerlink&quot; title=&quot;実現する機能&quot;&gt;&lt;/a&gt;実現する機能&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;WSL2 (Ubuntu 20.04, systemd 有効化)&lt;/li&gt;
-&lt;li&gt;Code Server (Web版Visual Studio Code)をPWA化&lt;/li&gt;
-&lt;li&gt;Code Server の拡張機能&lt;ul&gt;
-&lt;li&gt;Japanese Language Pack (日本語化)&lt;/li&gt;
-&lt;li&gt;Project Manager&lt;/li&gt;
-&lt;li&gt;Activitus Bar&lt;/li&gt;
-&lt;li&gt;Draw.io (図形エディタ)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Gitea (Git リポジトリ管理)&lt;/li&gt;
-&lt;li&gt;SliDev (スライド)&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    
-    <category term="wsl" scheme="https://ktkr3d.github.io/tags/wsl/"/>
-    
-    <category term="code-server" scheme="https://ktkr3d.github.io/tags/code-server/"/>
     
   </entry>
   

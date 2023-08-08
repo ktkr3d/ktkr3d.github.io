@@ -164,6 +164,41 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-05-05 </div>
+			<div class="article-title"><a href="/2012/05/05/ubuntu-12-04-conky-1-9-0/" >Ubuntu 12.04 + Conky 1.9.0</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/ubuntu_12.04_conky_1.9.0.png" alt="ubuntu 12.04 conky 1.9.0"></p>
+<p><a target="_blank" rel="noopener" href="http://conky.sourceforge.net/">http://conky.sourceforge.net/</a></p>
+<p>Ubuntu 12.04 のConky 1.8.1 の挙動が怪しい(アップタイムより大きい更新間隔で実行するexeci 等が原因でcore dump する過去の不具合に似ている)のでconky 1.9.0 のソースを取得してインストールしてみた。configure するとインストール済みの開発用ライブラリに応じて使える機能が追加されるので、適宜、開発用ライブラリを追加しておく。configure の際には、画像を表示するので、–enable-imlib2 もつけてみた。デフォルトでは、&#x2F;usr&#x2F;local&#x2F;bin&#x2F;conky にインストールされる。これでエラーが出なくなってすっきり。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ./configure --enable-imlib2</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<p>また、conkyForecast は以下の手順で設定した。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:conky-companions/ppa</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install conkyforecast</span><br><span class="line">$ <span class="built_in">cp</span> /usr/share/conkyforecast/conkyForecast.config ~/.conkyForecast.config</span><br></pre></td></tr></table></figure>
+
+<p>xoap.weather.com ではなく、xml.weather.com から取得。地域は東京(JAXX0085)を設定。</p>
+<figure class="highlight text"><figcaption><span>~/.conkyForecast.config</span></figcaption><table><tr><td class="code"><pre><span class="line">#=============================================#</span><br><span class="line"># EXPERT SETTINGS, NOT REQUIRED TO BE ALTERED #</span><br><span class="line">#=============================================#</span><br><span class="line">#BASE_XOAP_URL = http://xoap.weather.com/weather/local/&lt;LOCATION&gt;?cc=*&amp;dayf=5&amp;link=xoap&amp;prod=xoap&amp;par=&lt;XOAP_PARTNER_ID&gt;&amp;key=&lt;XOAP_LICENCE_KEY&gt;&amp;unit=m</span><br><span class="line">BASE_XOAP_URL = http://xml.weather.com/weather/local/&lt;LOCATION&gt;?cc=*&amp;dayf=10&amp;link=xoap&amp;prod=xoap&amp;par=&lt;XOAP_PARTNER_ID&gt;&amp;key=&lt;XOAP_LICENCE_KEY&gt;&amp;unit=m</span><br><span class="line">MAXIMUM_DAYS_FORECAST = 5</span><br><span class="line"></span><br><span class="line">#===============================================#</span><br><span class="line"># USER SETTINGS, EDIT BASED ON DOCUMENTED SETUP #</span><br><span class="line">#===============================================#</span><br><span class="line">CACHE_FOLDERPATH = /tmp/</span><br><span class="line">CONNECTION_TIMEOUT = 5</span><br><span class="line">EXPIRY_MINUTES = 30</span><br><span class="line">TIME_FORMAT = %H:%M</span><br><span class="line">DATE_FORMAT = %Y-%m-%d</span><br><span class="line">LOCALE = en</span><br><span class="line">XOAP_PARTNER_ID = </span><br><span class="line">XOAP_LICENCE_KEY =</span><br><span class="line">DEFAULT_LOCATION = JAXX0085</span><br><span class="line">AUTO_NIGHT = False</span><br><span class="line">PROXY_HOST = </span><br><span class="line">PROXY_PORT = 8080</span><br><span class="line">PROXY_USERNAME = </span><br><span class="line">PROXY_PASSWORD = </span><br></pre></td></tr></table></figure>
+
+<p>天気予報の文言を日本語で表示するには、&#x2F;usr&#x2F;share&#x2F;conkyforecast&#x2F;locale&#x2F;ja&#x2F;* を作成しておいて、.conkyForecast.config でLOCALE &#x3D; ja を設定すればよさそう。中国語(zh)をサンプルにして作成すれば、少し楽かも。</p>
+
+	
+	</div>
+  <a type="button" href="/2012/05/05/ubuntu-12-04-conky-1-9-0/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-05-03 </div>
 			<div class="article-title"><a href="/2012/05/03/webilder-wallpaper-changer/" >Webilder - Wallpaper Changer</a></div>						
 		</h3>
@@ -434,81 +469,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-03-02 </div>
-			<div class="article-title"><a href="/2012/03/02/my-android-x86-4-0-rc1-for-inspiron-duo/" >My Android-x86 4.0 RC1 for Inspiron duo</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Indpiron duo でandroid-x86 4.0 RC1 のtegav2 ビルドがほぼ動くので微調整してみよう。</p>
-<ol>
-<li>repo でandroid-x86 のソースコードを拾ってきて展開する。</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ repo init -u http://git.android-x86.org/manifest -b ics-x86</span><br><span class="line">$ repo <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-<ol start="2">
-<li>キーボードの調整<br>tegav2 ビルドではキーレイアウトは以下のようになっている。</li>
-</ol>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/AT_Translated_Set_2_keyboard.kl</span></figcaption><table><tr><td class="code"><pre><span class="line">key 1     HOME          WAKE_DROPPED</span><br><span class="line">key 114   VOLUME_DOWN</span><br><span class="line">key 115   VOLUME_UP</span><br><span class="line">key 125   APP_SWITCH</span><br><span class="line">key 127   ESCAPE        WAKE_DROPPED</span><br></pre></td></tr></table></figure>
-
-<p>それ以外のキーも動作するように、このファイルをコピーしないようにする。</p>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">PRODUCT_COPY_FILES := \</span><br><span class="line">    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab \</span><br><span class="line"></span><br><span class="line">#    $(LOCAL_PATH)/AT_Translated_Set_2_keyboard.kl:system/usr/keylayout/AT_Translated_Set_2_keyboard.kl \</span><br></pre></td></tr></table></figure>
-
-
-
-
-<ol start="3">
-<li>SDCARD の認識<br>tegav2 ビルドではfstab の設定が以下のようになっている。</li>
-</ol>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/vold.fstab</span></figcaption><table><tr><td class="code"><pre><span class="line">dev_mount sdcard  /mnt/MicroSD auto /devices/pci0000:00/0000:00:1d.7/usb1/1-5/1-5:1.0</span><br><span class="line">dev_mount usb     /mnt/USB     auto</span><br></pre></td></tr></table></figure>
-
-<p>デバイスの指定を外す。</p>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/vold.fstab</span></figcaption><table><tr><td class="code"><pre><span class="line">dev_mount sdcard  /mnt/MicroSD auto</span><br><span class="line">dev_mount usb     /mnt/USB     auto</span><br></pre></td></tr></table></figure>
-
-<p>または、このファイルもコピーしないようにする。</p>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">PRODUCT_COPY_FILES := \</span><br><span class="line"></span><br><span class="line">#    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab \</span><br><span class="line">#    $(LOCAL_PATH)/AT_Translated_Set_2_keyboard.kl:system/usr/keylayout/AT_Translated_Set_2_keyboard.kl \</span><br></pre></td></tr></table></figure>
-
-
-
-
-<ol start="4">
-<li>スピーカーの調整<br>ヘッドフォンを繋いでもPC のスピーカーがミュートしない。</li>
-</ol>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2_defconfig</span></figcaption><table><tr><td class="code"><pre><span class="line">CONFIG_SND_HDA_INTEL=m</span><br><span class="line">CONFIG_SND_HDA_HWDEP=y</span><br><span class="line">CONFIG_SND_HDA_RECONFIG=y</span><br><span class="line"># CONFIG_SND_HDA_INPUT_BEEP is not set</span><br><span class="line"># CONFIG_SND_HDA_INPUT_JACK=y</span><br><span class="line"># CONFIG_SND_HDA_PATCH_LOADER=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_REALTEK=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_ANALOG is not set</span><br><span class="line">CONFIG_SND_HDA_CODEC_SIGMATEL=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_VIA=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_HDMI=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CIRRUS=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CONEXANT=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CA0110=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_CMEDIA=y</span><br><span class="line">CONFIG_SND_HDA_CODEC_SI3054=y</span><br><span class="line"># CONFIG_SND_HDA_GENERIC is not set</span><br><span class="line">CONFIG_SND_HDA_GENERIC=y</span><br><span class="line">CONFIG_SND_HDA_POWER_SAVE=y</span><br><span class="line">CONFIG_SND_HDA_POWER_SAVE_DEFAULT=3</span><br></pre></td></tr></table></figure>
-
-<p>とりあえず過去のsparta_defconfig を参考にsnd_hda 関連を書き換える。</p>
-<ol start="5">
-<li>ISO イメージの作成<br>ファイルの編集が済んだらビルド。メモリが少ないので多重度は1に。</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make -j1 iso_img TARGET_PRODUCT=tegav2</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>キーボード入力ができるようになったけれど、仮想キーボードが表示されなくなったので、キーマッピングを追加するようにした方がよさそう。また、スピーカーの音は改善されなく、初期インストールアプリも減ってしまったので、見直しが必要だ。<br>tegav2.mk を見て、電源ボタンダブルクリックでシャットダウンする設定になっているのに気がついた。</p>
-<p>EDIT1:<br>他のLinux と同様にオプションを追加してみよう。</p>
-<figure class="highlight text"><figcaption><span>./device/tegatech/tegav2/tegav2_info</span></figcaption><table><tr><td class="code"><pre><span class="line">SNDDEV=&quot;snd-hda-intel model=ideapad&quot; </span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2012/03/02/my-android-x86-4-0-rc1-for-inspiron-duo/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -558,6 +518,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/08/CHUWI-Minibook-X-N100/" ><i class="fa fa-file-o"></i>CHUWI MiniBook X N100</a>
+      </li>
+    
+      <li>
         <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
       </li>
     
@@ -593,10 +557,6 @@
         <a href="/2022/10/22/Windows-11-WSL-2-systemd/" ><i class="fa fa-file-o"></i>Windows 11 - WSL 2 - systemd</a>
       </li>
     
-      <li>
-        <a href="/2022/09/21/Windows-11/" ><i class="fa fa-file-o"></i>Windows 11</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -604,7 +564,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/02/08/Develop-Environment-on-WSL/" title="Development Environment on WSL" rel="bookmark">Development Environment on WSL</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/pv/" title="PV 再生っぽいことをしてみた" rel="bookmark">PV 再生っぽいことをしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/twitter/" title="Twitter に接続してみた" rel="bookmark">Twitter に接続してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/18/post_5/" title="物理演算を試してみる" rel="bookmark">物理演算を試してみる</a></h3></div></li></ul>
 </div>
 
 		

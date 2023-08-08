@@ -7,11 +7,12 @@
   <meta name="author" content="ktkr3d">
   
   <meta name="description" content="ディストリビューション
-Ubuntuhttps://jp.ubuntu.com/downloadhttp://cdimage.ubuntu.com/ubuntu/releases/
+Ubuntu Desktophttps://ubuntu.com/download/desktop
+Ubuntu Serverhttps://ubuntu.com/download/server
 
 環境設定
 ホームディレクトリの各フォルダ名を英語名に変更
-LANG=C xdg-user-dirs-gtk-upda">
+LANG=C xdg">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -167,7 +168,8 @@ LANG=C xdg-user-dirs-gtk-upda">
 	  		
 
 	  <h2 id="ディストリビューション"><a href="#ディストリビューション" class="headerlink" title="ディストリビューション"></a>ディストリビューション</h2><ul>
-<li>Ubuntu<br><a target="_blank" rel="noopener" href="https://jp.ubuntu.com/download">https://jp.ubuntu.com/download</a><br><a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/ubuntu/releases/">http://cdimage.ubuntu.com/ubuntu/releases/</a></li>
+<li>Ubuntu Desktop<br><a target="_blank" rel="noopener" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a></li>
+<li>Ubuntu Server<br><a target="_blank" rel="noopener" href="https://ubuntu.com/download/server">https://ubuntu.com/download/server</a></li>
 </ul>
 <h2 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h2><ul>
 <li><p>ホームディレクトリの各フォルダ名を英語名に変更</p>
@@ -177,7 +179,7 @@ LANG=C xdg-user-dirs-gtk-upda">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>alias &#x2F; function の設定</p>
-<figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo apt update -y &amp;&amp; sudo apt dist-upgrade &amp;&amp; sudo apt autoremove -y&#x27;</span>; flatpak update</span><br><span class="line"><span class="built_in">alias</span> en=<span class="string">&#x27;LANG=&quot;en_US.UTF-8&quot;&#x27;</span>ty</span><br><span class="line"><span class="built_in">alias</span> ja=<span class="string">&#x27;LANG=&quot;ja_JP.UTF-8&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo apt update -y &amp;&amp; sudo apt dist-upgrade &amp;&amp; sudo apt autoremove -y&#x27;</span>; flatpak update</span><br><span class="line"><span class="built_in">alias</span> en=<span class="string">&#x27;LANG=&quot;en_US.UTF-8&quot;&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> ja=<span class="string">&#x27;LANG=&quot;ja_JP.UTF-8&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>マルチブート時の時刻ズレ調整</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo timedatectl set-local-rtc <span class="literal">true</span></span><br></pre></td></tr></table></figure>
@@ -199,7 +201,14 @@ LANG=C xdg-user-dirs-gtk-upda">
 </li>
 <li><p>固定IPアドレスにする場合</p>
 <figure class="highlight yaml"><figcaption><span>50-cloud-init.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">ethernets:</span></span><br><span class="line">    <span class="attr">eth0:</span></span><br><span class="line">      <span class="attr">dhcp4:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">dhcp6:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.11</span><span class="number">.7</span><span class="string">/24</span>]</span><br><span class="line">      <span class="attr">routes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">to:</span> <span class="string">default</span></span><br><span class="line">          <span class="attr">via:</span> <span class="number">192.168</span><span class="number">.11</span><span class="number">.1</span></span><br><span class="line">      <span class="attr">nameservers:</span></span><br><span class="line">        <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.11</span><span class="number">.1</span>]</span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure></li>
+<li><p>外部からのRDP接続を許可する場合</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install xrdp</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>/etc/xrdp/startwm.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">unset</span> DBUS_SESSION_BUS_ADDRESS</span><br><span class="line"><span class="built_in">exec</span> gnome-session</span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> -x /etc/X11/Xsession &amp;&amp; <span class="built_in">exec</span> /etc/X11/Xsession</span><br><span class="line"><span class="built_in">exec</span> /bin/sh /etc/X11/Xsession</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> --now xrdp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>GDMの解像度をユーザセッションの解像度と同じにする場合<br><code>設定</code>-<code>ディスプレイ</code> で解像度を適用した後で以下を実行する。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> ~/.config/monitors.xml /var/lib/gdm3/.config/monitors.xml</span><br><span class="line">sudo <span class="built_in">chown</span> gdm:gdm /var/lib/gdm3/.config/monitors.xml</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>オフライン環境でISOイメージからパッケージを導入する場合</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mkdir /media/cdrom</span><br><span class="line">sudo mount -o loop -t iso9660 DVD1.iso /media/cdrom</span><br><span class="line">sudo apt-cdrom add -m</span><br></pre></td></tr></table></figure>
@@ -207,7 +216,7 @@ LANG=C xdg-user-dirs-gtk-upda">
 <li><p>自己署名証明書向けのルートCA証明書を追加する場合(Google Chrome)<br><a target="_blank" rel="noopener" href="https://chromium.googlesource.com/chromium/src/+/master/docs/linux/cert_management.md">https://chromium.googlesource.com/chromium/src/+/master/docs/linux/cert_management.md</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install libnss3-tools</span><br><span class="line">certutil -d sql:<span class="variable">$HOME</span>/.pki/nssdb -A -t <span class="string">&quot;P,,&quot;</span> -n <span class="string">&quot;My Root CA1&quot;</span> -i <span class="string">&quot;rootCA.pem&quot;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>フォントのインストール<br><code>$HOME/.fonts/SourceHanCodeJP.ttc</code></p>
+<li><p>コーディング用固定幅フォントのインストール<br><a target="_blank" rel="noopener" href="https://github.com/adobe-fonts/source-han-code-jp/releases">https://github.com/adobe-fonts/source-han-code-jp/releases</a><br><code>$HOME/.fonts/SourceHanCodeJP.ttc</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fc-cache -fv</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="GNOME-Shell-関連"><a href="#GNOME-Shell-関連" class="headerlink" title="GNOME Shell 関連"></a>GNOME Shell 関連</h2><ul>
@@ -216,7 +225,7 @@ LANG=C xdg-user-dirs-gtk-upda">
 <li>GNOME Shell 拡張機能 : Dash to Panel<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1160/dash-to-panel/">https://extensions.gnome.org/extension/1160/dash-to-panel/</a><br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1653/tweaks-in-system-menu/">https://extensions.gnome.org/extension/1653/tweaks-in-system-menu/</a><br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/3628/arcmenu/">https://extensions.gnome.org/extension/3628/arcmenu/</a></li>
 </ul>
 <h2 id="Flatpak-アプリケーションパッケージ"><a href="#Flatpak-アプリケーションパッケージ" class="headerlink" title="Flatpak アプリケーションパッケージ"></a>Flatpak アプリケーションパッケージ</h2><ul>
-<li>Flatpak の準備<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository -y ppa:alexlarsson/flatpak</span><br><span class="line">sudo apt install flatpak gnome-software-plugin-flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br></pre></td></tr></table></figure></li>
+<li>Flatpak の準備<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install flatpak gnome-software-plugin-flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
 <li>Update<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak update</span><br></pre></td></tr></table></figure></li>
 <li>Audacious<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/org.atheme.audacious">https://flathub.org/apps/org.atheme.audacious</a></li>
 <li>Gimp<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/org.gimp.GIMP">https://flathub.org/apps/org.gimp.GIMP</a></li>

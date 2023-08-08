@@ -164,6 +164,54 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-05-15 </div>
+			<div class="article-title"><a href="/2011/05/15/gnome-shell-e381aee38386e383bce3839ee38292e5a489e69bb4e38197e381a6e381bfe3819f/" >GNOME Shell のテーマを選んでみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/gnome-shell-extension-theme-selector.png" alt="gnome shell extension theme selector"></p>
+<p><img src="/images/gnome-shell-extension-theme-selector-ubuntu.png" alt="gnome shell extension theme selector ubuntu"></p>
+<p><a target="_blank" rel="noopener" href="http://blog.fpmurphy.com/2011/04/gnome-shell-theme-selector-preview.html">http://blog.fpmurphy.com/2011/04/gnome-shell-theme-selector-preview.html</a></p>
+<p>GNOME Shell のテーマを変更する拡張を見つけたので、Fedora15 とUbuntu 11.04 で試してみた。Atolm テーマが選べるようになったよ！！</p>
+<p><a target="_blank" rel="noopener" href="http://www.fpmurphy.com/gnome-shell-extensions/">http://www.fpmurphy.com/gnome-shell-extensions/</a> の下の最新のthemeselector のアーカイブをダウンロードして、README に従って設定した。</p>
+<ol>
+<li>&#x2F;usr&#x2F;share&#x2F;glib-2.0&#x2F;org.gnome.shell.extensions.user-theme.gschema.xml を作成。</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">schemalist</span> <span class="attr">gettext-domain</span>=<span class="string">&quot;gnome-shell-extensions&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">schema</span> <span class="attr">path</span>=<span class="string">&quot;/org/gnome/shell/extensions/user-theme/&quot;</span> <span class="attr">id</span>=<span class="string">&quot;org.gnome.shell.extensions.user-theme&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span> <span class="attr">type</span>=<span class="string">&quot;s&quot;</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">default</span>&gt;</span>&quot;&quot;<span class="tag">&lt;/<span class="name">default</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">summary</span>&gt;</span>Theme name<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">description</span>&gt;</span>The name of the current shell theme<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">schema</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">schemalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="2">
+<li>glib-compile-schemas を実行する。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo glib-compile-schemas /usr/share/glib-2.0</span><br></pre></td></tr></table></figure>
+
+
+<ol start="3">
+<li><p>$HOME&#x2F;.themes&#x2F; ディレクトリを作成して、アーカイブの中のテーマを展開する。</p>
+</li>
+<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#116;&#x68;&#x65;&#x6d;&#x65;&#115;&#x65;&#108;&#x65;&#x63;&#116;&#111;&#114;&#64;&#102;&#x70;&#109;&#117;&#114;&#112;&#x68;&#x79;&#46;&#x63;&#x6f;&#109;">&#116;&#x68;&#x65;&#x6d;&#x65;&#115;&#x65;&#108;&#x65;&#x63;&#116;&#111;&#114;&#64;&#102;&#x70;&#109;&#117;&#114;&#112;&#x68;&#x79;&#46;&#x63;&#x6f;&#109;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
+</li>
+<li><p>[Alt]+[F2]を押して、r を入力して、[Enter] を押す。</p>
+</li>
+</ol>
+
+	
+	</div>
+  <a type="button" href="/2011/05/15/gnome-shell-e381aee38386e383bce3839ee38292e5a489e69bb4e38197e381a6e381bfe3819f/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-05-13 </div>
 			<div class="article-title"><a href="/2011/05/13/gnome-shell-e68ba1e5bcb5e38292e4bd9ce3828de38186/" >GNOME Shell 拡張を作ってみよう</a></div>						
 		</h3>
@@ -177,7 +225,7 @@
 		<p><img src="/images/my_gnome_shell_extension.png" alt="gnome shell extension"></p>
 <p><a target="_blank" rel="noopener" href="http://live.gnome.org/GnomeShell/Extensions">http://live.gnome.org/GnomeShell/Extensions</a><br><a target="_blank" rel="noopener" href="http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html">http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html</a></p>
 <p>まずは、上部のパネルをクリックすると一定時間メッセージを表示するHello World 的な物から！！とりあえず日本語はunescape() してみた。</p>
-<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#104;&#101;&#108;&#108;&#x6f;&#x2d;&#x77;&#x6f;&#114;&#x6c;&#100;&#64;&#107;&#116;&#x6b;&#114;&#51;&#100;&#46;&#x73;&#105;&#116;&#101;&#x31;&#49;&#x2e;&#99;&#x6f;&#x6d;">&#104;&#101;&#108;&#108;&#x6f;&#x2d;&#x77;&#x6f;&#114;&#x6c;&#100;&#64;&#107;&#116;&#x6b;&#114;&#51;&#100;&#46;&#x73;&#105;&#116;&#101;&#x31;&#49;&#x2e;&#99;&#x6f;&#x6d;</a>&#x2F;</p>
+<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x68;&#101;&#108;&#x6c;&#111;&#45;&#x77;&#111;&#x72;&#x6c;&#x64;&#64;&#x6b;&#x74;&#107;&#114;&#x33;&#100;&#x2e;&#115;&#x69;&#116;&#101;&#49;&#x31;&#x2e;&#x63;&#111;&#x6d;">&#x68;&#101;&#108;&#x6c;&#111;&#45;&#x77;&#111;&#x72;&#x6c;&#x64;&#64;&#x6b;&#x74;&#107;&#114;&#x33;&#100;&#x2e;&#115;&#x69;&#116;&#101;&#49;&#x31;&#x2e;&#x63;&#111;&#x6d;</a>&#x2F;</p>
 <h3 id="extension-js-ファイル"><a href="#extension-js-ファイル" class="headerlink" title="extension.js ファイル"></a>extension.js ファイル</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">// Sample extension code, makes clicking on the panel show a message</span><br><span class="line">const St = imports.gi.St;</span><br><span class="line">const Mainloop = imports.mainloop;</span><br><span class="line"></span><br><span class="line">const Gettext = imports.gettext.domain(&#x27;gnome-shell-extensions&#x27;);</span><br><span class="line">const _ = Gettext.gettext;</span><br><span class="line"></span><br><span class="line">const Main = imports.ui.main;</span><br><span class="line"></span><br><span class="line">function _showHello() &#123;</span><br><span class="line">    let text = new St.Label(&#123; style_class: &#x27;helloworld-label&#x27;, text: _(unescape(&quot;%uFF0F%u4EBA%u25D5%u203F%u203F%u25D5%u4EBA%uFF3C%u300C%u50D5%u3068%u5951%u7D04%u3057%u3066%u9B54%u6CD5%u5C11%u5973%u306B%u306A%u3063%u3066%u3088%uFF01%uFF01%u300D&quot;)) &#125;);</span><br><span class="line">    let monitor = global.get_primary_monitor();</span><br><span class="line">    global.stage.add_actor(text);</span><br><span class="line">    text.set_position(Math.floor (monitor.width / 2 - text.width / 2), Math.floor(monitor.height / 2 - text.height / 2));</span><br><span class="line">    Mainloop.timeout_add(3000, function () &#123; text.destroy(); &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Put your extension initialization code here</span><br><span class="line">function main(metadata) &#123;</span><br><span class="line">    imports.gettext.bindtextdomain(&#x27;gnome-shell-extensions&#x27;, metadata.localedir);</span><br><span class="line"></span><br><span class="line">    Main.panel.actor.reactive = true;</span><br><span class="line">    Main.panel.actor.connect(&#x27;button-release-event&#x27;, _showHello);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -219,7 +267,7 @@
 
 
 <blockquote>
-<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#x72;&#111;&#111;&#116;&#64;&#x62;&#117;&#x69;&#x6c;&#x64;&#56;&#x78;&#51;&#x32;&#46;&#x70;&#99;&#98;&#x73;&#x64;&#46;&#x6f;&#114;&#x67;">&#x72;&#111;&#111;&#116;&#64;&#x62;&#117;&#x69;&#x6c;&#x64;&#56;&#x78;&#51;&#x32;&#46;&#x70;&#99;&#98;&#x73;&#x64;&#46;&#x6f;&#114;&#x67;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
+<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#x72;&#111;&#x6f;&#116;&#64;&#98;&#117;&#x69;&#108;&#100;&#56;&#120;&#51;&#50;&#x2e;&#x70;&#x63;&#98;&#x73;&#x64;&#x2e;&#x6f;&#114;&#103;">&#x72;&#111;&#x6f;&#116;&#64;&#98;&#117;&#x69;&#108;&#100;&#56;&#120;&#51;&#50;&#x2e;&#x70;&#x63;&#98;&#x73;&#x64;&#x2e;&#x6f;&#114;&#103;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
 </blockquote>
 <p>デスクトップ環境はKDE で、Firefox, Thunderbird, VLC 等をインストール時に追加できる。特に設定しなくても日本語も使えるし、mp3 も再生できる。GRUB からのチェインロードも問題無し。すごく頑張ってると思う。<br>Inspiron duo の1366x768 の解像度に設定すると、ディスプレイが表示されなくなってしまうので、とりあえずVESA で凌ごう。Linux と比べてドライバ(ディスプレイ、ファイルシステム)の情報は少ないかも。<br>ps コマンドやdf コマンドがBSD っぽくて少し懐かしい感じがした。</p>
 
@@ -492,53 +540,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-04-09 </div>
-			<div class="article-title"><a href="/2011/04/09/gnome-3-e38292e8aabfe381b9e381a6e381bfe3819f/" >GNOME Shell を拡張してみた</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/GNOME_3">https://wiki.archlinux.org/index.php/GNOME_3</a><br><a target="_blank" rel="noopener" href="https://live.gnome.org/GnomeShell/CheatSheet">https://live.gnome.org/GnomeShell/CheatSheet</a><br><a target="_blank" rel="noopener" href="http://www.webupd8.org/2011/04/gnome-shell-extensions-additional.html">http://www.webupd8.org/2011/04/gnome-shell-extensions-additional.html</a><br><a target="_blank" rel="noopener" href="http://git.gnome.org/browse/gnome-shell-extensions/">http://git.gnome.org/browse/gnome-shell-extensions/</a></p>
-<p>GNOME Shell Extensions やGNOME 3 の便利な機能を使ってみよう。</p>
-<h3 id="GNOME-Shell-Extensions"><a href="#GNOME-Shell-Extensions" class="headerlink" title="GNOME Shell Extensions"></a>GNOME Shell Extensions</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://git.gnome.org/gnome-shell-extensions</span><br><span class="line">$ <span class="built_in">cd</span> gnome-shell-extensions</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li><p>alternate-tab: Alt+Tab 操作関連</p>
-</li>
-<li><p>alternative-status-menu: 電源オフメニュー常時表示<br>標準ではステータスメニューを開いて、「Alt」ボタンを押すと「サスペンド」が「電源オフ…」に切り替わる。alternative-status-menu を使うと「サスペンド」と「電源オフ」の両方が常に表示されるようになり、「Alt」ボタンを押すと「サスペンド」が「Hibernate」に切り替わる。必須!!</p>
-</li>
-<li><p>dock: 右端にドックバーを表示（画面が狭くなった…微妙?）</p>
-</li>
-<li><p>windowsNavigator: overview 画面上でALT+数字キーによりウィンドウ選択</p>
-</li>
-</ul>
-<h3 id="GNOME-3"><a href="#GNOME-3" class="headerlink" title="GNOME 3"></a>GNOME 3</h3><ul>
-<li><p>テーマのカスタマイズ<br>gnome-tweak-tool またはsetting.ini</p>
-</li>
-<li><p>スクリーンキャストを撮る<br>Ctrl+Alt+Shift+R で開始&amp;終了。WEBM 形式で出力される。</p>
-</li>
-<li><p>キー操作でoverview へ切り替える<br>システム(Windows)キーまたはAlt+F1</p>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2011/04/09/gnome-3-e38292e8aabfe381b9e381a6e381bfe3819f/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -588,6 +589,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/08/CHUWI-Minibook-X-N100/" ><i class="fa fa-file-o"></i>CHUWI MiniBook X N100</a>
+      </li>
+    
+      <li>
         <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
       </li>
     
@@ -623,10 +628,6 @@
         <a href="/2022/10/22/Windows-11-WSL-2-systemd/" ><i class="fa fa-file-o"></i>Windows 11 - WSL 2 - systemd</a>
       </li>
     
-      <li>
-        <a href="/2022/09/21/Windows-11/" ><i class="fa fa-file-o"></i>Windows 11</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -634,7 +635,7 @@
 			
 <div class="widget">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/23/VSCode-on-Android/" title="VSCode on Android" rel="bookmark">VSCode on Android</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL" rel="bookmark">EPGStation/Mirakurun on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/04/21/Feedbro-RSS-Japanese-language/" title="Feedbro RSS Japanese language" rel="bookmark">Feedbro RSS Japanese language</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code" rel="bookmark">Marp for VS Code</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2" rel="bookmark">USB support to WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" title="APT Hash Sum mismatch error" rel="bookmark">APT Hash Sum mismatch error</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi" rel="bookmark">EPGStation PVR addon for Kodi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL" rel="bookmark">Enabling sound in WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/02/08/Develop-Environment-on-WSL/" title="Development Environment on WSL" rel="bookmark">Development Environment on WSL</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/pv/" title="PV 再生っぽいことをしてみた" rel="bookmark">PV 再生っぽいことをしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/twitter/" title="Twitter に接続してみた" rel="bookmark">Twitter に接続してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/18/post_5/" title="物理演算を試してみる" rel="bookmark">物理演算を試してみる</a></h3></div></li></ul>
 </div>
 
 		
