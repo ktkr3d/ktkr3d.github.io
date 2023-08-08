@@ -197,7 +197,7 @@ Hexo でMermaid ダイアグラムを書いてみました。">
 <p>Hexo でMermaid ダイアグラムを書いてみました。</p>
 <span id="more"></span>
 
-<p>markdown のコードブロックと同様に、以下のコードを「&amp;grave;&amp;grave;&amp;grave;mermaid」と「&amp;grave;&amp;grave;&amp;grave;」で囲います。 </p>
+<p>markdown のコードブロックと同様に、以下のコードを「&grave;&grave;&grave;mermaid」と「&grave;&grave;&grave;」で囲います。 </p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">graph LR;</span><br><span class="line">    linkStyle default interpolate basis</span><br><span class="line">    A(ONU)-- IPv6 --&gt;B(v6対応ルータ);</span><br><span class="line">    B--&gt;C[物理PC];</span><br><span class="line">    C--&gt;D[仮想サーバ];</span><br><span class="line">    B--&gt;E[ノートPC]</span><br><span class="line">    B--&gt;F(一般ルータ);</span><br><span class="line">    F--&gt;B;</span><br><span class="line">    F--&gt;G[OpenVPNサーバ];</span><br></pre></td></tr></table></figure>
 
 <h3 id="インストールと設定"><a href="#インストールと設定" class="headerlink" title="インストールと設定"></a>インストールと設定</h3><p>私の環境は以下です。</p>
@@ -277,12 +277,12 @@ commit
 commit
 merge newbranch</pre>
 
-<h3 id="追記"><a href="#追記" class="headerlink" title="追記"></a>追記</h3><h4 id="font-awesome-対応-2019-x2F-07-x2F-05"><a href="#font-awesome-対応-2019-x2F-07-x2F-05" class="headerlink" title="font awesome 対応 (2019&#x2F;07&#x2F;05)"></a>font awesome 対応 (2019&#x2F;07&#x2F;05)</h4><p><code>fab</code> とかを使う場合はmermaid の新しめのバージョンを利用します。</p>
+<h3 id="追記"><a href="#追記" class="headerlink" title="追記"></a>追記</h3><h4 id="font-awesome-対応-2019-07-05"><a href="#font-awesome-対応-2019-07-05" class="headerlink" title="font awesome 対応 (2019&#x2F;07&#x2F;05)"></a>font awesome 対応 (2019&#x2F;07&#x2F;05)</h4><p><code>fab</code> とかを使う場合はmermaid の新しめのバージョンを利用します。</p>
 <ul>
 <li>mermaid のバージョン指定<br>以下で新しめのリリースを調べて指定します。<br><a target="_blank" rel="noopener" href="https://github.com/knsv/mermaid/releases">https://github.com/knsv/mermaid/releases</a><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># mermaid chart</span></span><br><span class="line"><span class="attr">mermaid:</span> <span class="comment">## mermaid url https://github.com/knsv/mermaid</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  <span class="comment"># default true</span></span><br><span class="line">  <span class="attr">version:</span> <span class="string">&quot;8.1.0&quot;</span> <span class="comment"># default v7.1.2</span></span><br><span class="line">  <span class="attr">options:</span>  <span class="comment"># find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js</span></span><br><span class="line">  <span class="comment">#startOnload: true  // default true</span></span><br></pre></td></tr></table></figure></li>
 <li>font awesome のリンク指定<br>以下でlatest のバージョンを調べて指定します。<br><a target="_blank" rel="noopener" href="https://fontawesome.com/changelog/latest">https://fontawesome.com/changelog/latest</a><figure class="highlight html"><figcaption><span>./themes/freemind/layout/_partial/head.ejs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- CSS --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://use.fontawesome.com/releases/v5.9.0/css/all.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
-<h4 id="bootstrap-の影響補正-2019-x2F-07-x2F-05"><a href="#bootstrap-の影響補正-2019-x2F-07-x2F-05" class="headerlink" title="bootstrap の影響補正 (2019&#x2F;07&#x2F;05)"></a>bootstrap の影響補正 (2019&#x2F;07&#x2F;05)</h4><p>文字のサイズや垂直位置がbootstrap のスタイルによってずれているので少し補正します。</p>
+<h4 id="bootstrap-の影響補正-2019-07-05"><a href="#bootstrap-の影響補正-2019-07-05" class="headerlink" title="bootstrap の影響補正 (2019&#x2F;07&#x2F;05)"></a>bootstrap の影響補正 (2019&#x2F;07&#x2F;05)</h4><p>文字のサイズや垂直位置がbootstrap のスタイルによってずれているので少し補正します。</p>
 <ul>
 <li>style.css の修正<figure class="highlight css"><figcaption><span>./themes/freemind/source/css/style.css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mermaid</span> <span class="selector-class">.label</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">120%</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">3</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>

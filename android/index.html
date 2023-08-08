@@ -175,7 +175,7 @@ Android SDK の設定1.ダウンロードと展開http://developer.android.com/s
 <li><p>環境変数PATH の追加</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> PATH=/tools/android-ndk-r9:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="build-xml-local-properties-project-properties-の生成-x2F-更新"><a href="#build-xml-local-properties-project-properties-の生成-x2F-更新" class="headerlink" title="build.xml, local.properties, project.properties の生成&#x2F;更新"></a>build.xml, local.properties, project.properties の生成&#x2F;更新</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ android update project --path . --target android-10</span><br></pre></td></tr></table></figure>
+<h4 id="build-xml-local-properties-project-properties-の生成-更新"><a href="#build-xml-local-properties-project-properties-の生成-更新" class="headerlink" title="build.xml, local.properties, project.properties の生成&#x2F;更新"></a>build.xml, local.properties, project.properties の生成&#x2F;更新</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ android update project --path . --target android-10</span><br></pre></td></tr></table></figure>
 
 <h4 id="ビルド〜インストール〜ログの取得開始"><a href="#ビルド〜インストール〜ログの取得開始" class="headerlink" title="ビルド〜インストール〜ログの取得開始"></a>ビルド〜インストール〜ログの取得開始</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ndk-build -j4 &amp;&amp; ant debug &amp;&amp; adb -s &lt;デバイスID&gt; install -r bin/*-debug.apk &amp;&amp; adb logcat -s &lt;Tag名&gt;:*</span><br></pre></td></tr></table></figure>
 

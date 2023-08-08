@@ -192,7 +192,7 @@
 <td align="center">タブレットを外付USB から起動</td>
 </tr>
 </tbody></table>
-<h3 id="［作業PC-x2F-HDD］-パーティションの作成"><a href="#［作業PC-x2F-HDD］-パーティションの作成" class="headerlink" title="［作業PC&#x2F;HDD］ パーティションの作成"></a>［作業PC&#x2F;HDD］ パーティションの作成</h3><p>GPrted を使って64GB のUSB メモリに3つの基本パーティションを作成します。</p>
+<h3 id="［作業PC-HDD］-パーティションの作成"><a href="#［作業PC-HDD］-パーティションの作成" class="headerlink" title="［作業PC&#x2F;HDD］ パーティションの作成"></a>［作業PC&#x2F;HDD］ パーティションの作成</h3><p>GPrted を使って64GB のUSB メモリに3つの基本パーティションを作成します。</p>
 <table>
 <thead>
 <tr>
@@ -221,27 +221,27 @@
 <td align="left">-</td>
 </tr>
 </tbody></table>
-<h3 id="［作業PC-x2F-HDD］-rEFInd-のインストール"><a href="#［作業PC-x2F-HDD］-rEFInd-のインストール" class="headerlink" title="［作業PC&#x2F;HDD］ rEFInd のインストール"></a>［作業PC&#x2F;HDD］ rEFInd のインストール</h3><p>以下のURL からUEFI 対応のブートマネージャrEFInd のzip を取得して、展開します。<br><a target="_blank" rel="noopener" href="http://www.rodsbooks.com/refind/getting.html">http://www.rodsbooks.com/refind/getting.html</a></p>
+<h3 id="［作業PC-HDD］-rEFInd-のインストール"><a href="#［作業PC-HDD］-rEFInd-のインストール" class="headerlink" title="［作業PC&#x2F;HDD］ rEFInd のインストール"></a>［作業PC&#x2F;HDD］ rEFInd のインストール</h3><p>以下のURL からUEFI 対応のブートマネージャrEFInd のzip を取得して、展開します。<br><a target="_blank" rel="noopener" href="http://www.rodsbooks.com/refind/getting.html">http://www.rodsbooks.com/refind/getting.html</a></p>
 <p>rEFInd を&#x2F;dev&#x2F;sdb1 にインストールします。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> refind-bin-0.8.7/</span><br><span class="line">$ bash install.sh --usedefault /dev/sdb1 --alldrivers</span><br></pre></td></tr></table></figure>
 
-<h3 id="［作業PC-x2F-HDD］-Ubuntu-のインストーラの設定"><a href="#［作業PC-x2F-HDD］-Ubuntu-のインストーラの設定" class="headerlink" title="［作業PC&#x2F;HDD］ Ubuntu のインストーラの設定"></a>［作業PC&#x2F;HDD］ Ubuntu のインストーラの設定</h3><p>ISO で配布されているUbuntu のインストーラをGRUB から起動するように設定します。<br>ubuntu-gnome-15.04-desktop-amd64.iso を第1HDDの第3パーティション(hd0,3)の&#x2F;boot&#x2F;iso&#x2F; ディレクトリに配置しておきます。</p>
+<h3 id="［作業PC-HDD］-Ubuntu-のインストーラの設定"><a href="#［作業PC-HDD］-Ubuntu-のインストーラの設定" class="headerlink" title="［作業PC&#x2F;HDD］ Ubuntu のインストーラの設定"></a>［作業PC&#x2F;HDD］ Ubuntu のインストーラの設定</h3><p>ISO で配布されているUbuntu のインストーラをGRUB から起動するように設定します。<br>ubuntu-gnome-15.04-desktop-amd64.iso を第1HDDの第3パーティション(hd0,3)の&#x2F;boot&#x2F;iso&#x2F; ディレクトリに配置しておきます。</p>
 <figure class="highlight text"><figcaption><span>/etc/grub.d/40_custom</span></figcaption><table><tr><td class="code"><pre><span class="line">menuentry &#x27;ISO Ubuntu GNOME 15.04&#x27; &#123;</span><br><span class="line">	isofile=ubuntu-gnome-15.04-desktop-amd64.iso</span><br><span class="line">	loopback loop (hd0,3)/boot/iso/$isofile</span><br><span class="line">	linux (loop)/casper/vmlinuz.efi boot=casper iso-scan/filename=/boot/iso/$isofile noprompt noeject</span><br><span class="line">	initrd (loop)/casper/initrd.lz</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo update-grub</span><br></pre></td></tr></table></figure>
 
-<h3 id="［作業PC-x2F-HDD］-Ubuntu-のインストール"><a href="#［作業PC-x2F-HDD］-Ubuntu-のインストール" class="headerlink" title="［作業PC&#x2F;HDD］ Ubuntu のインストール"></a>［作業PC&#x2F;HDD］ Ubuntu のインストール</h3><p>GRUB からUbuntu のインストーラ<code>ISO Ubuntu GNOME 15.04</code>を選択して、&#x2F;dev&#x2F;sdb2 にインストールします。</p>
+<h3 id="［作業PC-HDD］-Ubuntu-のインストール"><a href="#［作業PC-HDD］-Ubuntu-のインストール" class="headerlink" title="［作業PC&#x2F;HDD］ Ubuntu のインストール"></a>［作業PC&#x2F;HDD］ Ubuntu のインストール</h3><p>GRUB からUbuntu のインストーラ<code>ISO Ubuntu GNOME 15.04</code>を選択して、&#x2F;dev&#x2F;sdb2 にインストールします。</p>
 <ul>
 <li>サードパーティのソフトウェアをインストール</li>
 <li>ブートローダは&#x2F;dev&#x2F;sdb2 にインストール</li>
 </ul>
-<h3 id="［作業PC-x2F-USB］-カーネルのダウングレード"><a href="#［作業PC-x2F-USB］-カーネルのダウングレード" class="headerlink" title="［作業PC&#x2F;USB］ カーネルのダウングレード"></a>［作業PC&#x2F;USB］ カーネルのダウングレード</h3><p>Ubuntu GNOME 15.04 x86_64 (カーネル3.19)をインストールしましたが、利用するタブレットのWi-Fi はカーネル3.19 環境においてフリーズを誘発します。<br><a target="_blank" rel="noopener" href="https://bugs.archlinux.org/task/44269">https://bugs.archlinux.org/task/44269</a></p>
+<h3 id="［作業PC-USB］-カーネルのダウングレード"><a href="#［作業PC-USB］-カーネルのダウングレード" class="headerlink" title="［作業PC&#x2F;USB］ カーネルのダウングレード"></a>［作業PC&#x2F;USB］ カーネルのダウングレード</h3><p>Ubuntu GNOME 15.04 x86_64 (カーネル3.19)をインストールしましたが、利用するタブレットのWi-Fi はカーネル3.19 環境においてフリーズを誘発します。<br><a target="_blank" rel="noopener" href="https://bugs.archlinux.org/task/44269">https://bugs.archlinux.org/task/44269</a></p>
 <p>そこでカーネルを3.18 にダウングレードすることにしました。<br><a target="_blank" rel="noopener" href="http://kernel.ubuntu.com/~kernel-ppa/mainline/">http://kernel.ubuntu.com/~kernel-ppa/mainline/</a></p>
 <p>USB から起動して、カーネル3.18.17 のDEB パッケージをインストールします。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> kernel-3.18.17</span><br><span class="line">$ <span class="built_in">cd</span> kernel-3.18.17</span><br><span class="line">$ wget -c kernel.ubuntu.com/~kernel-ppa/mainline/v3.18.17-vivid/linux-headers-3.18.17-031817_3.18.17-031817.201506292232_all.deb</span><br><span class="line">$ wget -c kernel.ubuntu.com/~kernel-ppa/mainline/v3.18.17-vivid/linux-headers-3.18.17-031817-generic_3.18.17-031817.201506292232_amd64.deb</span><br><span class="line">$ wget -c kernel.ubuntu.com/~kernel-ppa/mainline/v3.18.17-vivid/linux-image-3.18.17-031817-generic_3.18.17-031817.201506292232_amd64.deb</span><br><span class="line">$ sudo dpkg -i *.deb</span><br></pre></td></tr></table></figure>
 
-<h3 id="［タブレット-x2F-SSD］-タブレットでセキュアブートを解除"><a href="#［タブレット-x2F-SSD］-タブレットでセキュアブートを解除" class="headerlink" title="［タブレット&#x2F;SSD］ タブレットでセキュアブートを解除"></a>［タブレット&#x2F;SSD］ タブレットでセキュアブートを解除</h3><p>セキュアブートを解除した後、USB から起動します。</p>
-<h3 id="［タブレット-x2F-USB］-タブレットでUbuntu-を起動"><a href="#［タブレット-x2F-USB］-タブレットでUbuntu-を起動" class="headerlink" title="［タブレット&#x2F;USB］ タブレットでUbuntu を起動"></a>［タブレット&#x2F;USB］ タブレットでUbuntu を起動</h3><p>USB デバイスからの起動を選択すると、rEFInd の画面が表示されます。<br>rEFInd 上で複数のカーネルから3.18.17 を選択して起動します。</p>
+<h3 id="［タブレット-SSD］-タブレットでセキュアブートを解除"><a href="#［タブレット-SSD］-タブレットでセキュアブートを解除" class="headerlink" title="［タブレット&#x2F;SSD］ タブレットでセキュアブートを解除"></a>［タブレット&#x2F;SSD］ タブレットでセキュアブートを解除</h3><p>セキュアブートを解除した後、USB から起動します。</p>
+<h3 id="［タブレット-USB］-タブレットでUbuntu-を起動"><a href="#［タブレット-USB］-タブレットでUbuntu-を起動" class="headerlink" title="［タブレット&#x2F;USB］ タブレットでUbuntu を起動"></a>［タブレット&#x2F;USB］ タブレットでUbuntu を起動</h3><p>USB デバイスからの起動を選択すると、rEFInd の画面が表示されます。<br>rEFInd 上で複数のカーネルから3.18.17 を選択して起動します。</p>
 	  
 	</div>
 
