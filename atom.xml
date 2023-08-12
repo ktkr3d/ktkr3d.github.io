@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-08-08T07:30:00.000Z</updated>
+  <updated>2023-08-11T05:33:02.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MiniBook X N100 - WoW Raid Try</title>
+    <link href="https://ktkr3d.github.io/2023/08/11/MiniBook-X-N100-WoW-Raid-try/"/>
+    <id>https://ktkr3d.github.io/2023/08/11/MiniBook-X-N100-WoW-Raid-try/</id>
+    <published>2023-08-11T05:33:02.000Z</published>
+    <updated>2023-08-11T05:33:02.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/wow-minibookx-raid-try.jpg&quot;&gt;&lt;br&gt;CHUWI MiniBook X N100 でWorld of Warcraft のRaid耐久をやってみよう。&lt;br&gt;LFRで。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="minibook-x" scheme="https://ktkr3d.github.io/tags/minibook-x/"/>
+    
+    <category term="world-of-warcraft" scheme="https://ktkr3d.github.io/tags/world-of-warcraft/"/>
+    
+  </entry>
   
   <entry>
     <title>CHUWI MiniBook X N100</title>
@@ -486,68 +505,6 @@
     <category term="gnome-shell" scheme="https://ktkr3d.github.io/tags/gnome-shell/"/>
     
     <category term="argos" scheme="https://ktkr3d.github.io/tags/argos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Draw.io on code-server</title>
-    <link href="https://ktkr3d.github.io/2022/02/22/Draw-io-on-Code-Server/"/>
-    <id>https://ktkr3d.github.io/2022/02/22/Draw-io-on-Code-Server/</id>
-    <published>2022-02-22T13:13:14.000Z</published>
-    <updated>2022-02-22T13:13:14.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/drawio_codeserver.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;WSL 上で実行しているcode-server でdraw.io integration 拡張を利用する方法を考えてみました。&lt;/p&gt;
-&lt;p&gt;はじめに以下の挙動になりました。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;利用ホスト&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;OS&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;URL&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;Draw.io の状態&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;ローカル&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Windows&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;http://localhost:8080/&quot;&gt;http://localhost:8080&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;有効&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;ローカル&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Windows&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;http://127.0.0.1:8080/&quot;&gt;http://127.0.0.1:8080&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;有効&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;ローカル&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Windows&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;http://192.168.11.2:8080/&quot;&gt;http://192.168.11.2:8080&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;無効&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;リモート&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Windows&amp;#x2F;Linux&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;http://192.168.11.2:8080/&quot;&gt;http://192.168.11.2:8080&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;無効&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;リモート&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Windows&amp;#x2F;Linux&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;http://server:8080/&quot;&gt;http://server:8080&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;無効&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;localhost 指定の場合に有効になるようです。&lt;br&gt;利用するOS(localhost) の特定ポートをWSL のcode-server のポートに転送してあげればよいようです。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="vscode" scheme="https://ktkr3d.github.io/tags/vscode/"/>
-    
-    <category term="draw.io" scheme="https://ktkr3d.github.io/tags/draw-io/"/>
     
   </entry>
   

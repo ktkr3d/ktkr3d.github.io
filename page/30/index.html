@@ -164,6 +164,32 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-06-30 </div>
+			<div class="article-title"><a href="/2012/06/30/irrlicht-1-8-trunk-xeffects/" >Irrlicht 1.8 trunk + XEffects</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/irrlicht_1.8_xeffects.png" alt="irrlicht 1.8 xeffects"></p>
+<p>Irrlicht 1.8 trunk でXEffects の影が有効にならなくなっていたので、XEffects のヘッダを修正してみた。Irrlicht 側のインタフェースが変わったのが原因かな。Irrlicht 1.8 ではXEffects を使っても画像が反転しないし、CGUITTFONT とも同時に使えるし、便利になったなぁ。環境はUbuntu 12.04 x86_64 + Irrlicht 1.8 trunk (SVN rev: 4170 ) + XEffects v1.3。</p>
+<figure class="highlight cpp"><figcaption><span>EffectCB.h</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">OnSetConstants</span><span class="params">(irr::video::IMaterialRendererServices* services, irr::s32 userData)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(services-&gt;<span class="built_in">getVideoDriver</span>()-&gt;<span class="built_in">getDriverType</span>() == irr::video::EDT_OPENGL)</span><br><span class="line">	&#123;</span><br><span class="line"><span class="comment">//		irr::f32 TexVar = 0;</span></span><br><span class="line">		irr::s32 TexVar = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;ColorMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;ColorMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;ScreenMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;ScreenMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;DepthMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;DepthMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">3</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;UserMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;UserMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2012/06/30/irrlicht-1-8-trunk-xeffects/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-06-23 </div>
 			<div class="article-title"><a href="/2012/06/23/android-x86-4-0-3-firefoxfennec-16-0a1/" >Android-x86 4.0.3 + Firefox(Fennec) 16.0a1</a></div>						
 		</h3>
@@ -548,33 +574,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-05-12 </div>
-			<div class="article-title"><a href="/2012/05/12/wine-diablo-3-downloader/" >Wine + Diablo 3 Downloader</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/wine_diablo3_downloader.png" alt="wine diablo 3"><br><a target="_blank" rel="noopener" href="http://us.blizzard.com/en-us/games/d3/?rhtml=y">http://us.blizzard.com/en-us/games/d3/?rhtml=y</a></p>
-<p>2012&#x2F;5&#x2F;15 にDiablo 3 がリリースされるので、オンラインでデジタル版をPre-Order してみた。World of Warcraft の年間契約にDiablo 3 がバンドルされるという話もあったけれど、World of Warcraft は休止しているので、とりあえずDiablo 3 単品を購入。World of Warcraft はMists of Pandaria がリリースされたら少しだけ試してみよう。</p>
-<p>Diablo3 ゲーム本体はクローズドベータ版もWine で動いたので、製品版でも多分動作すると思う。今回はダウンロードからLinux 上で試してみよう。</p>
-<p>Diablo-III-8370-enUS-Installer-downloader.exe を右クリックして、Wine Windows Program Loader を選択。回線が細いので時間がかかるなぁ。その間に壁紙とConky をDiablo 仕様にしてみよう。</p>
-
-	
-	</div>
-  <a type="button" href="/2012/05/12/wine-diablo-3-downloader/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -624,6 +623,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/" ><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/08/CHUWI-Minibook-X-N100/" ><i class="fa fa-file-o"></i>CHUWI MiniBook X N100</a>
       </li>
     
@@ -657,10 +660,6 @@
     
       <li>
         <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
-      </li>
-    
-      <li>
-        <a href="/2022/10/22/Windows-11-WSL-2-systemd/" ><i class="fa fa-file-o"></i>Windows 11 - WSL 2 - systemd</a>
       </li>
     
   </ul>

@@ -164,6 +164,36 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-11-17 </div>
+			<div class="article-title"><a href="/2012/11/17/ubuntu-12-10-unity-4-0/" >Ubuntu 12.10 + Unity 4.0</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/unity4_ubnuntu.png" alt="ubuntu 12.10 unity 4.0"></p>
+<p>Unity 4.0 で作成したアプリをUbuntu 12.10 x86_64 上で動かしてみました。Unity 4.0 ではLinux 向けにネイティブアプリを出力できるようになっています。ビルドの設定では「x86」、「x86_64 」、「x86 + x86_64 (Universal)」が選択できます。Windows 8 の環境では以下のように表示されました。</p>
+<p><a href="/images/uploads/2012/11/unity4_build_settings.png"><img src="/images/uploads/2012/11/unity4_build_settings-600x560.png" alt="unity 4.0 build settings"></a></p>
+<p>ちなみに、過去(2009年なのでバージョン2.6 かな)のバージョンのUnity で作成したIsland Demo のWindows 向けロードモジュールがハードディスクの中にあったのでWine で動かしてみました。問題なく動きました。</p>
+<p><a href="/images/uploads/2012/11/unity_island_demo_2009_wine.png"><img src="/images/uploads/2012/11/unity_island_demo_2009_wine-600x375.png" alt="unity island demo 2009 wine"></a></p>
+<p><strong>Edit:</strong><br>Unity 4.0 で出力されたLinux 用実行形式ファイルの情報はこんな感じ。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ file MyFirst.x86*</span><br><span class="line">MyFirst.x86:    ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), <span class="keyword">for</span> GNU/Linux 2.6.15, BuildID[sha1]=0x650aeda57c5cf21ae3934e7a753eaef9ed525f2a, stripped</span><br><span class="line">MyFirst.x86_64: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), <span class="keyword">for</span> GNU/Linux 2.6.15, BuildID[sha1]=0xa877bae6da45dc12eb314505bf5ec6bf96b3b503, stripped</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2012/11/17/ubuntu-12-10-unity-4-0/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-11-14 </div>
 			<div class="article-title"><a href="/2012/11/14/unity-4-0-gnome-shell-3-6/" >Unity 4.0 + GNOME Shell 3.6</a></div>						
 		</h3>
@@ -698,31 +728,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-09-16 </div>
-			<div class="article-title"><a href="/2012/09/16/ubuntu-12-10-certificate-authority/" >Ubuntu 12.10 + Certificate Authority</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/ubuntu_ca.png" alt="ubuntu 12.10 certificate authority openssl ssl client"></p>
-<p>Ubuntu 12.10 x86_64 の環境にオレオレ認証局を構築してクライアント証明書認証してみた。サーバはApache2 でクライアントはUbuntu 12.04 x86_64 上のFirefox。クライアントPC 側のネットワークはスマートフォンのWiMAX + Wi-Fi テザリングからインターネットに接続して、ダイナミックDNS でアドレス解決したサーバに到達する構成で試してみた。設定手順は、以下のページ。<br><a target="_blank" rel="noopener" href="http://ktkr3d.site11.com/ca/">http://ktkr3d.site11.com/ca/</a></p>
-
-	
-	</div>
-  <a type="button" href="/2012/09/16/ubuntu-12-10-certificate-authority/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -772,6 +777,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/" ><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/08/CHUWI-Minibook-X-N100/" ><i class="fa fa-file-o"></i>CHUWI MiniBook X N100</a>
       </li>
     
@@ -805,10 +814,6 @@
     
       <li>
         <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
-      </li>
-    
-      <li>
-        <a href="/2022/10/22/Windows-11-WSL-2-systemd/" ><i class="fa fa-file-o"></i>Windows 11 - WSL 2 - systemd</a>
       </li>
     
   </ul>
