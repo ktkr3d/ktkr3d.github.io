@@ -164,6 +164,36 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2010-09-10 </div>
+			<div class="article-title"><a href="/2010/09/10/irrcg/" >irrCg を試してみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/cg.png" alt="irrcg irrlicht"><br>nVidia のCg 言語のシェーダラッパirrCg を試してみた<br>Radeon でも使える<br><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=23676">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=23676</a><br><a target="_blank" rel="noopener" href="http://code.google.com/p/irrcg/">http://code.google.com/p/irrcg/</a></p>
+<ol>
+<li><p>Cg のライブラリをダウンロード<br>nVidia(<a target="_blank" rel="noopener" href="http://developer.nvidia.com/object/cg_download.html">http://developer.nvidia.com/object/cg_download.html</a>)<br>2-a. irrCg 0.7.1 の場合<br>IrrCgExtensionHandler.h に以下を追加</p>
+<p> <code>#include &quot;GL/glx.h&quot;</code></p>
+</li>
+</ol>
+<p>2-b. irrCg 0.8 from SVN の場合<br>IrrCg.h 内の宣言とexample 内のmain.cpp 内で継承した関数の宣言が不一致なのでヘッダを元に修正、Pixel はFragment にする<br>3. ケースセンシティブなところをとりあえず対処<br>.&#x2F;cg&#x2F;NormalMapping.cg をコピーして.&#x2F;cg&#x2F;normalmapping.cg を作る</p>
+
+	
+	</div>
+  <a type="button" href="/2010/09/10/irrcg/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2010-09-08 </div>
 			<div class="article-title"><a href="/2010/09/08/irrlicht/" >Irrlicht アプリをデスクトップ背景で動かしてみた</a></div>						
 		</h3>
@@ -407,35 +437,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2010-08-18 </div>
-			<div class="article-title"><a href="/2010/08/18/ode_i_can_fly/" >ODE でI can fly!!</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/flight.png" alt="irrlicht ode"><br>ODE を使ったフライトシミュレータっぽいのを試してみた<br>これはおもしろい!!<br><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=26526">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=26526</a><br>コンパイルエラーがでるけどちょこっと修正すればOK!!</p>
-<ul>
-<li>template を使う時にクラス名とメンバ名を異なるようにする</li>
-<li>SMeshBufferLightMap の代わりにCDynamicMeshBuffer を使う</li>
-<li>irrlicht.h をインクルードしてあげる<br>ここで使われているステートマシンのコードは次のトピックのvitek のポスト(#3)にあるリンク先のもののようだ<br><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=19949#109893">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=19949#109893</a><br>これもコンパイルエラーがでるけど簡単に修正できる</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2010/08/18/ode_i_can_fly/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -485,6 +486,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/" ><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/" ><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
       </li>
     
@@ -518,10 +523,6 @@
     
       <li>
         <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
-      </li>
-    
-      <li>
-        <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
       </li>
     
   </ul>

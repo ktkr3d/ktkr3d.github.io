@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-08-11T05:33:02.000Z</updated>
+  <updated>2023-08-14T09:44:28.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Minecraft on MiniBook X N100</title>
+    <link href="https://ktkr3d.github.io/2023/08/14/Minecraft-on-MiniBook-X-N100/"/>
+    <id>https://ktkr3d.github.io/2023/08/14/Minecraft-on-MiniBook-X-N100/</id>
+    <published>2023-08-14T09:44:28.000Z</published>
+    <updated>2023-08-14T09:44:28.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/minecraft-minibokx-01.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;MiniBook X N100 でMinecraft Java Edition を実行してみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="minecraft" scheme="https://ktkr3d.github.io/tags/minecraft/"/>
+    
+    <category term="minibook-x" scheme="https://ktkr3d.github.io/tags/minibook-x/"/>
+    
+  </entry>
   
   <entry>
     <title>MiniBook X N100 - WoW Raid Try</title>
@@ -486,25 +506,6 @@
     <category term="gnome" scheme="https://ktkr3d.github.io/tags/gnome/"/>
     
     <category term="hi10go" scheme="https://ktkr3d.github.io/tags/hi10go/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Argos GNOME 42 Support</title>
-    <link href="https://ktkr3d.github.io/2022/03/19/Argos-GNOME-42-Support/"/>
-    <id>https://ktkr3d.github.io/2022/03/19/Argos-GNOME-42-Support/</id>
-    <published>2022-03-19T02:12:28.000Z</published>
-    <updated>2022-03-19T02:12:28.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/argos_gnome42.png&quot; alt=&quot;argos_gnome42.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/argos&quot;&gt;https://github.com/ktkr3d/argos&lt;/a&gt;&lt;br&gt;GNOME Shell Extension のArgos をGNOME Shell 42 で実行できるようにしてみました。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="gnome-shell" scheme="https://ktkr3d.github.io/tags/gnome-shell/"/>
-    
-    <category term="argos" scheme="https://ktkr3d.github.io/tags/argos/"/>
     
   </entry>
   

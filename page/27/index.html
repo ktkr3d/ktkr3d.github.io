@@ -165,6 +165,66 @@
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2013-02-10 </div>
+			<div class="article-title"><a href="/2013/02/10/appjs/" >AppJS</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/appjs.png" alt="AppJS Node.js"><br><a target="_blank" rel="noopener" href="http://appjs.org/">http://appjs.org/</a><br><a target="_blank" rel="noopener" href="https://github.com/appjs/appjs">https://github.com/appjs/appjs</a><br><a target="_blank" rel="noopener" href="https://github.com/appjs/appjs/wiki">https://github.com/appjs/appjs/wiki</a></p>
+<p>Node.js アプリをコマンドラインからデスクトップアプリとして実行するAppJS を試してみました。HTML, CSS, JavaScript でアプリケーションが実装できて、Windows, Mac(32bit のみ), Linux(x86&#x2F;x86_64) に対応しています。Unity のグローバルメニューにも対応していました。Node.js のバージョンはv0.8 系が良いようです。Linux x86_64 の環境でv0.9.9 ではうまく動作しませんでした。</p>
+<ol>
+<li>Node.js v0.8.19 のインストール</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">$ nvm install v0.8.19</span><br></pre></td></tr></table></figure>
+
+
+
+
+<ol start="2">
+<li>AppJS のインストール</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">$ nvm use v0.8.19</span><br><span class="line">$ npm install -g appjs</span><br></pre></td></tr></table></figure>
+
+
+
+
+<ol start="3">
+<li>アプリケーションの準備</li>
+</ol>
+<figure class="highlight javascript"><figcaption><span>~/appjs/app.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// load appjs</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> appjs = <span class="built_in">require</span>(<span class="string">&#x27;appjs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// serve static files from a directory</span></span><br><span class="line">appjs.<span class="title function_">serveFilesFrom</span>(__dirname + <span class="string">&#x27;/content&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// handle requests from the browser</span></span><br><span class="line">appjs.<span class="property">router</span>.<span class="title function_">post</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span>(<span class="params">request, response, next</span>)&#123;</span><br><span class="line">  response.<span class="title function_">send</span>(<span class="string">&#x27;Hey! How are you &#x27;</span> + request.<span class="title function_">post</span>(<span class="string">&#x27;firstname&#x27;</span>));</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// create a window</span></span><br><span class="line"><span class="keyword">var</span> <span class="variable language_">window</span> = appjs.<span class="title function_">createWindow</span>(&#123;</span><br><span class="line">  <span class="attr">width</span>: <span class="number">640</span>,</span><br><span class="line">  <span class="attr">height</span>: <span class="number">460</span>,</span><br><span class="line">  <span class="attr">alpha</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// prepare the window when first created</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">on</span>(<span class="string">&#x27;create&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Window Created&quot;</span>);</span><br><span class="line">  <span class="comment">// window.frame controls the desktop window</span></span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">frame</span>.<span class="title function_">show</span>().<span class="title function_">center</span>();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// the window is ready when the DOM is loaded</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">on</span>(<span class="string">&#x27;ready&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Window Ready&quot;</span>);</span><br><span class="line">  <span class="comment">// directly interact with the DOM</span></span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">process</span> = process;</span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">module</span> = <span class="variable language_">module</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;keydown&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">    <span class="comment">// show chrome devtools on f12 or commmand+option+j</span></span><br><span class="line">    <span class="keyword">if</span> (e.<span class="property">keyIdentifier</span> === <span class="string">&#x27;F12&#x27;</span> || e.<span class="property">keyCode</span> === <span class="number">74</span> &amp;&amp; e.<span class="property">metaKey</span> &amp;&amp; e.<span class="property">altKey</span>) &#123;</span><br><span class="line">      <span class="variable language_">window</span>.<span class="property">frame</span>.<span class="title function_">openDevTools</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// cleanup code when window is closed</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">on</span>(<span class="string">&#x27;close&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Window Closed&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><figcaption><span>~/appjs/content/index.html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;firstname&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;Firstname&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;lastname&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;Lastname&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<ol start="4">
+<li>実行</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">$ nvm use v0.8.19</span><br><span class="line">$ <span class="built_in">export</span> NODE_PATH=<span class="variable">$&#123;NVM_PATH&#125;</span>_modules</span><br><span class="line">$ <span class="built_in">cd</span> ~/appjs/</span><br><span class="line">$ node --harmony app.js</span><br></pre></td></tr></table></figure>
+
+
+<p>サンプルでは、[F12]キーにwindow.frame.openDevTools() をアサインしていて、キー押下により開発ツールウィンドウが開くようになっています。<br><a href="/images/uploads/2013/02/node_devtool.png"><img src="/images/uploads/2013/02/node_devtool-600x470.png" alt="Node.js devtool"></a></p>
+<p><strong>EDIT:</strong></p>
+<h3 id="サンプルのカスタマイズ"><a href="#サンプルのカスタマイズ" class="headerlink" title="サンプルのカスタマイズ"></a>サンプルのカスタマイズ</h3><p>HelloWorld サンプルをカスタマイズしてみました。日本語表示、メニュー構成の変更、ファイルオープンダイアログ、lame&#x2F;speaker パッケージを使ったMP3 の再生など。<br><a href="/images/uploads/2013/02/hello_world_appjs.png"><img src="/images/uploads/2013/02/hello_world_appjs-600x457.png" alt="hello world appjs"></a><br><a href="/images/uploads/2013/02/mp3player_js.png"><img src="/images/uploads/2013/02/mp3player_js.png" alt="mp3 player node.js"></a></p>
+
+	
+	</div>
+  <a type="button" href="/2013/02/10/appjs/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2013-02-10 </div>
 			<div class="article-title"><a href="/2013/02/10/scrumblr/" >scrumblr</a></div>						
 		</h3>
 	
@@ -584,92 +644,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-12-08 </div>
-			<div class="article-title"><a href="/2012/12/08/thunderbird-gmail-google-calendar-google-tasks/" >Thunderbird + GMail + Google Calendar + Google Tasks</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Thunderbird とGoogle のメール、カレンダー、TODO を同期してみました。</p>
-<h3 id="Thunderbird-のインストール"><a href="#Thunderbird-のインストール" class="headerlink" title="Thunderbird のインストール"></a>Thunderbird のインストール</h3><p>thunderbird をインストールします。</p>
-<h3 id="Thunderbird-アドオンのインストール"><a href="#Thunderbird-アドオンのインストール" class="headerlink" title="Thunderbird アドオンのインストール"></a>Thunderbird アドオンのインストール</h3><p>Thunderbirdで、<br>[アドオン]メニューから下記のアドオンを検索してインストールします。</p>
-<ul>
-<li><p>Lightning<br><a target="_blank" rel="noopener" href="https://addons.mozilla.org/ja/thunderbird/addon/lightning/">https://addons.mozilla.org/ja/thunderbird/addon/lightning/</a></p>
-</li>
-<li><p>Provider for Google Calendar<br><a target="_blank" rel="noopener" href="https://addons.mozilla.org/ja/thunderbird/addon/provider-for-google-calendar/">https://addons.mozilla.org/ja/thunderbird/addon/provider-for-google-calendar/</a></p>
-</li>
-<li><p>Google Tasks Sync<br><a target="_blank" rel="noopener" href="https://addons.mozilla.org/ja/thunderbird/addon/google-tasks-sync/">https://addons.mozilla.org/ja/thunderbird/addon/google-tasks-sync/</a></p>
-</li>
-<li><p>Google Contacts<br><a target="_blank" rel="noopener" href="https://addons.mozilla.org/ja/thunderbird/addon/google-contacts/">https://addons.mozilla.org/ja/thunderbird/addon/google-contacts/</a></p>
-</li>
-</ul>
-<h3 id="メールアカウントの設定"><a href="#メールアカウントの設定" class="headerlink" title="メールアカウントの設定"></a>メールアカウントの設定</h3><p>Thunderbird で、</p>
-<ol>
-<li><p>[新規作成]-[既存のメールアカウント…]メニューを選択</p>
-</li>
-<li><p>Google のアカウント情報を指定</p>
-</li>
-</ol>
-<h3 id="Google-カレンダーのアドレスの取得"><a href="#Google-カレンダーのアドレスの取得" class="headerlink" title="Google カレンダーのアドレスの取得"></a>Google カレンダーのアドレスの取得</h3><p>Google カレンダーで、</p>
-<ol>
-<li><p>[設定]メニューを選択</p>
-</li>
-<li><p>[カレンダー]タブをクリック</p>
-</li>
-<li><p>[このカレンダーを共有]リンクをクリック</p>
-</li>
-<li><p>[カレンダーの情報]タブをクリック</p>
-</li>
-<li><p>カレンダーのアドレスの[XML]リンクを右クリックして[リンクのURLをコピー]</p>
-</li>
-</ol>
-<h3 id="カレンダーの同期設定"><a href="#カレンダーの同期設定" class="headerlink" title="カレンダーの同期設定"></a>カレンダーの同期設定</h3><p>Thunderbird で、</p>
-<ol>
-<li>[新規作成]-[カレンダー…]メニューを選択</li>
-</ol>
-<pre><code>* カレンダーの保存先: ネットワークのサーバに保存する
-
-
-* フォーマット: Google カレンダー
-
-
-* 場所: 上記手順で取得したGoogle カレンダーのアドレス
-
-
-* オフラインサポート: チェック
-
-
-* パスワードマネージャにこのパスワードを保存する。: チェック
-
-
-* カレンダー名を設定
-</code></pre>
-<h3 id="TODO-の同期設定"><a href="#TODO-の同期設定" class="headerlink" title="TODO の同期設定"></a>TODO の同期設定</h3><p>Thunderbird で、</p>
-<ol>
-<li><p>右下ペインの「Google Tasks Sync」の「Click here to get started.」をクリック</p>
-</li>
-<li><p>アカウント情報を指定してログイン</p>
-</li>
-<li><p>[アクセスを許可]をクリック</p>
-</li>
-</ol>
-
-	
-	</div>
-  <a type="button" href="/2012/12/08/thunderbird-gmail-google-calendar-google-tasks/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -719,6 +693,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/" ><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/" ><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
       </li>
     
@@ -752,10 +730,6 @@
     
       <li>
         <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
-      </li>
-    
-      <li>
-        <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
       </li>
     
   </ul>

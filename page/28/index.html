@@ -164,6 +164,92 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-12-08 </div>
+			<div class="article-title"><a href="/2012/12/08/thunderbird-gmail-google-calendar-google-tasks/" >Thunderbird + GMail + Google Calendar + Google Tasks</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Thunderbird とGoogle のメール、カレンダー、TODO を同期してみました。</p>
+<h3 id="Thunderbird-のインストール"><a href="#Thunderbird-のインストール" class="headerlink" title="Thunderbird のインストール"></a>Thunderbird のインストール</h3><p>thunderbird をインストールします。</p>
+<h3 id="Thunderbird-アドオンのインストール"><a href="#Thunderbird-アドオンのインストール" class="headerlink" title="Thunderbird アドオンのインストール"></a>Thunderbird アドオンのインストール</h3><p>Thunderbirdで、<br>[アドオン]メニューから下記のアドオンを検索してインストールします。</p>
+<ul>
+<li><p>Lightning<br><a target="_blank" rel="noopener" href="https://addons.mozilla.org/ja/thunderbird/addon/lightning/">https://addons.mozilla.org/ja/thunderbird/addon/lightning/</a></p>
+</li>
+<li><p>Provider for Google Calendar<br><a target="_blank" rel="noopener" href="https://addons.mozilla.org/ja/thunderbird/addon/provider-for-google-calendar/">https://addons.mozilla.org/ja/thunderbird/addon/provider-for-google-calendar/</a></p>
+</li>
+<li><p>Google Tasks Sync<br><a target="_blank" rel="noopener" href="https://addons.mozilla.org/ja/thunderbird/addon/google-tasks-sync/">https://addons.mozilla.org/ja/thunderbird/addon/google-tasks-sync/</a></p>
+</li>
+<li><p>Google Contacts<br><a target="_blank" rel="noopener" href="https://addons.mozilla.org/ja/thunderbird/addon/google-contacts/">https://addons.mozilla.org/ja/thunderbird/addon/google-contacts/</a></p>
+</li>
+</ul>
+<h3 id="メールアカウントの設定"><a href="#メールアカウントの設定" class="headerlink" title="メールアカウントの設定"></a>メールアカウントの設定</h3><p>Thunderbird で、</p>
+<ol>
+<li><p>[新規作成]-[既存のメールアカウント…]メニューを選択</p>
+</li>
+<li><p>Google のアカウント情報を指定</p>
+</li>
+</ol>
+<h3 id="Google-カレンダーのアドレスの取得"><a href="#Google-カレンダーのアドレスの取得" class="headerlink" title="Google カレンダーのアドレスの取得"></a>Google カレンダーのアドレスの取得</h3><p>Google カレンダーで、</p>
+<ol>
+<li><p>[設定]メニューを選択</p>
+</li>
+<li><p>[カレンダー]タブをクリック</p>
+</li>
+<li><p>[このカレンダーを共有]リンクをクリック</p>
+</li>
+<li><p>[カレンダーの情報]タブをクリック</p>
+</li>
+<li><p>カレンダーのアドレスの[XML]リンクを右クリックして[リンクのURLをコピー]</p>
+</li>
+</ol>
+<h3 id="カレンダーの同期設定"><a href="#カレンダーの同期設定" class="headerlink" title="カレンダーの同期設定"></a>カレンダーの同期設定</h3><p>Thunderbird で、</p>
+<ol>
+<li>[新規作成]-[カレンダー…]メニューを選択</li>
+</ol>
+<pre><code>* カレンダーの保存先: ネットワークのサーバに保存する
+
+
+* フォーマット: Google カレンダー
+
+
+* 場所: 上記手順で取得したGoogle カレンダーのアドレス
+
+
+* オフラインサポート: チェック
+
+
+* パスワードマネージャにこのパスワードを保存する。: チェック
+
+
+* カレンダー名を設定
+</code></pre>
+<h3 id="TODO-の同期設定"><a href="#TODO-の同期設定" class="headerlink" title="TODO の同期設定"></a>TODO の同期設定</h3><p>Thunderbird で、</p>
+<ol>
+<li><p>右下ペインの「Google Tasks Sync」の「Click here to get started.」をクリック</p>
+</li>
+<li><p>アカウント情報を指定してログイン</p>
+</li>
+<li><p>[アクセスを許可]をクリック</p>
+</li>
+</ol>
+
+	
+	</div>
+  <a type="button" href="/2012/12/08/thunderbird-gmail-google-calendar-google-tasks/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-11-17 </div>
 			<div class="article-title"><a href="/2012/11/17/ubuntu-12-10-unity-4-0/" >Ubuntu 12.10 + Unity 4.0</a></div>						
 		</h3>
@@ -703,31 +789,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-09-24 </div>
-			<div class="article-title"><a href="/2012/09/24/gnome-shell-extension-drop-down-terminal/" >GNOME Shell extension - Drop Down Terminal</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/drop_down_terminal_gnome_shell_extension.png" alt="gnome shell extension drop down terminal"><br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/442/drop-down-terminal/">https://extensions.gnome.org/extension/442/drop-down-terminal/</a></p>
-<p>Drop Down Terminal はGNOME Shell 3.5.2 (正確にはgjs &gt;&#x3D; 1.33.2 and vte3 &gt;&#x3D; 0.31, gnome-shell &gt;&#x3D; 3.2 らしい)以降で動作する、ターミナル画面を表示するためのGNOME Shell 拡張機能です。Ubuntu 12.10 + GNOME Shell 3.5.92 の環境で使ってみました。<br>GNOME Shell のデスクトップ環境で[F12]キーを押下すると、画面の上部に半透明なターミナル画面が瞬時に表示されます。もう一度[F12]キーを押すとターミナル画面が隠れます。作者のコメントによると、キーバインドはgsettings やdconf-editor でカスタマイズできるようです。<br>ちょっとしたターミナル操作をする場合にとても便利です。クリップボードからのペーストは[Shift]-[Insert]が使用できます。フォーカスが合っていない場合はマウスでクリックすると良いようです。</p>
-
-	
-	</div>
-  <a type="button" href="/2012/09/24/gnome-shell-extension-drop-down-terminal/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -777,6 +838,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/" ><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/" ><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
       </li>
     
@@ -810,10 +875,6 @@
     
       <li>
         <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
-      </li>
-    
-      <li>
-        <a href="/2022/10/25/code-server-vscode-reveal/" ><i class="fa fa-file-o"></i>code-server + vscode-reveal</a>
       </li>
     
   </ul>
