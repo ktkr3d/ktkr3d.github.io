@@ -155,6 +155,52 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2022-10-30 </div>
+			<div class="article-title"><a href="/2022/10/30/WoW-DragonFlight-Addons/" >WoW DragonFlight Addons</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt563e16b3504e5808/62545b180afb5024ae74b677/rc-logo-na.png"></p>
+<p>DragonFlight のパッチが適用されたことに伴って、従来のアドオンの更新が活発化しています。<br>現時点のLUIにおいて、一部のクラスの設定が新バージョンに移行されなかったので暫定的に補正をしました。</p>
+<h4 id="追記-2022-12-18"><a href="#追記-2022-12-18" class="headerlink" title="追記: 2022-12-18"></a>追記: 2022-12-18</h4><h5 id="⚙️移行準備"><a href="#⚙️移行準備" class="headerlink" title="⚙️移行準備"></a>⚙️移行準備</h5><ul>
+<li>移行前に既存のLUIのセーブデータファイルを移動(退避)して初期状態にする<br>  <code>C:\Program Files (x86)\World of Warcraft\_retail_\WTF\Account\&lt;Account Name&gt;\SavedVariables\LUI.lua</code></li>
+</ul>
+<h5 id="⚙️カスタマイズ"><a href="#⚙️カスタマイズ" class="headerlink" title="⚙️カスタマイズ"></a>⚙️カスタマイズ</h5><ul>
+<li>設定画面から入力できない項目があるが、以下のファイル内でデフォルト値が定義されている<br>  <code>C:\Program Files (x86)\World of Warcraft\_retail_\Interface\AddOns\LUI\modules\unitframes\unitframes_init.lua</code><br>デフォルト値から値を変更する場合はセーブデータファイルに項目を追記する。<br>  <code>C:\Program Files (x86)\World of Warcraft\_retail_\WTF\Account\&lt;Account Name&gt;\SavedVariables\LUI.lua</code></li>
+<li>player フレームの数値表示書式設定  <figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;player&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;HealthText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	[<span class="string">&quot;PowerText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>target フレームの数値表示書式設定とBuffsの無効化  <figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;target&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;HealthText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	[<span class="string">&quot;PowerText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	[<span class="string">&quot;Aura&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Buffs&quot;</span>] = &#123;</span><br><span class="line">			[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">false</span>,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>raid フレームの名前テキストの色設定  <figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;raid&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;NameText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;ColorByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>party フレームの名前テキストの色設定  <figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;party&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;NameText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;ColorByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="追記-2023-01-01"><a href="#追記-2023-01-01" class="headerlink" title="追記: 2023-01-01"></a>追記: 2023-01-01</h4><ul>
+<li><p>partytarget フレームとpartypet フレームの位置不正対策(暫定)<br><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/LUI/commit/399617e06a558593139ba7bc3a67b8c67ded6220">https://github.com/ktkr3d/LUI/commit/399617e06a558593139ba7bc3a67b8c67ded6220</a></p>
+</li>
+<li><p>maintank フレームが表示されない対策(暫定)<br><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/LUI/commit/5bd2bb2d59a18a7cfab1ba0fa292e8896b5e5b32">https://github.com/ktkr3d/LUI/commit/5bd2bb2d59a18a7cfab1ba0fa292e8896b5e5b32</a></p>
+</li>
+</ul>
+<h4 id="追記-2023-01-03"><a href="#追記-2023-01-03" class="headerlink" title="追記: 2023-01-03"></a>追記: 2023-01-03</h4><ul>
+<li>maintank フレームのPadding の設定(PowerBar の高さを追加)  <figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;maintank&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;Padding&quot;</span>] = <span class="number">16</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="追記-2023-01-18"><a href="#追記-2023-01-18" class="headerlink" title="追記: 2023-01-18"></a>追記: 2023-01-18</h4><ul>
+<li>Guild MOTD (Message of the Day) の長さ調整<br><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/LUI/commit/8059be8c58853271c96820320dbc5d8bde6b6365">https://github.com/ktkr3d/LUI/commit/8059be8c58853271c96820320dbc5d8bde6b6365</a></li>
+</ul>
+	
+	</div>
+  <a type="button" href="/2022/10/30/WoW-DragonFlight-Addons/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2022-10-25 </div>
 			<div class="article-title"><a href="/2022/10/25/code-server-vscode-reveal/" >code-server + vscode-reveal</a></div>						
 		</h3>
@@ -398,56 +444,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-04-06 </div>
-			<div class="article-title"><a href="/2022/04/06/CHUWI-Hi-10-Go/" >CHUWI Hi 10 Go</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/hi10go.png"><br><a target="_blank" rel="noopener" href="https://www.chuwi.com/jp/product/items/Chuwi-Hi10-Go.html">https://www.chuwi.com/jp/product/items/Chuwi-Hi10-Go.html</a></p>
-<p>CHUWI Hi 10 Go + Ubuntu 22.04</p>
-<h4 id="CHUWI-Hi-10-Go-の新旧スペック比較"><a href="#CHUWI-Hi-10-Go-の新旧スペック比較" class="headerlink" title="CHUWI Hi 10 Go の新旧スペック比較"></a>CHUWI Hi 10 Go の新旧スペック比較</h4><p>Hi 10 Go は一つの型式で２つのスペックがあるようです。</p>
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="left">旧 Hi 10 Go</th>
-<th align="left">新Hi 10 Go</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">CPU</td>
-<td align="left">Celoron N4500</td>
-<td align="left">Celeron N5100</td>
-</tr>
-<tr>
-<td align="left">イヤフォンジャック</td>
-<td align="left">あり</td>
-<td align="left">なし</td>
-</tr>
-<tr>
-<td align="left">スタイラス</td>
-<td align="left">対応</td>
-<td align="left">非対応?</td>
-</tr>
-</tbody></table>
-<p>カバーキーボードのファンクションキー修飾配置も若干異なるみたいです。</p>
-	
-	</div>
-  <a type="button" href="/2022/04/06/CHUWI-Hi-10-Go/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -497,6 +493,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/20/Arch-Linux/" ><i class="fa fa-file-o"></i>Arch Linux</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/" ><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
       </li>
     
@@ -530,10 +530,6 @@
     
       <li>
         <a href="/2022/11/25/WoW-Addon-LoggingChat/" ><i class="fa fa-file-o"></i>WoW Addon - LoggingChat</a>
-      </li>
-    
-      <li>
-        <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
       </li>
     
   </ul>

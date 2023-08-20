@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-08-14T09:44:28.000Z</updated>
+  <updated>2023-08-20T05:16:53.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Arch Linux</title>
+    <link href="https://ktkr3d.github.io/2023/08/20/Arch-Linux/"/>
+    <id>https://ktkr3d.github.io/2023/08/20/Arch-Linux/</id>
+    <published>2023-08-20T05:16:53.000Z</published>
+    <updated>2023-08-20T05:16:53.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/arch-minibookx.png&quot;&gt;&lt;br&gt;MiniBook X N100 にArch Linux を導入してみました。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="arch" scheme="https://ktkr3d.github.io/tags/arch/"/>
+    
+  </entry>
   
   <entry>
     <title>Minecraft on MiniBook X N100</title>
@@ -458,54 +475,6 @@
     
     
     <category term="tauri" scheme="https://ktkr3d.github.io/tags/tauri/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CHUWI Hi 10 Go</title>
-    <link href="https://ktkr3d.github.io/2022/04/06/CHUWI-Hi-10-Go/"/>
-    <id>https://ktkr3d.github.io/2022/04/06/CHUWI-Hi-10-Go/</id>
-    <published>2022-04-05T18:35:48.000Z</published>
-    <updated>2022-04-05T18:35:48.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/hi10go.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://www.chuwi.com/jp/product/items/Chuwi-Hi10-Go.html&quot;&gt;https://www.chuwi.com/jp/product/items/Chuwi-Hi10-Go.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;CHUWI Hi 10 Go + Ubuntu 22.04&lt;/p&gt;
-&lt;h4 id=&quot;CHUWI-Hi-10-Go-の新旧スペック比較&quot;&gt;&lt;a href=&quot;#CHUWI-Hi-10-Go-の新旧スペック比較&quot; class=&quot;headerlink&quot; title=&quot;CHUWI Hi 10 Go の新旧スペック比較&quot;&gt;&lt;/a&gt;CHUWI Hi 10 Go の新旧スペック比較&lt;/h4&gt;&lt;p&gt;Hi 10 Go は一つの型式で２つのスペックがあるようです。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;旧 Hi 10 Go&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;新Hi 10 Go&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;CPU&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Celoron N4500&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Celeron N5100&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;イヤフォンジャック&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;あり&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;なし&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;スタイラス&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;対応&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;非対応?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;カバーキーボードのファンクションキー修飾配置も若干異なるみたいです。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
-    
-    <category term="gnome" scheme="https://ktkr3d.github.io/tags/gnome/"/>
-    
-    <category term="hi10go" scheme="https://ktkr3d.github.io/tags/hi10go/"/>
     
   </entry>
   

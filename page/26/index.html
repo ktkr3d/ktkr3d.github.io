@@ -155,6 +155,31 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2013-07-01 </div>
+			<div class="article-title"><a href="/2013/07/01/ubuntu-13-dot-10-daily-build-plus-mir/" >Ubuntu 13.10 Daily Build + Mir</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><a href="/images/ubuntu_13_10_daily_build_mir.png"><img src="/images/ubuntu_13_10_daily_build_mir_tn.png" class=""></a></p>
+<p><a target="_blank" rel="noopener" href="https://launchpad.net/~mir-team/+archive/staging">https://launchpad.net/~mir-team/+archive/staging</a></p>
+<p>Ubuntu 13.10 Daily Build にMir を適用してみました。現時点では若干もたつく感じがしますが、今後改善されるでしょう。</p>
+	
+	</div>
+  <a type="button" href="/2013/07/01/ubuntu-13-dot-10-daily-build-plus-mir/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2013-06-16 </div>
 			<div class="article-title"><a href="/2013/06/16/octopress/" >Octopress</a></div>						
 		</h3>
@@ -485,56 +510,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-02-19 </div>
-			<div class="article-title"><a href="/2013/02/19/gitg-and-geanyvc/" >Gitg and GeanyVC</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/gitg_without_overlay_scroll_bar.png" alt="gitg without overlay scroll bar"></p>
-<p>Ubuntu 13.04 + GNOME Shell 3.7.5 で、Git クライアントを試してみました。</p>
-<ul>
-<li><p>Git クライアント一覧<br><a target="_blank" rel="noopener" href="https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Graphical_Interfaces">https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Graphical_Interfaces</a></p>
-</li>
-<li><p>Git クライアント機能比較<br><a target="_blank" rel="noopener" href="https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Summary_.28feature_matrix.29">https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Summary_.28feature_matrix.29</a></p>
-</li>
-</ul>
-<h3 id="gitg"><a href="#gitg" class="headerlink" title="gitg"></a>gitg</h3><p>プッシュもできて使いやすそうです。日本語のpo を公開されている方がいらっしゃいましたので、利用させていただきました。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install gitg</span><br><span class="line">$ wget https://raw.github.com/miyucy/gitg-ja/master/ja.po</span><br><span class="line">$ sed -e <span class="string">&quot;s/, fuzzy//&quot;</span> ja.po | grep -v <span class="string">&quot;^#$&quot;</span> &gt; ja.po.cf</span><br><span class="line">$ msgfmt -o gitg.mo ja.po.cf</span><br><span class="line">$ sudo <span class="built_in">cp</span> gitg.mo /usr/share/locale/ja/LC_MESSAGES/</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="http://sourceforge.jp/projects/freshmeat_gitg/howto/usage">http://sourceforge.jp/projects/freshmeat_gitg/howto/usage</a></p>
-<ul>
-<li><p>プッシュ<br>ローカルブランチのアイコン(オレンジ色)を右クリックして、[ブランチをプッシュ]サブメニューから選択します。</p>
-</li>
-<li><p>プル<br>[ファイル]-[Repository Properties]でリモートのURL を選んで[フェッチ]、[ブランチ]ドロップダウンリストを変更してリモートブランチを表示、リモートブランチのアイコンをローカルのブランチのアイコンにドラッグ、[マージ]を選択します。</p>
-</li>
-</ul>
-<p>ただし、オーバーレイスクロールバーが有効になっていると、各ペインの背景色が黒くなってしまうようです。オーバーレイスクロールバーを無効にしておきます。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="built_in">export</span> LIBOVERLAY_SCROLLBAR=0 &gt;&gt; ~/.xprofile</span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;usr&#x2F;share&#x2F;gitg&#x2F;ui&#x2F;gitg-window.ui をカスタマイズすれば対処できるのかもしれませんが、よくわかりませんでした。</p>
-<h3 id="GeanyVC"><a href="#GeanyVC" class="headerlink" title="GeanyVC"></a>GeanyVC</h3><p>私はテキストエディタにGeany を利用しているので、コミットならGeanyVC プラグインが利用できます。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install geany-plugin-vc</span><br></pre></td></tr></table></figure>
-
-<p>インストールしたら、Geany の[ツール]-[プラグインマネージャ]でGeanyVC プラグインを有効にした後で、[ツール]-[VC]メニューから操作します。</p>
-<h3 id="RabbitVCS"><a href="#RabbitVCS" class="headerlink" title="RabbitVCS"></a>RabbitVCS</h3><p>Ubuntu 13.04 のリポジトリにはパッケージがなく、12.10 のパッケージもNautilus のバージョンが新しいため(?)にうまく動きませんでした。</p>
-
-	
-	</div>
-  <a type="button" href="/2013/02/19/gitg-and-geanyvc/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -584,6 +559,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/20/Arch-Linux/" ><i class="fa fa-file-o"></i>Arch Linux</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/" ><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
       </li>
     
@@ -617,10 +596,6 @@
     
       <li>
         <a href="/2022/11/25/WoW-Addon-LoggingChat/" ><i class="fa fa-file-o"></i>WoW Addon - LoggingChat</a>
-      </li>
-    
-      <li>
-        <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
       </li>
     
   </ul>

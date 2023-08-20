@@ -155,6 +155,55 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-12-26 </div>
+			<div class="article-title"><a href="/2012/12/26/android-x86-4-2-1/" >Android-x86 4.2.1</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/android-x86_4.2.1.png" alt="android-x86 4.2.1"></p>
+<p><a target="_blank" rel="noopener" href="http://code.google.com/p/android-x86/downloads/detail?name=android-x86-4.2-20121225.iso">http://code.google.com/p/android-x86/downloads/detail?name=android-x86-4.2-20121225.iso</a></p>
+<p>Android-x86 4.2.1 が公開されたのでInspiron Duo にインストールして、Windows 8 64bit やUbuntu 12.10 x86_64 とのマルチブート環境を構築してみました。Android-x86 4.2 では過去の問題が改善されていることを確認できました。ファーストリリースだけあって、まだ動かない&#x2F;動作が不安定になるアプリがあるみたい。方向キー二度押ししても画面が回転しなくなったみたい。</p>
+<h3 id="改善された過去の問題"><a href="#改善された過去の問題" class="headerlink" title="改善された過去の問題"></a>改善された過去の問題</h3><ul>
+<li><p>物理&#x2F;仮想キーボードの切り替え、キーマップの改善</p>
+</li>
+<li><p>更新がおかしかった時計の改善</p>
+</li>
+<li><p>電源ボタン二度押ししなくても電源メニュー表示</p>
+</li>
+</ul>
+<h3 id="Google-Play-からインストールしたアプリ"><a href="#Google-Play-からインストールしたアプリ" class="headerlink" title="Google Play からインストールしたアプリ"></a>Google Play からインストールしたアプリ</h3><ul>
+<li><p>ES ファイルエクスプローラ</p>
+</li>
+<li><p>Google ドライブ</p>
+</li>
+<li><p>VLC</p>
+</li>
+<li><p>XiiaLive</p>
+</li>
+<li><p>Seesmic</p>
+</li>
+</ul>
+<h3 id="自前でビルドしたアプリ"><a href="#自前でビルドしたアプリ" class="headerlink" title="自前でビルドしたアプリ"></a>自前でビルドしたアプリ</h3><ul>
+<li>Fennec (Firefox) 19.0</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2012/12/26/android-x86-4-2-1/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-12-08 </div>
 			<div class="article-title"><a href="/2012/12/08/thunderbird-gmail-google-calendar-google-tasks/" >Thunderbird + GMail + Google Calendar + Google Tasks</a></div>						
 		</h3>
@@ -748,38 +797,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-09-24 </div>
-			<div class="article-title"><a href="/2012/09/24/changing-the-date-format-in-nautilus-3-6-list-view/" >Changing the date format in nautilus 3.6 list view</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/nautilus_list_view.png" alt="nautilus 3.6 list view modification date"><br><a target="_blank" rel="noopener" href="https://bugzilla.gnome.org/show_bug.cgi?id=676898">https://bugzilla.gnome.org/show_bug.cgi?id=676898</a><br><a target="_blank" rel="noopener" href="http://bugzilla-attachments.gnome.org/attachment.cgi?id=215060">http://bugzilla-attachments.gnome.org/attachment.cgi?id=215060</a></p>
-<p>nautilus 3.6 のリストビューでは、あえて更新日付の書式をシンプル(informal)にしているようです。これはこれでアリなのですが、やはり詳細表示されていた方が統一感があって使い勝手がよいような気がするので、昔のISO 日付書式になるようにカスタマイズしてみました。dpkg-buildpackage でfakeroot が効かなかったので、sudo で実行しています。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get build-dep nautilus</span><br><span class="line">$ <span class="built_in">mkdir</span> nautilus &amp;&amp; <span class="built_in">cd</span> nautilus</span><br><span class="line">$ apt-get <span class="built_in">source</span> nautilus</span><br><span class="line">$ dpkg-source -x *.dsc</span><br><span class="line">$ <span class="built_in">cd</span> nautilus-3.*</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c"><figcaption><span>libnautilus-private/nautilus-file.c</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> TODAY_TIME_FORMAT_24 N_(<span class="string">&quot;%R&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TODAY_TIME_FORMAT N_(<span class="string">&quot;%-I:%M %P&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THIS_MONTH_TIME_FORMAT N_(<span class="string">&quot;%b %-e&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THIS_YEAR_TIME_FORMAT N_(<span class="string">&quot;%b %-e&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ANYTIME_TIME_FORMAT N_(<span class="string">&quot;%b %-d %Y&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ANYTIME_TIME_FORMAT_ISO N_(<span class="string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> FULL_FORMAT N_(<span class="string">&quot;%a, %b %e %Y %I:%M:%S %p&quot;</span>)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> FULL_FORMAT_24 N_(<span class="string">&quot;%a, %b %e %Y %T&quot;</span>)</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c"><figcaption><span>libnautilus-private/nautilus-file.c</span></figcaption><table><tr><td class="code"><pre><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    format = ANYTIME_TIME_FORMAT;</span><br><span class="line">&#125;</span><br><span class="line">format = ANYTIME_TIME_FORMAT_ISO;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo dpkg-buildpackage -us -uc -nc -b</span><br><span class="line">$ sudo dpkg -i ../nautilus_3.*.deb</span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2012/09/24/changing-the-date-format-in-nautilus-3-6-list-view/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -829,6 +846,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/20/Arch-Linux/" ><i class="fa fa-file-o"></i>Arch Linux</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/" ><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
       </li>
     
@@ -862,10 +883,6 @@
     
       <li>
         <a href="/2022/11/25/WoW-Addon-LoggingChat/" ><i class="fa fa-file-o"></i>WoW Addon - LoggingChat</a>
-      </li>
-    
-      <li>
-        <a href="/2022/10/30/WoW-DragonFlight-Addons/" ><i class="fa fa-file-o"></i>WoW DragonFlight Addons</a>
       </li>
     
   </ul>
