@@ -163,7 +163,7 @@
 <li>Calam Arch Installer 2023-08</li>
 <li>gparted でArch Linux 用に50GiBを準備</li>
 </ul>
-<div id="googleChart2347"></div>
+<div id="googleChart8292"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -172,7 +172,7 @@
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart2347"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart8292"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -185,28 +185,22 @@
 <h4 id="💻インストール"><a href="#💻インストール" class="headerlink" title="💻インストール"></a>💻インストール</h4><ol start="3">
 <li>起動時に[F7]キー押下してUSBを選択</li>
 <li>ディスプレイの設定を横に回転</li>
-<li>ネットワーク接続</li>
-</ol>
-<ul>
+<li>ネットワーク接続<ul>
 <li>カーネルが6.4なのでAX101も認識する</li>
 </ul>
-<ol start="6">
-<li>ミラーサイト選択</li>
-</ol>
-<ul>
+</li>
+<li>ミラーサイト選択<ul>
 <li>Japan を選択して書き込み</li>
 <li>表示されなかったり閉じてしまった場合はメニューから再表示可能</li>
 </ul>
-<ol start="7">
+</li>
 <li>インストーラ表示用の日本語フォント導入  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -S otf-ipafont</span><br></pre></td></tr></table></figure></li>
 <li>インストーラ起動  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo calamares</span><br></pre></td></tr></table></figure></li>
-<li>パッケージ選択</li>
-</ol>
-<ul>
+<li>パッケージ選択<ul>
 <li>GNOME-Desktop</li>
 <li>Web Browsers &#x2F; Firefox</li>
 </ul>
-<ol start="10">
+</li>
 <li>再起動</li>
 <li>起動時に[F7]キーで押下して<code>Arch Linux</code>を選択</li>
 </ol>
@@ -214,24 +208,20 @@
 <li>日本語フォントの導入  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji</span><br></pre></td></tr></table></figure></li>
 <li><code>yay</code>の導入  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -S git</span><br><span class="line">git clone https://aur.archlinux.org/yay.git</span><br><span class="line">cd yay</span><br><span class="line">makepkg -si</span><br></pre></td></tr></table></figure></li>
 <li>Google Chrome の導入  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S google-chrome</span><br></pre></td></tr></table></figure></li>
-<li>GNOME の設定</li>
-</ol>
-<ul>
+<li>GNOME の設定<ul>
 <li>Tweaks のウィンドウとタイトルバーで最大化最小化ボタンを表示</li>
 <li>Tweaks でタッチパネル右下を右クリック設定</li>
 <li>設定　タッチパッド　タップでクリックする</li>
 </ul>
-<ol start="16">
-<li>GNOME Shell Extension の設定</li>
-</ol>
-<ul>
+</li>
+<li>GNOME Shell Extension の設定<ul>
 <li>拡張機能の導入</li>
 <li>gnome-chrome-shell の導入</li>
 <li>Dash to Panel</li>
 <li>ArcMenu</li>
 <li>Impot Method Panel</li>
 </ul>
-<ol start="17">
+</li>
 <li>日本語入力の設定  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fcitx5-im fcitx5-mozc</span><br></pre></td></tr></table></figure>
   <figure class="highlight ini"><figcaption><span>/etc/environment</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">GTK_IM_MODULE</span>=fcitx</span><br><span class="line"><span class="attr">QT_IM_MODULE</span>=fcitx</span><br><span class="line"><span class="attr">XMODIFIERS</span>=@im=fcitx</span><br></pre></td></tr></table></figure>
   再ログイン<br>  デフォルトではCtrl+Spaceで切り替え</li>
