@@ -163,7 +163,7 @@
 <li>Calam Arch Installer 2023-08</li>
 <li>gparted で512GB(477GiB)ストレージにArch Linux 用パーティションとして50GiBを準備</li>
 </ul>
-<div id="googleChart5429"></div>
+<div id="googleChart7189"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -172,7 +172,7 @@
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart5429"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart7189"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -227,10 +227,18 @@
   再ログイン<br>  デフォルトでは[Ctrl]+[Space]で切り替え</li>
 <li>GDMの解像度&#x2F;方向をユーザセッションと同じ設定にする  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp ~/.config/monitors.xml /var/lib/gdm/.config/monitors.xml</span><br><span class="line">sudo chown gdm:gdm /var/lib/gdm/.config/monitors.xml</span><br></pre></td></tr></table></figure></li>
 <li>マルチブート時の時刻ズレ調整  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo timedatectl set-local-rtc true</span><br></pre></td></tr></table></figure></li>
+<li>alias  <figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo pacman -Syu; sudo pacman -Sc;&#x27;</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>起動時に[F7]キーを押下して<code>Arch (AirDisk 512GB SSD)</code>を選択</li>
-<li>もしくはrEFInd を導入してもよいかもしれない</li>
+<li>rEFInd をデフォルトにしたら全てのOSを選択できて便利だった</li>
+</ul>
+<h3 id="調査中"><a href="#調査中" class="headerlink" title="調査中"></a>調査中</h3><ul>
+<li>スリープ(?)後に画面の上半分が表示されない。下半分もインタレースがかかったような表示になる。<br>Ubuntu も同じなので、カーネル6.4 かGNOME 44の問題かもしれない</li>
+<li>アップデート後にNautilusからSMB サーバに接続できなくなった(既知の問題かもしれない)<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -S gvfs-smb</span><br></pre></td></tr></table></figure>
+上記を実行してOS再起動したら接続できるようになった。様子見中。</li>
+<li>Dash to Panel で、起動済みのアプリケーションに対してタッチスクリーンのタッチで切り替えできない(既知の問題)<br><a target="_blank" rel="noopener" href="https://github.com/home-sweet-gnome/dash-to-panel/issues/223">https://github.com/home-sweet-gnome/dash-to-panel/issues/223</a><br><a target="_blank" rel="noopener" href="https://github.com/home-sweet-gnome/dash-to-panel/issues/298">https://github.com/home-sweet-gnome/dash-to-panel/issues/298</a></li>
+<li></li>
 </ul>
 	  
 	</div>
