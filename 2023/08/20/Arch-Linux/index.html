@@ -163,7 +163,7 @@
 <li>Calam Arch Installer 2023-08</li>
 <li>gparted で512GB(477GiB)ストレージにArch Linux 用パーティションとして50GiBを準備</li>
 </ul>
-<div id="googleChart7909"></div>
+<div id="googleChart5774"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -172,7 +172,7 @@
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart7909"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart5774"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -226,7 +226,7 @@
 <li>日本語入力の設定  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fcitx5-im fcitx5-mozc</span><br></pre></td></tr></table></figure>
   <figure class="highlight ini"><figcaption><span>/etc/environment</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">GTK_IM_MODULE</span>=fcitx</span><br><span class="line"><span class="attr">QT_IM_MODULE</span>=fcitx</span><br><span class="line"><span class="attr">XMODIFIERS</span>=@im=fcitx</span><br></pre></td></tr></table></figure>
   再ログイン<br>  デフォルトでは[Ctrl]+[Space]で切り替え</li>
-<li>GDMの解像度&#x2F;方向をユーザセッションと同じ設定にする  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp ~/.config/monitors.xml /var/lib/gdm/.config/monitors.xml</span><br><span class="line">sudo chown gdm:gdm /var/lib/gdm/.config/monitors.xml</span><br></pre></td></tr></table></figure></li>
+<li>GDMの解像度&#x2F;方向をユーザセッションと同じ設定にする (この方法は不安定になる？)  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp ~/.config/monitors.xml /var/lib/gdm/.config/monitors.xml</span><br><span class="line">sudo chown gdm:gdm /var/lib/gdm/.config/monitors.xml</span><br></pre></td></tr></table></figure></li>
 <li>マルチブート時の時刻ズレ調整  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo timedatectl set-local-rtc true</span><br></pre></td></tr></table></figure></li>
 <li>alias  <figure class="highlight bash"><figcaption><span>~/.bashrc</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo pacman -Syu; sudo pacman -Sc;&#x27;</span></span><br></pre></td></tr></table></figure></li>
 <li>ホームディレクトリの各フォルダ名を英語名に変更  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure></li>
