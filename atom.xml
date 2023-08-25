@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-08-20T05:16:53.000Z</updated>
+  <updated>2023-08-25T08:33:56.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hyprland</title>
+    <link href="https://ktkr3d.github.io/2023/08/25/Hyprland/"/>
+    <id>https://ktkr3d.github.io/2023/08/25/Hyprland/</id>
+    <published>2023-08-25T08:33:56.000Z</published>
+    <updated>2023-08-25T08:33:56.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/hyprland.png&quot;&gt;&lt;br&gt;Arch Linux にHyprland を導入してみました。&lt;br&gt;かなりイケていますが、私に使いこなせるのだろうか。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="arch-linux" scheme="https://ktkr3d.github.io/tags/arch-linux/"/>
+    
+    <category term="hyprland" scheme="https://ktkr3d.github.io/tags/hyprland/"/>
+    
+  </entry>
   
   <entry>
     <title>Arch Linux</title>
@@ -458,25 +477,6 @@
     <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
     
     <category term="vuejs" scheme="https://ktkr3d.github.io/tags/vuejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tauri</title>
-    <link href="https://ktkr3d.github.io/2022/06/19/Tauri/"/>
-    <id>https://ktkr3d.github.io/2022/06/19/Tauri/</id>
-    <published>2022-06-19T13:51:08.000Z</published>
-    <updated>2022-06-19T13:51:08.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/tauri.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/tauri-apps/tauri&quot;&gt;https://github.com/tauri-apps/tauri&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Tauri を試してみました。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="tauri" scheme="https://ktkr3d.github.io/tags/tauri/"/>
     
   </entry>
   

@@ -155,6 +155,35 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-07-06 </div>
+			<div class="article-title"><a href="/2020/07/06/USB-support-to-WSL2/" >USB support to WSL2</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+           
+              <div class="thumbnail"><a href="/2020/07/06/USB-support-to-WSL2/"><img src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" alt="USB support to WSL2"  class="nofancybox"></a>
+           
+		</div>
+	
+	
+		<p><a target="_blank" rel="noopener" href="https://github.com/rpasek/usbip-wsl2-instructions">https://github.com/rpasek/usbip-wsl2-instructions</a><br><a target="_blank" rel="noopener" href="https://github.com/cezanne/usbip-win">https://github.com/cezanne/usbip-win</a><br><a target="_blank" rel="noopener" href="https://snowstar.org/2020/06/14/wsl2-usb-via-usbip/">https://snowstar.org/2020/06/14/wsl2-usb-via-usbip/</a><br>WSL のカーネルをカスタムしてUSB デバイスにアクセスしてみました。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">uname</span> -r -v</span><br><span class="line">4.19.104-microsoft-standard <span class="comment">#1 SMP Mon Jul 6 18:00:19 JST 2020</span></span><br><span class="line">$ lsusb</span><br><span class="line">Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub</span><br><span class="line">Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2020/07/06/USB-support-to-WSL2/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-07-02 </div>
 			<div class="article-title"><a href="/2020/07/02/Ray-tracing-in-Nim-on-WSL/" >Ray tracing in Nim on WSL</a></div>						
 		</h3>
@@ -378,7 +407,7 @@
 	
 	
 		<p>ホストOS(Windows 10) のフォルダをゲストOS(Linux)と共有してみました。</p>
-<div id="googleChart2608"></div>
+<div id="googleChart5255"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -387,7 +416,7 @@
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart2608"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart5255"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -429,29 +458,6 @@
 	
 	</div>
   <a type="button" href="/2020/05/07/APT-Hash-sum-mismatch-error/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2020-05-04 </div>
-			<div class="article-title"><a href="/2020/05/04/Accessing-VMs-with-RDP/" >Accessing VMs with RDP</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/boxes_remote_connect.png" alt="boxes_remote_connect"><br>VirtualBox のRDP 接続を提供する機能を使ってリモートからアクセスしてみました。<br>Linux VMに直接RDP サーバ機能を導入するよりも安定しているように感じました。</p>
-	
-	</div>
-  <a type="button" href="/2020/05/04/Accessing-VMs-with-RDP/#more" class="btn btn-default more">Read More</a>
 </div>
 
            
@@ -505,6 +511,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/25/Hyprland/" ><i class="fa fa-file-o"></i>Hyprland</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/20/Arch-Linux/" ><i class="fa fa-file-o"></i>Arch Linux</a>
       </li>
     
@@ -538,10 +548,6 @@
     
       <li>
         <a href="/2023/02/27/code-server-with-SSL/" ><i class="fa fa-file-o"></i>code-server with SSL</a>
-      </li>
-    
-      <li>
-        <a href="/2022/11/25/WoW-Addon-LoggingChat/" ><i class="fa fa-file-o"></i>WoW Addon - LoggingChat</a>
       </li>
     
   </ul>

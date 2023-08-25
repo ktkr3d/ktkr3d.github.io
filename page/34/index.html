@@ -155,6 +155,38 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-11-21 </div>
+			<div class="article-title"><a href="/2011/11/21/android-x86-3-2-honeycomb/" >Android-x86 3.2 Honeycomb を試してみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/android-x86_3.2.png" alt="android-x86 3.2 honeycomb"></p>
+<p><a target="_blank" rel="noopener" href="http://code.google.com/p/android-x86/downloads/list">http://code.google.com/p/android-x86/downloads/list</a><br><a target="_blank" rel="noopener" href="http://code.google.com/p/android-x86/downloads/detail?name=android-x86-3.2-RC2-asus_laptop.iso">http://code.google.com/p/android-x86/downloads/detail?name=android-x86-3.2-RC2-asus_laptop.iso</a></p>
+<p>Android のx86 ポート、Android-x86 3.2 Honeycomb RC2 のISO イメージが公開されていたので、android-x86-3.2-RC2-asus_laptop.iso を実機(DELL Inspiron Duo)と仮想環境で実行してみた。<br>DELL Inspiron Duo では最大解像度表示(1366x768)、無線LAN接続、日本語表示、サウンド、YouTube での動画再生等が動作した。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">app_68@laptop:/ $ <span class="built_in">uname</span> -a</span><br><span class="line">Linux localhost 3.0.1-android-x86-asus-laptop+ <span class="comment">#3 SMP PREEMPT Sun Nov 13 04:33:58 CST 2011 i686 GNU/Linux</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>update:</strong><br><a href="/images/uploads/2011/11/android-x86_3.2_inspiron_duo.png"><img src="/images/uploads/2011/11/android-x86_3.2_inspiron_duo.png" alt="android-x86 3.2 inspiron duo"></a><br>実機のスクリーンキャプチャは、Wi-Fi 接続してから、Android SDK をインストールしたPC から</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> ADBHOST=192.168.0.4</span><br><span class="line">$ adb devices</span><br><span class="line">* daemon not running. starting it now on port 5037 *</span><br><span class="line">* daemon started successfully *</span><br><span class="line">List of devices attached </span><br><span class="line">emulator-5554	device</span><br><span class="line"></span><br><span class="line">$ ddms</span><br></pre></td></tr></table></figure>
+
+<p>でddms を起動して、「Device」-「Screen Capture…」メニューから取得する。</p>
+
+	
+	</div>
+  <a type="button" href="/2011/11/21/android-x86-3-2-honeycomb/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-11-15 </div>
 			<div class="article-title"><a href="/2011/11/15/android-4-0/" >Android 4.0 をビルドしてみよう（その1）</a></div>						
 		</h3>
@@ -400,33 +432,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-06-27 </div>
-			<div class="article-title"><a href="/2011/06/27/proun-3/" >Proun で遊んでみた3</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/proun_archipelago.png" alt="proun archipelago"></p>
-<p><a target="_blank" rel="noopener" href="http://www.ronimo-games.com/forum/viewtopic.php?f=7&t;=1074&sid;=5db794ee543f3b1f8a0ee10f51774acd">http://www.ronimo-games.com/forum/viewtopic.php?f=7&t;=1074&sid;=5db794ee543f3b1f8a0ee10f51774acd</a></p>
-<p>proun のユーザトラックArchipelago がフォーラムに掲載されていたので遊んでみた。<br>ファンタジーっぽいコースに見えるけど、なかなか難しくておもしろい。<br>しかもこのコースはInspiron duo でも発生していた<a target="_blank" rel="noopener" href="http://www.ronimo-games.com/forum/viewtopic.php?f=7&t=1038&sid=a2b52fd4f493e88335b57fa70b5ba637">このエラー</a>が発生しないみたいなので、ビデオ環境が弱いPC　にも優しいかもしれない。<br>これからもおもしろいコースが増えるといいな。</p>
-<p>クレジットを見ると、Proun はOgre3D で作られているけどサウンドはirrKlang だった。</p>
-
-	
-	</div>
-  <a type="button" href="/2011/06/27/proun-3/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -476,6 +481,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/25/Hyprland/" ><i class="fa fa-file-o"></i>Hyprland</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/20/Arch-Linux/" ><i class="fa fa-file-o"></i>Arch Linux</a>
       </li>
     
@@ -509,10 +518,6 @@
     
       <li>
         <a href="/2023/02/27/code-server-with-SSL/" ><i class="fa fa-file-o"></i>code-server with SSL</a>
-      </li>
-    
-      <li>
-        <a href="/2022/11/25/WoW-Addon-LoggingChat/" ><i class="fa fa-file-o"></i>WoW Addon - LoggingChat</a>
       </li>
     
   </ul>
