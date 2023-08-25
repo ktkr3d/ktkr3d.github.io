@@ -182,6 +182,7 @@
 <code>~/.config/waybar/config</code> に設定</li>
 <li>日本語入力<figure class="highlight ini"><figcaption><span>~/.config/hypy/hyprland.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">exec-once</span> = fcitx5</span><br></pre></td></tr></table></figure></li>
 <li>ボリュームキー設定<figure class="highlight ini"><figcaption><span>~/.config/hypy/hyprland.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">bind</span> = , xf86audioraisevolume, exec, pamixer -i <span class="number">5</span></span><br><span class="line"><span class="attr">bind</span> = , xf86audiolowervolume, exec, pamixer -d <span class="number">5</span></span><br></pre></td></tr></table></figure></li>
+<li>起動時に別ワークスペースで実行<figure class="highlight ini"><figcaption><span>~/.config/hypy/hyprland.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">exec-once</span> = [workspace <span class="number">2</span> silent] google-chrome-stable</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><p>GDM にログインする際、デスクトップ環境に<code>Hyprland</code>を指定します。</p>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><p><code>~/.config/hypr/hyprland.conf</code> に設定されているショートカットを駆使して、主にキーボードで利用します。</p>
