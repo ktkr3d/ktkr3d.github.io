@@ -155,6 +155,80 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2013-03-10 </div>
+			<div class="article-title"><a href="/2013/03/10/xnoise-media-player-0-2-16-mediterraneannight-gtk-theme-2/" >Xnoise Media Player 0.2.16 + MediterraneanNight GTK+ Theme</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/xnoise.png" alt="xnoise media player 0.2.16"></p>
+<h3 id="xnoise"><a href="#xnoise" class="headerlink" title="xnoise"></a>xnoise</h3><p><a target="_blank" rel="noopener" href="http://www.xnoise-media-player.com/">http://www.xnoise-media-player.com/</a><br>xnoise 0.2.16 がリリースされたのでUbuntu 13.04 x86_64 + GNOME Shell 3.7.90 の環境で試してみました。GStreamer を利用した音楽、ビデオ、インターネットストリームの再生が可能で、軽快に動作します。シンプルで整ったデザインになっています。また、コンテキストメニューに登録されている機能(ID3 タグ編集、親フォルダ表示)が便利です。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:shkn/xnoise</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install xnoise</span><br></pre></td></tr></table></figure>
+
+<p><strong>主な機能:</strong></p>
+<ul>
+<li><p>メディアライブラリの高速な検索</p>
+</li>
+<li><p>アルバムアートグリッド表示</p>
+</li>
+<li><p>GStreamer を利用した音楽、ビデオ、ストリーム再生</p>
+</li>
+<li><p>イコライザ(プリセット付)</p>
+</li>
+<li><p>「最近再生された」「最も再生された」スマートプレイリスト</p>
+</li>
+<li><p>ID3 タグ編集</p>
+</li>
+<li><p>自動アルバムアート取得</p>
+</li>
+<li><p>軽量で高速</p>
+</li>
+<li><p>プラグイン(MPRIS、Magnatune、Last.fm、歌詞表示、通知、Ubuntu との連携)</p>
+</li>
+</ul>
+<p><strong>Tips:</strong></p>
+<ul>
+<li><p>アルバムアート表示への切り替えは左上のX ロゴアイコンを押します。</p>
+</li>
+<li><p>インターネットストリームの追加は設定画面でURL を追加します。メイン画面左側のストリームライブラリ一覧に表示されたURL をクリックするとストリームに別名をつけることができます。</p>
+</li>
+<li><p>メニューバーの非表示は設定画面から実行します。(‘Use menu button’ ではわかりにくい…)</p>
+</li>
+<li><p>停止ボタンの非表示は設定画面から実行します。</p>
+</li>
+<li><p>トラックリストの列をカスタマイズするには、列名の上で右クリックして、各項目の表示&#x2F;非表示を切り替えます。</p>
+</li>
+<li><p>音が鳴らない場合は、一度、イコライザを表示してみるとよいかもしれません。</p>
+</li>
+<li><p>日本語化用のja.po を作って(作りかけて)みました。<br><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/xnoise-ja">https://github.com/ktkr3d/xnoise-ja</a></p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ msgfmt -o ja.mo ja.po</span><br><span class="line">$ sudo <span class="built_in">cp</span> ja.mo /usr/share/locale/ja/LC_MESSAGES/xnoise.mo</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h3 id="MediterraneanNight"><a href="#MediterraneanNight" class="headerlink" title="MediterraneanNight"></a>MediterraneanNight</h3><p><a target="_blank" rel="noopener" href="http://gnome-look.org/content/show.php/?content=156782">http://gnome-look.org/content/show.php/?content=156782</a><br>今までGTK+ のテーマにGNOME Shell 標準のAdwaita を利用していましたが、選択箇所の文字が背景色と同じになって読めなくて困っていました。そこで、<a target="_blank" rel="noopener" href="http://gnome-look.org/">http://gnome-look.org/</a> でGTK+ テーマを探したところ、MediterraneanNight がよさそうでしたので、あわせて利用してみました。ダウンロードしたアーカイブを<del>&#x2F;.themes&#x2F; と</del>&#x2F;.local&#x2F;share&#x2F;themes&#x2F; に展開して、gnome-tweak-tool の[テーマ]-[GTK+ テーマ]からテーマを選択して、適用します。<br>なお、このテーマは、GTK3 にunico-engine を、GTK2 にgtk2-engines-murrine とgtk2-engines-pixbuf を使用しますが、Ubuntu ではgtk2-engines-pixbuf がインストールされていませんでしたので、追加しておきます。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install gtk2-engines-pixbuf</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2013/03/10/xnoise-media-player-0-2-16-mediterraneannight-gtk-theme-2/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2013-02-28 </div>
 			<div class="article-title"><a href="/2013/02/28/android-x86-4-2-2/" >Android-x86 4.2.2</a></div>						
 		</h3>
@@ -609,34 +683,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-01-04 </div>
-			<div class="article-title"><a href="/2013/01/04/moc-2-5-0-beta1-patch-r2519r2520/" >moc 2.5.0 beta1 + patch r2519/r2520</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><a target="_blank" rel="noopener" href="http://moc.daper.net/node/850">http://moc.daper.net/node/850</a></p>
-<p>moc (music on console) はコンソールで動作する軽量な音楽プレイヤーです。マルチバイト文字に依存してトリム位置がずれるバグがありましたが、解決(2.5.0 beta1 + patch r2519&#x2F;r2520)されました。これで日本語のパスやタグが入っていてもレイアウトが崩れなくなりました。現時点でのUbuntu のリポジトリに存在するmoc のバージョンは2.5.0 alpha4 + svn20120224-1ubuntu1 ですので、最新のソースを取得して、コンパイル、インストールしてみました。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get build-dep moc</span><br><span class="line">$ svn co svn://daper.net/moc/trunk</span><br><span class="line">$ <span class="built_in">cd</span> trunk</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ ./configure --prefix=/usr</span><br><span class="line">$ make -j4</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
-
-<p>過去の記事<br><a target="_blank" rel="noopener" href="http://ktkr3d.site11.com/2012/05/31/moc-music-on-console/">http://ktkr3d.site11.com/2012/05/31/moc-music-on-console/</a></p>
-
-	
-	</div>
-  <a type="button" href="/2013/01/04/moc-2-5-0-beta1-patch-r2519r2520/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -686,6 +732,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/27/Hyprland-Ags/" ><i class="fa fa-file-o"></i>Hyprland + Ags</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/25/Hyprland/" ><i class="fa fa-file-o"></i>Hyprland</a>
       </li>
     
@@ -719,10 +769,6 @@
     
       <li>
         <a href="/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/" ><i class="fa fa-file-o"></i>Ubuntu 23.04 on Raspberry P...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/27/code-server-with-SSL/" ><i class="fa fa-file-o"></i>code-server with SSL</a>
       </li>
     
   </ul>

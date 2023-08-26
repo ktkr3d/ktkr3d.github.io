@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-08-25T08:33:56.000Z</updated>
+  <updated>2023-08-26T19:23:26.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hyprland + Ags</title>
+    <link href="https://ktkr3d.github.io/2023/08/27/Hyprland-Ags/"/>
+    <id>https://ktkr3d.github.io/2023/08/27/Hyprland-Ags/</id>
+    <published>2023-08-26T19:23:26.000Z</published>
+    <updated>2023-08-26T19:23:26.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/hyprland-ags.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/Aylur/ags&quot;&gt;https://github.com/Aylur/ags&lt;/a&gt;&lt;br&gt;Minibook X のArch Linux &amp;#x2F; Hyprland 環境にAgs を導入してみました。&lt;br&gt;Ags はJavaScript でGTK ウィジェットを定義できます。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="hyprland" scheme="https://ktkr3d.github.io/tags/hyprland/"/>
+    
+    <category term="ags" scheme="https://ktkr3d.github.io/tags/ags/"/>
+    
+  </entry>
   
   <entry>
     <title>Hyprland</title>
@@ -458,27 +477,6 @@
     <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
     
     <category term="vue" scheme="https://ktkr3d.github.io/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Neutralinojs + Vue3</title>
-    <link href="https://ktkr3d.github.io/2022/07/10/Neutralinojs-Vue3/"/>
-    <id>https://ktkr3d.github.io/2022/07/10/Neutralinojs-Vue3/</id>
-    <published>2022-07-10T11:53:55.000Z</published>
-    <updated>2022-07-10T11:53:55.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs-vue3.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-vue&quot;&gt;https://github.com/ktkr3d/neutralinojs-vue&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/neutralinojs/neutralinojs&quot;&gt;https://github.com/neutralinojs/neutralinojs&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://neutralino.js.org/docs/how-to/use-a-frontend-library/&quot;&gt;https://neutralino.js.org/docs/how-to/use-a-frontend-library/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Neutralinojs でVue3 を使ってみました。&lt;br&gt;React を導入する手順を参考にしてVue3 に置き換えてみました。&lt;br&gt;Windows 10 (x64)、Ubuntu 22.04 (x64)、Ubuntu 22.04 (arm64)で動作しました。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
-    
-    <category term="vuejs" scheme="https://ktkr3d.github.io/tags/vuejs/"/>
     
   </entry>
   

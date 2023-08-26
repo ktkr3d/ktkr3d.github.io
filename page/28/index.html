@@ -155,6 +155,34 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2013-01-04 </div>
+			<div class="article-title"><a href="/2013/01/04/moc-2-5-0-beta1-patch-r2519r2520/" >moc 2.5.0 beta1 + patch r2519/r2520</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><a target="_blank" rel="noopener" href="http://moc.daper.net/node/850">http://moc.daper.net/node/850</a></p>
+<p>moc (music on console) はコンソールで動作する軽量な音楽プレイヤーです。マルチバイト文字に依存してトリム位置がずれるバグがありましたが、解決(2.5.0 beta1 + patch r2519&#x2F;r2520)されました。これで日本語のパスやタグが入っていてもレイアウトが崩れなくなりました。現時点でのUbuntu のリポジトリに存在するmoc のバージョンは2.5.0 alpha4 + svn20120224-1ubuntu1 ですので、最新のソースを取得して、コンパイル、インストールしてみました。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get build-dep moc</span><br><span class="line">$ svn co svn://daper.net/moc/trunk</span><br><span class="line">$ <span class="built_in">cd</span> trunk</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ ./configure --prefix=/usr</span><br><span class="line">$ make -j4</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<p>過去の記事<br><a target="_blank" rel="noopener" href="http://ktkr3d.site11.com/2012/05/31/moc-music-on-console/">http://ktkr3d.site11.com/2012/05/31/moc-music-on-console/</a></p>
+
+	
+	</div>
+  <a type="button" href="/2013/01/04/moc-2-5-0-beta1-patch-r2519r2520/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-12-31 </div>
 			<div class="article-title"><a href="/2012/12/31/move-the-hot-corner-of-the-message-tray/" >Move the hot corner of the message tray</a></div>						
 		</h3>
@@ -688,33 +716,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-10-02 </div>
-			<div class="article-title"><a href="/2012/10/02/vlc-for-android-x86/" >VLC for Android-x86</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/galaxias_vlc_for_android-x86.png" alt="vlc for android-x86"><br><a target="_blank" rel="noopener" href="http://nightlies.videolan.org/build/android-x86/">http://nightlies.videolan.org/build/android-x86/</a></p>
-<p>VLC for Android-x86 のデバッグ版が公開されていたので、使ってみました。実行環境は、Android-x86 4.0.4 RC2 tegav2 ビルドです。</p>
-<p>ビルドする手順は以下のようです。<br><a target="_blank" rel="noopener" href="http://wiki.videolan.org/AndroidCompile">http://wiki.videolan.org/AndroidCompile</a></p>
-<p><strong>EDIT:</strong><br>VLC だと760p も全く問題なく再生できました。音量調節は上下にフリックします。</p>
-
-	
-	</div>
-  <a type="button" href="/2012/10/02/vlc-for-android-x86/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -764,6 +765,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/27/Hyprland-Ags/" ><i class="fa fa-file-o"></i>Hyprland + Ags</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/25/Hyprland/" ><i class="fa fa-file-o"></i>Hyprland</a>
       </li>
     
@@ -797,10 +802,6 @@
     
       <li>
         <a href="/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/" ><i class="fa fa-file-o"></i>Ubuntu 23.04 on Raspberry P...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/27/code-server-with-SSL/" ><i class="fa fa-file-o"></i>code-server with SSL</a>
       </li>
     
   </ul>

@@ -155,6 +155,37 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-05-08 </div>
+			<div class="article-title"><a href="/2011/05/08/hex-a-hop-e381a7e9818ae38293e381a7e381bfe3819f/" >Hex-a-Hop で遊んでみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/Hex-a-hop_bokensha.png" alt="Hex-a-Hop"><br><img src="/images/Hex-a-hop.png" alt="Hex-a-Hop"><br><a target="_blank" rel="noopener" href="http://hexahop.sourceforge.net/">http://hexahop.sourceforge.net/</a><br><a target="_blank" rel="noopener" href="http://www.omgubuntu.co.uk/2011/05/download-of-the-week/">http://www.omgubuntu.co.uk/2011/05/download-of-the-week/</a></p>
+<p>パズルゲームHex-a-Hop で遊んでみた。マウスかQWEASD キーで移動。U キーでアンドゥ。ヘルプ画面は上下矢印キーでページ移動。紫色のタイルはトランポリン。レベルをクリアすると、マップ画面で次のレベルを選べるようになる。</p>
+<p>Ubuntu でのインストールは、</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install hex-a-hop</span><br></pre></td></tr></table></figure>
+
+<p>実行するには、</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ /usr/games/hex-a-hop</span><br></pre></td></tr></table></figure>
+
+<p>&#x2F;usr&#x2F;games&#x2F; にインストールされるので&#x2F;usr&#x2F;games&#x2F; にパスを通しておくか、&#x2F;usr&#x2F;share&#x2F;applications&#x2F;hex-a-hop.desktop のEXEC&#x3D; 行を絶対パス指定にするといいかも。</p>
+	
+	</div>
+  <a type="button" href="/2011/05/08/hex-a-hop-e381a7e9818ae38293e381a7e381bfe3819f/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-05-06 </div>
 			<div class="article-title"><a href="/2011/05/06/burg-e38292e8a9a6e38197e381a6e381bfe3819f/" >BURG を試してみた</a></div>						
 		</h3>
@@ -476,40 +507,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-04-03 </div>
-			<div class="article-title"><a href="/2011/04/03/inspiron-duo-e381a7alsa/" >Inspiron duo でALSA</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><a target="_blank" rel="noopener" href="http://ubuntuforums.org/showthread.php?t=1658635">http://ubuntuforums.org/showthread.php?t=1658635</a></p>
-<p>Inspiron duo にLinux をインストールしてイヤフォンから音が出ないので調べてみたら、Ubuntu のフォーラムに解決方法が掲載されていた。model をdell とかdell-laptop にしても治らなかったのに、ideapad で解決するとは…</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo gedit /etc/modprobe.d/alsa-base.conf</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>options snd-hda-intel model&#x3D;ideapad</p>
-</blockquote>
-<p>Fedora の場合は、&#x2F;etc&#x2F;modprobe.d&#x2F;dist-alsa.conf を修正。</p>
-<p>他にもタッチスクリーンでのマルチタッチの設定とか、画面回転の設定とかがあるので試してみよう!!</p>
-
-	
-	</div>
-  <a type="button" href="/2011/04/03/inspiron-duo-e381a7alsa/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -559,6 +556,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/27/Hyprland-Ags/" ><i class="fa fa-file-o"></i>Hyprland + Ags</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/25/Hyprland/" ><i class="fa fa-file-o"></i>Hyprland</a>
       </li>
     
@@ -592,10 +593,6 @@
     
       <li>
         <a href="/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/" ><i class="fa fa-file-o"></i>Ubuntu 23.04 on Raspberry P...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/27/code-server-with-SSL/" ><i class="fa fa-file-o"></i>code-server with SSL</a>
       </li>
     
   </ul>

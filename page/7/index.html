@@ -155,6 +155,40 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2020-05-07 </div>
+			<div class="article-title"><a href="/2020/05/07/APT-Hash-sum-mismatch-error/" >APT Hash Sum mismatch error</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ubuntu@ubuntu:~$ sudo apt update</span><br><span class="line">...</span><br><span class="line">Get:4 http://jp.archive.ubuntu.com/ubuntu focal/main i386 Packages [718 kB]    </span><br><span class="line">Err:4 http://jp.archive.ubuntu.com/ubuntu focal/main i386 Packages</span><br><span class="line">  Hash Sum mismatch</span><br><span class="line">  Hashes of expected file:</span><br><span class="line">   - Filesize:4216000 [weak]</span><br><span class="line">   - SHA256:5f5fa48d499be259adcdd1d6dea4e6588a3473e0290460ead99ea945b141815d</span><br><span class="line">   - SHA1:8f477673f5aa0ca860273e9a0ffc53515baa1032 [weak]</span><br><span class="line">   - MD5Sum:021fb704764554808a9ec3b18e16599e [weak]</span><br><span class="line">  Hashes of received file:</span><br><span class="line">   - SHA256:4f406937d7384fd444d236fbf9bc6efd3689c56a27adce332cf302a7b10b3467</span><br><span class="line">   - SHA1:4b0bf940193a7714309c27f1326cdd2b6b87e3f1 [weak]</span><br><span class="line">   - MD5Sum:021fb704764554808a9ec3b18e16599e [weak]</span><br><span class="line">   - Filesize:4216000 [weak]</span><br><span class="line">  Last modification reported: Thu, 23 Apr 2020 16:40:26 +0000</span><br><span class="line">  Release file created at: Thu, 23 Apr 2020 17:33:17 +0000</span><br></pre></td></tr></table></figure>
+
+<p>VirtualBox 上のVM で<code>sudo apt update</code>や<code>sudo apt upgrade</code> をした際にHash Sum mismatch エラーが出力されました。MD5 は一致していますが、SHA256、SHA-1 が一致しない場合があるようです。<br>簡単に起こるとは考えにくいですが再現性があります。これは何に起因した事象なのでしょう。<br>手動でダウンロードしたファイルのハッシュ値は期待していたものでした。</p>
+<h4 id="2020-05-10-追記"><a href="#2020-05-10-追記" class="headerlink" title="2020-05-10 追記"></a>2020-05-10 追記</h4><p><img src="/images/virtualbox_ubuntu_boot_with_wsl.png" alt="virtualbox_ubuntu_boot_with_wsl"><br>以下を有効にしていると、そもそも起動用ISO のチェック時にエラーが発生していました。</p>
+<ul>
+<li>Linux 用 Windows サブシステム (Windows Subsystem for Linux)</li>
+<li>仮想マシンプラットフォーム (Virtual Machine Platform)</li>
+</ul>
+<p>上記を無効にするとエラーは無くなり、Hash Sum mismatch も解決しました。<br>VM 初期構築時に上記を一時的に無効にすることがワークアラウンドのようです。</p>
+<h4 id="2020-05-28-追記"><a href="#2020-05-28-追記" class="headerlink" title="2020-05-28 追記"></a>2020-05-28 追記</h4><p><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/ktkr3d.github.io/issues/1">https://github.com/ktkr3d/ktkr3d.github.io/issues/1</a><br>解決策を教えていただきました。ありがとうございます！</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo bash</span><br><span class="line"><span class="comment"># mkdir /etc/gcrypt</span></span><br><span class="line"><span class="comment"># echo all &gt; /etc/gcrypt/hwf.deny</span></span><br></pre></td></tr></table></figure>
+<p><code>apt update</code>も<code>apt upgrade</code>も正常に実行できました。<br>この事象はgcrypt20 モジュールに起因していたようです。</p>
+	
+	</div>
+  <a type="button" href="/2020/05/07/APT-Hash-sum-mismatch-error/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2020-05-04 </div>
 			<div class="article-title"><a href="/2020/05/04/Accessing-VMs-with-RDP/" >Accessing VMs with RDP</a></div>						
 		</h3>
@@ -386,29 +420,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2019-12-21 </div>
-			<div class="article-title"><a href="/2019/12/21/Visual-Studio-Code-Remote-SSH-aarch64/" >Visual Studio Code Remote - SSH / aarch64</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/vscode_remote_ssh_aarch64.png" alt="vscode remote ssh aarch64"><br><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/remote/ssh">https://code.visualstudio.com/docs/remote/ssh</a><br>Visual Studio Code のRemote SSH でaarch64 がサポートされていたので、Rasperry Pi 4 のUbuntu focal aarch64 に接続してみました。</p>
-	
-	</div>
-  <a type="button" href="/2019/12/21/Visual-Studio-Code-Remote-SSH-aarch64/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -458,6 +469,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/08/27/Hyprland-Ags/" ><i class="fa fa-file-o"></i>Hyprland + Ags</a>
+      </li>
+    
+      <li>
         <a href="/2023/08/25/Hyprland/" ><i class="fa fa-file-o"></i>Hyprland</a>
       </li>
     
@@ -491,10 +506,6 @@
     
       <li>
         <a href="/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/" ><i class="fa fa-file-o"></i>Ubuntu 23.04 on Raspberry P...</a>
-      </li>
-    
-      <li>
-        <a href="/2023/02/27/code-server-with-SSL/" ><i class="fa fa-file-o"></i>code-server with SSL</a>
       </li>
     
   </ul>
