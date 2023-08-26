@@ -158,31 +158,27 @@
 	  <p><img src="/images/hyprland-ags.png"><br><a target="_blank" rel="noopener" href="https://github.com/Aylur/ags">https://github.com/Aylur/ags</a><br>Minibook X のArch Linux &#x2F; Hyprland 環境にAgs を導入してみました。<br>Ags はJavaScript でGTK ウィジェットを定義できます。</p>
 <span id="more"></span>
 
-<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><p><a target="_blank" rel="noopener" href="https://github.com/Aylur/ags/wiki">https://github.com/Aylur/ags/wiki</a><br><a target="_blank" rel="noopener" href="https://github.com/Aylur/dotfiles">https://github.com/Aylur/dotfiles</a></p>
-<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
-<li>Ags のインストール<br>  <a target="_blank" rel="noopener" href="https://github.com/Aylur/ags/wiki/installation">https://github.com/Aylur/ags/wiki/installation</a><br>  <code>ags</code>パッケージではないので注意</li>
-</ol>
-<h4 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h4><ol>
-<li><code>https://github.com/Aylur/dotfiles</code> を利用  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/Aylur/dotfiles.git</span><br><span class="line">cd dotfiles</span><br><span class="line">cp -r .config/ags $HOME/.config/ags</span><br><span class="line">cp -r .config/hypr $HOME/.config/hypr</span><br></pre></td></tr></table></figure></li>
-<li><code>~/.config/hypr/</code>配下のファイルをカスタマイズ</li>
-</ol>
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><p>以下の構成にします。</p>
 <ul>
-<li>binds.conf<br>キーバインドの指定(確認必須)</li>
-<li>monitors.conf<br>モニタの指定(修正必須)</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Aylur/ags/wiki">https://github.com/Aylur/ags/wiki</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Aylur/dotfiles">https://github.com/Aylur/dotfiles</a></li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="💿インストール"><a href="#💿インストール" class="headerlink" title="💿インストール"></a>💿インストール</h4><ol>
+<li>Ags のインストール<br>  <a target="_blank" rel="noopener" href="https://github.com/Aylur/ags/wiki/installation">https://github.com/Aylur/ags/wiki/installation</a><br>  ⚠️リポジトリの<code>ags</code>パッケージではないので注意</li>
+</ol>
+<h4 id="💻環境設定"><a href="#💻環境設定" class="headerlink" title="💻環境設定"></a>💻環境設定</h4><ol>
+<li><code>https://github.com/Aylur/dotfiles</code> を利用  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/Aylur/dotfiles.git</span><br><span class="line">cd dotfiles</span><br><span class="line">cp -r .config/ags $HOME/.config/ags</span><br><span class="line">cp -r .config/hypr $HOME/.config/hypr</span><br></pre></td></tr></table></figure></li>
+<li><code>~/.config/hypr/</code>配下のファイルをカスタマイズ<ul>
+<li>binds.conf<br>キーバインドの指定 (確認必須)</li>
+<li>monitors.conf<br>モニタの指定 (修正必須)</li>
 <li>rules.conf<br>ウィンドウルールの指定</li>
-<li>settings.conf<br>各種設定(レイアウト、キーボード、等)の指定(修正必須)</li>
-<li>startup.conf<br>自動起動の指定(確認必須)</li>
+<li>settings.conf<br>各種設定(レイアウト、キーボード、等)の指定 (修正必須)</li>
+<li>startup.conf<br>自動起動の指定 (確認必須)</li>
 <li>theme.conf<br>テーマの指定</li>
 </ul>
-<ol start="3">
-<li><code>~/.config/ags/</code>配下のファイルをカスタマイズ</li>
-</ol>
-<ul>
-<li><code>layouts/widgets/dock.js</code> の<code>pinned</code> にお気に入りを指定</li>
-</ul>
-<ol start="4">
-<li><code>~/.config/hypr/_hyperland.conf</code> で<code>~/.config/hypr/hyperland.conf</code> を置き換える</li>
-<li>Ags の設定を変更した場合は<code>CTRL</code>+<code>SHIFT</code>+<code>R</code>でリロード</li>
+</li>
+<li><code>~/.config/ags/</code>配下のファイルをカスタマイズ<br>  <code>layouts/widgets/dock.js</code> の<code>pinned</code> にお気に入りアプリを設定する。<br>  Ags の設定を変更した場合は<code>CTRL</code>+<code>SHIFT</code>+<code>R</code>でリロードする。</li>
+<li><code>~/.config/hypr/_hyperland.conf</code> で<code>~/.config/hypr/hyperland.conf</code> を置換<br>  既存の設定はバックアップしておく。<br>  ここでAgs が有効になる。</li>
 <li>テーマ等設定<br>  ステータスバー右上のギアアイコンをクリックして設定。<br>  ダイアログは<code>Alt</code>+<code>Q</code>で閉じる。</li>
 </ol>
 	  
@@ -191,7 +187,7 @@
 	<!-- related posts -->
 	<section id="related_posts">
 	<h2 class="title">関連記事</h2>
-	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2023/08/25/Hyprland/" title="Hyprland" rel="bookmark">Hyprland</a></h3></div></li></ul>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2023/08/25/Hyprland/" title="Hyprland" rel="bookmark">Hyprland</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2023/08/20/Arch-Linux/" title="Arch Linux" rel="bookmark">Arch Linux</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2023/08/08/CHUWI-Minibook-X-N100/" title="CHUWI MiniBook X N100" rel="bookmark">CHUWI MiniBook X N100</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/" title="MiniBook X N100 - WoW Raid Try" rel="bookmark">MiniBook X N100 - WoW Raid Try</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/" title="Minecraft on MiniBook X N100" rel="bookmark">Minecraft on MiniBook X N100</a></h3></div></li></ul>
 	</section>
 
 	<!-- recommended posts -->
@@ -261,7 +257,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/hyprland/">hyprland<span>2</span></a></li> <li><a href="/tags/ags/">ags<span>1</span></a></li>
+  <li><a href="/tags/minibook-x/">minibook-x<span>6</span></a></li> <li><a href="/tags/arch-linux/">arch-linux<span>3</span></a></li> <li><a href="/tags/hyprland/">hyprland<span>2</span></a></li> <li><a href="/tags/ags/">ags<span>1</span></a></li>
     </ul>
 	</div>
 	
