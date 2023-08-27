@@ -182,10 +182,22 @@
 <li>theme.conf<br>テーマの指定</li>
 </ul>
 </li>
-<li><code>~/.config/ags/</code>配下のファイルをカスタマイズ<br>  <code>layouts/widgets/dock.js</code> の<code>pinned</code> にお気に入りアプリを設定する。<br>  Ags の設定を変更した場合は<code>CTRL</code>+<code>SHIFT</code>+<code>R</code>でリロードする。</li>
+<li><code>~/.config/ags/</code>配下のファイルをカスタマイズ</li>
+</ol>
+<ul>
+<li><code>layouts/widgets/dock.js</code> の<code>pinned</code> にお気に入りアプリを設定する。</li>
+<li><code>modules/clock.js</code>で日時の書式を変更する。<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title class_">Clock</span> = (&#123;</span><br><span class="line">    format = <span class="string">&#x27;%m/%d (%a) %H:%M&#x27;</span>,</span><br></pre></td></tr></table></figure></li>
+<li>Ags の設定を変更した場合は<code>CTRL</code>+<code>SHIFT</code>+<code>R</code>でリロードする。</li>
+</ul>
+<ol start="4">
 <li><code>~/.config/hypr/_hyperland.conf</code> で<code>~/.config/hypr/hyperland.conf</code> を置換<br>  既存の設定はバックアップしておく。<br>  ここでAgs が有効になる。</li>
 <li>テーマ等設定<br>  ステータスバー右上のギアアイコンをクリックして設定。<br>  ダイアログは<code>Alt</code>+<code>Q</code>で閉じる。</li>
 </ol>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
+<li>操作は<code>~/.config/hypr/binds.conf</code>を参照する</li>
+<li>MPRIS 対応のプレイヤー、ブラウザの動画等、曲名表示に反映される</li>
+<li>複数ディスプレイにも対応している</li>
+</ul>
 	  
 	</div>
 
