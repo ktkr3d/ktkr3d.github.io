@@ -374,14 +374,7 @@
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3_mmd_audio4.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_mmd_audio.html&quot;&gt;https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_mmd_audio.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;MMD の音声再生付きサンプルが掲載されていたのでNuxt3 に移植してみました。&lt;br&gt;カメラ用のVMDでカメラアングルが目まぐるしく展開します。&lt;br&gt;PMDファイルとVMDファイルは以下の階層に配置します。&lt;br&gt;ファイル名は半角英数字にします。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;PMX&amp;#x2F;nene_BEA.pmx&lt;/li&gt;
-&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;texture&amp;#x2F;TGA&amp;#x2F;*&lt;br&gt;以下はthree.js リポジトリに含まれているファイルを利用&lt;/li&gt;
-&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;vmds&amp;#x2F;wavefile_v2.vmd&lt;/li&gt;
-&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;vmds&amp;#x2F;wavefile_camera.vmd&lt;/li&gt;
-&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;audios&amp;#x2F;wavefile_short.mp3&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;MMD の音声再生付きサンプルが掲載されていたのでNuxt3 に移植してみました。&lt;br&gt;カメラ用のVMDでカメラアングルが目まぐるしく展開します。&lt;/p&gt;
 &lt;p&gt;利用させていただいたデータ。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PMD: hololive さん、桃鈴ねね公式mmd_ver1.0&lt;/li&gt;
