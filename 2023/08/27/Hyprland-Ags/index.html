@@ -208,6 +208,8 @@
 <li>自動起動に設定する場合は<code>~/.local/share/applications/FFPWA*.desktop</code>の<code>Exec</code>行のコマンドを参考に<code>~/.config/hypr/startup.conf</code>の<code>exec-once</code>に設定する。</li>
 </ul>
 </li>
+<li>デスクトップ時計の削除  <figure class="highlight javascript"><figcaption><span>~/.config/ags/layouts/widgets/desktop.js</span></figcaption><table><tr><td class="code"><pre><span class="line">    <span class="attr">onMiddleClick</span>: print,</span><br><span class="line">  <span class="comment">/*</span></span><br><span class="line"><span class="comment">  child: Box(&#123;</span></span><br><span class="line"><span class="comment">      vertical: true,</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  ...</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">      ],</span></span><br><span class="line"><span class="comment">  &#125;),</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">&#125;);  </span><br></pre></td></tr></table></figure></li>
+<li>FPS の向上<br>  drop_shadow を無効化することによりFPS が向上する！  <figure class="highlight css"><figcaption><span>~/.conf/hypr/theme.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">decoration &#123;</span><br><span class="line">  drop_shadow = false</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>操作は<code>~/.config/hypr/binds.conf</code>を参照する<br>私の主なキーバインド設定<table>
