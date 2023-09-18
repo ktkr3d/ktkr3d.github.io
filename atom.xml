@@ -24,7 +24,13 @@
     <updated>2023-08-26T19:23:26.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/hyprland-ags.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/Aylur/ags&quot;&gt;https://github.com/Aylur/ags&lt;/a&gt;&lt;br&gt;MiniBook X のArch Linux &amp;#x2F; Hyprland 環境にAgs を導入してみました。&lt;br&gt;Ags はJavaScript でGTK ウィジェットを定義できます。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/hyprland-ags.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/Aylur/ags&quot;&gt;https://github.com/Aylur/ags&lt;/a&gt;&lt;br&gt;MiniBook X のArch Linux &amp;#x2F; Hyprland 環境にAgs を導入してみました。&lt;br&gt;Ags はJavaScript でGTK ウィジェットを定義できます。&lt;/p&gt;
+&lt;h4 id=&quot;2023-09-18-更新&quot;&gt;&lt;a href=&quot;#2023-09-18-更新&quot; class=&quot;headerlink&quot; title=&quot;2023-09-18 更新&quot;&gt;&lt;/a&gt;2023-09-18 更新&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Arch Linux, Hyperland, ags, VSCode, Google Chrome, Cava, fastfetch, bashtop, nginx, Three.js, ammo.js&lt;/li&gt;
+&lt;li&gt;Minibook X N100 -&amp;gt; Type-C to HDMI -&amp;gt; HDMI Capture -&amp;gt; Hi10 Go N5100 -&amp;gt; OBS Studio&lt;/li&gt;
+&lt;li&gt;音無しMP4 16MB 1分35秒&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;video src=&quot;/images/arch-hyprland.mp4&quot; controls&gt;&lt;/video&gt;&lt;/p&gt;</summary>
     
     
     
