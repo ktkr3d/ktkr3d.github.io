@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Forge - GNOME Shell extension</title>
+      <link href="/2023/10/15/Forge-GNOME-Shell-extension/"/>
+      <url>/2023/10/15/Forge-GNOME-Shell-extension/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://extensions.gnome.org/extension/4481/forge/">https://extensions.gnome.org/extension/4481/forge/</a><br><a href="https://github.com/forge-ext/forge">https://github.com/forge-ext/forge</a><br><img src="/images/forge_gnome_shell_extension.png"></p><p>Forge はタイリングウィンドウ制御をしてくれるGNOME Shell 拡張機能です。<br>GNOME Shell のままウィンドウマネージャを切り替えることなくタイリングを利用できるので環境構築がとても簡単です。</p><span id="more"></span><h3 id="よく使うキーボードショートカット"><a href="#よく使うキーボードショートカット" class="headerlink" title="よく使うキーボードショートカット"></a>よく使うキーボードショートカット</h3><table><thead><tr><th align="left">Shortcut</th><th align="left">Action</th></tr></thead><tbody><tr><td align="left"><code>&lt;Super&gt; + period</code></td><td align="left">Forge の設定を開く</td></tr><tr><td align="left"><code>&lt;Super&gt; + w</code></td><td align="left">タイリングモードの切り替え</td></tr></tbody></table><h3 id="設定変更"><a href="#設定変更" class="headerlink" title="設定変更"></a>設定変更</h3><p>タスクバーの端の設定に組み込まれています。<br>クリックしてTiling から設定変更できます。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hyprland + Ags</title>
       <link href="/2023/08/27/Hyprland-Ags/"/>
       <url>/2023/08/27/Hyprland-Ags/</url>

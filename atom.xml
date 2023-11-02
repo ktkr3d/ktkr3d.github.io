@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-08-26T19:23:26.000Z</updated>
+  <updated>2023-10-14T23:43:37.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Forge - GNOME Shell extension</title>
+    <link href="https://ktkr3d.github.io/2023/10/15/Forge-GNOME-Shell-extension/"/>
+    <id>https://ktkr3d.github.io/2023/10/15/Forge-GNOME-Shell-extension/</id>
+    <published>2023-10-14T23:43:37.000Z</published>
+    <updated>2023-10-14T23:43:37.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/4481/forge/&quot;&gt;https://extensions.gnome.org/extension/4481/forge/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/forge-ext/forge&quot;&gt;https://github.com/forge-ext/forge&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;/images/forge_gnome_shell_extension.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Forge はタイリングウィンドウ制御をしてくれるGNOME Shell 拡張機能です。&lt;br&gt;GNOME Shell のままウィンドウマネージャを切り替えることなくタイリングを利用できるので環境構築がとても簡単です。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hyprland + Ags</title>
@@ -458,28 +474,6 @@
     <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
     
     <category term="vuetify" scheme="https://ktkr3d.github.io/tags/vuetify/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Neutralinojs + Nuxt3</title>
-    <link href="https://ktkr3d.github.io/2022/07/12/Neutralinojs-Nuxt3/"/>
-    <id>https://ktkr3d.github.io/2022/07/12/Neutralinojs-Nuxt3/</id>
-    <published>2022-07-12T11:46:34.000Z</published>
-    <updated>2022-07-12T11:46:34.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/neutralinojs/neutralinojs&quot;&gt;https://github.com/neutralinojs/neutralinojs&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://v3.nuxtjs.org/&quot;&gt;https://v3.nuxtjs.org/&lt;/a&gt;&lt;br&gt;Neutralinojs でNuxt3 を使ってみました。&lt;br&gt;Windows 10 (x64)、Ubuntu 22.04 (x64)、Ubuntu 22.04 (arm64)で動作しました。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
-    
-    <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
-    
-    <category term="vue" scheme="https://ktkr3d.github.io/tags/vue/"/>
     
   </entry>
   
