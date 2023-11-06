@@ -148,7 +148,9 @@
     <updated>2023-08-08T07:30:00.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://ae01.alicdn.com/kf/S26d8f55afec54e329da770e143340e3ac.jpg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://store.chuwi.jp/products/minibook-x-n100&quot;&gt;https://store.chuwi.jp/products/minibook-x-n100&lt;/a&gt;&lt;br&gt;CHUWI MiniBook X N100が届いたから環境設定と動作確認をしてみよう。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://ae01.alicdn.com/kf/S26d8f55afec54e329da770e143340e3ac.jpg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://store.chuwi.jp/products/minibook-x-n100&quot;&gt;https://store.chuwi.jp/products/minibook-x-n100&lt;/a&gt;&lt;br&gt;CHUWI MiniBook X N100が届いたから環境設定と動作確認をしてみよう。&lt;/p&gt;
+&lt;h4 id=&quot;2023-11-06-更新&quot;&gt;&lt;a href=&quot;#2023-11-06-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;11&amp;#x2F;06 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;11&amp;#x2F;06 更新&lt;/h4&gt;&lt;p&gt;Kernel 6.6 を導入するとサスペンドからの復帰時の画面の乱れは解消した。&lt;br&gt;ただし、Bluetooth が無効になったので以下のようにシンボリックリンクを張り直す必要があった。&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd /usr/lib/firmware/intel/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo unlink ibt-0040-4150.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo unlink ibt-1040-4150.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo ln -s ibt-1040-4150.ddc.zst ibt-0040-1050.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo ln -s ibt-1040-4150.sfi.zst ibt-0040-1050.sfi.zst&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
