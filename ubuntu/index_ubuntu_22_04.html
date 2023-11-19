@@ -194,18 +194,12 @@ LANG=C xdg">
 <figure class="highlight yaml"><figcaption><span>50-cloud-init.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">ethernets:</span></span><br><span class="line">    <span class="attr">eth0:</span></span><br><span class="line">      <span class="attr">dhcp4:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">dhcp6:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.11</span><span class="number">.7</span><span class="string">/24</span>]</span><br><span class="line">      <span class="attr">routes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">to:</span> <span class="string">default</span></span><br><span class="line">          <span class="attr">via:</span> <span class="number">192.168</span><span class="number">.11</span><span class="number">.1</span></span><br><span class="line">      <span class="attr">nameservers:</span></span><br><span class="line">        <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.11</span><span class="number">.1</span>]</span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure></li>
 <li><p>外部からのRDP接続を許可する場合</p>
-<ul>
-<li>XRDP を使わない方法 🆕<br>gnome-control-center から設定</li>
-<li>XRDP を使う方法<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install xrdp</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install xrdp</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><figcaption><span>/etc/xrdp/startwm.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">unset</span> DBUS_SESSION_BUS_ADDRESS</span><br><span class="line"><span class="built_in">exec</span> gnome-session</span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> -x /etc/X11/Xsession &amp;&amp; <span class="built_in">exec</span> /etc/X11/Xsession</span><br><span class="line"><span class="built_in">exec</span> /bin/sh /etc/X11/Xsession</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> --now xrdp</span><br></pre></td></tr></table></figure></li>
-</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> --now xrdp</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>GDMの解像度をユーザセッションの解像度と同じにする場合</p>
-<ul>
-<li>GDM Settings を使う方法 🆕<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install gdm-settings</span><br></pre></td></tr></table></figure></li>
-<li>GDM Settings を使わない方法<br><code>設定</code>-<code>ディスプレイ</code> で解像度を適用した後で以下を実行する。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> ~/.config/monitors.xml /var/lib/gdm3/.config/monitors.xml</span><br><span class="line">sudo <span class="built_in">chown</span> gdm:gdm /var/lib/gdm3/.config/monitors.xml</span><br></pre></td></tr></table></figure></li>
-</ul>
+<li><p>GDMの解像度をユーザセッションの解像度と同じにする場合<br><code>設定</code>-<code>ディスプレイ</code> で解像度を適用した後で以下を実行する。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> ~/.config/monitors.xml /var/lib/gdm3/.config/monitors.xml</span><br><span class="line">sudo <span class="built_in">chown</span> gdm:gdm /var/lib/gdm3/.config/monitors.xml</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>オフライン環境でISOイメージからパッケージを導入する場合</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mkdir /media/cdrom</span><br><span class="line">sudo mount -o loop -t iso9660 DVD1.iso /media/cdrom</span><br><span class="line">sudo apt-cdrom add -m</span><br></pre></td></tr></table></figure>
@@ -214,11 +208,7 @@ LANG=C xdg">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install libnss3-tools</span><br><span class="line">certutil -d sql:<span class="variable">$HOME</span>/.pki/nssdb -A -t <span class="string">&quot;P,,&quot;</span> -n <span class="string">&quot;My Root CA1&quot;</span> -i <span class="string">&quot;rootCA.pem&quot;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>コーディング用固定幅フォントのインストール<br><a target="_blank" rel="noopener" href="https://github.com/adobe-fonts/source-han-code-jp/releases">https://github.com/adobe-fonts/source-han-code-jp/releases</a><br><code>$HOME/.fonts/SourceHanCodeJP.ttc</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fc-cache -fv</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Linux Kernel Update</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install mainline</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mainline-gtk</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fc-cache -fv</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="GNOME-Shell-関連"><a href="#GNOME-Shell-関連" class="headerlink" title="GNOME Shell 関連"></a>GNOME Shell 関連</h2><ul>
 <li>GNOME Shell 拡張連携パッケージ<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install -y chrome-gnome-shell gnome-tweaks</span><br></pre></td></tr></table></figure></li>
@@ -231,6 +221,15 @@ LANG=C xdg">
 </ul>
 <h2 id="ブラウザ拡張"><a href="#ブラウザ拡張" class="headerlink" title="ブラウザ拡張"></a>ブラウザ拡張</h2><ul>
 <li>read.crx2<br><a target="_blank" rel="noopener" href="https://readcrx-2.github.io/read.crx-2/">https://readcrx-2.github.io/read.crx-2/</a><figure class="highlight css"><figcaption><span>ユーザCSS</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">article</span> &#123;</span><br><span class="line">  <span class="attribute">border-top</span>: dotted <span class="number">1px</span> <span class="number">#000000</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#FFFFEE</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Flatpak-アプリケーションパッケージ"><a href="#Flatpak-アプリケーションパッケージ" class="headerlink" title="Flatpak アプリケーションパッケージ"></a>Flatpak アプリケーションパッケージ</h2><ul>
+<li>Flatpak の準備<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install flatpak gnome-software-plugin-flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
+<li>Update<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak update</span><br></pre></td></tr></table></figure></li>
+<li>Audacious<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/org.atheme.audacious">https://flathub.org/apps/org.atheme.audacious</a></li>
+<li>Gimp<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/org.gimp.GIMP">https://flathub.org/apps/org.gimp.GIMP</a></li>
+<li>Google Chrome<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/com.google.Chrome">https://flathub.org/apps/com.google.Chrome</a><br>PWA には<code>$HOME/.local/share/applications/</code>, <code>$HOME/.local/share/icons/</code> にアクセス権が必要<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak override --user --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.google.Chrome</span><br></pre></td></tr></table></figure></li>
+<li>Kodi<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/tv.kodi.Kodi">https://flathub.org/apps/tv.kodi.Kodi</a></li>
+<li>Visual Studio Code<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/com.visualstudio.code">https://flathub.org/apps/com.visualstudio.code</a></li>
 </ul>
 <h2 id="基本パッケージ"><a href="#基本パッケージ" class="headerlink" title="基本パッケージ"></a>基本パッケージ</h2><ul>
 <li>curl</li>
@@ -263,15 +262,6 @@ LANG=C xdg">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
 <li><p>Unity 3D<br><a target="_blank" rel="noopener" href="http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/">http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/</a> の最新トピック<br><a href="http://ktkr3d.github.io/2015/08/30/Unity-5-Standard-Assets-Example-Project-on-Linux/">http://ktkr3d.github.io/2015/08/30/Unity-5-Standard-Assets-Example-Project-on-Linux/</a></p>
 </li>
-</ul>
-<h2 id="Flatpak-アプリケーションパッケージ"><a href="#Flatpak-アプリケーションパッケージ" class="headerlink" title="Flatpak アプリケーションパッケージ"></a>Flatpak アプリケーションパッケージ</h2><ul>
-<li>Flatpak の準備<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install flatpak gnome-software-plugin-flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
-<li>Update<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak update</span><br></pre></td></tr></table></figure></li>
-<li>Audacious<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/org.atheme.audacious">https://flathub.org/apps/org.atheme.audacious</a></li>
-<li>Gimp<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/org.gimp.GIMP">https://flathub.org/apps/org.gimp.GIMP</a></li>
-<li>Google Chrome<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/com.google.Chrome">https://flathub.org/apps/com.google.Chrome</a><br>PWA には<code>$HOME/.local/share/applications/</code>, <code>$HOME/.local/share/icons/</code> にアクセス権が必要<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak override --user --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.google.Chrome</span><br></pre></td></tr></table></figure></li>
-<li>Kodi<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/tv.kodi.Kodi">https://flathub.org/apps/tv.kodi.Kodi</a></li>
-<li>Visual Studio Code<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/com.visualstudio.code">https://flathub.org/apps/com.visualstudio.code</a></li>
 </ul>
 	  
 	</div>

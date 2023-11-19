@@ -157,8 +157,13 @@
 
 &lt;h4 id=&quot;2023-11-15-更新&quot;&gt;&lt;a href=&quot;#2023-11-15-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;11&amp;#x2F;15 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;11&amp;#x2F;15 更新&lt;/h4&gt;&lt;p&gt;Kernel 6.6.1 とlinux-firmware が更新された。こちらは問題なさそう。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Ubuntu&lt;/li&gt;
-&lt;li&gt;Arch Linux&lt;/li&gt;
+&lt;li&gt;Ubuntu&lt;br&gt;mainline(mainline-gtk)で導入する&lt;/li&gt;
+&lt;li&gt;Arch Linux&lt;br&gt;普通にアップデートすると導入される&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2023-11-19-更新&quot;&gt;&lt;a href=&quot;#2023-11-19-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;11&amp;#x2F;19 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;11&amp;#x2F;19 更新&lt;/h4&gt;&lt;p&gt;Wayland 向けのタッチスクリーン環境対策版を導入する。Xorgなら通常版でも問題ない。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GNOME Shell 拡張機能：Dash to Panel&lt;br&gt;&lt;a href=&quot;https://github.com/matt1432/dash-to-panel-touch-fix.git&quot;&gt;https://github.com/matt1432/dash-to-panel-touch-fix.git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GNOME Shell 拡張機能：ArcMenu&lt;br&gt;&lt;a href=&quot;https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide&quot;&gt;https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</summary>
     
     
