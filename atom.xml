@@ -52,12 +52,15 @@
 &lt;p&gt;Lutris でWorld of Warcraft を実行してみました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;OS はUbuntu 22.04.3 LTS, GNOME Shell 42.9, X11(X.org), Pulseaudio&lt;/li&gt;
-&lt;li&gt;wine-ge-8-24, DirectX 11モード, 64bit, dxvk, vkd3d&lt;br&gt;結果としては、&lt;/li&gt;
-&lt;li&gt;FPS が90超えることもあります。Windows 11(同じPC)の同等性能です。&lt;/li&gt;
+&lt;li&gt;wine-ge-8-24, DirectX 11モード, 64bit, dxvk, vkd3d&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;結果としては、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FPS が90超えることもあります。Windows 11(同じPC)と同等の性能です。&lt;/li&gt;
 &lt;li&gt;Shaderのコンパイルが発生すると左下に&lt;code&gt;Compiling Shaders...&lt;/code&gt;と表示されます。若干もたつく感じがします。キャッシュ方法があるのかよくわかりません。&lt;/li&gt;
 &lt;li&gt;キーボードの反応が遅れることがあります。&lt;/li&gt;
 &lt;li&gt;極まれに音飛びします。&lt;/li&gt;
-&lt;li&gt;DungeonやRaidには若干不安があるがファーミングはは使えそう。&lt;/li&gt;
+&lt;li&gt;DungeonやRaidには若干不安があるがファーミングには使えそう。&lt;/li&gt;
 &lt;/ul&gt;</summary>
     
     

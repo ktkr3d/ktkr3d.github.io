@@ -10,12 +10,15 @@
 Lutris でWorld of Warcraft を実行してみました。
 
 OS はUbuntu 22.04.3 LTS, GNOME Shell 42.9, X11(X.org), Pulseaudio
-wine-ge-8-24, DirectX 11モード, 64bit, dxvk, vkd3d結果としては、
-FPS が90超えることもあります。Windows 11(同じPC)の同等性能です。
+wine-ge-8-24, DirectX 11モード, 64bit, dxvk, vkd3d
+
+結果としては、
+
+FPS が90超えることもあります。Windows 11(同じPC)と同等の性能です。
 Shaderのコンパイルが発生すると左下にCompiling Shaders...と表示されます。若干もたつく感じがします。キャッシュ方法があるのかよくわかりません。
 キーボードの反応が遅れることがあります。
 極まれに音飛びします。
-DungeonやRaidには若干不安があるがファーミングはは使えそう。">
+DungeonやRaidには若干不安があるがファーミングには使えそう。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -168,12 +171,15 @@ DungeonやRaidには若干不安があるがファーミングはは使えそう
 <p>Lutris でWorld of Warcraft を実行してみました。</p>
 <ul>
 <li>OS はUbuntu 22.04.3 LTS, GNOME Shell 42.9, X11(X.org), Pulseaudio</li>
-<li>wine-ge-8-24, DirectX 11モード, 64bit, dxvk, vkd3d<br>結果としては、</li>
-<li>FPS が90超えることもあります。Windows 11(同じPC)の同等性能です。</li>
+<li>wine-ge-8-24, DirectX 11モード, 64bit, dxvk, vkd3d</li>
+</ul>
+<p>結果としては、</p>
+<ul>
+<li>FPS が90超えることもあります。Windows 11(同じPC)と同等の性能です。</li>
 <li>Shaderのコンパイルが発生すると左下に<code>Compiling Shaders...</code>と表示されます。若干もたつく感じがします。キャッシュ方法があるのかよくわかりません。</li>
 <li>キーボードの反応が遅れることがあります。</li>
 <li>極まれに音飛びします。</li>
-<li>DungeonやRaidには若干不安があるがファーミングはは使えそう。</li>
+<li>DungeonやRaidには若干不安があるがファーミングには使えそう。</li>
 </ul>
 <span id="more"></span>
 
@@ -190,22 +196,22 @@ DungeonやRaidには若干不安があるがファーミングはは使えそう
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ul>
 <li>Lutris のインストール<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo dpkg --add-architecture i386</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install wine-stable</span><br><span class="line">sudo add-apt-repository ppa:lutris-team/lutris</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install lutris</span><br></pre></td></tr></table></figure></li>
 <li>Battle.net のインストールの場合<ol>
-<li><code>+</code></li>
-<li>Search <code>Battlenet</code>, Select</li>
-<li>言語選択</li>
-<li>ログイン画面は閉じる</li>
+<li>左上の<code>+</code>ボタンをクリック</li>
+<li>Searchメニューで <code>Battlenet</code>を検索して選択、インストールを実行</li>
+<li>言語選択画面が表示されたら適当に選択(Englishで)</li>
+<li>ログイン画面は閉じる(重要)</li>
 <li>インストール完了を待つ</li>
-<li>Configure</li>
+<li>Configureメニューを選択</li>
 <li>パラメタに<code>-dx11</code>を指定</li>
-<li>デスクトップアプリに登録</li>
-<li>起動、Login</li>
-<li>windows volume mount(ディスクアプリでWindows ボリュームを自動マウントにしておく)</li>
-<li>Select Game Directory</li>
+<li>Battle.Net アプリのショートカットを作成</li>
+<li>Battle.Net アプリを起動してログイン</li>
+<li>ゲームをインストールしているwindowsのボリュームをマウント(ディスク アプリでWindows ボリュームを起動時に自動マウントできる)</li>
+<li>ゲームディレクトリを指定</li>
 </ol>
 </li>
 </ul>
 <h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><ol>
-<li>ダッシュボードからBattle.netアイコンを選択</li>
+<li>Battle.Net アプリを起動</li>
 <li>World of Warcraft を起動</li>
 </ol>
 	  
