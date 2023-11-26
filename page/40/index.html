@@ -155,6 +155,69 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2010-12-23 </div>
+			<div class="article-title"><a href="/2010/12/23/linux_kinect/" >Linux でKinect Sinbad デモを動かしてみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/linux_kinect.png" alt="linux kinect"><br>OpenNI のSinbad デモ(SampleAppSinbad)のLinux 版が見つからなかったのでポーティングしてみた<br><strong>環境</strong><br>OS: Ubuntu 10.10 32bit<br>Ogre3D: Ver. 1.7.2<br>IDE: Code::Blocks 10.05<br>GCC: 4.4.5<br><strong>改造前ソース</strong><br><a target="_blank" rel="noopener" href="https://github.com/OpenNI/SampleAppSinbad">https://github.com/OpenNI/SampleAppSinbad</a><br><strong>主な修正点</strong><br>Sinbad:</p>
+<ul>
+<li>Code::Blocks でOgre3D プロジェクト(コンソールアプリケーション)を作成</li>
+<li>FileSystemLayerImpl_WIN32.cpp の代わりにFileSystemLayerImpl_Unix.cpp を使用</li>
+<li>FileSystemLayerImpl_Unix.cpp でerrno.h のインクルードを追加</li>
+<li>SampleBrowser.cpp でAllocConsole.h のインクルードを削除<br>Sample_Character.so:</li>
+<li>Code::Blocks でOgre3D プロジェクト(動的ライブラリ)を作成</li>
+<li>WIN32 依存処理(time とか)を修正</li>
+<li>XnSkeletonJoint のスコープを省略</li>
+<li>Ogre オリジナルヘッダにOgreBites::YesNoSlider が含まれていないので、CharacterSample.h<br>では”SdkSample.h”ではなく”..&#x2F;..&#x2F;Common&#x2F;include&#x2F;SdkSample.h”をインクルードする</li>
+<li>openNi.xml のパス指定を修正</li>
+<li>OpenNI とXnVNite をリンク<br>ogre.cfg:</li>
+<li>レンダラをOpenGL のみにする</li>
+<li>「Colour Depth」、「VSync Interval」のエントリを削除<br>plugins.cfg:</li>
+<li>Direct3D 系のレンダラのエントリをコメントアウト</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2010/12/23/linux_kinect/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2010-12-23 </div>
+			<div class="article-title"><a href="/2010/12/23/ogre3d/" >ついでにOgre3D を試してみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/ogre3d_skeltal.png" alt="ogre3d skeltal SampleBrowser"><br>OpenNI のSampleAppSinbad デモがOgre3D で出来ていたので初めてOgre3D を触ってみた<br>Ogre3D 自体はWindows でもLinux でも動くしエフェクトも揃ってそうなのでなかなか良さそう<br>サンプルパッケージ(ogre-samples-bin)の実行は&#x2F;usr&#x2F;bin&#x2F;SampleBrowser<br>OpenNI のSampleAppSinbad デモはOgre3D のSampleBrowser<br>のモジュール(Sample_Character)を改造しているようなので、WIN32<br>依存のコード(SkeletonPoseDetector.h, SinbadCharacterController.h<br>あたり)を修正すればLinux でも動くかもしれない<br>Kinect を使った他のOpenNI のデモ自体はLinux でも動いたし</p>
+
+	
+	</div>
+  <a type="button" href="/2010/12/23/ogre3d/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2010-12-22 </div>
 			<div class="article-title"><a href="/2010/12/22/kinect/" >Kinect を試してみた</a></div>						
 		</h3>
@@ -346,69 +409,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2010-09-29 </div>
-			<div class="article-title"><a href="/2010/09/29/caph/" >Caph で遊んでみた</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/caph.png" alt="caph"><br><a target="_blank" rel="noopener" href="http://linux.softpedia.com/get/GAMES-ENTERTAINMENT/Puzzle/Caph-53323.shtml">http://linux.softpedia.com/get/GAMES-ENTERTAINMENT/Puzzle/Caph-53323.shtml</a><br>マウスで描いた軌跡で作った物体を使って解くパズルゲーム<br>物理エンジンのリアルな動きがおもしろいー<br>README のとおりにやってうまく動かなかったのでちょっと修正<br>src&#x2F;draw.c(299): png_get_IHDR() のheight が変な値を返すので変数h の値を修正(64bit OS 上でのpng_uint_32 型の処理にバグがあるのかな)</p>
-
-	
-	</div>
-  <a type="button" href="/2010/09/29/caph/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2010-09-17 </div>
-			<div class="article-title"><a href="/2010/09/17/monodevelop/" >MonoDevelop を試してみた</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/monodevelop.png" alt="monodevelop"><br>Unity のv3 からMonoDevelop でのステップ実行&#x2F;変数ウォッチができるようになると聞いてMonoDevelop を試してみた(v2.6 でも単純な連携はできるんだけどね)はやく無償版ユーザにもUnity v3&#x2F;ベータが公開されないかなぁ<br>ちょっと使ってみた感じ</p>
-<ul>
-<li><p>Linux&#x2F;Windows で使える</p>
-</li>
-<li><p>MONO だけに.NET アプリが作れるみたい(作らないけどね)</p>
-</li>
-<li><p>プロジェクトファイルがVC のソリューションファイル(.sln)っぽいのでWindows とLinux 共通なプロジェクトを作成するのに便利かもしれない(Code::Blocks でもできるけどやはりWindows はVC 使うだろうし)</p>
-</li>
-<li><p>実行ディレクトリの指定をどこでするのかわからなかったけれど、通常実行はロードモジュール格納ディレクトリ、デバッグ実行はホームディレクトリ!?っぽい</p>
-</li>
-<li><p>言語特有の細かい設定はできない代わりにいろいろな言語がプラグイン的に広くサポートできるようになっている</p>
-</li>
-<li><p>Subversion のプラグインも付いている</p>
-</li>
-</ul>
-<p>ちなみにWine 環境でのUnity の動作評価はBronze みたい<br><a target="_blank" rel="noopener" href="http://appdb.winehq.org/objectManager.php?sClass=application&iId=11075">http://appdb.winehq.org/objectManager.php?sClass=application&amp;iId=11075</a></p>
-
-	
-	</div>
-  <a type="button" href="/2010/09/17/monodevelop/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -458,6 +458,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/11/25/GNOME-Shell-Extensions/" ><i class="fa fa-file-o"></i>GNOME Shell Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/2023/11/23/Lutris/" ><i class="fa fa-file-o"></i>Lutris</a>
+      </li>
+    
+      <li>
         <a href="/2023/10/15/Forge-GNOME-Shell-extension/" ><i class="fa fa-file-o"></i>Forge - GNOME Shell Extension</a>
       </li>
     
@@ -487,14 +495,6 @@
     
       <li>
         <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
   </ul>

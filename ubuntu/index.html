@@ -10,9 +10,9 @@
 Ubuntu Desktophttps://ubuntu.com/download/desktop
 Ubuntu Serverhttps://ubuntu.com/download/server
 
-環境設定
-ホームディレクトリの各フォルダ名を英語名に変更
-LANG=C xdg">
+スクリーンショットUbuntu 22.04 LTS
+環境設定基本
+ホームディレ">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -162,7 +162,8 @@ LANG=C xdg">
 <li>Ubuntu Desktop<br><a target="_blank" rel="noopener" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a></li>
 <li>Ubuntu Server<br><a target="_blank" rel="noopener" href="https://ubuntu.com/download/server">https://ubuntu.com/download/server</a></li>
 </ul>
-<h2 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h2><ul>
+<h2 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h2><h3 id="Ubuntu-22-04-LTS"><a href="#Ubuntu-22-04-LTS" class="headerlink" title="Ubuntu 22.04 LTS"></a>Ubuntu 22.04 LTS</h3><p><img src="/images/ubuntu2204lts.png"></p>
+<h2 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h2><h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><ul>
 <li><p>ホームディレクトリの各フォルダ名を英語名に変更</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
 </li>
@@ -182,14 +183,12 @@ LANG=C xdg">
 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo update-grub</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>背景用単色画像のダウンロード</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Pictures</span><br><span class="line">wget https://ktkr3d.github.io/images/white.png</span><br><span class="line">wget https://ktkr3d.github.io/images/black.png</span><br></pre></td></tr></table></figure>
-</li>
 <li><p>デスクトップのホームフォルダの削除<br>[設定]-[外観]-[Show Personal Folder]をオフ</p>
 </li>
 <li><p>curl, gettext, git, make</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install curl gettext git make</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install curl gettext git make</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="オプション"><a href="#オプション" class="headerlink" title="オプション"></a>オプション</h4><ul>
 <li><p>固定IPアドレスにする場合</p>
 <figure class="highlight yaml"><figcaption><span>50-cloud-init.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">ethernets:</span></span><br><span class="line">    <span class="attr">eth0:</span></span><br><span class="line">      <span class="attr">dhcp4:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">dhcp6:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.11</span><span class="number">.7</span><span class="string">/24</span>]</span><br><span class="line">      <span class="attr">routes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">to:</span> <span class="string">default</span></span><br><span class="line">          <span class="attr">via:</span> <span class="number">192.168</span><span class="number">.11</span><span class="number">.1</span></span><br><span class="line">      <span class="attr">nameservers:</span></span><br><span class="line">        <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.11</span><span class="number">.1</span>]</span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure></li>
@@ -216,20 +215,32 @@ LANG=C xdg">
 <li><p>コーディング用固定幅フォントのインストール<br><a target="_blank" rel="noopener" href="https://github.com/adobe-fonts/source-han-code-jp/releases">https://github.com/adobe-fonts/source-han-code-jp/releases</a><br><code>$HOME/.fonts/SourceHanCodeJP.ttc</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fc-cache -fv</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>背景用単色画像のダウンロード</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Pictures</span><br><span class="line">wget https://ktkr3d.github.io/images/white.png</span><br><span class="line">wget https://ktkr3d.github.io/images/black.png</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Linux Kernel Update</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install mainline</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mainline-gtk</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mainline-gtk</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内蔵ディスクの自動マウント<br><code>ディスク</code>アプリを開く<br>対象のパーティションを選択<br>歯車アイコンをクリック<br>マウントオプションを編集<br>ユーザセッションのデフォルトのチェックを外してOK</p>
+</li>
 </ul>
-<h2 id="GNOME-Shell-関連"><a href="#GNOME-Shell-関連" class="headerlink" title="GNOME Shell 関連"></a>GNOME Shell 関連</h2><ul>
+<h2 id="GNOME-Shell-関連"><a href="#GNOME-Shell-関連" class="headerlink" title="GNOME Shell 関連"></a>GNOME Shell 関連</h2><h3 id="環境設定-1"><a href="#環境設定-1" class="headerlink" title="環境設定"></a>環境設定</h3><ul>
 <li>GNOME Shell 拡張連携パッケージ<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install -y chrome-gnome-shell gnome-tweaks</span><br></pre></td></tr></table></figure></li>
 <li>ブラウザ拡張 : GNOME Shell Integration<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/">https://extensions.gnome.org/</a></li>
-<li>GNOME Shell 拡張機能 : Dash to Panel<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1160/dash-to-panel/">https://extensions.gnome.org/extension/1160/dash-to-panel/</a><br>Wayland でタッチスクリーン環境の場合は以下で対策版を手動で導入する<br><a target="_blank" rel="noopener" href="https://github.com/matt1432/dash-to-panel-touch-fix.git">https://github.com/matt1432/dash-to-panel-touch-fix.git</a></li>
-<li>GNOME Shell 拡張機能: Argos<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><figure class="highlight bash"><figcaption><span>~/.config/argos/argos.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#echo &quot;Argos&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot; | iconName=terminal-app-symbolic&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;---&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Update Packages | iconName=&#x27;update-notifier&#x27; bash=&#x27;sudo apt update; sudo apt dist-upgrade; sudo apt autoremove -y; exit&#x27;&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li>GNOME Shell 拡張機能: ArcMenu<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/3628/arcmenu/">https://extensions.gnome.org/extension/3628/arcmenu/</a><br>Wayland でタッチスクリーン環境の場合は以下で最新版を手動で導入する<br><a target="_blank" rel="noopener" href="https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide">https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide</a></li>
-<li>GNOME Shell 拡張機能: Space Bar<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/5090/space-bar/">https://extensions.gnome.org/extension/5090/space-bar/</a></li>
-<li>GNOME Shell 拡張機能: Forge<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/21/workspace-indicator/">https://extensions.gnome.org/extension/21/workspace-indicator/</a></li>
 </ul>
-<h2 id="ブラウザ拡張"><a href="#ブラウザ拡張" class="headerlink" title="ブラウザ拡張"></a>ブラウザ拡張</h2><ul>
+<h3 id="GNOME-Shell-拡張機能-基本"><a href="#GNOME-Shell-拡張機能-基本" class="headerlink" title="GNOME Shell 拡張機能 (基本)"></a>GNOME Shell 拡張機能 (基本)</h3><ul>
+<li>Argos<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><figure class="highlight bash"><figcaption><span>~/.config/argos/argos.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#echo &quot;Argos&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot; | iconName=terminal-app-symbolic&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;---&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Update Packages | iconName=&#x27;update-notifier&#x27; bash=&#x27;sudo apt update; sudo apt dist-upgrade; sudo apt autoremove -y; exit&#x27;&quot;</span></span><br><span class="line"><span class="comment">#echo &quot;Update Packages | iconName=&#x27;update-notifier&#x27; bash=&#x27;sudo pacman -Syyu; yay -Syu; exit&#x27;&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>ArcMenu<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/3628/arcmenu/">https://extensions.gnome.org/extension/3628/arcmenu/</a><br>Wayland でタッチスクリーン環境の場合は以下で最新版を手動で導入する<br><a target="_blank" rel="noopener" href="https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide">https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide</a></li>
+<li>Dash to Panel<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1160/dash-to-panel/">https://extensions.gnome.org/extension/1160/dash-to-panel/</a><br>Wayland でタッチスクリーン環境の場合は以下で対策版を手動で導入する<br><a target="_blank" rel="noopener" href="https://github.com/matt1432/dash-to-panel-touch-fix.git">https://github.com/matt1432/dash-to-panel-touch-fix.git</a></li>
+</ul>
+<h3 id="GNOME-Shell-拡張機能-オプション"><a href="#GNOME-Shell-拡張機能-オプション" class="headerlink" title="GNOME Shell 拡張機能 (オプション)"></a>GNOME Shell 拡張機能 (オプション)</h3><ul>
+<li>Bing Wallpaper<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/">https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/</a></li>
+<li>Forge<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/21/workspace-indicator/">https://extensions.gnome.org/extension/21/workspace-indicator/</a></li>
+<li>Panel Date Format<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1462/panel-date-format/">https://extensions.gnome.org/extension/1462/panel-date-format/</a><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dconf write /org/gnome/shell/extensions/panel-date-format/format &quot;&#x27;%m/%d%n%a%n%H:%M&#x27;&quot;</span><br></pre></td></tr></table></figure></li>
+<li>Space Bar<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/5090/space-bar/">https://extensions.gnome.org/extension/5090/space-bar/</a></li>
+</ul>
+<h2 id="Webブラウザ拡張"><a href="#Webブラウザ拡張" class="headerlink" title="Webブラウザ拡張"></a>Webブラウザ拡張</h2><ul>
 <li>read.crx2<br><a target="_blank" rel="noopener" href="https://readcrx-2.github.io/read.crx-2/">https://readcrx-2.github.io/read.crx-2/</a><figure class="highlight css"><figcaption><span>ユーザCSS</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">article</span> &#123;</span><br><span class="line">  <span class="attribute">border-top</span>: dotted <span class="number">1px</span> <span class="number">#000000</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#FFFFEE</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="基本パッケージ"><a href="#基本パッケージ" class="headerlink" title="基本パッケージ"></a>基本パッケージ</h2><ul>
@@ -243,6 +254,7 @@ LANG=C xdg">
 </ul>
 <h2 id="開発用パッケージ"><a href="#開発用パッケージ" class="headerlink" title="開発用パッケージ"></a>開発用パッケージ</h2><ul>
 <li>build-essential</li>
+<li>gettexts</li>
 <li>git の設定<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install git</span><br><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email mail_account_name@mail_domain_name</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="外部インストーラパッケージ"><a href="#外部インストーラパッケージ" class="headerlink" title="外部インストーラパッケージ"></a>外部インストーラパッケージ</h2><ul>
@@ -266,12 +278,13 @@ LANG=C xdg">
 </ul>
 <h2 id="Flatpak-アプリケーションパッケージ"><a href="#Flatpak-アプリケーションパッケージ" class="headerlink" title="Flatpak アプリケーションパッケージ"></a>Flatpak アプリケーションパッケージ</h2><ul>
 <li>Flatpak の準備<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install flatpak gnome-software-plugin-flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
-<li>Update<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak update</span><br></pre></td></tr></table></figure></li>
+<li>Update<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak update</span><br></pre></td></tr></table></figure>
+<!--</li>
 <li>Audacious<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/org.atheme.audacious">https://flathub.org/apps/org.atheme.audacious</a></li>
 <li>Gimp<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/org.gimp.GIMP">https://flathub.org/apps/org.gimp.GIMP</a></li>
 <li>Google Chrome<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/com.google.Chrome">https://flathub.org/apps/com.google.Chrome</a><br>PWA には<code>$HOME/.local/share/applications/</code>, <code>$HOME/.local/share/icons/</code> にアクセス権が必要<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak override --user --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.google.Chrome</span><br></pre></td></tr></table></figure></li>
 <li>Kodi<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/tv.kodi.Kodi">https://flathub.org/apps/tv.kodi.Kodi</a></li>
-<li>Visual Studio Code<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/com.visualstudio.code">https://flathub.org/apps/com.visualstudio.code</a></li>
+<li>Visual Studio Code<br>s  <a target="_blank" rel="noopener" href="https://flathub.org/apps/com.visualstudio.code">https://flathub.org/apps/com.visualstudio.code</a><br>–&gt;</li>
 </ul>
 	  
 	</div>

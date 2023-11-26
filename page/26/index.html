@@ -155,6 +155,60 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2013-08-04 </div>
+			<div class="article-title"><a href="/2013/08/04/compiling-irrlicht-ogl-es-branch-for-android/" >Compiling Irrlicht ogl-es branch for Android</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><a href="/images/irrlicht_ogl-es_android.png"><img src="/images/irrlicht_ogl-es_android_tn.png" class=""></a></p>
+<ul>
+<li>Compiling Irrlicht ogl-es branch for Android on Ubuntu GNOME 13.10 x86_64.</li>
+<li>Native C&#x2F;C++ Android Application (Native Activity).</li>
+<li>Fullscreen (1080x1920)</li>
+<li>Input Event Receiver</li>
+<li>True Type Font (FreeType2)</li>
+<li>OpenSL ES (Native Audio)
+	
+	</div>
+  <a type="button" href="/2013/08/04/compiling-irrlicht-ogl-es-branch-for-android/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2013-07-15 </div>
+			<div class="article-title"><a href="/2013/07/15/zenity-octopress-helper/" >Zenity OctoPress Helper</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><a href="/images/zenity_octopress_menu.png"><img src="/images/zenity_octopress_menu.png" class=""></a></p>
+<p>OctoPress のフロントエンドをZenity で作ってみました。<br>Web ベースのUI を作っている方もいるようですが、とりあえずこれでもお手軽になりました。</p>
+	
+	</div>
+  <a type="button" href="/2013/07/15/zenity-octopress-helper/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2013-07-15 </div>
 			<div class="article-title"><a href="/2013/07/15/gnome-shell-lock-screen/" >GNOME Shell Lock Screen</a></div>						
 		</h3>
@@ -375,87 +429,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-03-17 </div>
-			<div class="article-title"><a href="/2013/03/17/bittorrent-live-beta/" >BitTorrent Live Beta</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/BitTorrentLive_Beta.png" alt="BitTorrent Live"></p>
-<p><a target="_blank" rel="noopener" href="http://live.bittorrent.com/">http://live.bittorrent.com/</a><br>P2P 技術を使ったWeb 型ライブストリーミングサービス「BitTorrent Live」のオープンベータテストが開始されたので、試してみました。Windows&#x2F;Mac&#x2F;Ubuntu 用のクライアントプログラムBTLive が配布されており、私はUbuntu 64bit 用をダウンロードしてインストールしました。インストールから視聴までの手順は以下のとおりです。</p>
-<ol>
-<li><p><a target="_blank" rel="noopener" href="http://live.bittorrent.com/">http://live.bittorrent.com/</a> の一番下のリンクから各OS 用のクライアントプログラムをダウンロードして、インストールします。</p>
-</li>
-<li><p>[アプリケーション]-[インターネット]-[BTLive]を起動します。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://live.bittorrent.com/">http://live.bittorrent.com/</a> で公開されているチャンネルを視聴します。アカウントを登録すれば、配信もできます。配信はWebCam かエンコーダ等のアプリが利用できます。</p>
-</li>
-</ol>
-<p>P2P なので、視聴者が増えた時に有利なようです。Peercast と同じような原理でしょうか。ポートを開ける手間がないのが、お手軽でよいかもしれません。手動でポートを開ける場合はUDP ports 31400-31499 らしいです。トレイアイコンをクリックすると、送受信のビットレートが表示されます。btlive コマンドのパラメタは以下のとおり。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ btlive --<span class="built_in">help</span></span><br><span class="line">usage: btlive [-h] [-v] [--force-version FORCED_VER] [-o OFFSET]</span><br><span class="line">              [-j TRACKER|SWARMPUBKEY] [--no-crashlog-reporting]</span><br><span class="line">              [--no-stats-thread] [--no-bench-thread] [--no-update-thread]</span><br><span class="line">              [--no-headless-thread] [--no-nat-detection] [--no-rtmp-server]</span><br><span class="line">              [--no-http-server] [--no-local-discovery] [--no-sysreqs]</span><br><span class="line">              [--ignore-headless | --force-headless] [--staging-bench]</span><br><span class="line">              [--staging-dau] [--staging-onair] [--testing-mode] [--nogui]</span><br><span class="line"></span><br><span class="line">optional arguments:</span><br><span class="line">  -h, --<span class="built_in">help</span>            show this <span class="built_in">help</span> message and <span class="built_in">exit</span></span><br><span class="line">  -v, --version         show program<span class="string">&#x27;s version number and exit</span></span><br><span class="line"><span class="string">  --force-version FORCED_VER</span></span><br><span class="line"><span class="string">                        Forces Live to think that it is another version</span></span><br><span class="line"><span class="string">                        number. Must follow format 0.4.11.1234.</span></span><br><span class="line"><span class="string">  -o OFFSET, --offset OFFSET</span></span><br><span class="line"><span class="string">                        RTMP Server port offset (from 1935). A value of 100 is</span></span><br><span class="line"><span class="string">                        commonly used for sourcing.</span></span><br><span class="line"><span class="string">  -j TRACKER|SWARMPUBKEY, --join TRACKER|SWARMPUBKEY</span></span><br><span class="line"><span class="string">                        Swarm to autojoin on launch. Specify the tracker and</span></span><br><span class="line"><span class="string">                        the swarm public key, separated by a pipe symbol</span></span><br><span class="line"><span class="string">                        (&#x27;</span>|<span class="string">&#x27;).</span></span><br><span class="line"><span class="string">  --no-crashlog-reporting</span></span><br><span class="line"><span class="string">                        Disable all communication with the crashlog server.</span></span><br><span class="line"><span class="string">  --no-stats-thread     Disable debugging statistics being reported to</span></span><br><span class="line"><span class="string">                        graphite/statsd.</span></span><br><span class="line"><span class="string">  --no-bench-thread     Disable bench statistics.</span></span><br><span class="line"><span class="string">  --no-update-thread    Disable autoupdate checking.</span></span><br><span class="line"><span class="string">  --no-headless-thread  Disable all communication with the automation server.</span></span><br><span class="line"><span class="string">  --no-nat-detection    Disable NAT detection on launch.</span></span><br><span class="line"><span class="string">  --no-rtmp-server      Disable RTMP server.</span></span><br><span class="line"><span class="string">  --no-http-server      Disable HTTP server.</span></span><br><span class="line"><span class="string">  --no-local-discovery  Disable local peer discovery.</span></span><br><span class="line"><span class="string">  --no-sysreqs          Disable system requirements for launch/install.</span></span><br><span class="line"><span class="string">  --ignore-headless     Set headless_enabled pref to off and ignore any</span></span><br><span class="line"><span class="string">                        scheduled tests.</span></span><br><span class="line"><span class="string">  --force-headless      Set headless_enabled pref to on and join any scheduled</span></span><br><span class="line"><span class="string">                        tests.</span></span><br><span class="line"><span class="string">  --staging-bench       Use staging bench server for bench statistics.</span></span><br><span class="line"><span class="string">  --staging-dau         Use staging server for autoupdate.</span></span><br><span class="line"><span class="string">  --staging-onair       Use staging server for on-air messaging.</span></span><br><span class="line"><span class="string">  --testing-mode        Disable all non-essential network communication.</span></span><br><span class="line"><span class="string">                        Implies --no-crashlog-reporting, --no-nat-detection,</span></span><br><span class="line"><span class="string">                        --no-stats-thread, --no-update-thread, --no-headless-</span></span><br><span class="line"><span class="string">                        thread, and --no-sysreqs.</span></span><br><span class="line"><span class="string">  --nogui               Disable GUI/icon.</span></span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2013/03/17/bittorrent-live-beta/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-03-17 </div>
-			<div class="article-title"><a href="/2013/03/17/create-a-shortcut-key-in-xnoise/" >Create a shortcut key in xnoise</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/xnoise_shortcut_key.png" alt="xnoise shortcut key"></p>
-<p>先日のアップデートでxnoise のメディアブラウザ表示&#x2F;非表示切り替えボタンが無くなりました。ボタンがメディアブラウザの上に被っていたので邪魔ではあったのですが、無いと不便です。そこで、簡単にメディアブラウザの表示&#x2F;非表示を切り替えるためのショートカットキー(F9)を追加してみました。xnoise はVala 言語で実装されているようですので、valac パッケージをインストールして、ビルドしています。</p>
-<ol>
-<li>valac のインストールとソースコードの取得</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get build-dep xnoise</span><br><span class="line">$ sudo apt-get install valac</span><br><span class="line">$ git <span class="built_in">clone</span> https://bitbucket.org/shuerhaaken/xnoise.git</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>ソースコードの修正</li>
-</ol>
-<figure class="highlight text"><figcaption><span>./xnoise/libxnoise/MainWindow/xnoise-main-window.vala</span></figcaption><table><tr><td class="code"><pre><span class="line">case Gdk.Key.F9: &#123;</span><br><span class="line">    toggle_media_browser_visibility();</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">case Gdk.Key.F11: &#123;</span><br><span class="line">    this.toggle_mainwindow_fullscreen();</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="3">
-<li>ビルドとインストール</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> xnoise</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
-
-
-
-
-	
-	</div>
-  <a type="button" href="/2013/03/17/create-a-shortcut-key-in-xnoise/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -505,6 +478,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/11/25/GNOME-Shell-Extensions/" ><i class="fa fa-file-o"></i>GNOME Shell Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/2023/11/23/Lutris/" ><i class="fa fa-file-o"></i>Lutris</a>
+      </li>
+    
+      <li>
         <a href="/2023/10/15/Forge-GNOME-Shell-extension/" ><i class="fa fa-file-o"></i>Forge - GNOME Shell Extension</a>
       </li>
     
@@ -534,14 +515,6 @@
     
       <li>
         <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
   </ul>

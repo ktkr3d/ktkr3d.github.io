@@ -155,6 +155,59 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2019-08-14 </div>
+			<div class="article-title"><a href="/2019/08/14/Hexo-App-Template-on-RPi4-64bit/" >Hexo App Template</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/app-template-hexo.png" alt="app template hexo"><br>Portainer には41 個のApp Template が登録されていますが、独自に追加することもできるようになっています。App Template にHexo を追加してみました。</p>
+<p>Portainer のApp Template には3種類あります。</p>
+<ul>
+<li>Container (DockerHub)</li>
+<li>Swarm stack (Swarm)</li>
+<li>Compose stack (Compose)</li>
+</ul>
+<p>Container 型でDockerHub のHexo をデプロイしようとしましたが、aarch64 の環境では失敗してしまいました。そのため、ローカルビルドするようなCompose 型スクリプトで登録することにしました。<br>Raspberry Pi 4B 環境でデプロイが完了する迄に5分くらいかかりました。</p>
+	
+	</div>
+  <a type="button" href="/2019/08/14/Hexo-App-Template-on-RPi4-64bit/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2019-08-07 </div>
+			<div class="article-title"><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" >RPi4 - Ubuntu Server 19.10 64bit</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/ubuntu-portainer-rpi4.png" alt="ubuntu portainer rpi4"><br>Raspberry Pi 4B でUbuntu Server 64bit が起動するようになったので環境設定をします。</p>
+	
+	</div>
+  <a type="button" href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2019-08-04 </div>
 			<div class="article-title"><a href="/2019/08/04/Docker-RPi4-ImageBuilder/" >Docker RPi4 ImageBuilder</a></div>						
 		</h3>
@@ -378,59 +431,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2019-06-23 </div>
-			<div class="article-title"><a href="/2019/06/23/Windows-Terminal/" >Windows Terminal</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><a target="_blank" rel="noopener" href="https://github.com/microsoft/terminal">https://github.com/microsoft/terminal</a><br><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701">https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701</a></p>
-<p>Windows Terminal のプレビュー版がリリースされたので使ってみました。</p>
-	
-	</div>
-  <a type="button" href="/2019/06/23/Windows-Terminal/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2019-06-22 </div>
-			<div class="article-title"><a href="/2019/06/22/Compile-Kodi-for-Ubuntu/" >Compile Kodi for Ubuntu</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><a target="_blank" rel="noopener" href="https://github.com/Harekaze/pvr.chinachu/issues/30">https://github.com/Harekaze/pvr.chinachu/issues/30</a></p>
-<p>Kodi 18.2 にバージョンアップしたらpvr.chinchu がうまく動かなくなってしまいました。<br>Kodi のcurl 処理に変更があったようです。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I 172.17.69.68:20772</span><br><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Accept-Ranges: bytes</span><br><span class="line">Last-Modified: Mon, 03 Jun 2019 14:41:30 GMT</span><br><span class="line">Content-Length: 2311</span><br><span class="line">Content-Type: text/html</span><br><span class="line">Server: Chinachu (Node)</span><br><span class="line">Cache-Control: no-cache</span><br><span class="line">X-Content-Type-Options: nosniff</span><br><span class="line">X-Frame-Options: SAMEORIGIN</span><br><span class="line">X-UA-Compatible: IE=Edge,chrome=1</span><br><span class="line">X-XSS-Protection: 1; mode=block</span><br><span class="line">Date: Sat, 22 Jun 2019 08:48:09 GMT</span><br><span class="line">Connection: keep-alive</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I --http2 172.17.69.68:20772</span><br><span class="line">curl: (52) Empty reply from server</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md">https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md</a></p>
-<p>バージョン18.1 を再インストールしようと思いましが、残念なことにUbuntu のdeb パッケージは見つかりませんでした。仕方が無いのでリポジトリの18.3 のソースコードにパッチを当ててビルドすることにしました。</p>
-	
-	</div>
-  <a type="button" href="/2019/06/22/Compile-Kodi-for-Ubuntu/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -480,6 +480,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/11/25/GNOME-Shell-Extensions/" ><i class="fa fa-file-o"></i>GNOME Shell Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/2023/11/23/Lutris/" ><i class="fa fa-file-o"></i>Lutris</a>
+      </li>
+    
+      <li>
         <a href="/2023/10/15/Forge-GNOME-Shell-extension/" ><i class="fa fa-file-o"></i>Forge - GNOME Shell Extension</a>
       </li>
     
@@ -509,14 +517,6 @@
     
       <li>
         <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
   </ul>

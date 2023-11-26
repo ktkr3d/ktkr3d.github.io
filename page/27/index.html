@@ -155,6 +155,87 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2013-03-17 </div>
+			<div class="article-title"><a href="/2013/03/17/bittorrent-live-beta/" >BitTorrent Live Beta</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/BitTorrentLive_Beta.png" alt="BitTorrent Live"></p>
+<p><a target="_blank" rel="noopener" href="http://live.bittorrent.com/">http://live.bittorrent.com/</a><br>P2P 技術を使ったWeb 型ライブストリーミングサービス「BitTorrent Live」のオープンベータテストが開始されたので、試してみました。Windows&#x2F;Mac&#x2F;Ubuntu 用のクライアントプログラムBTLive が配布されており、私はUbuntu 64bit 用をダウンロードしてインストールしました。インストールから視聴までの手順は以下のとおりです。</p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="http://live.bittorrent.com/">http://live.bittorrent.com/</a> の一番下のリンクから各OS 用のクライアントプログラムをダウンロードして、インストールします。</p>
+</li>
+<li><p>[アプリケーション]-[インターネット]-[BTLive]を起動します。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://live.bittorrent.com/">http://live.bittorrent.com/</a> で公開されているチャンネルを視聴します。アカウントを登録すれば、配信もできます。配信はWebCam かエンコーダ等のアプリが利用できます。</p>
+</li>
+</ol>
+<p>P2P なので、視聴者が増えた時に有利なようです。Peercast と同じような原理でしょうか。ポートを開ける手間がないのが、お手軽でよいかもしれません。手動でポートを開ける場合はUDP ports 31400-31499 らしいです。トレイアイコンをクリックすると、送受信のビットレートが表示されます。btlive コマンドのパラメタは以下のとおり。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ btlive --<span class="built_in">help</span></span><br><span class="line">usage: btlive [-h] [-v] [--force-version FORCED_VER] [-o OFFSET]</span><br><span class="line">              [-j TRACKER|SWARMPUBKEY] [--no-crashlog-reporting]</span><br><span class="line">              [--no-stats-thread] [--no-bench-thread] [--no-update-thread]</span><br><span class="line">              [--no-headless-thread] [--no-nat-detection] [--no-rtmp-server]</span><br><span class="line">              [--no-http-server] [--no-local-discovery] [--no-sysreqs]</span><br><span class="line">              [--ignore-headless | --force-headless] [--staging-bench]</span><br><span class="line">              [--staging-dau] [--staging-onair] [--testing-mode] [--nogui]</span><br><span class="line"></span><br><span class="line">optional arguments:</span><br><span class="line">  -h, --<span class="built_in">help</span>            show this <span class="built_in">help</span> message and <span class="built_in">exit</span></span><br><span class="line">  -v, --version         show program<span class="string">&#x27;s version number and exit</span></span><br><span class="line"><span class="string">  --force-version FORCED_VER</span></span><br><span class="line"><span class="string">                        Forces Live to think that it is another version</span></span><br><span class="line"><span class="string">                        number. Must follow format 0.4.11.1234.</span></span><br><span class="line"><span class="string">  -o OFFSET, --offset OFFSET</span></span><br><span class="line"><span class="string">                        RTMP Server port offset (from 1935). A value of 100 is</span></span><br><span class="line"><span class="string">                        commonly used for sourcing.</span></span><br><span class="line"><span class="string">  -j TRACKER|SWARMPUBKEY, --join TRACKER|SWARMPUBKEY</span></span><br><span class="line"><span class="string">                        Swarm to autojoin on launch. Specify the tracker and</span></span><br><span class="line"><span class="string">                        the swarm public key, separated by a pipe symbol</span></span><br><span class="line"><span class="string">                        (&#x27;</span>|<span class="string">&#x27;).</span></span><br><span class="line"><span class="string">  --no-crashlog-reporting</span></span><br><span class="line"><span class="string">                        Disable all communication with the crashlog server.</span></span><br><span class="line"><span class="string">  --no-stats-thread     Disable debugging statistics being reported to</span></span><br><span class="line"><span class="string">                        graphite/statsd.</span></span><br><span class="line"><span class="string">  --no-bench-thread     Disable bench statistics.</span></span><br><span class="line"><span class="string">  --no-update-thread    Disable autoupdate checking.</span></span><br><span class="line"><span class="string">  --no-headless-thread  Disable all communication with the automation server.</span></span><br><span class="line"><span class="string">  --no-nat-detection    Disable NAT detection on launch.</span></span><br><span class="line"><span class="string">  --no-rtmp-server      Disable RTMP server.</span></span><br><span class="line"><span class="string">  --no-http-server      Disable HTTP server.</span></span><br><span class="line"><span class="string">  --no-local-discovery  Disable local peer discovery.</span></span><br><span class="line"><span class="string">  --no-sysreqs          Disable system requirements for launch/install.</span></span><br><span class="line"><span class="string">  --ignore-headless     Set headless_enabled pref to off and ignore any</span></span><br><span class="line"><span class="string">                        scheduled tests.</span></span><br><span class="line"><span class="string">  --force-headless      Set headless_enabled pref to on and join any scheduled</span></span><br><span class="line"><span class="string">                        tests.</span></span><br><span class="line"><span class="string">  --staging-bench       Use staging bench server for bench statistics.</span></span><br><span class="line"><span class="string">  --staging-dau         Use staging server for autoupdate.</span></span><br><span class="line"><span class="string">  --staging-onair       Use staging server for on-air messaging.</span></span><br><span class="line"><span class="string">  --testing-mode        Disable all non-essential network communication.</span></span><br><span class="line"><span class="string">                        Implies --no-crashlog-reporting, --no-nat-detection,</span></span><br><span class="line"><span class="string">                        --no-stats-thread, --no-update-thread, --no-headless-</span></span><br><span class="line"><span class="string">                        thread, and --no-sysreqs.</span></span><br><span class="line"><span class="string">  --nogui               Disable GUI/icon.</span></span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2013/03/17/bittorrent-live-beta/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2013-03-17 </div>
+			<div class="article-title"><a href="/2013/03/17/create-a-shortcut-key-in-xnoise/" >Create a shortcut key in xnoise</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/xnoise_shortcut_key.png" alt="xnoise shortcut key"></p>
+<p>先日のアップデートでxnoise のメディアブラウザ表示&#x2F;非表示切り替えボタンが無くなりました。ボタンがメディアブラウザの上に被っていたので邪魔ではあったのですが、無いと不便です。そこで、簡単にメディアブラウザの表示&#x2F;非表示を切り替えるためのショートカットキー(F9)を追加してみました。xnoise はVala 言語で実装されているようですので、valac パッケージをインストールして、ビルドしています。</p>
+<ol>
+<li>valac のインストールとソースコードの取得</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get build-dep xnoise</span><br><span class="line">$ sudo apt-get install valac</span><br><span class="line">$ git <span class="built_in">clone</span> https://bitbucket.org/shuerhaaken/xnoise.git</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li>ソースコードの修正</li>
+</ol>
+<figure class="highlight text"><figcaption><span>./xnoise/libxnoise/MainWindow/xnoise-main-window.vala</span></figcaption><table><tr><td class="code"><pre><span class="line">case Gdk.Key.F9: &#123;</span><br><span class="line">    toggle_media_browser_visibility();</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">case Gdk.Key.F11: &#123;</span><br><span class="line">    this.toggle_mainwindow_fullscreen();</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li>ビルドとインストール</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> xnoise</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+
+
+
+	
+	</div>
+  <a type="button" href="/2013/03/17/create-a-shortcut-key-in-xnoise/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2013-03-14 </div>
 			<div class="article-title"><a href="/2013/03/14/ubuntu-gnome-13-04-daily-build/" >Ubuntu GNOME 13.04 daily build</a></div>						
 		</h3>
@@ -531,120 +612,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-01-26 </div>
-			<div class="article-title"><a href="/2013/01/26/ubuntu-13-04-gnome-shell/" >Ubuntu 13.04 + GNOME Shell</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/ubuntu_13_04_gnome_shell-600x375.png" alt="ubuntu 13.04 raring ringtail gnome shell">](&#x2F;images&#x2F;uploads&#x2F;2013&#x2F;01&#x2F;ubuntu_13_04_gnome_shell.png)</p>
-<p><a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/daily-live/">http://cdimage.ubuntu.com/daily-live/</a></p>
-<p>Ubuntu 13.04 Raring Ringtail のデイリービルドがライブISO イメージで公開されていますので、そろそろ環境構築をし始めます。デスクトップ環境はGNOME Shell にします。</p>
-<ul>
-<li><p>Linux Kernel は3.8.0 でした。</p>
-</li>
-<li><p>GNOME Shell  (ppa:gnome3-team&#x2F;gnome3)は3.6.2 のままでした。今後、3.8 に向けて更新されると思います。</p>
-</li>
-<li><p>Avant Window Navigator パッケージが登録されていませんでした。公式リポジトリから消えるかもしれません。</p>
-</li>
-<li><p>Code::Blocks が12.11　になっていました。</p>
-</li>
-</ul>
-<p>Avant Window Navigator が消えていて残念でした。これを契機にGNOME Shell 拡張のDash to Dock に移行しましょうか。<br>Dash to Dock のデフォルトのアニメーション設定は遅いので、設定で少し速くなるように変更しました。クリック感がないのと、ドックからアプリケーションを一括で閉じられないのが気になりますが、慣れでしょうか。しばらく触ってみて物足りなければ、自前でビルドするか、CairoDock を使うと思います。</p>
-<p><strong>EDIT:</strong></p>
-<h3 id="Avant-Window-Navigator"><a href="#Avant-Window-Navigator" class="headerlink" title="Avant Window Navigator"></a>Avant Window Navigator</h3><p><a target="_blank" rel="noopener" href="http://www.webupd8.org/2012/11/how-to-install-avant-window-navigator.html">http://www.webupd8.org/2012/11/how-to-install-avant-window-navigator.html</a><br>やはり少し不便なので、webupd8 のリポジトリ(quantal)を利用してAWN をインストールしてみました。</p>
-<p><a href="/images/uploads/2013/01/ubuntu_13_04_gnome_shell_awn.png"><img src="/images/uploads/2013/01/ubuntu_13_04_gnome_shell_awn-600x375.png" alt="ubuntu 13.04 gnome shell awn"></a></p>
-<h3 id="Quit-from-Dash-拡張"><a href="#Quit-from-Dash-拡張" class="headerlink" title="Quit from Dash 拡張"></a>Quit from Dash 拡張</h3><p><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/559/quit-from-dash/">https://extensions.gnome.org/extension/559/quit-from-dash/</a><br>調べてみたら、Quit from Dash 拡張を使えば、Dash to Dock からでも複数起動した同種のアプリケーションを一括して終了させることができました。</p>
-<h3 id="現在使用中のGNOME-Shell-Extension"><a href="#現在使用中のGNOME-Shell-Extension" class="headerlink" title="現在使用中のGNOME Shell Extension"></a>現在使用中のGNOME Shell Extension</h3><ul>
-<li><p>Auto hide top panel</p>
-</li>
-<li><p>Drop down terminal</p>
-</li>
-<li><p>GMail Notify</p>
-</li>
-<li><p>メッセージトレイのカスタマイズ<br><a target="_blank" rel="noopener" href="http://ktkr3d.site11.com/2012/12/31/move-the-hot-corner-of-the-message-tray/">http://ktkr3d.site11.com/2012/12/31/move-the-hot-corner-of-the-message-tray/</a></p>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2013/01/26/ubuntu-13-04-gnome-shell/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2013-01-19 </div>
-			<div class="article-title"><a href="/2013/01/19/windows-8-boot-manager-grub4dos-android-x86/" >Windows 8 Boot Manager + GRUB4DOS + Android-x86</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Windows 8 のブートマネージャからAndorid-x86 を起動する環境を、できるだけWindows 環境でできる手段で構築してみました。Andorid-x86 を起動する際にはGRUB がチェインロードされるような表示になります。Windows 8 のブートマネージャはタッチスクリーンが有効なので、キーボードを使わないで起動するOS を選択できますね。(ご質問いただいたので考えてみました)</p>
-<ol>
-<li><p>Windows 8 のインストール<br>Windows 8 をインストールします。私の環境では、以下のようなパーティション構成になりました。<br>第1パーティション(&#x2F;dev&#x2F;sda1) ntfs<br>第2パーティション(&#x2F;dev&#x2F;sda2) ntfs Windows 8</p>
-</li>
-<li><p>Andorid-x86 のインストール<br>Android-x86 をWindows 8 のインストールされているNTFS パーティションにインストールします。もちろん、別のパーティションにインストールしても構いません。<br>インストール先: &#x2F;dev&#x2F;sda2<br>フォーマット: しない<br>GRUB: インストールしない</p>
-</li>
-<li><p>GRUB4DOS のダウンロード<br><a target="_blank" rel="noopener" href="http://sourceforge.net/projects/grub4dos/files/GRUB4DOS/">http://sourceforge.net/projects/grub4dos/files/GRUB4DOS/</a> からgrub4dos-0.4.4.zip をダウンロードして、ZIP内の以下の4つのファイルをC:\ に展開します。</p>
-</li>
-</ol>
-<pre><code>* default
-
-
-* grldr
-
-
-* grldr.mbr
-
-
-* menu.lst
-</code></pre>
-<ol start="4">
-<li>GRUB4DOS の設定<br>GRUB4DOS でAndroid-x86 を起動できるようにC:\menu.lst を編集します。</li>
-</ol>
-<figure class="highlight text"><figcaption><span>C:¥menu.lst</span></figcaption><table><tr><td class="code"><pre><span class="line">timeout 3</span><br><span class="line">default /default</span><br><span class="line"></span><br><span class="line">title Android-x86 4.2.1 on /dev/sda2</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel /android-4.2-20121205/kernel root=/dev/ram0 androidboot.hardware=android_x86 acpi_sleep=s3_bios,s3_mode SRC=/android-4.2-20121205 DATA=</span><br><span class="line">initrd /android-4.2-20121205/initrd.img</span><br><span class="line">savedefault</span><br><span class="line"></span><br><span class="line">title Android-x86 4.0.4 on /dev/sda2</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel /android-4.0-RC2/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/android-4.0-RC2 DATA=</span><br><span class="line">initrd /android-4.0-RC2/initrd.img</span><br><span class="line">savedefault</span><br></pre></td></tr></table></figure>
-
-<p>※ 1番目のディスクの2番目のパーティション番号は(hd0,1) のように番号を-1した値になるので要注意です。<br>※ 複数のバージョンを切り替えたい場合は複数件登録します。ただし、この起動の切り替えはタッチスクリーンが使えません。<br>※ タイムアウト時間は好みで秒数を指定します。0にするとGRUB4DOSの画面が表示されなくなります。</p>
-<ol start="5">
-<li>Windows 8 ブートマネージャにGRUB4DOS を登録<br>コマンドプロンプトアイコンを右クリックして、「管理者として実行」します。</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdedit /create /d <span class="string">&quot;Android-x86&quot;</span> /application BOOTSECTOR</span><br></pre></td></tr></table></figure>
-
-<p>上記コマンドで表示された値{☆}を以下のコマンドで使います。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdedit /set &#123;☆&#125; device partition=C:</span><br><span class="line">&gt; bcdedit /set &#123;☆&#125; path \grldr.mbr</span><br><span class="line">&gt; bcdedit /displayorder &#123;☆&#125; /addlast</span><br></pre></td></tr></table></figure>
-
-
-
-
-<p>ちなみに一旦別のブートローダにしてしまった後にWindows 8 のブートマネージャに戻すには、コマンドプロンプトアイコンを右クリックして、「管理者として実行」して、以下のコマンドを実行します。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; bcdboot C:\Windows</span><br></pre></td></tr></table></figure>
-
-
-	
-	</div>
-  <a type="button" href="/2013/01/19/windows-8-boot-manager-grub4dos-android-x86/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -694,6 +661,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/11/25/GNOME-Shell-Extensions/" ><i class="fa fa-file-o"></i>GNOME Shell Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/2023/11/23/Lutris/" ><i class="fa fa-file-o"></i>Lutris</a>
+      </li>
+    
+      <li>
         <a href="/2023/10/15/Forge-GNOME-Shell-extension/" ><i class="fa fa-file-o"></i>Forge - GNOME Shell Extension</a>
       </li>
     
@@ -723,14 +698,6 @@
     
       <li>
         <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
   </ul>

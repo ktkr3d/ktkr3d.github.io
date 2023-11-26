@@ -155,6 +155,60 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-08-21 </div>
+			<div class="article-title"><a href="/2011/08/21/ubuntu-11-10-gnome-shell/" >Ubuntu 11.10 でGNOME Shell を使ってみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/ubuntu_11_10_gnome_shell.png" alt="ubuntu 11.10 GNOME Shell"></p>
+<p>Inspiron duo にUbuntu 11.10 アルファ3 amd64 をインストールして、デスクトップ環境をGNOME Shell に変更してみた。Ubuntu 11.10 で標準リポジトリにGNOME Shell のパッケージが復活したので、ソフトウェアセンターからインストール。Unity とGNOME Shell をログインマネージャで切り替えて使うことが可能になった。<br>Inspiron duo のオーディオデバイスを設定変更なしに認識できるようになってた。</p>
+
+	
+	</div>
+  <a type="button" href="/2011/08/21/ubuntu-11-10-gnome-shell/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2011-08-10 </div>
+			<div class="article-title"><a href="/2011/08/10/android-ndk/" >Android NDK で日本語表示してみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/android_ndk_irrlicht_pmd_vmd_freetype.png" alt="android ndk irrlicht pmd vmd freetype"></p>
+<p>Proton SDK 上のIrrlicht ではGUIEnvironment がうまく取得できなかったので、Proton SDK を外した。素のIrrlicht にしたら、画像や文字の表示に問題なかった。ついでに、FreeType を取り込んでTrueType のフォントで日本語を表示してみた。<br>Proton SDK を外したら、なぜかIrrlicht 上の幅と高さが半分くらいになってしまったので、直さないと。GLES2 にも移行したいところ。</p>
+<p><a href="/images/uploads/2011/08/android_ndk_irrlicht_pmd_vmd_fullscreen.png"><img src="/images/uploads/2011/08/android_ndk_irrlicht_pmd_vmd_fullscreen.png" alt="android ndk irrlicht pmd vmd fullscreen"></a></p>
+<p>AndroidManifest.xml を修正したら、フルスクリーンになって最大解像度が有効になった。</p>
+<p><a href="/images/uploads/2011/08/android_ndk_pmd_homerun.png"><img src="/images/uploads/2011/08/android_ndk_pmd_homerun.png" alt="android ndk pmd vmd irrlicht freetype"></a></p>
+<p>いろいろなボタンをつけてみた。</p>
+
+	
+	</div>
+  <a type="button" href="/2011/08/10/android-ndk/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-07-31 </div>
 			<div class="article-title"><a href="/2011/07/31/android-ndk-pmd/" >Android NDK でPMD モデルを表示してみた</a></div>						
 		</h3>
@@ -381,85 +435,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-06-04 </div>
-			<div class="article-title"><a href="/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f6/" >GNOME Shell を拡張してみた6</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/gnome-shell-extension-weather2.png" alt="gnome shell extension weather"></p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="http://www.webupd8.org/2011/06/another-gnome-shell-weather-extension.html">http://www.webupd8.org/2011/06/another-gnome-shell-weather-extension.html</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://www.fpmurphy.com/gnome-shell-extensions/">http://www.fpmurphy.com/gnome-shell-extensions/</a></p>
-</li>
-</ul>
-<p>別のお天気拡張に変更してみた。</p>
-<p>こちらの拡張では、</p>
-<ul>
-<li><p>現在の天気が正しく動作する</p>
-</li>
-<li><p>5日分の天気予報が表示される</p>
-</li>
-<li><p>現在地の指定が簡単(‘tokyo’ のように)</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://www.worldweatheronline.com/">http://www.worldweatheronline.com</a> の利用キーが必要(無料で登録はとても簡単)</p>
-</li>
-</ul>
-<p>今後修正されると思うけれど、バージョン1.1 では、</p>
-<ul>
-<li>現在の気温の単位(摂氏&#x2F;華氏)が設定と逆になってしまう単純なバグがある(以下のように修正してみた)</li>
-</ul>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">let currTemperature = new St.Label(&#123; text: (MUNITS &gt; 0 ? curr[0].temp_C + &#x27;C&#x27; : curr[0].temp_F + &#x27;F&#x27;) &#125;);</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li><p>動作や表示スタイルが他の拡張の影響を受けてしまうことがある</p>
-</li>
-<li><p>ローカルタイムが考慮されてない?</p>
-</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f6/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-06-02 </div>
-			<div class="article-title"><a href="/2011/06/02/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f5/" >GNOME Shell を拡張してみた5</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/system_monitor.png" alt="gnome shell extension system monitor"><br><a target="_blank" rel="noopener" href="http://www.webupd8.org/2011/05/system-monitor-extension-puts-ram-swap.html">http://www.webupd8.org/2011/05/system-monitor-extension-puts-ram-swap.html</a><br>GNOME Shell のシステムモニタ拡張を追加してみた。<br>通信速度を表示できて便利。<br>パネル上にリアルタイムに値を表示できるものの幅をとってしまうので非表示の設定にしてみた。</p>
-
-	
-	</div>
-  <a type="button" href="/2011/06/02/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f5/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -509,6 +484,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/11/25/GNOME-Shell-Extensions/" ><i class="fa fa-file-o"></i>GNOME Shell Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/2023/11/23/Lutris/" ><i class="fa fa-file-o"></i>Lutris</a>
+      </li>
+    
+      <li>
         <a href="/2023/10/15/Forge-GNOME-Shell-extension/" ><i class="fa fa-file-o"></i>Forge - GNOME Shell Extension</a>
       </li>
     
@@ -538,14 +521,6 @@
     
       <li>
         <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
   </ul>

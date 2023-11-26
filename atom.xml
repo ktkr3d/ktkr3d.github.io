@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-10-14T23:43:37.000Z</updated>
+  <updated>2023-11-25T03:35:33.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GNOME Shell Extensions</title>
+    <link href="https://ktkr3d.github.io/2023/11/25/GNOME-Shell-Extensions/"/>
+    <id>https://ktkr3d.github.io/2023/11/25/GNOME-Shell-Extensions/</id>
+    <published>2023-11-25T03:35:33.000Z</published>
+    <updated>2023-11-25T03:35:33.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/gse.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://extensions.gnome.org/&quot;&gt;https://extensions.gnome.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;久しぶりにGNOME Shell Extension を整理してみよう。環境は以下のとおり。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 22.04(GNOME Shell 42.9) &amp;#x2F; デスクトップPC&lt;/li&gt;
+&lt;li&gt;Ubuntu 23.10(GNOME Shell 45) &amp;#x2F; タッチスクリーンのノートPC&lt;/li&gt;
+&lt;li&gt;Ubuntu 24.04 Daily Build(GNOME Shell 45.1) &amp;#x2F; VMWare Player&lt;/li&gt;
+&lt;li&gt;Arch Linux(GNOME Shell 45) &amp;#x2F; タッチスクリーンのノートPC&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="gnome-shell-extension" scheme="https://ktkr3d.github.io/tags/gnome-shell-extension/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lutris</title>
+    <link href="https://ktkr3d.github.io/2023/11/23/Lutris/"/>
+    <id>https://ktkr3d.github.io/2023/11/23/Lutris/</id>
+    <published>2023-11-23T08:08:22.000Z</published>
+    <updated>2023-11-23T08:08:22.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ubuntu2204lts.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://lutris.net/&quot;&gt;https://lutris.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lutris でWorld of Warcraft を実行してみました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OS はUbuntu 22.04.3 LTS, GNOME Shell 42.9, X11(X.org), Pulseaudio&lt;/li&gt;
+&lt;li&gt;wine-ge-8-24, DirectX 11モード, 64bit, dxvk, vkd3d&lt;br&gt;結果としては、&lt;/li&gt;
+&lt;li&gt;FPS が90超えることもあります。Windows 11(同じPC)の同等性能です。&lt;/li&gt;
+&lt;li&gt;Shaderのコンパイルが発生すると左下に&lt;code&gt;Compiling Shaders...&lt;/code&gt;と表示されます。若干もたつく感じがします。キャッシュ方法があるのかよくわかりません。&lt;/li&gt;
+&lt;li&gt;キーボードの反応が遅れることがあります。&lt;/li&gt;
+&lt;li&gt;極まれに音飛びします。&lt;/li&gt;
+&lt;li&gt;DungeonやRaidには若干不安があるがファーミングはは使えそう。&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="lutris" scheme="https://ktkr3d.github.io/tags/lutris/"/>
+    
+  </entry>
   
   <entry>
     <title>Forge - GNOME Shell Extension</title>
@@ -32,6 +83,10 @@
     
     
     
+    
+    <category term="gnome-shell-extension" scheme="https://ktkr3d.github.io/tags/gnome-shell-extension/"/>
+    
+    <category term="forge" scheme="https://ktkr3d.github.io/tags/forge/"/>
     
   </entry>
   
@@ -431,65 +486,6 @@
     <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
     
     <category term="threejs" scheme="https://ktkr3d.github.io/tags/threejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Neutralinojs + Nuxt3 + Three.js</title>
-    <link href="https://ktkr3d.github.io/2022/07/28/Neutralinojs-Nuxt3-Three-js/"/>
-    <id>https://ktkr3d.github.io/2022/07/28/Neutralinojs-Nuxt3-Three-js/</id>
-    <published>2022-07-27T17:05:12.000Z</published>
-    <updated>2022-07-27T17:05:12.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3_threejs.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://threejs.org/&quot;&gt;https://threejs.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3&lt;/a&gt;&lt;br&gt;Nuxt3 でThree.js を利用して3Dオブジェクトを描画してみました。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3_mmd.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_mmd.html&quot;&gt;https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_mmd.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;MMD のサンプルが掲載されていたのでNuxt3 に移植してみました。&lt;br&gt;PMDファイルとVMDファイルは以下の階層に配置します。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;miku&amp;#x2F;miku_v2.pmd&lt;/li&gt;
-&lt;li&gt;nuxt3-src&amp;#x2F;public&amp;#x2F;vmds&amp;#x2F;wavefile_v2.vmd&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;適当に組み込んだら動きました。まだ途中です。今日はここまで。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;PMD: Lat さん、Lat式ミクVer.2.31&lt;/li&gt;
-&lt;li&gt;VMD: せっけんP さん、恋愛サーキュレーション モーション&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    
-    <category term="mmd" scheme="https://ktkr3d.github.io/tags/mmd/"/>
-    
-    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
-    
-    <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
-    
-    <category term="threejs" scheme="https://ktkr3d.github.io/tags/threejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Neutralinojs + Nuxt3 + Vuetify3</title>
-    <link href="https://ktkr3d.github.io/2022/07/14/Neutralinojs-Nuxt3-Vuetify3/"/>
-    <id>https://ktkr3d.github.io/2022/07/14/Neutralinojs-Nuxt3-Vuetify3/</id>
-    <published>2022-07-14T13:31:11.000Z</published>
-    <updated>2022-07-14T13:31:11.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3_vuetify3.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://next.vuetifyjs.com/en/components/cards/&quot;&gt;https://next.vuetifyjs.com/en/components/cards/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Nuetralinojs + Nuxt3 でVuetify3 のCards を使ってみました。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
-    
-    <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
-    
-    <category term="vuetify" scheme="https://ktkr3d.github.io/tags/vuetify/"/>
     
   </entry>
   

@@ -155,6 +155,130 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-06-09 </div>
+			<div class="article-title"><a href="/2012/06/09/firefox-13-newsfox/" >Firefox 13 + NewsFox </a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Firefox のアドオンNewsFox を使ってRSS を購読しているのだけど、Firefox を13.0 にアップデートしてから、時々マウスのボタンダウンイベントがキャプチャーされて無効化されてしまうような挙動があったので、やっつけで暫定対策してみた。<del>Linux でもWindows でも発生する(?)ので、NewsFox 側に問題がありそう。いろいろFirefox のバグ回避もしているようだし。</del>とりあえず、ドラッグ開始しないようにreturn してしまうことにした。NewsFox でドラッグアンドドロップなんて飾りですよ。</p>
+<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragIt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><figcaption><span>newsfox.xpi/chrome/newsfox.jar/content/newsfox/model.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dragArt</span>(<span class="params">evt</span>) &#123; <span class="keyword">return</span>; </span><br></pre></td></tr></table></figure>
+
+<p>他に古いAPI を使っているところもあるようだし、早くアップデート版がリリースされるといいな。</p>
+<p>newsfox.xpi &#x3D; {899DF1F8-2F43-4394-8315-37F6744E6319}.xpi</p>
+
+	
+	</div>
+  <a type="button" href="/2012/06/09/firefox-13-newsfox/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2012-06-06 </div>
+			<div class="article-title"><a href="/2012/06/06/burg-ubuntu-12-04-windows-8-android-x86-4-0/" >Burg + Ubuntu 12.04 + Windows 8 + Android-x86 4.0</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/burg_windows_8_ubuntu_12.04_android-x86_4.0.png" alt="burg windows 8 ubuntu 12.04 android-x86 4.0"></p>
+<p>Ubuntu 12.04 とWindows 8 とAndroid-x86 4.0 のマルチブート環境を構築して、ブートローダをBurg にしてみた。<a href="/2011/05/07/burg-%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/">一年前</a>と同じことの繰り返しだけれど。</p>
+<h3 id="手順"><a href="#手順" class="headerlink" title="手順"></a>手順</h3><ol>
+<li><p>Windows 8 RP をインストール</p>
+</li>
+<li><p>Ubuntu 12.04 を&#x2F;dev&#x2F;sda3 にインストール<br>ブートローダ(GRUB)を&#x2F;dev&#x2F;sda にインストール</p>
+</li>
+<li><p>Android-x86 4.0 のISO の中にある以下の4つのファイルを&#x2F;dev&#x2F;sda3 (&#x2F;PATHTO&#x2F;Android-x86&#x2F;tegav2&#x2F;)にコピー</p>
+</li>
+</ol>
+<pre><code>* initrd.img
+
+
+* kernel
+
+
+* ramdisk.img
+
+
+* system.sfs
+</code></pre>
+<p>設定保存用のフォルダも作成</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> /PATHTO/Android-x86/tegav2/data</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="4">
+<li>Burg のインストール</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:n-muench/burg</span><br><span class="line">$ sudo apt-get update </span><br><span class="line">$ sudo apt-get install burg burg-themes</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="5">
+<li>Burg のテーマfortune とAndroid 用アイコンをgnome-look.org からダウンロードしてテーマ変更</li>
+</ol>
+<figure class="highlight text"><figcaption><span>/etc/default/burg</span></figcaption><table><tr><td class="code"><pre><span class="line">GRUB_GFXMODE=1366x768</span><br><span class="line">GRUB_THEME=fortune</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><figcaption><span>/boot/burg/themes/fortune/icons/hover</span></figcaption><table><tr><td class="code"><pre><span class="line">  -slackware &#123; image = &quot;$$/grey_slackware.png:$$/large_slackware.png&quot; &#125;</span><br><span class="line">  -android &#123; image = &quot;$$/grey_android.png:$$/large_android.png&quot; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="6">
+<li>Android-x86 用のブートエントリを追加</li>
+</ol>
+<figure class="highlight text"><figcaption><span>/etc/burg.d/40_custom</span></figcaption><table><tr><td class="code"><pre><span class="line">menuentry &quot;Android-x86 4.0&quot; --class android --class os &#123;</span><br><span class="line">    insmod ext2</span><br><span class="line">    set root=&#x27;(hd0,3)&#x27;</span><br><span class="line">    search --no-floppy --fs-uuid --set MY-UU-ID</span><br><span class="line">    echo &#x27;Loading Android-x86 4.0 ...&#x27;</span><br><span class="line">    linux /PATHTO/Android-x86/tegav2/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/PATHTO/Android-x86/tegav2 DATA=</span><br><span class="line">    initrd /PATHTO/Android-x86/tegav2/initrd.img</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="7">
+<li>Burg の設定を更新</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo burg-install /dev/sda</span><br><span class="line">$ sudo update-burg</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="8">
+<li>設定が有効になっているかを確認</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo burg-emu -D</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="パーティションレイアウト"><a href="#パーティションレイアウト" class="headerlink" title="パーティションレイアウト"></a>パーティションレイアウト</h3><p>デバイス<br>タイプ<br>サイズ<br>用途</p>
+<p>&#x2F;dev&#x2F;sda1<br>ntfs<br>0.35 GiB<br>EFI</p>
+<p>&#x2F;dev&#x2F;sda2<br>ntfs<br>150.00 GiB<br>Windows 8</p>
+<p>&#x2F;dev&#x2F;sda3<br>ext4<br>145.00 GiB<br>Ubuntu 12.04,<br>Andorid-x86 4.0</p>
+<p>&#x2F;dev&#x2F;sda4<br>swap<br>2.75 GiB<br>Linux swap</p>
+<p>少し改善した手順は<a target="_blank" rel="noopener" href="http://ktkr3d.site11.com/android-x86/">こちら</a></p>
+
+	
+	</div>
+  <a type="button" href="/2012/06/06/burg-ubuntu-12-04-windows-8-android-x86-4-0/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-06-04 </div>
 			<div class="article-title"><a href="/2012/06/04/inspiron-duo-windows-8-64bit/" >Inspiron duo + Windows 8 64bit</a></div>						
 		</h3>
@@ -381,67 +505,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-05-02 </div>
-			<div class="article-title"><a href="/2012/05/02/irrlicht-chopper-scene-node-control/" >Irrlicht + Chopper Scene Node &amp; Control</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/irrlicht_chopper.png" alt="irrlicht chopper scene node simple chopper control"></p>
-<p><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=46226">http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=46226</a><br><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=46250">http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=46250</a></p>
-<p>Irrlicht Forum にヘリコプターを操縦するデモがあったので、動かしてみた。ヘリコプターのモデルはBell UH-1 Iroquois (<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Bell_UH-1_Iroquois)%E3%81%A8%E3%81%84%E3%81%86%E6%A9%9F%E4%BD%93%E3%81%BF%E3%81%9F%E3%81%84%E3%80%82%E6%85%A3%E6%80%A7%E3%81%8C%E3%81%82%E3%81%A3%E3%81%A6%E3%80%81%E3%82%86%E3%81%A3%E3%81%9F%E3%82%8A%E3%81%A8%E5%8B%95%E3%81%8D%E5%87%BA%E3%81%99%E3%80%82%E8%B5%A4%E3%81%84%E7%B7%9A%E3%81%8C%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E7%94%A8%E3%81%AE%E5%9E%82%E7%9B%B4%E7%B7%9A%E3%80%82%E3%82%AD%E3%83%BC%E6%93%8D%E4%BD%9C%E3%81%AF%E4%BB%A5%E4%B8%8B%E3%80%82">http://en.wikipedia.org/wiki/Bell_UH-1_Iroquois)という機体みたい。慣性があって、ゆったりと動き出す。赤い線がデバッグ用の垂直線。キー操作は以下。</a><br>F1〜F10: カメラの切り替え<br>W&#x2F;S: pitchDown&#x2F;pitchUp<br>H: hover<br>Q&#x2F;E: rollLeft&#x2F;rollRight<br>R: resetRoll &amp; resetPitch<br>A&#x2F;D: turnLeft&#x2F;turnRight<br>Z: brake<br>X: stop<br>C: throttle</p>
-<p>Blender 2.4 を使って、ヘリコプターのモデルを.ac 形式から.obj 形式に変換した。</p>
-
-	
-	</div>
-  <a type="button" href="/2012/05/02/irrlicht-chopper-scene-node-control/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-05-01 </div>
-			<div class="article-title"><a href="/2012/05/01/ubuntu-gnome-shell-remix-12-04/" >Ubuntu GNOME Shell Remix 12.04</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/ubnutu_gnome_shell_remix_12.04.png" alt="ubnutu gnome shell remix 12.04"></p>
-<p><a target="_blank" rel="noopener" href="http://ubuntu-gs-remix.sourceforge.net/p/download/">http://ubuntu-gs-remix.sourceforge.net/p/download/</a></p>
-<p>Ubuntu GNOME Shell Remix 12.04 をクリーンインストールしてみた。<br>Unity デスクトップ環境や不要な設定(オーバーレイスクロールバーとか)が省略できてすっきり。<br>いつものようにトップパネルを隠して、Avant Window Navigator とConky を設定してみた。</p>
-<p>オリジナルのUbuntu と比べると、システム設定画面に次の二つのアイコンが無いみたい。</p>
-<ul>
-<li><p>ユーザー向け - プライバシー</p>
-</li>
-<li><p>システム - 管理サービス</p>
-</li>
-</ul>
-<p>よく見ると、各カテゴリのアイキャッチアイコンが利用不可状態になっている。</p>
-
-	
-	</div>
-  <a type="button" href="/2012/05/01/ubuntu-gnome-shell-remix-12-04/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -491,6 +554,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/11/25/GNOME-Shell-Extensions/" ><i class="fa fa-file-o"></i>GNOME Shell Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/2023/11/23/Lutris/" ><i class="fa fa-file-o"></i>Lutris</a>
+      </li>
+    
+      <li>
         <a href="/2023/10/15/Forge-GNOME-Shell-extension/" ><i class="fa fa-file-o"></i>Forge - GNOME Shell Extension</a>
       </li>
     
@@ -520,14 +591,6 @@
     
       <li>
         <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
   </ul>

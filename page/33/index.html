@@ -155,6 +155,72 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-02-19 </div>
+			<div class="article-title"><a href="/2012/02/19/inspiron-duo-ubuntu-11-10-crystal-hd/" >Inspiron duo + Ubuntu 11.10 + Crystal HD</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Inspiron duo 上のUbuntu 11.10 x86_64 にBroadcom Crystal HD Decoder Driver を組み込んでみた。</p>
+<figure class="highlight sh"><figcaption><span>必要なパッケージのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install build-essential g++ automake autoconf libtool libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><figcaption><span>ソースの取得</span></figcaption><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://linuxtv.org/jarod/crystalhd.git</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><figcaption><span>ドライバーのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> driver/linux/</span><br><span class="line">$ autoconf</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<p>コンパイル時に警告がでるので、とりあえず-w をつけた。</p>
+<figure class="highlight sh"><figcaption><span>ライブラリのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> linux_lib/libcrystalhd/</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><figcaption><span>gstreamer プラグインのインストール</span></figcaption><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> filters/gst/gst-plugin/</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><figcaption><span>ファームウェアのコピー</span></figcaption><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> firmware/fwbin/70015/* /lib/firmware/</span><br><span class="line">$ sudo <span class="built_in">cp</span> firmware/fwbin/70012/* /lib/firmware/</span><br></pre></td></tr></table></figure>
+
+
+	
+	</div>
+  <a type="button" href="/2012/02/19/inspiron-duo-ubuntu-11-10-crystal-hd/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2012-02-12 </div>
+			<div class="article-title"><a href="/2012/02/12/irrlicht-lensflare-effect/" >Irrlicht  + Lens Flare Effect</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/irrlicht_lensflare.png" alt="irrlicht lens flare"></p>
+<p><a target="_blank" rel="noopener" href="http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=44728">http://irrlicht.sourceforge.net/forum/viewtopic.php?f=9&t;=44728</a></p>
+<p>Irrlicht フォーラムにレンズフレアのサンプルがあったのでLinux で試してみた。</p>
+<p>Irrlicht 1.8.0<br>gcc&#x2F;g++ 4.6.1</p>
+<p>一点修正。</p>
+<figure class="highlight cpp"><figcaption><span>LensFlareSceneNode.h</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// constructor</span></span><br><span class="line"><span class="built_in">SFlareData</span>(E_FLARE_TYPE type, <span class="type">float</span> position, <span class="type">float</span> scale, video::SColor color)</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2012/02/12/irrlicht-lensflare-effect/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-02-10 </div>
 			<div class="article-title"><a href="/2012/02/10/ubuntu-11-10-ogre-1-7-3-kinect/" >Ubuntu 11.10 + Ogre 1.7.3 + Kinect</a></div>						
 		</h3>
@@ -467,58 +533,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-12-08 </div>
-			<div class="article-title"><a href="/2011/12/08/android-x86-4-0-ics/" >Android-x86 4.0 ICS を実機で試してみた</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/android-x86_4.0_ics_asuslaptop.png" alt="android-x86 4.0 ics asus laptop"></p>
-<p>Android-x86 4.0 ICS のISO イメージが公開されていたので実機(Inspiron duo)で試してみた。<br>ASUS Laptop 用のビルドが安定していた。AMD Brazos 用のビルドやTegav2 用のビルドでタッチスクリーンが動作したので、ビルドの設定(カーネルオプションとか)次第でより適合したビルドを作成できそう。Android-x86 のsparta(Inspiron duo)版ビルドの初期メンテナの人が年末年始でメンテナンスしてくれるみたいなので、期待して待っていよう。</p>
-<p><a href="/images/uploads/2011/12/android-x86_4.0_ics_asuslaptop_ver.png"><img src="/images/uploads/2011/12/android-x86_4.0_ics_asuslaptop_ver.png" alt="android-x86 4.0 ics asus laptop ver"></a></p>
-
-	
-	</div>
-  <a type="button" href="/2011/12/08/android-x86-4-0-ics/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-12-06 </div>
-			<div class="article-title"><a href="/2011/12/06/diablo3-beta/" >Diablo 3 ベータで遊んでみた</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/diablo3_install.png" alt="diablo 3 beta install"></p>
-<p>Diablo 3 のベータテスタの抽選に当選したので、早速インストールしてみた。</p>
-<p><a href="/images/uploads/2011/12/d3_demon_hunter.png"><img src="/images/uploads/2011/12/d3_demon_hunter.png" alt="diablo 3 beta demon hunter"></a></p>
-
-	
-	</div>
-  <a type="button" href="/2011/12/06/diablo3-beta/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -568,6 +582,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/11/25/GNOME-Shell-Extensions/" ><i class="fa fa-file-o"></i>GNOME Shell Extensions</a>
+      </li>
+    
+      <li>
+        <a href="/2023/11/23/Lutris/" ><i class="fa fa-file-o"></i>Lutris</a>
+      </li>
+    
+      <li>
         <a href="/2023/10/15/Forge-GNOME-Shell-extension/" ><i class="fa fa-file-o"></i>Forge - GNOME Shell Extension</a>
       </li>
     
@@ -597,14 +619,6 @@
     
       <li>
         <a href="/2023/07/18/Flatpak/" ><i class="fa fa-file-o"></i>Flatpak</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/18/Ventoy/" ><i class="fa fa-file-o"></i>Ventoy</a>
-      </li>
-    
-      <li>
-        <a href="/2023/07/09/bottles/" ><i class="fa fa-file-o"></i>Bottles</a>
       </li>
     
   </ul>
