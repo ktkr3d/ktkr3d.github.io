@@ -78,7 +78,11 @@
     <updated>2023-10-14T23:43:37.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/4481/forge/&quot;&gt;https://extensions.gnome.org/extension/4481/forge/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/forge-ext/forge&quot;&gt;https://github.com/forge-ext/forge&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;/images/forge_gnome_shell_extension_4.png&quot;&gt;&lt;br&gt;&lt;img src=&quot;/images/forge_gnome_shell_extension_3.png&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/4481/forge/&quot;&gt;https://extensions.gnome.org/extension/4481/forge/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/forge-ext/forge&quot;&gt;https://github.com/forge-ext/forge&lt;/a&gt;&lt;/p&gt;
+&lt;!--
+![](/images/forge_gnome_shell_extension_4.png)
+--&gt;
+&lt;p&gt;&lt;img src=&quot;/images/forge_gnome_shell_extension_3.png&quot;&gt;&lt;/p&gt;
 &lt;!--
 ![](/images/forge_gnome_shell_extension.png)
 --&gt;
