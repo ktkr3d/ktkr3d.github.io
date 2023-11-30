@@ -17,11 +17,11 @@ https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Compile Kodi for Ubuntu"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Compile Kodi for Ubuntu">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -97,7 +97,7 @@ https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -172,18 +172,18 @@ https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md
 	<div class="mypage">		
 	  		
 
-	  <p><a target="_blank" rel="noopener" href="https://github.com/Harekaze/pvr.chinachu/issues/30">https://github.com/Harekaze/pvr.chinachu/issues/30</a></p>
+	  <p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Harekaze/pvr.chinachu/issues/30">https://github.com/Harekaze/pvr.chinachu/issues/30</a></p>
 <p>Kodi 18.2 にバージョンアップしたらpvr.chinchu がうまく動かなくなってしまいました。<br>Kodi のcurl 処理に変更があったようです。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I 172.17.69.68:20772</span><br><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Accept-Ranges: bytes</span><br><span class="line">Last-Modified: Mon, 03 Jun 2019 14:41:30 GMT</span><br><span class="line">Content-Length: 2311</span><br><span class="line">Content-Type: text/html</span><br><span class="line">Server: Chinachu (Node)</span><br><span class="line">Cache-Control: no-cache</span><br><span class="line">X-Content-Type-Options: nosniff</span><br><span class="line">X-Frame-Options: SAMEORIGIN</span><br><span class="line">X-UA-Compatible: IE=Edge,chrome=1</span><br><span class="line">X-XSS-Protection: 1; mode=block</span><br><span class="line">Date: Sat, 22 Jun 2019 08:48:09 GMT</span><br><span class="line">Connection: keep-alive</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I --http2 172.17.69.68:20772</span><br><span class="line">curl: (52) Empty reply from server</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md">https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md</a></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md">https://github.com/xbmc/xbmc/blob/master/docs/README.Ubuntu.md</a></p>
 <p>バージョン18.1 を再インストールしようと思いましが、残念なことにUbuntu のdeb パッケージは見つかりませんでした。仕方が無いのでリポジトリの18.3 のソースコードにパッチを当ててビルドすることにしました。</p>
 <span id="more"></span>
 
 <h3 id="ソースの準備"><a href="#ソースの準備" class="headerlink" title="ソースの準備"></a>ソースの準備</h3><h4 id="バージョン18-Leia-のソース取得"><a href="#バージョン18-Leia-のソース取得" class="headerlink" title="バージョン18(Leia) のソース取得"></a>バージョン18(Leia) のソース取得</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$HOME</span></span><br><span class="line">$ git <span class="built_in">clone</span> -b Leia git://github.com/xbmc/xbmc.git kodi</span><br></pre></td></tr></table></figure>
 
-<h4 id="revert"><a href="#revert" class="headerlink" title="revert"></a>revert</h4><p><a target="_blank" rel="noopener" href="https://github.com/xbmc/xbmc/commit/8839957437f2c1557c5810aff2af820e50826370">xbmc&#x2F;xbmc@8839957</a></p>
+<h4 id="revert"><a href="#revert" class="headerlink" title="revert"></a>revert</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xbmc/xbmc/commit/8839957437f2c1557c5810aff2af820e50826370">xbmc&#x2F;xbmc@8839957</a></p>
 <figure class="highlight cpp"><figcaption><span>xbmc/filesystem/CurlFile.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// enable HTTP2 support. default: CURL_HTTP_VERSION_1_1. Curl &gt;= 7.62.0 defaults to CURL_HTTP_VERSION_2TLS</span></span><br><span class="line"><span class="comment">// g_curlInterface.easy_setopt(h, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2_0);</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h3><h4 id="依存ライブラリのインストール-1"><a href="#依存ライブラリのインストール-1" class="headerlink" title="依存ライブラリのインストール (1)"></a>依存ライブラリのインストール (1)</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:team-xbmc/ppa</span><br></pre></td></tr></table></figure>
@@ -312,7 +312,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

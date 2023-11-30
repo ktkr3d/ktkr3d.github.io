@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Docker Mirakurun Chinachu"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Docker Mirakurun Chinachu">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -91,7 +91,7 @@
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -166,7 +166,7 @@
 	<div class="mypage">		
 	  		
 
-	  <p><a target="_blank" rel="noopener" href="https://github.com/Chinachu/docker-mirakurun-chinachu">https://github.com/Chinachu/docker-mirakurun-chinachu</a><br>Ubuntu 16.10 の環境でDocker Mirakurun Chinachu を使ってみました。</p>
+	  <p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Chinachu/docker-mirakurun-chinachu">https://github.com/Chinachu/docker-mirakurun-chinachu</a><br>Ubuntu 16.10 の環境でDocker Mirakurun Chinachu を使ってみました。</p>
 <span id="more"></span>
 
 <ol>
@@ -189,14 +189,14 @@
 <li>チャンネル設定<br>スキャンした結果をmirakurun の設定に反映する。見つかったチャンネル数分繰り返す。<figure class="highlight yaml"><figcaption><span>./mirakurun/conf/channels.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CH13</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attr">channel:</span> <span class="string">&#x27;13&#x27;</span></span><br></pre></td></tr></table></figure></li>
 <li>docker-mirakurun-chinachu の再起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker-compose down</span><br><span class="line">$ docker-compose up -d</span><br></pre></td></tr></table></figure></li>
 <li>docker-mirakurun-chinachu の自動起動化<br>  安定して動作するようになったら、自動起動してもよいかもしれない。  <figure class="highlight yaml"><figcaption><span>./docker-compose.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mirakurun:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">chinachu:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br></pre></td></tr></table></figure></li>
-<li>KODI アドオンの導入<br>  <a target="_blank" rel="noopener" href="https://github.com/Harekaze/pvr.chinachu">https://github.com/Harekaze/pvr.chinachu</a></li>
+<li>KODI アドオンの導入<br>  <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Harekaze/pvr.chinachu">https://github.com/Harekaze/pvr.chinachu</a></li>
 </ol>
 <ul>
 <li>ダウンロードとビルド<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/Harekaze/pvr.chinachu.git</span><br><span class="line">$ <span class="built_in">cd</span> pvr.chinachu</span><br><span class="line">$ ./bootstrap</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ <span class="built_in">ls</span> pvr.chinachu.*.zip</span><br></pre></td></tr></table></figure></li>
 <li>インストール<br>KODI を起動して、[システム]-[設定]-[アドオン]-[zipファイルからインストール]メニューでzipファイルを指定してインストール</li>
 <li>設定<br>[システム]-[設定]-[アドオン]-[My Add-ons]-[PVRクライアント]-[Harekaze(Chinachu PVR Client)]-[設定]<ul>
-<li>Chinachu WUI のURL<br><a target="_blank" rel="noopener" href="http://192.168.11.2:10772/">http://192.168.11.2:10772/</a></li>
-<li>MirakurunのURL(あれば)<br><a target="_blank" rel="noopener" href="http://192.168.11.2:40772/">http://192.168.11.2:40772/</a></li>
+<li>Chinachu WUI のURL<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.11.2:10772/">http://192.168.11.2:10772/</a></li>
+<li>MirakurunのURL(あれば)<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.11.2:40772/">http://192.168.11.2:40772/</a></li>
 </ul>
 </li>
 </ul>
@@ -274,8 +274,8 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/dtv/">dtv<span>1</span></a></li>
-  </li>
+    </li><li><a href="/categories/dtv/">dtv<span>1</span></a></li>
+  
 
     </ul>
 	</div>
@@ -325,7 +325,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

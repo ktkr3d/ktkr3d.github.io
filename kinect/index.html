@@ -12,11 +12,11 @@ Linux + Ogre3D + Kinecthttps://github.com/ktkr3d/sample-app-">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Kinect"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Kinect">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -92,7 +92,7 @@ Linux + Ogre3D + Kinecthttps://github.com/ktkr3d/sample-app-">
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -165,17 +165,17 @@ Linux + Ogre3D + Kinecthttps://github.com/ktkr3d/sample-app-">
 	  		
 
 	  <p>Kinect は深度センサーで人の動きを認識できるデバイスで、PC に接続することもできます。Kinect を使って身振りに反応するアプリケーションを作ったりして遊んでみました。</p>
-<h3 id="Linux-Ogre3D-Kinect"><a href="#Linux-Ogre3D-Kinect" class="headerlink" title="Linux + Ogre3D + Kinect"></a>Linux + Ogre3D + Kinect</h3><p><a href="/images/linux_kinect.png"><img src="/images/linux_kinect.png" alt="linux kinect"></a><br><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/sample-app-sinbad">https://github.com/ktkr3d/sample-app-sinbad</a><br>SinBad デモをLinux に移植してみた。</p>
+<h3 id="Linux-Ogre3D-Kinect"><a href="#Linux-Ogre3D-Kinect" class="headerlink" title="Linux + Ogre3D + Kinect"></a>Linux + Ogre3D + Kinect</h3><p><a href="/images/linux_kinect.png"><img src="/images/linux_kinect.png" alt="linux kinect"></a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ktkr3d/sample-app-sinbad">https://github.com/ktkr3d/sample-app-sinbad</a><br>SinBad デモをLinux に移植してみた。</p>
 <h3 id="Linux-Ogre3D-Kinect-Miku"><a href="#Linux-Ogre3D-Kinect-Miku" class="headerlink" title="Linux + Ogre3D + Kinect + Miku"></a>Linux + Ogre3D + Kinect + Miku</h3><p><a href="/images/miku_kinect.png"><img src="/images/miku_kinect.png" alt="miku kinect"></a><br>Kinect でミクさんを動かしてみた。</p>
 <h3 id="FAAST-Kinect-WoW"><a href="#FAAST-Kinect-WoW" class="headerlink" title="FAAST + Kinect + WoW"></a>FAAST + Kinect + WoW</h3><p><a href="/images/FAAST_WoW2.png"><img src="/images/FAAST_WoW2.png"></a><br>Kinect でWorld of Warcraft を操作してみた。</p>
 <h3 id="Linux-でKinect-環境構築"><a href="#Linux-でKinect-環境構築" class="headerlink" title="Linux でKinect 環境構築"></a>Linux でKinect 環境構築</h3><h4 id="Linux-Kernel-のKinect-ドライバの無効化"><a href="#Linux-Kernel-のKinect-ドライバの無効化" class="headerlink" title="Linux Kernel のKinect ドライバの無効化"></a>Linux Kernel のKinect ドライバの無効化</h4><p>  Linux Kernel 3.0 からKinect のカーネルモジュールが組み込まれているので、あらかじめ無効にしておく。rmmod gspca_kinect するか、gspca_kinect.ko をgspca_kinect.ko.BAK 等にリネームする。<br>  対象のカーネルモジュールの場所は、&#x2F;lib&#x2F;modules&#x2F;3.0.0-16-generic&#x2F;kernel&#x2F;drivers&#x2F;media&#x2F;video&#x2F;gspca&#x2F;gspca_kinect.ko</p>
-<h4 id="OpenNI-のインストール"><a href="#OpenNI-のインストール" class="headerlink" title="OpenNI のインストール"></a>OpenNI のインストール</h4><p><a target="_blank" rel="noopener" href="https://github.com/OpenNI/OpenNI/tree/unstable">https://github.com/OpenNI/OpenNI/tree/unstable</a> からダウンロードして展開</p>
+<h4 id="OpenNI-のインストール"><a href="#OpenNI-のインストール" class="headerlink" title="OpenNI のインストール"></a>OpenNI のインストール</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/OpenNI/OpenNI/tree/unstable">https://github.com/OpenNI/OpenNI/tree/unstable</a> からダウンロードして展開</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Platform/Linux/Build</span><br><span class="line">$ make</span><br><span class="line">$ <span class="built_in">chmod</span> 755 CreateRedist/RedistMaker</span><br><span class="line">$ sudo make install</span><br><span class="line">$ sudo Redist/*/install.sh</span><br></pre></td></tr></table></figure>
 
-<h4 id="ドライバ-avin2-のインストール"><a href="#ドライバ-avin2-のインストール" class="headerlink" title="ドライバ(avin2)のインストール"></a>ドライバ(avin2)のインストール</h4><p><a target="_blank" rel="noopener" href="https://github.com/avin2/SensorKinect">https://github.com/avin2/SensorKinect</a> からダウンロードして展開</p>
+<h4 id="ドライバ-avin2-のインストール"><a href="#ドライバ-avin2-のインストール" class="headerlink" title="ドライバ(avin2)のインストール"></a>ドライバ(avin2)のインストール</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/avin2/SensorKinect">https://github.com/avin2/SensorKinect</a> からダウンロードして展開</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Platform/Linux/Build</span><br><span class="line">$ make</span><br><span class="line">$ <span class="built_in">chmod</span> 755 CreateRedist/RedistMaker</span><br><span class="line">$ sudo make install</span><br><span class="line">$ sudo Redist/*/install.sh</span><br></pre></td></tr></table></figure>
 
-<h4 id="NITE-のインストール"><a href="#NITE-のインストール" class="headerlink" title="NITE のインストール"></a>NITE のインストール</h4><p><a target="_blank" rel="noopener" href="http://www.openni.org/Downloads/OpenNIModules.aspx">http://www.openni.org/Downloads/OpenNIModules.aspx</a> からダウンロードして展開（Ubuntu 10.10 用でも動く）</p>
+<h4 id="NITE-のインストール"><a href="#NITE-のインストール" class="headerlink" title="NITE のインストール"></a>NITE のインストール</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.openni.org/Downloads/OpenNIModules.aspx">http://www.openni.org/Downloads/OpenNIModules.aspx</a> からダウンロードして展開（Ubuntu 10.10 用でも動く）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo ./install.sh</span><br></pre></td></tr></table></figure>
 
 <h4 id="サンプルを実行して動作確認"><a href="#サンプルを実行して動作確認" class="headerlink" title="サンプルを実行して動作確認"></a>サンプルを実行して動作確認</h4><ul>
@@ -236,7 +236,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Windows 11 - WSL 2 - systemd"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Windows 11 - WSL 2 - systemd">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -91,7 +91,7 @@
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -250,7 +250,7 @@
 <li>Printunl</li>
 </ol>
 <ul>
-<li>手順<br><a target="_blank" rel="noopener" href="https://techviewleo.com/install-pritunl-vpn-on-ubuntu-server/">https://techviewleo.com/install-pritunl-vpn-on-ubuntu-server/</a></li>
+<li>手順<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://techviewleo.com/install-pritunl-vpn-on-ubuntu-server/">https://techviewleo.com/install-pritunl-vpn-on-ubuntu-server/</a></li>
 <li>準備<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update &amp;&amp; sudo apt upgrade</span><br><span class="line">$ sudo apt install wget vim curl gnupg2 software-properties-common apt-transport-https ca-certificates lsb-release</span><br><span class="line">$ sudo <span class="built_in">tee</span> /etc/apt/sources.list.d/pritunl.list &lt;&lt; <span class="string">EOF</span></span><br><span class="line"><span class="string">deb https://repo.pritunl.com/unstable/apt jammy main</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line">$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A</span><br></pre></td></tr></table></figure></li>
 <li>リポジトリのlibssl パッケージでは依存関係が満たせないので別途導入<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1-1ubuntu2.1~18.04.20_amd64.deb</span><br><span class="line">$ sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb</span><br></pre></td></tr></table></figure></li>
 <li>導入<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://www.mongodb.org/static/pgp/server-5.0.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-5.gpg</span><br><span class="line">$ echo &quot;deb [ arch=$(dpkg --print-architecture) ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse&quot; | sudo tee /etc/apt/sources.list.d/mongodb-org.list</span><br></pre></td></tr></table></figure>
@@ -260,7 +260,7 @@
 <li>code-server</li>
 </ol>
 <ul>
-<li>手順<br><a target="_blank" rel="noopener" href="https://github.com/coder/code-server#user-content-getting-started">https://github.com/coder/code-server#user-content-getting-started</a></li>
+<li>手順<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/coder/code-server#user-content-getting-started">https://github.com/coder/code-server#user-content-getting-started</a></li>
 <li>設定<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://code-server.dev/install.sh | sh</span><br><span class="line">$ sudo systemctl enable --now code-server@$USER</span><br></pre></td></tr></table></figure>
 <figure class="highlight yaml"><figcaption><span>/.config/code-server/config.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#bind-addr: 127.0.0.1:8080</span></span><br><span class="line"><span class="attr">bind-addr:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:8080</span></span><br><span class="line"><span class="comment">#auth: password</span></span><br><span class="line"><span class="attr">auth:</span> <span class="string">none</span></span><br></pre></td></tr></table></figure></li>
 <li>拡張機能の導入</li>
@@ -272,7 +272,7 @@
 <li>Hexo</li>
 </ol>
 <ul>
-<li>手順<br><a target="_blank" rel="noopener" href="https://hexo.io/docs/#Install-Hexo">https://hexo.io/docs/#Install-Hexo</a></li>
+<li>手順<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hexo.io/docs/#Install-Hexo">https://hexo.io/docs/#Install-Hexo</a></li>
 <li>導入<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure></li>
 <li>プラグインの導入</li>
 <li>現行のデータの移行</li>
@@ -283,7 +283,7 @@
 	<!-- related posts -->
 	<section id="related_posts">
 	<h2 class="title">関連記事</h2>
-	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/02/08/Develop-Environment-on-WSL/" title="Development Environment on WSL" rel="bookmark">Development Environment on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/14/WSL2/" title="WSL 2" rel="bookmark">WSL 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/04/Chinachu-on-WSL/" title="WSL でChinachu" rel="bookmark">WSL でChinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/21/Puppeteer/" title="Puppeteer" rel="bookmark">Puppeteer</a></h3></div></li></ul>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/08/24/OpenVPN-on-WSL2/" title="OpenVPN on WSL2" rel="bookmark">OpenVPN on WSL2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/02/08/Develop-Environment-on-WSL/" title="Development Environment on WSL" rel="bookmark">Development Environment on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/04/Chinachu-on-WSL/" title="WSL でChinachu" rel="bookmark">WSL でChinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/14/WSL2/" title="WSL 2" rel="bookmark">WSL 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/21/Puppeteer/" title="Puppeteer" rel="bookmark">Puppeteer</a></h3></div></li></ul>
 	</section>
 
 	<!-- recommended posts -->
@@ -353,7 +353,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/wsl/">wsl<span>12</span></a></li> <li><a href="/tags/windows/">windows<span>4</span></a></li> <li><a href="/tags/hexo/">hexo<span>12</span></a></li> <li><a href="/tags/pritunl/">pritunl<span>3</span></a></li> <li><a href="/tags/code-server/">code-server<span>4</span></a></li>
+  <li><a href="/tags/wsl/">wsl<span>12</span></a></li> <li><a href="/tags/windows/">windows<span>4</span></a></li> <li><a href="/tags/hexo/">hexo<span>13</span></a></li> <li><a href="/tags/pritunl/">pritunl<span>3</span></a></li> <li><a href="/tags/code-server/">code-server<span>4</span></a></li>
     </ul>
 	</div>
 	
@@ -391,7 +391,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

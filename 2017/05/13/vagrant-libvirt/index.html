@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="vagrant-libvirt"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="vagrant-libvirt">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -91,7 +91,7 @@
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -166,7 +166,7 @@
 	<div class="mypage">		
 	  		
 
-	  <p><a target="_blank" rel="noopener" href="https://github.com/vagrant-libvirt/vagrant-libvirt">https://github.com/vagrant-libvirt/vagrant-libvirt</a><br>vagrant-libvirt を使ってVagrantでKVMの仮想環境を構築してみました。</p>
+	  <p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/vagrant-libvirt/vagrant-libvirt">https://github.com/vagrant-libvirt/vagrant-libvirt</a><br>vagrant-libvirt を使ってVagrantでKVMの仮想環境を構築してみました。</p>
 <span id="more"></span>
 
 <h2 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h2><ul>
@@ -182,7 +182,7 @@
 <h2 id="Vagrant-のインストール"><a href="#Vagrant-のインストール" class="headerlink" title="Vagrant のインストール"></a>Vagrant のインストール</h2><ul>
 <li>標準リポジトリからvagrant をインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install vagrant</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="プラグインのインストール"><a href="#プラグインのインストール" class="headerlink" title="プラグインのインストール"></a>プラグインのインストール</h2><p><a target="_blank" rel="noopener" href="https://github.com/vagrant-libvirt/vagrant-libvirt#installation">https://github.com/vagrant-libvirt/vagrant-libvirt#installation</a></p>
+<h2 id="プラグインのインストール"><a href="#プラグインのインストール" class="headerlink" title="プラグインのインストール"></a>プラグインのインストール</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/vagrant-libvirt/vagrant-libvirt#installation">https://github.com/vagrant-libvirt/vagrant-libvirt#installation</a></p>
 <ol>
 <li><p>ソースコードリポジトリを有効にしておく</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo software-properties-gtk</span><br></pre></td></tr></table></figure>
@@ -194,33 +194,33 @@
 <li><p>vagrant-libvirt、vagrant-mutateプラグインのインストール</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vagrant plugin install vagrant-libvirt</span><br><span class="line">$ vagrant plugin install vagrant-mutate</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="仮想環境の構築"><a href="#仮想環境の構築" class="headerlink" title="仮想環境の構築"></a>仮想環境の構築</h2><p><a target="_blank" rel="noopener" href="https://atlas.hashicorp.com/boxes/search?provider=libvirt">https://atlas.hashicorp.com/boxes/search?provider=libvirt</a></p>
+<h2 id="仮想環境の構築"><a href="#仮想環境の構築" class="headerlink" title="仮想環境の構築"></a>仮想環境の構築</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://atlas.hashicorp.com/boxes/search?provider=libvirt">https://atlas.hashicorp.com/boxes/search?provider=libvirt</a></p>
 <h3 id="centos-7-の場合"><a href="#centos-7-の場合" class="headerlink" title="centos&#x2F;7 の場合"></a>centos&#x2F;7 の場合</h3><ul>
-<li>URL<br><a target="_blank" rel="noopener" href="https://atlas.hashicorp.com/centos/boxes/7">https://atlas.hashicorp.com/centos/boxes/7</a></li>
+<li>URL<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://atlas.hashicorp.com/centos/boxes/7">https://atlas.hashicorp.com/centos/boxes/7</a></li>
 <li>環境の作成と起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ~/vagrant/centos_7; <span class="built_in">cd</span> <span class="variable">$_</span></span><br><span class="line">$ vagrant init centos/7; vagrant up --provider libvirt</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="fedora-25-cloud-base-の場合"><a href="#fedora-25-cloud-base-の場合" class="headerlink" title="fedora&#x2F;25-cloud-base の場合"></a>fedora&#x2F;25-cloud-base の場合</h3><ul>
-<li>URL<br><a target="_blank" rel="noopener" href="https://atlas.hashicorp.com/fedora/boxes/25-cloud-base">https://atlas.hashicorp.com/fedora/boxes/25-cloud-base</a></li>
+<li>URL<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://atlas.hashicorp.com/fedora/boxes/25-cloud-base">https://atlas.hashicorp.com/fedora/boxes/25-cloud-base</a></li>
 <li>環境の作成と起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ~/vagrant/fedora_25-cloud-base; <span class="built_in">cd</span> <span class="variable">$_</span></span><br><span class="line">$ vagrant init fedora/25-cloud-base; vagrant up --provider libvirt</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="debian-jessie64-の場合"><a href="#debian-jessie64-の場合" class="headerlink" title="debian&#x2F;jessie64 の場合"></a>debian&#x2F;jessie64 の場合</h3><ul>
-<li>URL<br><a target="_blank" rel="noopener" href="https://atlas.hashicorp.com/debian/boxes/jessie64">https://atlas.hashicorp.com/debian/boxes/jessie64</a></li>
+<li>URL<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://atlas.hashicorp.com/debian/boxes/jessie64">https://atlas.hashicorp.com/debian/boxes/jessie64</a></li>
 <li>環境の作成と起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ~/vagrant/debian_jessie64; <span class="built_in">cd</span> <span class="variable">$_</span></span><br><span class="line">$ vagrant init debian/jessie64; vagrant up --provider libvirt</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="ceph-ubuntu-xenial-の場合"><a href="#ceph-ubuntu-xenial-の場合" class="headerlink" title="ceph&#x2F;ubuntu-xenial の場合"></a>ceph&#x2F;ubuntu-xenial の場合</h3><ul>
-<li>URL<br><a target="_blank" rel="noopener" href="https://atlas.hashicorp.com/ceph/boxes/ubuntu-xenial">https://atlas.hashicorp.com/ceph/boxes/ubuntu-xenial</a></li>
+<li>URL<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://atlas.hashicorp.com/ceph/boxes/ubuntu-xenial">https://atlas.hashicorp.com/ceph/boxes/ubuntu-xenial</a></li>
 <li>環境の作成と起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ~/vagrant/ceph_ubuntu-xenial; <span class="built_in">cd</span> <span class="variable">$_</span></span><br><span class="line">$ vagrant init ceph/ubuntu-xenial; vagrant up --provider libvirt</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="bento-ubuntu-16-04-の場合"><a href="#bento-ubuntu-16-04-の場合" class="headerlink" title="bento&#x2F;ubuntu-16.04 の場合"></a>bento&#x2F;ubuntu-16.04 の場合</h3><ul>
-<li>URL<br><a target="_blank" rel="noopener" href="https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04">https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04</a></li>
+<li>URL<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04">https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04</a></li>
 <li>ボックスの変換<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vagrant box add --provider virtualbox bento/ubuntu-16.04</span><br><span class="line">$ vagrant mutate bento/ubuntu-16.04 libvirt --input-provider virtualbox --force-virtio</span><br></pre></td></tr></table></figure></li>
 <li>環境の作成と起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ~/vagrant/bento_ubuntu-16.04; <span class="built_in">cd</span> <span class="variable">$_</span></span><br><span class="line">$ vagrant init bento/ubuntu-16.04; vagrant up --provider libvirt</span><br></pre></td></tr></table></figure>
 ただしNICが構成されていないので、virt-manager 等から直接入って設定が必要みたい。</li>
 </ul>
 <h3 id="ubuntu-xenial64-やubuntu-xenial-server-cloudimg-の場合"><a href="#ubuntu-xenial64-やubuntu-xenial-server-cloudimg-の場合" class="headerlink" title="ubuntu&#x2F;xenial64 やubuntu&#x2F;xenial-server-cloudimg の場合"></a>ubuntu&#x2F;xenial64 やubuntu&#x2F;xenial-server-cloudimg の場合</h3><ul>
-<li>URL<br><a target="_blank" rel="noopener" href="https://atlas.hashicorp.com/ubuntu/boxes/xenial64">https://atlas.hashicorp.com/ubuntu/boxes/xenial64</a></li>
-<li>URL<br><a target="_blank" rel="noopener" href="https://cloud-images.ubuntu.com/xenial/current/">https://cloud-images.ubuntu.com/xenial/current/</a></li>
-<li>対応<br><a target="_blank" rel="noopener" href="https://github.com/vagrant-libvirt/vagrant-libvirt/issues/602">https://github.com/vagrant-libvirt/vagrant-libvirt/issues/602</a><br>Ubuntu公式系Xenial のVirtualbox イメージはマルチディスク構成になっていますが、vagrant-libvirt がマルチディスク構成に対応してないので、今のところ無理みたい・・・</li>
+<li>URL<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://atlas.hashicorp.com/ubuntu/boxes/xenial64">https://atlas.hashicorp.com/ubuntu/boxes/xenial64</a></li>
+<li>URL<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://cloud-images.ubuntu.com/xenial/current/">https://cloud-images.ubuntu.com/xenial/current/</a></li>
+<li>対応<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/vagrant-libvirt/vagrant-libvirt/issues/602">https://github.com/vagrant-libvirt/vagrant-libvirt/issues/602</a><br>Ubuntu公式系Xenial のVirtualbox イメージはマルチディスク構成になっていますが、vagrant-libvirt がマルチディスク構成に対応してないので、今のところ無理みたい・・・</li>
 </ul>
 <h2 id="Ansible-のインストール"><a href="#Ansible-のインストール" class="headerlink" title="Ansible のインストール"></a>Ansible のインストール</h2><ul>
 <li>ホストの操作<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install ansible</span><br></pre></td></tr></table></figure></li>
@@ -339,7 +339,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

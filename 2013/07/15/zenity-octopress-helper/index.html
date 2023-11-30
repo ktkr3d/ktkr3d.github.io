@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Zenity OctoPress Helper"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Zenity OctoPress Helper">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -91,7 +91,7 @@
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -166,11 +166,11 @@
 	<div class="mypage">		
 	  		
 
-	  <p><a href="/images/zenity_octopress_menu.png"><img src="/images/zenity_octopress_menu.png" class=""></a></p>
+	  <p><a href="/images/zenity_octopress_menu.png"><img src="/images/zenity_octopress_menu.png" class></a></p>
 <p>OctoPress のフロントエンドをZenity で作ってみました。<br>Web ベースのUI を作っている方もいるようですが、とりあえずこれでもお手軽になりました。</p>
 <span id="more"></span>
 
-<h4 id="zenity-スクリプト"><a href="#zenity-スクリプト" class="headerlink" title="zenity スクリプト"></a>zenity スクリプト</h4><p><a href="/images/zenity_octopress_new_post.png"><img src="/images/zenity_octopress_new_post.png" class=""></a><br><br><a href="/images/zenity_octopress_deploy.png"><img src="/images/zenity_octopress_deploy.png" class=""></a></p>
+<h4 id="zenity-スクリプト"><a href="#zenity-スクリプト" class="headerlink" title="zenity スクリプト"></a>zenity スクリプト</h4><p><a href="/images/zenity_octopress_new_post.png"><img src="/images/zenity_octopress_new_post.png" class></a><br><br><a href="/images/zenity_octopress_deploy.png"><img src="/images/zenity_octopress_deploy.png" class></a></p>
 <p>Zenity のリストボックス、テキスト入力、プログレスバー等を利用して、フロントエンドを作成します。</p>
 <figure class="highlight sh"><figcaption><span>octopress_helper.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">OCTOPRESS_DIR=/mnt/common/github/octopress</span><br><span class="line"></span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$HOME</span>/bin:<span class="variable">$HOME</span>/.rvm/bin <span class="comment"># Add RVM to PATH for scripting</span></span><br><span class="line"><span class="built_in">source</span> <span class="variable">$HOME</span>/.rvm/scripts/rvm</span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$OCTOPRESS_DIR</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> :</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">	pick=$(zenity --list --title <span class="string">&quot;OctoPress Helper&quot;</span> --text <span class="string">&quot;Select Action.&quot;</span> --radiolist --column Pick --column dummy --column Action --hide-column 2 <span class="literal">true</span> 0 <span class="string">&quot;New Post&quot;</span> <span class="literal">false</span> 1 <span class="string">&quot;New Page&quot;</span> <span class="literal">false</span> 2 <span class="string">&quot;Generate&quot;</span> <span class="literal">false</span> 3 <span class="string">&quot;Deploy&quot;</span> <span class="literal">false</span> 4 <span class="string">&quot;Preview&quot;</span> <span class="literal">false</span> 5 <span class="string">&quot;Open Posts Folder&quot;</span> <span class="literal">false</span> 6 <span class="string">&quot;Push Source&quot;</span>);</span><br><span class="line">	<span class="keyword">case</span> <span class="variable">$pick</span> <span class="keyword">in</span></span><br><span class="line">		0)</span><br><span class="line">			post_title=$(zenity --entry --title=<span class="string">&quot;New Post&quot;</span> --text=<span class="string">&quot;Enter Title.&quot;</span> )</span><br><span class="line">			<span class="keyword">if</span> [ <span class="variable">$&#123;#post_title&#125;</span> &gt; 0 ] ; <span class="keyword">then</span></span><br><span class="line">				rake new_post[<span class="string">&quot;<span class="variable">$post_title</span>&quot;</span>] &gt;(zenity --progress --title=<span class="string">&quot;New Post&quot;</span> --pulsate --auto-close --auto-kill)</span><br><span class="line">			<span class="keyword">fi</span></span><br><span class="line">			;;</span><br><span class="line">		1) </span><br><span class="line">			page_title=$(zenity --entry --title=<span class="string">&quot;New Page&quot;</span> --text=<span class="string">&quot;Enter Title.&quot;</span> )</span><br><span class="line">			<span class="keyword">if</span> [ <span class="variable">$&#123;#page_title&#125;</span> &gt; 0 ] ; <span class="keyword">then</span></span><br><span class="line">				rake new_page[<span class="string">&quot;<span class="variable">$page_title</span>&quot;</span>] &gt;(zenity --progress --title=<span class="string">&quot;New Page&quot;</span> --pulsate --auto-close --auto-kill)</span><br><span class="line">			<span class="keyword">fi</span></span><br><span class="line">			;;</span><br><span class="line">		2)</span><br><span class="line">			rake generate &gt;(zenity --progress --title=<span class="string">&quot;Generate&quot;</span> --pulsate --auto-close --auto-kill)</span><br><span class="line">			;;</span><br><span class="line">		3)</span><br><span class="line">			rake deploy &gt;(zenity --progress --title=<span class="string">&quot;Deploy&quot;</span> --pulsate --auto-close --auto-kill)</span><br><span class="line">			;;</span><br><span class="line">		4)</span><br><span class="line">			rake preview &gt;(zenity --progress --title=<span class="string">&quot;Preview&quot;</span> --pulsate --auto-close --auto-kill)</span><br><span class="line">			;;</span><br><span class="line">		5)</span><br><span class="line">			nautilus <span class="variable">$OCTOPRESS_DIR</span>/source/_posts/ &amp;</span><br><span class="line">			;;</span><br><span class="line">		6)</span><br><span class="line">			git add . &amp;&amp; git commit -m <span class="string">&#x27;update&#x27;</span> &amp;&amp; git push -u origin <span class="built_in">source</span> &gt;(zenity --progress --title=<span class="string">&quot;Push Source&quot;</span> --pulsate --auto-close --auto-kill)</span><br><span class="line">			;;</span><br><span class="line">		*)</span><br><span class="line">			<span class="built_in">break</span></span><br><span class="line">			;;</span><br><span class="line">	<span class="keyword">esac</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 
@@ -252,8 +252,8 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/cms/">cms<span>14</span></a></li>
-  </li>
+    </li><li><a href="/categories/cms/">cms<span>14</span></a></li>
+  
 
     </ul>
 	</div>
@@ -295,7 +295,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

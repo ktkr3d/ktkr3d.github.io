@@ -14,11 +14,11 @@ Visual Studio Code とC&amp;#x2F;C++ 拡張をUbuntu 14.04 にインストール
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Visual Studio Code and C/C++ Extension"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Visual Studio Code and C/C++ Extension">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -94,7 +94,7 @@ Visual Studio Code とC&amp;#x2F;C++ 拡張をUbuntu 14.04 にインストール
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -171,8 +171,8 @@ Visual Studio Code とC&amp;#x2F;C++ 拡張をUbuntu 14.04 にインストール
 
 	  <p><img src="/images/vscode.png" alt="Visual Studio Code"></p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://blogs.msdn.microsoft.com/vcblog/2016/03/31/cc-extension-for-visual-studio-code/">https://blogs.msdn.microsoft.com/vcblog/2016/03/31/cc-extension-for-visual-studio-code/</a></li>
-<li><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blogs.msdn.microsoft.com/vcblog/2016/03/31/cc-extension-for-visual-studio-code/">https://blogs.msdn.microsoft.com/vcblog/2016/03/31/cc-extension-for-visual-studio-code/</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools</a></li>
 </ul>
 <p>Visual Studio Code とC&#x2F;C++ 拡張をUbuntu 14.04 にインストールして、C&#x2F;C++ のHelloWorld をデバッガでステップ実行してみました。</p>
 <span id="more"></span>
@@ -200,7 +200,7 @@ Visual Studio Code とC&amp;#x2F;C++ 拡張をUbuntu 14.04 にインストール
 <h2 id="インクルードパスの設定"><a href="#インクルードパスの設定" class="headerlink" title="インクルードパスの設定"></a>インクルードパスの設定</h2><p><code>#include</code> 文の下に警告マークが表示されるので、クリックすると以下のファイルが作成されます。</p>
 <figure class="highlight json"><figcaption><span>~/test/.vscode/c_cpp_properties.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Mac&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;/usr/include&quot;</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Linux&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;/usr/include&quot;</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Win32&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;c:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include&quot;</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="ビルドタスクの設定"><a href="#ビルドタスクの設定" class="headerlink" title="ビルドタスクの設定"></a>ビルドタスクの設定</h2><p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Docs/editor/tasks#_defining-a-problem-matcher">https://code.visualstudio.com/Docs/editor/tasks#_defining-a-problem-matcher</a></p>
+<h2 id="ビルドタスクの設定"><a href="#ビルドタスクの設定" class="headerlink" title="ビルドタスクの設定"></a>ビルドタスクの設定</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://code.visualstudio.com/Docs/editor/tasks#_defining-a-problem-matcher">https://code.visualstudio.com/Docs/editor/tasks#_defining-a-problem-matcher</a></p>
 <figure class="highlight json"><figcaption><span>~/test/.vscode/tasks.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gcc&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;-Wall&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-O0&quot;</span><span class="punctuation">,</span> <span class="string">&quot;test.c&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;owner&quot;</span><span class="punctuation">:</span> <span class="string">&quot;c&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;fileLocation&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;relative&quot;</span><span class="punctuation">,</span> <span class="string">&quot;$&#123;workspaceRoot&#125;&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;pattern&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;regexp&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;file&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;line&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;column&quot;</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;severity&quot;</span><span class="punctuation">:</span> <span class="number">4</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="number">5</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p><code>F1</code>でコマンドパレットを表示し、<code>&gt;build</code>と入力すると、<code>Tasks: Run Build Task</code> という候補がでるので、実行する。</p>
@@ -209,7 +209,7 @@ Visual Studio Code とC&amp;#x2F;C++ 拡張をUbuntu 14.04 にインストール
 <p>左のツールバーの4番めのデバッグアイコンをクリックして、▶ボタンを押すとデバッガが起動します。<br>ソースコード上で<code>F9</code>押下でブレークポイントの設定&#x2F;解除ができます。</p>
 <hr>
 <p>ここからはUbuntu 16.04 へのインストールの試行メモです。</p>
-<h2 id="C-C-拡張のインストール-1"><a href="#C-C-拡張のインストール-1" class="headerlink" title="C&#x2F;C++ 拡張のインストール"></a>C&#x2F;C++ 拡張のインストール</h2><p>Ubuntu 14.04 以外のUbutu のバージョンの場合は手動でインストールします。<br><a target="_blank" rel="noopener" href="https://github.com/dotnet/cli/#user-content-ubuntu-installers">https://github.com/dotnet/cli/#user-content-ubuntu-installers</a></p>
+<h2 id="C-C-拡張のインストール-1"><a href="#C-C-拡張のインストール-1" class="headerlink" title="C&#x2F;C++ 拡張のインストール"></a>C&#x2F;C++ 拡張のインストール</h2><p>Ubuntu 14.04 以外のUbutu のバージョンの場合は手動でインストールします。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/dotnet/cli/#user-content-ubuntu-installers">https://github.com/dotnet/cli/#user-content-ubuntu-installers</a></p>
 <ol>
 <li>Gdebi のインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install gdebi</span><br></pre></td></tr></table></figure></li>
 <li>dotnet の依存するlibicu52 をダウンロード <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget http://security.ubuntu.com/ubuntu/pool/main/i/icu/libicu52_52.1-8ubuntu0.2_amd64.deb</span><br></pre></td></tr></table></figure></li>
@@ -221,7 +221,7 @@ Visual Studio Code とC&amp;#x2F;C++ 拡張をUbuntu 14.04 にインストール
 </li>
 <li>DEB パッケージをインストールします。   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo gdebi *.deb</span><br></pre></td></tr></table></figure></li>
 <li>設定 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.vscode/extensions/ms-vscode.cpptools-0.4.2</span><br><span class="line">$ dotnet restore --configfile NuGet.Config --infer-runtimes</span><br><span class="line">$ dotnet publish -o debugAdapters</span><br><span class="line">$ <span class="built_in">touch</span> debugAdapters/coreclr.lock.0.1.0</span><br></pre></td></tr></table></figure></li>
-<li>coreclr のインストール<br> <a target="_blank" rel="noopener" href="https://github.com/dotnet/coreclr#user-content-build-status">https://github.com/dotnet/coreclr#user-content-build-status</a><br> <a target="_blank" rel="noopener" href="https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md">https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md</a> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.6 lldb-3.6-dev libunwind8 libunwind8-dev gettext libicu-dev liblttng-ust-dev libcurl4-openssl-dev libssl-dev uuid-dev</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/dotnet/coreclr</span><br><span class="line">$ <span class="built_in">cd</span> coreclr</span><br><span class="line">$ ./build.sh</span><br></pre></td></tr></table></figure></li>
+<li>coreclr のインストール<br> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/dotnet/coreclr#user-content-build-status">https://github.com/dotnet/coreclr#user-content-build-status</a><br> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md">https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md</a> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.6 lldb-3.6-dev libunwind8 libunwind8-dev gettext libicu-dev liblttng-ust-dev libcurl4-openssl-dev libssl-dev uuid-dev</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/dotnet/coreclr</span><br><span class="line">$ <span class="built_in">cd</span> coreclr</span><br><span class="line">$ ./build.sh</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="起動アイコンの作成"><a href="#起動アイコンの作成" class="headerlink" title="起動アイコンの作成"></a>起動アイコンの作成</h2><p>起動アイコンが作成されなかったら、以下のファイルを手動で作成します。</p>
 <figure class="highlight ini"><figcaption><span>~/.local/share/applications/visual-studio-code.desktop</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[Desktop Entry]</span></span><br><span class="line"><span class="attr">Version</span>=<span class="number">1.0</span></span><br><span class="line"><span class="attr">Type</span>=Application</span><br><span class="line"><span class="attr">Name</span>=Visual Studio Code</span><br><span class="line"><span class="attr">Icon</span>=/home/&lt;Your Name&gt;/.local/share/umake/ide/visual-studio-code/resources/app/resources/linux/code.png</span><br><span class="line"><span class="attr">Exec</span>=/home/&lt;Your Name&gt;/.local/share/umake/ide/visual-studio-code/code</span><br><span class="line"><span class="attr">Comment</span>=Visual Studio focused <span class="literal">on</span> modern web and cloud</span><br><span class="line"><span class="attr">Categories</span>=Development<span class="comment">;IDE;</span></span><br><span class="line"><span class="attr">Terminal</span>=<span class="literal">false</span></span><br></pre></td></tr></table></figure>
@@ -299,8 +299,8 @@ Visual Studio Code とC&amp;#x2F;C++ 拡張をUbuntu 14.04 にインストール
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/ide/">ide<span>1</span></a></li>
-  </li>
+    </li><li><a href="/categories/ide/">ide<span>1</span></a></li>
+  
 
     </ul>
 	</div>
@@ -350,7 +350,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

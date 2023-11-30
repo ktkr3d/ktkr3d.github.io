@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="MOC (music on console)"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="MOC (music on console)">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -91,7 +91,7 @@
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -167,7 +167,7 @@
 	  		
 
 	  <p><img src="/images/moc.png" alt="moc music on console mocp"></p>
-<p><a target="_blank" rel="noopener" href="http://moc.daper.net/">http://moc.daper.net/</a><br>軽量なコンソール型のメディアプレーヤーMOC(Music On Console)を使ってみた。コマンドはmocp で、mocp を実行するとメディアを再生するサーバと操作用のクライアント画面が同時に起動する。クライアント画面を終了してもサーバはメディアの再生を継続するような仕組みになっている。moc-ffmpeg-plugin をインストールするとWMA, RealAudio, MP4, AAC 等のフォーマットの再生も可能。イコライザがついていたり、歌詞表示ができたり、テーマ変更もできたりする。日本語のタグやファイル名も表示可能。軽量だからwine で動かしているアプリケーションへの影響も少ないようだ。</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://moc.daper.net/">http://moc.daper.net/</a><br>軽量なコンソール型のメディアプレーヤーMOC(Music On Console)を使ってみた。コマンドはmocp で、mocp を実行するとメディアを再生するサーバと操作用のクライアント画面が同時に起動する。クライアント画面を終了してもサーバはメディアの再生を継続するような仕組みになっている。moc-ffmpeg-plugin をインストールするとWMA, RealAudio, MP4, AAC 等のフォーマットの再生も可能。イコライザがついていたり、歌詞表示ができたり、テーマ変更もできたりする。日本語のタグやファイル名も表示可能。軽量だからwine で動かしているアプリケーションへの影響も少ないようだ。</p>
 <span id="more"></span>
 
 <h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install moc moc-ffmpeg-plugin</span><br></pre></td></tr></table></figure>
@@ -245,7 +245,7 @@
 <h3 id="moc-で再生中のメディアの情報をConky-に表示するには"><a href="#moc-で再生中のメディアの情報をConky-に表示するには" class="headerlink" title="moc で再生中のメディアの情報をConky に表示するには"></a>moc で再生中のメディアの情報をConky に表示するには</h3><p>mocp -Q でいろいろな情報を取得して表示することができる。</p>
 <figure class="highlight text"><figcaption><span>~/.conkyrc</span></figcaption><table><tr><td class="code"><pre><span class="line">$&#123;if_running mocp&#125;$&#123;font DejaVu Sans&#125;MUSIC (moc)$&#123;font&#125; $&#123;hr 2&#125;</span><br><span class="line">$&#123;font :size=10&#125;$&#123;execi 5 mocp -Q %title | nkf -w -F36-0&#125;$&#123;endif&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="テーマの変更"><a href="#テーマの変更" class="headerlink" title="テーマの変更"></a>テーマの変更</h3><p><a target="_blank" rel="noopener" href="https://moc.daper.net/node/1408">https://moc.daper.net/node/1408</a></p>
+<h3 id="テーマの変更"><a href="#テーマの変更" class="headerlink" title="テーマの変更"></a>テーマの変更</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://moc.daper.net/node/1408">https://moc.daper.net/node/1408</a></p>
 <ol>
 <li><p><code>/usr/share/doc/moc/examples/config.example.gz</code> を展開して<code>~/.moc/config</code> を作成</p>
 </li>
@@ -340,8 +340,8 @@
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/linux/">linux<span>60</span></a></li>
-  </li>
+    </li><li><a href="/categories/linux/">linux<span>60</span></a></li>
+  
 
     </ul>
 	</div>
@@ -391,7 +391,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

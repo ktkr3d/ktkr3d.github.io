@@ -12,11 +12,11 @@ Puppeteer はGoogle Chrome を自動で操作するツールです。WSL2(Ubuntu
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Puppeteer"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Puppeteer">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -92,7 +92,7 @@ Puppeteer はGoogle Chrome を自動で操作するツールです。WSL2(Ubuntu
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -167,7 +167,7 @@ Puppeteer はGoogle Chrome を自動で操作するツールです。WSL2(Ubuntu
 	<div class="mypage">		
 	  		
 
-	  <p><a target="_blank" rel="noopener" href="https://github.com/GoogleChrome/puppeteer">https://github.com/GoogleChrome/puppeteer</a></p>
+	  <p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/GoogleChrome/puppeteer">https://github.com/GoogleChrome/puppeteer</a></p>
 <p>Puppeteer はGoogle Chrome を自動で操作するツールです。<br>WSL2(Ubuntu 18.04)でPuppeteer をヘッドレスで動かしてみました。<br>これは便利かもしれない！</p>
 <span id="more"></span>
 
@@ -178,10 +178,10 @@ Puppeteer はGoogle Chrome を自動で操作するツールです。WSL2(Ubuntu
 </ul>
 <h4 id="Puppeteer-のインストール"><a href="#Puppeteer-のインストール" class="headerlink" title="Puppeteer のインストール"></a>Puppeteer のインストール</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm i puppeteer</span><br></pre></td></tr></table></figure>
 
-<h4 id="実行時依存ライブラリのインストール-Ubuntu-18-04-の場合"><a href="#実行時依存ライブラリのインストール-Ubuntu-18-04-の場合" class="headerlink" title="実行時依存ライブラリのインストール(Ubuntu 18.04 の場合)"></a>実行時依存ライブラリのインストール(Ubuntu 18.04 の場合)</h4><p><a target="_blank" rel="noopener" href="https://github.com/GoogleChrome/puppeteer/issues/290#issuecomment-451471338">https://github.com/GoogleChrome/puppeteer/issues/290#issuecomment-451471338</a></p>
+<h4 id="実行時依存ライブラリのインストール-Ubuntu-18-04-の場合"><a href="#実行時依存ライブラリのインストール-Ubuntu-18-04-の場合" class="headerlink" title="実行時依存ライブラリのインストール(Ubuntu 18.04 の場合)"></a>実行時依存ライブラリのインストール(Ubuntu 18.04 の場合)</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/GoogleChrome/puppeteer/issues/290#issuecomment-451471338">https://github.com/GoogleChrome/puppeteer/issues/290#issuecomment-451471338</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install -y libx11-xcb1 libxrandr2 libasound2 libpangocairo-1.0-0 libatk1.0-0 libatk-bridge2.0-0 libgtk-3-0 libnss3 libxss1</span><br></pre></td></tr></table></figure>
 
-<h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><h4 id="テストスクリプト"><a href="#テストスクリプト" class="headerlink" title="テストスクリプト"></a>テストスクリプト</h4><p><a target="_blank" rel="noopener" href="http://www.google.com/">www.google.com</a> のスクリーンショットを採取するスクリプトです。</p>
+<h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><h4 id="テストスクリプト"><a href="#テストスクリプト" class="headerlink" title="テストスクリプト"></a>テストスクリプト</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.google.com/">www.google.com</a> のスクリーンショットを採取するスクリプトです。</p>
 <figure class="highlight javascript"><figcaption><span>test.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> puppeteer = <span class="built_in">require</span>(<span class="string">&#x27;puppeteer&#x27;</span>);</span><br><span class="line"></span><br><span class="line">puppeteer.<span class="title function_">launch</span>(&#123;</span><br><span class="line">  <span class="attr">headless</span>: <span class="literal">true</span></span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="keyword">async</span> browser =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.<span class="title function_">newPage</span>();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">setViewport</span>(&#123; <span class="attr">width</span>: <span class="number">1200</span>, <span class="attr">height</span>: <span class="number">800</span> &#125;);</span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">goto</span>(<span class="string">&#x27;https://www.google.co.jp/&#x27;</span>);</span><br><span class="line">  <span class="keyword">await</span> page.<span class="title function_">screenshot</span>(&#123;<span class="attr">path</span>: <span class="string">&#x27;puppeteer_example.png&#x27;</span>&#125;);</span><br><span class="line"></span><br><span class="line">  browser.<span class="title function_">close</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <h4 id="実行-1"><a href="#実行-1" class="headerlink" title="実行"></a>実行</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ node test.js</span><br></pre></td></tr></table></figure>
@@ -195,7 +195,7 @@ Puppeteer はGoogle Chrome を自動で操作するツールです。WSL2(Ubuntu
 	<!-- related posts -->
 	<section id="related_posts">
 	<h2 class="title">関連記事</h2>
-	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/01/27/Puppeteer-on-WSL/" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/14/WSL2/" title="WSL 2" rel="bookmark">WSL 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/04/Chinachu-on-WSL/" title="WSL でChinachu" rel="bookmark">WSL でChinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/06/11/Windows-10-Build-19645-WSL-2/" title="Windows 10 Build 19645 + WSL 2" rel="bookmark">Windows 10 Build 19645 + WSL 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/06/19/WSL-Ubuntu-20-04-LTS/" title="WSL - Ubuntu 20.04 LTS" rel="bookmark">WSL - Ubuntu 20.04 LTS</a></h3></div></li></ul>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/01/27/Puppeteer-on-WSL/" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/04/Chinachu-on-WSL/" title="WSL でChinachu" rel="bookmark">WSL でChinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/14/WSL2/" title="WSL 2" rel="bookmark">WSL 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/06/11/Windows-10-Build-19645-WSL-2/" title="Windows 10 Build 19645 + WSL 2" rel="bookmark">Windows 10 Build 19645 + WSL 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/06/19/WSL-Ubuntu-20-04-LTS/" title="WSL - Ubuntu 20.04 LTS" rel="bookmark">WSL - Ubuntu 20.04 LTS</a></h3></div></li></ul>
 	</section>
 
 	<!-- recommended posts -->
@@ -303,7 +303,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

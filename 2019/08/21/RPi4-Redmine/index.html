@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="RPi4 - Docker Redmine"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="RPi4 - Docker Redmine">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -91,7 +91,7 @@
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -170,7 +170,7 @@
 <span id="more"></span>
 
 <h3 id="Redmine-コンテナの構築"><a href="#Redmine-コンテナの構築" class="headerlink" title="Redmine コンテナの構築"></a>Redmine コンテナの構築</h3><h4 id="Portainer-でRedmine-コンテナを作成"><a href="#Portainer-でRedmine-コンテナを作成" class="headerlink" title="Portainer でRedmine コンテナを作成"></a>Portainer でRedmine コンテナを作成</h4><ol>
-<li>Portainer を開く<br>  <a target="_blank" rel="noopener" href="http://192.168.11.19:9000/">http://192.168.11.19:9000</a></li>
+<li>Portainer を開く<br>  <a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.11.19:9000/">http://192.168.11.19:9000</a></li>
 <li>App Templates からRedmine を選択</li>
 <li>Name <code>redmine</code> を指定</li>
 <li><code>+ show advanced options</code> ボタンを押下</li>
@@ -190,7 +190,7 @@
 <li><code>Restart</code></li>
 </ol>
 <h3 id="Redmine-の環境設定"><a href="#Redmine-の環境設定" class="headerlink" title="Redmine の環境設定"></a>Redmine の環境設定</h3><h4 id="Redmine-へのログイン"><a href="#Redmine-へのログイン" class="headerlink" title="Redmine へのログイン"></a>Redmine へのログイン</h4><ol>
-<li>Redmine を開く<br><a target="_blank" rel="noopener" href="http://192.168.11.19:10080/">http://192.168.11.19:10080</a></li>
+<li>Redmine を開く<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.11.19:10080/">http://192.168.11.19:10080</a></li>
 <li><code>admin</code> &#x2F; <code>admin</code> でログイン</li>
 <li>パスワード、言語選択、タイムゾーン等を変更</li>
 </ol>
@@ -199,7 +199,7 @@
 </ul>
 <h4 id="初期設定"><a href="#初期設定" class="headerlink" title="初期設定"></a>初期設定</h4><p>プロジェクトを作成する際に<code>デフォルト設定のロード</code> を実行します。<br>後で実行する場合は以下の手順を実行します。</p>
 <ol>
-<li>Redmineを使い始めるための初期設定<br> <a target="_blank" rel="noopener" href="http://redmine.jp/tech_note/first-step/admin/">http://redmine.jp/tech_note/first-step/admin/</a></li>
+<li>Redmineを使い始めるための初期設定<br> <a target="_blank" rel="external nofollow noopener noreferrer" href="http://redmine.jp/tech_note/first-step/admin/">http://redmine.jp/tech_note/first-step/admin/</a></li>
 <li>チケットの優先度<br> 管理 &gt;&gt; 選択肢の値 &gt;&gt; チケットの優先度 で<code>高</code>、<code>中</code>、<code>低</code> を追加</li>
 </ol>
 <h4 id="テーマの設定"><a href="#テーマの設定" class="headerlink" title="テーマの設定"></a>テーマの設定</h4><ul>
@@ -222,18 +222,18 @@
 <li>コンテナの再起動</li>
 </ol>
 <h4 id="easy-gantt"><a href="#easy-gantt" class="headerlink" title="easy_gantt"></a>easy_gantt</h4><ul>
-<li>easy_gantt（Easy Gantt）<br><a target="_blank" rel="noopener" href="https://www.easyredmine.com/redmine-gantt-plugin">https://www.easyredmine.com/redmine-gantt-plugin</a><br>unzip .zip<br>tar cvzf<br>scp<br>tar xvzf</li>
+<li>easy_gantt（Easy Gantt）<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.easyredmine.com/redmine-gantt-plugin">https://www.easyredmine.com/redmine-gantt-plugin</a><br>unzip .zip<br>tar cvzf<br>scp<br>tar xvzf</li>
 <li>restart container</li>
 <li>enable REST API</li>
 <li>apply</li>
 </ul>
 <h4 id="これから試すプラグイン"><a href="#これから試すプラグイン" class="headerlink" title="これから試すプラグイン"></a>これから試すプラグイン</h4><ul>
-<li>redmine_backlogs（Backlogs）<br><a target="_blank" rel="noopener" href="https://github.com/ayapapa/redmine_backlogs/tree/redmine4">https://github.com/ayapapa/redmine_backlogs/tree/redmine4</a></li>
-<li>redmine_checklists（Issues Checklist）<br><a target="_blank" rel="noopener" href="https://www.redminecrm.com/projects/checklist/pages/1">https://www.redminecrm.com/projects/checklist/pages/1</a></li>
-<li>redmine_issue_templates（Issue Template）<br><a target="_blank" rel="noopener" href="https://github.com/akiko-pusu/redmine_issue_templates">https://github.com/akiko-pusu/redmine_issue_templates</a></li>
-<li>redmine_work_time（Work Time）<br><a target="_blank" rel="noopener" href="https://bitbucket.org/tkusukawa/redmine_work_time">https://bitbucket.org/tkusukawa/redmine_work_time</a></li>
-<li>Redmine Code Review plugin<br><a target="_blank" rel="noopener" href="http://www.redmine.org/plugins/redmine_code_review">http://www.redmine.org/plugins/redmine_code_review</a></li>
-<li>redmine_banner（Banner）<br><a target="_blank" rel="noopener" href="https://github.com/akiko-pusu/redmine_banner">https://github.com/akiko-pusu/redmine_banner</a></li>
+<li>redmine_backlogs（Backlogs）<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ayapapa/redmine_backlogs/tree/redmine4">https://github.com/ayapapa/redmine_backlogs/tree/redmine4</a></li>
+<li>redmine_checklists（Issues Checklist）<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.redminecrm.com/projects/checklist/pages/1">https://www.redminecrm.com/projects/checklist/pages/1</a></li>
+<li>redmine_issue_templates（Issue Template）<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/akiko-pusu/redmine_issue_templates">https://github.com/akiko-pusu/redmine_issue_templates</a></li>
+<li>redmine_work_time（Work Time）<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://bitbucket.org/tkusukawa/redmine_work_time">https://bitbucket.org/tkusukawa/redmine_work_time</a></li>
+<li>Redmine Code Review plugin<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.redmine.org/plugins/redmine_code_review">http://www.redmine.org/plugins/redmine_code_review</a></li>
+<li>redmine_banner（Banner）<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/akiko-pusu/redmine_banner">https://github.com/akiko-pusu/redmine_banner</a></li>
 </ul>
 	  
 	</div>
@@ -349,7 +349,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

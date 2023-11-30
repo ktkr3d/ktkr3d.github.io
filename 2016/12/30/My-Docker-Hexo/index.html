@@ -13,11 +13,11 @@ Hexo をDocker Compose を使って動かしてみました。">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="My Docker Hexo"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="My Docker Hexo">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -93,7 +93,7 @@ Hexo をDocker Compose を使って動かしてみました。">
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -170,7 +170,7 @@ Hexo をDocker Compose を使って動かしてみました。">
 
 	  <p><img src="/images/docker-hexo.png" alt="docker-hexo"></p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/docker-hexo">https://github.com/ktkr3d/docker-hexo</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ktkr3d/docker-hexo">https://github.com/ktkr3d/docker-hexo</a></li>
 </ul>
 <p>Hexo をDocker Compose を使って動かしてみました。</p>
 <span id="more"></span>
@@ -180,7 +180,7 @@ Hexo をDocker Compose を使って動かしてみました。">
 
 <h2 id="エントリポイントシェル"><a href="#エントリポイントシェル" class="headerlink" title="エントリポイントシェル"></a>エントリポイントシェル</h2><figure class="highlight sh"><figcaption><span>docker-entrypoint.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">umask</span> 0000</span><br><span class="line"></span><br><span class="line">git config --global user.name <span class="variable">$GIT_USER_NAME</span></span><br><span class="line">git config --global user.email <span class="variable">$GIT_USER_EMAIL</span></span><br><span class="line"></span><br><span class="line">/usr/bin/env hexo server</span><br></pre></td></tr></table></figure>
 
-<h2 id="hexo-admin-モジュール用のデプロイシェル"><a href="#hexo-admin-モジュール用のデプロイシェル" class="headerlink" title="hexo-admin モジュール用のデプロイシェル"></a>hexo-admin モジュール用のデプロイシェル</h2><p><a target="_blank" rel="noopener" href="https://github.com/vladpurga/hexo-admin-deploy-command">https://github.com/vladpurga/hexo-admin-deploy-command</a></p>
+<h2 id="hexo-admin-モジュール用のデプロイシェル"><a href="#hexo-admin-モジュール用のデプロイシェル" class="headerlink" title="hexo-admin モジュール用のデプロイシェル"></a>hexo-admin モジュール用のデプロイシェル</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/vladpurga/hexo-admin-deploy-command">https://github.com/vladpurga/hexo-admin-deploy-command</a></p>
 <figure class="highlight sh"><figcaption><span>./hexo-deploy.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env sh</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 <h2 id="Docker-イメージのビルド"><a href="#Docker-イメージのビルド" class="headerlink" title="Docker イメージのビルド"></a>Docker イメージのビルド</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker build -t <span class="built_in">local</span>/hexo .</span><br></pre></td></tr></table></figure>
@@ -194,8 +194,8 @@ Hexo をDocker Compose を使って動かしてみました。">
 <h2 id="起動と停止"><a href="#起動と停止" class="headerlink" title="起動と停止"></a>起動と停止</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker-compose up -d</span><br><span class="line">$ docker-compose down</span><br></pre></td></tr></table></figure>
 
 <h2 id="Web-からのアクセス"><a href="#Web-からのアクセス" class="headerlink" title="Web からのアクセス"></a>Web からのアクセス</h2><ul>
-<li>プレビュー画面<br><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></li>
-<li>管理画面<br><a target="_blank" rel="noopener" href="http://localhost:4000/admin/">http://localhost:4000/admin/</a><br>ポストの追加、ページの追加、デプロイ等できるらしいけれどあまり使ったことない。<br>移行した環境などで、初めてGitHubにデプロイする場合は、初回一回はコマンドで対話的に実行するとよい。</li>
+<li>プレビュー画面<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://localhost:4000/">http://localhost:4000/</a></li>
+<li>管理画面<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://localhost:4000/admin/">http://localhost:4000/admin/</a><br>ポストの追加、ページの追加、デプロイ等できるらしいけれどあまり使ったことない。<br>移行した環境などで、初めてGitHubにデプロイする場合は、初回一回はコマンドで対話的に実行するとよい。</li>
 </ul>
 <h2 id="コマンドでのアクセス"><a href="#コマンドでのアクセス" class="headerlink" title="コマンドでのアクセス"></a>コマンドでのアクセス</h2><p>普通にHexo のコマンドをDocker 経由で実行します。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it hexo-server hexo new post <span class="string">&quot;Test&quot;</span></span><br><span class="line">$ docker <span class="built_in">exec</span> -it hexo-server hexo generate</span><br><span class="line">$ docker <span class="built_in">exec</span> -it hexo-server hexo deploy</span><br></pre></td></tr></table></figure>
@@ -273,8 +273,8 @@ Hexo をDocker Compose を使って動かしてみました。">
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/cms/">cms<span>14</span></a></li>
-  </li>
+    </li><li><a href="/categories/cms/">cms<span>14</span></a></li>
+  
 
     </ul>
 	</div>
@@ -286,7 +286,7 @@ Hexo をDocker Compose を使って動かしてみました。">
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/hexo/">hexo<span>12</span></a></li> <li><a href="/tags/docker/">docker<span>8</span></a></li>
+  <li><a href="/tags/hexo/">hexo<span>13</span></a></li> <li><a href="/tags/docker/">docker<span>8</span></a></li>
     </ul>
 	</div>
 	
@@ -324,7 +324,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

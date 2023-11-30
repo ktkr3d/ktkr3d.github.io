@@ -17,11 +17,11 @@ Ubuntu Serverhttps://ubuntu.com/download/server
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Ubuntu"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Ubuntu">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -97,7 +97,7 @@ Ubuntu Serverhttps://ubuntu.com/download/server
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -170,8 +170,8 @@ Ubuntu Serverhttps://ubuntu.com/download/server
 	  		
 
 	  <h2 id="ディストリビューション"><a href="#ディストリビューション" class="headerlink" title="ディストリビューション"></a>ディストリビューション</h2><ul>
-<li>Ubuntu Desktop<br><a target="_blank" rel="noopener" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a></li>
-<li>Ubuntu Server<br><a target="_blank" rel="noopener" href="https://ubuntu.com/download/server">https://ubuntu.com/download/server</a></li>
+<li>Ubuntu Desktop<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a></li>
+<li>Ubuntu Server<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ubuntu.com/download/server">https://ubuntu.com/download/server</a></li>
 </ul>
 <h2 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h2><h3 id="Ubuntu-22-04-LTS"><a href="#Ubuntu-22-04-LTS" class="headerlink" title="Ubuntu 22.04 LTS"></a>Ubuntu 22.04 LTS</h3><p><img src="/images/ubuntu2204lts.png"></p>
 <h2 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h2><h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><ul>
@@ -220,10 +220,10 @@ Ubuntu Serverhttps://ubuntu.com/download/server
 <li><p>オフライン環境でISOイメージからパッケージを導入する場合</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mkdir /media/cdrom</span><br><span class="line">sudo mount -o loop -t iso9660 DVD1.iso /media/cdrom</span><br><span class="line">sudo apt-cdrom add -m</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>自己署名証明書向けのルートCA証明書を追加する場合(Google Chrome)<br><a target="_blank" rel="noopener" href="https://chromium.googlesource.com/chromium/src/+/master/docs/linux/cert_management.md">https://chromium.googlesource.com/chromium/src/+/master/docs/linux/cert_management.md</a></p>
+<li><p>自己署名証明書向けのルートCA証明書を追加する場合(Google Chrome)<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://chromium.googlesource.com/chromium/src/+/master/docs/linux/cert_management.md">https://chromium.googlesource.com/chromium/src/+/master/docs/linux/cert_management.md</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install libnss3-tools</span><br><span class="line">certutil -d sql:<span class="variable">$HOME</span>/.pki/nssdb -A -t <span class="string">&quot;P,,&quot;</span> -n <span class="string">&quot;My Root CA1&quot;</span> -i <span class="string">&quot;rootCA.pem&quot;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>コーディング用固定幅フォントのインストール<br><a target="_blank" rel="noopener" href="https://github.com/adobe-fonts/source-han-code-jp/releases">https://github.com/adobe-fonts/source-han-code-jp/releases</a><br><code>$HOME/.fonts/SourceHanCodeJP.ttc</code></p>
+<li><p>コーディング用固定幅フォントのインストール<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/adobe-fonts/source-han-code-jp/releases">https://github.com/adobe-fonts/source-han-code-jp/releases</a><br><code>$HOME/.fonts/SourceHanCodeJP.ttc</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fc-cache -fv</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>背景用単色画像のダウンロード</p>
@@ -240,21 +240,21 @@ Ubuntu Serverhttps://ubuntu.com/download/server
 </ul>
 <h2 id="GNOME-Shell-関連"><a href="#GNOME-Shell-関連" class="headerlink" title="GNOME Shell 関連"></a>GNOME Shell 関連</h2><h3 id="環境設定-1"><a href="#環境設定-1" class="headerlink" title="環境設定"></a>環境設定</h3><ul>
 <li>GNOME Shell 拡張連携パッケージ<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install -y chrome-gnome-shell gnome-tweaks</span><br></pre></td></tr></table></figure></li>
-<li>ブラウザ拡張 : GNOME Shell Integration<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/">https://extensions.gnome.org/</a></li>
+<li>ブラウザ拡張 : GNOME Shell Integration<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/">https://extensions.gnome.org/</a></li>
 </ul>
 <h3 id="GNOME-Shell-拡張機能-基本"><a href="#GNOME-Shell-拡張機能-基本" class="headerlink" title="GNOME Shell 拡張機能 (基本)"></a>GNOME Shell 拡張機能 (基本)</h3><ul>
-<li>Argos<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><figure class="highlight bash"><figcaption><span>~/.config/argos/argos.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#echo &quot;Argos&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot; | iconName=terminal-app-symbolic&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;---&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Update Packages | iconName=&#x27;update-notifier&#x27; bash=&#x27;sudo apt update; sudo apt dist-upgrade; sudo apt autoremove -y; exit&#x27;&quot;</span></span><br><span class="line"><span class="comment">#echo &quot;Update Packages | iconName=&#x27;update-notifier&#x27; bash=&#x27;sudo pacman -Syyu; yay -Syu; exit&#x27;&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>ArcMenu<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/3628/arcmenu/">https://extensions.gnome.org/extension/3628/arcmenu/</a><br>Wayland でタッチスクリーン環境の場合は以下で最新版を手動で導入する<br><a target="_blank" rel="noopener" href="https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide">https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide</a></li>
-<li>Dash to Panel<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1160/dash-to-panel/">https://extensions.gnome.org/extension/1160/dash-to-panel/</a><br>Wayland でタッチスクリーン環境の場合は以下で対策版を手動で導入する<br><a target="_blank" rel="noopener" href="https://github.com/matt1432/dash-to-panel-touch-fix.git">https://github.com/matt1432/dash-to-panel-touch-fix.git</a></li>
+<li>Argos<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><figure class="highlight bash"><figcaption><span>~/.config/argos/argos.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#echo &quot;Argos&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot; | iconName=terminal-app-symbolic&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;---&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Update Packages | iconName=&#x27;update-notifier&#x27; bash=&#x27;sudo apt update; sudo apt dist-upgrade; sudo apt autoremove -y; exit&#x27;&quot;</span></span><br><span class="line"><span class="comment">#echo &quot;Update Packages | iconName=&#x27;update-notifier&#x27; bash=&#x27;sudo pacman -Syyu; yay -Syu; exit&#x27;&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>ArcMenu<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/extension/3628/arcmenu/">https://extensions.gnome.org/extension/3628/arcmenu/</a><br>Wayland でタッチスクリーン環境の場合は以下で最新版を手動で導入する<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide">https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide</a></li>
+<li>Dash to Panel<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/extension/1160/dash-to-panel/">https://extensions.gnome.org/extension/1160/dash-to-panel/</a><br>Wayland でタッチスクリーン環境の場合は以下で対策版を手動で導入する<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/matt1432/dash-to-panel-touch-fix.git">https://github.com/matt1432/dash-to-panel-touch-fix.git</a></li>
 </ul>
 <h3 id="GNOME-Shell-拡張機能-オプション"><a href="#GNOME-Shell-拡張機能-オプション" class="headerlink" title="GNOME Shell 拡張機能 (オプション)"></a>GNOME Shell 拡張機能 (オプション)</h3><ul>
-<li>Bing Wallpaper<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/">https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/</a></li>
-<li>Forge<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/21/workspace-indicator/">https://extensions.gnome.org/extension/21/workspace-indicator/</a></li>
-<li>Panel Date Format<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1462/panel-date-format/">https://extensions.gnome.org/extension/1462/panel-date-format/</a><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dconf write /org/gnome/shell/extensions/panel-date-format/format &quot;&#x27;%m/%d%n%a%n%H:%M&#x27;&quot;</span><br></pre></td></tr></table></figure></li>
-<li>Space Bar<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/5090/space-bar/">https://extensions.gnome.org/extension/5090/space-bar/</a></li>
+<li>Bing Wallpaper<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/">https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/</a></li>
+<li>Forge<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/extension/21/workspace-indicator/">https://extensions.gnome.org/extension/21/workspace-indicator/</a></li>
+<li>Panel Date Format<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/extension/1462/panel-date-format/">https://extensions.gnome.org/extension/1462/panel-date-format/</a><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dconf write /org/gnome/shell/extensions/panel-date-format/format &quot;&#x27;%m/%d%n%a%n%H:%M&#x27;&quot;</span><br></pre></td></tr></table></figure></li>
+<li>Space Bar<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/extension/5090/space-bar/">https://extensions.gnome.org/extension/5090/space-bar/</a></li>
 </ul>
 <h2 id="Webブラウザ拡張"><a href="#Webブラウザ拡張" class="headerlink" title="Webブラウザ拡張"></a>Webブラウザ拡張</h2><ul>
-<li>read.crx2<br><a target="_blank" rel="noopener" href="https://readcrx-2.github.io/read.crx-2/">https://readcrx-2.github.io/read.crx-2/</a><figure class="highlight css"><figcaption><span>ユーザCSS</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">article</span> &#123;</span><br><span class="line">  <span class="attribute">border-top</span>: dotted <span class="number">1px</span> <span class="number">#000000</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#FFFFEE</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>read.crx2<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://readcrx-2.github.io/read.crx-2/">https://readcrx-2.github.io/read.crx-2/</a><figure class="highlight css"><figcaption><span>ユーザCSS</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">article</span> &#123;</span><br><span class="line">  <span class="attribute">border-top</span>: dotted <span class="number">1px</span> <span class="number">#000000</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#FFFFEE</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="基本パッケージ"><a href="#基本パッケージ" class="headerlink" title="基本パッケージ"></a>基本パッケージ</h2><ul>
 <li>curl</li>
@@ -284,9 +284,9 @@ Ubuntu Serverhttps://ubuntu.com/download/server
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install curl</span><br><span class="line">curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
 <figure class="highlight ini"><figcaption><span>/etc/apt/sources.list.d/docker.list</span></figcaption><table><tr><td class="code"><pre><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial main</span><br><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial testing</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gpasswd -a <span class="variable">$USER</span> docker</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure></li>
-<li><p>Docker Compose<br><a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases">https://github.com/docker/compose/releases</a></p>
+<li><p>Docker Compose<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/docker/compose/releases">https://github.com/docker/compose/releases</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
-<li><p>Unity 3D<br><a target="_blank" rel="noopener" href="http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/">http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/</a> の最新トピック<br><a href="http://ktkr3d.github.io/2015/08/30/Unity-5-Standard-Assets-Example-Project-on-Linux/">http://ktkr3d.github.io/2015/08/30/Unity-5-Standard-Assets-Example-Project-on-Linux/</a></p>
+<li><p>Unity 3D<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/">http://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/</a> の最新トピック<br><a href="http://ktkr3d.github.io/2015/08/30/Unity-5-Standard-Assets-Example-Project-on-Linux/">http://ktkr3d.github.io/2015/08/30/Unity-5-Standard-Assets-Example-Project-on-Linux/</a></p>
 </li>
 </ul>
 <h2 id="Flatpak-アプリケーションパッケージ"><a href="#Flatpak-アプリケーションパッケージ" class="headerlink" title="Flatpak アプリケーションパッケージ"></a>Flatpak アプリケーションパッケージ</h2><ul>
@@ -328,7 +328,7 @@ Ubuntu Serverhttps://ubuntu.com/download/server
 	<!-- comment -->
 	
 
-	</div> <!-- col-md-9/col-md-12 -->
+	</li></ul></div> <!-- col-md-9/col-md-12 -->
 		
 		
 
@@ -353,7 +353,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   
@@ -394,5 +394,5 @@ var disqus_shortname = 'ktkr3d';
 <!-- syntax highlighting -->
 
 
-</body>
+</div></body>
 </html>

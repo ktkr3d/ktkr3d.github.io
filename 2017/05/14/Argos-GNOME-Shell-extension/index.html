@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Argos - GNOME Shell extension"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Argos - GNOME Shell extension">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -91,7 +91,7 @@
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -166,10 +166,10 @@
 	<div class="mypage">		
 	  		
 
-	  <p><img src="/images/argos.png" alt="argos"><br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><br>GNOME Shell 拡張を好きな言語で簡単に作成できるArgos を使ってみました。<br>これは便利ですね。</p>
+	  <p><img src="/images/argos.png" alt="argos"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><br>GNOME Shell 拡張を好きな言語で簡単に作成できるArgos を使ってみました。<br>これは便利ですね。</p>
 <span id="more"></span>
 
-<h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><p><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><br><a target="_blank" rel="noopener" href="https://github.com/p-e-w/argos">https://github.com/p-e-w/argos</a></p>
+<h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/p-e-w/argos">https://github.com/p-e-w/argos</a></p>
 <h2 id="カスタマイズ方法"><a href="#カスタマイズ方法" class="headerlink" title="カスタマイズ方法"></a>カスタマイズ方法</h2><ul>
 <li>スクリプトファイルは<code>~/.config/argos/</code> に格納します。</li>
 <li>スクリプトファイルに実行許可を与えるとパネルに表示されるようになります。</li>
@@ -177,7 +177,7 @@
 <li>サンプルを参考によく使うコマンドを並べていきます。</li>
 <li><code>---</code>を出力すると区切りになります。</li>
 <li>メニューの中に一番下にスクリプトファイルへのリンクが自動で生成されるので、いつでも再編集が容易です。</li>
-<li>アイコン名指定(<code>iconName=</code>)は以下を参考に。<br><a target="_blank" rel="noopener" href="https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html">https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html</a></li>
+<li>アイコン名指定(<code>iconName=</code>)は以下を参考に。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html">https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html</a></li>
 </ul>
 <h2 id="カスタマイズ例"><a href="#カスタマイズ例" class="headerlink" title="カスタマイズ例"></a>カスタマイズ例</h2><figure class="highlight bash"><figcaption><span>~/.config/argos/launcher.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line">KTKR3D_ICON=$(curl -s <span class="string">&quot;http://ktkr3d.github.io/favicon.ico&quot;</span> | <span class="built_in">base64</span> -w 0)</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;|image=&#x27;<span class="variable">$KTKR3D_ICON</span>&#x27; imageWidth=20 &quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;---&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Process list (&lt;span color=&#x27;yellow&#x27;&gt;&lt;tt&gt;top&lt;/tt&gt;&lt;/span&gt;) | iconName=utilities-terminal-symbolic bash=top&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;NFS | iconName=&#x27;folder-remote&#x27;&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;--mount | bash=&#x27;sudo -t nfs mount 192.168.11.2:/mnt/common /mnt/common&#x27;&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;--umount | bash=&#x27;sudo umount /mnt/common&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;MOC | iconName=&#x27;applications-multimedia&#x27;&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;--Play (&lt;span color=&#x27;yellow&#x27;&gt;&lt;tt&gt;mocp -S; mocp -p&lt;/tt&gt;&lt;/span&gt;) | iconName=&#x27;media-playback-start&#x27; bash=&#x27;mocp -S; mocp -p&#x27; terminal=&#x27;false&#x27;&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;--Stop (&lt;span color=&#x27;yellow&#x27;&gt;&lt;tt&gt;mocp -s&lt;/tt&gt;&lt;/span&gt;) | iconName=&#x27;media-playback-stop&#x27; bash=&#x27;mocp -s&#x27; terminal=&#x27;false&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Update Packages | iconName=&#x27;update-notifier&#x27; bash=&#x27;sudo apt update; sudo apt dist-upgrade; sudo apt autoremove -y; exit&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Kill Kodi | iconName=&#x27;process-stop&#x27; bash=&#x27;killall kodi kodi.bin; exit&#x27;&quot;</span></span><br></pre></td></tr></table></figure>
 	  
@@ -294,7 +294,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

@@ -12,11 +12,11 @@ PulseAudio を使ってWSL2 上でサウンドを再生できるようにして�
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Enabling sound in WSL"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Enabling sound in WSL">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -92,7 +92,7 @@ PulseAudio を使ってWSL2 上でサウンドを再生できるようにして�
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -167,7 +167,7 @@ PulseAudio を使ってWSL2 上でサウンドを再生できるようにして�
 	<div class="mypage">		
 	  		
 
-	  <p><img src="/images/moc-on-wsl2.png" alt="moc-on-wsl2"><br><a target="_blank" rel="noopener" href="https://x410.dev/cookbook/wsl/enabling-sound-in-wsl-ubuntu-let-it-sing/">https://x410.dev/cookbook/wsl/enabling-sound-in-wsl-ubuntu-let-it-sing/</a><br><a target="_blank" rel="noopener" href="https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/">https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/</a></p>
+	  <p><img src="/images/moc-on-wsl2.png" alt="moc-on-wsl2"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://x410.dev/cookbook/wsl/enabling-sound-in-wsl-ubuntu-let-it-sing/">https://x410.dev/cookbook/wsl/enabling-sound-in-wsl-ubuntu-let-it-sing/</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/">https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/</a></p>
 <p>PulseAudio を使ってWSL2 上でサウンドを再生できるようにしてみました。<br>Extraterm 上でMOC(Music on Console) を利用してみました。<br>Visual Studio Code のターミナルでも実行できます。</p>
 <span id="more"></span>
 
@@ -184,7 +184,7 @@ PulseAudio を使ってWSL2 上でサウンドを再生できるようにして�
 </li>
 </ul>
 <h3 id="構築-Windows-10-側"><a href="#構築-Windows-10-側" class="headerlink" title="構築 (Windows 10 側)"></a>構築 (Windows 10 側)</h3><ol>
-<li>PulseAudio for Windows のダウンロードと展開<br>  <a target="_blank" rel="noopener" href="https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/">https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/</a></li>
+<li>PulseAudio for Windows のダウンロードと展開<br>  <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/">https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/</a></li>
 <li>PulseAudio の設定  <figure class="highlight text"><figcaption><span>C:\tools\pulseaudio\etc\pulse\default.pa</span></figcaption><table><tr><td class="code"><pre><span class="line">#load-module module-native-protocol-tcp</span><br><span class="line">load-module module-native-protocol-tcp auth-anonymous=1</span><br></pre></td></tr></table></figure>
   <figure class="highlight text"><figcaption><span>C:\tools\pulseaudio\etc\pulse\default.pa</span></figcaption><table><tr><td class="code"><pre><span class="line">#load-module module-waveout sink_name=output source_name=input</span><br><span class="line">load-module module-waveout sink_name=output source_name=input record=0</span><br></pre></td></tr></table></figure>
   <figure class="highlight text"><figcaption><span>C:\tools\pulseaudio\etc\pulse\daemon.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">; exit-idle-time = 20</span><br><span class="line">exit-idle-time = -1</span><br></pre></td></tr></table></figure></li>
@@ -211,7 +211,7 @@ PulseAudio を使ってWSL2 上でサウンドを再生できるようにして�
 	<!-- related posts -->
 	<section id="related_posts">
 	<h2 class="title">関連記事</h2>
-	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/14/WSL2/" title="WSL 2" rel="bookmark">WSL 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/04/Chinachu-on-WSL/" title="WSL でChinachu" rel="bookmark">WSL でChinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/21/Puppeteer/" title="Puppeteer" rel="bookmark">Puppeteer</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/01/27/Puppeteer-on-WSL/" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/06/11/Windows-10-Build-19645-WSL-2/" title="Windows 10 Build 19645 + WSL 2" rel="bookmark">Windows 10 Build 19645 + WSL 2</a></h3></div></li></ul>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/04/Chinachu-on-WSL/" title="WSL でChinachu" rel="bookmark">WSL でChinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/14/WSL2/" title="WSL 2" rel="bookmark">WSL 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/21/Puppeteer/" title="Puppeteer" rel="bookmark">Puppeteer</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/01/27/Puppeteer-on-WSL/" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/06/11/Windows-10-Build-19645-WSL-2/" title="Windows 10 Build 19645 + WSL 2" rel="bookmark">Windows 10 Build 19645 + WSL 2</a></h3></div></li></ul>
 	</section>
 
 	<!-- recommended posts -->
@@ -319,7 +319,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

@@ -20,11 +20,11 @@ $ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 202
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Ubuntu 21.10 on RPi4B"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Ubuntu 21.10 on RPi4B">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -100,7 +100,7 @@ $ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 202
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -178,14 +178,14 @@ $ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 202
 	  <p><img src="/images/ubuntu_2110_rpi4b.png"></p>
 <p>Ubuntu 21.10 を Raspberry Pi 4B にインストールしてみました。</p>
 <h4 id="2021-10-23-以下の問題の修正が期待されます。"><a href="#2021-10-23-以下の問題の修正が期待されます。" class="headerlink" title="2021-10-23 以下の問題の修正が期待されます。"></a>2021-10-23 以下の問題の修正が期待されます。</h4><ul>
-<li><p>HDMI output freezes under current&#x2F;proposed impish kernels<br><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a></p>
+<li><p>HDMI output freezes under current&#x2F;proposed impish kernels<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a></p>
 <p>現在のバージョンは</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ uname -r -v</span><br><span class="line">5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 2021`</span><br></pre></td></tr></table></figure>
 
-<p>2021-11-08 に Updates に修正がリリースされるらしい。<a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/46"></a><br>proposed リポジトリをウォッチしよう。<a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/48"></a></p>
+<p>2021-11-08 に Updates に修正がリリースされるらしい。<a target="_blank" rel="external nofollow noopener noreferrer" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/46"></a><br>proposed リポジトリをウォッチしよう。<a target="_blank" rel="external nofollow noopener noreferrer" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/48"></a></p>
 </li>
 </ul>
-<h4 id="2021-10-30-proposed-で修正版が公開されたようです。"><a href="#2021-10-30-proposed-で修正版が公開されたようです。" class="headerlink" title="2021-10-30 proposed で修正版が公開されたようです。"></a>2021-10-30 proposed で修正版が公開されたようです。</h4><p><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60</a></p>
+<h4 id="2021-10-30-proposed-で修正版が公開されたようです。"><a href="#2021-10-30-proposed-で修正版が公開されたようです。" class="headerlink" title="2021-10-30 proposed で修正版が公開されたようです。"></a>2021-10-30 proposed で修正版が公開されたようです。</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368/comments/60</a></p>
 <span id="more"></span>
 
 <h3 id="Ubuntu-のバージョンとパッケージバージョンの整理"><a href="#Ubuntu-のバージョンとパッケージバージョンの整理" class="headerlink" title="Ubuntu のバージョンとパッケージバージョンの整理"></a>Ubuntu のバージョンとパッケージバージョンの整理</h3><table>
@@ -281,7 +281,7 @@ $ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 202
 <li>ツールの実行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vcgencmd bootloader_version</span><br><span class="line">sudo rpi-eeprom-update</span><br><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>config.txt の修正<br><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a><br>下の 2 行を追加する。</p>
+<li><p>config.txt の修正<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a><br>下の 2 行を追加する。</p>
 <figure class="highlight bash"><figcaption><span>/boot/firmware/config.txt</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Config settings specific to arm64</span></span><br><span class="line">arm_64bit=1</span><br><span class="line">dtoverlay=dwc2</span><br><span class="line">gpu_mem=512</span><br><span class="line">dtoverlay=vc4-fkms-v3d</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>ビルド用パッケージのインストール</p>
@@ -362,7 +362,7 @@ $ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 202
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install audacious</span><br></pre></td></tr></table></figure></li>
 <li><p>Chromium</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo snap install chromium</span><br></pre></td></tr></table></figure></li>
-<li><p>Visual Studio Code<br><a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a><br>Download .deb package</p>
+<li><p>Visual Studio Code<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a><br>Download .deb package</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gdebi code_*_arm64.deb</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
@@ -393,7 +393,7 @@ $ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 202
 </ol>
 <h4 id="Wi-Fi-アクセスポイント"><a href="#Wi-Fi-アクセスポイント" class="headerlink" title="Wi-Fi アクセスポイント"></a>Wi-Fi アクセスポイント</h4><ol start="26">
 <li><p>アクセスポイント化</p>
-<p><a target="_blank" rel="noopener" href="https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140">https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140</a></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140">https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140</a></p>
 </li>
 </ol>
 <h4 id="Bluetooth"><a href="#Bluetooth" class="headerlink" title="Bluetooth"></a>Bluetooth</h4><ol start="27">
@@ -409,12 +409,12 @@ $ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 202
 <p><img src="/images/rpi4_from_router.drawio.svg"></p>
 <h4 id="直接接続"><a href="#直接接続" class="headerlink" title="直接接続"></a>直接接続</h4><p>RPi4 を Wi-Fi アクセスポイント化して直接接続する方式。<br>ルータがない場合でも RPi4 と Android スマートフォンは接続が可能。接続できた。</p>
 <p><img src="/images/rpi4_from_direct.drawio.svg"></p>
-<p><a target="_blank" rel="noopener" href="https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140">https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140</a></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140">https://gist.github.com/narate/d3f001c97e1c981a59f94cd76f041140</a></p>
 <h4 id="画面転送"><a href="#画面転送" class="headerlink" title="画面転送"></a>画面転送</h4><p>RPi4 の画面出力を HDMI キャプチャ機器からクライアント端末の入力とする。<br>マウスとキーボードは本体に接続する。接続できたがクライアントのバッテリーの消費が激しい。</p>
 <p><img src="/images/rpi4_from_capture.drawio.svg"></p>
 <h3 id="メモ"><a href="#メモ" class="headerlink" title="メモ"></a>メモ</h3><h4 id="SD-カード起動"><a href="#SD-カード起動" class="headerlink" title="SD カード起動"></a>SD カード起動</h4><ul>
 <li>Ubuntu Server を入れてから Ubuntu Desktop をインストールした方がよいかもしれない。</li>
-<li>物理ディスプレイを HDMI 接続した環境では GDM からログイン直後に再起動してしまう。<br>以下の問題かもしれない。<br><a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a></li>
+<li>物理ディスプレイを HDMI 接続した環境では GDM からログイン直後に再起動してしまう。<br>以下の問題かもしれない。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368">https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1946368</a></li>
 <li>USB HUB を接続すると Ubuntu がうまく起動しない。</li>
 </ul>
 <h4 id="USB-起動"><a href="#USB-起動" class="headerlink" title="USB 起動"></a>USB 起動</h4><ul>
@@ -427,7 +427,7 @@ $ uname -r -v5.13.0-1008-raspi #9-Ubuntu SMP PREEMPT Wed Sep 29 08:27:44 UTC 202
 	<!-- related posts -->
 	<section id="related_posts">
 	<h2 class="title">関連記事</h2>
-	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" title="RPi4 - Ubuntu Server 19.10 64bit" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/15/RPi4-Ubuntu-Server-19-10-64bit-更新/" title="RPi4 - Ubuntu Server 19.10 64bit 更新" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit 更新</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/09/16/RPi4-Ubuntu-Server-18-04-3-64bit/" title="RPi4 - Ubuntu Server 18.04.3 64bit" rel="bookmark">RPi4 - Ubuntu Server 18.04.3 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2021/10/24/Minecraft-Java-Edition-on-Raspberry-Pi-4B-Ubuntu-21-10/" title="Minecraft Java Edition on Raspberry Pi 4B / Ubuntu 21.10" rel="bookmark">Minecraft Java Edition on Raspberry Pi 4B / Ubuntu 21.10</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/23/Irrlicht-on-Raspberry-Pi-2/" title="Irrlicht on Raspberry Pi 2" rel="bookmark">Irrlicht on Raspberry Pi 2</a></h3></div></li></ul>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" title="RPi4 - Ubuntu Server 19.10 64bit" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/15/RPi4-Ubuntu-Server-19-10-64bit-更新/" title="RPi4 - Ubuntu Server 19.10 64bit 更新" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit 更新</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/09/16/RPi4-Ubuntu-Server-18-04-3-64bit/" title="RPi4 - Ubuntu Server 18.04.3 64bit" rel="bookmark">RPi4 - Ubuntu Server 18.04.3 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2021/10/24/Minecraft-Java-Edition-on-Raspberry-Pi-4B-Ubuntu-21-10/" title="Minecraft Java Edition on Raspberry Pi 4B / Ubuntu 21.10" rel="bookmark">Minecraft Java Edition on Raspberry Pi 4B / Ubuntu 21.10</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/04/Docker-RPi4-ImageBuilder/" title="Docker RPi4 ImageBuilder" rel="bookmark">Docker RPi4 ImageBuilder</a></h3></div></li></ul>
 	</section>
 
 	<!-- recommended posts -->
@@ -535,7 +535,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

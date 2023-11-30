@@ -16,11 +16,11 @@ https://github.com/simon04/gnome-shell-extension-weather
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="GNOME Shell を拡張してみた4"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="GNOME Shell を拡張してみた4">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -96,7 +96,7 @@ https://github.com/simon04/gnome-shell-extension-weather
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -173,12 +173,12 @@ https://github.com/simon04/gnome-shell-extension-weather
 
 	  <p><img src="/images/Screenshot-weather.png" alt="gnome shell extension weather"></p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="http://www.webupd8.org/2011/05/gnome-shell-weather-extension.html">http://www.webupd8.org/2011/05/gnome-shell-weather-extension.html</a></p>
+<li><p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.webupd8.org/2011/05/gnome-shell-weather-extension.html">http://www.webupd8.org/2011/05/gnome-shell-weather-extension.html</a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/simon04/gnome-shell-extension-weather">https://github.com/simon04/gnome-shell-extension-weather</a></p>
+<li><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/simon04/gnome-shell-extension-weather">https://github.com/simon04/gnome-shell-extension-weather</a></p>
 </li>
 </ul>
-<p>天気を表示する拡張を入れてみた。<br><a target="_blank" rel="noopener" href="http://weather.yahoo.com/">http://weather.yahoo.com/</a> で地域を検索して、RSS のリンクに含まれる地域コードをextension.js に設定する。東京はJAXX0085、大阪はJAXX0071 になる。</p>
+<p>天気を表示する拡張を入れてみた。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://weather.yahoo.com/">http://weather.yahoo.com/</a> で地域を検索して、RSS のリンクに含まれる地域コードをextension.js に設定する。東京はJAXX0085、大阪はJAXX0071 になる。</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">const UNITS = &#x27;c&#x27;; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius</span><br><span class="line">const YAHOO_ID = &#x27;JAXX0085&#x27;;</span><br><span class="line">const WEATHER_URL = &#x27;http://weather.yahooapis.com/forecastjson?u=&#x27; + UNITS + &#x27;&amp;p=&#x27; + YAHOO_ID;</span><br><span class="line">const FORECAST_URL = &#x27;http://query.yahooapis.com/v1/public/yql?format=json&amp;q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22&#x27; + YAHOO_ID + &#x27;%22%20%20and%20u=&quot;&#x27; + UNITS + &#x27;&quot;&#x27;;</span><br></pre></td></tr></table></figure>
 
 <p>リアルタイムの気温が怪しいんだけど、どこから拾ってきているんだろう…</p>
@@ -256,8 +256,8 @@ https://github.com/simon04/gnome-shell-extension-weather
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/gnome/">gnome<span>37</span></a></li>
-  </li>
+    </li><li><a href="/categories/gnome/">gnome<span>37</span></a></li>
+  
 
     </ul>
 	</div>
@@ -299,7 +299,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

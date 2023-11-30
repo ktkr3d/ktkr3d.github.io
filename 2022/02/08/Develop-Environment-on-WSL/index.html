@@ -24,11 +24,11 @@ SliDev (スライド)">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Development Environment on WSL"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Development Environment on WSL">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -104,7 +104,7 @@ SliDev (スライド)">
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -179,7 +179,7 @@ SliDev (スライド)">
 	<div class="mypage">		
 	  		
 
-	  <p><img src="/images/wsl-dev.png"><br><a target="_blank" rel="noopener" href="https://github.com/coder/code-server">https://github.com/coder/code-server</a></p>
+	  <p><img src="/images/wsl-dev.png"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/coder/code-server">https://github.com/coder/code-server</a></p>
 <p>WSL にこっそり開発環境を構築しようと思います。<br>Microsoft Store が利用不可、インターネットアクセスに認証プロキシが存在する環境とします。</p>
 <h4 id="実現する機能"><a href="#実現する機能" class="headerlink" title="実現する機能"></a>実現する機能</h4><ul>
 <li>WSL2 (Ubuntu 20.04, systemd 有効化)</li>
@@ -205,7 +205,7 @@ SliDev (スライド)">
 </thead>
 <tbody><tr>
 <td align="left">認証プロキシ環境</td>
-<td align="left"><a target="_blank" rel="noopener" href="http://hoge:fuga@100.100.100.100:8080/">http://hoge:fuga@100.100.100.100:8080</a></td>
+<td align="left"><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hoge:fuga@100.100.100.100:8080/">http://hoge:fuga@100.100.100.100:8080</a></td>
 </tr>
 <tr>
 <td align="left">ローカルホスト: OS</td>
@@ -238,16 +238,16 @@ SliDev (スライド)">
 <li>[仮想マシンプラットフォーム]を有効化</li>
 </ul>
 </li>
-<li>WSL ディストリビューションをダウンロード<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/windows/wsl/install-manual#downloading-distributions">https://docs.microsoft.com/ja-jp/windows/wsl/install-manual#downloading-distributions</a><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PS &gt; Add-AppxPackage .\app_name.appx</span><br></pre></td></tr></table></figure></li>
+<li>WSL ディストリビューションをダウンロード<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.microsoft.com/ja-jp/windows/wsl/install-manual#downloading-distributions">https://docs.microsoft.com/ja-jp/windows/wsl/install-manual#downloading-distributions</a><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PS &gt; Add-AppxPackage .\app_name.appx</span><br></pre></td></tr></table></figure></li>
 <li>WSL をバージョン2 に設定<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PS &gt; wsl –set-default-version 2</span><br></pre></td></tr></table></figure></li>
-<li>systemd の有効化<br><a target="_blank" rel="noopener" href="https://github.com/arkane-systems/genie">https://github.com/arkane-systems/genie</a><br>タスクスケジューラでログイン時に<code>wsl genie -s</code>を設定</li>
+<li>systemd の有効化<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/arkane-systems/genie">https://github.com/arkane-systems/genie</a><br>タスクスケジューラでログイン時に<code>wsl genie -s</code>を設定</li>
 <li>Proxy 設定<figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> proxy=<span class="string">&#x27;read -p &quot;user: &quot; proxy_user &amp;&amp; read -sp &quot;pass: &quot; proxy_pass &amp;&amp; echo &amp;&amp; export &#123;http,https,ftp&#125;_proxy=&quot;http://$proxy_user:$proxy_pass@100.100.100.100:8080&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ proxy</span><br><span class="line">user: ubuntu</span><br><span class="line">pass: ********</span><br><span class="line">$ sudo -E apt update</span><br><span class="line">$ sudo -E apt upgrade</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="Code-Server"><a href="#Code-Server" class="headerlink" title="Code Server"></a>Code Server</h4><ul>
 <li><p>Code Server</p>
 <ul>
-<li><p>インストール<br><a target="_blank" rel="noopener" href="https://github.com/coder/code-server#user-content-getting-started">https://github.com/coder/code-server#user-content-getting-started</a></p>
+<li><p>インストール<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/coder/code-server#user-content-getting-started">https://github.com/coder/code-server#user-content-getting-started</a></p>
 </li>
 <li><p>拡張機能の導入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">code-server --install-extension &lt;Extension ID&gt;</span><br></pre></td></tr></table></figure>
@@ -301,8 +301,8 @@ SliDev (スライド)">
 <li>Microsoft Edgeでは「グリッドとプラス記号」</li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
-<li>Code Server<br><a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a><br>またはタスクバーのアイコンから起動</li>
-<li>Gitea<br><a target="_blank" rel="noopener" href="http://localhost:3000/">http://localhost:3000</a></li>
+<li>Code Server<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://localhost:8080/">http://localhost:8080</a><br>またはタスクバーのアイコンから起動</li>
+<li>Gitea<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://localhost:3000/">http://localhost:3000</a></li>
 </ul>
 	  
 	</div>
@@ -310,7 +310,7 @@ SliDev (スライド)">
 	<!-- related posts -->
 	<section id="related_posts">
 	<h2 class="title">関連記事</h2>
-	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/14/WSL2/" title="WSL 2" rel="bookmark">WSL 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/04/Chinachu-on-WSL/" title="WSL でChinachu" rel="bookmark">WSL でChinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/21/Puppeteer/" title="Puppeteer" rel="bookmark">Puppeteer</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/01/27/Puppeteer-on-WSL/" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li></ul>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2022/10/22/Windows-11-WSL-2-systemd/" title="Windows 11 - WSL 2 - systemd" rel="bookmark">Windows 11 - WSL 2 - systemd</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/04/Chinachu-on-WSL/" title="WSL でChinachu" rel="bookmark">WSL でChinachu</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/14/WSL2/" title="WSL 2" rel="bookmark">WSL 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/06/21/Puppeteer/" title="Puppeteer" rel="bookmark">Puppeteer</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2020/01/27/Puppeteer-on-WSL/" title="Puppeteer on WSL" rel="bookmark">Puppeteer on WSL</a></h3></div></li></ul>
 	</section>
 
 	<!-- recommended posts -->
@@ -418,7 +418,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

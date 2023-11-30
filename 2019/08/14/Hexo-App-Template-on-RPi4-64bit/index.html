@@ -18,11 +18,11 @@ Container 型でDockerHub のHexo をデプロイしようとしましたが、a
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Hexo App Template"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Hexo App Template">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -98,7 +98,7 @@ Container 型でDockerHub のHexo をデプロイしようとしましたが、a
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -198,10 +198,10 @@ Container 型でDockerHub のHexo をデプロイしようとしましたが、a
 <li>Title<br>Hexo</li>
 <li>Description<br>A fast, simple &amp; powerful blog framework</li>
 <li>Select <code>Compose Stack</code></li>
-<li>Logo URL<br><a target="_blank" rel="noopener" href="https://seeklogo.com/images/H/hexo-logo-6C514C7053-seeklogo.com.png">https://seeklogo.com/images/H/hexo-logo-6C514C7053-seeklogo.com.png</a></li>
+<li>Logo URL<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://seeklogo.com/images/H/hexo-logo-6C514C7053-seeklogo.com.png">https://seeklogo.com/images/H/hexo-logo-6C514C7053-seeklogo.com.png</a></li>
 <li>Platform<br>Linux</li>
 <li>Categories<br>blog</li>
-<li>Repository URL<br><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/docker-hexo">https://github.com/ktkr3d/docker-hexo</a></li>
+<li>Repository URL<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ktkr3d/docker-hexo">https://github.com/ktkr3d/docker-hexo</a></li>
 </ul>
 <ol start="3">
 <li><code>Add Environment</code></li>
@@ -213,7 +213,7 @@ Container 型でDockerHub のHexo をデプロイしようとしましたが、a
 <li><code>Add Environment</code></li>
 </ol>
 <ul>
-<li>GIT_USER_EMAIL<br><a href="mailto:&#104;&#x6f;&#103;&#x65;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;">&#104;&#x6f;&#103;&#x65;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>GIT_USER_EMAIL<br><a href="mailto:&#x68;&#111;&#103;&#x65;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;" rel="external nofollow noopener noreferrer" target="_blank">&#x68;&#111;&#103;&#x65;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a></li>
 </ul>
 <ol start="5">
 <li><code>Create the template</code></li>
@@ -231,15 +231,15 @@ Container 型でDockerHub のHexo をデプロイしようとしましたが、a
 <li><code>Connect</code></li>
 <li>コンテナ内は以下のような感じです。  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/hexo <span class="comment"># set</span></span><br><span class="line">GIT_USER_EMAIL=<span class="string">&#x27;hoge@gmail.com&#x27;</span></span><br><span class="line">GIT_USER_NAME=<span class="string">&#x27;hoge&#x27;</span></span><br><span class="line">HISTFILE=<span class="string">&#x27;/root/.ash_history&#x27;</span></span><br><span class="line">HOME=<span class="string">&#x27;/root&#x27;</span></span><br><span class="line">HOSTNAME=<span class="string">&#x27;77f43f92a735&#x27;</span></span><br><span class="line">IFS=<span class="string">&#x27;</span></span><br><span class="line"><span class="string">&#x27;</span></span><br><span class="line">LINENO=<span class="string">&#x27;&#x27;</span></span><br><span class="line">NODE_VERSION=<span class="string">&#x27;12.8.0&#x27;</span></span><br><span class="line">OPTIND=<span class="string">&#x27;1&#x27;</span></span><br><span class="line">PATH=<span class="string">&#x27;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&#x27;</span></span><br><span class="line">PPID=<span class="string">&#x27;0&#x27;</span></span><br><span class="line">PS1=<span class="string">&#x27;\w \$ &#x27;</span></span><br><span class="line">PS2=<span class="string">&#x27;&gt; &#x27;</span></span><br><span class="line">PS4=<span class="string">&#x27;+ &#x27;</span></span><br><span class="line">PWD=<span class="string">&#x27;/hexo&#x27;</span></span><br><span class="line">SHLVL=<span class="string">&#x27;1&#x27;</span></span><br><span class="line">TERM=<span class="string">&#x27;xterm&#x27;</span></span><br><span class="line">YARN_VERSION=<span class="string">&#x27;1.17.3&#x27;</span></span><br><span class="line">/hexo <span class="comment">#</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="PC-からアクセス"><a href="#PC-からアクセス" class="headerlink" title="PC からアクセス"></a>PC からアクセス</h3><h4 id="参照"><a href="#参照" class="headerlink" title="参照"></a>参照</h4><p><a target="_blank" rel="noopener" href="http://192.168.11.16:4000/">http://192.168.11.16:4000</a></p>
-<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><p><a target="_blank" rel="noopener" href="http://192.168.11.16:4000/admin">http://192.168.11.16:4000/admin</a></p>
+<h3 id="PC-からアクセス"><a href="#PC-からアクセス" class="headerlink" title="PC からアクセス"></a>PC からアクセス</h3><h4 id="参照"><a href="#参照" class="headerlink" title="参照"></a>参照</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.11.16:4000/">http://192.168.11.16:4000</a></p>
+<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.11.16:4000/admin">http://192.168.11.16:4000/admin</a></p>
 	  
 	</div>
 
 	<!-- related posts -->
 	<section id="related_posts">
 	<h2 class="title">関連記事</h2>
-	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" title="RPi4 - Ubuntu Server 19.10 64bit" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/23/Irrlicht-on-Raspberry-Pi-2/" title="Irrlicht on Raspberry Pi 2" rel="bookmark">Irrlicht on Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/21/USL-5P-to-Raspberry-Pi-2/" title="USL-5P to Raspberry Pi 2" rel="bookmark">USL-5P to Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2018/11/25/Upgrade-to-Ubuntu-18-04-on-Raspberry-Pi/" title="Upgrade to Ubuntu 18.04 on Raspberry Pi" rel="bookmark">Upgrade to Ubuntu 18.04 on Raspberry Pi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/01/Raspberry-Pi-4/" title="Raspberry Pi 4" rel="bookmark">Raspberry Pi 4</a></h3></div></li></ul>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/04/Docker-RPi4-ImageBuilder/" title="Docker RPi4 ImageBuilder" rel="bookmark">Docker RPi4 ImageBuilder</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/23/Irrlicht-on-Raspberry-Pi-2/" title="Irrlicht on Raspberry Pi 2" rel="bookmark">Irrlicht on Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/21/USL-5P-to-Raspberry-Pi-2/" title="USL-5P to Raspberry Pi 2" rel="bookmark">USL-5P to Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2018/11/25/Upgrade-to-Ubuntu-18-04-on-Raspberry-Pi/" title="Upgrade to Ubuntu 18.04 on Raspberry Pi" rel="bookmark">Upgrade to Ubuntu 18.04 on Raspberry Pi</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/01/Raspberry-Pi-4/" title="Raspberry Pi 4" rel="bookmark">Raspberry Pi 4</a></h3></div></li></ul>
 	</section>
 
 	<!-- recommended posts -->
@@ -309,7 +309,7 @@ Container 型でDockerHub のHexo をデプロイしようとしましたが、a
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/raspberry-pi/">raspberry-pi<span>17</span></a></li> <li><a href="/tags/hexo/">hexo<span>12</span></a></li> <li><a href="/tags/portainer/">portainer<span>1</span></a></li>
+  <li><a href="/tags/raspberry-pi/">raspberry-pi<span>17</span></a></li> <li><a href="/tags/hexo/">hexo<span>13</span></a></li> <li><a href="/tags/portainer/">portainer<span>1</span></a></li>
     </ul>
 	</div>
 	
@@ -347,7 +347,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

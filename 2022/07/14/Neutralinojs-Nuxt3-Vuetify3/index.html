@@ -12,11 +12,11 @@ Nuetralinojs + Nuxt3 でVuetify3 のCards を使ってみました。">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Neutralinojs + Nuxt3 + Vuetify3"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Neutralinojs + Nuxt3 + Vuetify3">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -92,7 +92,7 @@ Nuetralinojs + Nuxt3 でVuetify3 のCards を使ってみました。">
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -168,7 +168,7 @@ Nuetralinojs + Nuxt3 でVuetify3 のCards を使ってみました。">
 	  		
 
 	  <p><img src="/images/neutralinojs_nuxt3_vuetify3.png"></p>
-<p><a target="_blank" rel="noopener" href="https://next.vuetifyjs.com/en/components/cards/">https://next.vuetifyjs.com/en/components/cards/</a></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://next.vuetifyjs.com/en/components/cards/">https://next.vuetifyjs.com/en/components/cards/</a></p>
 <p>Nuetralinojs + Nuxt3 でVuetify3 のCards を使ってみました。</p>
 <span id="more"></span>
 
@@ -193,7 +193,7 @@ Nuetralinojs + Nuxt3 でVuetify3 のCards を使ってみました。">
 <li><p><code>plugins/vuetify.js</code> の作成</p>
  <figure class="highlight javascript"><figcaption><span>plugins/vuetify.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createVuetify &#125; <span class="keyword">from</span> <span class="string">&#x27;vuetify&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> components <span class="keyword">from</span> <span class="string">&#x27;vuetify/components&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineNuxtPlugin</span>( <span class="function"><span class="params">nuxtApp</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> vuetify = <span class="title function_">createVuetify</span>(&#123;</span><br><span class="line">        components</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    nuxtApp.<span class="property">vueApp</span>.<span class="title function_">use</span>( vuetify );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>コンポーネントの利用<br> <a target="_blank" rel="noopener" href="https://next.vuetifyjs.com/en/components/cards/">https://next.vuetifyjs.com/en/components/cards/</a><br> を参考に<code>App.vue</code>を修正します。</p>
+<li><p>コンポーネントの利用<br> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://next.vuetifyjs.com/en/components/cards/">https://next.vuetifyjs.com/en/components/cards/</a><br> を参考に<code>App.vue</code>を修正します。</p>
 </li>
 <li><p><code>nuxt.config.ts</code> の設定</p>
  <figure class="highlight typescript"><figcaption><span>nuxt.config.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineNuxtConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;nuxt&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// https://v3.nuxtjs.org/api/configuration/nuxt.config</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineNuxtConfig</span>(&#123;</span><br><span class="line">  <span class="attr">css</span>: [<span class="string">&quot;vuetify/lib/styles/main.sass&quot;</span>],</span><br><span class="line">  <span class="attr">build</span>: &#123;</span><br><span class="line">    <span class="attr">transpile</span>: [<span class="string">&quot;vuetify&quot;</span>],</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">vite</span>: &#123;</span><br><span class="line">    <span class="attr">define</span>: &#123;</span><br><span class="line">      <span class="string">&quot;process.env.DEBUG&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -201,11 +201,11 @@ Nuetralinojs + Nuxt3 でVuetify3 のCards を使ってみました。">
 <li><p>ビルドと実行</p>
  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run generate</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">neu update</span><br><span class="line">neu run</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="サイドメニュー追加"><a href="#サイドメニュー追加" class="headerlink" title="サイドメニュー追加"></a>サイドメニュー追加</h3><p><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/neutralinojs-nuxt3">https://github.com/ktkr3d/neutralinojs-nuxt3</a></p>
+<h3 id="サイドメニュー追加"><a href="#サイドメニュー追加" class="headerlink" title="サイドメニュー追加"></a>サイドメニュー追加</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ktkr3d/neutralinojs-nuxt3">https://github.com/ktkr3d/neutralinojs-nuxt3</a></p>
 <p><img src="/images/neutralinojs_nuxt3_vuetify3_menu.png"></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g @neutralinojs/neu</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/ktkr3d/neutralinojs-nuxt3.git</span><br><span class="line"><span class="built_in">cd</span> neutralinojs-nuxt3/nuxt3-src</span><br><span class="line">npm install</span><br><span class="line">npm run generate</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">neu update</span><br><span class="line">neu run</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://next.vuetifyjs.com/en/components/navigation-drawers/">https://next.vuetifyjs.com/en/components/navigation-drawers/</a><br><a target="_blank" rel="noopener" href="https://next.vuetifyjs.com/en/features/icon-fonts/">https://next.vuetifyjs.com/en/features/icon-fonts/</a></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://next.vuetifyjs.com/en/components/navigation-drawers/">https://next.vuetifyjs.com/en/components/navigation-drawers/</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://next.vuetifyjs.com/en/features/icon-fonts/">https://next.vuetifyjs.com/en/features/icon-fonts/</a></p>
 	  
 	</div>
 
@@ -320,7 +320,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

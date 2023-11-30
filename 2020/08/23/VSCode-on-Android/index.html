@@ -14,11 +14,11 @@ $ cp ~/.local/share/code-server/locale.json ~/.local/share/code-server/User/">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="VSCode on Android"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="VSCode on Android">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -94,7 +94,7 @@ $ cp ~/.local/share/code-server/locale.json ~/.local/share/code-server/User/">
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -169,9 +169,9 @@ $ cp ~/.local/share/code-server/locale.json ~/.local/share/code-server/User/">
 	<div class="mypage">		
 	  		
 
-	  <p><img src="/images/vscode-android.jpg" alt="vscode-android"><br><a target="_blank" rel="noopener" href="https://github.com/MFDGaming/ubuntu-in-termux">https://github.com/MFDGaming/ubuntu-in-termux</a><br><a target="_blank" rel="noopener" href="https://github.com/cdr/code-server">https://github.com/cdr/code-server</a></p>
+	  <p><img src="/images/vscode-android.jpg" alt="vscode-android"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/MFDGaming/ubuntu-in-termux">https://github.com/MFDGaming/ubuntu-in-termux</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/cdr/code-server">https://github.com/cdr/code-server</a></p>
 <p>Android 上でVisual Studio Code を利用してみました。<br>Samsung Dex でディスプレイに表示しています。<br>そこそこ動きますが文字入力操作が難点ですね。</p>
-<h4 id="2021-12-29-追記"><a href="#2021-12-29-追記" class="headerlink" title="2021-12-29 追記"></a>2021-12-29 追記</h4><p><a target="_blank" rel="noopener" href="https://github.com/coder/code-server/issues/215">https://github.com/coder/code-server/issues/215</a><br>日本語表示にするには日本語言語パックをインストールして、</p>
+<h4 id="2021-12-29-追記"><a href="#2021-12-29-追記" class="headerlink" title="2021-12-29 追記"></a>2021-12-29 追記</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/coder/code-server/issues/215">https://github.com/coder/code-server/issues/215</a><br>日本語表示にするには日本語言語パックをインストールして、</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> ~/.local/share/code-server/locale.json ~/.local/share/code-server/User/</span><br></pre></td></tr></table></figure>
 
 
@@ -198,7 +198,7 @@ $ cp ~/.local/share/code-server/locale.json ~/.local/share/code-server/User/">
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
 <li>Termux をインストール</li>
 <li>Ubuntu のインストールと実行  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">uname</span> -a</span><br><span class="line">Linux localhost 4.4.153-16213510 <span class="comment">#2 SMP PREEMPT Thu Jun 20 15:49:10 KST 2019 aarch64 Android </span></span><br><span class="line">$ apt update &amp;&amp; apt upgrade</span><br><span class="line">$ apt install wget proot git</span><br><span class="line">$ <span class="built_in">cd</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/MFDGaming/ubuntu-in-termux.git</span><br><span class="line">$ <span class="built_in">cd</span> ubuntu-in-termux</span><br><span class="line">$ <span class="built_in">chmod</span> +x ubuntu.sh</span><br><span class="line">$ ./ubuntu.sh -y</span><br><span class="line">$ ./startubuntu.sh</span><br></pre></td></tr></table></figure></li>
-<li>code-server を実行<br>  <a target="_blank" rel="noopener" href="https://github.com/cdr/code-server/releases">https://github.com/cdr/code-server/releases</a>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># uname -a</span></span><br><span class="line">Linux localhost 4.4.153-16213510 <span class="comment">#2 SMP PREEMPT Thu Jun 20 15:49:10 KST 2019 aarch64 aarch64 aarch64 GNU/Linux</span></span><br><span class="line"><span class="comment"># apt update</span></span><br><span class="line"><span class="comment"># apt install wget</span></span><br><span class="line"><span class="comment"># wget https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-linux-arm64.tar.gz</span></span><br><span class="line"><span class="comment"># tar xvf code-server-3.4.1-linux-arm64.tar.gz</span></span><br><span class="line"><span class="comment"># ./code-server-3.4.1-linux-arm64/code-server --auth none</span></span><br></pre></td></tr></table></figure></li>
+<li>code-server を実行<br>  <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/cdr/code-server/releases">https://github.com/cdr/code-server/releases</a>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># uname -a</span></span><br><span class="line">Linux localhost 4.4.153-16213510 <span class="comment">#2 SMP PREEMPT Thu Jun 20 15:49:10 KST 2019 aarch64 aarch64 aarch64 GNU/Linux</span></span><br><span class="line"><span class="comment"># apt update</span></span><br><span class="line"><span class="comment"># apt install wget</span></span><br><span class="line"><span class="comment"># wget https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-linux-arm64.tar.gz</span></span><br><span class="line"><span class="comment"># tar xvf code-server-3.4.1-linux-arm64.tar.gz</span></span><br><span class="line"><span class="comment"># ./code-server-3.4.1-linux-arm64/code-server --auth none</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ol>
 <li>Termux を起動</li>
@@ -320,7 +320,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

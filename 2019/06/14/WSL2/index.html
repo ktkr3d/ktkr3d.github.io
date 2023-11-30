@@ -12,11 +12,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="WSL 2"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="WSL 2">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -92,7 +92,7 @@
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -171,7 +171,7 @@
 <p>既存のWSL 環境をWSL 2 に変換しました。<br>WSL 2 ではHyper-V を利用するようになったようですね。</p>
 <span id="more"></span>
 
-<h3 id="1-Windows-Insider-Program-へ登録"><a href="#1-Windows-Insider-Program-へ登録" class="headerlink" title="1. Windows Insider Program へ登録"></a>1. Windows Insider Program へ登録</h3><p><a target="_blank" rel="noopener" href="https://insider.windows.com/ja-jp/">https://insider.windows.com/ja-jp/</a><br>上記のURL からWindows Insider Program に参加登録します。</p>
+<h3 id="1-Windows-Insider-Program-へ登録"><a href="#1-Windows-Insider-Program-へ登録" class="headerlink" title="1. Windows Insider Program へ登録"></a>1. Windows Insider Program へ登録</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://insider.windows.com/ja-jp/">https://insider.windows.com/ja-jp/</a><br>上記のURL からWindows Insider Program に参加登録します。</p>
 <h3 id="2-Windows-Update-を実行"><a href="#2-Windows-Update-を実行" class="headerlink" title="2. Windows Update を実行"></a>2. Windows Update を実行</h3><p>Windows Update を実行すると以下の状態になりました。</p>
 <p>エディション: Windows 10 Pro Insider Preview<br>バージョン: 1903<br>OSビルド: 18917.1000</p>
 <h3 id="3-VirtualMachinePlatform-の有効化"><a href="#3-VirtualMachinePlatform-の有効化" class="headerlink" title="3. VirtualMachinePlatform の有効化"></a>3. VirtualMachinePlatform の有効化</h3><p>Windows PowerShell(管理者)モードから設定します。</p>
@@ -187,8 +187,8 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">192.168.151.26</span><br></pre></td></tr></table></figure>
 
 <h3 id="6-既存のアクセス用URL-の設定を更新"><a href="#6-既存のアクセス用URL-の設定を更新" class="headerlink" title="6. 既存のアクセス用URL の設定を更新"></a>6. 既存のアクセス用URL の設定を更新</h3><ul>
-<li>Chinachu<br><a target="_blank" rel="noopener" href="http://192.168.151.26:20772/">http://192.168.151.26:20772/</a><br>ブラウザのショートカットやKodi アドオンの設定を更新します。</li>
-<li>Hexo<br>Hexo のコマンドを実行するためにWSL へアクセスしますが、<br>アクセス方法はそのままでした。<br><code>hexo s</code>のプレビューURLは以下になりました。<br><a target="_blank" rel="noopener" href="http://192.168.151.26:4000/">http://192.168.151.26:4000/</a></li>
+<li>Chinachu<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.151.26:20772/">http://192.168.151.26:20772/</a><br>ブラウザのショートカットやKodi アドオンの設定を更新します。</li>
+<li>Hexo<br>Hexo のコマンドを実行するためにWSL へアクセスしますが、<br>アクセス方法はそのままでした。<br><code>hexo s</code>のプレビューURLは以下になりました。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.151.26:4000/">http://192.168.151.26:4000/</a></li>
 </ul>
 <h3 id="7-ポートフォワードの設定"><a href="#7-ポートフォワードの設定" class="headerlink" title="7. ポートフォワードの設定"></a>7. ポートフォワードの設定</h3><p>Hyper-V 下になったので別マシンからアクセスする場合にポートフォーワードが必要になったようです。</p>
 <figure class="highlight ps"><table><tr><td class="code"><pre><span class="line"><span class="built_in">PS</span> C:\WINDOWS\system32&gt; netsh interface portproxy add v4tov4 listenport=<span class="number">20772</span> listenaddr=<span class="number">0.0</span>.<span class="number">0.0</span> connectport=<span class="number">20772</span> connectaddress=<span class="number">192.168</span>.<span class="number">151.26</span></span><br></pre></td></tr></table></figure>
@@ -196,7 +196,7 @@
 <figure class="highlight ps"><table><tr><td class="code"><pre><span class="line"><span class="built_in">PS</span> C:\WINDOWS\system32&gt; netsh interface portproxy show all</span><br><span class="line"></span><br><span class="line">ipv4 をリッスンする:         ipv4 に接続する:</span><br><span class="line"></span><br><span class="line">Address         Port        Address         Port</span><br><span class="line"><span class="literal">---------------</span> <span class="literal">----------</span>  <span class="literal">---------------</span> <span class="literal">----------</span></span><br><span class="line"><span class="number">0.0</span>.<span class="number">0.0</span>         <span class="number">20772</span>       <span class="number">192.168</span>.<span class="number">151.26</span>  <span class="number">20772</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="8-気づき事項"><a href="#8-気づき事項" class="headerlink" title="8. 気づき事項"></a>8. 気づき事項</h3><ul>
-<li>WSL2 のIP アドレスは変動する<br>以下のスクリプトで暫定対処できました。<br><a target="_blank" rel="noopener" href="https://github.com/microsoft/WSL/issues/4150#issuecomment-504209723">https://github.com/microsoft/WSL/issues/4150#issuecomment-504209723</a></li>
+<li>WSL2 のIP アドレスは変動する<br>以下のスクリプトで暫定対処できました。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/microsoft/WSL/issues/4150#issuecomment-504209723">https://github.com/microsoft/WSL/issues/4150#issuecomment-504209723</a></li>
 <li>WSL2 のUbuntu 18.04 はinit ？</li>
 </ul>
 	  
@@ -313,7 +313,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

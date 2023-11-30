@@ -13,11 +13,11 @@ UPDATE: 2019&amp;#x2F;7&amp;#x2F;14 軽量なイメージが公開されまし�
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Raspberry Pi 4B + Ubuntu 18.04.2 64bit"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="Raspberry Pi 4B + Ubuntu 18.04.2 64bit">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -93,7 +93,7 @@ UPDATE: 2019&amp;#x2F;7&amp;#x2F;14 軽量なイメージが公開されまし�
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -168,15 +168,15 @@ UPDATE: 2019&amp;#x2F;7&amp;#x2F;14 軽量なイメージが公開されまし�
 	<div class="mypage">		
 	  		
 
-	  <p><img src="/images/rpi4_docker_portainer.png" alt="rpi4 docker portainer"><br><a target="_blank" rel="noopener" href="https://blog.cloudkernels.net/posts/rpi4-64bit-virt/">https://blog.cloudkernels.net/posts/rpi4-64bit-virt/</a><br><a target="_blank" rel="noopener" href="https://news.ycombinator.com/item?id=20410169">https://news.ycombinator.com/item?id=20410169</a><br>Raspberry Pi 4B 用のUbuntu Server 18.04.2 64bit のイメージが公開されていたので試してみました。<br>Docker 環境も構築されています。</p>
-<h4 id="UPDATE-2019-7-14-軽量なイメージが公開されました。"><a href="#UPDATE-2019-7-14-軽量なイメージが公開されました。" class="headerlink" title="UPDATE: 2019&#x2F;7&#x2F;14 軽量なイメージが公開されました。"></a><strong>UPDATE:</strong> 2019&#x2F;7&#x2F;14 軽量なイメージが公開されました。</h4>  <div class="twitter-wrapper"><blockquote class="twitter-tweet"><a target="_blank" rel="noopener" href="https://twitter.com/CloudKernels/status/1150447087391318018"></a></blockquote></div><script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>  <a target="_blank" rel="noopener" href="https://cloudkernels.net/ubuntu-18.04.2-preinstalled-server-arm64+raspi4+kvm.img.xz">https://cloudkernels.net/ubuntu-18.04.2-preinstalled-server-arm64+raspi4+kvm.img.xz</a></p>
+	  <p><img src="/images/rpi4_docker_portainer.png" alt="rpi4 docker portainer"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.cloudkernels.net/posts/rpi4-64bit-virt/">https://blog.cloudkernels.net/posts/rpi4-64bit-virt/</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://news.ycombinator.com/item?id=20410169">https://news.ycombinator.com/item?id=20410169</a><br>Raspberry Pi 4B 用のUbuntu Server 18.04.2 64bit のイメージが公開されていたので試してみました。<br>Docker 環境も構築されています。</p>
+<h4 id="UPDATE-2019-7-14-軽量なイメージが公開されました。"><a href="#UPDATE-2019-7-14-軽量なイメージが公開されました。" class="headerlink" title="UPDATE: 2019&#x2F;7&#x2F;14 軽量なイメージが公開されました。"></a><strong>UPDATE:</strong> 2019&#x2F;7&#x2F;14 軽量なイメージが公開されました。</h4>  <div class="twitter-wrapper"><blockquote class="twitter-tweet"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://twitter.com/CloudKernels/status/1150447087391318018"></a></blockquote></div><script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>  <a target="_blank" rel="external nofollow noopener noreferrer" href="https://cloudkernels.net/ubuntu-18.04.2-preinstalled-server-arm64+raspi4+kvm.img.xz">https://cloudkernels.net/ubuntu-18.04.2-preinstalled-server-arm64+raspi4+kvm.img.xz</a></p>
 <span id="more"></span>
 
 <h3 id="環境構築"><a href="#環境構築" class="headerlink" title="環境構築"></a>環境構築</h3><h4 id="準備"><a href="#準備" class="headerlink" title="準備"></a>準備</h4><ul>
 <li>Raspberry Pi 4B</li>
 <li>SDカード 32GB</li>
-<li><a target="_blank" rel="noopener" href="https://cloudkernels.net/rpi4-64-bit-kvm-docker.img.xz">https://cloudkernels.net/rpi4-64-bit-kvm-docker.img.xz</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://cloudkernels.net/rpi4-64-bit-kvm-docker.img.xz">https://cloudkernels.net/rpi4-64-bit-kvm-docker.img.xz</a></li>
 <li>etcher で書き込み(2.5GB が8.07GB に展開される)</li>
 <li>初回ブートに時間がかかる or reboot しないといけないかも</li>
 <li>root のパスワードは無し</li>
@@ -202,7 +202,7 @@ UPDATE: 2019&amp;#x2F;7&amp;#x2F;14 軽量なイメージが公開されまし�
 <h3 id="Docker-コンテナの追加"><a href="#Docker-コンテナの追加" class="headerlink" title="Docker コンテナの追加"></a>Docker コンテナの追加</h3><h4 id="Portainer"><a href="#Portainer" class="headerlink" title="Portainer"></a>Portainer</h4><ul>
 <li>docker-compose.yml<figure class="highlight yaml"><figcaption><span>docker-portainer/docker-compose.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;2&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">portainer:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">portainer/portainer</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">portainer</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;9000:9000&quot;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/data</span></span><br></pre></td></tr></table></figure></li>
 <li>起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> docker-portainer</span><br><span class="line">$ docker-compose up -d</span><br></pre></td></tr></table></figure></li>
-<li>アクセス<br><a target="_blank" rel="noopener" href="http://192.168.11.14:9000/">http://192.168.11.14:9000/</a><br>admin に8文字以上のパスワードを設定</li>
+<li>アクセス<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.11.14:9000/">http://192.168.11.14:9000/</a><br>admin に8文字以上のパスワードを設定</li>
 </ul>
 	  
 	</div>
@@ -210,7 +210,7 @@ UPDATE: 2019&amp;#x2F;7&amp;#x2F;14 軽量なイメージが公開されまし�
 	<!-- related posts -->
 	<section id="related_posts">
 	<h2 class="title">関連記事</h2>
-	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/27/RPi4-Docker-Open-Project-CE/" title="RPi4 - Docker OpenProject CE" rel="bookmark">RPi4 - Docker OpenProject CE</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" title="RPi4 - Ubuntu Server 19.10 64bit" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/23/Irrlicht-on-Raspberry-Pi-2/" title="Irrlicht on Raspberry Pi 2" rel="bookmark">Irrlicht on Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/21/USL-5P-to-Raspberry-Pi-2/" title="USL-5P to Raspberry Pi 2" rel="bookmark">USL-5P to Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2018/11/25/Upgrade-to-Ubuntu-18-04-on-Raspberry-Pi/" title="Upgrade to Ubuntu 18.04 on Raspberry Pi" rel="bookmark">Upgrade to Ubuntu 18.04 on Raspberry Pi</a></h3></div></li></ul>
+	<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/27/RPi4-Docker-Open-Project-CE/" title="RPi4 - Docker OpenProject CE" rel="bookmark">RPi4 - Docker OpenProject CE</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/04/Docker-RPi4-ImageBuilder/" title="Docker RPi4 ImageBuilder" rel="bookmark">Docker RPi4 ImageBuilder</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/23/Irrlicht-on-Raspberry-Pi-2/" title="Irrlicht on Raspberry Pi 2" rel="bookmark">Irrlicht on Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2015/02/21/USL-5P-to-Raspberry-Pi-2/" title="USL-5P to Raspberry Pi 2" rel="bookmark">USL-5P to Raspberry Pi 2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2018/11/25/Upgrade-to-Ubuntu-18-04-on-Raspberry-Pi/" title="Upgrade to Ubuntu 18.04 on Raspberry Pi" rel="bookmark">Upgrade to Ubuntu 18.04 on Raspberry Pi</a></h3></div></li></ul>
 	</section>
 
 	<!-- recommended posts -->
@@ -318,7 +318,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   

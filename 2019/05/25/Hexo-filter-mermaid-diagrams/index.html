@@ -26,11 +26,11 @@ Hexo でMermaid ダイアグラムを書いてみました。">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="HexoでMermaidダイアグラム"/>
-  <meta property="og:site_name" content="Memorandum!"/>
+  <meta property="og:title" content="HexoでMermaidダイアグラム">
+  <meta property="og:site_name" content="Memorandum!">
 
   
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content>
   
 
   
@@ -106,7 +106,7 @@ Hexo でMermaid ダイアグラムを書いてみました。">
 		  </li>
 		  
 		  <li>
-			<a href="/atom.xml" title="feed">
+			<a href="/rss2.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -192,9 +192,9 @@ Hexo でMermaid ダイアグラムを書いてみました。">
     F-->G[OpenVPNサーバ];</pre>
 
 <ul>
-<li><a target="_blank" rel="noopener" href="https://mermaidjs.github.io/">https://mermaidjs.github.io/</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams">https://github.com/webappdevelp/hexo-filter-mermaid-diagrams</a></li>
-<li><a target="_blank" rel="noopener" href="https://wangxiaoyu-go.github.io/2018/11/23/hexo-filter-mermaid-diagrams/">https://wangxiaoyu-go.github.io/2018/11/23/hexo-filter-mermaid-diagrams/</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://mermaidjs.github.io/">https://mermaidjs.github.io/</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams">https://github.com/webappdevelp/hexo-filter-mermaid-diagrams</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wangxiaoyu-go.github.io/2018/11/23/hexo-filter-mermaid-diagrams/">https://wangxiaoyu-go.github.io/2018/11/23/hexo-filter-mermaid-diagrams/</a></li>
 </ul>
 <p>Hexo でMermaid ダイアグラムを書いてみました。</p>
 <span id="more"></span>
@@ -212,7 +212,7 @@ Hexo でMermaid ダイアグラムを書いてみました。">
 <h4 id="テーマの修正-freemind-の場合"><a href="#テーマの修正-freemind-の場合" class="headerlink" title="テーマの修正(freemind の場合)"></a>テーマの修正(freemind の場合)</h4><figure class="highlight js"><figcaption><span>themes/freemind/layout/_partials/footer.ejs</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.<span class="property">mermaid</span>.<span class="property">enable</span>) &#123; %&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&#x27;https://unpkg.com/mermaid@&lt;%= theme.mermaid.version %&gt;/dist/mermaid.min.js&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">if</span> (<span class="variable language_">window</span>.<span class="property">mermaid</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      mermaid.<span class="title function_">initialize</span>(&#123;<span class="attr">theme</span>: <span class="string">&#x27;forest&#x27;</span>&#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 <h4 id="背景透明化の設定"><a href="#背景透明化の設定" class="headerlink" title="背景透明化の設定"></a>背景透明化の設定</h4><figure class="highlight css"><figcaption><span>themes/freemind/source/css/style.css</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mermaid</span> &#123;                           </span><br><span class="line">  <span class="attribute">background</span>: transparent <span class="meta">!important</span>; </span><br><span class="line">  <span class="attribute">border</span>: none <span class="meta">!important</span>;            </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="使用例"><a href="#使用例" class="headerlink" title="使用例"></a>使用例</h3><h4 id="フローチャート"><a href="#フローチャート" class="headerlink" title="フローチャート"></a>フローチャート</h4><p><a target="_blank" rel="noopener" href="https://mermaidjs.github.io/flowchart.html">https://mermaidjs.github.io/flowchart.html</a></p>
+<h3 id="使用例"><a href="#使用例" class="headerlink" title="使用例"></a>使用例</h3><h4 id="フローチャート"><a href="#フローチャート" class="headerlink" title="フローチャート"></a>フローチャート</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://mermaidjs.github.io/flowchart.html">https://mermaidjs.github.io/flowchart.html</a></p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">    linkStyle default interpolate basis</span><br><span class="line">    A[四角]--&gt;B(角丸四角);</span><br><span class="line">    A--&gt;C((丸));</span><br><span class="line">    B--&gt;D&#123;ひし形&#125;;</span><br><span class="line">    C--&gt;D;</span><br><span class="line">    D--&gt;F&gt;変な形]</span><br></pre></td></tr></table></figure>
 <pre class="mermaid">graph TD;
     linkStyle default interpolate basis
@@ -222,8 +222,8 @@ Hexo でMermaid ダイアグラムを書いてみました。">
     C-->D;
     D-->F>変な形]</pre>
 
-<h3 id="その他の使用例"><a href="#その他の使用例" class="headerlink" title="その他の使用例"></a>その他の使用例</h3><p><a target="_blank" rel="noopener" href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams#user-content-flowchart">https://github.com/webappdevelp/hexo-filter-mermaid-diagrams#user-content-flowchart</a></p>
-<h4 id="Sequence-diagram"><a href="#Sequence-diagram" class="headerlink" title="Sequence diagram"></a>Sequence diagram</h4><p><a target="_blank" rel="noopener" href="https://mermaidjs.github.io/sequenceDiagram.html">https://mermaidjs.github.io/sequenceDiagram.html</a></p>
+<h3 id="その他の使用例"><a href="#その他の使用例" class="headerlink" title="その他の使用例"></a>その他の使用例</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams#user-content-flowchart">https://github.com/webappdevelp/hexo-filter-mermaid-diagrams#user-content-flowchart</a></p>
+<h4 id="Sequence-diagram"><a href="#Sequence-diagram" class="headerlink" title="Sequence diagram"></a>Sequence diagram</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://mermaidjs.github.io/sequenceDiagram.html">https://mermaidjs.github.io/sequenceDiagram.html</a></p>
 <pre class="mermaid">sequenceDiagram
     participant Alice
     participant Bob
@@ -231,12 +231,12 @@ Hexo でMermaid ダイアグラムを書いてみました。">
     loop Healthcheck
         John->>John: Fight against hypochondria
     end
-    Note right of John: Rational thoughts <br/>prevail...
+    Note right of John: Rational thoughts <br>prevail...
     John-->>Alice: Great!
     John->>Bob: How about you?
     Bob-->>John: Jolly good!</pre>
 
-<h4 id="Gantt-diagram"><a href="#Gantt-diagram" class="headerlink" title="Gantt diagram"></a>Gantt diagram</h4><p><a target="_blank" rel="noopener" href="https://mermaidjs.github.io/gantt.html">https://mermaidjs.github.io/gantt.html</a></p>
+<h4 id="Gantt-diagram"><a href="#Gantt-diagram" class="headerlink" title="Gantt diagram"></a>Gantt diagram</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://mermaidjs.github.io/gantt.html">https://mermaidjs.github.io/gantt.html</a></p>
 <pre class="mermaid">gantt
 dateFormat  YYYY-MM-DD
 title Adding GANTT diagram to mermaid
@@ -248,11 +248,7 @@ Future task               :         des3, after des2, 5d
 Future task2               :         des4, after des3, 5d</pre>
 
 <h4 id="Class-diagram-実験的"><a href="#Class-diagram-実験的" class="headerlink" title="Class diagram (実験的)"></a>Class diagram (実験的)</h4><pre class="mermaid">classDiagram
-Class01 <|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --> C2 : Where am i?
+Class01 <|-- averylongclass : cool class03 *-- class04 class05 o-- class06 class07 .. class08 class09 --> C2 : Where am i?
 Class09 --* C3
 Class09 --|> Class07
 Class07 : equals()
@@ -260,7 +256,7 @@ Class07 : Object[] elementData
 Class01 : size()
 Class01 : int chimp
 Class01 : int gorilla
-Class08 <--> C2: Cool label</pre>
+Class08 <--> C2: Cool label</--></|--></pre>
 
 <h4 id="Git-graph-実験的"><a href="#Git-graph-実験的" class="headerlink" title="Git graph (実験的)"></a>Git graph (実験的)</h4><pre class="mermaid">gitGraph:
 options
@@ -281,8 +277,8 @@ merge newbranch</pre>
 
 <h3 id="追記"><a href="#追記" class="headerlink" title="追記"></a>追記</h3><h4 id="font-awesome-対応-2019-07-05"><a href="#font-awesome-対応-2019-07-05" class="headerlink" title="font awesome 対応 (2019&#x2F;07&#x2F;05)"></a>font awesome 対応 (2019&#x2F;07&#x2F;05)</h4><p><code>fab</code> とかを使う場合はmermaid の新しめのバージョンを利用します。</p>
 <ul>
-<li>mermaid のバージョン指定<br>以下で新しめのリリースを調べて指定します。<br><a target="_blank" rel="noopener" href="https://github.com/knsv/mermaid/releases">https://github.com/knsv/mermaid/releases</a><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># mermaid chart</span></span><br><span class="line"><span class="attr">mermaid:</span> <span class="comment">## mermaid url https://github.com/knsv/mermaid</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  <span class="comment"># default true</span></span><br><span class="line">  <span class="attr">version:</span> <span class="string">&quot;8.1.0&quot;</span> <span class="comment"># default v7.1.2</span></span><br><span class="line">  <span class="attr">options:</span>  <span class="comment"># find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js</span></span><br><span class="line">  <span class="comment">#startOnload: true  // default true</span></span><br></pre></td></tr></table></figure></li>
-<li>font awesome のリンク指定<br>以下でlatest のバージョンを調べて指定します。<br><a target="_blank" rel="noopener" href="https://fontawesome.com/changelog/latest">https://fontawesome.com/changelog/latest</a><figure class="highlight html"><figcaption><span>./themes/freemind/layout/_partial/head.ejs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- CSS --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://use.fontawesome.com/releases/v5.9.0/css/all.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>mermaid のバージョン指定<br>以下で新しめのリリースを調べて指定します。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/knsv/mermaid/releases">https://github.com/knsv/mermaid/releases</a><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># mermaid chart</span></span><br><span class="line"><span class="attr">mermaid:</span> <span class="comment">## mermaid url https://github.com/knsv/mermaid</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  <span class="comment"># default true</span></span><br><span class="line">  <span class="attr">version:</span> <span class="string">&quot;8.1.0&quot;</span> <span class="comment"># default v7.1.2</span></span><br><span class="line">  <span class="attr">options:</span>  <span class="comment"># find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js</span></span><br><span class="line">  <span class="comment">#startOnload: true  // default true</span></span><br></pre></td></tr></table></figure></li>
+<li>font awesome のリンク指定<br>以下でlatest のバージョンを調べて指定します。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://fontawesome.com/changelog/latest">https://fontawesome.com/changelog/latest</a><figure class="highlight html"><figcaption><span>./themes/freemind/layout/_partial/head.ejs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- CSS --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://use.fontawesome.com/releases/v5.9.0/css/all.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="bootstrap-の影響補正-2019-07-05"><a href="#bootstrap-の影響補正-2019-07-05" class="headerlink" title="bootstrap の影響補正 (2019&#x2F;07&#x2F;05)"></a>bootstrap の影響補正 (2019&#x2F;07&#x2F;05)</h4><p>文字のサイズや垂直位置がbootstrap のスタイルによってずれているので少し補正します。</p>
 <ul>
@@ -364,7 +360,7 @@ merge newbranch</pre>
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/hexo/">hexo<span>12</span></a></li> <li><a href="/tags/mermaid/">mermaid<span>1</span></a></li>
+  <li><a href="/tags/hexo/">hexo<span>13</span></a></li> <li><a href="/tags/mermaid/">mermaid<span>1</span></a></li>
     </ul>
 	</div>
 	
@@ -402,7 +398,7 @@ var disqus_shortname = 'ktkr3d';
     <footer> <p>
   &copy; 2023 ktkr3d
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank" rel="external nofollow noopener noreferrer">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
   </div> <!-- container-narrow -->
   
