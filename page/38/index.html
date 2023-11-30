@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   
+  <link rel="canonical" href="https://ktkr3d.github.io/page/38/">
   <title>Page 38 | Memorandum!</title>
   <meta name="author" content="ktkr3d">
   
@@ -161,36 +162,6 @@
         
         <!-- render other articles -->
         
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-04-07 </div>
-			<div class="article-title"><a href="/2011/04/07/ubuntu-11-04-e381a7gnome-shell/">Ubuntu 11.04 でGNOME Shell</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/ubuntu-natty-gnome-shell.png" alt="ubuntu 11.04 natty gnome shell"></p>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.ubuntuupdates.org/ppa/gnome_3?dist=natty">http://www.ubuntuupdates.org/ppa/gnome_3?dist=natty</a></p>
-<p>Ubuntu 11.04 用のGNOME Shell を含むppa を見つけたので、早速インストールしてみた。ちゃんとローカライズもされている。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:gnome3-team/gnome3 </span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install gnome-shell</span><br></pre></td></tr></table></figure>
-
-<p>GDM でログインする際に「Ubuntu GNOME Shell Desktop」を選択する。</p>
-<p>上部パネルの日付、時刻の書式はスクリプトをカスタマイズ。シャットダウン系のメニューもスクリプトなので後で改造しよう。</p>
-
-	
-	</div>
-  <a type="button" href="/2011/04/07/ubuntu-11-04-e381a7gnome-shell/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
            
 			  
 	
@@ -487,6 +458,33 @@
 
            
 		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2011-03-17 </div>
+			<div class="article-title"><a href="/2011/03/17/gnome-shell-e38292e382abe382b9e382bfe3839ee382a4e382ba/">Gnome Shell をカスタマイズ</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>Gnome Shell の上部パネルには、曜日と時刻が表示されている。<br><img src="/images/gnome_shell_panel_before.png" alt="gnome shell panel date time"><br>日付も表示したいので、設定を探してみたら、<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;js&#x2F;ui&#x2F;dateMenu.js<br>の中で、org.gnome.shell.clock のshow-date の値(論理値)を参照して日付表示の要否を判定しているようだった。<br>とりあえず、true にして動かしてみた。<br><img src="/images/gnome_shell_panel_after.png" alt="gnome shell panel date time"><br>どこか見覚えのある、OS インストール直後にアップデートしていない時のような、残念な雰囲気のある表示になった。よくある書式にしてみた。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">showSeconds = <span class="literal">true</span>;</span><br><span class="line">clockFormat = <span class="title function_">_</span>(<span class="string">&quot;%Y/%m/%d(%a) %H:%M:%S&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><a href="/images/uploads/2011/03/gnome_shell_panel_customized.png"><img src="/images/uploads/2011/03/gnome_shell_panel_customized.png" alt="gnome shell panel date time"></a></p>
+
+	
+	</div>
+  <a type="button" href="/2011/03/17/gnome-shell-e38292e382abe382b9e382bfe3839ee382a4e382ba/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
 
 		</div>
 
@@ -536,10 +534,6 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2023/11/28/Hexo-7-0/"><i class="fa fa-file-o"></i>Hexo 7.0</a>
-      </li>
-    
-      <li>
         <a href="/2023/11/25/GNOME-Shell-Extensions/"><i class="fa fa-file-o"></i>GNOME Shell Extensions</a>
       </li>
     
@@ -575,6 +569,10 @@
         <a href="/2023/08/08/CHUWI-Minibook-X-N100/"><i class="fa fa-file-o"></i>CHUWI MiniBook X N100</a>
       </li>
     
+      <li>
+        <a href="/2023/07/18/Flatpak/"><i class="fa fa-file-o"></i>Flatpak</a>
+      </li>
+    
   </ul>
 </div>
 
@@ -582,7 +580,7 @@
 			
 <div class="widget" style="display: none">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/21/android-x86-3-2-honeycomb/" title="Android-x86 3.2 Honeycomb を試してみた" rel="bookmark">Android-x86 3.2 Honeycomb を試してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/09/23/fedora-21-wayland/" title="Fedora 21 wayland" rel="bookmark">Fedora 21 wayland</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/04/Docker-RPi4-ImageBuilder/" title="Docker RPi4 ImageBuilder" rel="bookmark">Docker RPi4 ImageBuilder</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/15/android-4-0/" title="Android 4.0 をビルドしてみよう（その1）" rel="bookmark">Android 4.0 をビルドしてみよう（その1）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2016/02/13/KDE-Neon/" title="KDE Neon" rel="bookmark">KDE Neon</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2016/03/12/LightDM-theme-Antergos/" title="LightDM theme Antergos" rel="bookmark">LightDM theme Antergos</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/pv/" title="PV 再生っぽいことをしてみた" rel="bookmark">PV 再生っぽいことをしてみた</a></h3></div></li></ul>
 </div>
 
 		
