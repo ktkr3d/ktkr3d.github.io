@@ -226,15 +226,6 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/ubuntu/index_ubuntu_17_10.html</loc>
-        <lastmod>2015-02-01T13:04:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
         <loc>https://ktkr3d.github.io/ubuntu/</loc>
         <lastmod>2015-02-01T13:04:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -244,7 +235,7 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/ubuntu/index_ubuntu_22_04.html</loc>
+        <loc>https://ktkr3d.github.io/ubuntu/index_ubuntu_17_10.html</loc>
         <lastmod>2015-02-01T13:04:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -254,6 +245,15 @@
     
     <url>
         <loc>https://ktkr3d.github.io/ubuntu/index_ubuntu_18_04.html</loc>
+        <lastmod>2015-02-01T13:04:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://ktkr3d.github.io/ubuntu/index_ubuntu_22_04.html</loc>
         <lastmod>2015-02-01T13:04:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
