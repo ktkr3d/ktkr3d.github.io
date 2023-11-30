@@ -17,7 +17,7 @@
     (function() {
       google.load(&#39;visualization&#39;, &#39;1.0&#39;, {&#39;packages&#39;: [&#34;corechart&#34;,&#34;geochart&#34;,&#34;table&#34;]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById(&#34;googleChart2248&#34;))).draw(google.visualization.arrayToDataTable([[&#39;Host / Guest&#39;, &#39;Hypervisor&#39;, &#39;OS&#39;, &#39;Type&#39;, &#39;Path&#39;],[&#39;Host&#39;, &#39;-&#39;, &#39;Windows 10&#39;, &#39;ntfs&#39;, &#39;D:\\share&#39;],[&#39;Guest&#39;, &#39;VirtualBox&#39;, &#39;Ubuntu 20.04&#39;, &#39;vboxsf&#39;, &#39;/mnt/share&#39;],[&#39;Guest&#39;, &#39;Hyper-V&#39;, &#39;Ubuntu 20.04&#39;, &#39;cifs&#39;, &#39;/mnt/share&#39;]]),{&#34;title&#34;:&#34; &#34;,&#34;width&#34;:&#34;100%&#34;,&#34;height&#34;:&#34;100%&#34;});
+        (new google.visualization.Table(document.getElementById(&#34;googleChart8394&#34;))).draw(google.visualization.arrayToDataTable([[&#39;Host / Guest&#39;, &#39;Hypervisor&#39;, &#39;OS&#39;, &#39;Type&#39;, &#39;Path&#39;],[&#39;Host&#39;, &#39;-&#39;, &#39;Windows 10&#39;, &#39;ntfs&#39;, &#39;D:\\share&#39;],[&#39;Guest&#39;, &#39;VirtualBox&#39;, &#39;Ubuntu 20.04&#39;, &#39;vboxsf&#39;, &#39;/mnt/share&#39;],[&#39;Guest&#39;, &#39;Hyper-V&#39;, &#39;Ubuntu 20.04&#39;, &#39;cifs&#39;, &#39;/mnt/share&#39;]]),{&#34;title&#34;:&#34; &#34;,&#34;width&#34;:&#34;100%&#34;,&#34;height&#34;:&#34;100%&#34;});
       });
     })();
   }">
@@ -33,7 +33,8 @@
   
 
   
-    <link rel="alternate" href="/atom.xml,rss.xml" title="Memorandum!" type="application/atom+xml">
+    <link rel="alternate" href="atom.xml" title="Memorandum!" type="application/atom+xml">
+    <link rel="alternate" href="rss.xml" title="Memorandum!" type="application/rss+xml">
   
   
 
@@ -181,7 +182,7 @@
 	  		
 
 	  <p>ホストOS(Windows 10) のフォルダをゲストOS(Linux)と共有してみました。</p>
-<div id="googleChart2248"></div>
+<div id="googleChart8394"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -190,7 +191,7 @@
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart2248"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart8394"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
