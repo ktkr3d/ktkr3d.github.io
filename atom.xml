@@ -27,10 +27,10 @@
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/gse.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://extensions.gnome.org/&quot;&gt;https://extensions.gnome.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;久しぶりにGNOME Shell Extension を整理してみよう。環境は以下のとおり。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Ubuntu 22.04(GNOME Shell 42.9) &amp;#x2F; デスクトップPC&lt;/li&gt;
-&lt;li&gt;Ubuntu 23.10(GNOME Shell 45.1) &amp;#x2F; タッチスクリーンのノートPC&lt;/li&gt;
-&lt;li&gt;Ubuntu 24.04 Daily Build(GNOME Shell 45.1) &amp;#x2F; VMWare Player&lt;/li&gt;
-&lt;li&gt;Arch Linux(GNOME Shell 45.1) &amp;#x2F; タッチスクリーンのノートPC&lt;/li&gt;
+&lt;li&gt;Ubuntu 22.04(GNOME Shell 42.9, X11) &amp;#x2F; デスクトップPC&lt;/li&gt;
+&lt;li&gt;Ubuntu 23.10(GNOME Shell 45.1, Wayland) &amp;#x2F; タッチスクリーンのノートPC&lt;/li&gt;
+&lt;li&gt;Ubuntu 24.04 Daily Build(GNOME Shell 45.1, Wayland) &amp;#x2F; VMWare Player&lt;/li&gt;
+&lt;li&gt;Arch Linux(GNOME Shell 45.1, Wayland) &amp;#x2F; タッチスクリーンのノートPC&lt;/li&gt;
 &lt;/ul&gt;</summary>
     
     
@@ -231,9 +231,9 @@
     
     
     
-    <category term="windows" scheme="https://ktkr3d.github.io/tags/windows/"/>
-    
     <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
+    
+    <category term="windows" scheme="https://ktkr3d.github.io/tags/windows/"/>
     
     <category term="minibook-x" scheme="https://ktkr3d.github.io/tags/minibook-x/"/>
     

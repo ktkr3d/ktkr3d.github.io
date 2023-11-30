@@ -43,6 +43,17 @@
   
   <!-- analytics -->
   
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MG6LWTJBY0');
+</script>
+<!-- End Google Analytics -->
+
 
 
 
@@ -197,7 +208,7 @@
 <li>node_attr</li>
 <li>edge_attr</li>
 </ul>
-<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart8604"></div>
+<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart7347"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -206,7 +217,7 @@
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.PieChart(document.getElementById("googleChart8604"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
+        (new google.visualization.PieChart(document.getElementById("googleChart7347"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
       });
     })();
   }
