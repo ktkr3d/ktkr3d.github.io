@@ -18,7 +18,8 @@
   
 
   
-    <link rel="alternative" href="/rss2.xml" title="Memorandum!" type="application/rss+xml">
+    <link rel="alternative" href="atom.xml" title="Atom1.0" type="application/atom+xml">
+    <link rel="alternative" href="rss.xml" title="RSS2.0" type="application/rss+xml">
   
   
 
@@ -90,7 +91,7 @@
 		  </li>
 		  
 		  <li>
-			<a href="/rss2.xml" title="feed">
+			<a href="/rss.xml" title="feed">
 			  <i class="fa fa-rss"></i>Subscribe
 			</a>
 		  </li>
@@ -313,7 +314,7 @@
 	
 		<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/juampi92/hexo-tag-googlecharts">https://github.com/juampi92/hexo-tag-googlecharts</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://developers.google.com/chart/interactive/docs/gallery">https://developers.google.com/chart/interactive/docs/gallery</a><br>hexo-tag-googlecharts を使ってチャートを表示してみました。</p>
 <p>Google Charts を直接Javascript から使うよりも簡単に利用できて便利です。<br>カスタマイズに少しコツが必要なのでよく使う構成をテンプレートとして作っておくとよさそうです。</p>
-<div id="googleChart926"></div>
+<div id="googleChart8850"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -322,7 +323,7 @@
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.LineChart(document.getElementById("googleChart926"))).draw(google.visualization.arrayToDataTable([['Date', 'Druid', 'Death Knight', 'Monk', 'Demon Hunter', 'Mage', 'Warlock', 'Shaman'],[new Date('2019/03/21'), 376, 378, 371, 373, 376, 377, 372],[new Date('2019/03/25'), 377, 378, 374, 374, 376, 378, 374],[new Date('2019/03/31'), 377, 380, 376, 375, 376, 378, 375],[new Date('2019/04/05'), 378, 382, 378, 376, 377, 380, 376],[new Date('2019/04/07'), 380, 383, 379, 376, 378, 381, 378],[new Date('2019/04/20'), 382, 384, 382, 377, 379, 383, 379],[new Date('2019/04/27'), 383, 385, 383, 379, 379, 384, 380],[new Date('2019/04/28'), 384, 385, 383, 379, 379, 387, 381],[new Date('2019/04/29'), 385, 385, 383, 380, 380, 388, 381],[new Date('2019/05/06'), 388, 388, 387, 383, 383, 389, 386],[new Date('2019/05/13'), 392, 391, 388, 386, 386, 391, 390],[new Date('2019/05/19'), 394, 392, 390, 388, 387, 392, 391],[new Date('2019/06/09'), 398, 394, 392, 391, 389, 395, 393],[new Date('2019/06/22'), 399, 397, 395, 394, 394, 398, 396]]),{"hAxis":{"title":"Date","format":"M/d"},"vAxis":{"title":"iLevel","format":"#"},"pointSize":"10","series":[{"color":"#FF7D0A"},{"color":"#C41F3B"},{"color":"#00FF96"},{"color":"#A330C9"},{"color":"#40C7EB"},{"color":"#8787ED"},{"color":"#0070DE"}],"title":" ","width":"100%","height":"600"});
+        (new google.visualization.LineChart(document.getElementById("googleChart8850"))).draw(google.visualization.arrayToDataTable([['Date', 'Druid', 'Death Knight', 'Monk', 'Demon Hunter', 'Mage', 'Warlock', 'Shaman'],[new Date('2019/03/21'), 376, 378, 371, 373, 376, 377, 372],[new Date('2019/03/25'), 377, 378, 374, 374, 376, 378, 374],[new Date('2019/03/31'), 377, 380, 376, 375, 376, 378, 375],[new Date('2019/04/05'), 378, 382, 378, 376, 377, 380, 376],[new Date('2019/04/07'), 380, 383, 379, 376, 378, 381, 378],[new Date('2019/04/20'), 382, 384, 382, 377, 379, 383, 379],[new Date('2019/04/27'), 383, 385, 383, 379, 379, 384, 380],[new Date('2019/04/28'), 384, 385, 383, 379, 379, 387, 381],[new Date('2019/04/29'), 385, 385, 383, 380, 380, 388, 381],[new Date('2019/05/06'), 388, 388, 387, 383, 383, 389, 386],[new Date('2019/05/13'), 392, 391, 388, 386, 386, 391, 390],[new Date('2019/05/19'), 394, 392, 390, 388, 387, 392, 391],[new Date('2019/06/09'), 398, 394, 392, 391, 389, 395, 393],[new Date('2019/06/22'), 399, 397, 395, 394, 394, 398, 396]]),{"hAxis":{"title":"Date","format":"M/d"},"vAxis":{"title":"iLevel","format":"#"},"pointSize":"10","series":[{"color":"#FF7D0A"},{"color":"#C41F3B"},{"color":"#00FF96"},{"color":"#A330C9"},{"color":"#40C7EB"},{"color":"#8787ED"},{"color":"#0070DE"}],"title":" ","width":"100%","height":"600"});
       });
     })();
   }
@@ -533,7 +534,7 @@
 			
 <div class="widget" style="display: none">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/08/15/irrlicht_30/" title="Irrlicht 30秒間デモシリーズ" rel="bookmark">Irrlicht 30秒間デモシリーズ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" title="RPi4 - Ubuntu Server 19.10 64bit" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/pv/" title="PV 再生っぽいことをしてみた" rel="bookmark">PV 再生っぽいことをしてみた</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/08/18/ode_i_can_fly/" title="ODE でI can fly!!" rel="bookmark">ODE でI can fly!!</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/15/android-4-0/" title="Android 4.0 をビルドしてみよう（その1）" rel="bookmark">Android 4.0 をビルドしてみよう（その1）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/09/15/application-menu-icon-extension/" title="Applications Menu Icon Extension" rel="bookmark">Applications Menu Icon Extension</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/01/Manjaro-64bit-RPi4/" title="Manjaro 64bit - RPi4" rel="bookmark">Manjaro 64bit - RPi4</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li></ul>
 </div>
 
 		

@@ -12,7 +12,7 @@
       <link>https://ktkr3d.github.io/</link>
     </image>
     
-    <atom:link href="https://ktkr3d.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
     <pubDate>Sat, 25 Nov 2023 03:35:33 GMT</pubDate>
@@ -125,9 +125,9 @@
       
       <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
       
-      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
-      
       <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
       
       <category domain="https://ktkr3d.github.io/tags/ags/">ags</category>
       
@@ -150,9 +150,9 @@
       
       <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
       
-      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
-      
       <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
       
       
       <comments>https://ktkr3d.github.io/2023/08/25/Hyprland/#disqus_thread</comments>
@@ -248,9 +248,9 @@
       
       
       
-      <category domain="https://ktkr3d.github.io/tags/ubuntu/">ubuntu</category>
-      
       <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/ubuntu/">ubuntu</category>
       
       <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
       
@@ -312,9 +312,9 @@
       
       
       
-      <category domain="https://ktkr3d.github.io/tags/bottles/">bottles</category>
-      
       <category domain="https://ktkr3d.github.io/tags/flatpak/">flatpak</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/bottles/">bottles</category>
       
       <category domain="https://ktkr3d.github.io/tags/wine/">wine</category>
       
