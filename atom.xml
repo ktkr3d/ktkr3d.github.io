@@ -289,9 +289,9 @@
     
     
     
-    <category term="flatpak" scheme="https://ktkr3d.github.io/tags/flatpak/"/>
-    
     <category term="bottles" scheme="https://ktkr3d.github.io/tags/bottles/"/>
+    
+    <category term="flatpak" scheme="https://ktkr3d.github.io/tags/flatpak/"/>
     
     <category term="wine" scheme="https://ktkr3d.github.io/tags/wine/"/>
     
