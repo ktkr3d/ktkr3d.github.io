@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-11-25T03:35:33.000Z</updated>
+  <updated>2023-11-28T10:35:36.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo 7.0 + Freemind + Travel</title>
+    <link href="https://ktkr3d.github.io/2023/11/28/Hexo-7-0-freemind/"/>
+    <id>https://ktkr3d.github.io/2023/11/28/Hexo-7-0-freemind/</id>
+    <published>2023-11-28T10:35:36.000Z</published>
+    <updated>2023-11-28T10:35:36.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/hexo-freemind-travel.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://hexo.io/news/2023/11/03/hexo-7-0-0-released/&quot;&gt;https://hexo.io/news/2023/11/03/hexo-7-0-0-released/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/wzpan/hexo-theme-freemind/&quot;&gt;https://github.com/wzpan/hexo-theme-freemind/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/hexo-theme-freemind-travel&quot;&gt;https://github.com/ktkr3d/hexo-theme-freemind-travel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hexo 7.0 がリリースされたので新規に環境を構築してみよう。&lt;br&gt;FreemindテーマとTravelカラーテーマを設定します。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="hexo" scheme="https://ktkr3d.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>GNOME Shell Extensions</title>
@@ -461,38 +479,6 @@
     
     
     <category term="Windows11" scheme="https://ktkr3d.github.io/tags/Windows11/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Neutralinojs + Nuxt3 + MMD + Audio</title>
-    <link href="https://ktkr3d.github.io/2022/07/30/Neutralinojs-Nuxt3-MMD-Audio/"/>
-    <id>https://ktkr3d.github.io/2022/07/30/Neutralinojs-Nuxt3-MMD-Audio/</id>
-    <published>2022-07-29T15:31:42.000Z</published>
-    <updated>2022-07-29T15:31:42.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_nuxt3_mmd_audio4.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_mmd_audio.html&quot;&gt;https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_mmd_audio.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;MMD の音声再生付きサンプルが掲載されていたのでNuxt3 に移植してみました。&lt;br&gt;カメラ用のVMDでカメラアングルが目まぐるしく展開します。&lt;/p&gt;
-&lt;p&gt;利用させていただいたデータ。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;PMD: hololive さん、桃鈴ねね公式mmd_ver1.0&lt;/li&gt;
-&lt;li&gt;VMD: hino さん、ＷＡＶＥＦＩＬＥ &lt;/li&gt;
-&lt;li&gt;音声：ラマーズP さん、WAVEFILE&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;まだ途中です。今日はここまで。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="mmd" scheme="https://ktkr3d.github.io/tags/mmd/"/>
-    
-    <category term="neutralinojs" scheme="https://ktkr3d.github.io/tags/neutralinojs/"/>
-    
-    <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
-    
-    <category term="threejs" scheme="https://ktkr3d.github.io/tags/threejs/"/>
     
   </entry>
   

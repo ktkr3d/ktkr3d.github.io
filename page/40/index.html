@@ -168,6 +168,45 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2010-12-25 </div>
+			<div class="article-title"><a href="/2010/12/25/ogre3d_1/">まずはOgre3D でミクさんを表示してみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/ogre3d_miku.png" alt="ogre3d miku pmd"><br>Kinect でミクさんを動かしてみようと思い、とりあえずOgre3D でミクさんを表示してみた<br>Kinect に接続して動かしてみると、この世のものとは思えない動きをするようになった<br>ボーンの見直しが必要だ…<br><strong>モデルの変換</strong></p>
+<ol>
+<li>PMDEditor でPMD モデルのサイズ変更(x0.5)、位置変更(Y:-5)</li>
+<li>Pmd2OgreMesh (作者さんに感謝!!)で.pmd から.mesh, .mesh.xml, .skeleton, .skeleton.xml, .materialを生成</li>
+<li>XML データ修正</li>
+</ol>
+<ul>
+<li>.skeleton.xml にSinbad.skeleton のanimation 13種類をダミーで挿入</li>
+<li>.skeleton.xml 内のボーン名(bone000 等10個)をSinbad.skelton のボーン名(Root 等)に置換</li>
+</ul>
+<ol start="4">
+<li>OgreXMLConverter で .skeleton.xml → .skeleton を再生成<br><strong>ソースの修正</strong></li>
+<li>剣メッシュ関連の処理(剣の表示や剣を抜く動作等)をコメントアウト</li>
+<li>マッピングしなかったボーン名(Stomach, Waist)についてはtransformBone() をコメントアウト</li>
+<li>setupbone() で指定する角度を修正</li>
+</ol>
+
+	
+	</div>
+  <a type="button" href="/2010/12/25/ogre3d_1/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2010-12-23 </div>
 			<div class="article-title"><a href="/2010/12/23/linux_kinect/">Linux でKinect Sinbad デモを動かしてみた</a></div>						
 		</h3>
@@ -394,34 +433,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2010-10-16 </div>
-			<div class="article-title"><a href="/2010/10/16/billardgl/">BillardGL で遊んでみた</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/biilardgl.png" alt="billardgl"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.billardgl.de/">http://www.billardgl.de/</a><br>3D のビリヤードゲーム<br>F1〜F8 キーで画面がかっこよくくるくる回転する<br>Ubuntu のタブレットPC デモ動画に載っていたのでリポジトリにあるのかと思いきや無く、ホームページのdeb パッケージのリンクも切れていて、alien もdeb パッケージを生成できなかったのでソースからビルドしてみた<br>src&#x2F;bmp.cpp の修正</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-
-<p>リンクするライブラリ<br>Xxf86vm; GL; GLU; glut;<br>リソースファイルのコピー<br>src&#x2F;Texturen → &#x2F;usr&#x2F;share&#x2F;BillardGL&#x2F;Texturen<br>src&#x2F;lang → &#x2F;usr&#x2F;share&#x2F;BillardGL&#x2F;lang<br>追記: Ubuntu でのパッケージ名はbillard-gl だった<br>追記2: openSUSE にあるfoobillard も同様によくできている</p>
-
-	
-	</div>
-  <a type="button" href="/2010/10/16/billardgl/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -471,6 +482,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/11/28/Hexo-7-0-freemind/"><i class="fa fa-file-o"></i>Hexo 7.0 + Freemind + Travel</a>
+      </li>
+    
+      <li>
         <a href="/2023/11/25/GNOME-Shell-Extensions/"><i class="fa fa-file-o"></i>GNOME Shell Extensions</a>
       </li>
     
@@ -506,10 +521,6 @@
         <a href="/2023/08/08/CHUWI-Minibook-X-N100/"><i class="fa fa-file-o"></i>CHUWI MiniBook X N100</a>
       </li>
     
-      <li>
-        <a href="/2023/07/18/Flatpak/"><i class="fa fa-file-o"></i>Flatpak</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -517,7 +528,7 @@
 			
 <div class="widget" style="display: none">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/08/18/ode_i_can_fly/" title="ODE でI can fly!!" rel="bookmark">ODE でI can fly!!</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" title="RPi4 - Ubuntu Server 19.10 64bit" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/18/post_5/" title="物理演算を試してみる" rel="bookmark">物理演算を試してみる</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/21/android-x86-3-2-honeycomb/" title="Android-x86 3.2 Honeycomb を試してみた" rel="bookmark">Android-x86 3.2 Honeycomb を試してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/09/23/fedora-21-wayland/" title="Fedora 21 wayland" rel="bookmark">Fedora 21 wayland</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" title="RPi4 - Ubuntu Server 19.10 64bit" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li></ul>
 </div>
 
 		

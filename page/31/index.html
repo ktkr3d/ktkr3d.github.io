@@ -168,6 +168,59 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-06-17 </div>
+			<div class="article-title"><a href="/2012/06/17/android-ndk-android-x86-4-0-3/">Android NDK + Android-x86 4.0.3</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/android_ndk_android-x86.png" alt="android ndk android-x86 irrlicht"></p>
+<p>Android 2.3 用のアプリをAndroid-x86 4.0.3 用にリビルドして、Inspiron duo 実機で動かしてみた。さすがにスマートフォンより動作が非常に軽快だけど、画面がiPod の広告みたいになってしまった。画像やフォントが表示されてないのは、なんでだろう。パスがずれているのかな。パスが違っていたらエラーになるはずなんだけど。ボタンイベントはタッチスクリーン上を指で押したら正しく動作した。</p>
+<ol>
+<li>Android 4.0.3 のターゲット情報は以下のとおり。ID は10。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android list target</span><br><span class="line"><span class="built_in">id</span>: 10 or <span class="string">&quot;android-15&quot;</span></span><br><span class="line">     Name: Android 4.0.3</span><br><span class="line">     Type: Platform</span><br><span class="line">     API level: 15</span><br><span class="line">     Revision: 3</span><br><span class="line">     Skins: WXGA720, QVGA, WSVGA, WQVGA400, WQVGA432, HVGA, WVGA854, WXGA800, WVGA800 (default)</span><br><span class="line">     ABIs : armeabi-v7a, x86</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li>Application.mk でx86 を指定</li>
+</ol>
+<figure class="highlight text"><figcaption><span>Application.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">#APP_ABI := armeabi armeabi-v7a</span><br><span class="line">APP_ABI := armeabi-v7a x86</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li>プロジェクトをアップデート</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android update project --path . --target 10</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="4">
+<li>ビルド</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ndk-build clean</span><br><span class="line">$ ndk-build -j 4</span><br><span class="line">$ ant clean</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
+
+
+
+
+	
+	</div>
+  <a type="button" href="/2012/06/17/android-ndk-android-x86-4-0-3/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-06-09 </div>
 			<div class="article-title"><a href="/2012/06/09/firefox-13-newsfox/">Firefox 13 + NewsFox </a></div>						
 		</h3>
@@ -494,30 +547,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-05-03 </div>
-			<div class="article-title"><a href="/2012/05/03/webilder-wallpaper-changer/">Webilder - Wallpaper Changer</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/webilder.png" alt="weblider  wallpaper changer"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.webilder.org/">http://www.webilder.org/</a><br>壁紙を自動で変更してくれるWebilder を使ってみた。あらかじめタグを指定しておくと、Flickr から関連する壁紙を自動的にダウンロードして、指定した時間間隔で切り替えてくれる。パネルに常駐したアイコンから手動でのダウンロードや壁紙切り替えもできる。<br>今回はOneiric 用の.deb を使ってインストールしてみた。Ubuntu 12.04 + GNOME Shell 3.4 の環境でダウンロード中にエラーが発生するけれど、ダウンロードは成功しているみたいなので気にしないでおこう。</p>
-
-	
-	</div>
-  <a type="button" href="/2012/05/03/webilder-wallpaper-changer/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -567,6 +596,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/11/28/Hexo-7-0-freemind/"><i class="fa fa-file-o"></i>Hexo 7.0 + Freemind + Travel</a>
+      </li>
+    
+      <li>
         <a href="/2023/11/25/GNOME-Shell-Extensions/"><i class="fa fa-file-o"></i>GNOME Shell Extensions</a>
       </li>
     
@@ -602,10 +635,6 @@
         <a href="/2023/08/08/CHUWI-Minibook-X-N100/"><i class="fa fa-file-o"></i>CHUWI MiniBook X N100</a>
       </li>
     
-      <li>
-        <a href="/2023/07/18/Flatpak/"><i class="fa fa-file-o"></i>Flatpak</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -613,7 +642,7 @@
 			
 <div class="widget" style="display: none">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/08/18/ode_i_can_fly/" title="ODE でI can fly!!" rel="bookmark">ODE でI can fly!!</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" title="RPi4 - Ubuntu Server 19.10 64bit" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/18/post_5/" title="物理演算を試してみる" rel="bookmark">物理演算を試してみる</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/21/android-x86-3-2-honeycomb/" title="Android-x86 3.2 Honeycomb を試してみた" rel="bookmark">Android-x86 3.2 Honeycomb を試してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/09/23/fedora-21-wayland/" title="Fedora 21 wayland" rel="bookmark">Fedora 21 wayland</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/" title="RPi4 - Ubuntu Server 19.10 64bit" rel="bookmark">RPi4 - Ubuntu Server 19.10 64bit</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li></ul>
 </div>
 
 		
