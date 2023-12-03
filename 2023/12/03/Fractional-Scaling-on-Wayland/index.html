@@ -201,9 +201,9 @@
 <li>Firefoxの動作モードを確認するには<code>about:support</code>を開いてウィンドウプロトコルの値を確認します。</li>
 </ul>
 <h4 id="Visual-Studio-CodeのWaylandモード起動"><a href="#Visual-Studio-CodeのWaylandモード起動" class="headerlink" title="Visual Studio CodeのWaylandモード起動"></a>Visual Studio CodeのWaylandモード起動</h4><ul>
-<li>Visual Studio Code(Electronアプリケーション)をWaylandモードで起動するには<code>--enable-features=WaylandWindowDecorations</code>と<code>--ozone-platform-hint=auto</code>を指定します。</li>
+<li>Visual Studio Code(Electronアプリケーション)をWaylandモードで起動するには<code>--enable-features=WaylandWindowDecorations</code>と<code>--ozone-platform-hint=auto</code>を指定します。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">code --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto</span><br></pre></td></tr></table></figure></li>
 <li>Arch Linux であれば以下のファイルでフラグを指定できます。<figure class="highlight bash"><figcaption><span>~/.config/code-flags.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">--enable-features=WaylandWindowDecorations</span><br><span class="line">--ozone-platform-hint=auto</span><br></pre></td></tr></table></figure></li>
-<li>Electronの実装によりGTK4モードにすることはできないようです。引き継き調査が必要です。</li>
+<li>ただし、Electronの実装によりGTK4モードにすることはできないためIME入力できません。引き継き調査が必要です。</li>
 </ul>
 <h4 id="Code-Server"><a href="#Code-Server" class="headerlink" title="Code Server"></a>Code Server</h4><ul>
 <li>Code Server(Visual Studio CodeのWeb版)はブラウザがWaylandモードとGTK4モードに対応していればよいので問題ありません。PWA化することによりアプリケーションとして起動できます。</li>
