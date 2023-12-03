@@ -30,7 +30,13 @@
       
       
       
+      <category domain="https://ktkr3d.github.io/tags/ubuntu/">ubuntu</category>
+      
       <category domain="https://ktkr3d.github.io/tags/wayland/">wayland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
       
       
       <comments>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/#disqus_thread</comments>
