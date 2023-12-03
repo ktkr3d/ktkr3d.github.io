@@ -168,6 +168,73 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-06-23 </div>
+			<div class="article-title"><a href="/2012/06/23/android-x86-4-0-3-firefoxfennec-16-0a1/">Android-x86 4.0.3 + Firefox(Fennec) 16.0a1</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/android-x86_4.0.3_firefox_16.0a1.png" alt="android-x86 4.0.3 firefox fennec 16.0a1"></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wiki.mozilla.org/Mobile/Fennec/Android">https://wiki.mozilla.org/Mobile/Fennec/Android</a><br>Android-x86 用のFirefox がPlay ストアに登録されていないので、自分でx86 アーキテクチャ向けのAndroid 用Firefox(Fennec) をビルドしてみた。i386-linux-android 向けのmozconfig を見つけたけれど、そのままではうまくビルドできなかったので、修正して利用してみた。Android SDK&#x2F;NDK の環境はできているので、その後から始めよう。ビルドする環境はUbuntu 12.04 x86_64。Android 端末は、Inspiron duo にandroid-x86-4.0-RC1-tegav2.iso をインストール済み。</p>
+<ol>
+<li>ビルドするための依存関係の取得</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install mercurial ccache</span><br><span class="line">$ sudo apt-get build-dep firefox</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li>Firefox のソースの取得</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/mozilla-central/ src</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li>MOZCONFIG のカスタマイズ</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> src</span><br><span class="line">$ gedit mozconfig-android-x86</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><figcaption><span>mozconfig-android-x86</span></figcaption><table><tr><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-endian=little</span><br><span class="line">ac_add_options --with-android-ndk=&quot;$HOME/Projects/Android/android-ndk-r8&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;$HOME/Projects/Android/android-sdk-linux/platforms/android-15&quot;</span><br><span class="line">ac_add_options --with-android-version=10</span><br><span class="line">ac_add_options --with-android-platform=&quot;$HOME/Projects/Android/android-ndk-r8/platforms/android-14/arch-x86&quot;</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">ac_add_options --disable-auto-deps</span><br><span class="line">ac_add_options --disable-debug</span><br><span class="line">ac_add_options --disable-debug-symbols</span><br><span class="line">ac_add_options --disable-tests</span><br><span class="line">ac_add_options --disable-ipdl-tests</span><br><span class="line">ac_add_options --enable-strip</span><br><span class="line">ac_add_options --enable-install-strip</span><br><span class="line"></span><br><span class="line"># updater</span><br><span class="line">ac_add_options --disable-updater</span><br><span class="line">ac_add_options --disable-update-channel</span><br><span class="line">ac_add_options --disable-update-packaging</span><br><span class="line"></span><br><span class="line"># crash reporter</span><br><span class="line">ac_add_options --disable-crashreporter</span><br><span class="line"></span><br><span class="line"># maintenance service</span><br><span class="line">ac_add_options --disable-maintenance-service</span><br><span class="line"></span><br><span class="line"># JDK</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64</span><br><span class="line"></span><br><span class="line"># branding</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/beta</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="4">
+<li><p>ロゴ画像の作成<br>他のサイズのロゴ画像を参考にサイズ40x40 のPNG 形式画像を作成する。<br>.&#x2F;mobile&#x2F;android&#x2F;branding&#x2F;beta&#x2F;content&#x2F;fennec_40x40.png</p>
+</li>
+<li><p>インストール先のAndroid 端末を無線LAN で接続する。</p>
+</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> ADBHOST=192.168.0.4</span><br><span class="line">$ adb devices</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="6">
+<li>ビルドとインストール</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> MOZCONFIG=./mozconfig-android-x86</span><br><span class="line">$ make -f client.mk build_and_deploy</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+
+<p>インストーラパッケージは以下に生成される。<br>.&#x2F;obj-x86_64-unknown-linux-gnu&#x2F;dist&#x2F;fennec-16.0a1.en-US.android-i386.apk</p>
+<ol start="7">
+<li>次回ビルド時にソースを最新の状態にするには</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hg pull -u</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2012/06/23/android-x86-4-0-3-firefoxfennec-16-0a1/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-06-17 </div>
 			<div class="article-title"><a href="/2012/06/17/android-ndk-android-x86-4-0-3/">Android NDK + Android-x86 4.0.3</a></div>						
 		</h3>
@@ -512,41 +579,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-05-05 </div>
-			<div class="article-title"><a href="/2012/05/05/ubuntu-12-04-conky-1-9-0/">Ubuntu 12.04 + Conky 1.9.0</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/ubuntu_12.04_conky_1.9.0.png" alt="ubuntu 12.04 conky 1.9.0"></p>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://conky.sourceforge.net/">http://conky.sourceforge.net/</a></p>
-<p>Ubuntu 12.04 のConky 1.8.1 の挙動が怪しい(アップタイムより大きい更新間隔で実行するexeci 等が原因でcore dump する過去の不具合に似ている)のでconky 1.9.0 のソースを取得してインストールしてみた。configure するとインストール済みの開発用ライブラリに応じて使える機能が追加されるので、適宜、開発用ライブラリを追加しておく。configure の際には、画像を表示するので、–enable-imlib2 もつけてみた。デフォルトでは、&#x2F;usr&#x2F;local&#x2F;bin&#x2F;conky にインストールされる。これでエラーが出なくなってすっきり。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ./configure --enable-imlib2</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
-
-<p>また、conkyForecast は以下の手順で設定した。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:conky-companions/ppa</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install conkyforecast</span><br><span class="line">$ <span class="built_in">cp</span> /usr/share/conkyforecast/conkyForecast.config ~/.conkyForecast.config</span><br></pre></td></tr></table></figure>
-
-<p>xoap.weather.com ではなく、xml.weather.com から取得。地域は東京(JAXX0085)を設定。</p>
-<figure class="highlight text"><figcaption><span>~/.conkyForecast.config</span></figcaption><table><tr><td class="code"><pre><span class="line">#=============================================#</span><br><span class="line"># EXPERT SETTINGS, NOT REQUIRED TO BE ALTERED #</span><br><span class="line">#=============================================#</span><br><span class="line">#BASE_XOAP_URL = http://xoap.weather.com/weather/local/&lt;LOCATION&gt;?cc=*&amp;dayf=5&amp;link=xoap&amp;prod=xoap&amp;par=&lt;XOAP_PARTNER_ID&gt;&amp;key=&lt;XOAP_LICENCE_KEY&gt;&amp;unit=m</span><br><span class="line">BASE_XOAP_URL = http://xml.weather.com/weather/local/&lt;LOCATION&gt;?cc=*&amp;dayf=10&amp;link=xoap&amp;prod=xoap&amp;par=&lt;XOAP_PARTNER_ID&gt;&amp;key=&lt;XOAP_LICENCE_KEY&gt;&amp;unit=m</span><br><span class="line">MAXIMUM_DAYS_FORECAST = 5</span><br><span class="line"></span><br><span class="line">#===============================================#</span><br><span class="line"># USER SETTINGS, EDIT BASED ON DOCUMENTED SETUP #</span><br><span class="line">#===============================================#</span><br><span class="line">CACHE_FOLDERPATH = /tmp/</span><br><span class="line">CONNECTION_TIMEOUT = 5</span><br><span class="line">EXPIRY_MINUTES = 30</span><br><span class="line">TIME_FORMAT = %H:%M</span><br><span class="line">DATE_FORMAT = %Y-%m-%d</span><br><span class="line">LOCALE = en</span><br><span class="line">XOAP_PARTNER_ID = </span><br><span class="line">XOAP_LICENCE_KEY =</span><br><span class="line">DEFAULT_LOCATION = JAXX0085</span><br><span class="line">AUTO_NIGHT = False</span><br><span class="line">PROXY_HOST = </span><br><span class="line">PROXY_PORT = 8080</span><br><span class="line">PROXY_USERNAME = </span><br><span class="line">PROXY_PASSWORD = </span><br></pre></td></tr></table></figure>
-
-<p>天気予報の文言を日本語で表示するには、&#x2F;usr&#x2F;share&#x2F;conkyforecast&#x2F;locale&#x2F;ja&#x2F;* を作成しておいて、.conkyForecast.config でLOCALE &#x3D; ja を設定すればよさそう。中国語(zh)をサンプルにして作成すれば、少し楽かも。</p>
-
-	
-	</div>
-  <a type="button" href="/2012/05/05/ubuntu-12-04-conky-1-9-0/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -596,6 +628,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/12/03/Fractional-Scaling-on-Wayland/"><i class="fa fa-file-o"></i>Fractional Scaling on Wayland</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/02/Hexo-7-0-freemind/"><i class="fa fa-file-o"></i>Hexo 7.0 + Freemind + Travel</a>
       </li>
     
@@ -631,10 +667,6 @@
         <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/"><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
       </li>
     
-      <li>
-        <a href="/2023/08/08/CHUWI-Minibook-X-N100/"><i class="fa fa-file-o"></i>CHUWI MiniBook X N100</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -642,7 +674,7 @@
 			
 <div class="widget" style="display: none">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/15/android-4-0/" title="Android 4.0 をビルドしてみよう（その1）" rel="bookmark">Android 4.0 をビルドしてみよう（その1）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2012/07/25/telnet-nyancat/" title="telnet + nyancat" rel="bookmark">telnet + nyancat</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/pv/" title="PV 再生っぽいことをしてみた" rel="bookmark">PV 再生っぽいことをしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/06/linux-mint-12/" title="Linux Mint 12 を試してみた" rel="bookmark">Linux Mint 12 を試してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/09/14/hexo/" title="hexo" rel="bookmark">hexo</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/31/WoW-Armory-to-PDF/" title="WoW Armory to PDF" rel="bookmark">WoW Armory to PDF</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li></ul>
 </div>
 
 		

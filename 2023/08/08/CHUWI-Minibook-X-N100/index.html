@@ -19,7 +19,74 @@ Arch Linux普通にアップデートすると導入される
 2023&amp;#x2F;11&amp;#x2F;19 更新Wayland 向けのタッチスクリーン環境対策版を導入する。Xorgなら通常版でも問題ない。
 
 GNOME Shell 拡張機能：Dash to Panelhttps://github.com/matt1432/dash-to-panel-touch-fix.git
-GNOME Shell 拡張機能：ArcMenuhttps://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide">
+GNOME Shell 拡張機能：ArcMenuhttps://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide
+
+2023&amp;#x2F;12&amp;#x2F;03 更新MiniBook Xは画面の倍率を100%か125%で利用すると見やすいのですが、LinuxのWaylandで125%とする場合には注意が必要です。Waylandにネイティブ対応のアプリケーション(Firefox 等)の場合は問題ありませんが、ネイティブ非対応のアプリケーション(Chrome, Electron)の場合に機能に制限があります。
+https://monorail-prod.appspot.com/p/chromium/issues/detail?id=1183262
+
+
+
+OS
+ブラウザ(設定)
+画面の質
+文字入力
+
+
+
+Windows 11
+Firefox
+✔
+✔
+
+
+&amp;nbsp;
+Chrome
+✔
+✔
+
+
+Ubuntu &amp;#x2F; Arch Linux
+Firefox
+✔
+✔
+
+
+&amp;nbsp;
+Chrome(標準)
+NG
+✔
+
+
+&amp;nbsp;
+Chrome(Waylandモード)
+✔
+NG
+
+
+これは以下の対応状況の結果のようです。
+
+
+
+text input
+Mutter(Waylandコンポジタ)
+Firefox
+Chrome
+
+
+
+v1
+非対応
+✔
+✔
+
+
+v3
+✔
+✔
+非対応
+
+
+以下のソフトウェアでなんとか橋渡しできないものですかね。https://github.com/ashie/gtk-wayland-textinputv1">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -194,13 +261,79 @@ GNOME Shell 拡張機能：ArcMenuhttps://gitlab.com/arcmenu/ArcMenu/-/wikis/Ins
 <li>GNOME Shell 拡張機能：Dash to Panel<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/matt1432/dash-to-panel-touch-fix.git">https://github.com/matt1432/dash-to-panel-touch-fix.git</a></li>
 <li>GNOME Shell 拡張機能：ArcMenu<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide">https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide</a></li>
 </ul>
+<h4 id="2023-12-03-更新"><a href="#2023-12-03-更新" class="headerlink" title="2023&#x2F;12&#x2F;03 更新"></a>2023&#x2F;12&#x2F;03 更新</h4><p>MiniBook Xは画面の倍率を100%か125%で利用すると見やすいのですが、LinuxのWaylandで125%とする場合には注意が必要です。<br>Waylandにネイティブ対応のアプリケーション(Firefox 等)の場合は問題ありませんが、ネイティブ非対応のアプリケーション(Chrome, Electron)の場合に機能に制限があります。</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://monorail-prod.appspot.com/p/chromium/issues/detail?id=1183262">https://monorail-prod.appspot.com/p/chromium/issues/detail?id=1183262</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">OS</th>
+<th align="left">ブラウザ(設定)</th>
+<th align="left">画面の質</th>
+<th align="left">文字入力</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Windows 11</td>
+<td align="left">Firefox</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+</tr>
+<tr>
+<td align="left">&nbsp;</td>
+<td align="left">Chrome</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+</tr>
+<tr>
+<td align="left">Ubuntu &#x2F; Arch Linux</td>
+<td align="left">Firefox</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+</tr>
+<tr>
+<td align="left">&nbsp;</td>
+<td align="left">Chrome(標準)</td>
+<td align="left">NG</td>
+<td align="left">✔</td>
+</tr>
+<tr>
+<td align="left">&nbsp;</td>
+<td align="left">Chrome(Waylandモード)</td>
+<td align="left">✔</td>
+<td align="left">NG</td>
+</tr>
+</tbody></table>
+<p>これは以下の対応状況の結果のようです。</p>
+<table>
+<thead>
+<tr>
+<th align="left">text input</th>
+<th align="left">Mutter(Waylandコンポジタ)</th>
+<th align="left">Firefox</th>
+<th align="left">Chrome</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">v1</td>
+<td align="left">非対応</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+</tr>
+<tr>
+<td align="left">v3</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+<td align="left">非対応</td>
+</tr>
+</tbody></table>
+<p>以下のソフトウェアでなんとか橋渡しできないものですかね。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ashie/gtk-wayland-textinputv1">https://github.com/ashie/gtk-wayland-textinputv1</a></p>
 <span id="more"></span>
 
 <h3 id="動作確認結果-随時更新"><a href="#動作確認結果-随時更新" class="headerlink" title="動作確認結果 (随時更新)"></a>動作確認結果 (随時更新)</h3><h4 id="💿対象OS"><a href="#💿対象OS" class="headerlink" title="💿対象OS"></a>💿対象OS</h4><ul>
 <li>A: Windows 11 Home</li>
 <li>B: Ubuntu 23.04</li>
 </ul>
-<h4 id="💻本体確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#💻本体確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart7983"></div>
+<h4 id="💻本体確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#💻本体確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart9038"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -209,13 +342,13 @@ GNOME Shell 拡張機能：ArcMenuhttps://gitlab.com/arcmenu/ArcMenu/-/wikis/Ins
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart7983"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['CPU', 'Intel Alder Lake-N100', "✔", "✔"],['メモリ', '12GB (LPDDR5)', "✔", "✔"],['ストレージ', '512GB (NVMe SSD)', "✔", "✔"],['内蔵ディスプレイ', 'IPS 10.51 inch 1920×1200', "✔", "✔"],['タッチスクリーン', '', "✔", "✔"],['タッチパッド', '', "✔", "✔"],['キーボード/バックライト', '', "✔", "✔"],['Wi-Fi', 'Wi-Fi 6', "✔", "✔"],['Bluetooth', 'Bluetooth 5.2', "✔", "✔"],['Audio Jack', '3.5mm (ステレオ)', "✔", "✔"],['内蔵スピーカ', '', "✔", "✔"],['内蔵マイク', '', "✔", "✔"],['内蔵カメラ', '', "✔", "✔"],['USB Port #1 (奥)', 'Type-C USB 3.0', "✔", "✔"],['USB Port #2 (手前)', 'Type-C USB 3.0', "✔", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart9038"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['CPU', 'Intel Alder Lake-N100', "✔", "✔"],['メモリ', '12GB (LPDDR5)', "✔", "✔"],['ストレージ', '512GB (NVMe SSD)', "✔", "✔"],['内蔵ディスプレイ', 'IPS 10.51 inch 1920×1200', "✔", "✔"],['タッチスクリーン', '', "✔", "✔"],['タッチパッド', '', "✔", "✔"],['キーボード/バックライト', '', "✔", "✔"],['Wi-Fi', 'Wi-Fi 6', "✔", "✔"],['Bluetooth', 'Bluetooth 5.2', "✔", "✔"],['Audio Jack', '3.5mm (ステレオ)', "✔", "✔"],['内蔵スピーカ', '', "✔", "✔"],['内蔵マイク', '', "✔", "✔"],['内蔵カメラ', '', "✔", "✔"],['USB Port #1 (奥)', 'Type-C USB 3.0', "✔", "✔"],['USB Port #2 (手前)', 'Type-C USB 3.0', "✔", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
 </script>
 
-<h4 id="🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart1449"></div>
+<h4 id="🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart3799"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -224,7 +357,7 @@ GNOME Shell 拡張機能：ArcMenuhttps://gitlab.com/arcmenu/ArcMenu/-/wikis/Ins
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart1449"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['外部ディスプレイ接続', '4K Dell', "✔", "✔"],['外部タッチスクリーンディスプレイ', 'FHD Touch Screen(USB Type-C)', "✔", ""],['ゲームパッド', 'Microsoft', "", ""],['Bluetooth ヘッドセット #1', 'Sony', "✔", "✔"],['Bluetooth ヘッドセット #2', '', "", ""],['USB Camera', 'Logi', "", ""],['USB Mouse', 'Logi', "", ""],['Bluetooth Mouse', 'Logi', "", ""],['タッチペン', '', "", ""],['USB-LAN', '', "", ""],['Video Capture', '別PC のHDMI出力 → MiniBook X のUSB-Cポート', "", ""]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart3799"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['外部ディスプレイ接続', '4K Dell', "✔", "✔"],['外部タッチスクリーンディスプレイ', 'FHD Touch Screen(USB Type-C)', "✔", ""],['ゲームパッド', 'Microsoft', "", ""],['Bluetooth ヘッドセット #1', 'Sony', "✔", "✔"],['Bluetooth ヘッドセット #2', '', "", ""],['USB Camera', 'Logi', "", ""],['USB Mouse', 'Logi', "", ""],['Bluetooth Mouse', 'Logi', "", ""],['タッチペン', '', "", ""],['USB-LAN', '', "", ""],['Video Capture', '別PC のHDMI出力 → MiniBook X のUSB-Cポート', "", ""]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -253,7 +386,7 @@ GNOME Shell 拡張機能：ArcMenuhttps://gitlab.com/arcmenu/ArcMenu/-/wikis/Ins
 <li>Ubunutu ISO<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a><br>Ventoy USBメモリにISO をコピー、USB Type-C ⇔ Type-A 変換経由でブート</li>
 <li>gparted で512GB(477GiB)ストレージのパーティションを再構成</li>
 </ul>
-<div id="googleChart8869"></div>
+<div id="googleChart4151"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -262,7 +395,7 @@ GNOME Shell 拡張機能：ArcMenuhttps://gitlab.com/arcmenu/ArcMenu/-/wikis/Ins
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart8869"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart4151"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }

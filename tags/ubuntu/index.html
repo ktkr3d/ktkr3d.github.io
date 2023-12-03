@@ -188,6 +188,72 @@
 <li>GNOME Shell 拡張機能：Dash to Panel<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/matt1432/dash-to-panel-touch-fix.git">https://github.com/matt1432/dash-to-panel-touch-fix.git</a></li>
 <li>GNOME Shell 拡張機能：ArcMenu<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide">https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide</a></li>
 </ul>
+<h4 id="2023-12-03-更新"><a href="#2023-12-03-更新" class="headerlink" title="2023&#x2F;12&#x2F;03 更新"></a>2023&#x2F;12&#x2F;03 更新</h4><p>MiniBook Xは画面の倍率を100%か125%で利用すると見やすいのですが、LinuxのWaylandで125%とする場合には注意が必要です。<br>Waylandにネイティブ対応のアプリケーション(Firefox 等)の場合は問題ありませんが、ネイティブ非対応のアプリケーション(Chrome, Electron)の場合に機能に制限があります。</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://monorail-prod.appspot.com/p/chromium/issues/detail?id=1183262">https://monorail-prod.appspot.com/p/chromium/issues/detail?id=1183262</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">OS</th>
+<th align="left">ブラウザ(設定)</th>
+<th align="left">画面の質</th>
+<th align="left">文字入力</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Windows 11</td>
+<td align="left">Firefox</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+</tr>
+<tr>
+<td align="left">&nbsp;</td>
+<td align="left">Chrome</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+</tr>
+<tr>
+<td align="left">Ubuntu &#x2F; Arch Linux</td>
+<td align="left">Firefox</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+</tr>
+<tr>
+<td align="left">&nbsp;</td>
+<td align="left">Chrome(標準)</td>
+<td align="left">NG</td>
+<td align="left">✔</td>
+</tr>
+<tr>
+<td align="left">&nbsp;</td>
+<td align="left">Chrome(Waylandモード)</td>
+<td align="left">✔</td>
+<td align="left">NG</td>
+</tr>
+</tbody></table>
+<p>これは以下の対応状況の結果のようです。</p>
+<table>
+<thead>
+<tr>
+<th align="left">text input</th>
+<th align="left">Mutter(Waylandコンポジタ)</th>
+<th align="left">Firefox</th>
+<th align="left">Chrome</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">v1</td>
+<td align="left">非対応</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+</tr>
+<tr>
+<td align="left">v3</td>
+<td align="left">✔</td>
+<td align="left">✔</td>
+<td align="left">非対応</td>
+</tr>
+</tbody></table>
+<p>以下のソフトウェアでなんとか橋渡しできないものですかね。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ashie/gtk-wayland-textinputv1">https://github.com/ashie/gtk-wayland-textinputv1</a></p>
 	
 	</div>
   <a type="button" href="/2023/08/08/CHUWI-Minibook-X-N100/#more" class="btn btn-default more">Read More</a>
@@ -499,6 +565,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/12/03/Fractional-Scaling-on-Wayland/"><i class="fa fa-file-o"></i>Fractional Scaling on Wayland</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/02/Hexo-7-0-freemind/"><i class="fa fa-file-o"></i>Hexo 7.0 + Freemind + Travel</a>
       </li>
     
@@ -534,10 +604,6 @@
         <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/"><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
       </li>
     
-      <li>
-        <a href="/2023/08/08/CHUWI-Minibook-X-N100/"><i class="fa fa-file-o"></i>CHUWI MiniBook X N100</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -545,7 +611,7 @@
 			
 <div class="widget" style="display: none">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/15/android-4-0/" title="Android 4.0 をビルドしてみよう（その1）" rel="bookmark">Android 4.0 をビルドしてみよう（その1）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2012/07/25/telnet-nyancat/" title="telnet + nyancat" rel="bookmark">telnet + nyancat</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/pv/" title="PV 再生っぽいことをしてみた" rel="bookmark">PV 再生っぽいことをしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/06/linux-mint-12/" title="Linux Mint 12 を試してみた" rel="bookmark">Linux Mint 12 を試してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/09/14/hexo/" title="hexo" rel="bookmark">hexo</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/31/WoW-Armory-to-PDF/" title="WoW Armory to PDF" rel="bookmark">WoW Armory to PDF</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li></ul>
 </div>
 
 		

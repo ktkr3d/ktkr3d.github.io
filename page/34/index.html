@@ -168,6 +168,66 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-12-20 </div>
+			<div class="article-title"><a href="/2011/12/20/nightingale/">Nightingale を使ってみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/nightingale_linux.png" alt="nightingale linux"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://getnightingale.com/">http://getnightingale.com</a><br>Nightingale 1.8.1 が公開されたのでUbuntu 11.10 で使ってみた。アドオンも続々移植されているので期待。Linux x86_64 にもネイティブで対応。OGV 以外のビデオも再生可能。</p>
+<ol>
+<li><p>実行するには</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ./nightingale</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>日本語表示に切り替えるには<br>[File]-[Language]-[日本語]を選択して再起動</p>
+</li>
+<li><p>アイコンをアプリケーションメニューに登録するには</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ alacarte</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>または、</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">ln</span> -s <span class="variable">$PWD</span>/nightingale /usr/bin/nightingale</span><br><span class="line">$ sudo <span class="built_in">cp</span> <span class="variable">$PWD</span>/chrome/icons/default/default.xpm /usr/share/pixmaps/nightingale.xpm</span><br><span class="line">$ sudo vi /usr/share/applications/nightingale.desktop</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><figcaption><span>/usr/share/applications/nightingale.desktop</span></figcaption><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=Nightingale</span><br><span class="line">Comment=Nightingale Media Player</span><br><span class="line">Exec=nightingale</span><br><span class="line">Icon=nightingale.xpm</span><br><span class="line">Terminal=0</span><br><span class="line">Type=Application</span><br><span class="line">Encoding=UTF-8</span><br><span class="line">Categories=AudioVideo;Player;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://forum.getnightingale.com/thread-174.html">http://forum.getnightingale.com/thread-174.html</a><br>フォーラム”Songbird Extensions to port?”で、有志の人たちがSongbird 用のアドオンを移植しているみたい。</p>
+<ul>
+<li><p>試して動いたもの</p>
+<ul>
+<li><p>MashTape</p>
+</li>
+<li><p>MediaFlow</p>
+</li>
+<li><p>MLyrics</p>
+</li>
+</ul>
+</li>
+<li><p>試してないもの</p>
+<ul>
+<li>SHOUTCast Radio</li>
+</ul>
+</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2011/12/20/nightingale/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-12-11 </div>
 			<div class="article-title"><a href="/2011/12/11/wordpress-3-3/">WordPress 3.3 を導入してみた</a></div>						
 		</h3>
@@ -423,30 +483,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-09-28 </div>
-			<div class="article-title"><a href="/2011/09/28/caribou/">Caribou を使ってみた</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>GNOME Shell が3.2 になったので、オンスクリーンキーボードCaribou を使ってみた。<br>使用するには、<br><img src="/images/caribou_on.png" alt="caribou"><br>こんな感じに。<br><img src="/images/caribou.png" alt="caribou"><br>Android 端末のように画面上のオンスクリーンキーボードのキーをタップすると文字が入力できる。</p>
-
-	
-	</div>
-  <a type="button" href="/2011/09/28/caribou/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -496,6 +532,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/12/03/Fractional-Scaling-on-Wayland/"><i class="fa fa-file-o"></i>Fractional Scaling on Wayland</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/02/Hexo-7-0-freemind/"><i class="fa fa-file-o"></i>Hexo 7.0 + Freemind + Travel</a>
       </li>
     
@@ -531,10 +571,6 @@
         <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/"><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
       </li>
     
-      <li>
-        <a href="/2023/08/08/CHUWI-Minibook-X-N100/"><i class="fa fa-file-o"></i>CHUWI MiniBook X N100</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -542,7 +578,7 @@
 			
 <div class="widget" style="display: none">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/15/android-4-0/" title="Android 4.0 をビルドしてみよう（その1）" rel="bookmark">Android 4.0 をビルドしてみよう（その1）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2012/07/25/telnet-nyancat/" title="telnet + nyancat" rel="bookmark">telnet + nyancat</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/pv/" title="PV 再生っぽいことをしてみた" rel="bookmark">PV 再生っぽいことをしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/11/06/linux-mint-12/" title="Linux Mint 12 を試してみた" rel="bookmark">Linux Mint 12 を試してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/09/14/hexo/" title="hexo" rel="bookmark">hexo</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/31/WoW-Armory-to-PDF/" title="WoW Armory to PDF" rel="bookmark">WoW Armory to PDF</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li></ul>
 </div>
 
 		
