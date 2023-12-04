@@ -24,7 +24,7 @@
       <guid>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</guid>
       <pubDate>Sun, 03 Dec 2023 04:49:27 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/fractional_scaling.png&quot;&gt;&lt;br&gt;CHUWI MiniBook X(10.51 inch, 1200*1920px)のように画素密度の高い画面ではスケーリング値を125%にすると見やすくなるとともにタッチスクリーン操作がしやすくなります。出荷時のWindows 11は125%になっています。これをLinux でもやってみましょう。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&quot;/images/fractional_scaling.png&quot;&gt;&lt;br&gt;CHUWI MiniBook X(10.51 inch, 1200*1920px)のように画素密度の高い画面ではスケーリング値を125%にすると見やすくなるとともにタッチスクリーン操作がしやすくなります。出荷時のWindows 11は150%になっています。これをLinux でもやってみましょう。&lt;/p&gt;</description>
       
       
       
