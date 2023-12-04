@@ -181,6 +181,12 @@
 <li>Arch Linuxで分数スケーリングを有効にするには以下を実行します。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gsettings set org.gnome.mutter experimental-features &quot;[&#x27;scale-monitor-framebuffer&#x27;]&quot;</span><br></pre></td></tr></table></figure>
 再ログインすると設定画面のディスプレイからスケーリング値(100%, 125%, 150%, 175%, 200%, 225%)を選択できるようになります。</li>
 </ul>
+<h4 id="FirefoxをWaylandモードで起動"><a href="#FirefoxをWaylandモードで起動" class="headerlink" title="FirefoxをWaylandモードで起動"></a>FirefoxをWaylandモードで起動</h4><ul>
+<li>Ubuntu のFirefox はWaylandモードで起動します。</li>
+<li>Arch Linux でFirefox をWaylandモードで起動するには以下の設定をします。<figure class="highlight bash"><figcaption><span>~/.bash_profile</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$XDG_SESSION_TYPE</span>&quot;</span> = <span class="string">&quot;wayland&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">export</span> MOZ_ENABLE_WAYLAND=1</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></li>
+<li>Firefoxの動作モードを確認するには<code>about:support</code>を開いてウィンドウプロトコルの値を確認します。</li>
+<li>FirefoxはWayland環境における動作上の問題はなさそうです。</li>
+</ul>
 <h4 id="Google-ChromeをWayland-モードで起動"><a href="#Google-ChromeをWayland-モードで起動" class="headerlink" title="Google ChromeをWayland モードで起動"></a>Google ChromeをWayland モードで起動</h4><ul>
 <li>Linux でスケーリング値を125%にするとGoogle Chrome の文字がぼやけてしまいます。  これはGoogle CromeがWaylandモードではなくXWaylandモードで起動されているためです。以下のコマンドによりWaylandモードで起動すると文字がくっきりと描画されます。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland</span><br></pre></td></tr></table></figure></li>
 <li>Wayland モードはGoogle Chromeの画面からでも有効にできます。<code>chrome:flags</code>を開いて、<code>Prefferd Ozone platform</code>に <code>wayland</code>または<code>Auto</code>を指定します。</li>
@@ -193,11 +199,6 @@
 </ul>
 <h4 id="Google-Chrome-のIMEポップアップの位置修正"><a href="#Google-Chrome-のIMEポップアップの位置修正" class="headerlink" title="Google Chrome のIMEポップアップの位置修正"></a>Google Chrome のIMEポップアップの位置修正</h4><ul>
 <li>GTKバージョン指定でIMEのポップアップは表示されますが、IMEのポップアップの表示位置がずれてしまいます。これを修正するにはGNOME Shellの拡張機能であるInput Method Panelを導入します。<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://extensions.gnome.org/extension/261/kimpanel/">https://extensions.gnome.org/extension/261/kimpanel/</a></li>
-</ul>
-<h4 id="FirefoxをWaylandモードで起動"><a href="#FirefoxをWaylandモードで起動" class="headerlink" title="FirefoxをWaylandモードで起動"></a>FirefoxをWaylandモードで起動</h4><ul>
-<li>Ubuntu のFirefox はWaylandモードで起動します。</li>
-<li>Arch Linux でFirefox をWaylandモードで起動するには以下の設定をします。<figure class="highlight bash"><figcaption><span>~/.bash_profile</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$XDG_SESSION_TYPE</span>&quot;</span> = <span class="string">&quot;wayland&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">export</span> MOZ_ENABLE_WAYLAND=1</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></li>
-<li>Firefoxの動作モードを確認するには<code>about:support</code>を開いてウィンドウプロトコルの値を確認します。</li>
 </ul>
 <h4 id="Visual-Studio-CodeのWaylandモード起動"><a href="#Visual-Studio-CodeのWaylandモード起動" class="headerlink" title="Visual Studio CodeのWaylandモード起動"></a>Visual Studio CodeのWaylandモード起動</h4><ul>
 <li>Visual Studio Code(Electronアプリケーション)をWaylandモードで起動するには<code>--enable-features=WaylandWindowDecorations</code>と<code>--ozone-platform-hint=auto</code>を指定します。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">code --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto</span><br></pre></td></tr></table></figure></li>
