@@ -185,10 +185,10 @@
 <li>Ubuntu のFirefox はWaylandモードで起動します。</li>
 <li>Arch Linux でFirefox をWaylandモードで起動するには以下の設定をします。<figure class="highlight bash"><figcaption><span>~/.bash_profile</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$XDG_SESSION_TYPE</span>&quot;</span> = <span class="string">&quot;wayland&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">export</span> MOZ_ENABLE_WAYLAND=1</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></li>
 <li>Firefoxの動作モードを確認するには<code>about:support</code>を開いてウィンドウプロトコルの値を確認します。</li>
-<li>FirefoxはWayland環境における動作上の問題はなさそうです。</li>
+<li>FirefoxはWayland環境において動作上の問題がなさそうです。</li>
 </ul>
 <h4 id="Google-ChromeをWayland-モードで起動"><a href="#Google-ChromeをWayland-モードで起動" class="headerlink" title="Google ChromeをWayland モードで起動"></a>Google ChromeをWayland モードで起動</h4><ul>
-<li>Linux でスケーリング値を125%にするとGoogle Chrome の文字がぼやけてしまいます。  これはGoogle CromeがWaylandモードではなくXWaylandモードで起動されているためです。以下のコマンドによりWaylandモードで起動すると文字がくっきりと描画されます。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland</span><br></pre></td></tr></table></figure></li>
+<li>Linux でスケーリング値を125%にするとGoogle Chrome の文字がぼやけてしまいます。これはGoogle CromeがWaylandモードではなくXWaylandモードで起動されているためです。以下のコマンドによりWaylandモードで起動すると文字がくっきりと描画されます。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland</span><br></pre></td></tr></table></figure></li>
 <li>Wayland モードはGoogle Chromeの画面からでも有効にできます。<code>chrome:flags</code>を開いて、<code>Prefferd Ozone platform</code>に <code>wayland</code>または<code>Auto</code>を指定します。</li>
 </ul>
 <h4 id="Google-ChromeをWayland-モードで起動した際のIME入力"><a href="#Google-ChromeをWayland-モードで起動した際のIME入力" class="headerlink" title="Google ChromeをWayland モードで起動した際のIME入力"></a>Google ChromeをWayland モードで起動した際のIME入力</h4><ul>

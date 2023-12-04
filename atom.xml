@@ -276,7 +276,7 @@
 &lt;th align=&quot;left&quot;&gt;OS&lt;/th&gt;
 &lt;th align=&quot;left&quot;&gt;ブラウザ(設定)&lt;/th&gt;
 &lt;th align=&quot;left&quot;&gt;画面の質&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;文字入力&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;IME文字入力&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;&lt;tr&gt;
@@ -333,7 +333,7 @@
 &lt;td align=&quot;left&quot;&gt;非対応&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;以下のソフトウェアでなんとか橋渡しできないものですかね。&lt;br&gt;&lt;a href=&quot;https://github.com/ashie/gtk-wayland-textinputv1&quot;&gt;https://github.com/ashie/gtk-wayland-textinputv1&lt;/a&gt;&lt;/p&gt;</summary>
+&lt;p&gt;&lt;code&gt;--gtk-version=4&lt;/code&gt;を指定することでIME文字入力できるようになりました。&lt;br&gt;&lt;a href=&quot;https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/&quot;&gt;https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
