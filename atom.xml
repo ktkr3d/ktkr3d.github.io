@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-12-03T04:49:27.000Z</updated>
+  <updated>2023-12-09T04:00:38.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -17,25 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Fractional Scaling on Wayland</title>
-    <link href="https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/"/>
-    <id>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</id>
-    <published>2023-12-03T04:49:27.000Z</published>
-    <updated>2023-12-03T04:49:27.000Z</updated>
+    <title>Hexo Theme Butterfly</title>
+    <link href="https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/"/>
+    <id>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/</id>
+    <published>2023-12-09T04:00:38.000Z</published>
+    <updated>2023-12-09T04:00:38.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/fractional_scaling.png&quot;&gt;&lt;br&gt;CHUWI MiniBook X(10.51 inch, 1200*1920px)のように画素密度の高い画面ではスケーリング値を125%にすると見やすくなるとともにタッチスクリーン操作がしやすくなります。出荷時のWindows 11は150%になっています。これをLinux でもやってみましょう。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/hexo-theme-butterfly.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/jerryc127/hexo-theme-butterfly&quot;&gt;https://github.com/jerryc127/hexo-theme-butterfly&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;モダンで多機能なHexo のテーマButterflyを使ってみました。&lt;br&gt;あまりにも多機能なので機能を無効化してシンプルにしてみました。&lt;br&gt;パッケージ版を導入して、オリジナルのスクリプトは修正しないようにしました。&lt;/p&gt;</summary>
     
     
     
-    
-    <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
-    
-    <category term="wayland" scheme="https://ktkr3d.github.io/tags/wayland/"/>
-    
-    <category term="minibook-x" scheme="https://ktkr3d.github.io/tags/minibook-x/"/>
-    
-    <category term="arch-linux" scheme="https://ktkr3d.github.io/tags/arch-linux/"/>
     
   </entry>
   
@@ -159,9 +152,9 @@
     
     <category term="minibook-x" scheme="https://ktkr3d.github.io/tags/minibook-x/"/>
     
-    <category term="hyprland" scheme="https://ktkr3d.github.io/tags/hyprland/"/>
-    
     <category term="arch-linux" scheme="https://ktkr3d.github.io/tags/arch-linux/"/>
+    
+    <category term="hyprland" scheme="https://ktkr3d.github.io/tags/hyprland/"/>
     
     <category term="ags" scheme="https://ktkr3d.github.io/tags/ags/"/>
     
@@ -182,9 +175,9 @@
     
     <category term="minibook-x" scheme="https://ktkr3d.github.io/tags/minibook-x/"/>
     
-    <category term="hyprland" scheme="https://ktkr3d.github.io/tags/hyprland/"/>
-    
     <category term="arch-linux" scheme="https://ktkr3d.github.io/tags/arch-linux/"/>
+    
+    <category term="hyprland" scheme="https://ktkr3d.github.io/tags/hyprland/"/>
     
   </entry>
   

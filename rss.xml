@@ -15,31 +15,24 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 03 Dec 2023 04:49:27 GMT</pubDate>
+    <pubDate>Sat, 09 Dec 2023 04:00:38 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Fractional Scaling on Wayland</title>
-      <link>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</link>
-      <guid>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</guid>
-      <pubDate>Sun, 03 Dec 2023 04:49:27 GMT</pubDate>
+      <title>Hexo Theme Butterfly</title>
+      <link>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/</link>
+      <guid>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/</guid>
+      <pubDate>Sat, 09 Dec 2023 04:00:38 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/fractional_scaling.png&quot;&gt;&lt;br&gt;CHUWI MiniBook X(10.51 inch, 1200*1920px)のように画素密度の高い画面ではスケーリング値を125%にすると見やすくなるとともにタッチスクリーン操作がしやすくなります。出荷時のWindows 11は150%になっています。これをLinux でもやってみましょう。&lt;/p&gt;</description>
-      
-      
-      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/hexo-theme-butterfly.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/jerryc127/hexo-theme-butterfly&quot;&gt;https://github.com/jerryc127/hexo-theme-butterfly&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;モダンで多機能なHexo のテーマButterflyを使ってみました。&lt;br&gt;あまりにも多機能なので機能を無効化してシンプルにしてみました。&lt;br&gt;パッケージ版を導入して、オリジナルのスクリプトは修正しないようにしました。&lt;/p&gt;</description>
       
       
-      <category domain="https://ktkr3d.github.io/tags/ubuntu/">ubuntu</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/wayland/">wayland</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
       
       
-      <comments>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/#disqus_thread</comments>
+      
+      
+      <comments>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/#disqus_thread</comments>
       
     </item>
     
@@ -170,9 +163,9 @@
       
       <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
       
-      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
-      
       <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
       
       <category domain="https://ktkr3d.github.io/tags/ags/">ags</category>
       
@@ -195,9 +188,9 @@
       
       <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
       
-      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
-      
       <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
       
       
       <comments>https://ktkr3d.github.io/2023/08/25/Hyprland/#disqus_thread</comments>
