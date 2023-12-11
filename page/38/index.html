@@ -168,6 +168,52 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-04-14 </div>
+			<div class="article-title"><a href="/2011/04/14/plasma-active-contour/">Plasma/Active/Contour を試してみる</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/contour.png" alt="contour kde plasma active tablet opensuse"></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://community.kde.org/Plasma/Active/Installation">http://community.kde.org/Plasma/Active/Installation</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://community.kde.org/Plasma/Active/Contour/Installation">http://community.kde.org/Plasma/Active/Contour/Installation</a><br>Plasma Active Tablet パッケージのContour がおもしろそうなのでInspiron duo で試してみる。</p>
+<ol>
+<li><p>openSUSE 11.4 をインストール<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://software.opensuse.org/114/ja">http://software.opensuse.org/114/ja</a><br>KDE 版のISO の拡張子を.img にしてsudo image-writer でUSBに入れて、Live USB を作った。</p>
+</li>
+<li><p>Plasma&#x2F;Active をインストール（不要だったかも）</p>
+</li>
+</ol>
+<p>&#x2F;etc&#x2F;zypp&#x2F;zypp.conf</p>
+<blockquote>
+<p>solver.allowVendorChange &#x3D; true </p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># zypper ar http://download.opensuse.org/repositories/home:/rwooninck:/UNSTABLE_KDE4/openSUSE_11.4/ kde-unstable</span></span><br><span class="line"><span class="comment"># zypper mr -p 100 kde-unstable</span></span><br><span class="line"><span class="comment"># zypper ar http://download.opensuse.org/repositories/home:/vizzzion/kde-unstable/ plasma-active</span></span><br><span class="line"><span class="comment"># zypper mr -p 101 plasma-active</span></span><br><span class="line"><span class="comment"># zypper refresh -f</span></span><br><span class="line"><span class="comment"># zypper in plasma-active:kdebase4-runtime plasma-tablet-config plasma-declarative-widgets</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li><p>Contour パッケージのインストール<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://software.opensuse.org/">http://software.opensuse.org/</a> でcontour を1-クリック インストール</p>
+</li>
+<li><p>Contour の自動起動設定<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://software.opensuse.org/">http://software.opensuse.org/</a> でplasma-contour-config を1-クリック インストール<br>(plasma-tablet プロセスが残っていたらkquitapp plasma-tablet で消しておく)</p>
+</li>
+</ol>
+<p>おもしろそう！！使い方がよくわかんない！！</p>
+
+	
+	</div>
+  <a type="button" href="/2011/04/14/plasma-active-contour/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-04-09 </div>
 			<div class="article-title"><a href="/2011/04/09/gnome-3-e38292e8aabfe381b9e381a6e381bfe3819f/">GNOME Shell を拡張してみた</a></div>						
 		</h3>
@@ -456,60 +502,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-03-21 </div>
-			<div class="article-title"><a href="/2011/03/21/fedora-15-e381a7e792b0e5a283e8a8ade5ae9a/">Fedora 15 alpha で環境設定</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/fedora15a.png"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://alt.fedoraproject.org/pub/alt/nightly-composes/desktop/">http://alt.fedoraproject.org/pub/alt/nightly-composes/desktop/</a><br>Gnome Shell やFirefox 4.0 の日本語環境が思いのほか使い心地がよいので、しばらくFedora 15 を使ってみることにした。ただし、ソフトウェア更新をすると非常に高い確率で不具合が起こるので注意が必要だ。</p>
-<p>行き当たりばったりで環境設定をしてみた。</p>
-<ul>
-<li><p>RPM Fusion (Installing Free and Nonfree Repositories)を入れる</p>
-</li>
-<li><p>ファイアウォール: system-config-firewall で設定</p>
-</li>
-<li><p>lsb_release: redhat_lsb パッケージに入っている</p>
-</li>
-<li><p>eth0: デバイス名はなぜか pci3p1 になった</p>
-</li>
-<li><p>Gnome Shell は左上隅にカーソルを持って行った時の画面の切り替わりが楽しい!!</p>
-</li>
-<li><p>個人向け環境設定はgnome-control-center で実行。上部パネルのユーザ名をクリックした時のメニューでも起動可。今のところ外観の設定ツールが充実していない。そのうち、増えると思う。</p>
-</li>
-<li><p>Firefox 4.0 のFirebug アドオンは開発版1.7X.0b3 をインストール</p>
-</li>
-<li><p>Firefox 4.0 のChaika アドオンは開発版r316 をインストール</p>
-</li>
-<li><p>yoono (7.6.2 時点)がバギーかも。Firefox がクラッシュしたらプロファイルの中のyoono ディレクトリを退避して再起動。</p>
-</li>
-<li><p>ウィンドウの最小化は[Alt]+[F9]</p>
-</li>
-<li><p>mozc_tool は&#x2F;usr&#x2F;libexec&#x2F;mozc_tool に入った</p>
-</li>
-<li><p>自動で起動するアプリはgnome-session-properties で設定</p>
-</li>
-<li><p>compiz が無くてもあまり困らない</p>
-</li>
-</ul>
-<p>でも、まともに動くUbuntu 11.04 のGnome Shell スピンが出たら乗り換えると思う。</p>
-
-	
-	</div>
-  <a type="button" href="/2011/03/21/fedora-15-e381a7e792b0e5a283e8a8ade5ae9a/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -563,6 +555,10 @@
       </li>
     
       <li>
+        <a href="/2023/12/03/Fractional-Scaling-on-Wayland/"><i class="fa fa-file-o"></i>Fractional Scaling on Wayland</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/02/Hexo-7-0-freemind/"><i class="fa fa-file-o"></i>Hexo 7.0 + Freemind + Travel</a>
       </li>
     
@@ -592,10 +588,6 @@
     
       <li>
         <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/"><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
-      </li>
-    
-      <li>
-        <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/"><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
       </li>
     
   </ul>

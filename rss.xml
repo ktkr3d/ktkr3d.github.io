@@ -39,6 +39,31 @@
     </item>
     
     <item>
+      <title>Fractional Scaling on Wayland</title>
+      <link>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</link>
+      <guid>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</guid>
+      <pubDate>Sun, 03 Dec 2023 04:49:27 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/fractional_scaling.png&quot;&gt;&lt;br&gt;CHUWI MiniBook X(10.51 inch, 1200*1920px)のように画素密度の高い画面ではスケーリング値を125%にすると見やすくなるとともにタッチスクリーン操作がしやすくなります。出荷時のWindows 11は150%になっています。これをLinux でもやってみましょう。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/ubuntu/">ubuntu</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/wayland/">wayland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>Hexo 7.0 + Freemind + Travel</title>
       <link>https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/</link>
       <guid>https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/</guid>
@@ -560,34 +585,6 @@
       
       
       <comments>https://ktkr3d.github.io/2022/10/25/code-server-vscode-reveal/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Windows 11 - WSL 2 - systemd</title>
-      <link>https://ktkr3d.github.io/2022/10/22/Windows-11-WSL-2-systemd/</link>
-      <guid>https://ktkr3d.github.io/2022/10/22/Windows-11-WSL-2-systemd/</guid>
-      <pubDate>Sat, 22 Oct 2022 08:42:42 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/wsl2_systemd.drawio.svg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Windows 11 のWSL でsystemd を有効にしてみました。&lt;br&gt;構成がすっきりしました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/wsl/">wsl</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/hexo/">hexo</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/pritunl/">pritunl</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/code-server/">code-server</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2022/10/22/Windows-11-WSL-2-systemd/#disqus_thread</comments>
       
     </item>
     

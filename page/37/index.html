@@ -168,6 +168,43 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2011-05-17 </div>
+			<div class="article-title"><a href="/2011/05/17/0-a-d-e381a7e9818ae38293e381a7e381bfe3828b/">0 A.D. で遊んでみる</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/0ad_256.png" alt="0 A.D."><br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://wildfiregames.com/0ad/">http://wildfiregames.com/0ad/</a></p>
+<p>フリーでオープンソースでクロスプラットフォーム(Windows, Linux, Mac)なリアルタイムストラテジーゲーム0 A.D. で遊んでみよう。</p>
+<ul>
+<li>Ubuntu 版の安定版のインストール</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository ppa:wfg/0ad</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install 0ad</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Ubuntu 版のより新しい開発版のインストール</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository ppa:wfg/0ad.dev</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install 0ad 0ad-data</span><br></pre></td></tr></table></figure>
+
+
+
+
+	
+	</div>
+  <a type="button" href="/2011/05/17/0-a-d-e381a7e9818ae38293e381a7e381bfe3828b/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2011-05-15 </div>
 			<div class="article-title"><a href="/2011/05/15/gnome-shell-e381aee38386e383bce3839ee38292e5a489e69bb4e38197e381a6e381bfe3819f/">GNOME Shell のテーマを選んでみた</a></div>						
 		</h3>
@@ -498,52 +535,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2011-04-14 </div>
-			<div class="article-title"><a href="/2011/04/14/plasma-active-contour/">Plasma/Active/Contour を試してみる</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/contour.png" alt="contour kde plasma active tablet opensuse"></p>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://community.kde.org/Plasma/Active/Installation">http://community.kde.org/Plasma/Active/Installation</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://community.kde.org/Plasma/Active/Contour/Installation">http://community.kde.org/Plasma/Active/Contour/Installation</a><br>Plasma Active Tablet パッケージのContour がおもしろそうなのでInspiron duo で試してみる。</p>
-<ol>
-<li><p>openSUSE 11.4 をインストール<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://software.opensuse.org/114/ja">http://software.opensuse.org/114/ja</a><br>KDE 版のISO の拡張子を.img にしてsudo image-writer でUSBに入れて、Live USB を作った。</p>
-</li>
-<li><p>Plasma&#x2F;Active をインストール（不要だったかも）</p>
-</li>
-</ol>
-<p>&#x2F;etc&#x2F;zypp&#x2F;zypp.conf</p>
-<blockquote>
-<p>solver.allowVendorChange &#x3D; true </p>
-</blockquote>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># zypper ar http://download.opensuse.org/repositories/home:/rwooninck:/UNSTABLE_KDE4/openSUSE_11.4/ kde-unstable</span></span><br><span class="line"><span class="comment"># zypper mr -p 100 kde-unstable</span></span><br><span class="line"><span class="comment"># zypper ar http://download.opensuse.org/repositories/home:/vizzzion/kde-unstable/ plasma-active</span></span><br><span class="line"><span class="comment"># zypper mr -p 101 plasma-active</span></span><br><span class="line"><span class="comment"># zypper refresh -f</span></span><br><span class="line"><span class="comment"># zypper in plasma-active:kdebase4-runtime plasma-tablet-config plasma-declarative-widgets</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="3">
-<li><p>Contour パッケージのインストール<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://software.opensuse.org/">http://software.opensuse.org/</a> でcontour を1-クリック インストール</p>
-</li>
-<li><p>Contour の自動起動設定<br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://software.opensuse.org/">http://software.opensuse.org/</a> でplasma-contour-config を1-クリック インストール<br>(plasma-tablet プロセスが残っていたらkquitapp plasma-tablet で消しておく)</p>
-</li>
-</ol>
-<p>おもしろそう！！使い方がよくわかんない！！</p>
-
-	
-	</div>
-  <a type="button" href="/2011/04/14/plasma-active-contour/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -597,6 +588,10 @@
       </li>
     
       <li>
+        <a href="/2023/12/03/Fractional-Scaling-on-Wayland/"><i class="fa fa-file-o"></i>Fractional Scaling on Wayland</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/02/Hexo-7-0-freemind/"><i class="fa fa-file-o"></i>Hexo 7.0 + Freemind + Travel</a>
       </li>
     
@@ -626,10 +621,6 @@
     
       <li>
         <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/"><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
-      </li>
-    
-      <li>
-        <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/"><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
       </li>
     
   </ul>

@@ -35,6 +35,29 @@
   </entry>
   
   <entry>
+    <title>Fractional Scaling on Wayland</title>
+    <link href="https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/"/>
+    <id>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</id>
+    <published>2023-12-03T04:49:27.000Z</published>
+    <updated>2023-12-03T04:49:27.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/fractional_scaling.png&quot;&gt;&lt;br&gt;CHUWI MiniBook X(10.51 inch, 1200*1920px)のように画素密度の高い画面ではスケーリング値を125%にすると見やすくなるとともにタッチスクリーン操作がしやすくなります。出荷時のWindows 11は150%になっています。これをLinux でもやってみましょう。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="ubuntu" scheme="https://ktkr3d.github.io/tags/ubuntu/"/>
+    
+    <category term="wayland" scheme="https://ktkr3d.github.io/tags/wayland/"/>
+    
+    <category term="minibook-x" scheme="https://ktkr3d.github.io/tags/minibook-x/"/>
+    
+    <category term="arch-linux" scheme="https://ktkr3d.github.io/tags/arch-linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo 7.0 + Freemind + Travel</title>
     <link href="https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/"/>
     <id>https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/</id>
@@ -520,32 +543,6 @@
     <category term="reveal.js" scheme="https://ktkr3d.github.io/tags/reveal-js/"/>
     
     <category term="vscode-reveal" scheme="https://ktkr3d.github.io/tags/vscode-reveal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 11 - WSL 2 - systemd</title>
-    <link href="https://ktkr3d.github.io/2022/10/22/Windows-11-WSL-2-systemd/"/>
-    <id>https://ktkr3d.github.io/2022/10/22/Windows-11-WSL-2-systemd/</id>
-    <published>2022-10-22T08:42:42.000Z</published>
-    <updated>2022-10-22T08:42:42.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/wsl2_systemd.drawio.svg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Windows 11 のWSL でsystemd を有効にしてみました。&lt;br&gt;構成がすっきりしました。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="wsl" scheme="https://ktkr3d.github.io/tags/wsl/"/>
-    
-    <category term="windows" scheme="https://ktkr3d.github.io/tags/windows/"/>
-    
-    <category term="hexo" scheme="https://ktkr3d.github.io/tags/hexo/"/>
-    
-    <category term="pritunl" scheme="https://ktkr3d.github.io/tags/pritunl/"/>
-    
-    <category term="code-server" scheme="https://ktkr3d.github.io/tags/code-server/"/>
     
   </entry>
   

@@ -168,6 +168,30 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2010-10-23 </div>
+			<div class="article-title"><a href="/2010/10/23/post_11/">ミクさんのデモを試してみた</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/miku.png" alt="miku irrlicht"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=40262">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=40262</a><br>UK ではミクさんが話題みたいだけど、これを作ったのもUK の人みたい<br>irrCg を使っていてリアルタイムにアニメーションする</p>
+
+	
+	</div>
+  <a type="button" href="/2010/10/23/post_11/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2010-10-17 </div>
 			<div class="article-title"><a href="/2010/10/17/blood_water/">Blood &amp; Water を試してみた</a></div>						
 		</h3>
@@ -415,47 +439,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2010-09-08 </div>
-			<div class="article-title"><a href="/2010/09/08/irrlicht/">Irrlicht アプリをデスクトップ背景で動かしてみた</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/background.png" alt="xwinwrap irrlicht"><br>xwinwrap を使ってIrrlicht のアプリケーションをデスクトップの背景にしてみた<br>createDeviceEx() でルートウィンドウのWindow ID を設定してあげるとよいみたい<br>ディスプレイドライバとの相性(?)がある<strike>のと、conky が見えなくなってしまう</strike>のが残念</p>
-<ol>
-<li><p>xwinwrap を拾ってきてインストールする</p>
-</li>
-<li><p>コマンドパラメタからWindow ID を設定できるようにする</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">SIrrlichtCreationParameters params;</span><br><span class="line">params.DriverType = video::EDT_OPENGL;</span><br><span class="line">params.WindowSize = core::dimension2d&amp;lt;u32&amp;gt;(<span class="number">800</span>, <span class="number">600</span>);</span><br><span class="line">params.Bits = <span class="number">32</span>;</span><br><span class="line">params.Fullscreen = <span class="literal">false</span>;</span><br><span class="line">params.Stencilbuffer = <span class="literal">false</span>;</span><br><span class="line">params.Vsync = <span class="literal">false</span>;</span><br><span class="line">params.AntiAlias = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; argc; i++) &#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">strcmp</span>(argv[i], <span class="string">&quot;-wid&quot;</span>) == <span class="number">0</span>)</span><br><span class="line">		params.WindowId = (<span class="type">void</span>*)<span class="built_in">strtol</span>(argv[i+<span class="number">1</span>], <span class="literal">NULL</span>, <span class="number">16</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">strcmp</span>(argv[i], <span class="string">&quot;-fullscreen&quot;</span>) == <span class="number">0</span>)</span><br><span class="line">		params.Fullscreen = <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">strcmp</span>(argv[i], <span class="string">&quot;-width&quot;</span>) == <span class="number">0</span>)</span><br><span class="line">		params.WindowSize.Width = <span class="built_in">strtol</span>(argv[i+<span class="number">1</span>], <span class="literal">NULL</span>, <span class="number">10</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">strcmp</span>(argv[i], <span class="string">&quot;-height&quot;</span>) == <span class="number">0</span>)</span><br><span class="line">		params.WindowSize.Height = <span class="built_in">strtol</span>(argv[i+<span class="number">1</span>], <span class="literal">NULL</span>, <span class="number">10</span>);</span><br><span class="line">&#125;</span><br><span class="line">IrrlichtDevice *device = <span class="built_in">createDeviceEx</span>(params);</span><br></pre></td></tr></table></figure>
-
-
-</li>
-<li><p>実行する</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ xwinwrap -ni -fs -s -st -sp -b -nf -- ./myApp -wid WID -fullscreen -width 1024 -height 768</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>同じように動画ファイルをデスクトップで再生できた</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ xwinwrap -ni -fs -s -st -sp -b -nf -- mplayer -wid WID -quiet -loop 0 -fs -shuffle ~/Videos/BGV/*</span><br></pre></td></tr></table></figure>
-
-<p>Web カメラでキャプチャした映像もデスクトップに設定できた</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ xwinwrap -ni -fs -s -st -sp -b -nf -- mplayer  -wid WID tv:// -tv driver=v4l2:width=1024:height=768</span><br></pre></td></tr></table></figure>
-
-
-	
-	</div>
-  <a type="button" href="/2010/09/08/irrlicht/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -509,6 +492,10 @@
       </li>
     
       <li>
+        <a href="/2023/12/03/Fractional-Scaling-on-Wayland/"><i class="fa fa-file-o"></i>Fractional Scaling on Wayland</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/02/Hexo-7-0-freemind/"><i class="fa fa-file-o"></i>Hexo 7.0 + Freemind + Travel</a>
       </li>
     
@@ -538,10 +525,6 @@
     
       <li>
         <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/"><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
-      </li>
-    
-      <li>
-        <a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/"><i class="fa fa-file-o"></i>MiniBook X N100 - WoW Raid ...</a>
       </li>
     
   </ul>
