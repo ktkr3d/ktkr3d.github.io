@@ -184,12 +184,12 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
 <h4 id="Butterflyテーマのインストール"><a href="#Butterflyテーマのインストール" class="headerlink" title="Butterflyテーマのインストール"></a>Butterflyテーマのインストール</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">https://github.com/jerryc127/hexo-theme-butterfly</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br><span class="line"><span class="built_in">cp</span> ./node_modules/hexo-theme-butterfly/_config.yml _config.butterfly.yml</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus</span><br><span class="line"><span class="built_in">cp</span> ./node_modules/hexo-theme-butterfly/_config.yml _config.butterfly.yml</span><br></pre></td></tr></table></figure>
 <div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>今回は<code>git clone</code>ではなくテーマのパッケージを使います。</p>
 </div>
 
 
-<h4 id="プラグインのインストール"><a href="#プラグインのインストール" class="headerlink" title="プラグインのインストール"></a>プラグインのインストール</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<h4 id="プラグインのインストール"><a href="#プラグインのインストール" class="headerlink" title="プラグインのインストール"></a>プラグインのインストール</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed</span><br><span class="line">npm install hexo-generator-searchdb</span><br></pre></td></tr></table></figure>
 
 <h3 id="各種ページの準備"><a href="#各種ページの準備" class="headerlink" title="各種ページの準備"></a>各種ページの準備</h3><h4 id="Tagsページ"><a href="#Tagsページ" class="headerlink" title="Tagsページ"></a>Tagsページ</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo n page &quot;tags&quot;</span><br></pre></td></tr></table></figure>
 <figure class="highlight markdown"><figcaption><span>./source/tags/index.md</span></figcaption><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Tags</span><br><span class="line">type: tags</span><br><span class="line"><span class="section">layout: tags</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
