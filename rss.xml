@@ -374,7 +374,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
 &lt;p&gt;&lt;code&gt;--gtk-version=4&lt;/code&gt;を指定することでIME文字入力できるようになりました。&lt;br&gt;&lt;a href=&quot;https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/&quot;&gt;https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;2023-12-15-更新&quot;&gt;&lt;a href=&quot;#2023-12-15-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;12&amp;#x2F;15 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;12&amp;#x2F;15 更新&lt;/h4&gt;&lt;p&gt;Visual Studio Codeやcode-serverでAltキー押下時にメニューバーにフォーカスしてしまう問題は以下の設定で回避できた。&lt;/p&gt;
+&lt;h4 id=&quot;2023-12-15-更新&quot;&gt;&lt;a href=&quot;#2023-12-15-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;12&amp;#x2F;15 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;12&amp;#x2F;15 更新&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/electron/electron/issues/34211&quot;&gt;https://github.com/electron/electron/issues/34211&lt;/a&gt;&lt;br&gt;Visual Studio Codeやcode-serverでAltキー押下時にメニューバーにフォーカスしてしまう問題は以下の設定で回避できた。&lt;/p&gt;
 &lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;quot;window.customMenuBarAltFocus&amp;quot;: false,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;quot;window.enableMenuBarMnemonics&amp;quot;: false,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;quot;window.menuBarVisibility&amp;quot;: &amp;quot;visible&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
       
       
