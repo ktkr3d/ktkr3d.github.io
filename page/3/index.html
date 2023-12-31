@@ -168,6 +168,79 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2022-10-30 </div>
+			<div class="article-title"><a href="/2022/10/30/WoW-DragonFlight-Addons/">WoW DragonFlight Addons</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt563e16b3504e5808/62545b180afb5024ae74b677/rc-logo-na.png"></p>
+<p>DragonFlight のパッチが適用されたことに伴って、従来のアドオンの更新が活発化しています。<br>現時点のLUIにおいて、一部のクラスの設定が新バージョンに移行されなかったので暫定的に補正をしました。</p>
+<h4 id="追記-2022-12-18"><a href="#追記-2022-12-18" class="headerlink" title="追記: 2022-12-18"></a>追記: 2022-12-18</h4><h5 id="⚙️移行準備"><a href="#⚙️移行準備" class="headerlink" title="⚙️移行準備"></a>⚙️移行準備</h5><ul>
+<li>移行前に既存のLUIのセーブデータファイルを移動(退避)して初期状態にする<br>  <code>C:\Program Files (x86)\World of Warcraft\_retail_\WTF\Account\&lt;Account Name&gt;\SavedVariables\LUI.lua</code></li>
+</ul>
+<h5 id="⚙️カスタマイズ"><a href="#⚙️カスタマイズ" class="headerlink" title="⚙️カスタマイズ"></a>⚙️カスタマイズ</h5><ul>
+<li>設定画面から入力できない項目があるが、以下のファイル内でデフォルト値が定義されている<br>  <code>C:\Program Files (x86)\World of Warcraft\_retail_\Interface\AddOns\LUI\modules\unitframes\unitframes_init.lua</code><br>デフォルト値から値を変更する場合はセーブデータファイルに項目を追記する。<br>  <code>C:\Program Files (x86)\World of Warcraft\_retail_\WTF\Account\&lt;Account Name&gt;\SavedVariables\LUI.lua</code></li>
+<li>player フレームの数値表示書式設定  <figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;player&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;HealthText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	[<span class="string">&quot;PowerText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>target フレームの数値表示書式設定とBuffsの無効化  <figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;target&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;HealthText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	[<span class="string">&quot;PowerText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	[<span class="string">&quot;Aura&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Buffs&quot;</span>] = &#123;</span><br><span class="line">			[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">false</span>,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>raid フレームの名前テキストの色設定  <figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;raid&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;NameText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;ColorByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>party フレームの名前テキストの色設定  <figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;party&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;NameText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;ColorByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="追記-2023-01-01"><a href="#追記-2023-01-01" class="headerlink" title="追記: 2023-01-01"></a>追記: 2023-01-01</h4><ul>
+<li><p>partytarget フレームとpartypet フレームの位置不正対策(暫定)<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ktkr3d/LUI/commit/399617e06a558593139ba7bc3a67b8c67ded6220">https://github.com/ktkr3d/LUI/commit/399617e06a558593139ba7bc3a67b8c67ded6220</a></p>
+</li>
+<li><p>maintank フレームが表示されない対策(暫定)<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ktkr3d/LUI/commit/5bd2bb2d59a18a7cfab1ba0fa292e8896b5e5b32">https://github.com/ktkr3d/LUI/commit/5bd2bb2d59a18a7cfab1ba0fa292e8896b5e5b32</a></p>
+</li>
+</ul>
+<h4 id="追記-2023-01-03"><a href="#追記-2023-01-03" class="headerlink" title="追記: 2023-01-03"></a>追記: 2023-01-03</h4><ul>
+<li>maintank フレームのPadding の設定(PowerBar の高さを追加)  <figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;maintank&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;Padding&quot;</span>] = <span class="number">16</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="追記-2023-01-18"><a href="#追記-2023-01-18" class="headerlink" title="追記: 2023-01-18"></a>追記: 2023-01-18</h4><ul>
+<li>Guild MOTD (Message of the Day) の長さ調整<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ktkr3d/LUI/commit/8059be8c58853271c96820320dbc5d8bde6b6365">https://github.com/ktkr3d/LUI/commit/8059be8c58853271c96820320dbc5d8bde6b6365</a></li>
+</ul>
+	
+	</div>
+  <a type="button" href="/2022/10/30/WoW-DragonFlight-Addons/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2022-10-25 </div>
+			<div class="article-title"><a href="/2022/10/25/code-server-vscode-reveal/">code-server + vscode-reveal</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/vscode-reveal.png"></p>
+<p>code-server とvscode-reveal 拡張を組み合わせて利用してみました。</p>
+<p>vscode-reveal はクライアント毎にポート番号を自動で生成します。ローカルPC上で利用する場合は問題ありませんが、リモートPCから利用する場合はポート番号が毎回変動してしまうため、PC間のポリシー許可設定が変動して面倒です。</p>
+<p>reveal.js 本体はポート番号を指定可能ですが、残念ながらvscode-reveal にはポート番号を指定する設定項目がありませんでした。</p>
+<p>調べたところ、vscode-reveal がlisten を開始する処理内でポート番号を固定に設定することでリモートから同じポート番号でアクセスできるようになりました。なお、ポート番号を1つに固定するため、複数のクライアントに対応できません。1つのクライアントからのアクセスのみが有効です。</p>
+	
+	</div>
+  <a type="button" href="/2022/10/25/code-server-vscode-reveal/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2022-10-22 </div>
 			<div class="article-title"><a href="/2022/10/22/Windows-11-WSL-2-systemd/">Windows 11 - WSL 2 - systemd</a></div>						
 		</h3>
@@ -377,79 +450,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-04-06 </div>
-			<div class="article-title"><a href="/2022/04/06/CHUWI-Hi-10-Go/">CHUWI Hi 10 Go</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/hi10go.png"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.chuwi.com/jp/product/items/Chuwi-Hi10-Go.html">https://www.chuwi.com/jp/product/items/Chuwi-Hi10-Go.html</a></p>
-<p>CHUWI Hi 10 Go + Ubuntu 22.04</p>
-<h4 id="CHUWI-Hi-10-Go-の新旧スペック比較"><a href="#CHUWI-Hi-10-Go-の新旧スペック比較" class="headerlink" title="CHUWI Hi 10 Go の新旧スペック比較"></a>CHUWI Hi 10 Go の新旧スペック比較</h4><p>Hi 10 Go は一つの型式で２つのスペックがあるようです。</p>
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="left">旧 Hi 10 Go</th>
-<th align="left">新Hi 10 Go</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">CPU</td>
-<td align="left">Celoron N4500</td>
-<td align="left">Celeron N5100</td>
-</tr>
-<tr>
-<td align="left">イヤフォンジャック</td>
-<td align="left">あり</td>
-<td align="left">なし</td>
-</tr>
-<tr>
-<td align="left">スタイラス</td>
-<td align="left">対応</td>
-<td align="left">非対応?</td>
-</tr>
-</tbody></table>
-<p>カバーキーボードのファンクションキー修飾配置も若干異なるみたいです。</p>
-	
-	</div>
-  <a type="button" href="/2022/04/06/CHUWI-Hi-10-Go/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2022-03-19 </div>
-			<div class="article-title"><a href="/2022/03/19/Argos-GNOME-42-Support/">Argos GNOME 42 Support</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/argos_gnome42.png" alt="argos_gnome42.png"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ktkr3d/argos">https://github.com/ktkr3d/argos</a><br>GNOME Shell Extension のArgos をGNOME Shell 42 で実行できるようにしてみました。</p>
-	
-	</div>
-  <a type="button" href="/2022/03/19/Argos-GNOME-42-Support/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -499,6 +499,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/12/31/Nuxt3-VOICEVOX/"><i class="fa fa-file-o"></i>Nuxt3 + VOICEVOX</a>
+      </li>
+    
+      <li>
+        <a href="/2023/12/30/Nuxt3-Vue-good-table-next/"><i class="fa fa-file-o"></i>Nuxt3 + Vue-good-table-next</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/09/Hexo-Theme-Butterfly/"><i class="fa fa-file-o"></i>Hexo Theme Butterfly</a>
       </li>
     
@@ -530,14 +538,6 @@
         <a href="/2023/08/25/Hyprland/"><i class="fa fa-file-o"></i>Hyprland</a>
       </li>
     
-      <li>
-        <a href="/2023/08/20/Arch-Linux/"><i class="fa fa-file-o"></i>Arch Linux</a>
-      </li>
-    
-      <li>
-        <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/"><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -545,7 +545,7 @@
 			
 <div class="widget" style="display: none">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/05/23/gnome-tweak-tool-3-0-4-e38292e8a9a6e38197e381a6e381bfe3819f/" title="gnome-tweak-tool 3.0.4 を試してみた" rel="bookmark">gnome-tweak-tool 3.0.4 を試してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/15/Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi/" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/pv/" title="PV 再生っぽいことをしてみた" rel="bookmark">PV 再生っぽいことをしてみた</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/08/10/android-ndk/" title="Android NDK で日本語表示してみた" rel="bookmark">Android NDK で日本語表示してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/02/06/girlfriend-prototype/" title="Girlfriend (prototype)" rel="bookmark">Girlfriend (prototype)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/07/13/debian-slash-renesas-sh4-port-update/" title="Debian/Renesas SH4 port update" rel="bookmark">Debian/Renesas SH4 port update</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2016/03/13/GitBucket/" title="GitBucket" rel="bookmark">GitBucket</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/01/Raspberry-Pi-4/" title="Raspberry Pi 4" rel="bookmark">Raspberry Pi 4</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li></ul>
 </div>
 
 		

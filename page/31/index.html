@@ -168,6 +168,85 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2012-07-06 </div>
+			<div class="article-title"><a href="/2012/07/06/burg-clonezilla-iso/">Burg + Clonezilla ISO</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/burg_clonezilla_iso.png" alt="burg clonezilla iso"></p>
+<p>パーティション&#x2F;ディスククローンツールClonezilla のISO をBurg から起動してみた。ブートローダから直接ISO を指定するので、起動デバイスが不要で楽チン。Clonezilla は日本語表示も選択できるし、バックアップも簡単で速くていいかも。<br>GRUB 1.99 以降と違って、Burg は有効なカーネルのエントリーをすべて表示してしまうので、表示したい起動エントリーについてはGrub Customizer で選択した。</p>
+<ol>
+<li>Clonezilla 用の起動エントリーを追加。</li>
+</ol>
+<figure class="highlight text"><figcaption><span>/etc/burg.d/40_custom</span></figcaption><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">exec tail -n +3 $0</span><br><span class="line"># This file provides an easy way to add custom menu entries.  Simply type the</span><br><span class="line"># menu entries you want to add after this comment.  Be careful not to change</span><br><span class="line"># the &#x27;exec tail&#x27; line above.</span><br><span class="line">menuentry &quot;Android-x86 4.0.3&quot; --class android --class os &#123;</span><br><span class="line">	insmod ext2</span><br><span class="line">	set root=&#x27;(hd0,3)&#x27;</span><br><span class="line">	echo	&#x27;Loading Android-x86 4.0.3 ...&#x27;</span><br><span class="line">	linux /android-4.0-RC1/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/android-4.0-RC1 DATA=</span><br><span class="line">	initrd /android-4.0-RC1/initrd.img</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">menuentry &quot;Clonezilla 20120620&quot; --class iso --class os &#123;</span><br><span class="line">	insmod ext2</span><br><span class="line">	set root=&#x27;(hd0,3)&#x27;</span><br><span class="line">	loopback loop &quot;/Clonezilla/clonezilla-live-20120620-precise.iso&quot; </span><br><span class="line">	linux (loop)/live/vmlinuz boot=live live-config union=aufs nolocales noprompt gfxpayload=800x600x16 ip=frommedia findiso=&quot;/Clonezilla/clonezilla-live-20120620-precise.iso&quot;</span><br><span class="line">	initrd (loop)/live/initrd.img</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ol start="2">
+<li>ISO 用のアイコンが表示されるようにBurg のテーマを修正。</li>
+</ol>
+<figure class="highlight text"><figcaption><span>/boot/burg/themes/fortune/icons/hover</span></figcaption><table><tr><td class="code"><pre><span class="line">+class</span><br><span class="line">&#123;</span><br><span class="line">  -windows &#123; image = &quot;$$/grey_windows.png:$$/large_windows.png&quot; &#125;</span><br><span class="line">  -ubuntu &#123; image = &quot;$$/grey_ubuntu.png:$$/large_ubuntu.png&quot; &#125;</span><br><span class="line">  -debian &#123; image = &quot;$$/grey_debian.png:$$/large_debian.png&quot; &#125;</span><br><span class="line">  -suse &#123; image = &quot;$$/grey_opensuse.png:$$/large_opensuse.png&quot; &#125;</span><br><span class="line">  -freebsd &#123; image = &quot;$$/grey_freebsd.png:$$/large_freebsd.png&quot; &#125;</span><br><span class="line">  -macosx &#123; image = &quot;$$/grey_osx.png:$$/large_osx.png&quot; &#125;</span><br><span class="line">  -gentoo &#123; image = &quot;$$/grey_gentoo.png:$$/large_gentoo.png&quot; &#125;</span><br><span class="line">  -linuxmint &#123; image = &quot;$$/grey_linuxmint.png:$$/large_linuxmint.png&quot; &#125;</span><br><span class="line">  -mandrake &#123; image = &quot;$$/grey_mandrake.png:$$/large_mandrake.png&quot; &#125;</span><br><span class="line">  -arch &#123; image = &quot;$$/grey_arch.png:$$/large_arch.png&quot; &#125;</span><br><span class="line">  -fedora &#123; image = &quot;$$/grey_fedora.png:$$/large_fedora.png&quot; &#125;</span><br><span class="line">  -pclinuxos &#123; image = &quot;$$/grey_pclinuxos.png:$$/large_pclinuxos.png&quot; &#125;</span><br><span class="line">  -sabayon &#123; image = &quot;$$/grey_sabayon.png:$$/large_sabayon.png&quot; &#125;</span><br><span class="line">  -slackware &#123; image = &quot;$$/grey_slackware.png:$$/large_slackware.png&quot; &#125;</span><br><span class="line">  -android &#123; image = &quot;$$/grey_android.png:$$/large_android.png&quot; &#125;</span><br><span class="line">  -iso &#123; image = &quot;$$/grey_iso.png:$$/large_iso.png&quot; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-include &quot;../custom/icon_hover&quot;</span><br></pre></td></tr></table></figure>
+
+
+<ol start="3">
+<li>burg.cfg を更新</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo update-burg</span><br></pre></td></tr></table></figure>
+
+
+<ol start="4">
+<li><p>Grub Customizer で表示したい起動エントリーを選択する。<br>Grub Customizer はBurg が有効である場合に検知して、確認してくるので、Burg を更新するように選択する。</p>
+</li>
+<li><p>設定の確認</p>
+</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo burg-emu -D</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+	
+	</div>
+  <a type="button" href="/2012/07/06/burg-clonezilla-iso/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2012-07-03 </div>
+			<div class="article-title"><a href="/2012/07/03/playing_diablo_3/">Playing Diablo 3</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/playing_a_wizard_in-diablo_3.jpg" alt="playing a wizard in diablo 3"></p>
+<p>Nightmare レベルをすべてWine 上で遊んできてレベル50 になったWizard。Hell レベルでは死にまくりだけど、アカウントはなんとか生きていたみたい。当分はWindows 上で遊ぶのがよいのかな。</p>
+
+	
+	</div>
+  <a type="button" href="/2012/07/03/playing_diablo_3/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2012-06-30 </div>
 			<div class="article-title"><a href="/2012/06/30/irrlicht-1-8-trunk-xeffects/">Irrlicht 1.8 trunk + XEffects</a></div>						
 		</h3>
@@ -520,64 +599,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-05-23 </div>
-			<div class="article-title"><a href="/2012/05/23/ubuntu-12-04-owncloud-4-0/">Ubuntu 12.04 + ownCloud 4.0</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/owncloud_android.png" alt="owncloud android"></p>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://owncloud.org/">http://owncloud.org/</a></p>
-<p>ownCloud 4.0 が公開されたので、Ubuntu 12.04 をサーバにして、LAN 上のUbuntu とAndroid からアクセスしてみた。</p>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.webupd8.org/2011/10/owncloud-2-your-personal-cloud-server.html">http://www.webupd8.org/2011/10/owncloud-2-your-personal-cloud-server.html</a><br>インストール方法はownCloud2 のインストール手順を参考にしてみたら、なんの迷いもなくできた。いつもwebupd8 はわかりやすくて便利だなぁ。日本語化は左下の「設定アイコン」-&gt;「Personal(個人設定)」で「Language(言語)」を「Japanese(日本語)」に設定する。</p>
-<p><a href="/images/uploads/2012/05/owncloud_ubuntu.png"><img src="/images/uploads/2012/05/owncloud_ubuntu.png" alt="owncloud ubuntu chromium"></a></p>
-
-	
-	</div>
-  <a type="button" href="/2012/05/23/ubuntu-12-04-owncloud-4-0/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-05-19 </div>
-			<div class="article-title"><a href="/2012/05/19/wine-diablo-iii/">Wine + Diablo III</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/wine_diablo3.jpg" alt="wine diablo3"></p>
-<p>週末になったので、Diablo III で遊ぼう！</p>
-<p>Ubuntu 12.04 x86_64 + wine-1.5.4 + fglrx 8.960 の環境で遊んでみた。アップデータがうまく終了しなかったので、Windows のドライブをマウントして、インストールしたディレクトリに移動して、以下のコマンドで起動した。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ wine Diablo\ III.exe -launch</span><br></pre></td></tr></table></figure>
-
-<p>たまにサウンドやグラフィックスに不具合があるものの、調子が良い時はWindows 上で動作している時とほとんど変わらない感じ。日本語も特に設定変更なしで入力できた。Z キーでズーム。スクリーンショットを撮る時は、GNOME のPrintScreen キーのショートカットを変更しておく。</p>
-<p>なんとなく、Diablo III はシューティングゲームの要素が取り込まれているような、WoW に似ているような感じがする。弾幕避け、地雷避けとか。初回難しくても、何回かトライするとBOSS や雑魚キャラの攻撃パターンみたいなものがわかってきて、クリアできるようになる。<br>やっとアクトIIIまで到着した。何故か小指がつりそう。</p>
-
-	
-	</div>
-  <a type="button" href="/2012/05/19/wine-diablo-iii/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -627,6 +648,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/12/31/Nuxt3-VOICEVOX/"><i class="fa fa-file-o"></i>Nuxt3 + VOICEVOX</a>
+      </li>
+    
+      <li>
+        <a href="/2023/12/30/Nuxt3-Vue-good-table-next/"><i class="fa fa-file-o"></i>Nuxt3 + Vue-good-table-next</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/09/Hexo-Theme-Butterfly/"><i class="fa fa-file-o"></i>Hexo Theme Butterfly</a>
       </li>
     
@@ -658,14 +687,6 @@
         <a href="/2023/08/25/Hyprland/"><i class="fa fa-file-o"></i>Hyprland</a>
       </li>
     
-      <li>
-        <a href="/2023/08/20/Arch-Linux/"><i class="fa fa-file-o"></i>Arch Linux</a>
-      </li>
-    
-      <li>
-        <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/"><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -673,7 +694,7 @@
 			
 <div class="widget" style="display: none">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/05/23/gnome-tweak-tool-3-0-4-e38292e8a9a6e38197e381a6e381bfe3819f/" title="gnome-tweak-tool 3.0.4 を試してみた" rel="bookmark">gnome-tweak-tool 3.0.4 を試してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/15/Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi/" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/pv/" title="PV 再生っぽいことをしてみた" rel="bookmark">PV 再生っぽいことをしてみた</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/08/10/android-ndk/" title="Android NDK で日本語表示してみた" rel="bookmark">Android NDK で日本語表示してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/02/06/girlfriend-prototype/" title="Girlfriend (prototype)" rel="bookmark">Girlfriend (prototype)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/07/13/debian-slash-renesas-sh4-port-update/" title="Debian/Renesas SH4 port update" rel="bookmark">Debian/Renesas SH4 port update</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2016/03/13/GitBucket/" title="GitBucket" rel="bookmark">GitBucket</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/01/Raspberry-Pi-4/" title="Raspberry Pi 4" rel="bookmark">Raspberry Pi 4</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li></ul>
 </div>
 
 		

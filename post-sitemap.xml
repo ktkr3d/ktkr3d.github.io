@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2023/12/31/Nuxt3-VOICEVOX/</loc>
+        <lastmod>2023-12-31T05:49:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/</loc>
+        <lastmod>2023-12-30T12:24:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/</loc>
         <lastmod>2023-12-09T04:00:38.000Z</lastmod>
         <changefreq>weekly</changefreq>

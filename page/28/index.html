@@ -168,6 +168,116 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2013-02-19 </div>
+			<div class="article-title"><a href="/2013/02/19/gitg-and-geanyvc/">Gitg and GeanyVC</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/gitg_without_overlay_scroll_bar.png" alt="gitg without overlay scroll bar"></p>
+<p>Ubuntu 13.04 + GNOME Shell 3.7.5 で、Git クライアントを試してみました。</p>
+<ul>
+<li><p>Git クライアント一覧<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Graphical_Interfaces">https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Graphical_Interfaces</a></p>
+</li>
+<li><p>Git クライアント機能比較<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Summary_.28feature_matrix.29">https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Summary_.28feature_matrix.29</a></p>
+</li>
+</ul>
+<h3 id="gitg"><a href="#gitg" class="headerlink" title="gitg"></a>gitg</h3><p>プッシュもできて使いやすそうです。日本語のpo を公開されている方がいらっしゃいましたので、利用させていただきました。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install gitg</span><br><span class="line">$ wget https://raw.github.com/miyucy/gitg-ja/master/ja.po</span><br><span class="line">$ sed -e <span class="string">&quot;s/, fuzzy//&quot;</span> ja.po | grep -v <span class="string">&quot;^#$&quot;</span> &gt; ja.po.cf</span><br><span class="line">$ msgfmt -o gitg.mo ja.po.cf</span><br><span class="line">$ sudo <span class="built_in">cp</span> gitg.mo /usr/share/locale/ja/LC_MESSAGES/</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://sourceforge.jp/projects/freshmeat_gitg/howto/usage">http://sourceforge.jp/projects/freshmeat_gitg/howto/usage</a></p>
+<ul>
+<li><p>プッシュ<br>ローカルブランチのアイコン(オレンジ色)を右クリックして、[ブランチをプッシュ]サブメニューから選択します。</p>
+</li>
+<li><p>プル<br>[ファイル]-[Repository Properties]でリモートのURL を選んで[フェッチ]、[ブランチ]ドロップダウンリストを変更してリモートブランチを表示、リモートブランチのアイコンをローカルのブランチのアイコンにドラッグ、[マージ]を選択します。</p>
+</li>
+</ul>
+<p>ただし、オーバーレイスクロールバーが有効になっていると、各ペインの背景色が黒くなってしまうようです。オーバーレイスクロールバーを無効にしておきます。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="built_in">export</span> LIBOVERLAY_SCROLLBAR=0 &gt;&gt; ~/.xprofile</span><br></pre></td></tr></table></figure>
+
+<p>&#x2F;usr&#x2F;share&#x2F;gitg&#x2F;ui&#x2F;gitg-window.ui をカスタマイズすれば対処できるのかもしれませんが、よくわかりませんでした。</p>
+<h3 id="GeanyVC"><a href="#GeanyVC" class="headerlink" title="GeanyVC"></a>GeanyVC</h3><p>私はテキストエディタにGeany を利用しているので、コミットならGeanyVC プラグインが利用できます。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install geany-plugin-vc</span><br></pre></td></tr></table></figure>
+
+<p>インストールしたら、Geany の[ツール]-[プラグインマネージャ]でGeanyVC プラグインを有効にした後で、[ツール]-[VC]メニューから操作します。</p>
+<h3 id="RabbitVCS"><a href="#RabbitVCS" class="headerlink" title="RabbitVCS"></a>RabbitVCS</h3><p>Ubuntu 13.04 のリポジトリにはパッケージがなく、12.10 のパッケージもNautilus のバージョンが新しいため(?)にうまく動きませんでした。</p>
+
+	
+	</div>
+  <a type="button" href="/2013/02/19/gitg-and-geanyvc/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2013-02-10 </div>
+			<div class="article-title"><a href="/2013/02/10/appjs/">AppJS</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/images/appjs.png" alt="AppJS Node.js"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="http://appjs.org/">http://appjs.org/</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/appjs/appjs">https://github.com/appjs/appjs</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/appjs/appjs/wiki">https://github.com/appjs/appjs/wiki</a></p>
+<p>Node.js アプリをコマンドラインからデスクトップアプリとして実行するAppJS を試してみました。HTML, CSS, JavaScript でアプリケーションが実装できて、Windows, Mac(32bit のみ), Linux(x86&#x2F;x86_64) に対応しています。Unity のグローバルメニューにも対応していました。Node.js のバージョンはv0.8 系が良いようです。Linux x86_64 の環境でv0.9.9 ではうまく動作しませんでした。</p>
+<ol>
+<li>Node.js v0.8.19 のインストール</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">$ nvm install v0.8.19</span><br></pre></td></tr></table></figure>
+
+
+
+
+<ol start="2">
+<li>AppJS のインストール</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">$ nvm use v0.8.19</span><br><span class="line">$ npm install -g appjs</span><br></pre></td></tr></table></figure>
+
+
+
+
+<ol start="3">
+<li>アプリケーションの準備</li>
+</ol>
+<figure class="highlight javascript"><figcaption><span>~/appjs/app.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// load appjs</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> appjs = <span class="built_in">require</span>(<span class="string">&#x27;appjs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// serve static files from a directory</span></span><br><span class="line">appjs.<span class="title function_">serveFilesFrom</span>(__dirname + <span class="string">&#x27;/content&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// handle requests from the browser</span></span><br><span class="line">appjs.<span class="property">router</span>.<span class="title function_">post</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span>(<span class="params">request, response, next</span>)&#123;</span><br><span class="line">  response.<span class="title function_">send</span>(<span class="string">&#x27;Hey! How are you &#x27;</span> + request.<span class="title function_">post</span>(<span class="string">&#x27;firstname&#x27;</span>));</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// create a window</span></span><br><span class="line"><span class="keyword">var</span> <span class="variable language_">window</span> = appjs.<span class="title function_">createWindow</span>(&#123;</span><br><span class="line">  <span class="attr">width</span>: <span class="number">640</span>,</span><br><span class="line">  <span class="attr">height</span>: <span class="number">460</span>,</span><br><span class="line">  <span class="attr">alpha</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// prepare the window when first created</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">on</span>(<span class="string">&#x27;create&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Window Created&quot;</span>);</span><br><span class="line">  <span class="comment">// window.frame controls the desktop window</span></span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">frame</span>.<span class="title function_">show</span>().<span class="title function_">center</span>();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// the window is ready when the DOM is loaded</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">on</span>(<span class="string">&#x27;ready&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Window Ready&quot;</span>);</span><br><span class="line">  <span class="comment">// directly interact with the DOM</span></span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">process</span> = process;</span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">module</span> = <span class="variable language_">module</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;keydown&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">    <span class="comment">// show chrome devtools on f12 or commmand+option+j</span></span><br><span class="line">    <span class="keyword">if</span> (e.<span class="property">keyIdentifier</span> === <span class="string">&#x27;F12&#x27;</span> || e.<span class="property">keyCode</span> === <span class="number">74</span> &amp;&amp; e.<span class="property">metaKey</span> &amp;&amp; e.<span class="property">altKey</span>) &#123;</span><br><span class="line">      <span class="variable language_">window</span>.<span class="property">frame</span>.<span class="title function_">openDevTools</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// cleanup code when window is closed</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">on</span>(<span class="string">&#x27;close&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Window Closed&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><figcaption><span>~/appjs/content/index.html</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;firstname&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;Firstname&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;lastname&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;Lastname&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<ol start="4">
+<li>実行</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</span><br><span class="line">$ nvm use v0.8.19</span><br><span class="line">$ <span class="built_in">export</span> NODE_PATH=<span class="variable">$&#123;NVM_PATH&#125;</span>_modules</span><br><span class="line">$ <span class="built_in">cd</span> ~/appjs/</span><br><span class="line">$ node --harmony app.js</span><br></pre></td></tr></table></figure>
+
+
+<p>サンプルでは、[F12]キーにwindow.frame.openDevTools() をアサインしていて、キー押下により開発ツールウィンドウが開くようになっています。<br><a href="/images/uploads/2013/02/node_devtool.png"><img src="/images/uploads/2013/02/node_devtool-600x470.png" alt="Node.js devtool"></a></p>
+<p><strong>EDIT:</strong></p>
+<h3 id="サンプルのカスタマイズ"><a href="#サンプルのカスタマイズ" class="headerlink" title="サンプルのカスタマイズ"></a>サンプルのカスタマイズ</h3><p>HelloWorld サンプルをカスタマイズしてみました。日本語表示、メニュー構成の変更、ファイルオープンダイアログ、lame&#x2F;speaker パッケージを使ったMP3 の再生など。<br><a href="/images/uploads/2013/02/hello_world_appjs.png"><img src="/images/uploads/2013/02/hello_world_appjs-600x457.png" alt="hello world appjs"></a><br><a href="/images/uploads/2013/02/mp3player_js.png"><img src="/images/uploads/2013/02/mp3player_js.png" alt="mp3 player node.js"></a></p>
+
+	
+	</div>
+  <a type="button" href="/2013/02/10/appjs/#more" class="btn btn-default more">Read More</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2013-02-10 </div>
 			<div class="article-title"><a href="/2013/02/10/scrumblr/">scrumblr</a></div>						
 		</h3>
@@ -539,141 +649,6 @@
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-12-26 </div>
-			<div class="article-title"><a href="/2012/12/26/android-x86-4-2-1/">Android-x86 4.2.1</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p><img src="/images/android-x86_4.2.1.png" alt="android-x86 4.2.1"></p>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://code.google.com/p/android-x86/downloads/detail?name=android-x86-4.2-20121225.iso">http://code.google.com/p/android-x86/downloads/detail?name=android-x86-4.2-20121225.iso</a></p>
-<p>Android-x86 4.2.1 が公開されたのでInspiron Duo にインストールして、Windows 8 64bit やUbuntu 12.10 x86_64 とのマルチブート環境を構築してみました。Android-x86 4.2 では過去の問題が改善されていることを確認できました。ファーストリリースだけあって、まだ動かない&#x2F;動作が不安定になるアプリがあるみたい。方向キー二度押ししても画面が回転しなくなったみたい。</p>
-<h3 id="改善された過去の問題"><a href="#改善された過去の問題" class="headerlink" title="改善された過去の問題"></a>改善された過去の問題</h3><ul>
-<li><p>物理&#x2F;仮想キーボードの切り替え、キーマップの改善</p>
-</li>
-<li><p>更新がおかしかった時計の改善</p>
-</li>
-<li><p>電源ボタン二度押ししなくても電源メニュー表示</p>
-</li>
-</ul>
-<h3 id="Google-Play-からインストールしたアプリ"><a href="#Google-Play-からインストールしたアプリ" class="headerlink" title="Google Play からインストールしたアプリ"></a>Google Play からインストールしたアプリ</h3><ul>
-<li><p>ES ファイルエクスプローラ</p>
-</li>
-<li><p>Google ドライブ</p>
-</li>
-<li><p>VLC</p>
-</li>
-<li><p>XiiaLive</p>
-</li>
-<li><p>Seesmic</p>
-</li>
-</ul>
-<h3 id="自前でビルドしたアプリ"><a href="#自前でビルドしたアプリ" class="headerlink" title="自前でビルドしたアプリ"></a>自前でビルドしたアプリ</h3><ul>
-<li>Fennec (Firefox) 19.0</li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2012/12/26/android-x86-4-2-1/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2012-12-08 </div>
-			<div class="article-title"><a href="/2012/12/08/thunderbird-gmail-google-calendar-google-tasks/">Thunderbird + GMail + Google Calendar + Google Tasks</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<p>Thunderbird とGoogle のメール、カレンダー、TODO を同期してみました。</p>
-<h3 id="Thunderbird-のインストール"><a href="#Thunderbird-のインストール" class="headerlink" title="Thunderbird のインストール"></a>Thunderbird のインストール</h3><p>thunderbird をインストールします。</p>
-<h3 id="Thunderbird-アドオンのインストール"><a href="#Thunderbird-アドオンのインストール" class="headerlink" title="Thunderbird アドオンのインストール"></a>Thunderbird アドオンのインストール</h3><p>Thunderbirdで、<br>[アドオン]メニューから下記のアドオンを検索してインストールします。</p>
-<ul>
-<li><p>Lightning<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://addons.mozilla.org/ja/thunderbird/addon/lightning/">https://addons.mozilla.org/ja/thunderbird/addon/lightning/</a></p>
-</li>
-<li><p>Provider for Google Calendar<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://addons.mozilla.org/ja/thunderbird/addon/provider-for-google-calendar/">https://addons.mozilla.org/ja/thunderbird/addon/provider-for-google-calendar/</a></p>
-</li>
-<li><p>Google Tasks Sync<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://addons.mozilla.org/ja/thunderbird/addon/google-tasks-sync/">https://addons.mozilla.org/ja/thunderbird/addon/google-tasks-sync/</a></p>
-</li>
-<li><p>Google Contacts<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://addons.mozilla.org/ja/thunderbird/addon/google-contacts/">https://addons.mozilla.org/ja/thunderbird/addon/google-contacts/</a></p>
-</li>
-</ul>
-<h3 id="メールアカウントの設定"><a href="#メールアカウントの設定" class="headerlink" title="メールアカウントの設定"></a>メールアカウントの設定</h3><p>Thunderbird で、</p>
-<ol>
-<li><p>[新規作成]-[既存のメールアカウント…]メニューを選択</p>
-</li>
-<li><p>Google のアカウント情報を指定</p>
-</li>
-</ol>
-<h3 id="Google-カレンダーのアドレスの取得"><a href="#Google-カレンダーのアドレスの取得" class="headerlink" title="Google カレンダーのアドレスの取得"></a>Google カレンダーのアドレスの取得</h3><p>Google カレンダーで、</p>
-<ol>
-<li><p>[設定]メニューを選択</p>
-</li>
-<li><p>[カレンダー]タブをクリック</p>
-</li>
-<li><p>[このカレンダーを共有]リンクをクリック</p>
-</li>
-<li><p>[カレンダーの情報]タブをクリック</p>
-</li>
-<li><p>カレンダーのアドレスの[XML]リンクを右クリックして[リンクのURLをコピー]</p>
-</li>
-</ol>
-<h3 id="カレンダーの同期設定"><a href="#カレンダーの同期設定" class="headerlink" title="カレンダーの同期設定"></a>カレンダーの同期設定</h3><p>Thunderbird で、</p>
-<ol>
-<li>[新規作成]-[カレンダー…]メニューを選択</li>
-</ol>
-<pre><code>* カレンダーの保存先: ネットワークのサーバに保存する
-
-
-* フォーマット: Google カレンダー
-
-
-* 場所: 上記手順で取得したGoogle カレンダーのアドレス
-
-
-* オフラインサポート: チェック
-
-
-* パスワードマネージャにこのパスワードを保存する。: チェック
-
-
-* カレンダー名を設定
-</code></pre>
-<h3 id="TODO-の同期設定"><a href="#TODO-の同期設定" class="headerlink" title="TODO の同期設定"></a>TODO の同期設定</h3><p>Thunderbird で、</p>
-<ol>
-<li><p>右下ペインの「Google Tasks Sync」の「Click here to get started.」をクリック</p>
-</li>
-<li><p>アカウント情報を指定してログイン</p>
-</li>
-<li><p>[アクセスを許可]をクリック</p>
-</li>
-</ol>
-
-	
-	</div>
-  <a type="button" href="/2012/12/08/thunderbird-gmail-google-calendar-google-tasks/#more" class="btn btn-default more">Read More</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -723,6 +698,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2023/12/31/Nuxt3-VOICEVOX/"><i class="fa fa-file-o"></i>Nuxt3 + VOICEVOX</a>
+      </li>
+    
+      <li>
+        <a href="/2023/12/30/Nuxt3-Vue-good-table-next/"><i class="fa fa-file-o"></i>Nuxt3 + Vue-good-table-next</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/09/Hexo-Theme-Butterfly/"><i class="fa fa-file-o"></i>Hexo Theme Butterfly</a>
       </li>
     
@@ -754,14 +737,6 @@
         <a href="/2023/08/25/Hyprland/"><i class="fa fa-file-o"></i>Hyprland</a>
       </li>
     
-      <li>
-        <a href="/2023/08/20/Arch-Linux/"><i class="fa fa-file-o"></i>Arch Linux</a>
-      </li>
-    
-      <li>
-        <a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/"><i class="fa fa-file-o"></i>Minecraft on MiniBook X N100</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -769,7 +744,7 @@
 			
 <div class="widget" style="display: none">
   <h4>人気の記事</h4>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/05/23/gnome-tweak-tool-3-0-4-e38292e8a9a6e38197e381a6e381bfe3819f/" title="gnome-tweak-tool 3.0.4 を試してみた" rel="bookmark">gnome-tweak-tool 3.0.4 を試してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/15/Visual-Studio-Code-Remote-Development-over-SSH-to-a-Raspberry-Pi/" title="Visual Studio Code Remote Development でRaspberry Pi に接続" rel="bookmark">Visual Studio Code Remote Development でRaspberry Pi に接続</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_1/" title="環境設定画面みたいなのを作ってみた" rel="bookmark">環境設定画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/post_2/" title="潜入してみた" rel="bookmark">潜入してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/13/pv/" title="PV 再生っぽいことをしてみた" rel="bookmark">PV 再生っぽいことをしてみた</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2011/08/10/android-ndk/" title="Android NDK で日本語表示してみた" rel="bookmark">Android NDK で日本語表示してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/02/06/girlfriend-prototype/" title="Girlfriend (prototype)" rel="bookmark">Girlfriend (prototype)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2014/07/13/debian-slash-renesas-sh4-port-update/" title="Debian/Renesas SH4 port update" rel="bookmark">Debian/Renesas SH4 port update</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2016/03/13/GitBucket/" title="GitBucket" rel="bookmark">GitBucket</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/07/01/Raspberry-Pi-4/" title="Raspberry Pi 4" rel="bookmark">Raspberry Pi 4</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrlicht_irc_twitter_demo/" title="Irrlicht IRC & Twitter" rel="bookmark">Irrlicht IRC & Twitter</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/11/irrmmd/" title="irrmmd で遊んでみた" rel="bookmark">irrmmd で遊んでみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrlicht_ctheoraplayer/" title="Irrlicht + CTheoraPlayer で動画を再生してみた" rel="bookmark">Irrlicht + CTheoraPlayer で動画を再生してみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/irrwizard/" title="IrrWizard で作られたゲームを動かしてみた" rel="bookmark">IrrWizard で作られたゲームを動かしてみた</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2010/07/12/post/" title="キャラ選択画面みたいなのを作ってみた" rel="bookmark">キャラ選択画面みたいなのを作ってみた</a></h3></div></li></ul>
 </div>
 
 		
