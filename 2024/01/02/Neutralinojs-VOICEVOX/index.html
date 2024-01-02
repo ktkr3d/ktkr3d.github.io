@@ -203,7 +203,7 @@
 </ul>
 <h3 id="ビルド"><a href="#ビルド" class="headerlink" title="ビルド"></a>ビルド</h3><h4 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h4><ul>
 <li>Windows 環境でビルドする場合は以下を対策する (2022-07-12の記事)<br><a href="https://ktkr3d.github.io/2022/07/12/Neutralinojs-Nuxt3/#Windows-%E7%92%B0%E5%A2%83%E3%81%A7%E3%81%AEneu-build-%E5%A4%B1%E6%95%97%E5%AF%BE%E7%AD%96">https://ktkr3d.github.io/2022/07/12/Neutralinojs-Nuxt3/#Windows-環境でのneu-build-失敗対策</a></li>
-<li>アプリケーションクローズボタンを押してもクローズしない<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/neutralinojs/neutralinojs/issues/618">https://github.com/neutralinojs/neutralinojs/issues/618</a><br>上記が反映されていないのかな。別件かな。</li>
+<li>アプリケーションクローズボタンを押してもクローズしない<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/neutralinojs/neutralinojs/issues/618">https://github.com/neutralinojs/neutralinojs/issues/618</a><br>アプリケーションが終了するまで数秒待つ必要があります。</li>
 </ul>
 <h4 id="ビルド手順"><a href="#ビルド手順" class="headerlink" title="ビルド手順"></a>ビルド手順</h4><ul>
 <li>コマンド<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd neutralinojs-nuxt3-veutify3</span><br><span class="line">cd src; npm run generate; cd ..; neu build; neu update</span><br></pre></td></tr></table></figure></li>
@@ -219,12 +219,14 @@
 <img src="/images/neutrianojs_voicevox.png"></li>
 </ul>
 <h4 id="Ubuntuの場合"><a href="#Ubuntuの場合" class="headerlink" title="Ubuntuの場合"></a>Ubuntuの場合</h4><ul>
+<li>docker版VOICEVOXを実行<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hub.docker.com/r/voicevox/voicevox_engine">https://hub.docker.com/r/voicevox/voicevox_engine</a></li>
 <li>libweblit2gtk-4.0.37<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install libwebkit2gtk-4.0-37</span><br></pre></td></tr></table></figure></li>
 <li>実行権限付与</li>
 <li>実行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./neutralinojs-nuxt3-veutify3-linux_x64</span><br></pre></td></tr></table></figure>
 <img src="/images/neutralinojs_voicevox_ubuntu.png"></li>
 </ul>
 <h4 id="Arch-Linuxの場合"><a href="#Arch-Linuxの場合" class="headerlink" title="Arch Linuxの場合"></a>Arch Linuxの場合</h4><ul>
+<li>docker版VOICEVOXを実行<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hub.docker.com/r/voicevox/voicevox_engine">https://hub.docker.com/r/voicevox/voicevox_engine</a></li>
 <li>実行権限付与</li>
 <li>実行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./neutralinojs-nuxt3-veutify3-linux_x64</span><br></pre></td></tr></table></figure>
 <img src="/images/neutralinojs_voicevox_archlinux.png"></li>
