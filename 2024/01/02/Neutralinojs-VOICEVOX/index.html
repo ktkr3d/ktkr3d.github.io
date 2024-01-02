@@ -184,7 +184,7 @@
 <li>Arch Linux</li>
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="プロジェクトフォルダ構成"><a href="#プロジェクトフォルダ構成" class="headerlink" title="プロジェクトフォルダ構成"></a>プロジェクトフォルダ構成</h4><ul>
-<li>フォルダ階層と主なファイル<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">neutralinojs-nuxt3-veutify3/</span><br><span class="line">  bin/                      # Neutrianojsから提供される各OSのローダ</span><br><span class="line">  dist/                     # Neutrianojsプロジェクトのビルド結果</span><br><span class="line">  src/                      # Nuxt プロジェクト</span><br><span class="line">    components/</span><br><span class="line">      SideBar.vue           # アプリケーションのサイドバー</span><br><span class="line">    layouts/</span><br><span class="line">      default.vue</span><br><span class="line">    pages/</span><br><span class="line">      index.vue             # トップページ</span><br><span class="line">      voicevox.vue          # VOICEVOXのページ</span><br><span class="line">    plugins/</span><br><span class="line">      veutify.ts</span><br><span class="line">    nuxtconfig.ts           # Nuxt プロジェクトの設定</span><br><span class="line">  www/                      # resouceのままでよかったかも</span><br><span class="line">    appIcon.png</span><br><span class="line">  neutralinojs.config.json  # Neutralinojs プロジェクトの設定</span><br></pre></td></tr></table></figure></li>
+<li>フォルダ階層と主なファイル<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">neutralinojs-nuxt3-veutify3/</span><br><span class="line">  bin/                      # Neutrianojsから提供される各OSのローダ</span><br><span class="line">  dist/                     # Neutrianojsプロジェクトのビルド結果</span><br><span class="line">  src/                      # Nuxt プロジェクト</span><br><span class="line">    components/</span><br><span class="line">      SideBar.vue           # アプリケーションのサイドバー</span><br><span class="line">    layouts/</span><br><span class="line">      default.vue</span><br><span class="line">    pages/</span><br><span class="line">      index.vue             # トップページ</span><br><span class="line">      voicevox.vue          # VOICEVOXのページ</span><br><span class="line">    plugins/</span><br><span class="line">      veutify.ts</span><br><span class="line">    nuxtconfig.ts           # Nuxt プロジェクトの設定</span><br><span class="line">  www/                      # resources のままでよかったかも</span><br><span class="line">    appIcon.png</span><br><span class="line">  neutralinojs.config.json  # Neutralinojs プロジェクトの設定</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="Neutralinojs"><a href="#Neutralinojs" class="headerlink" title="Neutralinojs"></a>Neutralinojs</h4><ul>
 <li>Neutralinojs インストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g @neutralinojs/neu</span><br></pre></td></tr></table></figure></li>
@@ -203,7 +203,8 @@
 </ul>
 <h3 id="ビルド"><a href="#ビルド" class="headerlink" title="ビルド"></a>ビルド</h3><h4 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h4><ul>
 <li>Windows 環境でビルドする場合は以下を対策する (2022-07-12の記事)<br><a href="https://ktkr3d.github.io/2022/07/12/Neutralinojs-Nuxt3/#Windows-%E7%92%B0%E5%A2%83%E3%81%A7%E3%81%AEneu-build-%E5%A4%B1%E6%95%97%E5%AF%BE%E7%AD%96">https://ktkr3d.github.io/2022/07/12/Neutralinojs-Nuxt3/#Windows-環境でのneu-build-失敗対策</a></li>
-<li>アプリケーションクローズボタンを押してもクローズしない<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/neutralinojs/neutralinojs/issues/618">https://github.com/neutralinojs/neutralinojs/issues/618</a><br>アプリケーションが終了するまで数秒待つ必要があります。</li>
+<li>Windows 環境でクローズボタンを押してもすぐに終了しない<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/neutralinojs/neutralinojs/issues/618">https://github.com/neutralinojs/neutralinojs/issues/618</a><br>アプリケーションが終了するまで10秒くらい待つ必要があります。</li>
+<li>Linux環境でダウンロードボタンが機能しない。後で調べる。</li>
 </ul>
 <h4 id="ビルド手順"><a href="#ビルド手順" class="headerlink" title="ビルド手順"></a>ビルド手順</h4><ul>
 <li>コマンド<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd neutralinojs-nuxt3-veutify3</span><br><span class="line">cd src; npm run generate; cd ..; neu build; neu update</span><br></pre></td></tr></table></figure></li>
@@ -214,13 +215,14 @@
 <li><code>resources.neu</code>ファイルがプログラム。Veutifyを使う前は1MB未満で、Veutifyを使うほどサイズが大きくなった。</li>
 </ul>
 <h3 id="実行の準備"><a href="#実行の準備" class="headerlink" title="実行の準備"></a>実行の準備</h3><h4 id="Windowsの場合"><a href="#Windowsの場合" class="headerlink" title="Windowsの場合"></a>Windowsの場合</h4><ul>
-<li>管理者モードのコマンドプロンプトで以下を実行<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/neutralinojs/v2-specification/blob/main/webview.md">https://github.com/neutralinojs/v2-specification/blob/main/webview.md</a><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation.exe LoopbackExempt -a -n=&quot;Microsoft.Win32WebViewHost_cw5n1h2txyewy&quot;</span><br></pre></td></tr></table></figure></li>
+<li>管理者モードのコマンドプロンプトで以下を実行しておく<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/neutralinojs/v2-specification/blob/main/webview.md">https://github.com/neutralinojs/v2-specification/blob/main/webview.md</a><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation.exe LoopbackExempt -a -n=&quot;Microsoft.Win32WebViewHost_cw5n1h2txyewy&quot;</span><br></pre></td></tr></table></figure></li>
+<li>VOICEVOXを起動しておく</li>
 <li>実行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">neutralinojs-nuxt3-veutify3-win_x64.exe</span><br></pre></td></tr></table></figure>
 <img src="/images/neutrianojs_voicevox.png"></li>
 </ul>
 <h4 id="Ubuntuの場合"><a href="#Ubuntuの場合" class="headerlink" title="Ubuntuの場合"></a>Ubuntuの場合</h4><ul>
 <li>docker版VOICEVOXを実行<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hub.docker.com/r/voicevox/voicevox_engine">https://hub.docker.com/r/voicevox/voicevox_engine</a></li>
-<li>libweblit2gtk-4.0.37<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install libwebkit2gtk-4.0-37</span><br></pre></td></tr></table></figure></li>
+<li>ライブラリ<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install libwebkit2gtk-4.0-37</span><br><span class="line">sudo apt install gstreamer1.0-plugins-bad</span><br></pre></td></tr></table></figure></li>
 <li>実行権限付与</li>
 <li>実行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./neutralinojs-nuxt3-veutify3-linux_x64</span><br></pre></td></tr></table></figure>
 <img src="/images/neutralinojs_voicevox_ubuntu.png"></li>
