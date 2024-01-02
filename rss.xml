@@ -15,8 +15,35 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 31 Dec 2023 05:49:50 GMT</pubDate>
+    <pubDate>Tue, 02 Jan 2024 11:29:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Neutralinojs + VOICEVOX</title>
+      <link>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/</link>
+      <guid>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/</guid>
+      <pubDate>Tue, 02 Jan 2024 11:29:17 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/neutrianojs_voicevox.png&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/vue/">vue</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/nux/">nux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/veutify/">veutify</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/neutrianojs/">neutrianojs</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/voicevox/">voicevox</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Nuxt3 + VOICEVOX</title>
@@ -540,26 +567,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/02/27/code-server-with-SSL/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>WoW Addon - LoggingChat</title>
-      <link>https://ktkr3d.github.io/2022/11/25/WoW-Addon-LoggingChat/</link>
-      <guid>https://ktkr3d.github.io/2022/11/25/WoW-Addon-LoggingChat/</guid>
-      <pubDate>Thu, 24 Nov 2022 23:13:35 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/wow_loggingchat.jpg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/LoggingChat&quot;&gt;https://github.com/ktkr3d/LoggingChat&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;World of Warcraft でチャット表示内容をファイルにロギングするアドオンを作ってみました。&lt;br&gt;処理はログイン時にチャットの保存設定を有効にしているだけです。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2022/11/25/WoW-Addon-LoggingChat/#disqus_thread</comments>
       
     </item>
     

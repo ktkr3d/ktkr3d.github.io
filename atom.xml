@@ -6,7 +6,7 @@
   <link href="https://ktkr3d.github.io/atom.xml" rel="self"/>
   
   <link href="https://ktkr3d.github.io/"/>
-  <updated>2023-12-31T05:49:50.000Z</updated>
+  <updated>2024-01-02T11:29:17.000Z</updated>
   <id>https://ktkr3d.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Neutralinojs + VOICEVOX</title>
+    <link href="https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/"/>
+    <id>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/</id>
+    <published>2024-01-02T11:29:17.000Z</published>
+    <updated>2024-01-02T11:29:17.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutrianojs_voicevox.png&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="vue" scheme="https://ktkr3d.github.io/tags/vue/"/>
+    
+    <category term="nux" scheme="https://ktkr3d.github.io/tags/nux/"/>
+    
+    <category term="veutify" scheme="https://ktkr3d.github.io/tags/veutify/"/>
+    
+    <category term="neutrianojs" scheme="https://ktkr3d.github.io/tags/neutrianojs/"/>
+    
+    <category term="voicevox" scheme="https://ktkr3d.github.io/tags/voicevox/"/>
+    
+  </entry>
   
   <entry>
     <title>Nuxt3 + VOICEVOX</title>
@@ -500,24 +525,6 @@
     
     
     <category term="code-server" scheme="https://ktkr3d.github.io/tags/code-server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WoW Addon - LoggingChat</title>
-    <link href="https://ktkr3d.github.io/2022/11/25/WoW-Addon-LoggingChat/"/>
-    <id>https://ktkr3d.github.io/2022/11/25/WoW-Addon-LoggingChat/</id>
-    <published>2022-11-24T23:13:35.000Z</published>
-    <updated>2022-11-24T23:13:35.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/wow_loggingchat.jpg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/LoggingChat&quot;&gt;https://github.com/ktkr3d/LoggingChat&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;World of Warcraft でチャット表示内容をファイルにロギングするアドオンを作ってみました。&lt;br&gt;処理はログイン時にチャットの保存設定を有効にしているだけです。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="wow" scheme="https://ktkr3d.github.io/tags/wow/"/>
     
   </entry>
   
