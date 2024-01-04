@@ -24,20 +24,17 @@
     <updated>2024-01-02T11:29:17.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_voicevox_windows.png&quot;&gt;&lt;br&gt;Nuxt3で作ったVOICEVOXのフロントエンドアプリをクロスプラットフォームなネイティブアプリケーションにしてみました。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_voicevox_windows.png&quot;&gt;&lt;br&gt;Nuxt3で作ったVOICEVOXのフロントエンドアプリをクロスプラットフォームなネイティブアプリケーションにしてみました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3-voicevox&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3-voicevox&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
     
-    <category term="vue" scheme="https://ktkr3d.github.io/tags/vue/"/>
-    
-    <category term="nux" scheme="https://ktkr3d.github.io/tags/nux/"/>
-    
-    <category term="veutify" scheme="https://ktkr3d.github.io/tags/veutify/"/>
-    
-    <category term="neutrianojs" scheme="https://ktkr3d.github.io/tags/neutrianojs/"/>
+    <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
     
     <category term="voicevox" scheme="https://ktkr3d.github.io/tags/voicevox/"/>
+    
+    <category term="neutrianojs" scheme="https://ktkr3d.github.io/tags/neutrianojs/"/>
     
   </entry>
   
@@ -55,9 +52,9 @@
     
     
     
-    <category term="nuxt3" scheme="https://ktkr3d.github.io/tags/nuxt3/"/>
+    <category term="nuxt" scheme="https://ktkr3d.github.io/tags/nuxt/"/>
     
-    <category term="voicebox" scheme="https://ktkr3d.github.io/tags/voicebox/"/>
+    <category term="voicevox" scheme="https://ktkr3d.github.io/tags/voicevox/"/>
     
   </entry>
   

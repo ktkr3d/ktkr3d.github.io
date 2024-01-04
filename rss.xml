@@ -24,21 +24,18 @@
       <guid>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/</guid>
       <pubDate>Tue, 02 Jan 2024 11:29:17 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_voicevox_windows.png&quot;&gt;&lt;br&gt;Nuxt3で作ったVOICEVOXのフロントエンドアプリをクロスプラットフォームなネイティブアプリケーションにしてみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_voicevox_windows.png&quot;&gt;&lt;br&gt;Nuxt3で作ったVOICEVOXのフロントエンドアプリをクロスプラットフォームなネイティブアプリケーションにしてみました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3-voicevox&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3-voicevox&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
       
       
-      <category domain="https://ktkr3d.github.io/tags/vue/">vue</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/nux/">nux</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/veutify/">veutify</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/neutrianojs/">neutrianojs</category>
+      <category domain="https://ktkr3d.github.io/tags/nuxt/">nuxt</category>
       
       <category domain="https://ktkr3d.github.io/tags/voicevox/">voicevox</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/neutrianojs/">neutrianojs</category>
       
       
       <comments>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/#disqus_thread</comments>
@@ -58,9 +55,9 @@
       
       
       
-      <category domain="https://ktkr3d.github.io/tags/nuxt3/">nuxt3</category>
+      <category domain="https://ktkr3d.github.io/tags/nuxt/">nuxt</category>
       
-      <category domain="https://ktkr3d.github.io/tags/voicebox/">voicebox</category>
+      <category domain="https://ktkr3d.github.io/tags/voicevox/">voicevox</category>
       
       
       <comments>https://ktkr3d.github.io/2023/12/31/Nuxt3-VOICEVOX/#disqus_thread</comments>
