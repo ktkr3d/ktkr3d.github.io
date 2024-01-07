@@ -7,7 +7,7 @@
     <link>https://ktkr3d.github.io/</link>
     
     <image>
-      <url>https://ktkr3d.github.io/favicon.ico</url>
+      <url>https://ktkr3d.github.io/icon.png</url>
       <title>Memorandum!</title>
       <link>https://ktkr3d.github.io/</link>
     </image>
@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 02 Jan 2024 11:29:17 GMT</pubDate>
+    <pubDate>Thu, 04 Jan 2024 15:19:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -362,7 +362,7 @@
       
       <description>&lt;p&gt;&lt;img src=&quot;https://ae01.alicdn.com/kf/S26d8f55afec54e329da770e143340e3ac.jpg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://store.chuwi.jp/products/minibook-x-n100&quot;&gt;https://store.chuwi.jp/products/minibook-x-n100&lt;/a&gt;&lt;br&gt;CHUWI MiniBook X N100が届いたから環境設定と動作確認をしてみよう。&lt;/p&gt;
 &lt;h4 id=&quot;2023-11-06-更新&quot;&gt;&lt;a href=&quot;#2023-11-06-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;11&amp;#x2F;06 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;11&amp;#x2F;06 更新&lt;/h4&gt;&lt;p&gt;Kernel 6.6-rc5 を導入するとサスペンドからの復帰時の画面の乱れは解消した。&lt;br&gt;ただし、Bluetooth が無効になったので以下のようにシンボリックリンクを張り直す必要があった。&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd /usr/lib/firmware/intel/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo unlink ibt-0040-4150.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo unlink ibt-1040-4150.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo ln -s ibt-1040-4150.ddc.zst ibt-0040-1050.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo ln -s ibt-1040-4150.sfi.zst ibt-0040-1050.sfi.zst&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight apache&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;cd&lt;/span&gt; /usr/lib/firmware/intel/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;sudo&lt;/span&gt; unlink ibt-&lt;span class=&quot;number&quot;&gt;0040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4150&lt;/span&gt;.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;sudo&lt;/span&gt; unlink ibt-&lt;span class=&quot;number&quot;&gt;1040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4150&lt;/span&gt;.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;sudo&lt;/span&gt; ln -s ibt-&lt;span class=&quot;number&quot;&gt;1040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4150&lt;/span&gt;.ddc.zst ibt-&lt;span class=&quot;number&quot;&gt;0040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;1050&lt;/span&gt;.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;sudo&lt;/span&gt; ln -s ibt-&lt;span class=&quot;number&quot;&gt;1040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4150&lt;/span&gt;.sfi.zst ibt-&lt;span class=&quot;number&quot;&gt;0040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;1050&lt;/span&gt;.sfi.zst&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;h4 id=&quot;2023-11-15-更新&quot;&gt;&lt;a href=&quot;#2023-11-15-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;11&amp;#x2F;15 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;11&amp;#x2F;15 更新&lt;/h4&gt;&lt;p&gt;Kernel 6.6.1 とlinux-firmware が更新された。こちらは問題なさそう。&lt;/p&gt;
 &lt;ul&gt;
@@ -439,9 +439,7 @@
 &lt;td align=&quot;left&quot;&gt;非対応&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;&lt;code&gt;--gtk-version=4&lt;/code&gt;を指定することでIME文字入力できるようになりました。&lt;br&gt;&lt;a href=&quot;https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/&quot;&gt;https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;2023-12-15-更新&quot;&gt;&lt;a href=&quot;#2023-12-15-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;12&amp;#x2F;15 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;12&amp;#x2F;15 更新&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/electron/electron/issues/34211&quot;&gt;https://github.com/electron/electron/issues/34211&lt;/a&gt;&lt;br&gt;Visual Studio Codeやcode-serverでAltキー押下時にメニューバーにフォーカスしてしまう問題は以下の設定で回避できた。&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;quot;window.customMenuBarAltFocus&amp;quot;: false,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;quot;window.enableMenuBarMnemonics&amp;quot;: false,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;quot;window.menuBarVisibility&amp;quot;: &amp;quot;visible&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
+&lt;p&gt;&lt;code&gt;--gtk-version=4&lt;/code&gt;を指定することでIME文字入力できるようになりました。&lt;br&gt;&lt;a href=&quot;https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/&quot;&gt;https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
@@ -511,9 +509,9 @@
       
       
       
-      <category domain="https://ktkr3d.github.io/tags/flatpak/">flatpak</category>
-      
       <category domain="https://ktkr3d.github.io/tags/bottles/">bottles</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/flatpak/">flatpak</category>
       
       <category domain="https://ktkr3d.github.io/tags/wine/">wine</category>
       

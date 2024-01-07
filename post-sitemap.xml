@@ -9,8 +9,16 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2019/05/25/Hexo-filter-mermaid-diagrams/</loc>
+        <lastmod>2024-01-07T14:41:47.289Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/</loc>
-        <lastmod>2024-01-02T11:29:17.000Z</lastmod>
+        <lastmod>2024-01-04T15:19:43.616Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,7 +26,7 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2023/12/31/Nuxt3-VOICEVOX/</loc>
-        <lastmod>2023-12-31T05:49:50.000Z</lastmod>
+        <lastmod>2024-01-04T05:39:33.726Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,7 +34,7 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/</loc>
-        <lastmod>2023-12-30T12:24:45.000Z</lastmod>
+        <lastmod>2023-12-31T06:08:40.351Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -34,7 +42,7 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/</loc>
-        <lastmod>2023-12-09T04:00:38.000Z</lastmod>
+        <lastmod>2023-12-14T15:19:43.191Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -42,7 +50,7 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</loc>
-        <lastmod>2023-12-03T04:49:27.000Z</lastmod>
+        <lastmod>2023-12-11T14:56:45.817Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -305,6 +313,14 @@
     </url>
 
     <url>
+        <loc>https://ktkr3d.github.io/2011/03/31/inspiron-duo-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
+        <lastmod>2021-10-29T09:41:31.923Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2021/10/24/Minecraft-Java-Edition-on-Raspberry-Pi-4B-Ubuntu-21-10/</loc>
         <lastmod>2021-10-24T03:15:20.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -443,6 +459,1870 @@
     <url>
         <loc>https://ktkr3d.github.io/2020/08/03/Hexo-5-0-0/</loc>
         <lastmod>2020-08-02T18:31:29.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/22/flv/</loc>
+        <lastmod>2020-08-02T17:44:33.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/04/27/meego-tablet-e381aee3839ee382a6e382b9e3839de382a4e383b3e382bf/</loc>
+        <lastmod>2020-08-02T17:44:33.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/06/17/android-ndk-android-x86-4-0-3/</loc>
+        <lastmod>2020-08-02T17:44:33.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/02/10/scrumblr/</loc>
+        <lastmod>2020-08-02T17:44:33.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/03/05/xbmc-customize/</loc>
+        <lastmod>2020-08-02T17:44:33.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/10/14/evolve-os-alpha4/</loc>
+        <lastmod>2020-08-02T17:44:33.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/02/sunflow/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/18/ode_i_can_fly/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/09/11/shader/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/09/10/irrcg/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/11/01/meego/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/11/17/blockout/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/12/23/linux_kinect/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/04/14/plasma-active-contour/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/22/proun-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/17/0-a-d-e381a7e9818ae38293e381a7e381bfe3828b/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/06/05/puzzle-moppet/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/07/26/proton-sdk/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/09/28/caribou/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/02/19/inspiron-duo-ubuntu-11-10-crystal-hd/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/03/02/my-android-x86-4-0-rc1-for-inspiron-duo/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/05/05/ubuntu-12-04-conky-1-9-0/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/06/04/inspiron-duo-windows-8-64bit/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/11/17/ubuntu-12-10-unity-4-0/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/02/09/cloud9-ide/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/11/04/minetest/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/11/09/screenfetch/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/11/16/wordpress-to-jekyll/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/09/14/hexo/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/12/irrlicht_ctheoraplayer/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/13/twitter/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/22/post_8/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/10/xeffects/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/22/caudio_openal/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/23/shield_effect/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/31/b-momi/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/09/07/h-craft_championship/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/09/12/puzzle_game/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/10/16/billardgl/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/10/23/post_11/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/04/01/inspiron-duo/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/04/03/unity-e381aee383a1e3838be383a5e383bce8a1a8e7a4bae8a8ade5ae9a/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/04/07/meego-tablet-e381a7e697a5e69cace8aa9e/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/15/gnome-shell-e381aee38386e383bce3839ee38292e5a489e69bb4e38197e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/23/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f4/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/06/02/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f5/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/06/25/proun-2/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/01/29/ubuntu-11-10-gnome-shell-catalyst-12-1/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/02/06/ubuntu-11-10-blender-2-61/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/02/10/ubuntu-11-10-ogre-1-7-3-kinect/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/02/28/inspiron-duo-android-x86-4-0-rc1/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/04/03/remmina/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/06/23/android-x86-4-0-3-firefoxfennec-16-0a1/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/07/25/telnet-nyancat/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/09/16/ubuntu-12-10-certificate-authority/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/09/24/changing-the-date-format-in-nautilus-3-6-list-view/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/10/11/openshot-video-editor-1-4-3/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/06/01/android-studio/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/06/16/ubuntu-gnome-13-dot-10-daily-build-plus-cairo-dock/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/07/15/zenity-octopress-helper/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/08/11/irrlicht-android-media-player/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/10/05/fedora-20/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/19/cairo-dock-session/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/12/mikumikupenguin/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/09/15/application-menu-icon-extension/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2015/01/01/borderlands-2-japanese-localization/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/11/irrmmd/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/13/post_1/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/22/post_7/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/09/29/caph/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/10/17/blood_water/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/11/09/neverball/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/12/27/faast_wow/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/03/22/wine-e381a7windows-e382a2e38397e383aae38292e4bdbfe381a3e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/04/03/inspiron-duo-e381a7alsa/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/09/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f2/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/10/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f3/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/06/15/android-x86-3-1/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/12/20/nightingale/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/02/05/ubuntu-11-10-kinect-irrlicht/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/03/07/android-x86-tegav2-physical-keyboard/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/06/01/windows-8-release-preview-64bit/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/05/31/moc-music-on-console/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/09/28/ubuntu-gnome-remix-12-10-beta/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/12/26/android-x86-4-2-1/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/12/31/move-the-hot-corner-of-the-message-tray/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/03/10/xnoise-media-player-0-2-16-mediterraneannight-gtk-theme-2/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/03/17/create-a-shortcut-key-in-xnoise/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/03/24/conkyforecast-japanese-translation/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/06/16/octopress/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/07/14/docky-plus-cardapio/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/12/30/remote-blogging-with-octopress/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/02/scroll-up-slash-down-button-add-on-for-firefox/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/02/06/girlfriend-prototype/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/03/01/ubuntu-gnome-14-dot-04-beta-1/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/04/03/gnome-3-dot-12/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/07/13/debian-slash-renesas-sh4-port-update/</loc>
+        <lastmod>2020-08-02T17:44:33.425Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/02/15/android-x86-4-dot-4-rc1/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/11/irrlicht_irc_twitter_demo/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/24/post_9/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/25/videomaster/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/09/08/irrlicht/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/09/17/monodevelop/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/03/17/gnome-shell-e38292e382abe382b9e382bfe3839ee382a4e382ba/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/03/21/fedora-15-e381a7e792b0e5a283e8a8ade5ae9a/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/04/07/ubuntu-11-04-e381a7gnome-shell/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/08/hex-a-hop-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/13/gnome-shell-e68ba1e5bcb5e38292e4bd9ce3828de38186/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/08/21/ubuntu-11-10-gnome-shell/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/09/23/fennec/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/10/08/conky-htc/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/11/06/linux-mint-12/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/11/28/android-x86-4-0-ics-2/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/12/08/android-x86-4-0-ics/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/12/11/wordpress-3-3/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/03/06/nightingale-1-11-0/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/03/25/kubuntu-active-12-04/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/04/19/gnome-shell-3-4-autohide-top-panel-extension/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/05/03/webilder-wallpaper-changer/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/05/19/wine-diablo-iii/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/05/23/ubuntu-12-04-owncloud-4-0/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/06/09/firefox-13-newsfox/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/07/06/burg-clonezilla-iso/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/07/15/gnome-shell-touch-screen-onboard/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/08/05/ubuntu-12-10-alpha3-gnome-shell-3-5-4/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/08/21/gnome-shell-focus-effect-extension/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/10/02/vlc-for-android-x86/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/12/08/thunderbird-gmail-google-calendar-google-tasks/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/01/04/moc-2-5-0-beta1-patch-r2519r2520/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/01/19/windows-8-boot-manager-grub4dos-android-x86/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/07/13/gnome-shell-3-dot-9-4/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/12/22/add-remote-location-over-ssh-on-xbmc/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/12/29/cleaning/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/10/gitg-0-dot-3-1/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/22/android-x86-4-dot-4-2/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/05/01/rtmp-streaming-on-linux/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/06/21/peercast-radio-update/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/12/31/gnome-boxes/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/12/irrwizard/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/18/post_5/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/29/spark/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/09/04/irrlamb/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/12/22/kinect/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/01/13/ubuntu_1104/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/02/05/android-x86/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/03/13/worpress-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/03/21/usb-e784a1e7b79alan-e5ad90e6a99fe38292e981b8e38293e381a7e381bfe3828b/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/04/16/ubuntu-tweak-0-6e38080e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/06/burg-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/23/gnome-tweak-tool-3-0-4-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f7/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/06/22/haiku-r1-a3/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/07/31/android-ndk-pmd/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/02/04/ubuntu-12-04-precise-pangolin-alpha-2-gnome-shell/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/05/12/wine-diablo-3-downloader/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/07/29/ubuntu-12-04-pov-ray-3-7-0-rc6-2/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/09/04/rebuild-avant-window-navigator-package-2/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/10/13/android-x86-4-0-4-firefox-fennec-19-0a1-16-0-1/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/11/14/unity-4-0-gnome-shell-3-6/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/01/26/ubuntu-13-04-gnome-shell/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/02/10/appjs/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/02/28/android-x86-4-2-2/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/03/14/ubuntu-gnome-13-04-daily-build/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/12/14/steamos/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/13/irrlicht-1-dot-9-trunk/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/15/file-roller-3-dot-11-dot-4/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/26/android-x86-custom-build/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/03/09/numix-desktop-dock/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/04/06/dash-to-dock-on-bottom-gnome-shell-extension/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/07/17/change-debian-slash-sh4-software-sources/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/07/21/change-debian-slash-sh4-software-sources-again/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/07/21/nginx-plus-php-fpm-plus-pico/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2015/01/19/chinachu/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/13/post_2/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/15/irrlicht_30/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/02/06/android_30/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/12/pc-bsd-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/24/firefox-5-beta-2-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/30/gnome-shell-extension-e38292e5bea9e6b4bbe38195e3819be381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f6/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/11/27/wine-proun/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/12/06/diablo3-beta/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/02/12/irrlicht-lensflare-effect/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/07/11/building-android-4-1-for-x86-on-ubuntu-12-04/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/11/11/ubuntu-12-10-hibernateresume/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/01/12/ubuntu-12-10-calipso-cms-node-js-express-mongodb/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/02/19/gitg-and-geanyvc/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/03/17/bittorrent-live-beta/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/07/15/gnome-shell-lock-screen/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/11/02/conky-google-now/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/11/23/partitions/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/12/gedit-3-dot-11-dot-2/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/25/android-x86-4-dot-4-2-local-build/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/09/27/ubuntu-gnome-14-dot-10-plus-gnome-3-dot-14-plus-wayland/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/11/26/ubuntu-gnome-plus-cairo-dock/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2015/01/24/octopress-3/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/12/post/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/17/irrweathermanager/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/12/23/ogre3d/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/12/25/ogre3d_1/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/03/09/fedora-15-alpha-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/04/09/gnome-3-e38292e8aabfe381b9e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/11/15/android-4-0/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/11/21/android-x86-3-2-honeycomb/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/01/08/irrlicht-1-8-0_llinux/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/04/22/ubuntu-12-04-conky/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/05/02/irrlicht-chopper-scene-node-control/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/05/01/ubuntu-gnome-shell-remix-12-04/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/06/06/burg-ubuntu-12-04-windows-8-android-x86-4-0/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/06/30/irrlicht-1-8-trunk-xeffects/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/07/03/playing_diablo_3/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/09/24/gnome-shell-extension-drop-down-terminal/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/07/01/ubuntu-13-dot-10-daily-build-plus-mir/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/09/06/customizing-application-menu-extension/</loc>
+        <lastmod>2020-08-02T17:44:33.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/07/13/pv/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/08/28/buggyrace/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/09/12/post_10/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/09/12/terrain_pager/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2010/11/25/anaglyph/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/01/02/kinect_1/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/02/11/android-x86_23/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/02/13/gibson_screensaver/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/04/06/meego-tablet-e38292e4bdbfe381a3e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/06/27/proun-3/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/08/10/android-ndk/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/10/24/openelec-2-0-mediatomb/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/02/07/ubuntu-13-04-gnome-shell-3-7-5/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/08/04/compiling-irrlicht-ogl-es-branch-for-android/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2013/12/01/ubuntu-gnome-plus-gnome3-ppa/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/05/05/simplescreenrecorder-plus-peercaststation/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/09/23/fedora-21-wayland/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/07/26/pico-theme-travel/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/10/12/sonydb/</loc>
+        <lastmod>2020-08-02T17:44:33.375Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -811,14 +2691,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2019/06/04/Chinachu-on-WSL/</loc>
         <lastmod>2019-06-04T12:41:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2019/05/25/Hexo-filter-mermaid-diagrams/</loc>
-        <lastmod>2019-05-25T12:41:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -1659,1878 +3531,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2015/01/31/Octopress-to-Hexo/</loc>
         <lastmod>2015-01-31T13:30:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2015/01/24/octopress-3/</loc>
-        <lastmod>2015-01-24T13:47:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2015/01/19/chinachu/</loc>
-        <lastmod>2015-01-19T13:26:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2015/01/01/borderlands-2-japanese-localization/</loc>
-        <lastmod>2015-01-01T10:12:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/12/31/gnome-boxes/</loc>
-        <lastmod>2014-12-30T15:02:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/11/26/ubuntu-gnome-plus-cairo-dock/</loc>
-        <lastmod>2014-11-26T12:20:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/10/14/evolve-os-alpha4/</loc>
-        <lastmod>2014-10-13T15:18:10.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/10/12/sonydb/</loc>
-        <lastmod>2014-10-12T13:27:22.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/09/27/ubuntu-gnome-14-dot-10-plus-gnome-3-dot-14-plus-wayland/</loc>
-        <lastmod>2014-09-27T08:36:58.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/09/23/fedora-21-wayland/</loc>
-        <lastmod>2014-09-22T23:01:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/09/15/application-menu-icon-extension/</loc>
-        <lastmod>2014-09-15T10:43:55.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/09/14/hexo/</loc>
-        <lastmod>2014-09-14T08:56:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/09/06/customizing-application-menu-extension/</loc>
-        <lastmod>2014-09-06T12:28:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/07/26/pico-theme-travel/</loc>
-        <lastmod>2014-07-26T12:29:05.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/07/21/nginx-plus-php-fpm-plus-pico/</loc>
-        <lastmod>2014-07-21T11:18:33.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/07/21/change-debian-slash-sh4-software-sources-again/</loc>
-        <lastmod>2014-07-21T03:35:05.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/07/17/change-debian-slash-sh4-software-sources/</loc>
-        <lastmod>2014-07-17T10:35:29.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/07/13/debian-slash-renesas-sh4-port-update/</loc>
-        <lastmod>2014-07-12T15:23:13.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/06/21/peercast-radio-update/</loc>
-        <lastmod>2014-06-21T08:16:57.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/05/05/simplescreenrecorder-plus-peercaststation/</loc>
-        <lastmod>2014-05-05T05:34:56.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/05/01/rtmp-streaming-on-linux/</loc>
-        <lastmod>2014-04-30T17:59:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/04/06/dash-to-dock-on-bottom-gnome-shell-extension/</loc>
-        <lastmod>2014-04-06T02:55:03.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/04/03/gnome-3-dot-12/</loc>
-        <lastmod>2014-04-03T14:42:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/03/09/numix-desktop-dock/</loc>
-        <lastmod>2014-03-09T04:30:32.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/03/05/xbmc-customize/</loc>
-        <lastmod>2014-03-04T15:37:11.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/03/01/ubuntu-gnome-14-dot-04-beta-1/</loc>
-        <lastmod>2014-03-01T11:05:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/02/15/android-x86-4-dot-4-rc1/</loc>
-        <lastmod>2014-02-15T09:08:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/02/06/girlfriend-prototype/</loc>
-        <lastmod>2014-02-06T04:04:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/01/26/android-x86-custom-build/</loc>
-        <lastmod>2014-01-25T15:21:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/01/25/android-x86-4-dot-4-2-local-build/</loc>
-        <lastmod>2014-01-24T19:27:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/01/22/android-x86-4-dot-4-2/</loc>
-        <lastmod>2014-01-21T16:09:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/01/19/cairo-dock-session/</loc>
-        <lastmod>2014-01-19T06:26:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/01/15/file-roller-3-dot-11-dot-4/</loc>
-        <lastmod>2014-01-14T16:11:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/01/13/irrlicht-1-dot-9-trunk/</loc>
-        <lastmod>2014-01-13T02:10:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/01/12/mikumikupenguin/</loc>
-        <lastmod>2014-01-12T14:40:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/01/12/gedit-3-dot-11-dot-2/</loc>
-        <lastmod>2014-01-11T18:39:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/01/10/gitg-0-dot-3-1/</loc>
-        <lastmod>2014-01-10T11:31:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2014/01/02/scroll-up-slash-down-button-add-on-for-firefox/</loc>
-        <lastmod>2014-01-02T06:41:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/12/30/remote-blogging-with-octopress/</loc>
-        <lastmod>2013-12-30T01:09:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/12/29/cleaning/</loc>
-        <lastmod>2013-12-29T03:40:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/12/22/add-remote-location-over-ssh-on-xbmc/</loc>
-        <lastmod>2013-12-22T01:50:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/12/14/steamos/</loc>
-        <lastmod>2013-12-14T13:55:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/12/01/ubuntu-gnome-plus-gnome3-ppa/</loc>
-        <lastmod>2013-12-01T01:25:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/11/23/partitions/</loc>
-        <lastmod>2013-11-23T06:44:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/11/16/wordpress-to-jekyll/</loc>
-        <lastmod>2013-11-16T06:23:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/11/09/screenfetch/</loc>
-        <lastmod>2013-11-08T23:56:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/11/04/minetest/</loc>
-        <lastmod>2013-11-04T12:28:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/11/02/conky-google-now/</loc>
-        <lastmod>2013-11-02T03:05:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/10/05/fedora-20/</loc>
-        <lastmod>2013-10-05T11:14:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/08/11/irrlicht-android-media-player/</loc>
-        <lastmod>2013-08-10T18:47:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/08/04/compiling-irrlicht-ogl-es-branch-for-android/</loc>
-        <lastmod>2013-08-03T19:04:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/07/15/zenity-octopress-helper/</loc>
-        <lastmod>2013-07-15T04:26:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/07/15/gnome-shell-lock-screen/</loc>
-        <lastmod>2013-07-14T23:57:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/07/14/docky-plus-cardapio/</loc>
-        <lastmod>2013-07-14T02:11:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/07/13/gnome-shell-3-dot-9-4/</loc>
-        <lastmod>2013-07-13T00:36:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/07/01/ubuntu-13-dot-10-daily-build-plus-mir/</loc>
-        <lastmod>2013-06-30T15:30:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/06/16/octopress/</loc>
-        <lastmod>2013-06-16T03:34:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/06/16/ubuntu-gnome-13-dot-10-daily-build-plus-cairo-dock/</loc>
-        <lastmod>2013-06-15T16:43:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/06/01/android-studio/</loc>
-        <lastmod>2013-05-31T21:55:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/03/24/conkyforecast-japanese-translation/</loc>
-        <lastmod>2013-03-23T15:36:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/03/17/bittorrent-live-beta/</loc>
-        <lastmod>2013-03-17T04:55:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/03/17/create-a-shortcut-key-in-xnoise/</loc>
-        <lastmod>2013-03-16T18:48:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/03/14/ubuntu-gnome-13-04-daily-build/</loc>
-        <lastmod>2013-03-14T05:09:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/03/10/xnoise-media-player-0-2-16-mediterraneannight-gtk-theme-2/</loc>
-        <lastmod>2013-03-09T18:14:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/02/28/android-x86-4-2-2/</loc>
-        <lastmod>2013-02-28T04:18:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/02/19/gitg-and-geanyvc/</loc>
-        <lastmod>2013-02-19T00:14:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/02/10/appjs/</loc>
-        <lastmod>2013-02-10T04:12:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/02/10/scrumblr/</loc>
-        <lastmod>2013-02-10T01:58:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/02/09/cloud9-ide/</loc>
-        <lastmod>2013-02-09T06:10:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/02/07/ubuntu-13-04-gnome-shell-3-7-5/</loc>
-        <lastmod>2013-02-07T12:28:05.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/01/26/ubuntu-13-04-gnome-shell/</loc>
-        <lastmod>2013-01-26T03:45:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/01/19/windows-8-boot-manager-grub4dos-android-x86/</loc>
-        <lastmod>2013-01-19T04:38:11.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/01/12/ubuntu-12-10-calipso-cms-node-js-express-mongodb/</loc>
-        <lastmod>2013-01-12T03:10:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2013/01/04/moc-2-5-0-beta1-patch-r2519r2520/</loc>
-        <lastmod>2013-01-04T05:39:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/12/31/move-the-hot-corner-of-the-message-tray/</loc>
-        <lastmod>2012-12-31T00:00:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/12/26/android-x86-4-2-1/</loc>
-        <lastmod>2012-12-26T04:15:23.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/12/08/thunderbird-gmail-google-calendar-google-tasks/</loc>
-        <lastmod>2012-12-07T23:41:05.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/11/17/ubuntu-12-10-unity-4-0/</loc>
-        <lastmod>2012-11-17T06:59:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/11/14/unity-4-0-gnome-shell-3-6/</loc>
-        <lastmod>2012-11-14T13:32:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/11/11/ubuntu-12-10-hibernateresume/</loc>
-        <lastmod>2012-11-11T03:30:33.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/10/24/openelec-2-0-mediatomb/</loc>
-        <lastmod>2012-10-24T02:41:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/10/13/android-x86-4-0-4-firefox-fennec-19-0a1-16-0-1/</loc>
-        <lastmod>2012-10-13T14:36:56.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/10/11/openshot-video-editor-1-4-3/</loc>
-        <lastmod>2012-10-11T03:42:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/10/02/vlc-for-android-x86/</loc>
-        <lastmod>2012-10-02T05:20:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/09/28/ubuntu-gnome-remix-12-10-beta/</loc>
-        <lastmod>2012-09-28T12:01:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/09/24/changing-the-date-format-in-nautilus-3-6-list-view/</loc>
-        <lastmod>2012-09-24T12:45:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/09/24/gnome-shell-extension-drop-down-terminal/</loc>
-        <lastmod>2012-09-24T03:17:32.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/09/16/ubuntu-12-10-certificate-authority/</loc>
-        <lastmod>2012-09-16T05:59:35.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/09/04/rebuild-avant-window-navigator-package-2/</loc>
-        <lastmod>2012-09-04T03:27:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/08/21/gnome-shell-focus-effect-extension/</loc>
-        <lastmod>2012-08-21T09:18:13.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/08/05/ubuntu-12-10-alpha3-gnome-shell-3-5-4/</loc>
-        <lastmod>2012-08-05T03:11:46.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/07/29/ubuntu-12-04-pov-ray-3-7-0-rc6-2/</loc>
-        <lastmod>2012-07-29T03:17:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/07/25/telnet-nyancat/</loc>
-        <lastmod>2012-07-25T04:49:02.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/07/15/gnome-shell-touch-screen-onboard/</loc>
-        <lastmod>2012-07-15T04:28:25.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/07/11/building-android-4-1-for-x86-on-ubuntu-12-04/</loc>
-        <lastmod>2012-07-11T06:17:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/07/06/burg-clonezilla-iso/</loc>
-        <lastmod>2012-07-06T14:56:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/07/03/playing_diablo_3/</loc>
-        <lastmod>2012-07-03T13:35:27.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/06/30/irrlicht-1-8-trunk-xeffects/</loc>
-        <lastmod>2012-06-30T04:08:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/06/23/android-x86-4-0-3-firefoxfennec-16-0a1/</loc>
-        <lastmod>2012-06-22T18:03:13.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/06/17/android-ndk-android-x86-4-0-3/</loc>
-        <lastmod>2012-06-17T00:54:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/06/09/firefox-13-newsfox/</loc>
-        <lastmod>2012-06-09T05:04:20.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/06/06/burg-ubuntu-12-04-windows-8-android-x86-4-0/</loc>
-        <lastmod>2012-06-06T03:28:47.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/06/04/inspiron-duo-windows-8-64bit/</loc>
-        <lastmod>2012-06-04T10:27:56.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/06/01/windows-8-release-preview-64bit/</loc>
-        <lastmod>2012-06-01T06:15:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/05/31/moc-music-on-console/</loc>
-        <lastmod>2012-05-31T01:59:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/05/23/ubuntu-12-04-owncloud-4-0/</loc>
-        <lastmod>2012-05-23T04:54:15.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/05/19/wine-diablo-iii/</loc>
-        <lastmod>2012-05-19T01:23:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/05/12/wine-diablo-3-downloader/</loc>
-        <lastmod>2012-05-12T12:00:42.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/05/05/ubuntu-12-04-conky-1-9-0/</loc>
-        <lastmod>2012-05-05T07:08:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/05/03/webilder-wallpaper-changer/</loc>
-        <lastmod>2012-05-03T01:27:26.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/05/02/irrlicht-chopper-scene-node-control/</loc>
-        <lastmod>2012-05-02T00:47:10.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/05/01/ubuntu-gnome-shell-remix-12-04/</loc>
-        <lastmod>2012-05-01T08:54:29.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/04/22/ubuntu-12-04-conky/</loc>
-        <lastmod>2012-04-21T17:32:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/04/19/gnome-shell-3-4-autohide-top-panel-extension/</loc>
-        <lastmod>2012-04-19T05:09:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/04/03/remmina/</loc>
-        <lastmod>2012-04-03T07:25:17.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/03/25/kubuntu-active-12-04/</loc>
-        <lastmod>2012-03-25T02:12:47.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/03/07/android-x86-tegav2-physical-keyboard/</loc>
-        <lastmod>2012-03-07T10:02:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/03/06/nightingale-1-11-0/</loc>
-        <lastmod>2012-03-06T06:40:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/03/02/my-android-x86-4-0-rc1-for-inspiron-duo/</loc>
-        <lastmod>2012-03-02T05:31:26.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/02/28/inspiron-duo-android-x86-4-0-rc1/</loc>
-        <lastmod>2012-02-28T05:01:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/02/19/inspiron-duo-ubuntu-11-10-crystal-hd/</loc>
-        <lastmod>2012-02-19T06:17:33.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/02/12/irrlicht-lensflare-effect/</loc>
-        <lastmod>2012-02-11T18:58:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/02/10/ubuntu-11-10-ogre-1-7-3-kinect/</loc>
-        <lastmod>2012-02-10T03:20:03.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/02/06/ubuntu-11-10-blender-2-61/</loc>
-        <lastmod>2012-02-06T11:05:26.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/02/05/ubuntu-11-10-kinect-irrlicht/</loc>
-        <lastmod>2012-02-05T04:25:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/02/04/ubuntu-12-04-precise-pangolin-alpha-2-gnome-shell/</loc>
-        <lastmod>2012-02-04T01:24:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/01/29/ubuntu-11-10-gnome-shell-catalyst-12-1/</loc>
-        <lastmod>2012-01-28T17:46:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2012/01/08/irrlicht-1-8-0_llinux/</loc>
-        <lastmod>2012-01-07T21:32:36.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/12/20/nightingale/</loc>
-        <lastmod>2011-12-20T02:10:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/12/11/wordpress-3-3/</loc>
-        <lastmod>2011-12-11T09:09:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/12/08/android-x86-4-0-ics/</loc>
-        <lastmod>2011-12-08T10:03:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/12/06/diablo3-beta/</loc>
-        <lastmod>2011-12-06T05:09:46.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/11/28/android-x86-4-0-ics-2/</loc>
-        <lastmod>2011-11-28T04:10:46.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/11/27/wine-proun/</loc>
-        <lastmod>2011-11-27T04:47:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/11/21/android-x86-3-2-honeycomb/</loc>
-        <lastmod>2011-11-21T08:19:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/11/15/android-4-0/</loc>
-        <lastmod>2011-11-15T10:22:55.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/11/06/linux-mint-12/</loc>
-        <lastmod>2011-11-05T18:18:05.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/10/08/conky-htc/</loc>
-        <lastmod>2011-10-08T06:47:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/09/28/caribou/</loc>
-        <lastmod>2011-09-28T06:16:32.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/09/23/fennec/</loc>
-        <lastmod>2011-09-22T23:33:13.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/08/21/ubuntu-11-10-gnome-shell/</loc>
-        <lastmod>2011-08-21T00:36:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/08/10/android-ndk/</loc>
-        <lastmod>2011-08-10T03:55:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/07/31/android-ndk-pmd/</loc>
-        <lastmod>2011-07-30T16:46:13.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/07/26/proton-sdk/</loc>
-        <lastmod>2011-07-26T12:51:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/06/27/proun-3/</loc>
-        <lastmod>2011-06-27T06:23:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/06/25/proun-2/</loc>
-        <lastmod>2011-06-24T18:51:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/06/22/haiku-r1-a3/</loc>
-        <lastmod>2011-06-22T04:46:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/06/15/android-x86-3-1/</loc>
-        <lastmod>2011-06-15T07:36:23.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/06/05/puzzle-moppet/</loc>
-        <lastmod>2011-06-04T18:01:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f7/</loc>
-        <lastmod>2011-06-04T12:54:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f6/</loc>
-        <lastmod>2011-06-04T05:24:31.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/06/02/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f5/</loc>
-        <lastmod>2011-06-02T12:10:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/30/gnome-shell-extension-e38292e5bea9e6b4bbe38195e3819be381a6e381bfe3819f/</loc>
-        <lastmod>2011-05-30T04:15:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/24/firefox-5-beta-2-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
-        <lastmod>2011-05-23T16:49:26.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/23/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f4/</loc>
-        <lastmod>2011-05-23T05:38:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/23/gnome-tweak-tool-3-0-4-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
-        <lastmod>2011-05-23T04:58:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/22/proun-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
-        <lastmod>2011-05-21T16:35:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/17/0-a-d-e381a7e9818ae38293e381a7e381bfe3828b/</loc>
-        <lastmod>2011-05-17T11:13:57.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/15/gnome-shell-e381aee38386e383bce3839ee38292e5a489e69bb4e38197e381a6e381bfe3819f/</loc>
-        <lastmod>2011-05-15T07:14:58.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/13/gnome-shell-e68ba1e5bcb5e38292e4bd9ce3828de38186/</loc>
-        <lastmod>2011-05-13T12:50:02.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/12/pc-bsd-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
-        <lastmod>2011-05-12T06:43:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/10/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f3/</loc>
-        <lastmod>2011-05-10T07:18:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/09/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f2/</loc>
-        <lastmod>2011-05-09T06:17:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/08/hex-a-hop-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
-        <lastmod>2011-05-07T20:07:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/06/burg-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
-        <lastmod>2011-05-06T06:12:03.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/04/27/meego-tablet-e381aee3839ee382a6e382b9e3839de382a4e383b3e382bf/</loc>
-        <lastmod>2011-04-27T09:41:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/04/16/ubuntu-tweak-0-6e38080e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
-        <lastmod>2011-04-16T12:33:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/04/14/plasma-active-contour/</loc>
-        <lastmod>2011-04-14T05:41:11.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/04/09/gnome-3-e38292e8aabfe381b9e381a6e381bfe3819f/</loc>
-        <lastmod>2011-04-08T16:17:03.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/04/07/ubuntu-11-04-e381a7gnome-shell/</loc>
-        <lastmod>2011-04-07T06:40:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/04/07/meego-tablet-e381a7e697a5e69cace8aa9e/</loc>
-        <lastmod>2011-04-07T04:15:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/04/06/meego-tablet-e38292e4bdbfe381a3e381a6e381bfe3819f/</loc>
-        <lastmod>2011-04-06T00:49:24.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/04/03/unity-e381aee383a1e3838be383a5e383bce8a1a8e7a4bae8a8ade5ae9a/</loc>
-        <lastmod>2011-04-03T05:52:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/04/03/inspiron-duo-e381a7alsa/</loc>
-        <lastmod>2011-04-03T04:08:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/04/01/inspiron-duo/</loc>
-        <lastmod>2011-04-01T09:19:29.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/03/31/inspiron-duo-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
-        <lastmod>2011-03-31T05:12:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/03/22/wine-e381a7windows-e382a2e38397e383aae38292e4bdbfe381a3e381a6e381bfe3819f/</loc>
-        <lastmod>2011-03-22T05:31:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/03/21/fedora-15-e381a7e792b0e5a283e8a8ade5ae9a/</loc>
-        <lastmod>2011-03-21T03:41:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/03/21/usb-e784a1e7b79alan-e5ad90e6a99fe38292e981b8e38293e381a7e381bfe3828b/</loc>
-        <lastmod>2011-03-20T20:31:44.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/03/17/gnome-shell-e38292e382abe382b9e382bfe3839ee382a4e382ba/</loc>
-        <lastmod>2011-03-17T03:06:57.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/03/13/worpress-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
-        <lastmod>2011-03-13T01:38:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/03/09/fedora-15-alpha-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
-        <lastmod>2011-03-09T05:37:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/02/13/gibson_screensaver/</loc>
-        <lastmod>2011-02-12T21:53:02.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/02/11/android-x86_23/</loc>
-        <lastmod>2011-02-11T01:50:17.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/02/06/android_30/</loc>
-        <lastmod>2011-02-05T19:14:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/02/05/android-x86/</loc>
-        <lastmod>2011-02-04T18:42:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/01/13/ubuntu_1104/</loc>
-        <lastmod>2011-01-13T04:18:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/01/02/kinect_1/</loc>
-        <lastmod>2011-01-02T05:06:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/12/27/faast_wow/</loc>
-        <lastmod>2010-12-27T00:32:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/12/25/ogre3d_1/</loc>
-        <lastmod>2010-12-25T03:35:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/12/23/linux_kinect/</loc>
-        <lastmod>2010-12-23T09:33:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/12/23/ogre3d/</loc>
-        <lastmod>2010-12-22T19:46:25.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/12/22/kinect/</loc>
-        <lastmod>2010-12-22T01:16:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/11/25/anaglyph/</loc>
-        <lastmod>2010-11-25T06:34:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/11/17/blockout/</loc>
-        <lastmod>2010-11-17T07:23:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/11/09/neverball/</loc>
-        <lastmod>2010-11-09T01:07:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/11/01/meego/</loc>
-        <lastmod>2010-11-01T05:39:42.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/10/23/post_11/</loc>
-        <lastmod>2010-10-23T04:33:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/10/17/blood_water/</loc>
-        <lastmod>2010-10-16T23:06:32.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/10/16/billardgl/</loc>
-        <lastmod>2010-10-15T20:16:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/09/29/caph/</loc>
-        <lastmod>2010-09-29T06:37:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/09/17/monodevelop/</loc>
-        <lastmod>2010-09-17T07:30:11.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/09/12/puzzle_game/</loc>
-        <lastmod>2010-09-11T22:31:24.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/09/12/post_10/</loc>
-        <lastmod>2010-09-11T21:52:02.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/09/12/terrain_pager/</loc>
-        <lastmod>2010-09-11T16:25:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/09/11/shader/</loc>
-        <lastmod>2010-09-11T05:53:32.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/09/10/irrcg/</loc>
-        <lastmod>2010-09-10T07:02:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/09/08/irrlicht/</loc>
-        <lastmod>2010-09-08T04:41:19.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/09/07/h-craft_championship/</loc>
-        <lastmod>2010-09-07T03:22:55.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/09/04/irrlamb/</loc>
-        <lastmod>2010-09-04T03:58:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/31/b-momi/</loc>
-        <lastmod>2010-08-31T03:11:20.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/29/spark/</loc>
-        <lastmod>2010-08-29T04:25:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/28/buggyrace/</loc>
-        <lastmod>2010-08-27T19:44:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/25/videomaster/</loc>
-        <lastmod>2010-08-25T00:10:23.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/23/shield_effect/</loc>
-        <lastmod>2010-08-23T06:43:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/22/caudio_openal/</loc>
-        <lastmod>2010-08-22T09:44:49.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/18/ode_i_can_fly/</loc>
-        <lastmod>2010-08-18T14:41:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/17/irrweathermanager/</loc>
-        <lastmod>2010-08-17T03:20:36.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/15/irrlicht_30/</loc>
-        <lastmod>2010-08-15T07:31:02.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/10/xeffects/</loc>
-        <lastmod>2010-08-10T01:33:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/08/02/sunflow/</loc>
-        <lastmod>2010-08-02T12:56:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/24/post_9/</loc>
-        <lastmod>2010-07-24T06:04:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/22/flv/</loc>
-        <lastmod>2010-07-22T08:45:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/22/post_8/</loc>
-        <lastmod>2010-07-22T07:07:29.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/22/post_7/</loc>
-        <lastmod>2010-07-22T07:05:29.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/18/post_5/</loc>
-        <lastmod>2010-07-17T20:58:15.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/13/post_2/</loc>
-        <lastmod>2010-07-13T08:28:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/13/twitter/</loc>
-        <lastmod>2010-07-13T03:18:44.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/13/pv/</loc>
-        <lastmod>2010-07-13T03:16:57.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/13/post_1/</loc>
-        <lastmod>2010-07-13T03:14:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/12/post/</loc>
-        <lastmod>2010-07-12T06:53:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/12/irrwizard/</loc>
-        <lastmod>2010-07-12T02:36:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/12/irrlicht_ctheoraplayer/</loc>
-        <lastmod>2010-07-12T02:27:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/11/irrmmd/</loc>
-        <lastmod>2010-07-11T05:03:54.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2010/07/11/irrlicht_irc_twitter_demo/</loc>
-        <lastmod>2010-07-11T03:59:58.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
