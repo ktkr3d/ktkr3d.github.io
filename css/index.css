@@ -1755,7 +1755,7 @@ figure.highlight pre .javascript .function {
 #article-container pre,
 #article-container code {
   font-size: var(--global-font-size);
-  font-family: consolas, Menlo, 'PingFang SC', 'Microsoft YaHei', sans-serif !important;
+  font-family: Menlo, Monaco, "Courier New", monospace !important;
 }
 #article-container code {
   padding: 2px 4px;
