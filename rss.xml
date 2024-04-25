@@ -15,8 +15,29 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 09 Jan 2024 09:27:43 GMT</pubDate>
+    <pubDate>Thu, 25 Apr 2024 10:57:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>VirtualBox + Arch Linux</title>
+      <link>https://ktkr3d.github.io/2024/04/17/VirtualBox-Arch-Linux/</link>
+      <guid>https://ktkr3d.github.io/2024/04/17/VirtualBox-Arch-Linux/</guid>
+      <pubDate>Wed, 17 Apr 2024 12:20:25 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/archlinux_vbox.png&quot;&gt;&lt;br&gt;VirtualBox でArch Linux の環境を構築してみました。&lt;br&gt;&lt;a href=&quot;https://archlinux.org/&quot;&gt;https://archlinux.org/&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/virtualbox/">virtualbox</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/04/17/VirtualBox-Arch-Linux/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Neutralinojs + VOICEVOX</title>
@@ -256,9 +277,9 @@
       
       <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
       
-      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
-      
       <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
       
       <category domain="https://ktkr3d.github.io/tags/ags/">ags</category>
       
@@ -281,9 +302,9 @@
       
       <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
       
-      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
-      
       <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
       
       
       <comments>https://ktkr3d.github.io/2023/08/25/Hyprland/#disqus_thread</comments>
@@ -538,30 +559,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>code-server with SSL</title>
-      <link>https://ktkr3d.github.io/2023/02/27/code-server-with-SSL/</link>
-      <guid>https://ktkr3d.github.io/2023/02/27/code-server-with-SSL/</guid>
-      <pubDate>Sun, 26 Feb 2023 15:43:46 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/code-server-with-ssl.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://coder.com/docs/code-server/latest/guide#using-a-self-signed-certificate&quot;&gt;https://coder.com/docs/code-server/latest/guide#using-a-self-signed-certificate&lt;/a&gt;&lt;br&gt;Raspberry Pi 上のcode-server でSSL通信を有効にしてみました。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Webアプリ(PWA)としてのインストールは問題ありませんでした。&lt;/li&gt;
-&lt;li&gt;Draw.ioは問題なく表示できました。&lt;/li&gt;
-&lt;li&gt;vscode-revealのプレビューはブラウザ表示ボタンで動作しました。&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/code-server/">code-server</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/02/27/code-server-with-SSL/#disqus_thread</comments>
       
     </item>
     
