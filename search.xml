@@ -16982,7 +16982,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <tr>
 <td align="left">Disk Configuration</td>
 <td align="left">Use a best-effort</td>
-<td align="left"></td>
+<td align="left">&#x2F;dev&#x2F;sda, ext4</td>
 </tr>
 <tr>
 <td align="left">Root password</td>
@@ -17002,7 +17002,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <tr>
 <td align="left">Profile</td>
 <td align="left">Graphics driver</td>
-<td align="left">VMwaew &#x2F; Virtualbox</td>
+<td align="left">VMware &#x2F; Virtualbox</td>
 </tr>
 <tr>
 <td align="left">Audio</td>
