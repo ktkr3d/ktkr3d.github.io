@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/</loc>
+        <lastmod>2024-07-02T12:31:44.663Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2024/04/17/VirtualBox-Arch-Linux/</loc>
         <lastmod>2024-05-17T18:00:51.605Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -521,6 +529,14 @@
     </url>
 
     <url>
+        <loc>https://ktkr3d.github.io/2011/05/22/proun-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2010/08/02/sunflow/</loc>
         <lastmod>2020-08-02T17:44:33.445Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -578,14 +594,6 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2011/04/14/plasma-active-contour/</loc>
-        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2011/05/22/proun-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
         <lastmod>2020-08-02T17:44:33.445Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -673,14 +681,6 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2013/11/16/wordpress-to-jekyll/</loc>
-        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://ktkr3d.github.io/2013/11/04/minetest/</loc>
         <lastmod>2020-08-02T17:44:33.445Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -697,6 +697,14 @@
     </url>
 
     <url>
+        <loc>https://ktkr3d.github.io/2013/11/16/wordpress-to-jekyll/</loc>
+        <lastmod>2020-08-02T17:44:33.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2014/09/14/hexo/</loc>
         <lastmod>2020-08-02T17:44:33.445Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -705,7 +713,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/07/13/twitter/</loc>
+        <loc>https://ktkr3d.github.io/2010/07/12/irrlicht_ctheoraplayer/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -713,7 +721,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/07/12/irrlicht_ctheoraplayer/</loc>
+        <loc>https://ktkr3d.github.io/2010/07/13/twitter/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -793,7 +801,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/04/01/inspiron-duo/</loc>
+        <loc>https://ktkr3d.github.io/2011/04/03/unity-e381aee383a1e3838be383a5e383bce8a1a8e7a4bae8a8ade5ae9a/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -801,7 +809,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/04/03/unity-e381aee383a1e3838be383a5e383bce8a1a8e7a4bae8a8ade5ae9a/</loc>
+        <loc>https://ktkr3d.github.io/2011/04/01/inspiron-duo/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1169,7 +1177,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2013/03/17/create-a-shortcut-key-in-xnoise/</loc>
+        <loc>https://ktkr3d.github.io/2013/03/24/conkyforecast-japanese-translation/</loc>
         <lastmod>2020-08-02T17:44:33.425Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1177,7 +1185,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2013/03/24/conkyforecast-japanese-translation/</loc>
+        <loc>https://ktkr3d.github.io/2013/03/17/create-a-shortcut-key-in-xnoise/</loc>
         <lastmod>2020-08-02T17:44:33.425Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1217,7 +1225,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2014/02/06/girlfriend-prototype/</loc>
+        <loc>https://ktkr3d.github.io/2014/03/01/ubuntu-gnome-14-dot-04-beta-1/</loc>
         <lastmod>2020-08-02T17:44:33.425Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1225,7 +1233,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2014/03/01/ubuntu-gnome-14-dot-04-beta-1/</loc>
+        <loc>https://ktkr3d.github.io/2014/02/06/girlfriend-prototype/</loc>
         <lastmod>2020-08-02T17:44:33.425Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1393,7 +1401,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/03/25/kubuntu-active-12-04/</loc>
+        <loc>https://ktkr3d.github.io/2012/04/19/gnome-shell-3-4-autohide-top-panel-extension/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1401,7 +1409,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/04/19/gnome-shell-3-4-autohide-top-panel-extension/</loc>
+        <loc>https://ktkr3d.github.io/2012/03/25/kubuntu-active-12-04/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1457,7 +1465,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/08/05/ubuntu-12-10-alpha3-gnome-shell-3-5-4/</loc>
+        <loc>https://ktkr3d.github.io/2012/08/21/gnome-shell-focus-effect-extension/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1465,7 +1473,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/08/21/gnome-shell-focus-effect-extension/</loc>
+        <loc>https://ktkr3d.github.io/2012/08/05/ubuntu-12-10-alpha3-gnome-shell-3-5-4/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1513,7 +1521,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2013/12/22/add-remote-location-over-ssh-on-xbmc/</loc>
+        <loc>https://ktkr3d.github.io/2013/12/29/cleaning/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1521,7 +1529,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2013/12/29/cleaning/</loc>
+        <loc>https://ktkr3d.github.io/2013/12/22/add-remote-location-over-ssh-on-xbmc/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1571,6 +1579,14 @@
     <url>
         <loc>https://ktkr3d.github.io/2014/12/31/gnome-boxes/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/01/13/irrlicht-1-dot-9-trunk/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -1649,7 +1665,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/05/06/burg-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <loc>https://ktkr3d.github.io/2011/04/16/ubuntu-tweak-0-6e38080e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
         <lastmod>2020-08-02T17:44:33.405Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1657,7 +1673,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/04/16/ubuntu-tweak-0-6e38080e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <loc>https://ktkr3d.github.io/2011/05/06/burg-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
         <lastmod>2020-08-02T17:44:33.405Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1785,14 +1801,6 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2014/01/13/irrlicht-1-dot-9-trunk/</loc>
-        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://ktkr3d.github.io/2014/01/15/file-roller-3-dot-11-dot-4/</loc>
         <lastmod>2020-08-02T17:44:33.405Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1857,14 +1865,6 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/05/24/firefox-5-beta-2-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
-        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://ktkr3d.github.io/2010/07/13/post_2/</loc>
         <lastmod>2020-08-02T17:44:33.395Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1890,6 +1890,14 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2011/05/12/pc-bsd-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <lastmod>2020-08-02T17:44:33.395Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2011/05/24/firefox-5-beta-2-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
         <lastmod>2020-08-02T17:44:33.395Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2089,7 +2097,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/11/15/android-4-0/</loc>
+        <loc>https://ktkr3d.github.io/2011/11/21/android-x86-3-2-honeycomb/</loc>
         <lastmod>2020-08-02T17:44:33.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2097,7 +2105,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/11/21/android-x86-3-2-honeycomb/</loc>
+        <loc>https://ktkr3d.github.io/2011/11/15/android-4-0/</loc>
         <lastmod>2020-08-02T17:44:33.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2121,7 +2129,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/05/01/ubuntu-gnome-shell-remix-12-04/</loc>
+        <loc>https://ktkr3d.github.io/2012/05/02/irrlicht-chopper-scene-node-control/</loc>
         <lastmod>2020-08-02T17:44:33.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2129,7 +2137,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/05/02/irrlicht-chopper-scene-node-control/</loc>
+        <loc>https://ktkr3d.github.io/2012/05/01/ubuntu-gnome-shell-remix-12-04/</loc>
         <lastmod>2020-08-02T17:44:33.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2233,7 +2241,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/02/13/gibson_screensaver/</loc>
+        <loc>https://ktkr3d.github.io/2011/02/11/android-x86_23/</loc>
         <lastmod>2020-08-02T17:44:33.375Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2241,7 +2249,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/02/11/android-x86_23/</loc>
+        <loc>https://ktkr3d.github.io/2011/02/13/gibson_screensaver/</loc>
         <lastmod>2020-08-02T17:44:33.375Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

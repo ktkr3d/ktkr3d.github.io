@@ -15,8 +15,26 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 17 May 2024 18:00:51 GMT</pubDate>
+    <pubDate>Tue, 02 Jul 2024 12:31:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Minibook X + Ubuntu 24.04 LTS</title>
+      <link>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/</link>
+      <guid>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/</guid>
+      <pubDate>Mon, 01 Jul 2024 05:06:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/ubuntu-24-04.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Miniboo X にUbuntu 24.04 LTS を導入してみました。&lt;br&gt;ブラウザにはWaylandと相性のよいFirefoxを選択しました。&lt;br&gt;PWAに対応したかったのでSnapは削除しました。 &lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      
+      <comments>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>VirtualBox + Arch Linux</title>
@@ -538,27 +556,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/07/09/bottles/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Ubuntu 23.04 on Raspberry Pi 4</title>
-      <link>https://ktkr3d.github.io/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/</link>
-      <guid>https://ktkr3d.github.io/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/</guid>
-      <pubDate>Tue, 28 Feb 2023 13:56:45 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/ubuntu2304_raspi4.png&quot;&gt;&lt;br&gt;Raspberry Pi 4 にUbuntu 23.04 をインストールしました。&lt;br&gt;リモートからRDPで接続しました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/ubuntu/">ubuntu</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/raspberrypi/">raspberrypi</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/02/28/Ubuntu-23-04-on-Raspberry-Pi-4/#disqus_thread</comments>
       
     </item>
     
