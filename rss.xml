@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 02 Jul 2024 12:31:44 GMT</pubDate>
+    <pubDate>Tue, 02 Jul 2024 21:57:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Mon, 01 Jul 2024 05:06:00 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/ubuntu-24-04.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Miniboo X にUbuntu 24.04 LTS を導入してみました。&lt;br&gt;ブラウザにはWaylandと相性のよいFirefoxを選択しました。&lt;br&gt;PWAに対応したかったのでSnapは削除しました。 &lt;/p&gt;</description>
+&lt;p&gt;Miniboo X にUbuntu 24.04 LTS を導入してみました。&lt;br&gt;ブラウザにはWaylandと相性のよいFirefoxを選択しました。&lt;br&gt;PWAに対応したかったのでSnapは削除しました。&lt;br&gt;タッチスクリーンで操作しやすいようにタスクバーを右側に配置し、GNOME Shellのタイリング拡張を導入しました。&lt;/p&gt;</description>
       
       
       
