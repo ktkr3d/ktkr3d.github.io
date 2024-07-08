@@ -15,8 +15,34 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 04 Jul 2024 19:31:18 GMT</pubDate>
+    <pubDate>Sun, 07 Jul 2024 06:36:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Hyper-V</title>
+      <link>https://ktkr3d.github.io/2024/07/06/Hyper-V/</link>
+      <guid>https://ktkr3d.github.io/2024/07/06/Hyper-V/</guid>
+      <pubDate>Sat, 06 Jul 2024 13:14:26 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/hyperv.drawio.svg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;次のような制約のある環境でLinuxやVisual Studio Codeを使いたい場合にはHyper-Vを活用するとよいかもしれません。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows にWSL、VirtualboxやVisual Studio Code等を自由にインストールできない&amp;#x2F;したくない&lt;/li&gt;
+&lt;li&gt;インターネットへのアウトバウンド通信はブラウザでの認証が必要&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/code-server/">code-server</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/hyperv/">hyperv</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/07/06/Hyper-V/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Minibook X + Ubuntu 24.04 LTS</title>
@@ -532,30 +558,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/07/18/Ventoy/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Bottles</title>
-      <link>https://ktkr3d.github.io/2023/07/09/bottles/</link>
-      <guid>https://ktkr3d.github.io/2023/07/09/bottles/</guid>
-      <pubDate>Sun, 09 Jul 2023 13:47:09 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/bottles_000.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Bottles でWindows アプリをLinux で動かしてみました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/bottles/">bottles</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/flatpak/">flatpak</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/wine/">wine</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/07/09/bottles/#disqus_thread</comments>
       
     </item>
     

@@ -10,8 +10,17 @@
     
     
     <url>
+        <loc>https://ktkr3d.github.io/Visual-Studio-Code/</loc>
+        <lastmod>2024-07-08T11:46:47.193Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://ktkr3d.github.io/ubuntu/</loc>
-        <lastmod>2024-07-05T11:17:16.700Z</lastmod>
+        <lastmod>2024-07-05T11:39:25.430Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -66,15 +75,6 @@
     <url>
         <loc>https://ktkr3d.github.io/ubuntu/index_ubuntu_22_04.html</loc>
         <lastmod>2023-11-19T04:49:14.706Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://ktkr3d.github.io/Visual-Studio-Code/</loc>
-        <lastmod>2023-11-09T01:44:56.856Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
