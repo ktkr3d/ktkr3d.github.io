@@ -17172,7 +17172,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </li>
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><p>Hyper-VでUbuntuの環境を構築して、ホストOSのブラウザからゲストOS上のcode-serverを利用します。</p>
-<h4 id="ホストOS"><a href="#ホストOS" class="headerlink" title="ホストOS"></a>ホストOS</h4><ol>
+<h4 id="ホストOS-Hyper-Vで仮想マシンを作成"><a href="#ホストOS-Hyper-Vで仮想マシンを作成" class="headerlink" title="ホストOS: Hyper-Vで仮想マシンを作成"></a>ホストOS: Hyper-Vで仮想マシンを作成</h4><ol>
 <li>Hyper-VとIISを有効化<br>  <code>コントロールパネル</code> → <code>プログラムと機能</code> → <code>Widowsの機能の有効化または無効化</code> で以下を有効化</li>
 </ol>
 <ul>
@@ -17193,7 +17193,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <ol start="6">
 <li>仮想マシンを起動</li>
 </ol>
-<h4 id="ゲストOS"><a href="#ゲストOS" class="headerlink" title="ゲストOS"></a>ゲストOS</h4><ol>
+<h4 id="ゲストOS-Ubuntuをインストール"><a href="#ゲストOS-Ubuntuをインストール" class="headerlink" title="ゲストOS: Ubuntuをインストール"></a>ゲストOS: Ubuntuをインストール</h4><ol>
 <li>Ubuntuをインストール</li>
 <li>IPアドレスの固定化</li>
 </ol>
@@ -17210,7 +17210,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><a href="http://jp.archive.ubuntu.com/ubuntu/pool/universe/x/xrdp/xrdp_0.9.24-4_amd64.deb">http://jp.archive.ubuntu.com/ubuntu/pool/universe/x/xrdp/xrdp_0.9.24-4_amd64.deb</a></li>
 <li><a href="http://jp.archive.ubuntu.com/ubuntu/pool/universe/x/xorgxrdp/xorgxrdp_0.9.19-1_amd64.deb">http://jp.archive.ubuntu.com/ubuntu/pool/universe/x/xorgxrdp/xorgxrdp_0.9.19-1_amd64.deb</a></li>
 </ul>
-<h4 id="ホストOS-1"><a href="#ホストOS-1" class="headerlink" title="ホストOS"></a>ホストOS</h4><ol>
+<h4 id="ホストOS-パッケージをダウンロード"><a href="#ホストOS-パッケージをダウンロード" class="headerlink" title="ホストOS: パッケージをダウンロード"></a>ホストOS: パッケージをダウンロード</h4><ol>
 <li>ブラウザでパッケージファイルをダウンロード</li>
 </ol>
 <ul>
@@ -17228,7 +17228,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <ol start="3">
 <li>.debファイル群をpackages.zipに圧縮して、IISのドキュメントルートに配置  <figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">C:</span>\Inetpub\wwwroot\packages.zip</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="ゲストOS-1"><a href="#ゲストOS-1" class="headerlink" title="ゲストOS"></a>ゲストOS</h4><ol>
+<h4 id="ゲストOS-パッケージをインストール"><a href="#ゲストOS-パッケージをインストール" class="headerlink" title="ゲストOS: パッケージをインストール"></a>ゲストOS: パッケージをインストール</h4><ol>
 <li>パッケージファイルのアーカイブをダウンロードして展開  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://169.254.xxx.xxx/packages.zip</span><br><span class="line">unzip packages.zip</span><br></pre></td></tr></table></figure></li>
 <li>パッケージをインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> packages</span><br><span class="line">sudo dpkg -i *.deb</span><br></pre></td></tr></table></figure></li>
 <li>認証局を構築し、サーバ証明書を作成  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkcert -install</span><br></pre></td></tr></table></figure>
@@ -17249,7 +17249,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <figure class="highlight bash"><figcaption><span>~/.profile</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> GNOME_SHELL_SESSION_MODE=ubuntu</span><br><span class="line"><span class="built_in">export</span> XDG_CURRENT_DESKTOP=ubuntu:GNOME</span><br></pre></td></tr></table></figure>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart xrdp</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="ホストOS-2"><a href="#ホストOS-2" class="headerlink" title="ホストOS"></a>ホストOS</h4><ol>
+<h4 id="ホストOS-拡張セッションの有効化とcode-serverのPWA化"><a href="#ホストOS-拡張セッションの有効化とcode-serverのPWA化" class="headerlink" title="ホストOS: 拡張セッションの有効化とcode-serverのPWA化"></a>ホストOS: 拡張セッションの有効化とcode-serverのPWA化</h4><ol>
 <li>拡張セッションを有効化  <figure class="highlight powershell"><figcaption><span>PowerShell</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-VM</span> <span class="literal">-VMName</span> <span class="string">&quot;Ubuntu 24.04 LTS&quot;</span> <span class="literal">-EnhancedSessionTransportType</span> HvSocket</span><br></pre></td></tr></table></figure></li>
 <li>hosts の編集  <figure class="highlight txt"><figcaption><span>C:\Windows\system32\drivers\etc\hosts</span></figcaption><table><tr><td class="code"><pre><span class="line">169.254.0.1  ubuntu.local</span><br></pre></td></tr></table></figure></li>
 <li>ブラウザで<code>https://ubuntu.local</code>にアクセス</li>
@@ -17263,7 +17263,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>起動待ち時間: 120秒</li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><h4 id="Ubuntu-デスクトップの利用"><a href="#Ubuntu-デスクトップの利用" class="headerlink" title="Ubuntu デスクトップの利用"></a>Ubuntu デスクトップの利用</h4><ul>
-<li>VMのショートカットから起動する場合<br>ショートカットを作成する。<br>リンク先: <code>C:\Windows\System32\vmconnect.exe 127.0.0.1 &quot;Ubuntu 24.04 LTS&quot;</code><br>ショートカットを右クリックして管理者として起動する</li>
+<li>仮想マシンのショートカットから起動する場合<br>ショートカットを作成する。<br>リンク先: <code>C:\Windows\System32\vmconnect.exe 127.0.0.1 &quot;Ubuntu 24.04 LTS&quot;</code><br>ショートカットを右クリックして管理者として起動する</li>
 <li>Hyper-V マネージャから起動する場合<br>Hyper-VマネージャでVMを右クリックして「接続」</li>
 </ul>
 <h4 id="code-server-の利用"><a href="#code-server-の利用" class="headerlink" title="code-server の利用"></a>code-server の利用</h4><p>PWA化したcode-serverアプリケーションを起動する。</p>
@@ -17274,7 +17274,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <h4 id="Node-js-を利用する場合"><a href="#Node-js-を利用する場合" class="headerlink" title="Node.js を利用する場合"></a>Node.js を利用する場合</h4><ol>
 <li>ホストOSでバイナリをダウンロード<br>  <a href="https://nodejs.org/en/download/prebuilt-binaries">https://nodejs.org/en/download/prebuilt-binaries</a><br>  Node.js のバージョンを指定、Linuxを指定、x64を指定してダウンロード</li>
 <li>ゲストOSに転送後、アーカイブを展開する  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar xvf *.tar.xz</span><br></pre></td></tr></table></figure></li>
-<li>&#x2F;usr&#x2F;local に展開する  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> -r ./&#123;lib,share.include.bin&#125; /usr/local</span><br></pre></td></tr></table></figure></li>
+<li>&#x2F;usr&#x2F;local にコピーする  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> -r ./&#123;lib,share.include.bin&#125; /usr/local</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="Visual-Studio-Code-拡張を利用する場合"><a href="#Visual-Studio-Code-拡張を利用する場合" class="headerlink" title="Visual Studio Code 拡張を利用する場合"></a>Visual Studio Code 拡張を利用する場合</h4><ol>
 <li>Visusal Studio マーケットプレース( <a href="https://marketplace.visualstudio.com/vscode">https://marketplace.visualstudio.com/vscode</a> )から拡張機能のファイル(.vsix)をダウンロード</li>
