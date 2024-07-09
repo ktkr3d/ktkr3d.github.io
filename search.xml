@@ -17277,7 +17277,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>&#x2F;usr&#x2F;local に展開する  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> -r ./&#123;lib,share.include.bin&#125; /usr/local</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="Visual-Studio-Code-拡張を利用する場合"><a href="#Visual-Studio-Code-拡張を利用する場合" class="headerlink" title="Visual Studio Code 拡張を利用する場合"></a>Visual Studio Code 拡張を利用する場合</h4><ol>
-<li>Visusal Studio マーケットプレース(<a href="https://marketplace.visualstudio.com/vscode)%E3%81%8B%E3%82%89%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB(.vsix)%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">https://marketplace.visualstudio.com/vscode)から拡張機能のファイル(.vsix)をダウンロード</a></li>
+<li>Visusal Studio マーケットプレース( <a href="https://marketplace.visualstudio.com/vscode">https://marketplace.visualstudio.com/vscode</a> )から拡張機能のファイル(.vsix)をダウンロード</li>
 <li>code-server で拡張機能をインストール<br>  <code>拡張</code> → <code>...</code> → <code>VSIXからのインストール</code><br>  .vsix ファイルを選択</li>
 <li>code-serverの環境設定</li>
 </ol>
