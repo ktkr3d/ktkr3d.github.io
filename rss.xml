@@ -15,8 +15,27 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 09 Jul 2024 15:11:37 GMT</pubDate>
+    <pubDate>Tue, 23 Jul 2024 14:32:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>mutter-text-input-v1</title>
+      <link>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/</link>
+      <guid>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/</guid>
+      <pubDate>Mon, 22 Jul 2024 18:14:06 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/mutter-text-input-v1.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;WaylandモードのGoogle Chrome&amp;#x2F;Visual Studio Codeで日本語入力ができるようになりました。私はWaylandの分数スケーリング(Fractional Scaling)設定を利用していますので大変助かりました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/mutter-text-input-v1&quot;&gt;https://aur.archlinux.org/packages/mutter-text-input-v1&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      
+      <comments>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Hyper-V</title>
@@ -538,26 +557,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/07/18/Flatpak/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Ventoy</title>
-      <link>https://ktkr3d.github.io/2023/07/18/Ventoy/</link>
-      <guid>https://ktkr3d.github.io/2023/07/18/Ventoy/</guid>
-      <pubDate>Tue, 18 Jul 2023 03:08:27 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/ventoy.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://www.ventoy.net/&quot;&gt;https://www.ventoy.net/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ventoy/Ventoy/releases&quot;&gt;https://github.com/ventoy/Ventoy/releases&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;USBメモリにOSのブート用イメージファイルをコピーしておくと、選択してブートできるというものです。複数ISOファイルにも対応しています。これは便利。&lt;br&gt;MBR用とGPT用で２つ用意しておけば困ることはないでしょう。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/ventoy/">ventoy</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/07/18/Ventoy/#disqus_thread</comments>
       
     </item>
     

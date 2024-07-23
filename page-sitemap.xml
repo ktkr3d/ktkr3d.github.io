@@ -10,8 +10,8 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/Visual-Studio-Code/</loc>
-        <lastmod>2024-07-08T22:55:12.707Z</lastmod>
+        <loc>https://ktkr3d.github.io/ubuntu/</loc>
+        <lastmod>2024-07-19T11:39:27.152Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -19,8 +19,17 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/ubuntu/</loc>
-        <lastmod>2024-07-05T11:39:25.430Z</lastmod>
+        <loc>https://ktkr3d.github.io/Visual-Studio-Code/export/</loc>
+        <lastmod>2024-07-11T06:46:51.449Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://ktkr3d.github.io/Visual-Studio-Code/</loc>
+        <lastmod>2024-07-11T06:45:46.199Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -217,7 +226,7 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/about/</loc>
+        <loc>https://ktkr3d.github.io/android/</loc>
         <lastmod>2020-08-02T17:44:33.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -226,7 +235,7 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/android/</loc>
+        <loc>https://ktkr3d.github.io/about/</loc>
         <lastmod>2020-08-02T17:44:33.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
