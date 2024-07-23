@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 23 Jul 2024 14:32:43 GMT</pubDate>
+    <pubDate>Tue, 23 Jul 2024 14:33:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -31,6 +31,8 @@
       
       
       
+      
+      <category domain="https://ktkr3d.github.io/tags/mutter/">mutter</category>
       
       
       <comments>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/#disqus_thread</comments>
