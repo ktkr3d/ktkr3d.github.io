@@ -17366,6 +17366,8 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><code>Apply below custom styling</code>をオフ</li>
 <li><code>Custom Date Text</code>を設定<br>  <code>%Y / %m / %d</code></li>
 </ol>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><h4 id="変更前"><a href="#変更前" class="headerlink" title="変更前"></a>変更前</h4><p><img src="/images/lockscreen_before.png"></p>
+<h4 id="変更後"><a href="#変更後" class="headerlink" title="変更後"></a>変更後</h4><p><img src="/images/lockscreen_after.png"></p>
 ]]></content>
       <tags>
         <tag>gnome-shell</tag>
