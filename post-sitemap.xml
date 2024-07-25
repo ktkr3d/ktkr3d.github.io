@@ -9,8 +9,8 @@
 
 
     <url>
-        <loc>https://ktkr3d.github.io/2024/07/25/Customize-GDM-lock-screen-date-format/</loc>
-        <lastmod>2024-07-25T14:33:12.260Z</lastmod>
+        <loc>https://ktkr3d.github.io/2024/07/25/Customize-lock-screen-date-format/</loc>
+        <lastmod>2024-07-25T21:48:08.270Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -593,7 +593,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/11/01/meego/</loc>
+        <loc>https://ktkr3d.github.io/2010/11/17/blockout/</loc>
         <lastmod>2020-08-02T17:44:33.445Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -601,7 +601,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/11/17/blockout/</loc>
+        <loc>https://ktkr3d.github.io/2010/11/01/meego/</loc>
         <lastmod>2020-08-02T17:44:33.445Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -793,7 +793,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/08/31/b-momi/</loc>
+        <loc>https://ktkr3d.github.io/2010/09/07/h-craft_championship/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -801,7 +801,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/09/07/h-craft_championship/</loc>
+        <loc>https://ktkr3d.github.io/2010/08/31/b-momi/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1161,7 +1161,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/06/01/windows-8-release-preview-64bit/</loc>
+        <loc>https://ktkr3d.github.io/2012/05/31/moc-music-on-console/</loc>
         <lastmod>2020-08-02T17:44:33.425Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1169,7 +1169,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/05/31/moc-music-on-console/</loc>
+        <loc>https://ktkr3d.github.io/2012/06/01/windows-8-release-preview-64bit/</loc>
         <lastmod>2020-08-02T17:44:33.425Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1401,7 +1401,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/11/28/android-x86-4-0-ics-2/</loc>
+        <loc>https://ktkr3d.github.io/2011/12/08/android-x86-4-0-ics/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1409,7 +1409,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/12/08/android-x86-4-0-ics/</loc>
+        <loc>https://ktkr3d.github.io/2011/11/28/android-x86-4-0-ics-2/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1433,14 +1433,6 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/04/19/gnome-shell-3-4-autohide-top-panel-extension/</loc>
-        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://ktkr3d.github.io/2012/03/25/kubuntu-active-12-04/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1449,7 +1441,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/05/19/wine-diablo-iii/</loc>
+        <loc>https://ktkr3d.github.io/2012/04/19/gnome-shell-3-4-autohide-top-panel-extension/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1458,6 +1450,14 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2012/05/03/webilder-wallpaper-changer/</loc>
+        <lastmod>2020-08-02T17:44:33.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2012/05/19/wine-diablo-iii/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1553,7 +1553,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2013/12/22/add-remote-location-over-ssh-on-xbmc/</loc>
+        <loc>https://ktkr3d.github.io/2013/12/29/cleaning/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1561,7 +1561,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2013/12/29/cleaning/</loc>
+        <loc>https://ktkr3d.github.io/2013/12/22/add-remote-location-over-ssh-on-xbmc/</loc>
         <lastmod>2020-08-02T17:44:33.415Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1641,7 +1641,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/08/29/spark/</loc>
+        <loc>https://ktkr3d.github.io/2010/09/04/irrlamb/</loc>
         <lastmod>2020-08-02T17:44:33.405Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1649,7 +1649,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/09/04/irrlamb/</loc>
+        <loc>https://ktkr3d.github.io/2010/08/29/spark/</loc>
         <lastmod>2020-08-02T17:44:33.405Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1865,14 +1865,6 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2014/07/21/change-debian-slash-sh4-software-sources-again/</loc>
-        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://ktkr3d.github.io/2014/07/17/change-debian-slash-sh4-software-sources/</loc>
         <lastmod>2020-08-02T17:44:33.405Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1882,6 +1874,14 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2014/07/21/nginx-plus-php-fpm-plus-pico/</loc>
+        <lastmod>2020-08-02T17:44:33.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2014/07/21/change-debian-slash-sh4-software-sources-again/</loc>
         <lastmod>2020-08-02T17:44:33.405Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1929,7 +1929,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/05/24/firefox-5-beta-2-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+        <loc>https://ktkr3d.github.io/2011/05/30/gnome-shell-extension-e38292e5bea9e6b4bbe38195e3819be381a6e381bfe3819f/</loc>
         <lastmod>2020-08-02T17:44:33.395Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1937,7 +1937,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/05/30/gnome-shell-extension-e38292e5bea9e6b4bbe38195e3819be381a6e381bfe3819f/</loc>
+        <loc>https://ktkr3d.github.io/2011/05/24/firefox-5-beta-2-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
         <lastmod>2020-08-02T17:44:33.395Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1953,7 +1953,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/11/27/wine-proun/</loc>
+        <loc>https://ktkr3d.github.io/2011/12/06/diablo3-beta/</loc>
         <lastmod>2020-08-02T17:44:33.395Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1961,7 +1961,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2011/12/06/diablo3-beta/</loc>
+        <loc>https://ktkr3d.github.io/2011/11/27/wine-proun/</loc>
         <lastmod>2020-08-02T17:44:33.395Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2097,7 +2097,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/12/25/ogre3d_1/</loc>
+        <loc>https://ktkr3d.github.io/2010/12/23/ogre3d/</loc>
         <lastmod>2020-08-02T17:44:33.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2105,7 +2105,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/12/23/ogre3d/</loc>
+        <loc>https://ktkr3d.github.io/2010/12/25/ogre3d_1/</loc>
         <lastmod>2020-08-02T17:44:33.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2161,7 +2161,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/05/01/ubuntu-gnome-shell-remix-12-04/</loc>
+        <loc>https://ktkr3d.github.io/2012/05/02/irrlicht-chopper-scene-node-control/</loc>
         <lastmod>2020-08-02T17:44:33.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2169,7 +2169,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2012/05/02/irrlicht-chopper-scene-node-control/</loc>
+        <loc>https://ktkr3d.github.io/2012/05/01/ubuntu-gnome-shell-remix-12-04/</loc>
         <lastmod>2020-08-02T17:44:33.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
