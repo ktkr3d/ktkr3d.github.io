@@ -15,8 +15,29 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 23 Jul 2024 21:44:10 GMT</pubDate>
+    <pubDate>Thu, 25 Jul 2024 14:33:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Customize GDM lock screen date format</title>
+      <link>https://ktkr3d.github.io/2024/07/25/Customize-GDM-lock-screen-date-format/</link>
+      <guid>https://ktkr3d.github.io/2024/07/25/Customize-GDM-lock-screen-date-format/</guid>
+      <pubDate>Thu, 25 Jul 2024 13:54:16 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/customize_clock_on_lock_screen.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;GDMのロックスクリーンの日本語日付書式って変ですよね。拡張機能で変更できました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/4663/customize-clock-on-lock-screen/&quot;&gt;https://extensions.gnome.org/extension/4663/customize-clock-on-lock-screen/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/PRATAP-KUMAR/customize-clock-on-lock-screen&quot;&gt;https://github.com/PRATAP-KUMAR/customize-clock-on-lock-screen&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome-shell/">gnome-shell</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/07/25/Customize-GDM-lock-screen-date-format/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>mutter-text-input-v1</title>
@@ -541,26 +562,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/08/08/CHUWI-Minibook-X-N100/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Flatpak</title>
-      <link>https://ktkr3d.github.io/2023/07/18/Flatpak/</link>
-      <guid>https://ktkr3d.github.io/2023/07/18/Flatpak/</guid>
-      <pubDate>Tue, 18 Jul 2023 03:27:10 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/flatpak_flatseal.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://flatpak.org/&quot;&gt;https://flatpak.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://flathub.org/&quot;&gt;https://flathub.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;FlatpakでGUIアプリケーションをインストールしてみました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/flatpak/">flatpak</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/07/18/Flatpak/#disqus_thread</comments>
       
     </item>
     
