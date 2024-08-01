@@ -11,7 +11,7 @@
     
     <url>
         <loc>https://ktkr3d.github.io/archlinux/</loc>
-        <lastmod>2024-07-27T12:33:33.526Z</lastmod>
+        <lastmod>2024-08-01T06:25:20.210Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -235,7 +235,7 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/android/</loc>
+        <loc>https://ktkr3d.github.io/about/</loc>
         <lastmod>2020-08-02T17:44:33.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -244,7 +244,7 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/about/</loc>
+        <loc>https://ktkr3d.github.io/android/</loc>
         <lastmod>2020-08-02T17:44:33.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

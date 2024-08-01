@@ -15,8 +15,29 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 25 Jul 2024 22:11:00 GMT</pubDate>
+    <pubDate>Thu, 01 Aug 2024 12:58:27 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>FastFetch</title>
+      <link>https://ktkr3d.github.io/2024/08/01/FastFetch/</link>
+      <guid>https://ktkr3d.github.io/2024/08/01/FastFetch/</guid>
+      <pubDate>Thu, 01 Aug 2024 12:35:36 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/fastfetch.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;システム情報を表示するツールであるNeofetchは開発終了みたいなので後継のFastfetchを使ってみました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fastfetch-cli/fastfetch&quot;&gt;https://github.com/fastfetch-cli/fastfetch&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/fastfetch/">fastfetch</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/08/01/FastFetch/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Customize lock screen date format</title>
@@ -365,9 +386,9 @@
       
       <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
       
-      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
-      
       <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
       
       <category domain="https://ktkr3d.github.io/tags/ags/">ags</category>
       
@@ -390,9 +411,9 @@
       
       <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
       
-      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
-      
       <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
       
       
       <comments>https://ktkr3d.github.io/2023/08/25/Hyprland/#disqus_thread</comments>
@@ -460,108 +481,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/08/11/MiniBook-X-N100-WoW-Raid-try/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>CHUWI MiniBook X N100</title>
-      <link>https://ktkr3d.github.io/2023/08/08/CHUWI-Minibook-X-N100/</link>
-      <guid>https://ktkr3d.github.io/2023/08/08/CHUWI-Minibook-X-N100/</guid>
-      <pubDate>Tue, 08 Aug 2023 07:30:00 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;https://ae01.alicdn.com/kf/S26d8f55afec54e329da770e143340e3ac.jpg&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://store.chuwi.jp/products/minibook-x-n100&quot;&gt;https://store.chuwi.jp/products/minibook-x-n100&lt;/a&gt;&lt;br&gt;CHUWI MiniBook X N100が届いたから環境設定と動作確認をしてみよう。&lt;/p&gt;
-&lt;h4 id=&quot;2023-11-06-更新&quot;&gt;&lt;a href=&quot;#2023-11-06-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;11&amp;#x2F;06 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;11&amp;#x2F;06 更新&lt;/h4&gt;&lt;p&gt;Kernel 6.6-rc5 を導入するとサスペンドからの復帰時の画面の乱れは解消した。&lt;br&gt;ただし、Bluetooth が無効になったので以下のようにシンボリックリンクを張り直す必要があった。&lt;/p&gt;
-&lt;figure class=&quot;highlight apache&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;cd&lt;/span&gt; /usr/lib/firmware/intel/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;sudo&lt;/span&gt; unlink ibt-&lt;span class=&quot;number&quot;&gt;0040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4150&lt;/span&gt;.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;sudo&lt;/span&gt; unlink ibt-&lt;span class=&quot;number&quot;&gt;1040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4150&lt;/span&gt;.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;sudo&lt;/span&gt; ln -s ibt-&lt;span class=&quot;number&quot;&gt;1040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4150&lt;/span&gt;.ddc.zst ibt-&lt;span class=&quot;number&quot;&gt;0040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;1050&lt;/span&gt;.ddc.zst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;sudo&lt;/span&gt; ln -s ibt-&lt;span class=&quot;number&quot;&gt;1040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;4150&lt;/span&gt;.sfi.zst ibt-&lt;span class=&quot;number&quot;&gt;0040&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;1050&lt;/span&gt;.sfi.zst&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;2023-11-15-更新&quot;&gt;&lt;a href=&quot;#2023-11-15-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;11&amp;#x2F;15 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;11&amp;#x2F;15 更新&lt;/h4&gt;&lt;p&gt;Kernel 6.6.1 とlinux-firmware が更新された。こちらは問題なさそう。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ubuntu&lt;br&gt;mainline(mainline-gtk)で導入する&lt;/li&gt;
-&lt;li&gt;Arch Linux&lt;br&gt;普通にアップデートすると導入される&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2023-11-19-更新&quot;&gt;&lt;a href=&quot;#2023-11-19-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;11&amp;#x2F;19 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;11&amp;#x2F;19 更新&lt;/h4&gt;&lt;p&gt;Wayland 向けのタッチスクリーン環境対策版を導入する。Xorgなら通常版でも問題ない。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;GNOME Shell 拡張機能：Dash to Panel&lt;br&gt;&lt;a href=&quot;https://github.com/matt1432/dash-to-panel-touch-fix.git&quot;&gt;https://github.com/matt1432/dash-to-panel-touch-fix.git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GNOME Shell 拡張機能：ArcMenu&lt;br&gt;&lt;a href=&quot;https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide&quot;&gt;https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2023-12-03-更新&quot;&gt;&lt;a href=&quot;#2023-12-03-更新&quot; class=&quot;headerlink&quot; title=&quot;2023&amp;#x2F;12&amp;#x2F;03 更新&quot;&gt;&lt;/a&gt;2023&amp;#x2F;12&amp;#x2F;03 更新&lt;/h4&gt;&lt;p&gt;MiniBook Xは画面の倍率を100%か125%で利用すると見やすいのですが、LinuxのWaylandで125%とする場合には注意が必要です。&lt;br&gt;Waylandにネイティブ対応のアプリケーション(Firefox 等)の場合は問題ありませんが、ネイティブ非対応のアプリケーション(Chrome, Electron)の場合に機能に制限があります。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://monorail-prod.appspot.com/p/chromium/issues/detail?id=1183262&quot;&gt;https://monorail-prod.appspot.com/p/chromium/issues/detail?id=1183262&lt;/a&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;OS&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;ブラウザ(設定)&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;画面の質&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;IME文字入力&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Windows 11&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Firefox&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Chrome&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Ubuntu &amp;#x2F; Arch Linux&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Firefox&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Chrome(標準)&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;NG&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Chrome(Waylandモード)&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;NG&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;これは以下の対応状況の結果のようです。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;text input&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;Mutter(Waylandコンポジタ)&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;Firefox&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;Chrome&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;v1&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;非対応&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;v3&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;✔&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;非対応&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;&lt;code&gt;--gtk-version=4&lt;/code&gt;を指定することでIME文字入力できるようになりました。&lt;br&gt;&lt;a href=&quot;https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/&quot;&gt;https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/ubuntu/">ubuntu</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/08/08/CHUWI-Minibook-X-N100/#disqus_thread</comments>
       
     </item>
     
