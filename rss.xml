@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 01 Aug 2024 21:56:36 GMT</pubDate>
+    <pubDate>Fri, 02 Aug 2024 12:53:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Thu, 01 Aug 2024 12:35:36 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/fastfetch.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;システム情報を表示するツールであるNeofetchは開発終了みたいなので後継のFastfetchを使ってみました。&lt;/p&gt;
+&lt;p&gt;システム情報を表示するツールであるNeofetchが開発終了とのことなので後継のFastfetchを使ってみました。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/fastfetch-cli/fastfetch&quot;&gt;https://github.com/fastfetch-cli/fastfetch&lt;/a&gt;&lt;/p&gt;</description>
       
       
