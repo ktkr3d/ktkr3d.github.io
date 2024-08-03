@@ -15,8 +15,52 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 02 Aug 2024 12:53:29 GMT</pubDate>
+    <pubDate>Sat, 03 Aug 2024 17:50:45 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>ble.sh</title>
+      <link>https://ktkr3d.github.io/2024/08/04/ble-sh/</link>
+      <guid>https://ktkr3d.github.io/2024/08/04/ble-sh/</guid>
+      <pubDate>Sat, 03 Aug 2024 16:51:53 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/blesh.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;bashで自動補完やシンタックスハイライトをします。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/akinomyoga/ble.sh&quot;&gt;https://github.com/akinomyoga/ble.sh&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/bash/">bash</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/blesh/">blesh</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/08/04/ble-sh/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Custom OSD</title>
+      <link>https://ktkr3d.github.io/2024/08/04/Custom-OSD/</link>
+      <guid>https://ktkr3d.github.io/2024/08/04/Custom-OSD/</guid>
+      <pubDate>Sat, 03 Aug 2024 16:51:36 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/custom-osd.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;GNOME Shellのボリューム変更や輝度変更のOSDは数値を表示しません。&lt;br&gt;Custom OSD 拡張を利用して数値表示やスタイルのカスタマイズをします。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/6142/custom-osd/&quot;&gt;https://extensions.gnome.org/extension/6142/custom-osd/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/neuromorph/custom-osd&quot;&gt;https://github.com/neuromorph/custom-osd&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome-shell/">gnome-shell</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/08/04/Custom-OSD/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Fastfetch</title>
@@ -438,49 +482,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/08/20/Arch-Linux/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Minecraft on MiniBook X N100</title>
-      <link>https://ktkr3d.github.io/2023/08/14/Minecraft-on-MiniBook-X-N100/</link>
-      <guid>https://ktkr3d.github.io/2023/08/14/Minecraft-on-MiniBook-X-N100/</guid>
-      <pubDate>Mon, 14 Aug 2023 09:44:28 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/minecraft-minibokx-01.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;MiniBook X N100 でMinecraft Java Edition を実行してみました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/minecraft/">minecraft</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/08/14/Minecraft-on-MiniBook-X-N100/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>MiniBook X N100 - WoW Raid Try</title>
-      <link>https://ktkr3d.github.io/2023/08/11/MiniBook-X-N100-WoW-Raid-try/</link>
-      <guid>https://ktkr3d.github.io/2023/08/11/MiniBook-X-N100-WoW-Raid-try/</guid>
-      <pubDate>Fri, 11 Aug 2023 05:33:02 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/wow-minibookx-raid-try.jpg&quot;&gt;&lt;br&gt;CHUWI MiniBook X N100 でWorld of Warcraft のRaid耐久をやってみよう。&lt;br&gt;LFRで。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/world-of-warcraft/">world-of-warcraft</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/08/11/MiniBook-X-N100-WoW-Raid-try/#disqus_thread</comments>
       
     </item>
     
