@@ -11,7 +11,16 @@
     
     <url>
         <loc>https://ktkr3d.github.io/archlinux/</loc>
-        <lastmod>2024-08-01T06:25:20.210Z</lastmod>
+        <lastmod>2024-08-09T00:35:52.692Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://ktkr3d.github.io/Visual-Studio-Code/</loc>
+        <lastmod>2024-08-03T23:19:25.645Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -30,15 +39,6 @@
     <url>
         <loc>https://ktkr3d.github.io/Visual-Studio-Code/export/</loc>
         <lastmod>2024-07-11T06:46:51.449Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://ktkr3d.github.io/Visual-Studio-Code/</loc>
-        <lastmod>2024-07-11T06:45:46.199Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
