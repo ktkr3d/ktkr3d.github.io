@@ -17392,10 +17392,12 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 独自のテーマを作成する際はプリセットの<code>/usr/share/fastfetch/presets/all.jsonc</code>をコピーしていらないものを削除すると良いかもしれません。<br>仕様はJSONスキーマを参考にします。<br><a href="https://github.com/fastfetch-cli/fastfetch/wiki/Json-Schema#modules_items_anyOf_i1_oneOf_i11_compactType">https://github.com/fastfetch-cli/fastfetch/wiki/Json-Schema#modules_items_anyOf_i1_oneOf_i11_compactType</a></li>
 </ol>
 <h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><h4 id="デフォルト"><a href="#デフォルト" class="headerlink" title="デフォルト"></a>デフォルト</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastfetch</span><br></pre></td></tr></table></figure>
-
+<p><code>~/.config/fastfetch/config.jsonc</code>が存在する場合は優先的に読み込まれる。存在しない場合はプリセット<code>neofetch</code>と思われる。</p>
 <h4 id="プリセット一覧"><a href="#プリセット一覧" class="headerlink" title="プリセット一覧"></a>プリセット一覧</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastfetch --list-presets</span><br></pre></td></tr></table></figure>
 
 <h4 id="プリセット-all"><a href="#プリセット-all" class="headerlink" title="プリセット all"></a>プリセット all</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastfetch -c all</span><br></pre></td></tr></table></figure>
+
+<h4 id="プリセット-neofetch"><a href="#プリセット-neofetch" class="headerlink" title="プリセット neofetch"></a>プリセット neofetch</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastfetch -c neofetch</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>fastfetch</tag>
