@@ -15,8 +15,29 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 03 Aug 2024 17:50:45 GMT</pubDate>
+    <pubDate>Sat, 10 Aug 2024 10:18:08 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Trinket Button Custom</title>
+      <link>https://ktkr3d.github.io/2024/08/10/Trinket-Button-Custom/</link>
+      <guid>https://ktkr3d.github.io/2024/08/10/Trinket-Button-Custom/</guid>
+      <pubDate>Sat, 10 Aug 2024 09:40:53 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/trinket_button_custom.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;World of WarcraftのTrinket Button拡張機能をカスタマイズしてみました。&lt;br&gt;&lt;a href=&quot;https://wago.io/Nn9Hg5PH7&quot;&gt;https://wago.io/Nn9Hg5PH7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Trinket Buttonは装備しているトリンケットが利用(Use)可能な場合にクリック可能なボタンとして表示します。&lt;br&gt;World of Warcraftではトリンケットの他に利用可能な装備としてメインハンドがあります。Trinket Buttonを改造してメインハンドにも対応させてみました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/08/10/Trinket-Button-Custom/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>ble.sh</title>
@@ -461,27 +482,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/08/25/Hyprland/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Arch Linux</title>
-      <link>https://ktkr3d.github.io/2023/08/20/Arch-Linux/</link>
-      <guid>https://ktkr3d.github.io/2023/08/20/Arch-Linux/</guid>
-      <pubDate>Sun, 20 Aug 2023 05:16:53 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/archlinux-minibookx.png&quot;&gt;&lt;br&gt;MiniBook X N100 にArch Linux を導入してみました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/08/20/Arch-Linux/#disqus_thread</comments>
       
     </item>
     
