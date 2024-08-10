@@ -17528,7 +17528,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </li>
 <li><p>左側の一覧のTrinket Buttonの<code>+</code>ボタンを押して子階層を展開する</p>
 </li>
-<li><p><code>Trinket Button 2</code>を右クリックして<code>Duplicate</code>を選択する<br> 名前は<code>Trinket Button 3</code>のままENTER</p>
+<li><p><code>Trinket Button 2</code>を右クリックして<code>Duplicate</code>を選択する<br> 名前は<code>Main Hand Button</code>にしてENTER</p>
 </li>
 <li><p><code>Actions</code>タブを選択する</p>
 </li>
