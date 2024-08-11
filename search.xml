@@ -17401,24 +17401,9 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 
 <h4 id="文字修飾"><a href="#文字修飾" class="headerlink" title="文字修飾"></a>文字修飾</h4><ul>
 <li><code>key</code>項目の値にはエスケープコードが利用できます。  <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">//</span> &#123;<span class="comment">#1&#125; is equivalent to `\u001b[1m`. &#123;#&#125; is equivalent to `\u001b[m`</span></span><br></pre></td></tr></table></figure></li>
-<li>ANSIコード<br>  <a href="https://gist.github.com/dominikwilkowski/60eed2ea722183769d586c76f22098dd">https://gist.github.com/dominikwilkowski/60eed2ea722183769d586c76f22098dd</a></li>
-<li>修飾の例<table>
-<thead>
-<tr>
-<th align="left">修飾</th>
-<th align="left">表記</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">太字</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">下線</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-</li>
+<li>ANSIエスケープコード<br>  <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_(Select_Graphic_Rendition)_parameters">https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_(Select_Graphic_Rendition)_parameters</a></li>
+<li>太字の例  <figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">&#123;#<span class="number">1</span>&#125;Bold&#123;#&#125;</span><br></pre></td></tr></table></figure></li>
+<li>下線の例  <figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">&#123;#<span class="number">4</span>&#125;Underline&#123;#&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <tags>
