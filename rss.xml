@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 10 Aug 2024 23:08:32 GMT</pubDate>
+    <pubDate>Wed, 14 Aug 2024 01:21:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,7 +26,11 @@
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/trinket_button_custom.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;World of WarcraftのTrinket Button拡張機能をカスタマイズしてみました。&lt;br&gt;&lt;a href=&quot;https://wago.io/Nn9Hg5PH7&quot;&gt;https://wago.io/Nn9Hg5PH7&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Trinket Buttonは装備しているトリンケットが利用（Use）可能な場合にクリック可能なボタンとして表示します。&lt;br&gt;World of Warcraftではトリンケットの他に利用可能な装備としてメインハンドがあります。Trinket Buttonを改造してメインハンドにも対応させてみました。&lt;/p&gt;</description>
+&lt;p&gt;Trinket Buttonは装備しているトリンケットが利用（Use）可能な場合にクリック可能なボタンとして表示します。&lt;br&gt;World of Warcraftではトリンケットの他に利用可能な装備としてメインハンドがあります。Trinket Buttonを改造してメインハンドにも対応させてみました。&lt;/p&gt;
+&lt;h4 id=&quot;2024-08-14-更新：WoW-11-0-2-対応&quot;&gt;&lt;a href=&quot;#2024-08-14-更新：WoW-11-0-2-対応&quot; class=&quot;headerlink&quot; title=&quot;2024&amp;#x2F;08&amp;#x2F;14 更新：WoW 11.0.2 対応&quot;&gt;&lt;/a&gt;2024&amp;#x2F;08&amp;#x2F;14 更新：WoW 11.0.2 対応&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;deprecatedなAPIを修正&lt;br&gt;&lt;a href=&quot;https://warcraft.wiki.gg/wiki/Patch_11.0.2/API_changes#Deprecated_API&quot;&gt;https://warcraft.wiki.gg/wiki/Patch_11.0.2/API_changes#Deprecated_API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;仕様が変更されたAPIを修正&lt;br&gt;&lt;a href=&quot;https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCooldown&quot;&gt;https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCooldown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
       
       
       
