@@ -10,6 +10,24 @@
     
     
     <url>
+        <loc>https://ktkr3d.github.io/World-of-Warcraft/</loc>
+        <lastmod>2024-08-14T16:54:10.398Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://ktkr3d.github.io/World-of-Warcraft/index_20221205.html</loc>
+        <lastmod>2024-08-14T11:32:45.448Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://ktkr3d.github.io/archlinux/</loc>
         <lastmod>2024-08-09T08:37:45.822Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -48,15 +66,6 @@
     <url>
         <loc>https://ktkr3d.github.io/ubuntu/index_22_04_1.html</loc>
         <lastmod>2024-07-02T03:39:02.557Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://ktkr3d.github.io/World-of-Warcraft/</loc>
-        <lastmod>2024-03-20T11:59:24.179Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
