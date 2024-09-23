@@ -17592,12 +17592,13 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <entry>
     <title>GNOME 47</title>
     <url>/2024/09/22/GNOME-47/</url>
-    <content><![CDATA[<p><img src="/images/gnome-47.png"><br>GNOME 47がリリースされたのでインストールしてみました。</p>
+    <content><![CDATA[<p><img src="/images/gnome-47.png"><br><a href="https://release.gnome.org/47/">https://release.gnome.org/47/</a></p>
+<p>GNOME 47がリリースされたのでインストールしてみました。</p>
 <ul>
 <li>Chromeはtext-input v3に対応したのでWaylandモードで日本語入力可能です</li>
 <li>vscodeはWaylandモードで日本語入力に対応していません</li>
 <li>code-serverは日本語入力できます(Chromeだから)<br>日本語入力中の文字列の背景が黄色になっているのはなんとかしたい</li>
-<li>GNOME Shell拡張のPenguin: AI Chatbotを使ってみました<br>　　<a href="https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/">https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/</a></li>
+<li>GNOME Shell拡張のPenguin: AI Chatbotを使ってみました<br><a href="https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/">https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/</a><br>とりあえずデフォルトの無料AIモデルに質問してみましたが調整が必要そうですね。。。</li>
 </ul>
 <span id="more"></span>
 
@@ -17606,6 +17607,19 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>GNOME 47</li>
 <li>Wayland(Mutter)</li>
 </ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><p><a href="https://ktkr3d.github.io/archlinux/">https://ktkr3d.github.io/archlinux/</a></p>
+<h3 id="Penguin-AI-Chatbot"><a href="#Penguin-AI-Chatbot" class="headerlink" title="Penguin: AI Chatbot"></a>Penguin: AI Chatbot</h3><h4 id="拡張のインストール"><a href="#拡張のインストール" class="headerlink" title="拡張のインストール"></a>拡張のインストール</h4><p><a href="https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/">https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/</a></p>
+<h4 id="オープンルーターAPIの取得"><a href="#オープンルーターAPIの取得" class="headerlink" title="オープンルーターAPIの取得"></a>オープンルーターAPIの取得</h4><ol>
+<li><a href="https://accounts.openrouter.ai/sign-up">Open Routerのウェブサイト</a>でサインアップする</li>
+<li><a href="https://openrouter.ai/settings/keys">Open Router Keys</a>に移動します</li>
+<li>「Create Key」ボタンをクリックします。</li>
+<li>キーに任意の名前を追加します。拡張機能のデフォルトのLLMまたは無料モデルを使用している場合は、クレジット制限を気にしないことをお勧めします。</li>
+<li>「Create」ボタンをクリックします</li>
+<li>新しいキーをコピーする</li>
+<li>拡張機能の設定ウィンドウに戻り、キーを貼り付けます。<br>  デフォルトのモデルは<code>mattshumer/reflection-70b:free</code>です。<br>  モデルの一覧は<code>https://openrouter.ai/docs/models</code>に掲載されています。<br>  無償で利用可能なモデルは<code>:free</code>で検索できます。</li>
+</ol>
+<h4 id="無償で利用可能なAIモデル-2024-09-23時点"><a href="#無償で利用可能なAIモデル-2024-09-23時点" class="headerlink" title="無償で利用可能なAIモデル (2024-09-23時点)"></a>無償で利用可能なAIモデル (2024-09-23時点)</h4><p>mistralai&#x2F;pixtral-12b:free	<br>mattshumer&#x2F;reflection-70b:free	<br>qwen&#x2F;qwen-2-vl-7b-instruct:free	<br>nousresearch&#x2F;hermes-3-llama-3.1-405b:free	<br>meta-llama&#x2F;llama-3.1-8b-instruct:free	<br>qwen&#x2F;qwen-2-7b-instruct:free	<br>google&#x2F;gemma-2-9b-it:free	<br>mistralai&#x2F;mistral-7b-instruct:free	<br>microsoft&#x2F;phi-3-mini-128k-instruct:free	<br>microsoft&#x2F;phi-3-medium-128k-instruct:free	<br>meta-llama&#x2F;llama-3-8b-instruct:free	<br>gryphe&#x2F;mythomist-7b:free	<br>openchat&#x2F;openchat-7b:free	<br>undi95&#x2F;toppy-m-7b:free	<br>huggingfaceh4&#x2F;zephyr-7b-beta:free	</p>
+<h4 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h4><p>タスクトレイのアイコンをクリックしてテキストを入力します。<br>回答のテキストをコピーするにはテキストをクリックします。</p>
 ]]></content>
       <tags>
         <tag>gnome</tag>
