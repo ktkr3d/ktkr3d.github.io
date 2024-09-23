@@ -15,8 +15,33 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 15 Aug 2024 01:25:10 GMT</pubDate>
+    <pubDate>Mon, 23 Sep 2024 14:16:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>GNOME 47</title>
+      <link>https://ktkr3d.github.io/2024/09/22/GNOME-47/</link>
+      <guid>https://ktkr3d.github.io/2024/09/22/GNOME-47/</guid>
+      <pubDate>Sun, 22 Sep 2024 02:05:29 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/gnome-47.png&quot;&gt;&lt;br&gt;GNOME 47がリリースされたのでインストールしてみました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chromeはtext-input v3に対応したのでWaylandモードで日本語入力可能です&lt;/li&gt;
+&lt;li&gt;vscodeはWaylandモードで日本語入力に対応していません&lt;/li&gt;
+&lt;li&gt;code-serverは日本語入力できます(Chromeだから)&lt;br&gt;日本語入力中の文字列の背景が黄色になっているのはなんとかしたい&lt;/li&gt;
+&lt;li&gt;GNOME Shell拡張のPenguin: AI Chatbotを使ってみました&lt;br&gt;　　&lt;a href=&quot;https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/&quot;&gt;https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome/">gnome</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/09/22/GNOME-47/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Trinket Button Custom</title>
@@ -463,29 +488,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/08/27/Hyprland-Ags/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Hyprland</title>
-      <link>https://ktkr3d.github.io/2023/08/25/Hyprland/</link>
-      <guid>https://ktkr3d.github.io/2023/08/25/Hyprland/</guid>
-      <pubDate>Fri, 25 Aug 2023 08:33:56 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/hyprland-minibookx.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://hyprland.org/&quot;&gt;https://hyprland.org/&lt;/a&gt;&lt;br&gt;MiniBook X のArch Linux にHyprland を導入してみました。&lt;br&gt;かなりイケていますが、私に使いこなせるのだろうか。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/08/25/Hyprland/#disqus_thread</comments>
       
     </item>
     
