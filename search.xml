@@ -17618,7 +17618,90 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>新しいキーをコピーする</li>
 <li>拡張機能の設定ウィンドウに戻り、キーを貼り付けます。<br>  デフォルトのモデルは<code>mattshumer/reflection-70b:free</code>です。<br>  モデルの一覧は<code>https://openrouter.ai/docs/models</code>に掲載されています。<br>  無償で利用可能なモデルは<code>:free</code>で検索できます。</li>
 </ol>
-<h4 id="無償で利用可能なAIモデル-2024-09-23時点"><a href="#無償で利用可能なAIモデル-2024-09-23時点" class="headerlink" title="無償で利用可能なAIモデル (2024-09-23時点)"></a>無償で利用可能なAIモデル (2024-09-23時点)</h4><p>mistralai&#x2F;pixtral-12b:free	<br>mattshumer&#x2F;reflection-70b:free	<br>qwen&#x2F;qwen-2-vl-7b-instruct:free	<br>nousresearch&#x2F;hermes-3-llama-3.1-405b:free	<br>meta-llama&#x2F;llama-3.1-8b-instruct:free	<br>qwen&#x2F;qwen-2-7b-instruct:free	<br>google&#x2F;gemma-2-9b-it:free	<br>mistralai&#x2F;mistral-7b-instruct:free	<br>microsoft&#x2F;phi-3-mini-128k-instruct:free	<br>microsoft&#x2F;phi-3-medium-128k-instruct:free	<br>meta-llama&#x2F;llama-3-8b-instruct:free	<br>gryphe&#x2F;mythomist-7b:free	<br>openchat&#x2F;openchat-7b:free	<br>undi95&#x2F;toppy-m-7b:free	<br>huggingfaceh4&#x2F;zephyr-7b-beta:free	</p>
+<h4 id="無償で利用可能なAIモデル-2024-09-23時点"><a href="#無償で利用可能なAIモデル-2024-09-23時点" class="headerlink" title="無償で利用可能なAIモデル (2024-09-23時点)"></a>無償で利用可能なAIモデル (2024-09-23時点)</h4><table>
+<thead>
+<tr>
+<th align="left">AIモデル</th>
+<th align="left">日本語</th>
+<th align="left">Linux関連</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">mistralai&#x2F;pixtral-12b:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">mattshumer&#x2F;reflection-70b:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">qwen&#x2F;qwen-2-vl-7b-instruct:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">nousresearch&#x2F;hermes-3-llama-3.1-405b:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">meta-llama&#x2F;llama-3.1-8b-instruct:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">qwen&#x2F;qwen-2-7b-instruct:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">google&#x2F;gemma-2-9b-it:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">mistralai&#x2F;mistral-7b-instruct:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">microsoft&#x2F;phi-3-mini-128k-instruct:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">microsoft&#x2F;phi-3-medium-128k-instruct:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">meta-llama&#x2F;llama-3-8b-instruct:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">gryphe&#x2F;mythomist-7b:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">openchat&#x2F;openchat-7b:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">undi95&#x2F;toppy-m-7b:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">huggingfaceh4&#x2F;zephyr-7b-beta:free</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
 <h4 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h4><p>タスクトレイのアイコンをクリックしてテキストを入力します。<br>回答のテキストをコピーするにはテキストをクリックします。</p>
 <h4 id="所感"><a href="#所感" class="headerlink" title="所感"></a>所感</h4><p>各AIモデルに「こんにちは」「GNOME 47の新機能を教えてください。」と書き込んでみました。</p>
 <p>「こんにちは」に対しては、時刻を考慮するもの、フランクなもの、日本語が苦手なもの、日本語の挨拶であることを英語で説明するもの、がありました。</p>
