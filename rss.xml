@@ -15,17 +15,17 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 17 Oct 2024 22:15:10 GMT</pubDate>
+    <pubDate>Fri, 18 Oct 2024 11:12:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>fish + starship</title>
-      <link>https://ktkr3d.github.io/2024/10/17/fish/</link>
-      <guid>https://ktkr3d.github.io/2024/10/17/fish/</guid>
+      <link>https://ktkr3d.github.io/2024/10/17/fish_starship/</link>
+      <guid>https://ktkr3d.github.io/2024/10/17/fish_starship/</guid>
       <pubDate>Thu, 17 Oct 2024 08:10:51 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;fish(friendly interactive shell)はユーザフレンドリーなコマンドラインシェルです。&lt;br&gt;シェルをfishに切り替えてみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&quot;/images/fish_starship.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;fish(friendly interactive shell)はユーザフレンドリーなコマンドラインシェルです。&lt;br&gt;シェルをfishに切り替えてみました。&lt;br&gt;またプロンプトを装飾するためにStarshipを使ってみました。&lt;/p&gt;</description>
       
       
       
@@ -36,7 +36,7 @@
       <category domain="https://ktkr3d.github.io/tags/starship/">starship</category>
       
       
-      <comments>https://ktkr3d.github.io/2024/10/17/fish/#disqus_thread</comments>
+      <comments>https://ktkr3d.github.io/2024/10/17/fish_starship/#disqus_thread</comments>
       
     </item>
     
