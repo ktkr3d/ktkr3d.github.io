@@ -17766,7 +17766,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><p>グリーティングを無効化</p>
  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> -U fish_greeting</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>環境設定ファイル<br> Windowsターミナルの場合はコマンドの色が暗いので以下に変更した方がよいかもしれない。</p>
+<li><p>環境設定ファイル<br> Ubuntuの場合はコマンドの色が暗いので以下に変更した方がよいかもしれない。</p>
  <figure class="highlight bash"><figcaption><span>~/.config/fish/config.fish</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> fish_color_command        brcyan</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="fishプラグイン"><a href="#fishプラグイン" class="headerlink" title="fishプラグイン"></a>fishプラグイン</h3><ul>
