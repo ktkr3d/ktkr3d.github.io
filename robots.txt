@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ktkr3d.github.io/sitemap.xml

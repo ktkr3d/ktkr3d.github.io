@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Memorandum!</title>
+    <link>https://ktkr3d.github.io/</link>
+    
+    <image>
+      <url>https://ktkr3d.github.io/icon.png</url>
+      <title>Memorandum!</title>
+      <link>https://ktkr3d.github.io/</link>
+    </image>
+    
+    <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <description></description>
+    <pubDate>Tue, 29 Oct 2024 14:58:35 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Lutris - Arch Linux</title>
+      <link>https://ktkr3d.github.io/2024/10/29/Lutris-Arch-Linux/</link>
+      <guid>https://ktkr3d.github.io/2024/10/29/Lutris-Arch-Linux/</guid>
+      <pubDate>Tue, 29 Oct 2024 11:45:49 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/lutris-archlinux.png&quot;&gt;&lt;br&gt;Arch LinuxにLutrisをインストールしてみました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/lutris/">lutris</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/10/29/Lutris-Arch-Linux/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>fish + starship</title>
+      <link>https://ktkr3d.github.io/2024/10/17/fish_starship/</link>
+      <guid>https://ktkr3d.github.io/2024/10/17/fish_starship/</guid>
+      <pubDate>Thu, 17 Oct 2024 08:10:51 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/fish_starship_arch.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;fish(friendly interactive shell)はユーザフレンドリーなコマンドラインシェルです。シェルをfishに切り替えてみました。&lt;br&gt;またプロンプトを装飾するためにStarshipを使ってみました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/fish/">fish</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/starship/">starship</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/10/17/fish_starship/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>GNOME 47</title>
+      <link>https://ktkr3d.github.io/2024/09/22/GNOME-47/</link>
+      <guid>https://ktkr3d.github.io/2024/09/22/GNOME-47/</guid>
+      <pubDate>Sun, 22 Sep 2024 02:05:29 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/gnome-47.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://release.gnome.org/47/&quot;&gt;https://release.gnome.org/47/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GNOME 47がリリースされたのでインストールしてみました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chromeはtext-input v3に対応したのでWaylandモードで日本語入力可能です&lt;/li&gt;
+&lt;li&gt;vscodeはWaylandモードで日本語入力に対応していません&lt;/li&gt;
+&lt;li&gt;code-serverは日本語入力できます(Chromeだから)&lt;br&gt;日本語入力中の文字列の背景が黄色になっているのはなんとかしたい&lt;/li&gt;
+&lt;li&gt;GNOME Shell拡張のPenguin: AI Chatbotを使ってみました&lt;br&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/&quot;&gt;https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/&lt;/a&gt;&lt;br&gt;とりあえずデフォルトの無料AIモデルに質問してみましたが調整が必要そうですね。。。&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome/">gnome</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/09/22/GNOME-47/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Trinket Button Custom</title>
+      <link>https://ktkr3d.github.io/2024/08/10/Trinket-Button-Custom/</link>
+      <guid>https://ktkr3d.github.io/2024/08/10/Trinket-Button-Custom/</guid>
+      <pubDate>Sat, 10 Aug 2024 09:40:53 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/trinket_button_custom.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;World of WarcraftのTrinket Button拡張機能をカスタマイズしてみました。&lt;br&gt;&lt;a href=&quot;https://wago.io/Nn9Hg5PH7&quot;&gt;https://wago.io/Nn9Hg5PH7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Trinket Buttonは装備しているトリンケットが利用（Use）可能な場合にクリック可能なボタンとして表示します。&lt;br&gt;World of Warcraftではトリンケットの他に利用可能な装備としてメインハンドがあります。Trinket Buttonを改造してメインハンドにも対応させてみました。&lt;/p&gt;
+&lt;h4 id=&quot;2024-08-14-更新：WoW-11-0-2-対応&quot;&gt;&lt;a href=&quot;#2024-08-14-更新：WoW-11-0-2-対応&quot; class=&quot;headerlink&quot; title=&quot;2024&amp;#x2F;08&amp;#x2F;14 更新：WoW 11.0.2 対応&quot;&gt;&lt;/a&gt;2024&amp;#x2F;08&amp;#x2F;14 更新：WoW 11.0.2 対応&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;deprecatedなAPIを修正&lt;br&gt;&lt;a href=&quot;https://warcraft.wiki.gg/wiki/Patch_11.0.2/API_changes#Deprecated_API&quot;&gt;https://warcraft.wiki.gg/wiki/Patch_11.0.2/API_changes#Deprecated_API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;仕様が変更されたAPIを修正&lt;br&gt;&lt;a href=&quot;https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCooldown&quot;&gt;https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCooldown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/08/10/Trinket-Button-Custom/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>ble.sh</title>
+      <link>https://ktkr3d.github.io/2024/08/04/ble-sh/</link>
+      <guid>https://ktkr3d.github.io/2024/08/04/ble-sh/</guid>
+      <pubDate>Sat, 03 Aug 2024 16:51:53 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/blesh.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;bashで自動補完やシンタックスハイライトをします。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/akinomyoga/ble.sh&quot;&gt;https://github.com/akinomyoga/ble.sh&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/bash/">bash</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/blesh/">blesh</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/08/04/ble-sh/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Custom OSD</title>
+      <link>https://ktkr3d.github.io/2024/08/04/Custom-OSD/</link>
+      <guid>https://ktkr3d.github.io/2024/08/04/Custom-OSD/</guid>
+      <pubDate>Sat, 03 Aug 2024 16:51:36 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/custom-osd.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;GNOME Shellのボリューム変更や輝度変更のOSDは数値を表示しません。&lt;br&gt;Custom OSD拡張を利用して数値表示やスタイルのカスタマイズをします。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/6142/custom-osd/&quot;&gt;https://extensions.gnome.org/extension/6142/custom-osd/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/neuromorph/custom-osd&quot;&gt;https://github.com/neuromorph/custom-osd&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome-shell/">gnome-shell</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/08/04/Custom-OSD/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Fastfetch</title>
+      <link>https://ktkr3d.github.io/2024/08/01/Fastfetch/</link>
+      <guid>https://ktkr3d.github.io/2024/08/01/Fastfetch/</guid>
+      <pubDate>Thu, 01 Aug 2024 12:35:36 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/fastfetch.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;システム情報を表示するツールであるNeofetchが開発終了とのことなので後継のFastfetchを使ってみました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fastfetch-cli/fastfetch&quot;&gt;https://github.com/fastfetch-cli/fastfetch&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/fastfetch/">fastfetch</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/08/01/Fastfetch/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Customize lock screen date format</title>
+      <link>https://ktkr3d.github.io/2024/07/25/Customize-lock-screen-date-format/</link>
+      <guid>https://ktkr3d.github.io/2024/07/25/Customize-lock-screen-date-format/</guid>
+      <pubDate>Thu, 25 Jul 2024 13:54:16 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/customize_clock_on_lock_screen.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Gnomeのロックスクリーンの日本語日付書式って変ですよね。拡張機能で変更できました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/4663/customize-clock-on-lock-screen/&quot;&gt;https://extensions.gnome.org/extension/4663/customize-clock-on-lock-screen/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/PRATAP-KUMAR/customize-clock-on-lock-screen&quot;&gt;https://github.com/PRATAP-KUMAR/customize-clock-on-lock-screen&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome-shell/">gnome-shell</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/07/25/Customize-lock-screen-date-format/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>mutter-text-input-v1</title>
+      <link>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/</link>
+      <guid>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/</guid>
+      <pubDate>Mon, 22 Jul 2024 18:14:06 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/mutter-text-input-v1.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;WaylandモードのGoogle Chrome&amp;#x2F;Visual Studio Codeで日本語入力ができるようになりました。私はWaylandの分数スケーリング(Fractional Scaling)設定を利用していますので大変助かりました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/mutter-text-input-v1&quot;&gt;https://aur.archlinux.org/packages/mutter-text-input-v1&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/mutter/">mutter</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Hyper-V</title>
+      <link>https://ktkr3d.github.io/2024/07/06/Hyper-V/</link>
+      <guid>https://ktkr3d.github.io/2024/07/06/Hyper-V/</guid>
+      <pubDate>Sat, 06 Jul 2024 13:14:26 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/hyperv.drawio.svg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;次のような制約のある環境でLinuxやVisual Studio Codeを使いたい場合にはHyper-Vを活用するとよいかもしれません。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows にWSL、VirtualboxやVisual Studio Code等を自由にインストールできない&amp;#x2F;したくない&lt;/li&gt;
+&lt;li&gt;インターネットへのアウトバウンド通信はブラウザでの認証が必要&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/code-server/">code-server</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/hyperv/">hyperv</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/07/06/Hyper-V/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Minibook X + Ubuntu 24.04 LTS</title>
+      <link>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/</link>
+      <guid>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/</guid>
+      <pubDate>Mon, 01 Jul 2024 05:06:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/ubuntu-24-04.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Minibook X にUbuntu 24.04 LTS を導入してみました。&lt;br&gt;ブラウザにはWaylandと相性のよいFirefoxを選択しました。&lt;br&gt;PWAに対応したかったのでSnapは削除しました。&lt;br&gt;タッチスクリーンで操作しやすいようにタスクバーを右側に配置し、GNOME Shellのタイリング拡張を導入しました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      
+      <comments>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>VirtualBox + Arch Linux</title>
+      <link>https://ktkr3d.github.io/2024/04/17/VirtualBox-Arch-Linux/</link>
+      <guid>https://ktkr3d.github.io/2024/04/17/VirtualBox-Arch-Linux/</guid>
+      <pubDate>Wed, 17 Apr 2024 12:20:25 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/archlinuxvbox.png&quot;&gt;&lt;br&gt;VirtualBox でArch Linux の環境を構築してみました。&lt;br&gt;&lt;a href=&quot;https://archlinux.org/&quot;&gt;https://archlinux.org/&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/virtualbox/">virtualbox</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/04/17/VirtualBox-Arch-Linux/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Neutralinojs + VOICEVOX</title>
+      <link>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/</link>
+      <guid>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/</guid>
+      <pubDate>Tue, 02 Jan 2024 11:29:17 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/neutralinojs_voicevox_windows.png&quot;&gt;&lt;br&gt;Nuxt3で作ったVOICEVOXのフロントエンドアプリをクロスプラットフォームなネイティブアプリケーションにしてみました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/neutralinojs-nuxt3-voicevox&quot;&gt;https://github.com/ktkr3d/neutralinojs-nuxt3-voicevox&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/nuxt/">nuxt</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/neutrianojs/">neutrianojs</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/voicevox/">voicevox</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Nuxt3 + VOICEVOX</title>
+      <link>https://ktkr3d.github.io/2023/12/31/Nuxt3-VOICEVOX/</link>
+      <guid>https://ktkr3d.github.io/2023/12/31/Nuxt3-VOICEVOX/</guid>
+      <pubDate>Sun, 31 Dec 2023 05:49:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/nuxt3-voicevox.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Nuxt3 からVOICEVOXを利用してみました。ずんだもんがしゃべってくれます。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/nuxt/">nuxt</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/voicevox/">voicevox</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2023/12/31/Nuxt3-VOICEVOX/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Nuxt3 + Vue-good-table-next</title>
+      <link>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/</link>
+      <guid>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/</guid>
+      <pubDate>Sat, 30 Dec 2023 12:24:45 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/vue-good-table-next.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://nuxt.com/&quot;&gt;https://nuxt.com/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/borisflesch/vue-good-table-next&quot;&gt;https://github.com/borisflesch/vue-good-table-next&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Nuxt 3 でVue-good-table-nextを使ってみました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/nuxt3/">nuxt3</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Hexo Theme Butterfly</title>
+      <link>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/</link>
+      <guid>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/</guid>
+      <pubDate>Sat, 09 Dec 2023 04:00:38 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/hexo-theme-butterfly.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/jerryc127/hexo-theme-butterfly&quot;&gt;https://github.com/jerryc127/hexo-theme-butterfly&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;モダンで多機能なHexo のテーマButterflyを使ってみました。&lt;br&gt;あまりにも多機能なのでシンプルになるように設定しました。&lt;br&gt;パッケージ版を導入して、オリジナルのスクリプトは修正しないようにしました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/hexo/">hexo</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Fractional Scaling on Wayland</title>
+      <link>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</link>
+      <guid>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</guid>
+      <pubDate>Sun, 03 Dec 2023 04:49:27 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/fractional_scaling.png&quot;&gt;&lt;br&gt;CHUWI MiniBook X(10.51 inch, 1200*1920px)のように画素密度の高い画面ではスケーリング値を125%にすると見やすくなるとともにタッチスクリーン操作がしやすくなります。出荷時のWindows 11は150%になっています。これをLinux でもやってみましょう。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/ubuntu/">ubuntu</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/wayland/">wayland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Hexo 7.0 + Freemind + Travel</title>
+      <link>https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/</link>
+      <guid>https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/</guid>
+      <pubDate>Sat, 02 Dec 2023 03:00:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/hexo-freemind-travel.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://hexo.io/news/2023/11/03/hexo-7-0-0-released/&quot;&gt;https://hexo.io/news/2023/11/03/hexo-7-0-0-released/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/wzpan/hexo-theme-freemind/&quot;&gt;https://github.com/wzpan/hexo-theme-freemind/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/hexo-theme-freemind-travel&quot;&gt;https://github.com/ktkr3d/hexo-theme-freemind-travel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hexo 7.0 がリリースされたので新規に環境を構築してみよう。&lt;br&gt;FreemindテーマとTravelカラーテーマを設定します。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/hexo/">hexo</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>GNOME Shell Extensions</title>
+      <link>https://ktkr3d.github.io/2023/11/25/GNOME-Shell-Extensions/</link>
+      <guid>https://ktkr3d.github.io/2023/11/25/GNOME-Shell-Extensions/</guid>
+      <pubDate>Sat, 25 Nov 2023 03:35:33 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/gse.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://extensions.gnome.org/&quot;&gt;https://extensions.gnome.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;久しぶりにGNOME Shell Extension を整理してみよう。環境は以下のとおり。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 22.04(GNOME Shell 42.9, X11) &amp;#x2F; デスクトップPC&lt;/li&gt;
+&lt;li&gt;Ubuntu 23.10(GNOME Shell 45.1, Wayland) &amp;#x2F; タッチスクリーンのノートPC&lt;/li&gt;
+&lt;li&gt;Ubuntu 24.04 Daily Build(GNOME Shell 45.1, Wayland) &amp;#x2F; VMWare Player&lt;/li&gt;
+&lt;li&gt;Arch Linux(GNOME Shell 45.1, Wayland) &amp;#x2F; タッチスクリーンのノートPC&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome-shell-extension/">gnome-shell-extension</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2023/11/25/GNOME-Shell-Extensions/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Lutris</title>
+      <link>https://ktkr3d.github.io/2023/11/23/Lutris/</link>
+      <guid>https://ktkr3d.github.io/2023/11/23/Lutris/</guid>
+      <pubDate>Thu, 23 Nov 2023 08:08:22 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/ubuntu2204lts.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://lutris.net/&quot;&gt;https://lutris.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lutris でWorld of Warcraft を実行してみました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OS はUbuntu 22.04.3 LTS, GNOME Shell 42.9, X11(X.org), Pulseaudio&lt;/li&gt;
+&lt;li&gt;wine-ge-8-24, DirectX 11モード, 64bit, dxvk, vkd3d&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;結果としては、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FPS が90超えることもあります。Windows 11(同じPC)と同等の性能です。&lt;/li&gt;
+&lt;li&gt;Shaderのコンパイルが発生すると左下に&lt;code&gt;Compiling Shaders...&lt;/code&gt;と表示されます。若干もたつく感じがします。キャッシュ方法があるのかよくわかりません。&lt;/li&gt;
+&lt;li&gt;キーボードの反応が遅れることがあります。&lt;/li&gt;
+&lt;li&gt;極まれに音飛びします。&lt;/li&gt;
+&lt;li&gt;DungeonやRaidには若干不安があるがファーミングには使えそう。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2024-10-10&quot;&gt;&lt;a href=&quot;#2024-10-10&quot; class=&quot;headerlink&quot; title=&quot;2024-10-10&quot;&gt;&lt;/a&gt;2024-10-10&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;lutris repository has been disabled&lt;br&gt;&lt;a href=&quot;https://github.com/lutris/lutris/releases&quot;&gt;https://github.com/lutris/lutris/releases&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/lutris/">lutris</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2023/11/23/Lutris/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>

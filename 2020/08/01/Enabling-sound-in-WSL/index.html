@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Enabling sound in WSL | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="https:&#x2F;&#x2F;x410.dev&#x2F;cookbook&#x2F;wsl&#x2F;enabling-sound-in-wsl-ubuntu-let-it-sing&#x2F;https:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;PulseAudio&#x2F;Ports&#x2F;Windows&#x2F;Support&#x2F; PulseAudio を使ってWSL2 上でサウンドを再生できるようにしてみました。Extraterm 上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Enabling sound in WSL">
+<meta property="og:url" content="https://ktkr3d.github.io/2020/08/01/Enabling-sound-in-WSL/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="https:&#x2F;&#x2F;x410.dev&#x2F;cookbook&#x2F;wsl&#x2F;enabling-sound-in-wsl-ubuntu-let-it-sing&#x2F;https:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;PulseAudio&#x2F;Ports&#x2F;Windows&#x2F;Support&#x2F; PulseAudio を使ってWSL2 上でサウンドを再生できるようにしてみました。Extraterm 上">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ktkr3d.github.io/images/moc-on-wsl2.png">
+<meta property="article:published_time" content="2020-08-01T05:06:52.000Z">
+<meta property="article:modified_time" content="2020-08-01T05:06:52.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="wsl">
+<meta property="article:tag" content="moc">
+<meta property="article:tag" content="pulseaudio">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/moc-on-wsl2.png"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2020/08/01/Enabling-sound-in-WSL/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MG6LWTJBY0');
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Enabling sound in WSL',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: undefined,
+  isToc: true,
+  postUpdate: '2020-08-01 14:06:52'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">453</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">169</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><hr class="custom-hr"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/rss.xml"><i class="fa-fw fas fa-rss"></i><span> Subscribe</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Memorandum!"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/rss.xml"><i class="fa-fw fas fa-rss"></i><span> Subscribe</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Enabling sound in WSL</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-08-01T05:06:52.000Z" title="Created 2020-08-01 14:06:52">2020-08-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-08-01T05:06:52.000Z" title="Updated 2020-08-01 14:06:52">2020-08-01</time></span></div><div class="meta-secondline"></div></div></div><article class="post-content" id="article-container"><p><img src="/images/moc-on-wsl2.png" alt="moc-on-wsl2"><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://x410.dev/cookbook/wsl/enabling-sound-in-wsl-ubuntu-let-it-sing/">https://x410.dev/cookbook/wsl/enabling-sound-in-wsl-ubuntu-let-it-sing/</a><br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/">https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/</a></p>
+<p>PulseAudio を使ってWSL2 上でサウンドを再生できるようにしてみました。<br>Extraterm 上でMOC(Music on Console) を利用してみました。<br>Visual Studio Code のターミナルでも実行できます。</p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Windows 10 Insider Preview Build 20180 [IP: 192.168.11.2]<ul>
+<li>PulseAudio for Windows 1.1</li>
+<li>WSL2 (Ubuntu)<ul>
+<li>pulseaudio 13.99.1</li>
+<li>moc 2.6-alpha3 (Theme: transparent-background)</li>
+</ul>
+</li>
+<li>Extraterm 0.52.0 (Theme: Extraterm Default)</li>
+</ul>
+</li>
+</ul>
+<h3 id="構築-Windows-10-側"><a href="#構築-Windows-10-側" class="headerlink" title="構築 (Windows 10 側)"></a>構築 (Windows 10 側)</h3><ol>
+<li>PulseAudio for Windows のダウンロードと展開<br>  <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/">https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/</a></li>
+<li>PulseAudio の設定  <figure class="highlight text"><figcaption><span>C:\tools\pulseaudio\etc\pulse\default.pa</span></figcaption><table><tr><td class="code"><pre><span class="line">#load-module module-native-protocol-tcp</span><br><span class="line">load-module module-native-protocol-tcp auth-anonymous=1</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><figcaption><span>C:\tools\pulseaudio\etc\pulse\default.pa</span></figcaption><table><tr><td class="code"><pre><span class="line">#load-module module-waveout sink_name=output source_name=input</span><br><span class="line">load-module module-waveout sink_name=output source_name=input record=0</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><figcaption><span>C:\tools\pulseaudio\etc\pulse\daemon.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">; exit-idle-time = 20</span><br><span class="line">exit-idle-time = -1</span><br></pre></td></tr></table></figure></li>
+<li>PulseAudio for Window の実行  <figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">C:\tools\pulseaudio\bin&gt;pulseaudio.exe</span><br><span class="line">W: [(<span class="literal">null</span>)] pulsecore/core-util.c: Secure <span class="built_in">directory</span> creation <span class="keyword">not</span> supported <span class="keyword">on</span> <span class="title">Win32</span>.</span><br><span class="line">W: [(<span class="literal">null</span>)] pulsecore/core-util.c: Secure <span class="built_in">directory</span> creation <span class="keyword">not</span> supported <span class="keyword">on</span> <span class="title">Win32</span>.</span><br><span class="line">W: [(<span class="literal">null</span>)] pulsecore/core-util.c: Secure <span class="built_in">directory</span> creation <span class="keyword">not</span> supported <span class="keyword">on</span> <span class="title">Win32</span>.</span><br><span class="line">W: [(<span class="literal">null</span>)] pulsecore/pid.c: Stale PID <span class="built_in">file</span>, overwriting.</span><br><span class="line">W: [(<span class="literal">null</span>)] pulsecore/core.c: failed <span class="built_in">to</span> allocate shared memory pool. Falling back <span class="built_in">to</span> <span class="keyword">a</span> <span class="keyword">normal</span> memory pool.</span><br><span class="line">W: [(<span class="literal">null</span>)] pulsecore/core-util.c: Secure <span class="built_in">directory</span> creation <span class="keyword">not</span> supported <span class="keyword">on</span> <span class="title">Win32</span>.</span><br><span class="line">W: [(<span class="literal">null</span>)] pulsecore/core-util.c: Secure <span class="built_in">directory</span> creation <span class="keyword">not</span> supported <span class="keyword">on</span> <span class="title">Win32</span>.</span><br><span class="line">W: [(<span class="literal">null</span>)] pulsecore/core-util.c: Secure <span class="built_in">directory</span> creation <span class="keyword">not</span> supported <span class="keyword">on</span> <span class="title">Win32</span>.</span><br><span class="line">E: [(<span class="literal">null</span>)] daemon/main.c: Failed <span class="built_in">to</span> <span class="built_in">load</span> <span class="built_in">directory</span>.</span><br></pre></td></tr></table></figure>
+  一度、<code>pulseaudio.exe -D</code>を実行した方がよいかもしれません。<br>  試しに<code>http://192.168.11.2:4317</code>にアクセスするとログが追記されます。</li>
+<li>Windows ファイアウォールの許可要求に対して許可する</li>
+</ol>
+<h3 id="構築-WSL-側"><a href="#構築-WSL-側" class="headerlink" title="構築 (WSL 側)"></a>構築 (WSL 側)</h3><ol>
+<li>パッケージのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install pulseaudio libasound2-plugins moc moc-ffmpeg-plugin</span><br></pre></td></tr></table></figure></li>
+<li>PulseAudio の設定  <figure class="highlight text"><figcaption><span>/etc/pulse/default.pa</span></figcaption><table><tr><td class="code"><pre><span class="line">#load-module module-native-protocol-tcp</span><br><span class="line">load-module module-native-protocol-tcp</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><figcaption><span>/etc/pulse/client.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">; default-server =</span><br><span class="line">default-server = tcp:192.168.11.2</span><br></pre></td></tr></table></figure></li>
+<li>ALSA の設定  <figure class="highlight text"><figcaption><span>/etc/asound.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">pcm.!default &#123;</span><br><span class="line">    type pulse</span><br><span class="line">    # If defaults.namehint.showall is set to off in alsa.conf, then this is</span><br><span class="line">    # necessary to make this pcm show up in the list returned by</span><br><span class="line">    # snd_device_name_hint or aplay -L</span><br><span class="line">    hint.description &quot;Default Audio Device&quot;</span><br><span class="line">&#125;</span><br><span class="line">ctl.!default &#123;</span><br><span class="line">    type pulse</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="実行-Windows-10-側"><a href="#実行-Windows-10-側" class="headerlink" title="実行 (Windows 10 側)"></a>実行 (Windows 10 側)</h3><ol>
+<li>タスクスケジューラでログイン時に実行  <figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line"><span class="built_in">C</span><span class="operator">:</span>\<span class="variable">tools</span>\<span class="variable">pulseaudio</span>\<span class="variable">bin</span>\<span class="variable">pulseaudio</span><span class="operator">.</span><span class="variable">exe</span> <span class="operator">-</span><span class="built_in">D</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="利用-WSL-側"><a href="#利用-WSL-側" class="headerlink" title="利用 (WSL 側)"></a>利用 (WSL 側)</h3><ol>
+<li>Moc の実行  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mocp</span><br></pre></td></tr></table></figure>
+  Moc の使い方は<br>  <a href="https://ktkr3d.github.io/2012/05/31/moc-music-on-console/">https://ktkr3d.github.io/2012/05/31/moc-music-on-console/</a></li>
+</ol>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/wsl/">wsl</a><a class="post-meta__tags" href="/tags/moc/">moc</a><a class="post-meta__tags" href="/tags/pulseaudio/">pulseaudio</a></div><div class="post_share"><div class="social-share" data-image="/images/moc-on-wsl2.png" data-sites="facebook,twitter,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/08/02/EPGStation-PVR-addon-for-Kodi/" title="EPGStation PVR addon for Kodi"><img class="cover" src="/images/kodi_pvr_epgstation_android.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">EPGStation PVR addon for Kodi</div></div></a></div><div class="next-post pull-right"><a href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL"><img class="cover" src="/images/epgstation.drawio.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">EPGStation/Mirakurun on WSL</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2019/06/14/WSL2/" title="WSL 2"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-14</div><div class="title">WSL 2</div></div></a></div><div><a href="/2019/06/04/Chinachu-on-WSL/" title="WSL でChinachu"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-04</div><div class="title">WSL でChinachu</div></div></a></div><div><a href="/2019/06/21/Puppeteer/" title="Puppeteer"><img class="cover" src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-21</div><div class="title">Puppeteer</div></div></a></div><div><a href="/2020/01/27/Puppeteer-on-WSL/" title="Puppeteer on WSL"><img class="cover" src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-27</div><div class="title">Puppeteer on WSL</div></div></a></div><div><a href="/2020/06/19/WSL-Ubuntu-20-04-LTS/" title="WSL - Ubuntu 20.04 LTS"><img class="cover" src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-19</div><div class="title">WSL - Ubuntu 20.04 LTS</div></div></a></div><div><a href="/2020/06/11/Windows-10-Build-19645-WSL-2/" title="Windows 10 Build 19645 + WSL 2"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-11</div><div class="title">Windows 10 Build 19645 + WSL 2</div></div></a></div></div></div><hr class="custom-hr"><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="author-info__name">ktkr3d</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">453</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">169</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github" rel="external nofollow noopener noreferrer"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist" rel="external nofollow noopener noreferrer"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X" rel="external nofollow noopener noreferrer"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a><a class="social-icon" href="/rss.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #f78c31;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%92%B0%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A7%8B%E7%AF%89-Windows-10-%E5%81%B4"><span class="toc-number">2.</span> <span class="toc-text">構築 (Windows 10 側)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A7%8B%E7%AF%89-WSL-%E5%81%B4"><span class="toc-number">3.</span> <span class="toc-text">構築 (WSL 側)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9F%E8%A1%8C-Windows-10-%E5%81%B4"><span class="toc-number">4.</span> <span class="toc-text">実行 (Windows 10 側)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%94%A8-WSL-%E5%81%B4"><span class="toc-number">5.</span> <span class="toc-text">利用 (WSL 側)</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/29/Lutris-Arch-Linux/" title="Lutris - Arch Linux">Lutris - Arch Linux</a><time datetime="2024-10-29T11:45:49.000Z" title="Created 2024-10-29 20:45:49">2024-10-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/17/fish_starship/" title="fish + starship">fish + starship</a><time datetime="2024-10-17T08:10:51.000Z" title="Created 2024-10-17 17:10:51">2024-10-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/22/GNOME-47/" title="GNOME 47">GNOME 47</a><time datetime="2024-09-22T02:05:29.000Z" title="Created 2024-09-22 11:05:29">2024-09-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/10/Trinket-Button-Custom/" title="Trinket Button Custom">Trinket Button Custom</a><time datetime="2024-08-10T09:40:53.000Z" title="Created 2024-08-10 18:40:53">2024-08-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/04/ble-sh/" title="ble.sh">ble.sh</a><time datetime="2024-08-03T16:51:53.000Z" title="Created 2024-08-04 01:51:53">2024-08-04</time></div></div></div></div></div></div></main><footer id="footer" style="background: url(/images/travel.png)"><div id="footer-wrap"><div class="copyright">&copy;2010 - 2024 By ktkr3d</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const disqus_config = function () {
+    this.page.url = 'https://ktkr3d.github.io/2020/08/01/Enabling-sound-in-WSL/'
+    this.page.identifier = '/2020/08/01/Enabling-sound-in-WSL/'
+    this.page.title = 'Enabling sound in WSL'
+  }
+
+  const disqusReset = () => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  btf.addGlobalFn('themeChange', disqusReset, 'disqus')
+
+  const loadDisqus = () =>{
+    if (window.DISQUS) disqusReset()
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://ktkr3d.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=ktkr3d&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if ('Disqus' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"></div></div><hr><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
