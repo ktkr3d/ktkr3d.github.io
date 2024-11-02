@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2024/10/17/fish_starship/</loc>
+        <lastmod>2024-11-02T06:13:20.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2024/10/29/Lutris-Arch-Linux/</loc>
         <lastmod>2024-10-31T21:57:08.907Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,14 +27,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2023/10/15/Forge-GNOME-Shell-extension/</loc>
         <lastmod>2024-10-29T11:51:30.803Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2024/10/17/fish_starship/</loc>
-        <lastmod>2024-10-23T23:49:39.816Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

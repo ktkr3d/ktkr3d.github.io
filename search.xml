@@ -17835,7 +17835,11 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>Windows &#x2F; PowerShellの場合  <figure class="highlight ps1"><figcaption><span>$PROFILE</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">Invoke-Expression</span> (&amp;starship init powershell)</span><br></pre></td></tr></table></figure></li>
 </ul>
 <ol start="4">
-<li>テーマの適用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> %USERPROFILE%\.config</span><br><span class="line">starship preset tokyo-night -o %USERPROFILE%\.config\starship.toml</span><br></pre></td></tr></table></figure></li>
+<li><p>テーマの適用</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> %USERPROFILE%\.config</span><br><span class="line">starship preset tokyo-night -o %USERPROFILE%\.config\starship.toml</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>テーマの適用2</p>
+ <figure class="highlight bash"><figcaption><span>~/.config/fish/config.fish</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> status is-interactive</span><br><span class="line">	<span class="comment"># Commands to run in interactive sessions can go here</span></span><br><span class="line">	<span class="built_in">source</span> <span class="string">&quot;<span class="variable">$HOME</span>/.cargo/env.fish&quot;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment"># alias</span></span><br><span class="line">	bass <span class="built_in">source</span> ~/.bash_aliases</span><br><span class="line"></span><br><span class="line">	<span class="comment"># color theme</span></span><br><span class="line">	base16-tokyo-night-terminal-dark</span><br><span class="line"></span><br><span class="line">	starship init fish | <span class="built_in">source</span></span><br><span class="line">end</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="Starshipカスタマイズ"><a href="#Starshipカスタマイズ" class="headerlink" title="Starshipカスタマイズ"></a>Starshipカスタマイズ</h3><h4 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h4><ul>
 <li>Arch Linux<br>  <img src="/images/fish_starship.png"></li>
