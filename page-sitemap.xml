@@ -10,6 +10,15 @@
     
     
     <url>
+        <loc>https://ktkr3d.github.io/Visual-Studio-Code/</loc>
+        <lastmod>2024-11-03T23:00:28.312Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://ktkr3d.github.io/archlinux/</loc>
         <lastmod>2024-10-29T14:39:52.872Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,15 +48,6 @@
     <url>
         <loc>https://ktkr3d.github.io/World-of-Warcraft/index_20221205.html</loc>
         <lastmod>2024-08-18T06:51:04.231Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://ktkr3d.github.io/Visual-Studio-Code/</loc>
-        <lastmod>2024-08-03T23:19:25.645Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
