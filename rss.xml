@@ -15,8 +15,40 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 31 Oct 2024 21:57:08 GMT</pubDate>
+    <pubDate>Sun, 17 Nov 2024 11:50:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Libadwaita Apps</title>
+      <link>https://ktkr3d.github.io/2024/11/07/Libadwaita-Apps/</link>
+      <guid>https://ktkr3d.github.io/2024/11/07/Libadwaita-Apps/</guid>
+      <pubDate>Thu, 07 Nov 2024 04:51:11 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/libadwaita_apps_on_windows.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;GTK4, libAdwaitaのアプリケーションをWindowsでビルド&amp;amp;実行してみました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gtk-rs.org/gtk4-rs/stable/latest/book/introduction.html&quot;&gt;https://gtk-rs.org/gtk4-rs/stable/latest/book/introduction.html&lt;/a&gt;&lt;br&gt;GUI development with Rust and GTK 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下はlibadwaitaアプリケーション情報&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://apps.gnome.org/&quot;&gt;https://apps.gnome.org/&lt;/a&gt;&lt;br&gt;Apps for GNOME&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arewelibadwaitayet.com/&quot;&gt;https://arewelibadwaitayet.com/&lt;/a&gt;&lt;br&gt;Discover the Best LibAdwaita Apps in One Place&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/valpackett/awesome-gtk&quot;&gt;https://github.com/valpackett/awesome-gtk&lt;/a&gt;&lt;br&gt;Awesome GTK - Collections of awesome native open-source GTK (4 and 3) applications.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gtk/">gtk</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2024/11/07/Libadwaita-Apps/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Lutris - Arch Linux</title>
@@ -438,41 +470,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/11/25/GNOME-Shell-Extensions/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Lutris</title>
-      <link>https://ktkr3d.github.io/2023/11/23/Lutris/</link>
-      <guid>https://ktkr3d.github.io/2023/11/23/Lutris/</guid>
-      <pubDate>Thu, 23 Nov 2023 08:08:22 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/ubuntu2204lts.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://lutris.net/&quot;&gt;https://lutris.net/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Lutris でWorld of Warcraft を実行してみました。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;OS はUbuntu 22.04.3 LTS, GNOME Shell 42.9, X11(X.org), Pulseaudio&lt;/li&gt;
-&lt;li&gt;wine-ge-8-24, DirectX 11モード, 64bit, dxvk, vkd3d&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;結果としては、&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;FPS が90超えることもあります。Windows 11(同じPC)と同等の性能です。&lt;/li&gt;
-&lt;li&gt;Shaderのコンパイルが発生すると左下に&lt;code&gt;Compiling Shaders...&lt;/code&gt;と表示されます。若干もたつく感じがします。キャッシュ方法があるのかよくわかりません。&lt;/li&gt;
-&lt;li&gt;キーボードの反応が遅れることがあります。&lt;/li&gt;
-&lt;li&gt;極まれに音飛びします。&lt;/li&gt;
-&lt;li&gt;DungeonやRaidには若干不安があるがファーミングには使えそう。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2024-10-10&quot;&gt;&lt;a href=&quot;#2024-10-10&quot; class=&quot;headerlink&quot; title=&quot;2024-10-10&quot;&gt;&lt;/a&gt;2024-10-10&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;lutris repository has been disabled&lt;br&gt;&lt;a href=&quot;https://github.com/lutris/lutris/releases&quot;&gt;https://github.com/lutris/lutris/releases&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/lutris/">lutris</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/11/23/Lutris/#disqus_thread</comments>
       
     </item>
     

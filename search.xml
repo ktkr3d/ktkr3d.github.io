@@ -17779,7 +17779,10 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </li>
 <li><p><a href="https://github.com/FabioAntunes/base16-fish-shell">base16-fish-shell</a><br>  シェルのデフォルトの ANSI カラーを変更する</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fisher install FabioAntunes/base16-fish-shell</span><br></pre></td></tr></table></figure>
-<p>  テーマの一覧(<code>base16-</code>から始まる)<br>  <a href="https://github.com/FabioAntunes/base16-fish-shell/tree/main/functions">https://github.com/FabioAntunes/base16-fish-shell/tree/main/functions</a><br>  テーマのプレビュー<br>  <a href="https://dt.iki.fi/base16-previews">https://dt.iki.fi/base16-previews</a><br>  <a href="https://glitchbone.github.io/vscode-base16-term/#/summerfruit-dark">https://glitchbone.github.io/vscode-base16-term/#/summerfruit-dark</a></p>
+<p>  テーマの一覧(<code>base16-</code>から始まる)<br>  <a href="https://github.com/FabioAntunes/base16-fish-shell/tree/main/functions">https://github.com/FabioAntunes/base16-fish-shell/tree/main/functions</a><br>  テーマのプレビュー<br>  <a href="https://dt.iki.fi/base16-previews">https://dt.iki.fi/base16-previews</a><br>  <a href="https://glitchbone.github.io/vscode-base16-term/#/summerfruit-dark">https://glitchbone.github.io/vscode-base16-term/#/summerfruit-dark</a><br>  現在の設定</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> | grep fish_color</span><br></pre></td></tr></table></figure>
+<p>  個別設定の例</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> fish_color_command        brwhite</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><a href="https://github.com/edc/bass">bass</a><br>  fishでbashスクリプトを実行</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fisher install edc/bass</span><br></pre></td></tr></table></figure>
@@ -17906,6 +17909,112 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 ]]></content>
       <tags>
         <tag>lutris</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Libadwaita Apps</title>
+    <url>/2024/11/07/Libadwaita-Apps/</url>
+    <content><![CDATA[<p><img src="/images/libadwaita_apps_on_windows.png"></p>
+<p>GTK4, libAdwaitaのアプリケーションをWindowsでビルド&amp;実行してみました。</p>
+<ul>
+<li><a href="https://gtk-rs.org/gtk4-rs/stable/latest/book/introduction.html">https://gtk-rs.org/gtk4-rs/stable/latest/book/introduction.html</a><br>GUI development with Rust and GTK 4</li>
+</ul>
+<p>以下はlibadwaitaアプリケーション情報</p>
+<ul>
+<li><p><a href="https://apps.gnome.org/">https://apps.gnome.org/</a><br>Apps for GNOME</p>
+</li>
+<li><p><a href="https://arewelibadwaitayet.com/">https://arewelibadwaitayet.com/</a><br>Discover the Best LibAdwaita Apps in One Place</p>
+</li>
+<li><p><a href="https://github.com/valpackett/awesome-gtk">https://github.com/valpackett/awesome-gtk</a><br>Awesome GTK - Collections of awesome native open-source GTK (4 and 3) applications.</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Windows 11 24H2 </li>
+<li>rust 1.82.0</li>
+<li>libadwaita 0.7.1 &#x2F; v1_6</li>
+<li>gtk4 0.9.4 &#x2F; v4_16</li>
+</ul>
+<h3 id="構築-Windowsの場合"><a href="#構築-Windowsの場合" class="headerlink" title="構築(Windowsの場合)"></a>構築(Windowsの場合)</h3><ol>
+<li><p>rustup<br>  <a href="https://rustup.rs/">https://rustup.rs/</a><br>  rustup‑init.exe</p>
+  <figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">rustup default stable<span class="literal">-msvc</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Git</p>
+  <figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">winget install <span class="literal">--id</span> Git.Git <span class="literal">-e</span> <span class="literal">--source</span> winget</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MSYS2</p>
+  <figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">winget install <span class="literal">--id</span> MSYS2.MSYS2 <span class="literal">-e</span> <span class="literal">--source</span> winget</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Visual Studio 2022</p>
+  <figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">winget install Microsoft.VisualStudio.<span class="number">2022</span>.BuildTools <span class="literal">-e</span> <span class="literal">--source</span> winget <span class="literal">--silent</span> <span class="literal">--override</span> <span class="string">&quot;--wait --quiet --add ProductLang En-us --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Python</p>
+  <figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">winget install <span class="literal">--id</span> Python.Python.<span class="number">3.13</span> <span class="literal">-e</span> <span class="literal">--source</span> winget</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>gvsbuild</p>
+</li>
+</ol>
+<ul>
+<li><p>install</p>
+<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">py <span class="literal">-3</span>.<span class="number">13</span> <span class="literal">-m</span> pip install <span class="literal">--user</span> pipx</span><br><span class="line">py <span class="literal">-3</span>.<span class="number">13</span> <span class="literal">-m</span> pipx ensurepath</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">pipx install gvsbuild</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>build</p>
+<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">gvsbuild build gtk4</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Environmental Variables</p>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">PKG_CONFIG_PATH</td>
+<td align="left"><code>C:\gtk-build\gtk\x64\release\lib\pkgconfig</code></td>
+</tr>
+<tr>
+<td align="left">Path</td>
+<td align="left">add <code>C:\gtk-build\gtk\x64\release\bin</code></td>
+</tr>
+<tr>
+<td align="left">Lib</td>
+<td align="left"><code>C:\gtk-build\gtk\x64\release\lib</code></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><h4 id="CUI版"><a href="#CUI版" class="headerlink" title="CUI版"></a>CUI版</h4><ul>
+<li>プロジェクトの作成<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">cargo new my<span class="literal">-gtk-app</span></span><br><span class="line"><span class="built_in">cd</span> my<span class="literal">-gtk-app</span></span><br><span class="line">pkg<span class="literal">-config</span> <span class="literal">--modversion</span> gtk4</span><br></pre></td></tr></table></figure></li>
+<li>ソース<figure class="highlight rust"><figcaption><span>main.rs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Hello, world!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>ビルドと実行<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">cargo add gtk4 <span class="literal">--rename</span> gtk <span class="literal">--features</span> v4_16</span><br><span class="line">cargo run</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="GTK版"><a href="#GTK版" class="headerlink" title="GTK版"></a>GTK版</h4><ul>
+<li>ソースの更新<figure class="highlight rust"><figcaption><span>main.rs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> gtk::prelude::*;</span><br><span class="line"><span class="keyword">use</span> gtk::&#123;glib, Application, ApplicationWindow, Button&#125;;</span><br><span class="line"><span class="keyword">const</span> APP_ID: &amp;<span class="type">str</span> = <span class="string">&quot;org.gtk_rs.HelloWorld3&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() <span class="punctuation">-&gt;</span> glib::ExitCode &#123;</span><br><span class="line">    <span class="comment">// Create a new application</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">app</span> = Application::<span class="title function_ invoke__">builder</span>().<span class="title function_ invoke__">application_id</span>(APP_ID).<span class="title function_ invoke__">build</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Connect to &quot;activate&quot; signal of `app`</span></span><br><span class="line">    app.<span class="title function_ invoke__">connect_activate</span>(build_ui);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Run the application</span></span><br><span class="line">    app.<span class="title function_ invoke__">run</span>()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">build_ui</span>(app: &amp;Application) &#123;</span><br><span class="line">    <span class="comment">// Create a button with label and margins</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">button</span> = Button::<span class="title function_ invoke__">builder</span>()</span><br><span class="line">        .<span class="title function_ invoke__">label</span>(<span class="string">&quot;Press me!&quot;</span>)</span><br><span class="line">        .<span class="title function_ invoke__">margin_top</span>(<span class="number">12</span>)</span><br><span class="line">        .<span class="title function_ invoke__">margin_bottom</span>(<span class="number">12</span>)</span><br><span class="line">        .<span class="title function_ invoke__">margin_start</span>(<span class="number">12</span>)</span><br><span class="line">        .<span class="title function_ invoke__">margin_end</span>(<span class="number">12</span>)</span><br><span class="line">        .<span class="title function_ invoke__">build</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Connect to &quot;clicked&quot; signal of `button`</span></span><br><span class="line">    button.<span class="title function_ invoke__">connect_clicked</span>(|button| &#123;</span><br><span class="line">        <span class="comment">// Set the label to &quot;Hello World!&quot; after the button has been clicked on</span></span><br><span class="line">        button.<span class="title function_ invoke__">set_label</span>(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Create a window</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">window</span> = ApplicationWindow::<span class="title function_ invoke__">builder</span>()</span><br><span class="line">        .<span class="title function_ invoke__">application</span>(app)</span><br><span class="line">        .<span class="title function_ invoke__">title</span>(<span class="string">&quot;My GTK App&quot;</span>)</span><br><span class="line">        .<span class="title function_ invoke__">child</span>(&amp;button)</span><br><span class="line">        .<span class="title function_ invoke__">build</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Present window</span></span><br><span class="line">    window.<span class="title function_ invoke__">present</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>ビルドと実行<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">cargo run</span><br></pre></td></tr></table></figure>
+<img src="/images/gtk4_apps_on_windows.png"></li>
+</ul>
+<h4 id="Adwaita"><a href="#Adwaita" class="headerlink" title="Adwaita"></a>Adwaita</h4><ul>
+<li>ソースの更新<br>GTK版で以下を修正する。<figure class="highlight rust"><figcaption><span>main.rs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// use gtk::&#123;glib, Application, ApplicationWindow, Button&#125;;</span></span><br><span class="line"><span class="keyword">use</span> gtk::&#123;glib, ApplicationWindow, Button&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><figcaption><span>main.rs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// let app = Application::builder().application_id(APP_ID).build();</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">app</span> = adw::Application::<span class="title function_ invoke__">builder</span>().<span class="title function_ invoke__">application_id</span>(APP_ID).<span class="title function_ invoke__">build</span>();</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><figcaption><span>main.rs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// fn build_ui(app: &amp;Application) &#123;</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">build_ui</span>(app: &amp;adw::Application) &#123;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>以下、管理者権限で実行</p>
+<ul>
+<li>UnicodeDecodeError: ‘cp932’ codec can’t decode byte… 対策<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line"><span class="built_in">New-ItemProperty</span> <span class="literal">-LiteralPath</span> <span class="string">&#x27;HKLM:\SYSTEM\CurrentControlSet\Control\Nls\CodePage&#x27;</span> <span class="literal">-Name</span> <span class="string">&#x27;ACP&#x27;</span> <span class="literal">-Value</span> <span class="string">&#x27;65001&#x27;</span> <span class="literal">-PropertyType</span> String <span class="literal">-Force</span>;</span><br><span class="line"><span class="built_in">New-ItemProperty</span> <span class="literal">-LiteralPath</span> <span class="string">&#x27;HKLM:\SYSTEM\CurrentControlSet\Control\Nls\CodePage&#x27;</span> <span class="literal">-Name</span> <span class="string">&#x27;OEMCP&#x27;</span> <span class="literal">-Value</span> <span class="string">&#x27;65001&#x27;</span> <span class="literal">-PropertyType</span> String <span class="literal">-Force</span>;</span><br><span class="line"><span class="built_in">New-ItemProperty</span> <span class="literal">-LiteralPath</span> <span class="string">&#x27;HKLM:\SYSTEM\CurrentControlSet\Control\Nls\CodePage&#x27;</span> <span class="literal">-Name</span> <span class="string">&#x27;MACCP&#x27;</span> <span class="literal">-Value</span> <span class="string">&#x27;65001&#x27;</span> <span class="literal">-PropertyType</span> String <span class="literal">-Force</span>;</span><br></pre></td></tr></table></figure></li>
+<li>build<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">cargo add libadwaita <span class="literal">--rename</span> adw <span class="literal">--features</span> v1_6</span><br><span class="line">gvsbuild build libadwaita librsvg</span><br></pre></td></tr></table></figure></li>
+<li>UnicodeDecodeError: ‘cp932’ codec can’t decode byte… 対策の戻し<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line"><span class="built_in">New-ItemProperty</span> <span class="literal">-LiteralPath</span> <span class="string">&#x27;HKLM:\SYSTEM\CurrentControlSet\Control\Nls\CodePage&#x27;</span> <span class="literal">-Name</span> <span class="string">&#x27;ACP&#x27;</span> <span class="literal">-Value</span> <span class="string">&#x27;932&#x27;</span> <span class="literal">-PropertyType</span> String <span class="literal">-Force</span>;</span><br><span class="line"><span class="built_in">New-ItemProperty</span> <span class="literal">-LiteralPath</span> <span class="string">&#x27;HKLM:\SYSTEM\CurrentControlSet\Control\Nls\CodePage&#x27;</span> <span class="literal">-Name</span> <span class="string">&#x27;OEMCP&#x27;</span> <span class="literal">-Value</span> <span class="string">&#x27;932&#x27;</span> <span class="literal">-PropertyType</span> String <span class="literal">-Force</span>;</span><br><span class="line"><span class="built_in">New-ItemProperty</span> <span class="literal">-LiteralPath</span> <span class="string">&#x27;HKLM:\SYSTEM\CurrentControlSet\Control\Nls\CodePage&#x27;</span> <span class="literal">-Name</span> <span class="string">&#x27;MACCP&#x27;</span> <span class="literal">-Value</span> <span class="string">&#x27;932&#x27;</span> <span class="literal">-PropertyType</span> String <span class="literal">-Force</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>一般ユーザで</p>
+<ul>
+<li>ビルドと実行<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">cargo run</span><br></pre></td></tr></table></figure>
+<img src="/images/libadwaita_apps_on_windows.png"></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>gtk</tag>
       </tags>
   </entry>
 </search>
