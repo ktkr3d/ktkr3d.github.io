@@ -15,8 +15,30 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 18 Nov 2024 04:28:16 GMT</pubDate>
+    <pubDate>Thu, 23 Jan 2025 12:19:27 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>tray-launcher</title>
+      <link>https://ktkr3d.github.io/2025/01/23/tray-launcher/</link>
+      <guid>https://ktkr3d.github.io/2025/01/23/tray-launcher/</guid>
+      <pubDate>Thu, 23 Jan 2025 10:09:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/tray-launcher.png&quot;&gt;&lt;br&gt;Windowsのタスクトレイからスクリプトを実行できるランチャーです。&lt;br&gt;GNOME Shell ExtensionのArgosのような使い方ができて便利です。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Jayich-Lab/tray-launcher&quot;&gt;https://github.com/Jayich-Lab/tray-launcher&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/tray-launcher/">tray-launcher</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/01/23/tray-launcher/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Libadwaita Apps</title>
@@ -444,32 +466,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>GNOME Shell Extensions</title>
-      <link>https://ktkr3d.github.io/2023/11/25/GNOME-Shell-Extensions/</link>
-      <guid>https://ktkr3d.github.io/2023/11/25/GNOME-Shell-Extensions/</guid>
-      <pubDate>Sat, 25 Nov 2023 03:35:33 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/gse.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://extensions.gnome.org/&quot;&gt;https://extensions.gnome.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;久しぶりにGNOME Shell Extension を整理してみよう。環境は以下のとおり。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ubuntu 22.04(GNOME Shell 42.9, X11) &amp;#x2F; デスクトップPC&lt;/li&gt;
-&lt;li&gt;Ubuntu 23.10(GNOME Shell 45.1, Wayland) &amp;#x2F; タッチスクリーンのノートPC&lt;/li&gt;
-&lt;li&gt;Ubuntu 24.04 Daily Build(GNOME Shell 45.1, Wayland) &amp;#x2F; VMWare Player&lt;/li&gt;
-&lt;li&gt;Arch Linux(GNOME Shell 45.1, Wayland) &amp;#x2F; タッチスクリーンのノートPC&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/gnome-shell-extension/">gnome-shell-extension</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/11/25/GNOME-Shell-Extensions/#disqus_thread</comments>
       
     </item>
     
