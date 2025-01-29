@@ -15,8 +15,31 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 24 Jan 2025 04:54:02 GMT</pubDate>
+    <pubDate>Wed, 29 Jan 2025 12:05:27 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Vertical Taskbar for Windows 11</title>
+      <link>https://ktkr3d.github.io/2025/01/29/Vertical-Taskbar-for-Windows-11/</link>
+      <guid>https://ktkr3d.github.io/2025/01/29/Vertical-Taskbar-for-Windows-11/</guid>
+      <pubDate>Wed, 29 Jan 2025 11:46:17 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/windhawk_vertical_taskbar.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Vertical Taskbar for Windows 11はWindows 11でタスクバーを左側や右側に配置できるWindhawkのmodです。&lt;br&gt;ExplorerPatcherよりもWindows 11に対する親和性が高そうです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://windhawk.net/mods/taskbar-vertical&quot;&gt;https://windhawk.net/mods/taskbar-vertical&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://windhawk.net/&quot;&gt;https://windhawk.net/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/microsoft/PowerToys/issues/25101#issuecomment-2364732359&quot;&gt;https://github.com/microsoft/PowerToys/issues/25101#issuecomment-2364732359&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/windhawk/">windhawk</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/01/29/Vertical-Taskbar-for-Windows-11/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>tray-launcher</title>
@@ -446,26 +469,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Hexo 7.0 + Freemind + Travel</title>
-      <link>https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/</link>
-      <guid>https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/</guid>
-      <pubDate>Sat, 02 Dec 2023 03:00:00 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/hexo-freemind-travel.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://hexo.io/news/2023/11/03/hexo-7-0-0-released/&quot;&gt;https://hexo.io/news/2023/11/03/hexo-7-0-0-released/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/wzpan/hexo-theme-freemind/&quot;&gt;https://github.com/wzpan/hexo-theme-freemind/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/hexo-theme-freemind-travel&quot;&gt;https://github.com/ktkr3d/hexo-theme-freemind-travel&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hexo 7.0 がリリースされたので新規に環境を構築してみよう。&lt;br&gt;FreemindテーマとTravelカラーテーマを設定します。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/hexo/">hexo</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/12/02/Hexo-7-0-freemind/#disqus_thread</comments>
       
     </item>
     
