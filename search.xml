@@ -18089,7 +18089,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <h3 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h3><ul>
 <li>有効にならない環境がありました。<br>原因は不明ですが、タスクトレイのWindhawkアイコンを右クリックして”ロードされたMods”を選択して確認するとエクスプローラからアンロードされていました。<ul>
 <li>有効にならない環境<br><img src="/images/windhawk_unloaded.png"></li>
-<li>有効になっている環境<br><img src="/images/windhawk_loaded.png"></li>
+<li>有効になっている環境<br><img src="/images/windhawk_loaded.png"><br>以下をウォッチ中。<br><a href="https://github.com/ramensoftware/windhawk-mods/issues?q=Vertical%20Taskbar">https://github.com/ramensoftware/windhawk-mods/issues?q=Vertical%20Taskbar</a></li>
 </ul>
 </li>
 </ul>
