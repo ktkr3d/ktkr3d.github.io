@@ -15,8 +15,30 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 29 Jan 2025 21:08:39 GMT</pubDate>
+    <pubDate>Fri, 31 Jan 2025 15:54:02 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>FancyWM</title>
+      <link>https://ktkr3d.github.io/2025/01/31/FancyWM/</link>
+      <guid>https://ktkr3d.github.io/2025/01/31/FancyWM/</guid>
+      <pubDate>Fri, 31 Jan 2025 11:32:43 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/fancywm_windhawk.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/FancyWM/fancywm&quot;&gt;https://github.com/FancyWM/fancywm&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/fancywm/">fancywm</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/01/31/FancyWM/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Vertical Taskbar for Windows 11</title>
@@ -376,9 +398,9 @@
       
       <category domain="https://ktkr3d.github.io/tags/nuxt/">nuxt</category>
       
-      <category domain="https://ktkr3d.github.io/tags/neutrianojs/">neutrianojs</category>
-      
       <category domain="https://ktkr3d.github.io/tags/voicevox/">voicevox</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/neutrianojs/">neutrianojs</category>
       
       
       <comments>https://ktkr3d.github.io/2024/01/02/Neutralinojs-VOICEVOX/#disqus_thread</comments>
@@ -444,31 +466,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Fractional Scaling on Wayland</title>
-      <link>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</link>
-      <guid>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/</guid>
-      <pubDate>Sun, 03 Dec 2023 04:49:27 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/fractional_scaling.png&quot;&gt;&lt;br&gt;CHUWI MiniBook X(10.51 inch, 1200*1920px)のように画素密度の高い画面ではスケーリング値を125%にすると見やすくなるとともにタッチスクリーン操作がしやすくなります。出荷時のWindows 11は150%になっています。これをLinux でもやってみましょう。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/ubuntu/">ubuntu</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/wayland/">wayland</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/minibook-x/">minibook-x</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/arch-linux/">arch-linux</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/12/03/Fractional-Scaling-on-Wayland/#disqus_thread</comments>
       
     </item>
     
