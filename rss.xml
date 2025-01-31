@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 31 Jan 2025 15:54:02 GMT</pubDate>
+    <pubDate>Fri, 31 Jan 2025 16:36:26 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,6 +25,7 @@
       <pubDate>Fri, 31 Jan 2025 11:32:43 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/fancywm_windhawk.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;FancyWMはWindows用のタイリングマネージャです。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/FancyWM/fancywm&quot;&gt;https://github.com/FancyWM/fancywm&lt;/a&gt;&lt;/p&gt;</description>
       
       
