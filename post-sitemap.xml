@@ -9,8 +9,24 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2025/01/23/tray-launcher/</loc>
+        <lastmod>2025-02-03T11:19:36.180Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2021/03/18/EPGStation-Settings/</loc>
+        <lastmod>2025-02-03T07:24:09.633Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2025/01/31/FancyWM/</loc>
-        <lastmod>2025-01-31T16:36:26.895Z</lastmod>
+        <lastmod>2025-02-03T07:01:36.257Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -19,14 +35,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2025/01/29/Vertical-Taskbar-for-Windows-11/</loc>
         <lastmod>2025-01-29T21:08:39.947Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2025/01/23/tray-launcher/</loc>
-        <lastmod>2025-01-24T04:54:02.735Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -515,14 +523,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2021/03/28/Ubuntu-21-04-Hirsute/</loc>
         <lastmod>2021-03-28T11:14:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2021/03/18/EPGStation-Settings/</loc>
-        <lastmod>2021-03-18T10:40:25.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -659,6 +659,19 @@
       </categories>
   </entry>
   <entry>
+    <title>Fedora 15 alpha を試してみた</title>
+    <url>/2011/03/09/fedora-15-alpha-e38292e8a9a6e38197e381a6e381bfe3819f/</url>
+    <content><![CDATA[<p><img src="/images/fedra15a.png" alt="fedra"></p>
+<p><a href="http://news.softpedia.com/news/Fedora-15-Alpha-Is-Available-for-Download-188519.shtml">http://news.softpedia.com/news/Fedora-15-Alpha-Is-Available-for-Download-188519.shtml</a><br><a href="http://distrowatch.com/table.php?distribution=fedora">http://distrowatch.com/table.php?distribution=fedora</a></p>
+<p>Fedora 15 のアルファ版が公開されていたので試してみた。<br>カーネル2.6.38、xorg-server 1.9.99.1、デスクトップ環境がGNOME 3 になっていた。</p>
+<p>March 08, 2011 - Alpha release<br>April 14, 2011 - Beta release<br>May 17, 2011 - Final release</p>
+<p>openSUSE 11.4 も公開されたので、後で試してみよう。</p>
+]]></content>
+      <categories>
+        <category>gnome</category>
+      </categories>
+  </entry>
+  <entry>
     <title>WordPress を試してみた</title>
     <url>/2011/03/13/worpress-e38292e8a9a6e38197e381a6e381bfe3819f/</url>
     <content><![CDATA[<p>使用中のレンタルサーバのディスク容量が上限に到達しそうになったので、byethost.com に引越してみた。byethost.com 無料版ではPerl が使えないみたいなので、MovableType からWordPress に移行してみた。</p>
@@ -679,19 +692,6 @@
 ]]></content>
       <categories>
         <category>cms</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Fedora 15 alpha を試してみた</title>
-    <url>/2011/03/09/fedora-15-alpha-e38292e8a9a6e38197e381a6e381bfe3819f/</url>
-    <content><![CDATA[<p><img src="/images/fedra15a.png" alt="fedra"></p>
-<p><a href="http://news.softpedia.com/news/Fedora-15-Alpha-Is-Available-for-Download-188519.shtml">http://news.softpedia.com/news/Fedora-15-Alpha-Is-Available-for-Download-188519.shtml</a><br><a href="http://distrowatch.com/table.php?distribution=fedora">http://distrowatch.com/table.php?distribution=fedora</a></p>
-<p>Fedora 15 のアルファ版が公開されていたので試してみた。<br>カーネル2.6.38、xorg-server 1.9.99.1、デスクトップ環境がGNOME 3 になっていた。</p>
-<p>March 08, 2011 - Alpha release<br>April 14, 2011 - Beta release<br>May 17, 2011 - Final release</p>
-<p>openSUSE 11.4 も公開されたので、後で試してみよう。</p>
-]]></content>
-      <categories>
-        <category>gnome</category>
       </categories>
   </entry>
   <entry>
@@ -1163,7 +1163,7 @@
 
 
 <blockquote>
-<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#114;&#111;&#111;&#116;&#x40;&#98;&#x75;&#x69;&#108;&#100;&#x38;&#120;&#51;&#x32;&#x2e;&#x70;&#x63;&#x62;&#115;&#100;&#x2e;&#111;&#x72;&#x67;">&#114;&#111;&#111;&#116;&#x40;&#98;&#x75;&#x69;&#108;&#100;&#x38;&#120;&#51;&#x32;&#x2e;&#x70;&#x63;&#x62;&#115;&#100;&#x2e;&#111;&#x72;&#x67;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
+<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#x72;&#111;&#x6f;&#x74;&#x40;&#98;&#117;&#105;&#108;&#x64;&#56;&#x78;&#x33;&#50;&#46;&#112;&#x63;&#x62;&#x73;&#x64;&#x2e;&#111;&#114;&#x67;">&#x72;&#111;&#x6f;&#x74;&#x40;&#98;&#117;&#105;&#108;&#x64;&#56;&#x78;&#x33;&#50;&#46;&#112;&#x63;&#x62;&#x73;&#x64;&#x2e;&#111;&#114;&#x67;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
 </blockquote>
 <p>デスクトップ環境はKDE で、Firefox, Thunderbird, VLC 等をインストール時に追加できる。特に設定しなくても日本語も使えるし、mp3 も再生できる。GRUB からのチェインロードも問題無し。すごく頑張ってると思う。<br>Inspiron duo の1366x768 の解像度に設定すると、ディスプレイが表示されなくなってしまうので、とりあえずVESA で凌ごう。Linux と比べてドライバ(ディスプレイ、ファイルシステム)の情報は少ないかも。<br>ps コマンドやdf コマンドがBSD っぽくて少し懐かしい感じがした。</p>
 ]]></content>
@@ -1177,7 +1177,7 @@
     <content><![CDATA[<p><img src="/images/my_gnome_shell_extension.png" alt="gnome shell extension"></p>
 <p><a href="http://live.gnome.org/GnomeShell/Extensions">http://live.gnome.org/GnomeShell/Extensions</a><br><a href="http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html">http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html</a></p>
 <p>まずは、上部のパネルをクリックすると一定時間メッセージを表示するHello World 的な物から！！とりあえず日本語はunescape() してみた。</p>
-<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#104;&#101;&#x6c;&#x6c;&#111;&#45;&#x77;&#111;&#x72;&#108;&#100;&#x40;&#107;&#116;&#x6b;&#x72;&#x33;&#100;&#46;&#115;&#105;&#x74;&#101;&#x31;&#x31;&#46;&#99;&#111;&#109;">&#104;&#101;&#x6c;&#x6c;&#111;&#45;&#x77;&#111;&#x72;&#108;&#100;&#x40;&#107;&#116;&#x6b;&#x72;&#x33;&#100;&#46;&#115;&#105;&#x74;&#101;&#x31;&#x31;&#46;&#99;&#111;&#109;</a>&#x2F;</p>
+<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#104;&#x65;&#108;&#x6c;&#x6f;&#x2d;&#119;&#111;&#114;&#x6c;&#100;&#64;&#107;&#116;&#x6b;&#x72;&#x33;&#x64;&#x2e;&#x73;&#105;&#116;&#101;&#x31;&#x31;&#46;&#99;&#x6f;&#109;">&#104;&#x65;&#108;&#x6c;&#x6f;&#x2d;&#119;&#111;&#114;&#x6c;&#100;&#64;&#107;&#116;&#x6b;&#x72;&#x33;&#x64;&#x2e;&#x73;&#105;&#116;&#101;&#x31;&#x31;&#46;&#99;&#x6f;&#109;</a>&#x2F;</p>
 <h3 id="extension-js-ファイル"><a href="#extension-js-ファイル" class="headerlink" title="extension.js ファイル"></a>extension.js ファイル</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">// Sample extension code, makes clicking on the panel show a message</span><br><span class="line">const St = imports.gi.St;</span><br><span class="line">const Mainloop = imports.mainloop;</span><br><span class="line"></span><br><span class="line">const Gettext = imports.gettext.domain(&#x27;gnome-shell-extensions&#x27;);</span><br><span class="line">const _ = Gettext.gettext;</span><br><span class="line"></span><br><span class="line">const Main = imports.ui.main;</span><br><span class="line"></span><br><span class="line">function _showHello() &#123;</span><br><span class="line">    let text = new St.Label(&#123; style_class: &#x27;helloworld-label&#x27;, text: _(unescape(&quot;%uFF0F%u4EBA%u25D5%u203F%u203F%u25D5%u4EBA%uFF3C%u300C%u50D5%u3068%u5951%u7D04%u3057%u3066%u9B54%u6CD5%u5C11%u5973%u306B%u306A%u3063%u3066%u3088%uFF01%uFF01%u300D&quot;)) &#125;);</span><br><span class="line">    let monitor = global.get_primary_monitor();</span><br><span class="line">    global.stage.add_actor(text);</span><br><span class="line">    text.set_position(Math.floor (monitor.width / 2 - text.width / 2), Math.floor(monitor.height / 2 - text.height / 2));</span><br><span class="line">    Mainloop.timeout_add(3000, function () &#123; text.destroy(); &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Put your extension initialization code here</span><br><span class="line">function main(metadata) &#123;</span><br><span class="line">    imports.gettext.bindtextdomain(&#x27;gnome-shell-extensions&#x27;, metadata.localedir);</span><br><span class="line"></span><br><span class="line">    Main.panel.actor.reactive = true;</span><br><span class="line">    Main.panel.actor.connect(&#x27;button-release-event&#x27;, _showHello);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -1217,7 +1217,7 @@
 <ol start="3">
 <li><p>$HOME&#x2F;.themes&#x2F; ディレクトリを作成して、アーカイブの中のテーマを展開する。</p>
 </li>
-<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#116;&#x68;&#x65;&#x6d;&#x65;&#115;&#x65;&#108;&#101;&#x63;&#116;&#111;&#x72;&#64;&#x66;&#x70;&#x6d;&#117;&#114;&#x70;&#x68;&#121;&#x2e;&#x63;&#x6f;&#109;">&#116;&#x68;&#x65;&#x6d;&#x65;&#115;&#x65;&#108;&#101;&#x63;&#116;&#111;&#x72;&#64;&#x66;&#x70;&#x6d;&#117;&#114;&#x70;&#x68;&#121;&#x2e;&#x63;&#x6f;&#109;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
+<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#116;&#x68;&#101;&#109;&#x65;&#x73;&#101;&#x6c;&#101;&#99;&#x74;&#x6f;&#114;&#64;&#x66;&#112;&#109;&#x75;&#x72;&#x70;&#104;&#x79;&#x2e;&#99;&#111;&#x6d;">&#116;&#x68;&#101;&#109;&#x65;&#x73;&#101;&#x6c;&#101;&#99;&#x74;&#x6f;&#114;&#64;&#x66;&#112;&#109;&#x75;&#x72;&#x70;&#104;&#x79;&#x2e;&#99;&#111;&#x6d;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
 </li>
 <li><p>[Alt]+[F2]を押して、r を入力して、[Enter] を押す。</p>
 </li>
@@ -1390,9 +1390,9 @@
     <url>/2011/05/30/gnome-shell-extension-e38292e5bea9e6b4bbe38195e3819be381a6e381bfe3819f/</url>
     <content><![CDATA[<p>GNOME Shell を3.0.2 にしたらdock が消えたので復活させてみた。</p>
 <ul>
-<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#x6f;&#99;&#x6b;&#x40;&#103;&#x6e;&#111;&#x6d;&#101;&#45;&#x73;&#104;&#101;&#x6c;&#108;&#45;&#101;&#120;&#116;&#x65;&#110;&#x73;&#x69;&#x6f;&#110;&#x73;&#46;&#x67;&#110;&#x6f;&#x6d;&#x65;&#46;&#111;&#x72;&#103;">&#x64;&#x6f;&#99;&#x6b;&#x40;&#103;&#x6e;&#111;&#x6d;&#101;&#45;&#x73;&#104;&#101;&#x6c;&#108;&#45;&#101;&#120;&#116;&#x65;&#110;&#x73;&#x69;&#x6f;&#110;&#x73;&#46;&#x67;&#110;&#x6f;&#x6d;&#x65;&#46;&#111;&#x72;&#103;</a>&#x2F;metadata.json</p>
+<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#111;&#x63;&#107;&#64;&#x67;&#x6e;&#x6f;&#x6d;&#x65;&#x2d;&#x73;&#x68;&#101;&#x6c;&#x6c;&#45;&#101;&#120;&#x74;&#101;&#110;&#115;&#x69;&#x6f;&#x6e;&#115;&#46;&#x67;&#x6e;&#x6f;&#109;&#x65;&#46;&#111;&#114;&#103;">&#x64;&#111;&#x63;&#107;&#64;&#x67;&#x6e;&#x6f;&#x6d;&#x65;&#x2d;&#x73;&#x68;&#101;&#x6c;&#x6c;&#45;&#101;&#120;&#x74;&#101;&#110;&#115;&#x69;&#x6f;&#x6e;&#115;&#46;&#x67;&#x6e;&#x6f;&#109;&#x65;&#46;&#111;&#114;&#103;</a>&#x2F;metadata.json</p>
 </li>
-<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#111;&#99;&#x6b;&#64;&#103;&#110;&#x6f;&#x6d;&#x65;&#45;&#x73;&#104;&#x65;&#x6c;&#x6c;&#45;&#x65;&#120;&#116;&#101;&#x6e;&#115;&#105;&#x6f;&#x6e;&#x73;&#x2e;&#x67;&#x6e;&#111;&#109;&#x65;&#x2e;&#111;&#114;&#x67;">&#100;&#111;&#99;&#x6b;&#64;&#103;&#110;&#x6f;&#x6d;&#x65;&#45;&#x73;&#104;&#x65;&#x6c;&#x6c;&#45;&#x65;&#120;&#116;&#101;&#x6e;&#115;&#105;&#x6f;&#x6e;&#x73;&#x2e;&#x67;&#x6e;&#111;&#109;&#x65;&#x2e;&#111;&#114;&#x67;</a>&#x2F;metadata.json</p>
+<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#111;&#99;&#107;&#64;&#x67;&#110;&#111;&#x6d;&#x65;&#45;&#x73;&#x68;&#101;&#108;&#108;&#x2d;&#x65;&#120;&#116;&#101;&#x6e;&#115;&#x69;&#x6f;&#x6e;&#115;&#x2e;&#103;&#110;&#x6f;&#x6d;&#x65;&#46;&#x6f;&#x72;&#x67;">&#100;&#111;&#99;&#107;&#64;&#x67;&#110;&#111;&#x6d;&#x65;&#45;&#x73;&#x68;&#101;&#108;&#108;&#x2d;&#x65;&#120;&#116;&#101;&#x6e;&#115;&#x69;&#x6f;&#x6e;&#115;&#x2e;&#103;&#110;&#x6f;&#x6d;&#x65;&#46;&#x6f;&#x72;&#x67;</a>&#x2F;metadata.json</p>
 </li>
 </ul>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;uuid&quot;: &quot;dock@gnome-shell-extensions.gnome.org&quot;,</span><br><span class="line">&quot;name&quot;: &quot;Dock&quot;,</span><br><span class="line">&quot;description&quot;: &quot;A dock for the GNOME Shell -- displays favorite and running applications&quot;,</span><br><span class="line">&quot;original-author&quot;: &quot;tclaesson@gmail.com&quot;,</span><br><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot; ],</span><br><span class="line">&quot;localedir&quot;: &quot;/usr/local/share/locale&quot;,</span><br><span class="line">&quot;url&quot;: &quot;http://git.gnome.org/gnome-shell-extensions&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2206,18 +2206,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Wine + Diablo 3 Downloader</title>
-    <url>/2012/05/12/wine-diablo-3-downloader/</url>
-    <content><![CDATA[<p><img src="/images/wine_diablo3_downloader.png" alt="wine diablo 3"><br><a href="http://us.blizzard.com/en-us/games/d3/?rhtml=y">http://us.blizzard.com/en-us/games/d3/?rhtml=y</a></p>
-<p>2012&#x2F;5&#x2F;15 にDiablo 3 がリリースされるので、オンラインでデジタル版をPre-Order してみた。World of Warcraft の年間契約にDiablo 3 がバンドルされるという話もあったけれど、World of Warcraft は休止しているので、とりあえずDiablo 3 単品を購入。World of Warcraft はMists of Pandaria がリリースされたら少しだけ試してみよう。</p>
-<p>Diablo3 ゲーム本体はクローズドベータ版もWine で動いたので、製品版でも多分動作すると思う。今回はダウンロードからLinux 上で試してみよう。</p>
-<p>Diablo-III-8370-enUS-Installer-downloader.exe を右クリックして、Wine Windows Program Loader を選択。回線が細いので時間がかかるなぁ。その間に壁紙とConky をDiablo 仕様にしてみよう。</p>
-]]></content>
-      <categories>
-        <category>game</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Ubuntu 12.04 + Conky 1.9.0</title>
     <url>/2012/05/05/ubuntu-12-04-conky-1-9-0/</url>
     <content><![CDATA[<p><img src="/images/ubuntu_12.04_conky_1.9.0.png" alt="ubuntu 12.04 conky 1.9.0"></p>
@@ -2235,6 +2223,18 @@
 ]]></content>
       <categories>
         <category>linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Wine + Diablo 3 Downloader</title>
+    <url>/2012/05/12/wine-diablo-3-downloader/</url>
+    <content><![CDATA[<p><img src="/images/wine_diablo3_downloader.png" alt="wine diablo 3"><br><a href="http://us.blizzard.com/en-us/games/d3/?rhtml=y">http://us.blizzard.com/en-us/games/d3/?rhtml=y</a></p>
+<p>2012&#x2F;5&#x2F;15 にDiablo 3 がリリースされるので、オンラインでデジタル版をPre-Order してみた。World of Warcraft の年間契約にDiablo 3 がバンドルされるという話もあったけれど、World of Warcraft は休止しているので、とりあえずDiablo 3 単品を購入。World of Warcraft はMists of Pandaria がリリースされたら少しだけ試してみよう。</p>
+<p>Diablo3 ゲーム本体はクローズドベータ版もWine で動いたので、製品版でも多分動作すると思う。今回はダウンロードからLinux 上で試してみよう。</p>
+<p>Diablo-III-8370-enUS-Installer-downloader.exe を右クリックして、Wine Windows Program Loader を選択。回線が細いので時間がかかるなぁ。その間に壁紙とConky をDiablo 仕様にしてみよう。</p>
+]]></content>
+      <categories>
+        <category>game</category>
       </categories>
   </entry>
   <entry>
@@ -4026,7 +4026,7 @@ $ sudo apt-get install gnome-shell
 <h4 id="ドックの設定"><a href="#ドックの設定" class="headerlink" title="ドックの設定"></a>ドックの設定</h4><p>前回のAWN に続き、このバージョンではCairo-Dock も動かなくなりました。Dash to Dock GNOME Shell 拡張も正常に動かないようです。Docky を使うことにしました。</p>
 <pre><code>$ sudo apt-get install docky
 </code></pre>
-<h4 id="トップバーの非表示"><a href="#トップバーの非表示" class="headerlink" title="トップバーの非表示"></a>トップバーの非表示</h4><p>Hide Top Bar GNOME Shell 拡張が正常に動かなかったので、以前使用していた<a href="mailto:&#97;&#x75;&#x74;&#111;&#104;&#x69;&#100;&#101;&#x74;&#x6f;&#x70;&#98;&#97;&#x72;&#x32;&#x40;&#119;&#x65;&#114;&#101;&#x77;&#x6f;&#x6c;&#118;&#101;&#115;&#x2e;&#x75;&#x73;">&#97;&#x75;&#x74;&#111;&#104;&#x69;&#100;&#101;&#x74;&#x6f;&#x70;&#98;&#97;&#x72;&#x32;&#x40;&#119;&#x65;&#114;&#101;&#x77;&#x6f;&#x6c;&#118;&#101;&#115;&#x2e;&#x75;&#x73;</a> の方のGNOME Shell 拡張を使用してみました。<br>shell-version は3.9.4 を指定しました。</p>
+<h4 id="トップバーの非表示"><a href="#トップバーの非表示" class="headerlink" title="トップバーの非表示"></a>トップバーの非表示</h4><p>Hide Top Bar GNOME Shell 拡張が正常に動かなかったので、以前使用していた<a href="mailto:&#97;&#x75;&#x74;&#111;&#104;&#105;&#100;&#101;&#x74;&#111;&#x70;&#x62;&#97;&#114;&#50;&#x40;&#119;&#x65;&#114;&#101;&#x77;&#111;&#108;&#x76;&#x65;&#115;&#46;&#x75;&#x73;">&#97;&#x75;&#x74;&#111;&#104;&#105;&#100;&#101;&#x74;&#111;&#x70;&#x62;&#97;&#114;&#50;&#x40;&#119;&#x65;&#114;&#101;&#x77;&#111;&#108;&#x76;&#x65;&#115;&#46;&#x75;&#x73;</a> の方のGNOME Shell 拡張を使用してみました。<br>shell-version は3.9.4 を指定しました。</p>
 <figure class="highlight js"><figcaption><span>metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;Auto hide the top panel&quot;</span>,</span><br><span class="line">  <span class="string">&quot;extension-id&quot;</span>: <span class="string">&quot;auto-hide-top-panel&quot;</span>, </span><br><span class="line">  <span class="string">&quot;gettext-domain&quot;</span>: <span class="string">&quot;gnome-shell-extensions&quot;</span>, </span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Auto Hide Top Panel&quot;</span>,</span><br><span class="line">  <span class="string">&quot;settings-schema&quot;</span>: <span class="string">&quot;org.gnome.shell.extensions.auto-hide-top-panel&quot;</span>, </span><br><span class="line">  <span class="string">&quot;shell-version&quot;</span>: [</span><br><span class="line">	<span class="string">&quot;3.5.92&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.6&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.6.1&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.9.4&quot;</span></span><br><span class="line">  ], </span><br><span class="line">  <span class="string">&quot;url&quot;</span>: <span class="string">&quot;http://fpmurphy.com/gnome-shell-extensions&quot;</span>,</span><br><span class="line">  <span class="string">&quot;uuid&quot;</span>: <span class="string">&quot;autohidetopbar2@werewolves.us&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
@@ -10870,7 +10870,7 @@ merge newbranch</pre>
     <url>/2019/06/26/Hexo-Tag-Google-Charts/</url>
     <content><![CDATA[<p><a href="https://github.com/juampi92/hexo-tag-googlecharts">https://github.com/juampi92/hexo-tag-googlecharts</a><br><a href="https://developers.google.com/chart/interactive/docs/gallery">https://developers.google.com/chart/interactive/docs/gallery</a><br>hexo-tag-googlecharts を使ってチャートを表示してみました。</p>
 <p>Google Charts を直接Javascript から使うよりも簡単に利用できて便利です。<br>カスタマイズに少しコツが必要なのでよく使う構成をテンプレートとして作っておくとよさそうです。</p>
-<div id="googleChart9931"></div>
+<div id="googleChart5008"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10879,7 +10879,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.LineChart(document.getElementById("googleChart9931"))).draw(google.visualization.arrayToDataTable([['Date', 'Druid', 'Death Knight', 'Monk', 'Demon Hunter', 'Mage', 'Warlock', 'Shaman'],[new Date('2019/03/21'), 376, 378, 371, 373, 376, 377, 372],[new Date('2019/03/25'), 377, 378, 374, 374, 376, 378, 374],[new Date('2019/03/31'), 377, 380, 376, 375, 376, 378, 375],[new Date('2019/04/05'), 378, 382, 378, 376, 377, 380, 376],[new Date('2019/04/07'), 380, 383, 379, 376, 378, 381, 378],[new Date('2019/04/20'), 382, 384, 382, 377, 379, 383, 379],[new Date('2019/04/27'), 383, 385, 383, 379, 379, 384, 380],[new Date('2019/04/28'), 384, 385, 383, 379, 379, 387, 381],[new Date('2019/04/29'), 385, 385, 383, 380, 380, 388, 381],[new Date('2019/05/06'), 388, 388, 387, 383, 383, 389, 386],[new Date('2019/05/13'), 392, 391, 388, 386, 386, 391, 390],[new Date('2019/05/19'), 394, 392, 390, 388, 387, 392, 391],[new Date('2019/06/09'), 398, 394, 392, 391, 389, 395, 393],[new Date('2019/06/22'), 399, 397, 395, 394, 394, 398, 396]]),{"hAxis":{"title":"Date","format":"M/d"},"vAxis":{"title":"iLevel","format":"#"},"pointSize":"10","series":[{"color":"#FF7D0A"},{"color":"#C41F3B"},{"color":"#00FF96"},{"color":"#A330C9"},{"color":"#40C7EB"},{"color":"#8787ED"},{"color":"#0070DE"}],"title":" ","width":"100%","height":"600"});
+        (new google.visualization.LineChart(document.getElementById("googleChart5008"))).draw(google.visualization.arrayToDataTable([['Date', 'Druid', 'Death Knight', 'Monk', 'Demon Hunter', 'Mage', 'Warlock', 'Shaman'],[new Date('2019/03/21'), 376, 378, 371, 373, 376, 377, 372],[new Date('2019/03/25'), 377, 378, 374, 374, 376, 378, 374],[new Date('2019/03/31'), 377, 380, 376, 375, 376, 378, 375],[new Date('2019/04/05'), 378, 382, 378, 376, 377, 380, 376],[new Date('2019/04/07'), 380, 383, 379, 376, 378, 381, 378],[new Date('2019/04/20'), 382, 384, 382, 377, 379, 383, 379],[new Date('2019/04/27'), 383, 385, 383, 379, 379, 384, 380],[new Date('2019/04/28'), 384, 385, 383, 379, 379, 387, 381],[new Date('2019/04/29'), 385, 385, 383, 380, 380, 388, 381],[new Date('2019/05/06'), 388, 388, 387, 383, 383, 389, 386],[new Date('2019/05/13'), 392, 391, 388, 386, 386, 391, 390],[new Date('2019/05/19'), 394, 392, 390, 388, 387, 392, 391],[new Date('2019/06/09'), 398, 394, 392, 391, 389, 395, 393],[new Date('2019/06/22'), 399, 397, 395, 394, 394, 398, 396]]),{"hAxis":{"title":"Date","format":"M/d"},"vAxis":{"title":"iLevel","format":"#"},"pointSize":"10","series":[{"color":"#FF7D0A"},{"color":"#C41F3B"},{"color":"#00FF96"},{"color":"#A330C9"},{"color":"#40C7EB"},{"color":"#8787ED"},{"color":"#0070DE"}],"title":" ","width":"100%","height":"600"});
       });
     })();
   }
@@ -10930,7 +10930,7 @@ merge newbranch</pre>
 
 <h3 id="Hexo-Tag-Google-Charts-の利用例"><a href="#Hexo-Tag-Google-Charts-の利用例" class="headerlink" title="Hexo Tag Google Charts の利用例"></a>Hexo Tag Google Charts の利用例</h3><p><a href="https://developers.google.com/chart/interactive/docs/gallery">https://developers.google.com/chart/interactive/docs/gallery</a><br>Chart Gallery の中でよく使いそうな例を移植してみました。</p>
 <h4 id="表-Table"><a href="#表-Table" class="headerlink" title="表(Table)"></a>表(Table)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/table">https://developers.google.com/chart/interactive/docs/gallery/table</a></p>
-<div id="googleChart718"></div>
+<div id="googleChart4815"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10939,7 +10939,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart718"))).draw(google.visualization.arrayToDataTable([['Name', 'Salary', 'Full Time Employee'],['Mike',  {v: 10000, f: '$10,000'}, true],['Jim',   {v:8000,   f: '$8,000'},  false],['Alice', {v: 12500, f: '$12,500'}, true],['Bob',   {v: 7000,  f: '$7,000'},  true]]),{"showRowNumber":true,"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart4815"))).draw(google.visualization.arrayToDataTable([['Name', 'Salary', 'Full Time Employee'],['Mike',  {v: 10000, f: '$10,000'}, true],['Jim',   {v:8000,   f: '$8,000'},  false],['Alice', {v: 12500, f: '$12,500'}, true],['Bob',   {v: 7000,  f: '$7,000'},  true]]),{"showRowNumber":true,"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -10947,7 +10947,7 @@ merge newbranch</pre>
 
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts Table 100% 100% %&#125;</span><br><span class="line"> </span><br><span class="line">&#123;&quot;showRowNumber&quot;: true&#125;</span><br><span class="line">&#x27;Name&#x27;, &#x27;Salary&#x27;, &#x27;Full Time Employee&#x27;</span><br><span class="line">&#x27;Mike&#x27;,  &#123;v: 10000, f: &#x27;$10,000&#x27;&#125;, true</span><br><span class="line">&#x27;Jim&#x27;,   &#123;v:8000,   f: &#x27;$8,000&#x27;&#125;,  false</span><br><span class="line">&#x27;Alice&#x27;, &#123;v: 12500, f: &#x27;$12,500&#x27;&#125;, true</span><br><span class="line">&#x27;Bob&#x27;,   &#123;v: 7000,  f: &#x27;$7,000&#x27;&#125;,  true</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="複合グラフ-ComboChart"><a href="#複合グラフ-ComboChart" class="headerlink" title="複合グラフ(ComboChart)"></a>複合グラフ(ComboChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/combochart">https://developers.google.com/chart/interactive/docs/gallery/combochart</a></p>
-<div id="googleChart4738"></div>
+<div id="googleChart2812"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10956,7 +10956,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.ComboChart(document.getElementById("googleChart4738"))).draw(google.visualization.arrayToDataTable([['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],['2004/05',  165,      938,         522,             998,           450,      614.6],['2005/06',  135,      1120,        599,             1268,          288,      682],['2006/07',  157,      1167,        587,             807,           397,      623],['2007/08',  139,      1110,        615,             968,           215,      609.4],['2008/09',  136,      691,         629,             1026,          366,      569.6]]),{"vAxis":{"title":"Cups"},"hAxis":{"title":"Month"},"seriesType":"bars","series":[{},{},{},{},{"type":"line"}],"title":"Monthly Coffee Production by Country","width":"900","height":"500"});
+        (new google.visualization.ComboChart(document.getElementById("googleChart2812"))).draw(google.visualization.arrayToDataTable([['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],['2004/05',  165,      938,         522,             998,           450,      614.6],['2005/06',  135,      1120,        599,             1268,          288,      682],['2006/07',  157,      1167,        587,             807,           397,      623],['2007/08',  139,      1110,        615,             968,           215,      609.4],['2008/09',  136,      691,         629,             1026,          366,      569.6]]),{"vAxis":{"title":"Cups"},"hAxis":{"title":"Month"},"seriesType":"bars","series":[{},{},{},{},{"type":"line"}],"title":"Monthly Coffee Production by Country","width":"900","height":"500"});
       });
     })();
   }
@@ -10965,7 +10965,7 @@ merge newbranch</pre>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts ComboChart 900 500 %&#125;</span><br><span class="line">Monthly Coffee Production by Country</span><br><span class="line">&#123;&quot;vAxis&quot;: &#123;&quot;title&quot;: &quot;Cups&quot;&#125;, &quot;hAxis&quot;: &#123;&quot;title&quot;: &quot;Month&quot;&#125;, &quot;seriesType&quot;: &quot;bars&quot;, &quot;series&quot;: [&#123;&#125;, &#123;&#125;, &#123;&#125;, &#123;&#125;, &#123;&quot;type&quot;: &quot;line&quot;&#125;]&#125;</span><br><span class="line">&#x27;Month&#x27;, &#x27;Bolivia&#x27;, &#x27;Ecuador&#x27;, &#x27;Madagascar&#x27;, &#x27;Papua New Guinea&#x27;, &#x27;Rwanda&#x27;, &#x27;Average&#x27;</span><br><span class="line">&#x27;2004/05&#x27;,  165,      938,         522,             998,           450,      614.6</span><br><span class="line">&#x27;2005/06&#x27;,  135,      1120,        599,             1268,          288,      682</span><br><span class="line">&#x27;2006/07&#x27;,  157,      1167,        587,             807,           397,      623</span><br><span class="line">&#x27;2007/08&#x27;,  139,      1110,        615,             968,           215,      609.4</span><br><span class="line">&#x27;2008/09&#x27;,  136,      691,         629,             1026,          366,      569.6</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/piechart">https://developers.google.com/chart/interactive/docs/gallery/piechart</a></p>
-<div id="googleChart1217"></div>
+<div id="googleChart622"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10974,7 +10974,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.PieChart(document.getElementById("googleChart1217"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"title":"My Daily Activities","width":"100%","height":400});
+        (new google.visualization.PieChart(document.getElementById("googleChart622"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"title":"My Daily Activities","width":"100%","height":400});
       });
     })();
   }
@@ -10983,7 +10983,7 @@ merge newbranch</pre>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts PieChart 100% %&#125;</span><br><span class="line">My Daily Activities</span><br><span class="line">&#123;&quot;is3D&quot;: true&#125;</span><br><span class="line">&#x27;Task&#x27;, &#x27;Hours per Day&#x27;</span><br><span class="line">&#x27;Work&#x27;,     11</span><br><span class="line">&#x27;Eat&#x27;,      2</span><br><span class="line">&#x27;Commute&#x27;,  2</span><br><span class="line">&#x27;Watch TV&#x27;, 2</span><br><span class="line">&#x27;Sleep&#x27;,    7</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="地図-GeoChart"><a href="#地図-GeoChart" class="headerlink" title="地図(GeoChart)"></a>地図(GeoChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">https://developers.google.com/chart/interactive/docs/gallery/geochart</a></p>
-<div id="googleChart1486"></div>
+<div id="googleChart1972"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10992,7 +10992,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.GeoChart(document.getElementById("googleChart1486"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":" ","width":"900","height":"500"});
+        (new google.visualization.GeoChart(document.getElementById("googleChart1972"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":" ","width":"900","height":"500"});
       });
     })();
   }
@@ -11421,7 +11421,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li><code>Add Environment</code></li>
 </ol>
 <ul>
-<li>GIT_USER_EMAIL<br><a href="mailto:&#x68;&#111;&#103;&#x65;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#x68;&#111;&#103;&#x65;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></li>
+<li>GIT_USER_EMAIL<br><a href="mailto:&#x68;&#x6f;&#x67;&#x65;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x68;&#x6f;&#x67;&#x65;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
 </ul>
 <ol start="5">
 <li><code>Create the template</code></li>
@@ -12089,7 +12089,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 </ul>
 </li>
 </ul>
-<h4 id="ネットワーク"><a href="#ネットワーク" class="headerlink" title="ネットワーク"></a>ネットワーク</h4><div id="googleChart7903"></div>
+<h4 id="ネットワーク"><a href="#ネットワーク" class="headerlink" title="ネットワーク"></a>ネットワーク</h4><div id="googleChart4043"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12098,7 +12098,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.OrgChart(document.getElementById("googleChart7903"))).draw(google.visualization.arrayToDataTable([['Name', 'Manager', 'ToolTip'],['Router#1', '', ''],['<b  style="white-space: nowrap"><i class="fas fa-tv"></i>Client</b>', 'Router#1', ''],['<u style="white-space: nowrap">Windows 10</u>', 'Router#1', ''],['VirtualBox', '<u style="white-space: nowrap">Windows 10</u>', ''],['<u>UbuntuDDE</u>', 'VirtualBox', ''],['<u>Deepin</u>', 'VirtualBox', ''],['<u>WSL2</u>', '<u style="white-space: nowrap">Windows 10</u>', ''],['Router#2', 'Router#1', ''],['<u style="white-space: nowrap">Raspberry Pi 2</u>', 'Router#2', ''],['<u style="white-space: nowrap">Raspberry Pi 4</u>', 'Router#2', '']]),{"allowHtml":true,"title":" ","width":400,"height":400});
+        (new google.visualization.OrgChart(document.getElementById("googleChart4043"))).draw(google.visualization.arrayToDataTable([['Name', 'Manager', 'ToolTip'],['Router#1', '', ''],['<b  style="white-space: nowrap"><i class="fas fa-tv"></i>Client</b>', 'Router#1', ''],['<u style="white-space: nowrap">Windows 10</u>', 'Router#1', ''],['VirtualBox', '<u style="white-space: nowrap">Windows 10</u>', ''],['<u>UbuntuDDE</u>', 'VirtualBox', ''],['<u>Deepin</u>', 'VirtualBox', ''],['<u>WSL2</u>', '<u style="white-space: nowrap">Windows 10</u>', ''],['Router#2', 'Router#1', ''],['<u style="white-space: nowrap">Raspberry Pi 2</u>', 'Router#2', ''],['<u style="white-space: nowrap">Raspberry Pi 4</u>', 'Router#2', '']]),{"allowHtml":true,"title":" ","width":400,"height":400});
       });
     })();
   }
@@ -12245,7 +12245,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     <title>Sharing Folders for VMs</title>
     <url>/2020/05/08/Sharing-Folders-for-VMs/</url>
     <content><![CDATA[<p>ホストOS(Windows 10) のフォルダをゲストOS(Linux)と共有してみました。</p>
-<div id="googleChart4870"></div>
+<div id="googleChart4793"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12254,7 +12254,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart4870"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart4793"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12413,7 +12413,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>node_attr</li>
 <li>edge_attr</li>
 </ul>
-<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart3518"></div>
+<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart5058"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12422,7 +12422,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.PieChart(document.getElementById("googleChart3518"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
+        (new google.visualization.PieChart(document.getElementById("googleChart5058"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
       });
     })();
   }
@@ -12813,7 +12813,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>新しいスプレッドシートを作成「空白」を選択</li>
 <li>データの登録</li>
 </ol>
-  <div id="googleChart3195"></div>
+  <div id="googleChart1576"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12822,7 +12822,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart3195"))).draw(google.visualization.arrayToDataTable([['カラム', '1行目', '2行目以降の内容例'],['A', 'region',  'us'],['B', 'id1', '111 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['C', 'id2', '222222 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['D', 'realm', 'Blackrock'],['E', 'faction', 'Horde'],['F', 'name', 'Name01'],['G', 'race', 'vulpera'],['H', 'gender', 'male'],['I', 'class', 'Priest'],['J', 'title', 'the Explorer'],['K', 'spec', 'Shadow'],['L', 'guild', 'guild01'],['M', 'level', '120'],['N', 'achievement', '10000'],['O', 'ilevel', '433'],['P', 'url_profile', '="https://worldofwarcraft.com/en-us/character/"&A2&"/"&D2&"/"&F2'],['Q', 'url_avator', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-avatar.jpg"'],['R', 'url_inset', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-inset.jpg"'],['S', 'url_main', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-main.jpg"'],['T', 'url_wowhead', '="https://www.wowhead.com/"&SUBSTITUTE(K2, " ", "-")&"-"&SUBSTITUTE(I2, " ", "-")&"-guide"']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart1576"))).draw(google.visualization.arrayToDataTable([['カラム', '1行目', '2行目以降の内容例'],['A', 'region',  'us'],['B', 'id1', '111 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['C', 'id2', '222222 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['D', 'realm', 'Blackrock'],['E', 'faction', 'Horde'],['F', 'name', 'Name01'],['G', 'race', 'vulpera'],['H', 'gender', 'male'],['I', 'class', 'Priest'],['J', 'title', 'the Explorer'],['K', 'spec', 'Shadow'],['L', 'guild', 'guild01'],['M', 'level', '120'],['N', 'achievement', '10000'],['O', 'ilevel', '433'],['P', 'url_profile', '="https://worldofwarcraft.com/en-us/character/"&A2&"/"&D2&"/"&F2'],['Q', 'url_avator', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-avatar.jpg"'],['R', 'url_inset', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-inset.jpg"'],['S', 'url_main', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-main.jpg"'],['T', 'url_wowhead', '="https://www.wowhead.com/"&SUBSTITUTE(K2, " ", "-")&"-"&SUBSTITUTE(I2, " ", "-")&"-guide"']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12839,7 +12839,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>Google スプレッドシートのURL を貼り付け</li>
 <li>Customize UI の設定</li>
 </ol>
-  <div id="googleChart2205"></div>
+  <div id="googleChart3456"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12848,7 +12848,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart2205"))).draw(google.visualization.arrayToDataTable([['項目', '値'],['Page Title',  'Champions'],['Page Description', 'from World of Warcraft Armory'],['Select Container', 'Responsive Grid を選択'],['Select Item', 'Media Card を選択']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart3456"))).draw(google.visualization.arrayToDataTable([['項目', '値'],['Page Title',  'Champions'],['Page Description', 'from World of Warcraft Armory'],['Select Container', 'Responsive Grid を選択'],['Select Item', 'Media Card を選択']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12857,7 +12857,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <ol start="5">
 <li>Configure Content の設定</li>
 </ol>
-  <div id="googleChart2690"></div>
+  <div id="googleChart9463"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12866,7 +12866,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart2690"))).draw(google.visualization.arrayToDataTable([['カテゴリ', '項目', '値'],['Image', 'Source', '\{\{url_inset}}'],['', 'Title', ''],['', 'Image Height', '250'],['Title',  'Title',  '\{\{name}}'],['Description', 'Description', '\{\{level}} \{\{race}} \{\{spec}} \{\{class}} <\{\{guild}}> \{\{realm}}'],['Primary Button', 'Caption', 'ARMORY'],['', 'Link', '\{\{url_profile}}'],['Secondary Button', 'Caption', 'GUIDE'],['', 'Link', '\{\{url_wowhead}}']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart9463"))).draw(google.visualization.arrayToDataTable([['カテゴリ', '項目', '値'],['Image', 'Source', '\{\{url_inset}}'],['', 'Title', ''],['', 'Image Height', '250'],['Title',  'Title',  '\{\{name}}'],['Description', 'Description', '\{\{level}} \{\{race}} \{\{spec}} \{\{class}} <\{\{guild}}> \{\{realm}}'],['Primary Button', 'Caption', 'ARMORY'],['', 'Link', '\{\{url_profile}}'],['Secondary Button', 'Caption', 'GUIDE'],['', 'Link', '\{\{url_wowhead}}']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12914,7 +12914,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 </ul>
 </li>
 <li><p>ディレクトリ配置</p>
-<div id="googleChart5619"></div>
+<div id="googleChart5524"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12923,7 +12923,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart5619"))).draw(google.visualization.arrayToDataTable([['環境', '項目', 'パス'],['WSL (Ubuntu)', 'mirakurun コマンド', '/usr/loca/bin/mirakurun'],['', 'mirakurun 設定', '/usr/local/etc/mirakurun/'],['', 'mirakurun ログ', '/usr/local/var/log/'],['', 'mirakurun データ', '/usr/local/var/db/mirakurun/'],['', 'mirakurun プロセス', '/usr/local/var/run/'],['', 'EPGStation 環境', '$HOME/EPGStation/'],['', 'EPGStation の設定', '$HOME/EPGStation/config/'],['', 'EPGStation の録画保存先', '/mnt/j/home/epgstation/'],['', 'シェルスクリプト', '$HOME/bin/'],['Windows 10', 'BonRecTest', 'C:\\tools\\PT3\\']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart5524"))).draw(google.visualization.arrayToDataTable([['環境', '項目', 'パス'],['WSL (Ubuntu)', 'mirakurun コマンド', '/usr/loca/bin/mirakurun'],['', 'mirakurun 設定', '/usr/local/etc/mirakurun/'],['', 'mirakurun ログ', '/usr/local/var/log/'],['', 'mirakurun データ', '/usr/local/var/db/mirakurun/'],['', 'mirakurun プロセス', '/usr/local/var/run/'],['', 'EPGStation 環境', '$HOME/EPGStation/'],['', 'EPGStation の設定', '$HOME/EPGStation/config/'],['', 'EPGStation の録画保存先', '/mnt/j/home/epgstation/'],['', 'シェルスクリプト', '$HOME/bin/'],['Windows 10', 'BonRecTest', 'C:\\tools\\PT3\\']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -13721,6 +13721,10 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     <title>EPGStation Settings</title>
     <url>/2021/03/18/EPGStation-Settings/</url>
     <content><![CDATA[<p>EPGStation でストリーミングが失敗するので対策してみました。</p>
+<h4 id="2025-2-3-更新"><a href="#2025-2-3-更新" class="headerlink" title="2025&#x2F;2&#x2F;3 更新"></a>2025&#x2F;2&#x2F;3 更新</h4><ul>
+<li>yadifありでも問題なくWebストリーミングできた</li>
+<li>mirakurunのtuners.ymlで<code>--decoder libaribb25.dll</code>の設定を忘れると同様にWebストリーミングできなくなるみたい</li>
+</ul>
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
@@ -15672,7 +15676,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>A: Windows 11 Home</li>
 <li>B: Ubuntu 23.04</li>
 </ul>
-<h4 id="💻本体確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#💻本体確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart2706"></div>
+<h4 id="💻本体確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#💻本体確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart9958"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15681,13 +15685,13 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart2706"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['CPU', 'Intel Alder Lake-N100', "✔", "✔"],['メモリ', '12GB (LPDDR5)', "✔", "✔"],['ストレージ', '512GB (NVMe SSD)', "✔", "✔"],['内蔵ディスプレイ', 'IPS 10.51 inch 1920×1200', "✔", "✔"],['タッチスクリーン', '', "✔", "✔"],['タッチパッド', '', "✔", "✔"],['キーボード/バックライト', '', "✔", "✔"],['Wi-Fi', 'Wi-Fi 6', "✔", "✔"],['Bluetooth', 'Bluetooth 5.2', "✔", "✔"],['Audio Jack', '3.5mm (ステレオ)', "✔", "✔"],['内蔵スピーカ', '', "✔", "✔"],['内蔵マイク', '', "✔", "✔"],['内蔵カメラ', '', "✔", "✔"],['USB Port #1 (奥)', 'Type-C USB 3.0', "✔", "✔"],['USB Port #2 (手前)', 'Type-C USB 3.0', "✔", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart9958"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['CPU', 'Intel Alder Lake-N100', "✔", "✔"],['メモリ', '12GB (LPDDR5)', "✔", "✔"],['ストレージ', '512GB (NVMe SSD)', "✔", "✔"],['内蔵ディスプレイ', 'IPS 10.51 inch 1920×1200', "✔", "✔"],['タッチスクリーン', '', "✔", "✔"],['タッチパッド', '', "✔", "✔"],['キーボード/バックライト', '', "✔", "✔"],['Wi-Fi', 'Wi-Fi 6', "✔", "✔"],['Bluetooth', 'Bluetooth 5.2', "✔", "✔"],['Audio Jack', '3.5mm (ステレオ)', "✔", "✔"],['内蔵スピーカ', '', "✔", "✔"],['内蔵マイク', '', "✔", "✔"],['内蔵カメラ', '', "✔", "✔"],['USB Port #1 (奥)', 'Type-C USB 3.0', "✔", "✔"],['USB Port #2 (手前)', 'Type-C USB 3.0', "✔", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
 </script>
 
-<h4 id="🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart7397"></div>
+<h4 id="🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart7956"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15696,7 +15700,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart7397"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['外部ディスプレイ接続', '4K Dell', "✔", "✔"],['外部タッチスクリーンディスプレイ', 'FHD Touch Screen(USB Type-C)', "✔", ""],['ゲームパッド', 'Microsoft', "", ""],['Bluetooth ヘッドセット #1', 'Sony', "✔", "✔"],['Bluetooth ヘッドセット #2', '', "", ""],['USB Camera', 'Logi', "", ""],['USB Mouse', 'Logi', "", ""],['Bluetooth Mouse', 'Logi', "", ""],['タッチペン', '', "", ""],['USB-LAN', '', "", ""],['Video Capture', '別PC のHDMI出力 → MiniBook X のUSB-Cポート', "", ""]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart7956"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['外部ディスプレイ接続', '4K Dell', "✔", "✔"],['外部タッチスクリーンディスプレイ', 'FHD Touch Screen(USB Type-C)', "✔", ""],['ゲームパッド', 'Microsoft', "", ""],['Bluetooth ヘッドセット #1', 'Sony', "✔", "✔"],['Bluetooth ヘッドセット #2', '', "", ""],['USB Camera', 'Logi', "", ""],['USB Mouse', 'Logi', "", ""],['Bluetooth Mouse', 'Logi', "", ""],['タッチペン', '', "", ""],['USB-LAN', '', "", ""],['Video Capture', '別PC のHDMI出力 → MiniBook X のUSB-Cポート', "", ""]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15725,7 +15729,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>Ubunutu ISO<br><a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a><br>Ventoy USBメモリにISO をコピー、USB Type-C ⇔ Type-A 変換経由でブート</li>
 <li>gparted で512GB(477GiB)ストレージのパーティションを再構成</li>
 </ul>
-<div id="googleChart31"></div>
+<div id="googleChart5846"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15734,7 +15738,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart31"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart5846"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15806,7 +15810,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>Boss<br><a href="https://www.wowhead.com/guide/raids/aberrus-the-shadowed-crucible/overview#bosses">https://www.wowhead.com/guide/raids/aberrus-the-shadowed-crucible/overview#bosses</a><br>のボス9体</li>
 <li>難易度<br>LFR: Looking for Raid</li>
 </ul>
-<h3 id="耐久実績"><a href="#耐久実績" class="headerlink" title="耐久実績"></a>耐久実績</h3><div id="googleChart1546"></div>
+<h3 id="耐久実績"><a href="#耐久実績" class="headerlink" title="耐久実績"></a>耐久実績</h3><div id="googleChart7986"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15815,7 +15819,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart1546"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類', '実績'],['Death Knight', 'Frost', "Melee", "✔"],['Demon Hunter', 'Havoc', "Melee", "✔"],['Druid', 'Balance', "Ranged", "✔"],['Evoker', 'Devastation', "Ranged", "✔"],['Hunter', 'Beast Mastery', "Ranged", "✔"],['Monk', 'Windwalker', "Melee", "✔"],['Mage', 'Frost', "Ranged", "✔"],['Warlock', 'Demonology', "Ranged", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart7986"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類', '実績'],['Death Knight', 'Frost', "Melee", "✔"],['Demon Hunter', 'Havoc', "Melee", "✔"],['Druid', 'Balance', "Ranged", "✔"],['Evoker', 'Devastation', "Ranged", "✔"],['Hunter', 'Beast Mastery', "Ranged", "✔"],['Monk', 'Windwalker', "Melee", "✔"],['Mage', 'Frost', "Ranged", "✔"],['Warlock', 'Demonology', "Ranged", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15834,7 +15838,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>TipTac<br>情報を追加するオプション機能がとても便利だけど無くても困らない</li>
 <li>Dugi<br>ギアを入手したタイミングで装着を提案してくれる機能は残しておきたい<br>使っていない機能があるので設定を見直そう<br>AutoRepair は他のアドオンでも代替可能</li>
 </ul>
-<h3 id="育成枠"><a href="#育成枠" class="headerlink" title="育成枠"></a>育成枠</h3><div id="googleChart9378"></div>
+<h3 id="育成枠"><a href="#育成枠" class="headerlink" title="育成枠"></a>育成枠</h3><div id="googleChart6382"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15843,7 +15847,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart9378"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類'],['Paladin', 'Retribution', "Melee"],['Priest', 'Shadow', "Ranged"],['Rogue', 'Subtlety', "Melle"],['Shaman', 'Elemental', "Ranged"],['Warrior', 'Arms', "Melee"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart6382"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類'],['Paladin', 'Retribution', "Melee"],['Priest', 'Shadow', "Ranged"],['Rogue', 'Subtlety', "Melle"],['Shaman', 'Elemental', "Ranged"],['Warrior', 'Arms', "Melee"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15967,7 +15971,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>Calam Arch Installer 2023-08</li>
 <li>gparted で512GB(477GiB)ストレージにArch Linux 用パーティションとして50GiBを準備</li>
 </ul>
-<div id="googleChart1986"></div>
+<div id="googleChart1831"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15976,7 +15980,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart1986"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart1831"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -16060,7 +16064,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><p><a href="https://wiki.hyprland.org/">https://wiki.hyprland.org/</a><br><a href="https://github.com/hyprland-community/awesome-hyprland">https://github.com/hyprland-community/awesome-hyprland</a></p>
-<div id="googleChart954"></div>
+<div id="googleChart5333"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -16069,7 +16073,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart954"))).draw(google.visualization.arrayToDataTable([['項目', '選択肢', '2023-08-25'],['Distribution', 'Arch Linux', "✔"],['Display Manager', 'GDM', "✔"],['WM / Wayland Compositor', 'Hyprland', "✔"],['', 'Sway', ""],['Terminal Emulator', 'kitty', "✔"],['Status Bar', 'Waybar', "✔"],['', 'Eww', ""],['', 'Ags', ""],['Wallpaper', 'hyprpaper', "✔"],['App Launcher', 'Wofi', "✔"],['', 'Rofi', ""],['Screenshot', 'hyprshot', "✔"],['Idle Daemon', 'swayidle', ""],['Locker', "swaylock", ""],['Color Picker', 'hyprpicker', "✔"],['Power Menu', 'Wofi (Script)', "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart5333"))).draw(google.visualization.arrayToDataTable([['項目', '選択肢', '2023-08-25'],['Distribution', 'Arch Linux', "✔"],['Display Manager', 'GDM', "✔"],['WM / Wayland Compositor', 'Hyprland', "✔"],['', 'Sway', ""],['Terminal Emulator', 'kitty', "✔"],['Status Bar', 'Waybar', "✔"],['', 'Eww', ""],['', 'Ags', ""],['Wallpaper', 'hyprpaper', "✔"],['App Launcher', 'Wofi', "✔"],['', 'Rofi', ""],['Screenshot', 'hyprshot', "✔"],['Idle Daemon', 'swayidle', ""],['Locker', "swaylock", ""],['Color Picker', 'hyprpicker', "✔"],['Power Menu', 'Wofi (Script)', "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -17128,7 +17132,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <ol start="2">
 <li>USBメモリで起動し、gpartedでMiniBook X のストレージにUbuntu用のパーティションを作成する。画面が傾いているのでディスプレイの設定を変更する。</li>
 </ol>
-<div id="googleChart5032"></div>
+<div id="googleChart3813"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -17137,7 +17141,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart5032"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart3813"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -18055,8 +18059,10 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><ol>
 <li>tray-launcherの実行  <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">launcher run</span><br></pre></td></tr></table></figure>
   <code>shell:startup</code>にショートカットを作成して自動起動にする。</li>
-<li>BATスクリプトを格納<br>  格納先は<code>%USERPROFILE%\.tray_launcher\scripts</code>。<br>  例えば、ダウンロードフォルダのPNG画像をサーバにSCPでアップロードする場合は以下のようなスクリプトを用意する。  <figure class="highlight bat"><figcaption><span>%USERPROFILE%\.tray_launcher\scripts\Upload.bat</span></figcaption><table><tr><td class="code"><pre><span class="line">wt.exe -w UPLOAD -p &quot;コマンド プロンプト&quot; <span class="built_in">cmd</span>.exe /c &quot;scp.exe <span class="variable">%USERPROFILE%</span>\Downloads\*.png ubuntu@<span class="number">192</span>.<span class="number">168</span>.<span class="number">11</span>.<span class="number">2</span>:/mnt/d/home/Upload &amp;&amp; <span class="built_in">del</span> <span class="variable">%USERPROFILE%</span>\Downloads\*.png &amp; <span class="built_in">set</span> /P x= &amp; <span class="keyword">exit</span> <span class="number">0</span>&quot;</span><br></pre></td></tr></table></figure>
+<li>BATスクリプトを格納<br>  格納先は<code>%USERPROFILE%\.tray_launcher\scripts</code>。</li>
+<li>ダウンロードフォルダのPNG画像をサーバにSCPでアップロードするスクリプト  <figure class="highlight bat"><figcaption><span>%USERPROFILE%\.tray_launcher\scripts\Upload.bat</span></figcaption><table><tr><td class="code"><pre><span class="line">wt.exe -w UPLOAD -p &quot;コマンド プロンプト&quot; <span class="built_in">cmd</span>.exe /c &quot;scp.exe <span class="variable">%USERPROFILE%</span>\Downloads\*.png ubuntu@<span class="number">192</span>.<span class="number">168</span>.<span class="number">11</span>.<span class="number">2</span>:/mnt/d/home/Upload &amp;&amp; <span class="built_in">del</span> <span class="variable">%USERPROFILE%</span>\Downloads\*.png &amp; <span class="built_in">set</span> /P x= &amp; <span class="keyword">exit</span> <span class="number">0</span>&quot;</span><br></pre></td></tr></table></figure>
   日本語を含む場合はSJISで格納する。</li>
+<li>Wingetでソフトウェアをアップグレードするスクリプト  <figure class="highlight bat"><figcaption><span>%USERPROFILE%\.tray_launcher\scripts\Winget Upgrade.bat</span></figcaption><table><tr><td class="code"><pre><span class="line">wt.exe -w UPLOAD -p &quot;コマンド プロンプト&quot; <span class="built_in">cmd</span>.exe /c &quot;winget upgrade --all &amp; <span class="built_in">set</span> /P x= &amp; <span class="keyword">exit</span> <span class="number">0</span>&quot;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ol>
 <li>タスクトレイのアイコンを右クリックして<code>Start a Script</code>、<code>Upload</code>を選択する</li>
@@ -18066,6 +18072,40 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
       <tags>
         <tag>windows</tag>
         <tag>tray-launcher</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FancyWM</title>
+    <url>/2025/01/31/FancyWM/</url>
+    <content><![CDATA[<p><img src="/images/fancywm_windhawk.png"></p>
+<p>FancyWMはWindows用のタイリングマネージャです。<br>2-in-1 PCのタッチスクリーンで便利です。<br>Linux環境とほぼ同等の使い方ができるようになりました。</p>
+<p><a href="https://github.com/FancyWM/fancywm">https://github.com/FancyWM/fancywm</a></p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Windows 11</li>
+<li>FancyWM v2.14.0</li>
+<li>Windhawk 1.5.1<ul>
+<li>Vertical Taskbar for Windows 11 v1.3.1</li>
+<li>Taskbar height and icon size v1.2.16</li>
+<li>Taskbar Clock Customization v1.4</li>
+</ul>
+</li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
+<li>インストール<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">winget <span class="keyword">install</span> fancywm</span><br></pre></td></tr></table></figure></li>
+<li>スタートメニューからFancyWMを起動</li>
+<li>タスクトレイからアイコンを右クリックしてSettingsを選択</li>
+<li>自動的に起動するように設定する<br>  General &#x2F; Startup &#x2F; Run automatically at system startup をチェック</li>
+</ol>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><h4 id="比較"><a href="#比較" class="headerlink" title="比較"></a>比較</h4><ul>
+<li>Windows (FanctWM, Windhawk)<br><img src="/images/fancywm_windhawk.png"></li>
+<li>Linux (Forge, Dash to Panel)<br><img src="/images/forge_dashtopanel.png"></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>windows</tag>
+        <tag>fancywm</tag>
       </tags>
   </entry>
   <entry>
@@ -18097,39 +18137,6 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
       <tags>
         <tag>windows</tag>
         <tag>windhawk</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FancyWM</title>
-    <url>/2025/01/31/FancyWM/</url>
-    <content><![CDATA[<p><img src="/images/fancywm_windhawk.png"></p>
-<p>FancyWMはWindows用のタイリングマネージャです。</p>
-<p><a href="https://github.com/FancyWM/fancywm">https://github.com/FancyWM/fancywm</a></p>
-<span id="more"></span>
-
-<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
-<li>Windows 11</li>
-<li>FancyWM v2.14.0</li>
-<li>Windhawk 1.5.1<ul>
-<li>Vertical Taskbar for Windows 11 v1.3.1</li>
-<li>Taskbar height and icon size v1.2.16</li>
-</ul>
-</li>
-</ul>
-<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
-<li>インストール<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">winget <span class="keyword">install</span> fancywm</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><ul>
-<li>スタートメニューからFancyWMを起動</li>
-</ul>
-<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><h4 id="比較"><a href="#比較" class="headerlink" title="比較"></a>比較</h4><ul>
-<li>Windows<br><img src="/images/fancywm_windhawk.png"></li>
-<li>Linux<br><img src="/images/forge_dashtopanel.png"></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>windows</tag>
-        <tag>fancywm</tag>
       </tags>
   </entry>
 </search>
