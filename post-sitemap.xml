@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2024/09/22/GNOME-47/</loc>
+        <lastmod>2025-02-04T07:37:27.445Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2025/01/31/FancyWM/</loc>
+        <lastmod>2025-02-04T04:30:31.056Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2025/01/23/tray-launcher/</loc>
         <lastmod>2025-02-03T11:19:36.180Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,14 +35,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2021/03/18/EPGStation-Settings/</loc>
         <lastmod>2025-02-03T07:24:09.633Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2025/01/31/FancyWM/</loc>
-        <lastmod>2025-02-03T07:01:36.257Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -75,14 +83,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2023/11/23/Lutris/</loc>
         <lastmod>2024-10-10T08:15:41.088Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2024/09/22/GNOME-47/</loc>
-        <lastmod>2024-10-07T19:11:51.740Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 03 Feb 2025 07:01:36 GMT</pubDate>
+    <pubDate>Tue, 04 Feb 2025 04:30:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -172,7 +172,9 @@
 &lt;li&gt;vscodeはWaylandモードで日本語入力に対応していません&lt;/li&gt;
 &lt;li&gt;code-serverは日本語入力できます(Chromeだから)&lt;br&gt;日本語入力中の文字列の背景が黄色になっているのはなんとかしたい&lt;/li&gt;
 &lt;li&gt;GNOME Shell拡張のPenguin: AI Chatbotを使ってみました&lt;br&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/&quot;&gt;https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/&lt;/a&gt;&lt;br&gt;とりあえずデフォルトの無料AIモデルに質問してみましたが調整が必要そうですね。。。&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+&lt;h4 id=&quot;2025-02-04-更新&quot;&gt;&lt;a href=&quot;#2025-02-04-更新&quot; class=&quot;headerlink&quot; title=&quot;2025-02-04 更新&quot;&gt;&lt;/a&gt;2025-02-04 更新&lt;/h4&gt;&lt;p&gt;タスクトレイのアイコン上にエラーが表示されるので修正する&lt;br&gt;無効な値を指定している&lt;code&gt;icon_name&lt;/code&gt;行をコメントアウトする&lt;br&gt;アイコンはstylesheet.cssで指定している&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;figcaption&gt;&lt;span&gt;extensions.js&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;title function_&quot;&gt;_init&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;extension&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// --- INITIALIZATION AND ICON IN TOPBAR&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;variable language_&quot;&gt;super&lt;/span&gt;.&lt;span class=&quot;title function_&quot;&gt;_init&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0.0&lt;/span&gt;, &lt;span class=&quot;title function_&quot;&gt;_&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Penguin: AI Chatbot&amp;#x27;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;variable language_&quot;&gt;this&lt;/span&gt;.&lt;span class=&quot;property&quot;&gt;extension&lt;/span&gt; = extension&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;variable language_&quot;&gt;this&lt;/span&gt;.&lt;span class=&quot;title function_&quot;&gt;_loadSettings&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;variable language_&quot;&gt;this&lt;/span&gt;.&lt;span class=&quot;title function_&quot;&gt;add_child&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;St&lt;/span&gt;.&lt;span class=&quot;title class_&quot;&gt;Icon&lt;/span&gt;(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// icon_name: &amp;#x27;Penguin: AI Chatbot&amp;#x27;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;style_class&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&amp;#x27;icon&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;));&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
       
       
       
