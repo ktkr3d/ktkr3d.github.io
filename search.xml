@@ -18133,8 +18133,8 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>自動的に起動するように設定する<br>  General &#x2F; Startup &#x2F; Run automatically at system startup をチェック</li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><h4 id="比較"><a href="#比較" class="headerlink" title="比較"></a>比較</h4><ul>
-<li>Windows (FanctWM, Windhawk)<br><img src="/images/fancywm_windhawk.png"><br>Icon size: 32px<br>Taskbar width: 64px</li>
-<li>Linux (Forge, Dash to Panel)<br><img src="/images/forge_dashtopanel.png"><br>125%<br>Panel thickness: 56px<br>App Icon Margin: 0px<br>App Icon Padding: 12px<br>ArcMenu Icon Size: 32px</li>
+<li>Windows (FanctWM, Windhawk)<br><img src="/images/fancywm_windhawk.png"><br>Scale: 125%<br>Taskbar width: 64px<br>Icon size: 32px</li>
+<li>Linux (Forge, Dash to Panel)<br><img src="/images/forge_dashtopanel.png"><br>Scale: 125%<br>Panel thickness: 56px<br>App Icon Margin: 0px<br>App Icon Padding: 12px<br>ArcMenu Icon Size: 32px</li>
 </ul>
 ]]></content>
       <tags>
