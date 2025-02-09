@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2024/10/17/fish_starship/</loc>
+        <lastmod>2025-02-09T08:55:29.499Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2025/01/31/FancyWM/</loc>
         <lastmod>2025-02-09T00:49:02.430Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -51,14 +59,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2024/11/07/Libadwaita-Apps/</loc>
         <lastmod>2024-11-18T04:28:16.663Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2024/10/17/fish_starship/</loc>
-        <lastmod>2024-11-15T07:47:48.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -17836,7 +17836,11 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><p>Nerd Fontのインストール<br> 以下からインストール<br> <a href="https://github.com/yuru7/HackGen/releases">https://github.com/yuru7/HackGen/releases</a></p>
 </li>
 <li><p>Starshipのインストール</p>
- <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">winget install clink starship</span><br><span class="line">clink autorun install -- --quiet</span><br></pre></td></tr></table></figure>
+ <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">winget install clink starship</span><br><span class="line"># clink autorun install -- --quiet</span><br><span class="line"># clink autorun install --quiet</span><br><span class="line">clink <span class="built_in">set</span> clink.logo none</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Windows Terminalからコマンドプロンプト起動時のWindowsロゴ表示を抑止するには<br>go to windows terminal&gt; settings&gt; command prompt&gt; command line and add &#x2F;k in the end.<br>ex: %SystemRoot%\System32\cmd.exe &#x2F;k</li>
+<li>Windows TerminalからPowerShell起動時のWindowsロゴ表示を抑止するには<br>ex: pwsh -nologo<br>ex: “C:\Program Files\PowerShell\7\pwsh.exe” -nologo</li>
+</ul>
 </li>
 <li><p>Starshipの有効化</p>
 </li>
