@@ -15,8 +15,31 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 09 Feb 2025 00:49:02 GMT</pubDate>
+    <pubDate>Sun, 23 Feb 2025 23:13:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>GlazeWM</title>
+      <link>https://ktkr3d.github.io/2025/02/24/GlazeWM/</link>
+      <guid>https://ktkr3d.github.io/2025/02/24/GlazeWM/</guid>
+      <pubDate>Sun, 23 Feb 2025 22:31:25 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/glazewm_windhawk.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Windows用のタイリングウィンドウマネージャGlazeWMを試してみました。&lt;br&gt;挙動に癖が無くて安定していそうなので切り替えました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/glzr-io/glazewm&quot;&gt;https://github.com/glzr-io/glazewm&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/glazewm/">glazewm</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/02/24/GlazeWM/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>FancyWM</title>
@@ -449,26 +472,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Hexo Theme Butterfly</title>
-      <link>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/</link>
-      <guid>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/</guid>
-      <pubDate>Sat, 09 Dec 2023 04:00:38 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/hexo-theme-butterfly.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/jerryc127/hexo-theme-butterfly&quot;&gt;https://github.com/jerryc127/hexo-theme-butterfly&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;モダンで多機能なHexo のテーマButterflyを使ってみました。&lt;br&gt;あまりにも多機能なのでシンプルになるように設定しました。&lt;br&gt;パッケージ版を導入して、オリジナルのスクリプトは修正しないようにしました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/hexo/">hexo</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/#disqus_thread</comments>
       
     </item>
     

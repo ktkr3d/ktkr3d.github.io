@@ -10,8 +10,8 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/archlinux/</loc>
-        <lastmod>2025-02-04T02:58:17.403Z</lastmod>
+        <loc>https://ktkr3d.github.io/GNOME/</loc>
+        <lastmod>2025-02-23T01:26:25.887Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -20,7 +20,16 @@
     
     <url>
         <loc>https://ktkr3d.github.io/EPGStation/</loc>
-        <lastmod>2025-02-03T08:13:02.278Z</lastmod>
+        <lastmod>2025-02-10T08:42:30.855Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://ktkr3d.github.io/archlinux/</loc>
+        <lastmod>2025-02-04T02:58:17.403Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -154,7 +163,7 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/ubuntu/index_ubuntu_17_10.html</loc>
+        <loc>https://ktkr3d.github.io/ubuntu/index_ubuntu_18_04.html</loc>
         <lastmod>2020-08-02T17:44:34.115Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -163,7 +172,7 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/ubuntu/index_ubuntu_18_04.html</loc>
+        <loc>https://ktkr3d.github.io/ubuntu/index_ubuntu_17_10.html</loc>
         <lastmod>2020-08-02T17:44:34.115Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
