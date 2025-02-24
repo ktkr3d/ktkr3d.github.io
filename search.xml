@@ -18050,8 +18050,9 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     <url>/2025/01/23/tray-launcher/</url>
     <content><![CDATA[<p><img src="/images/tray-launcher.png"><br>Windowsのタスクトレイからスクリプトを実行できるランチャーです。<br>GNOME Shell ExtensionのArgosのような使い方ができて便利です。</p>
 <p><a href="https://github.com/Jayich-Lab/tray-launcher">https://github.com/Jayich-Lab/tray-launcher</a></p>
-<h4 id="2025-02-25"><a href="#2025-02-25" class="headerlink" title="2025-02-25"></a>2025-02-25</h4><p>起動時にPythonのウィンドウが開きっぱなしになってしまった。<br>まだ報告されていないようだ。<br><a href="https://github.com/Jayich-Lab/tray-launcher/issues">https://github.com/Jayich-Lab/tray-launcher/issues</a></p>
+<h4 id="2025-02-25"><a href="#2025-02-25" class="headerlink" title="2025-02-25"></a>2025-02-25</h4><p>起動時にPythonのウィンドウが開きっぱなしになってしまうことがあった。<br>まだ報告されていないようだ。複数の環境で発生したが、再現性はないかもしれない。<br><a href="https://github.com/Jayich-Lab/tray-launcher/issues">https://github.com/Jayich-Lab/tray-launcher/issues</a></p>
 <p>以下のソフトが動作したので取り急ぎ切り替えた。<br><a href="https://github.com/zozonteq/task-tray-launcher">https://github.com/zozonteq/task-tray-launcher</a></p>
+<p>自分でPowerShellで作るのもよいかもしれない。</p>
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
