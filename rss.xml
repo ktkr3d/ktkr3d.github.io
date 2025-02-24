@@ -94,7 +94,9 @@
       <pubDate>Thu, 23 Jan 2025 10:09:02 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/tray-launcher.png&quot;&gt;&lt;br&gt;Windowsのタスクトレイからスクリプトを実行できるランチャーです。&lt;br&gt;GNOME Shell ExtensionのArgosのような使い方ができて便利です。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Jayich-Lab/tray-launcher&quot;&gt;https://github.com/Jayich-Lab/tray-launcher&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&quot;https://github.com/Jayich-Lab/tray-launcher&quot;&gt;https://github.com/Jayich-Lab/tray-launcher&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2025-02-25&quot;&gt;&lt;a href=&quot;#2025-02-25&quot; class=&quot;headerlink&quot; title=&quot;2025-02-25&quot;&gt;&lt;/a&gt;2025-02-25&lt;/h4&gt;&lt;p&gt;起動時にPythonのウィンドウが開きっぱなしになってしまった。&lt;br&gt;まだ報告されていないようだ。&lt;br&gt;&lt;a href=&quot;https://github.com/Jayich-Lab/tray-launcher/issues&quot;&gt;https://github.com/Jayich-Lab/tray-launcher/issues&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以下のソフトが動作したので取り急ぎ切り替えた。&lt;br&gt;&lt;a href=&quot;https://github.com/zozonteq/task-tray-launcher&quot;&gt;https://github.com/zozonteq/task-tray-launcher&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
