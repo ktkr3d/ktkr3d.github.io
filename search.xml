@@ -1163,7 +1163,7 @@
 
 
 <blockquote>
-<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#x72;&#x6f;&#111;&#x74;&#64;&#98;&#x75;&#105;&#108;&#100;&#56;&#x78;&#51;&#50;&#x2e;&#x70;&#99;&#98;&#x73;&#x64;&#x2e;&#x6f;&#x72;&#103;">&#x72;&#x6f;&#111;&#x74;&#64;&#98;&#x75;&#105;&#108;&#100;&#56;&#x78;&#51;&#50;&#x2e;&#x70;&#99;&#98;&#x73;&#x64;&#x2e;&#x6f;&#x72;&#103;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
+<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#x72;&#111;&#111;&#x74;&#x40;&#98;&#x75;&#105;&#108;&#x64;&#x38;&#x78;&#51;&#x32;&#46;&#x70;&#x63;&#x62;&#x73;&#100;&#46;&#111;&#114;&#x67;">&#x72;&#111;&#111;&#x74;&#x40;&#98;&#x75;&#105;&#108;&#x64;&#x38;&#x78;&#51;&#x32;&#46;&#x70;&#x63;&#x62;&#x73;&#100;&#46;&#111;&#114;&#x67;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
 </blockquote>
 <p>デスクトップ環境はKDE で、Firefox, Thunderbird, VLC 等をインストール時に追加できる。特に設定しなくても日本語も使えるし、mp3 も再生できる。GRUB からのチェインロードも問題無し。すごく頑張ってると思う。<br>Inspiron duo の1366x768 の解像度に設定すると、ディスプレイが表示されなくなってしまうので、とりあえずVESA で凌ごう。Linux と比べてドライバ(ディスプレイ、ファイルシステム)の情報は少ないかも。<br>ps コマンドやdf コマンドがBSD っぽくて少し懐かしい感じがした。</p>
 ]]></content>
@@ -1177,7 +1177,7 @@
     <content><![CDATA[<p><img src="/images/my_gnome_shell_extension.png" alt="gnome shell extension"></p>
 <p><a href="http://live.gnome.org/GnomeShell/Extensions">http://live.gnome.org/GnomeShell/Extensions</a><br><a href="http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html">http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html</a></p>
 <p>まずは、上部のパネルをクリックすると一定時間メッセージを表示するHello World 的な物から！！とりあえず日本語はunescape() してみた。</p>
-<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#104;&#101;&#108;&#x6c;&#x6f;&#x2d;&#119;&#111;&#x72;&#108;&#100;&#64;&#107;&#x74;&#x6b;&#114;&#51;&#x64;&#46;&#115;&#x69;&#116;&#101;&#49;&#x31;&#46;&#x63;&#111;&#109;">&#104;&#101;&#108;&#x6c;&#x6f;&#x2d;&#119;&#111;&#x72;&#108;&#100;&#64;&#107;&#x74;&#x6b;&#114;&#51;&#x64;&#46;&#115;&#x69;&#116;&#101;&#49;&#x31;&#46;&#x63;&#111;&#109;</a>&#x2F;</p>
+<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#104;&#101;&#x6c;&#108;&#x6f;&#x2d;&#119;&#111;&#114;&#x6c;&#100;&#x40;&#107;&#x74;&#107;&#114;&#x33;&#100;&#x2e;&#115;&#105;&#x74;&#101;&#49;&#x31;&#x2e;&#99;&#x6f;&#109;">&#104;&#101;&#x6c;&#108;&#x6f;&#x2d;&#119;&#111;&#114;&#x6c;&#100;&#x40;&#107;&#x74;&#107;&#114;&#x33;&#100;&#x2e;&#115;&#105;&#x74;&#101;&#49;&#x31;&#x2e;&#99;&#x6f;&#109;</a>&#x2F;</p>
 <h3 id="extension-js-ファイル"><a href="#extension-js-ファイル" class="headerlink" title="extension.js ファイル"></a>extension.js ファイル</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">// Sample extension code, makes clicking on the panel show a message</span><br><span class="line">const St = imports.gi.St;</span><br><span class="line">const Mainloop = imports.mainloop;</span><br><span class="line"></span><br><span class="line">const Gettext = imports.gettext.domain(&#x27;gnome-shell-extensions&#x27;);</span><br><span class="line">const _ = Gettext.gettext;</span><br><span class="line"></span><br><span class="line">const Main = imports.ui.main;</span><br><span class="line"></span><br><span class="line">function _showHello() &#123;</span><br><span class="line">    let text = new St.Label(&#123; style_class: &#x27;helloworld-label&#x27;, text: _(unescape(&quot;%uFF0F%u4EBA%u25D5%u203F%u203F%u25D5%u4EBA%uFF3C%u300C%u50D5%u3068%u5951%u7D04%u3057%u3066%u9B54%u6CD5%u5C11%u5973%u306B%u306A%u3063%u3066%u3088%uFF01%uFF01%u300D&quot;)) &#125;);</span><br><span class="line">    let monitor = global.get_primary_monitor();</span><br><span class="line">    global.stage.add_actor(text);</span><br><span class="line">    text.set_position(Math.floor (monitor.width / 2 - text.width / 2), Math.floor(monitor.height / 2 - text.height / 2));</span><br><span class="line">    Mainloop.timeout_add(3000, function () &#123; text.destroy(); &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Put your extension initialization code here</span><br><span class="line">function main(metadata) &#123;</span><br><span class="line">    imports.gettext.bindtextdomain(&#x27;gnome-shell-extensions&#x27;, metadata.localedir);</span><br><span class="line"></span><br><span class="line">    Main.panel.actor.reactive = true;</span><br><span class="line">    Main.panel.actor.connect(&#x27;button-release-event&#x27;, _showHello);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -1217,7 +1217,7 @@
 <ol start="3">
 <li><p>$HOME&#x2F;.themes&#x2F; ディレクトリを作成して、アーカイブの中のテーマを展開する。</p>
 </li>
-<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x74;&#104;&#101;&#x6d;&#101;&#115;&#x65;&#108;&#x65;&#99;&#116;&#111;&#114;&#x40;&#x66;&#112;&#x6d;&#117;&#x72;&#x70;&#x68;&#x79;&#46;&#99;&#111;&#109;">&#x74;&#104;&#101;&#x6d;&#101;&#115;&#x65;&#108;&#x65;&#99;&#116;&#111;&#114;&#x40;&#x66;&#112;&#x6d;&#117;&#x72;&#x70;&#x68;&#x79;&#46;&#99;&#111;&#109;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
+<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x74;&#x68;&#x65;&#109;&#101;&#x73;&#101;&#108;&#x65;&#99;&#116;&#x6f;&#114;&#x40;&#x66;&#x70;&#x6d;&#x75;&#114;&#112;&#x68;&#121;&#46;&#x63;&#x6f;&#109;">&#x74;&#x68;&#x65;&#109;&#101;&#x73;&#101;&#108;&#x65;&#99;&#116;&#x6f;&#114;&#x40;&#x66;&#x70;&#x6d;&#x75;&#114;&#112;&#x68;&#121;&#46;&#x63;&#x6f;&#109;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
 </li>
 <li><p>[Alt]+[F2]を押して、r を入力して、[Enter] を押す。</p>
 </li>
@@ -1390,9 +1390,9 @@
     <url>/2011/05/30/gnome-shell-extension-e38292e5bea9e6b4bbe38195e3819be381a6e381bfe3819f/</url>
     <content><![CDATA[<p>GNOME Shell を3.0.2 にしたらdock が消えたので復活させてみた。</p>
 <ul>
-<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#x6f;&#99;&#x6b;&#64;&#103;&#110;&#111;&#x6d;&#x65;&#45;&#x73;&#104;&#x65;&#108;&#108;&#45;&#101;&#x78;&#x74;&#x65;&#x6e;&#x73;&#105;&#111;&#110;&#115;&#46;&#103;&#x6e;&#111;&#109;&#101;&#x2e;&#x6f;&#x72;&#103;">&#x64;&#x6f;&#99;&#x6b;&#64;&#103;&#110;&#111;&#x6d;&#x65;&#45;&#x73;&#104;&#x65;&#108;&#108;&#45;&#101;&#x78;&#x74;&#x65;&#x6e;&#x73;&#105;&#111;&#110;&#115;&#46;&#103;&#x6e;&#111;&#109;&#101;&#x2e;&#x6f;&#x72;&#103;</a>&#x2F;metadata.json</p>
+<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#x6f;&#x63;&#107;&#64;&#103;&#x6e;&#x6f;&#x6d;&#x65;&#45;&#115;&#104;&#101;&#x6c;&#x6c;&#x2d;&#x65;&#120;&#x74;&#x65;&#x6e;&#115;&#105;&#x6f;&#x6e;&#x73;&#x2e;&#x67;&#110;&#x6f;&#109;&#101;&#46;&#111;&#x72;&#103;">&#100;&#x6f;&#x63;&#107;&#64;&#103;&#x6e;&#x6f;&#x6d;&#x65;&#45;&#115;&#104;&#101;&#x6c;&#x6c;&#x2d;&#x65;&#120;&#x74;&#x65;&#x6e;&#115;&#105;&#x6f;&#x6e;&#x73;&#x2e;&#x67;&#110;&#x6f;&#109;&#101;&#46;&#111;&#x72;&#103;</a>&#x2F;metadata.json</p>
 </li>
-<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#111;&#x63;&#x6b;&#x40;&#103;&#110;&#x6f;&#109;&#101;&#45;&#115;&#x68;&#101;&#108;&#x6c;&#x2d;&#101;&#120;&#x74;&#x65;&#x6e;&#115;&#x69;&#111;&#110;&#x73;&#x2e;&#x67;&#110;&#111;&#109;&#101;&#46;&#x6f;&#114;&#103;">&#x64;&#111;&#x63;&#x6b;&#x40;&#103;&#110;&#x6f;&#109;&#101;&#45;&#115;&#x68;&#101;&#108;&#x6c;&#x2d;&#101;&#120;&#x74;&#x65;&#x6e;&#115;&#x69;&#111;&#110;&#x73;&#x2e;&#x67;&#110;&#111;&#109;&#101;&#46;&#x6f;&#114;&#103;</a>&#x2F;metadata.json</p>
+<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#111;&#99;&#x6b;&#64;&#x67;&#x6e;&#111;&#109;&#x65;&#x2d;&#115;&#104;&#x65;&#x6c;&#108;&#x2d;&#x65;&#120;&#x74;&#x65;&#x6e;&#x73;&#105;&#111;&#110;&#x73;&#46;&#103;&#110;&#x6f;&#x6d;&#101;&#x2e;&#111;&#x72;&#x67;">&#x64;&#111;&#99;&#x6b;&#64;&#x67;&#x6e;&#111;&#109;&#x65;&#x2d;&#115;&#104;&#x65;&#x6c;&#108;&#x2d;&#x65;&#120;&#x74;&#x65;&#x6e;&#x73;&#105;&#111;&#110;&#x73;&#46;&#103;&#110;&#x6f;&#x6d;&#101;&#x2e;&#111;&#x72;&#x67;</a>&#x2F;metadata.json</p>
 </li>
 </ul>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;uuid&quot;: &quot;dock@gnome-shell-extensions.gnome.org&quot;,</span><br><span class="line">&quot;name&quot;: &quot;Dock&quot;,</span><br><span class="line">&quot;description&quot;: &quot;A dock for the GNOME Shell -- displays favorite and running applications&quot;,</span><br><span class="line">&quot;original-author&quot;: &quot;tclaesson@gmail.com&quot;,</span><br><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot; ],</span><br><span class="line">&quot;localedir&quot;: &quot;/usr/local/share/locale&quot;,</span><br><span class="line">&quot;url&quot;: &quot;http://git.gnome.org/gnome-shell-extensions&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3979,6 +3979,19 @@
       </categories>
   </entry>
   <entry>
+    <title>Ubuntu GNOME 13.10 Daily Build + Cairo-Dock</title>
+    <url>/2013/06/16/ubuntu-gnome-13-dot-10-daily-build-plus-cairo-dock/</url>
+    <content><![CDATA[<p><a href="/images/Ubuntu-GNOME-13-10.png"><img src="/images/Ubuntu-GNOME-13-10_tn.png" class=""></a></p>
+<p><a href="http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/current/">http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/current/</a></p>
+<p>Ubuntu GNOME 13.10 (Saucy) のデイリービルドが公開されていましたので、インストールしてみました。kernel 3.9.0, GNOME Shell 3.8.2, Firefox 22.0 でした。</p>
+<span id="more"></span>
+<p>いつものようにAvant Window Navigator を使いたかったのですが、うまく起動しなかったので、Cairo Dock に移行してみました。Cairo Dock は挙動が派手で好みではなかったのですが、テーマを変更して、詳細設定をしたらAWN みたいな挙動にすることができました。<br>その他で気になったのは、Code::Blocks が起動しないことと、GTK+ テーマのリストボックスの挙動が少し不自然なことくらいでしょうか。そのうち、直るでしょう。</p>
+]]></content>
+      <categories>
+        <category>gnome</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Ubuntu 13.10 Daily Build + Mir</title>
     <url>/2013/07/01/ubuntu-13-dot-10-daily-build-plus-mir/</url>
     <content><![CDATA[<p><a href="/images/ubuntu_13_10_daily_build_mir.png"><img src="/images/ubuntu_13_10_daily_build_mir_tn.png" class=""></a></p>
@@ -4013,21 +4026,8 @@ $ sudo apt-get install gnome-shell
 <h4 id="ドックの設定"><a href="#ドックの設定" class="headerlink" title="ドックの設定"></a>ドックの設定</h4><p>前回のAWN に続き、このバージョンではCairo-Dock も動かなくなりました。Dash to Dock GNOME Shell 拡張も正常に動かないようです。Docky を使うことにしました。</p>
 <pre><code>$ sudo apt-get install docky
 </code></pre>
-<h4 id="トップバーの非表示"><a href="#トップバーの非表示" class="headerlink" title="トップバーの非表示"></a>トップバーの非表示</h4><p>Hide Top Bar GNOME Shell 拡張が正常に動かなかったので、以前使用していた<a href="mailto:&#97;&#x75;&#116;&#111;&#x68;&#105;&#100;&#101;&#116;&#111;&#x70;&#98;&#97;&#114;&#x32;&#x40;&#119;&#101;&#x72;&#x65;&#x77;&#111;&#108;&#x76;&#x65;&#x73;&#x2e;&#x75;&#x73;">&#97;&#x75;&#116;&#111;&#x68;&#105;&#100;&#101;&#116;&#111;&#x70;&#98;&#97;&#114;&#x32;&#x40;&#119;&#101;&#x72;&#x65;&#x77;&#111;&#108;&#x76;&#x65;&#x73;&#x2e;&#x75;&#x73;</a> の方のGNOME Shell 拡張を使用してみました。<br>shell-version は3.9.4 を指定しました。</p>
+<h4 id="トップバーの非表示"><a href="#トップバーの非表示" class="headerlink" title="トップバーの非表示"></a>トップバーの非表示</h4><p>Hide Top Bar GNOME Shell 拡張が正常に動かなかったので、以前使用していた<a href="mailto:&#97;&#x75;&#116;&#x6f;&#104;&#105;&#100;&#x65;&#x74;&#x6f;&#112;&#x62;&#x61;&#114;&#x32;&#64;&#119;&#x65;&#114;&#101;&#119;&#111;&#108;&#118;&#x65;&#x73;&#46;&#117;&#x73;">&#97;&#x75;&#116;&#x6f;&#104;&#105;&#100;&#x65;&#x74;&#x6f;&#112;&#x62;&#x61;&#114;&#x32;&#64;&#119;&#x65;&#114;&#101;&#119;&#111;&#108;&#118;&#x65;&#x73;&#46;&#117;&#x73;</a> の方のGNOME Shell 拡張を使用してみました。<br>shell-version は3.9.4 を指定しました。</p>
 <figure class="highlight js"><figcaption><span>metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;Auto hide the top panel&quot;</span>,</span><br><span class="line">  <span class="string">&quot;extension-id&quot;</span>: <span class="string">&quot;auto-hide-top-panel&quot;</span>, </span><br><span class="line">  <span class="string">&quot;gettext-domain&quot;</span>: <span class="string">&quot;gnome-shell-extensions&quot;</span>, </span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Auto Hide Top Panel&quot;</span>,</span><br><span class="line">  <span class="string">&quot;settings-schema&quot;</span>: <span class="string">&quot;org.gnome.shell.extensions.auto-hide-top-panel&quot;</span>, </span><br><span class="line">  <span class="string">&quot;shell-version&quot;</span>: [</span><br><span class="line">	<span class="string">&quot;3.5.92&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.6&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.6.1&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.9.4&quot;</span></span><br><span class="line">  ], </span><br><span class="line">  <span class="string">&quot;url&quot;</span>: <span class="string">&quot;http://fpmurphy.com/gnome-shell-extensions&quot;</span>,</span><br><span class="line">  <span class="string">&quot;uuid&quot;</span>: <span class="string">&quot;autohidetopbar2@werewolves.us&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>gnome</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Ubuntu GNOME 13.10 Daily Build + Cairo-Dock</title>
-    <url>/2013/06/16/ubuntu-gnome-13-dot-10-daily-build-plus-cairo-dock/</url>
-    <content><![CDATA[<p><a href="/images/Ubuntu-GNOME-13-10.png"><img src="/images/Ubuntu-GNOME-13-10_tn.png" class=""></a></p>
-<p><a href="http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/current/">http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/current/</a></p>
-<p>Ubuntu GNOME 13.10 (Saucy) のデイリービルドが公開されていましたので、インストールしてみました。kernel 3.9.0, GNOME Shell 3.8.2, Firefox 22.0 でした。</p>
-<span id="more"></span>
-<p>いつものようにAvant Window Navigator を使いたかったのですが、うまく起動しなかったので、Cairo Dock に移行してみました。Cairo Dock は挙動が派手で好みではなかったのですが、テーマを変更して、詳細設定をしたらAWN みたいな挙動にすることができました。<br>その他で気になったのは、Code::Blocks が起動しないことと、GTK+ テーマのリストボックスの挙動が少し不自然なことくらいでしょうか。そのうち、直るでしょう。</p>
 ]]></content>
       <categories>
         <category>gnome</category>
@@ -4524,39 +4524,6 @@ $ sudo apt-get install cardapio
       </categories>
   </entry>
   <entry>
-    <title>gitg 0.3.1</title>
-    <url>/2014/01/10/gitg-0-dot-3-1/</url>
-    <content><![CDATA[<p><a href="/images/gitg_0.3.1_vala.png"><img src="/images/gitg_0.3.1_vala.png" alt="gitg 0.3.1" title="gitg 0.3.1"></a></p>
-<p><a href="https://wiki.gnome.org/Apps/Gitg#Get_gitg">https://wiki.gnome.org/Apps/Gitg#Get_gitg</a></p>
-<p>VALA 言語で書き直されたgitg 0.3.1 がリリースされたので、ビルドして実行してみました。</p>
-<span id="more"></span>
-
-<h4 id="libgit2"><a href="#libgit2" class="headerlink" title="libgit2"></a>libgit2</h4><p>前提の<code>libgit2</code>をインストールします。<code>cmake</code> する際に<code>THREADSAFE</code> をON にしておきます。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/libgit2/libgit2.git</span><br><span class="line">$ <span class="built_in">cd</span> libgit2</span><br><span class="line">$ <span class="built_in">mkdir</span> build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">$ cmake .. -DTHREADSAFE:BOOL=ON</span><br><span class="line">$ sudo cmake --build . --target install</span><br></pre></td></tr></table></figure>
-
-<h4 id="libgit2-glib"><a href="#libgit2-glib" class="headerlink" title="libgit2-glib"></a>libgit2-glib</h4><p>前提の<code>libgit2-glib</code>をインストールします。API の引数が足らない旨のエラーが出るので、引数を追加します。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://git.gnome.org/browse/libgit2-glib</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight vala"><figcaption><span>./libgit2-glib/libgit2-glib/ggit-ref.c</span></figcaption><table><tr><td class="code"><pre><span class="line">gboolean</span><br><span class="line">ggit_ref_has_reflog (GgitRef *ref)</span><br><span class="line">&#123;</span><br><span class="line">	g_return_val_if_fail (GGIT_IS_REF (ref), FALSE);</span><br><span class="line"></span><br><span class="line"><span class="comment">//	return git_reference_has_log (_ggit_native_get (ref)) == 1;</span></span><br><span class="line">	<span class="keyword">return</span> git_reference_has_log (_ggit_native_get (ref), git_reference_name(ref)) == <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> libgit2-glib</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
-
-<h4 id="libgd"><a href="#libgd" class="headerlink" title="libgd"></a>libgd</h4><p>libgd をダウンロードします。<br>後でgitg のフォルダにコピーします。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://git.gnome.org/libgd</span><br></pre></td></tr></table></figure>
-
-<h4 id="gitg"><a href="#gitg" class="headerlink" title="gitg"></a>gitg</h4><p><code>gitg</code>をインストールします。</p>
-<p><code>https://download.gnome.org/sources/gitg/0.3/gitg-0.3.1.tar.xz</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> gitg-0.3.1</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make </span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>develop</category>
-      </categories>
-      <tags>
-        <tag>gitg</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Remote Blogging with Octopress</title>
     <url>/2013/12/30/remote-blogging-with-octopress/</url>
     <content><![CDATA[<p><a href="/images/octopress_helper.png"><img src="/images/octopress_helper.png" class=""></a></p>
@@ -4602,6 +4569,39 @@ $ sudo apt-get install cardapio
       <categories>
         <category>firefox</category>
       </categories>
+  </entry>
+  <entry>
+    <title>gitg 0.3.1</title>
+    <url>/2014/01/10/gitg-0-dot-3-1/</url>
+    <content><![CDATA[<p><a href="/images/gitg_0.3.1_vala.png"><img src="/images/gitg_0.3.1_vala.png" alt="gitg 0.3.1" title="gitg 0.3.1"></a></p>
+<p><a href="https://wiki.gnome.org/Apps/Gitg#Get_gitg">https://wiki.gnome.org/Apps/Gitg#Get_gitg</a></p>
+<p>VALA 言語で書き直されたgitg 0.3.1 がリリースされたので、ビルドして実行してみました。</p>
+<span id="more"></span>
+
+<h4 id="libgit2"><a href="#libgit2" class="headerlink" title="libgit2"></a>libgit2</h4><p>前提の<code>libgit2</code>をインストールします。<code>cmake</code> する際に<code>THREADSAFE</code> をON にしておきます。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/libgit2/libgit2.git</span><br><span class="line">$ <span class="built_in">cd</span> libgit2</span><br><span class="line">$ <span class="built_in">mkdir</span> build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">$ cmake .. -DTHREADSAFE:BOOL=ON</span><br><span class="line">$ sudo cmake --build . --target install</span><br></pre></td></tr></table></figure>
+
+<h4 id="libgit2-glib"><a href="#libgit2-glib" class="headerlink" title="libgit2-glib"></a>libgit2-glib</h4><p>前提の<code>libgit2-glib</code>をインストールします。API の引数が足らない旨のエラーが出るので、引数を追加します。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://git.gnome.org/browse/libgit2-glib</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight vala"><figcaption><span>./libgit2-glib/libgit2-glib/ggit-ref.c</span></figcaption><table><tr><td class="code"><pre><span class="line">gboolean</span><br><span class="line">ggit_ref_has_reflog (GgitRef *ref)</span><br><span class="line">&#123;</span><br><span class="line">	g_return_val_if_fail (GGIT_IS_REF (ref), FALSE);</span><br><span class="line"></span><br><span class="line"><span class="comment">//	return git_reference_has_log (_ggit_native_get (ref)) == 1;</span></span><br><span class="line">	<span class="keyword">return</span> git_reference_has_log (_ggit_native_get (ref), git_reference_name(ref)) == <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> libgit2-glib</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<h4 id="libgd"><a href="#libgd" class="headerlink" title="libgd"></a>libgd</h4><p>libgd をダウンロードします。<br>後でgitg のフォルダにコピーします。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://git.gnome.org/libgd</span><br></pre></td></tr></table></figure>
+
+<h4 id="gitg"><a href="#gitg" class="headerlink" title="gitg"></a>gitg</h4><p><code>gitg</code>をインストールします。</p>
+<p><code>https://download.gnome.org/sources/gitg/0.3/gitg-0.3.1.tar.xz</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> gitg-0.3.1</span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ make </span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>develop</category>
+      </categories>
+      <tags>
+        <tag>gitg</tag>
+      </tags>
   </entry>
   <entry>
     <title>gEdit 3.11.2</title>
@@ -10263,6 +10263,50 @@ gnome-tweak-tool でアプリケーションに<code>Communitheme</code>を、�
 ]]></content>
   </entry>
   <entry>
+    <title>Vue.js</title>
+    <url>/2018/12/17/Vue-js/</url>
+    <content><![CDATA[<p><img src="/images/vue-ui.png" alt="vue ui"><br>Vue.js を試してみました。</p>
+<ul>
+<li>Ubuntu 18.10 x86_64</li>
+<li>nodejs 11.4.0<ul>
+<li>vue cli 3.2.1</li>
+</ul>
+</li>
+<li>Visual Studio Code 1.30.0<ul>
+<li>Vue 2 Snippets</li>
+<li>Vue VS Code Extension Pack</li>
+</ul>
+</li>
+<li>Google Chrome 71.0.3578.80<ul>
+<li>Vue.js devtools</li>
+</ul>
+</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="vue-cli-のインストール"><a href="#vue-cli-のインストール" class="headerlink" title="vue cli のインストール"></a>vue cli のインストール</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="サンプルVue-js-アプリケーションの作成"><a href="#サンプルVue-js-アプリケーションの作成" class="headerlink" title="サンプルVue.js アプリケーションの作成"></a>サンプルVue.js アプリケーションの作成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vue ui</span><br></pre></td></tr></table></figure>
+
+<p>ブラウザ内のGUI で設定していきます。<br>手動設定を選択して、以下を指定してみました。</p>
+<ul>
+<li>TypeScript 対応</li>
+<li>TSLint</li>
+</ul>
+<p><img src="/images/vue-ui.png" alt="vue ui"></p>
+<p><code>build</code>, <code>lint</code> 等を画面から実行できます。</p>
+<h3 id="サンプルVue-js-アプリケーションの実行"><a href="#サンプルVue-js-アプリケーションの実行" class="headerlink" title="サンプルVue.js アプリケーションの実行"></a>サンプルVue.js アプリケーションの実行</h3><p><code>serve</code> 画面で、<code>アプリを開く</code>を選択すると、作成したサンプルアプリが新しいタブに表示されます。<br><code>F12</code>キー押下して、デベロッパーツールから<code>Vue</code>を選択すると、Vue.js devtools でデバッグできます。</p>
+<p><img src="/images/vuejs-devtools.png" alt="vue.js devtools"></p>
+<h3 id="コードの編集"><a href="#コードの編集" class="headerlink" title="コードの編集"></a>コードの編集</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code .</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/vue-vscode.png" alt="vue vscode"></p>
+<h3 id="生成されたもの"><a href="#生成されたもの" class="headerlink" title="生成されたもの"></a>生成されたもの</h3><figure class="highlight ts"><figcaption><span>./src/main.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="property">config</span>.<span class="property">productionTip</span> = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">  <span class="attr">render</span>: <span class="function">(<span class="params">h</span>) =&gt;</span> <span class="title function_">h</span>(<span class="title class_">App</span>),</span><br><span class="line">&#125;).$mount(<span class="string">&#x27;#app&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>./src/App.vue</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">alt</span>=<span class="string">&quot;Vue logo&quot;</span> <span class="attr">src</span>=<span class="string">&quot;./assets/logo.png&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">HelloWorld</span> <span class="attr">msg</span>=<span class="string">&quot;Welcome to Your Vue.js + TypeScript App&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> &#123; <span class="title class_">Component</span>, <span class="title class_">Vue</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-property-decorator&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">HelloWorld</span> <span class="keyword">from</span> <span class="string">&#x27;./components/HelloWorld.vue&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">@<span class="title class_">Component</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">HelloWorld</span>,</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">&#125;)</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">App</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Vue</span> &#123;&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-id">#app</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">font-family</span>: <span class="string">&#x27;Avenir&#x27;</span>, Helvetica, Arial, sans-serif;</span></span><br><span class="line"><span class="language-css">  -webkit-<span class="attribute">font-smoothing</span>: antialiased;</span></span><br><span class="line"><span class="language-css">  -moz-osx-<span class="attribute">font-smoothing</span>: grayscale;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">color</span>: <span class="number">#2c3e50</span>;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">margin-top</span>: <span class="number">60px</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><figcaption><span>./src/components/HelloWorld.vue</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;hello&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; msg &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">      For a guide and recipes on how to configure / customize this project,<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      check out the</span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://cli.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>vue-cli documentation<span class="tag">&lt;/<span class="name">a</span>&gt;</span>.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>Installed CLI Plugins<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>babel<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>typescript<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>Essential Links<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>Core Docs<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://forum.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>Forum<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://chat.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>Community Chat<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://twitter.com/vuejs&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>Twitter<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://news.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>News<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>Ecosystem<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://router.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>vue-router<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://vuex.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>vuex<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://github.com/vuejs/vue-devtools#vue-devtools&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>vue-devtools<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://vue-loader.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>vue-loader<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://github.com/vuejs/awesome-vue&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>awesome-vue<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> &#123; <span class="title class_">Component</span>, <span class="title class_">Prop</span>, <span class="title class_">Vue</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-property-decorator&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">@<span class="title class_">Component</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Vue</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  @<span class="title class_">Prop</span>() private msg!: string;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Add &quot;scoped&quot; attribute to limit CSS to this component only --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-tag">h3</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">margin</span>: <span class="number">40px</span> <span class="number">0</span> <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"><span class="selector-tag">ul</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">list-style-type</span>: none;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"><span class="selector-tag">li</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">display</span>: inline-block;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"><span class="selector-tag">a</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">color</span>: <span class="number">#42b983</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
     <title>Nuxt.js</title>
     <url>/2018/12/26/Nuxt-js/</url>
     <content><![CDATA[<p><img src="/images/nuxt-vuetify.png" alt="nuxt vuetify"><br><a href="https://ja.nuxtjs.org/guide/installation/">https://ja.nuxtjs.org/guide/installation/</a><br>Nuxt.js はVue.js アプリケーションを作成するためのフレームワークです。<br>Nuxt.js を試してみました。</p>
@@ -10393,50 +10437,6 @@ gnome-tweak-tool でアプリケーションに<code>Communitheme</code>を、�
 <li>無装飾</li>
 <li>bulma, tailwind, element-ui, none(無し) はbootstrap とほぼ同じ画面になりました。</li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Vue.js</title>
-    <url>/2018/12/17/Vue-js/</url>
-    <content><![CDATA[<p><img src="/images/vue-ui.png" alt="vue ui"><br>Vue.js を試してみました。</p>
-<ul>
-<li>Ubuntu 18.10 x86_64</li>
-<li>nodejs 11.4.0<ul>
-<li>vue cli 3.2.1</li>
-</ul>
-</li>
-<li>Visual Studio Code 1.30.0<ul>
-<li>Vue 2 Snippets</li>
-<li>Vue VS Code Extension Pack</li>
-</ul>
-</li>
-<li>Google Chrome 71.0.3578.80<ul>
-<li>Vue.js devtools</li>
-</ul>
-</li>
-</ul>
-<span id="more"></span>
-
-<h3 id="vue-cli-のインストール"><a href="#vue-cli-のインストール" class="headerlink" title="vue cli のインストール"></a>vue cli のインストール</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
-
-<h3 id="サンプルVue-js-アプリケーションの作成"><a href="#サンプルVue-js-アプリケーションの作成" class="headerlink" title="サンプルVue.js アプリケーションの作成"></a>サンプルVue.js アプリケーションの作成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vue ui</span><br></pre></td></tr></table></figure>
-
-<p>ブラウザ内のGUI で設定していきます。<br>手動設定を選択して、以下を指定してみました。</p>
-<ul>
-<li>TypeScript 対応</li>
-<li>TSLint</li>
-</ul>
-<p><img src="/images/vue-ui.png" alt="vue ui"></p>
-<p><code>build</code>, <code>lint</code> 等を画面から実行できます。</p>
-<h3 id="サンプルVue-js-アプリケーションの実行"><a href="#サンプルVue-js-アプリケーションの実行" class="headerlink" title="サンプルVue.js アプリケーションの実行"></a>サンプルVue.js アプリケーションの実行</h3><p><code>serve</code> 画面で、<code>アプリを開く</code>を選択すると、作成したサンプルアプリが新しいタブに表示されます。<br><code>F12</code>キー押下して、デベロッパーツールから<code>Vue</code>を選択すると、Vue.js devtools でデバッグできます。</p>
-<p><img src="/images/vuejs-devtools.png" alt="vue.js devtools"></p>
-<h3 id="コードの編集"><a href="#コードの編集" class="headerlink" title="コードの編集"></a>コードの編集</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code .</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/vue-vscode.png" alt="vue vscode"></p>
-<h3 id="生成されたもの"><a href="#生成されたもの" class="headerlink" title="生成されたもの"></a>生成されたもの</h3><figure class="highlight ts"><figcaption><span>./src/main.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="property">config</span>.<span class="property">productionTip</span> = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">  <span class="attr">render</span>: <span class="function">(<span class="params">h</span>) =&gt;</span> <span class="title function_">h</span>(<span class="title class_">App</span>),</span><br><span class="line">&#125;).$mount(<span class="string">&#x27;#app&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><figcaption><span>./src/App.vue</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">alt</span>=<span class="string">&quot;Vue logo&quot;</span> <span class="attr">src</span>=<span class="string">&quot;./assets/logo.png&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">HelloWorld</span> <span class="attr">msg</span>=<span class="string">&quot;Welcome to Your Vue.js + TypeScript App&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> &#123; <span class="title class_">Component</span>, <span class="title class_">Vue</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-property-decorator&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">HelloWorld</span> <span class="keyword">from</span> <span class="string">&#x27;./components/HelloWorld.vue&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">@<span class="title class_">Component</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">HelloWorld</span>,</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">&#125;)</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">App</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Vue</span> &#123;&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-id">#app</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">font-family</span>: <span class="string">&#x27;Avenir&#x27;</span>, Helvetica, Arial, sans-serif;</span></span><br><span class="line"><span class="language-css">  -webkit-<span class="attribute">font-smoothing</span>: antialiased;</span></span><br><span class="line"><span class="language-css">  -moz-osx-<span class="attribute">font-smoothing</span>: grayscale;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">color</span>: <span class="number">#2c3e50</span>;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">margin-top</span>: <span class="number">60px</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><figcaption><span>./src/components/HelloWorld.vue</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;hello&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; msg &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">      For a guide and recipes on how to configure / customize this project,<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      check out the</span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://cli.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>vue-cli documentation<span class="tag">&lt;/<span class="name">a</span>&gt;</span>.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>Installed CLI Plugins<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>babel<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>typescript<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>Essential Links<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>Core Docs<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://forum.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>Forum<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://chat.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>Community Chat<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://twitter.com/vuejs&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>Twitter<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://news.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>News<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>Ecosystem<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://router.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>vue-router<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://vuex.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>vuex<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://github.com/vuejs/vue-devtools#vue-devtools&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>vue-devtools<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://vue-loader.vuejs.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>vue-loader<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://github.com/vuejs/awesome-vue&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>awesome-vue<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> &#123; <span class="title class_">Component</span>, <span class="title class_">Prop</span>, <span class="title class_">Vue</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-property-decorator&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">@<span class="title class_">Component</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Vue</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  @<span class="title class_">Prop</span>() private msg!: string;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Add &quot;scoped&quot; attribute to limit CSS to this component only --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-tag">h3</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">margin</span>: <span class="number">40px</span> <span class="number">0</span> <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"><span class="selector-tag">ul</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">list-style-type</span>: none;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"><span class="selector-tag">li</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">display</span>: inline-block;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"><span class="selector-tag">a</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">color</span>: <span class="number">#42b983</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
@@ -10870,7 +10870,7 @@ merge newbranch</pre>
     <url>/2019/06/26/Hexo-Tag-Google-Charts/</url>
     <content><![CDATA[<p><a href="https://github.com/juampi92/hexo-tag-googlecharts">https://github.com/juampi92/hexo-tag-googlecharts</a><br><a href="https://developers.google.com/chart/interactive/docs/gallery">https://developers.google.com/chart/interactive/docs/gallery</a><br>hexo-tag-googlecharts を使ってチャートを表示してみました。</p>
 <p>Google Charts を直接Javascript から使うよりも簡単に利用できて便利です。<br>カスタマイズに少しコツが必要なのでよく使う構成をテンプレートとして作っておくとよさそうです。</p>
-<div id="googleChart6346"></div>
+<div id="googleChart8726"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10879,7 +10879,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.LineChart(document.getElementById("googleChart6346"))).draw(google.visualization.arrayToDataTable([['Date', 'Druid', 'Death Knight', 'Monk', 'Demon Hunter', 'Mage', 'Warlock', 'Shaman'],[new Date('2019/03/21'), 376, 378, 371, 373, 376, 377, 372],[new Date('2019/03/25'), 377, 378, 374, 374, 376, 378, 374],[new Date('2019/03/31'), 377, 380, 376, 375, 376, 378, 375],[new Date('2019/04/05'), 378, 382, 378, 376, 377, 380, 376],[new Date('2019/04/07'), 380, 383, 379, 376, 378, 381, 378],[new Date('2019/04/20'), 382, 384, 382, 377, 379, 383, 379],[new Date('2019/04/27'), 383, 385, 383, 379, 379, 384, 380],[new Date('2019/04/28'), 384, 385, 383, 379, 379, 387, 381],[new Date('2019/04/29'), 385, 385, 383, 380, 380, 388, 381],[new Date('2019/05/06'), 388, 388, 387, 383, 383, 389, 386],[new Date('2019/05/13'), 392, 391, 388, 386, 386, 391, 390],[new Date('2019/05/19'), 394, 392, 390, 388, 387, 392, 391],[new Date('2019/06/09'), 398, 394, 392, 391, 389, 395, 393],[new Date('2019/06/22'), 399, 397, 395, 394, 394, 398, 396]]),{"hAxis":{"title":"Date","format":"M/d"},"vAxis":{"title":"iLevel","format":"#"},"pointSize":"10","series":[{"color":"#FF7D0A"},{"color":"#C41F3B"},{"color":"#00FF96"},{"color":"#A330C9"},{"color":"#40C7EB"},{"color":"#8787ED"},{"color":"#0070DE"}],"title":" ","width":"100%","height":"600"});
+        (new google.visualization.LineChart(document.getElementById("googleChart8726"))).draw(google.visualization.arrayToDataTable([['Date', 'Druid', 'Death Knight', 'Monk', 'Demon Hunter', 'Mage', 'Warlock', 'Shaman'],[new Date('2019/03/21'), 376, 378, 371, 373, 376, 377, 372],[new Date('2019/03/25'), 377, 378, 374, 374, 376, 378, 374],[new Date('2019/03/31'), 377, 380, 376, 375, 376, 378, 375],[new Date('2019/04/05'), 378, 382, 378, 376, 377, 380, 376],[new Date('2019/04/07'), 380, 383, 379, 376, 378, 381, 378],[new Date('2019/04/20'), 382, 384, 382, 377, 379, 383, 379],[new Date('2019/04/27'), 383, 385, 383, 379, 379, 384, 380],[new Date('2019/04/28'), 384, 385, 383, 379, 379, 387, 381],[new Date('2019/04/29'), 385, 385, 383, 380, 380, 388, 381],[new Date('2019/05/06'), 388, 388, 387, 383, 383, 389, 386],[new Date('2019/05/13'), 392, 391, 388, 386, 386, 391, 390],[new Date('2019/05/19'), 394, 392, 390, 388, 387, 392, 391],[new Date('2019/06/09'), 398, 394, 392, 391, 389, 395, 393],[new Date('2019/06/22'), 399, 397, 395, 394, 394, 398, 396]]),{"hAxis":{"title":"Date","format":"M/d"},"vAxis":{"title":"iLevel","format":"#"},"pointSize":"10","series":[{"color":"#FF7D0A"},{"color":"#C41F3B"},{"color":"#00FF96"},{"color":"#A330C9"},{"color":"#40C7EB"},{"color":"#8787ED"},{"color":"#0070DE"}],"title":" ","width":"100%","height":"600"});
       });
     })();
   }
@@ -10930,7 +10930,7 @@ merge newbranch</pre>
 
 <h3 id="Hexo-Tag-Google-Charts-の利用例"><a href="#Hexo-Tag-Google-Charts-の利用例" class="headerlink" title="Hexo Tag Google Charts の利用例"></a>Hexo Tag Google Charts の利用例</h3><p><a href="https://developers.google.com/chart/interactive/docs/gallery">https://developers.google.com/chart/interactive/docs/gallery</a><br>Chart Gallery の中でよく使いそうな例を移植してみました。</p>
 <h4 id="表-Table"><a href="#表-Table" class="headerlink" title="表(Table)"></a>表(Table)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/table">https://developers.google.com/chart/interactive/docs/gallery/table</a></p>
-<div id="googleChart6041"></div>
+<div id="googleChart8583"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10939,7 +10939,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart6041"))).draw(google.visualization.arrayToDataTable([['Name', 'Salary', 'Full Time Employee'],['Mike',  {v: 10000, f: '$10,000'}, true],['Jim',   {v:8000,   f: '$8,000'},  false],['Alice', {v: 12500, f: '$12,500'}, true],['Bob',   {v: 7000,  f: '$7,000'},  true]]),{"showRowNumber":true,"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart8583"))).draw(google.visualization.arrayToDataTable([['Name', 'Salary', 'Full Time Employee'],['Mike',  {v: 10000, f: '$10,000'}, true],['Jim',   {v:8000,   f: '$8,000'},  false],['Alice', {v: 12500, f: '$12,500'}, true],['Bob',   {v: 7000,  f: '$7,000'},  true]]),{"showRowNumber":true,"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -10947,7 +10947,7 @@ merge newbranch</pre>
 
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts Table 100% 100% %&#125;</span><br><span class="line"> </span><br><span class="line">&#123;&quot;showRowNumber&quot;: true&#125;</span><br><span class="line">&#x27;Name&#x27;, &#x27;Salary&#x27;, &#x27;Full Time Employee&#x27;</span><br><span class="line">&#x27;Mike&#x27;,  &#123;v: 10000, f: &#x27;$10,000&#x27;&#125;, true</span><br><span class="line">&#x27;Jim&#x27;,   &#123;v:8000,   f: &#x27;$8,000&#x27;&#125;,  false</span><br><span class="line">&#x27;Alice&#x27;, &#123;v: 12500, f: &#x27;$12,500&#x27;&#125;, true</span><br><span class="line">&#x27;Bob&#x27;,   &#123;v: 7000,  f: &#x27;$7,000&#x27;&#125;,  true</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="複合グラフ-ComboChart"><a href="#複合グラフ-ComboChart" class="headerlink" title="複合グラフ(ComboChart)"></a>複合グラフ(ComboChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/combochart">https://developers.google.com/chart/interactive/docs/gallery/combochart</a></p>
-<div id="googleChart4277"></div>
+<div id="googleChart4203"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10956,7 +10956,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.ComboChart(document.getElementById("googleChart4277"))).draw(google.visualization.arrayToDataTable([['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],['2004/05',  165,      938,         522,             998,           450,      614.6],['2005/06',  135,      1120,        599,             1268,          288,      682],['2006/07',  157,      1167,        587,             807,           397,      623],['2007/08',  139,      1110,        615,             968,           215,      609.4],['2008/09',  136,      691,         629,             1026,          366,      569.6]]),{"vAxis":{"title":"Cups"},"hAxis":{"title":"Month"},"seriesType":"bars","series":[{},{},{},{},{"type":"line"}],"title":"Monthly Coffee Production by Country","width":"900","height":"500"});
+        (new google.visualization.ComboChart(document.getElementById("googleChart4203"))).draw(google.visualization.arrayToDataTable([['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],['2004/05',  165,      938,         522,             998,           450,      614.6],['2005/06',  135,      1120,        599,             1268,          288,      682],['2006/07',  157,      1167,        587,             807,           397,      623],['2007/08',  139,      1110,        615,             968,           215,      609.4],['2008/09',  136,      691,         629,             1026,          366,      569.6]]),{"vAxis":{"title":"Cups"},"hAxis":{"title":"Month"},"seriesType":"bars","series":[{},{},{},{},{"type":"line"}],"title":"Monthly Coffee Production by Country","width":"900","height":"500"});
       });
     })();
   }
@@ -10965,7 +10965,7 @@ merge newbranch</pre>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts ComboChart 900 500 %&#125;</span><br><span class="line">Monthly Coffee Production by Country</span><br><span class="line">&#123;&quot;vAxis&quot;: &#123;&quot;title&quot;: &quot;Cups&quot;&#125;, &quot;hAxis&quot;: &#123;&quot;title&quot;: &quot;Month&quot;&#125;, &quot;seriesType&quot;: &quot;bars&quot;, &quot;series&quot;: [&#123;&#125;, &#123;&#125;, &#123;&#125;, &#123;&#125;, &#123;&quot;type&quot;: &quot;line&quot;&#125;]&#125;</span><br><span class="line">&#x27;Month&#x27;, &#x27;Bolivia&#x27;, &#x27;Ecuador&#x27;, &#x27;Madagascar&#x27;, &#x27;Papua New Guinea&#x27;, &#x27;Rwanda&#x27;, &#x27;Average&#x27;</span><br><span class="line">&#x27;2004/05&#x27;,  165,      938,         522,             998,           450,      614.6</span><br><span class="line">&#x27;2005/06&#x27;,  135,      1120,        599,             1268,          288,      682</span><br><span class="line">&#x27;2006/07&#x27;,  157,      1167,        587,             807,           397,      623</span><br><span class="line">&#x27;2007/08&#x27;,  139,      1110,        615,             968,           215,      609.4</span><br><span class="line">&#x27;2008/09&#x27;,  136,      691,         629,             1026,          366,      569.6</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/piechart">https://developers.google.com/chart/interactive/docs/gallery/piechart</a></p>
-<div id="googleChart3857"></div>
+<div id="googleChart8516"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10974,7 +10974,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.PieChart(document.getElementById("googleChart3857"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"title":"My Daily Activities","width":"100%","height":400});
+        (new google.visualization.PieChart(document.getElementById("googleChart8516"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"title":"My Daily Activities","width":"100%","height":400});
       });
     })();
   }
@@ -10983,7 +10983,7 @@ merge newbranch</pre>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts PieChart 100% %&#125;</span><br><span class="line">My Daily Activities</span><br><span class="line">&#123;&quot;is3D&quot;: true&#125;</span><br><span class="line">&#x27;Task&#x27;, &#x27;Hours per Day&#x27;</span><br><span class="line">&#x27;Work&#x27;,     11</span><br><span class="line">&#x27;Eat&#x27;,      2</span><br><span class="line">&#x27;Commute&#x27;,  2</span><br><span class="line">&#x27;Watch TV&#x27;, 2</span><br><span class="line">&#x27;Sleep&#x27;,    7</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="地図-GeoChart"><a href="#地図-GeoChart" class="headerlink" title="地図(GeoChart)"></a>地図(GeoChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">https://developers.google.com/chart/interactive/docs/gallery/geochart</a></p>
-<div id="googleChart9251"></div>
+<div id="googleChart6305"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10992,7 +10992,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.GeoChart(document.getElementById("googleChart9251"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":" ","width":"900","height":"500"});
+        (new google.visualization.GeoChart(document.getElementById("googleChart6305"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":" ","width":"900","height":"500"});
       });
     })();
   }
@@ -11421,7 +11421,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li><code>Add Environment</code></li>
 </ol>
 <ul>
-<li>GIT_USER_EMAIL<br><a href="mailto:&#104;&#x6f;&#103;&#x65;&#x40;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#104;&#x6f;&#103;&#x65;&#x40;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+<li>GIT_USER_EMAIL<br><a href="mailto:&#104;&#111;&#x67;&#101;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#x6d;">&#104;&#111;&#x67;&#101;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a></li>
 </ul>
 <ol start="5">
 <li><code>Create the template</code></li>
@@ -12089,7 +12089,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 </ul>
 </li>
 </ul>
-<h4 id="ネットワーク"><a href="#ネットワーク" class="headerlink" title="ネットワーク"></a>ネットワーク</h4><div id="googleChart149"></div>
+<h4 id="ネットワーク"><a href="#ネットワーク" class="headerlink" title="ネットワーク"></a>ネットワーク</h4><div id="googleChart5044"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12098,7 +12098,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.OrgChart(document.getElementById("googleChart149"))).draw(google.visualization.arrayToDataTable([['Name', 'Manager', 'ToolTip'],['Router#1', '', ''],['<b  style="white-space: nowrap"><i class="fas fa-tv"></i>Client</b>', 'Router#1', ''],['<u style="white-space: nowrap">Windows 10</u>', 'Router#1', ''],['VirtualBox', '<u style="white-space: nowrap">Windows 10</u>', ''],['<u>UbuntuDDE</u>', 'VirtualBox', ''],['<u>Deepin</u>', 'VirtualBox', ''],['<u>WSL2</u>', '<u style="white-space: nowrap">Windows 10</u>', ''],['Router#2', 'Router#1', ''],['<u style="white-space: nowrap">Raspberry Pi 2</u>', 'Router#2', ''],['<u style="white-space: nowrap">Raspberry Pi 4</u>', 'Router#2', '']]),{"allowHtml":true,"title":" ","width":400,"height":400});
+        (new google.visualization.OrgChart(document.getElementById("googleChart5044"))).draw(google.visualization.arrayToDataTable([['Name', 'Manager', 'ToolTip'],['Router#1', '', ''],['<b  style="white-space: nowrap"><i class="fas fa-tv"></i>Client</b>', 'Router#1', ''],['<u style="white-space: nowrap">Windows 10</u>', 'Router#1', ''],['VirtualBox', '<u style="white-space: nowrap">Windows 10</u>', ''],['<u>UbuntuDDE</u>', 'VirtualBox', ''],['<u>Deepin</u>', 'VirtualBox', ''],['<u>WSL2</u>', '<u style="white-space: nowrap">Windows 10</u>', ''],['Router#2', 'Router#1', ''],['<u style="white-space: nowrap">Raspberry Pi 2</u>', 'Router#2', ''],['<u style="white-space: nowrap">Raspberry Pi 4</u>', 'Router#2', '']]),{"allowHtml":true,"title":" ","width":400,"height":400});
       });
     })();
   }
@@ -12245,7 +12245,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     <title>Sharing Folders for VMs</title>
     <url>/2020/05/08/Sharing-Folders-for-VMs/</url>
     <content><![CDATA[<p>ホストOS(Windows 10) のフォルダをゲストOS(Linux)と共有してみました。</p>
-<div id="googleChart2573"></div>
+<div id="googleChart1621"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12254,7 +12254,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart2573"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart1621"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12413,7 +12413,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>node_attr</li>
 <li>edge_attr</li>
 </ul>
-<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart6418"></div>
+<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart6800"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12422,7 +12422,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.PieChart(document.getElementById("googleChart6418"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
+        (new google.visualization.PieChart(document.getElementById("googleChart6800"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
       });
     })();
   }
@@ -12813,7 +12813,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>新しいスプレッドシートを作成「空白」を選択</li>
 <li>データの登録</li>
 </ol>
-  <div id="googleChart7393"></div>
+  <div id="googleChart228"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12822,7 +12822,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart7393"))).draw(google.visualization.arrayToDataTable([['カラム', '1行目', '2行目以降の内容例'],['A', 'region',  'us'],['B', 'id1', '111 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['C', 'id2', '222222 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['D', 'realm', 'Blackrock'],['E', 'faction', 'Horde'],['F', 'name', 'Name01'],['G', 'race', 'vulpera'],['H', 'gender', 'male'],['I', 'class', 'Priest'],['J', 'title', 'the Explorer'],['K', 'spec', 'Shadow'],['L', 'guild', 'guild01'],['M', 'level', '120'],['N', 'achievement', '10000'],['O', 'ilevel', '433'],['P', 'url_profile', '="https://worldofwarcraft.com/en-us/character/"&A2&"/"&D2&"/"&F2'],['Q', 'url_avator', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-avatar.jpg"'],['R', 'url_inset', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-inset.jpg"'],['S', 'url_main', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-main.jpg"'],['T', 'url_wowhead', '="https://www.wowhead.com/"&SUBSTITUTE(K2, " ", "-")&"-"&SUBSTITUTE(I2, " ", "-")&"-guide"']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart228"))).draw(google.visualization.arrayToDataTable([['カラム', '1行目', '2行目以降の内容例'],['A', 'region',  'us'],['B', 'id1', '111 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['C', 'id2', '222222 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['D', 'realm', 'Blackrock'],['E', 'faction', 'Horde'],['F', 'name', 'Name01'],['G', 'race', 'vulpera'],['H', 'gender', 'male'],['I', 'class', 'Priest'],['J', 'title', 'the Explorer'],['K', 'spec', 'Shadow'],['L', 'guild', 'guild01'],['M', 'level', '120'],['N', 'achievement', '10000'],['O', 'ilevel', '433'],['P', 'url_profile', '="https://worldofwarcraft.com/en-us/character/"&A2&"/"&D2&"/"&F2'],['Q', 'url_avator', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-avatar.jpg"'],['R', 'url_inset', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-inset.jpg"'],['S', 'url_main', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-main.jpg"'],['T', 'url_wowhead', '="https://www.wowhead.com/"&SUBSTITUTE(K2, " ", "-")&"-"&SUBSTITUTE(I2, " ", "-")&"-guide"']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12839,7 +12839,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>Google スプレッドシートのURL を貼り付け</li>
 <li>Customize UI の設定</li>
 </ol>
-  <div id="googleChart3844"></div>
+  <div id="googleChart2609"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12848,7 +12848,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart3844"))).draw(google.visualization.arrayToDataTable([['項目', '値'],['Page Title',  'Champions'],['Page Description', 'from World of Warcraft Armory'],['Select Container', 'Responsive Grid を選択'],['Select Item', 'Media Card を選択']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart2609"))).draw(google.visualization.arrayToDataTable([['項目', '値'],['Page Title',  'Champions'],['Page Description', 'from World of Warcraft Armory'],['Select Container', 'Responsive Grid を選択'],['Select Item', 'Media Card を選択']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12857,7 +12857,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <ol start="5">
 <li>Configure Content の設定</li>
 </ol>
-  <div id="googleChart3605"></div>
+  <div id="googleChart6585"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12866,7 +12866,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart3605"))).draw(google.visualization.arrayToDataTable([['カテゴリ', '項目', '値'],['Image', 'Source', '\{\{url_inset}}'],['', 'Title', ''],['', 'Image Height', '250'],['Title',  'Title',  '\{\{name}}'],['Description', 'Description', '\{\{level}} \{\{race}} \{\{spec}} \{\{class}} <\{\{guild}}> \{\{realm}}'],['Primary Button', 'Caption', 'ARMORY'],['', 'Link', '\{\{url_profile}}'],['Secondary Button', 'Caption', 'GUIDE'],['', 'Link', '\{\{url_wowhead}}']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart6585"))).draw(google.visualization.arrayToDataTable([['カテゴリ', '項目', '値'],['Image', 'Source', '\{\{url_inset}}'],['', 'Title', ''],['', 'Image Height', '250'],['Title',  'Title',  '\{\{name}}'],['Description', 'Description', '\{\{level}} \{\{race}} \{\{spec}} \{\{class}} <\{\{guild}}> \{\{realm}}'],['Primary Button', 'Caption', 'ARMORY'],['', 'Link', '\{\{url_profile}}'],['Secondary Button', 'Caption', 'GUIDE'],['', 'Link', '\{\{url_wowhead}}']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12914,7 +12914,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 </ul>
 </li>
 <li><p>ディレクトリ配置</p>
-<div id="googleChart515"></div>
+<div id="googleChart4891"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12923,7 +12923,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart515"))).draw(google.visualization.arrayToDataTable([['環境', '項目', 'パス'],['WSL (Ubuntu)', 'mirakurun コマンド', '/usr/loca/bin/mirakurun'],['', 'mirakurun 設定', '/usr/local/etc/mirakurun/'],['', 'mirakurun ログ', '/usr/local/var/log/'],['', 'mirakurun データ', '/usr/local/var/db/mirakurun/'],['', 'mirakurun プロセス', '/usr/local/var/run/'],['', 'EPGStation 環境', '$HOME/EPGStation/'],['', 'EPGStation の設定', '$HOME/EPGStation/config/'],['', 'EPGStation の録画保存先', '/mnt/j/home/epgstation/'],['', 'シェルスクリプト', '$HOME/bin/'],['Windows 10', 'BonRecTest', 'C:\\tools\\PT3\\']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart4891"))).draw(google.visualization.arrayToDataTable([['環境', '項目', 'パス'],['WSL (Ubuntu)', 'mirakurun コマンド', '/usr/loca/bin/mirakurun'],['', 'mirakurun 設定', '/usr/local/etc/mirakurun/'],['', 'mirakurun ログ', '/usr/local/var/log/'],['', 'mirakurun データ', '/usr/local/var/db/mirakurun/'],['', 'mirakurun プロセス', '/usr/local/var/run/'],['', 'EPGStation 環境', '$HOME/EPGStation/'],['', 'EPGStation の設定', '$HOME/EPGStation/config/'],['', 'EPGStation の録画保存先', '/mnt/j/home/epgstation/'],['', 'シェルスクリプト', '$HOME/bin/'],['Windows 10', 'BonRecTest', 'C:\\tools\\PT3\\']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -14345,27 +14345,6 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu Mate 21.10 on Raspberry Pi 4B</title>
-    <url>/2021/11/08/Ubuntu-Mate-21-10-on-Raspberry-Pi-4B/</url>
-    <content><![CDATA[<p><img src="/images/ubuntu_mate_21_10_rpi4b.png"><br><a href="https://ubuntu-mate.org/download/arm64/impish/">https://ubuntu-mate.org/download/arm64/impish/</a></p>
-<span id="more"></span>
-
-<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
-<li></li>
-</ul>
-<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
-<li><p>linux-raspi の更新</p>
-</li>
-<li><p>xrdp のインストール</p>
-</li>
-<li><p>“could not acquire name on session bus” 対策</p>
-</li>
-</ol>
-<figure class="highlight sh"><figcaption><span>/etc/xrdp/startwm.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">unset</span> DBUS_SESSION_BUS_ADDRESS</span><br><span class="line"><span class="built_in">exec</span> mate-session</span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> -x /etc/X11/Xsession &amp;&amp; <span class="built_in">exec</span> /etc/X11/Xsession</span><br><span class="line"><span class="built_in">exec</span> /bin/sh /etc/X11/Xsession</span><br></pre></td></tr></table></figure>
-
-<h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3>]]></content>
-  </entry>
-  <entry>
     <title>Minecraft Java Edition on Raspberry Pi 4B / Ubuntu 21.10</title>
     <url>/2021/10/24/Minecraft-Java-Edition-on-Raspberry-Pi-4B-Ubuntu-21-10/</url>
     <content><![CDATA[<p><img src="/images/minecraft_raspi4b_ubuntu2110.png"></p>
@@ -14406,6 +14385,60 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
         <tag>raspberry-pi</tag>
         <tag>ubuntu</tag>
         <tag>minecraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu Mate 21.10 on Raspberry Pi 4B</title>
+    <url>/2021/11/08/Ubuntu-Mate-21-10-on-Raspberry-Pi-4B/</url>
+    <content><![CDATA[<p><img src="/images/ubuntu_mate_21_10_rpi4b.png"><br><a href="https://ubuntu-mate.org/download/arm64/impish/">https://ubuntu-mate.org/download/arm64/impish/</a></p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li></li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
+<li><p>linux-raspi の更新</p>
+</li>
+<li><p>xrdp のインストール</p>
+</li>
+<li><p>“could not acquire name on session bus” 対策</p>
+</li>
+</ol>
+<figure class="highlight sh"><figcaption><span>/etc/xrdp/startwm.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">unset</span> DBUS_SESSION_BUS_ADDRESS</span><br><span class="line"><span class="built_in">exec</span> mate-session</span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> -x /etc/X11/Xsession &amp;&amp; <span class="built_in">exec</span> /etc/X11/Xsession</span><br><span class="line"><span class="built_in">exec</span> /bin/sh /etc/X11/Xsession</span><br></pre></td></tr></table></figure>
+
+<h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3>]]></content>
+  </entry>
+  <entry>
+    <title>Slidev</title>
+    <url>/2021/12/19/Slidev/</url>
+    <content><![CDATA[<p><a href="https://sli.dev/">https://sli.dev/</a><br><a href="https://github.com/slidevjs/slidev">https://github.com/slidevjs/slidev</a><br>Slidev でスライドを作成してみました。</p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Windows 10 Pro</li>
+<li>node v14.60.0</li>
+</ul>
+<h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><ul>
+<li>NTFS 上にプロジェクトを配置するのであれば、Windows のnode を利用するのがよいかもしれない。WSL のnode ではファイルの更新がうまく検知されないみたい。</li>
+<li><code>npm init slidev</code> でプロジェクトを作成するとnode_modules フォルダで260MB消費された。プロジェクトは一つだけにした方がよさそう。</li>
+<li>生成された<code>slides.md</code> は使用せず、このフォルダ下にスライド群(.md)を作っていくのがよいかもしれない。</li>
+<li>PDF にエクスポートするには<code>npm i -D playwright-chromium</code>しておく。<br><code>npx slidev export slidev-test.md</code>すると、<code>slidev-test-export.pdf</code>が生成される。</li>
+<li>ローカル画像は<code>public</code>フォルダ下に配置する。<code>/hoge.png</code>で参照する。</li>
+</ul>
+<h3 id="マークダウンの例（作成中）"><a href="#マークダウンの例（作成中）" class="headerlink" title="マークダウンの例（作成中）"></a>マークダウンの例（作成中）</h3><ul>
+<li><a href="/images/slidev-test.md">slidev-test.md</a></li>
+</ul>
+<h3 id="スライド例"><a href="#スライド例" class="headerlink" title="スライド例"></a>スライド例</h3>
+
+	<div class="row">
+    <embed src="/images/slidev-test-export.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <tags>
+        <tag>markdown</tag>
+        <tag>slidev</tag>
       </tags>
   </entry>
   <entry>
@@ -14543,28 +14576,6 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
       </tags>
   </entry>
   <entry>
-    <title>Argos GNOME 42 Support</title>
-    <url>/2022/03/19/Argos-GNOME-42-Support/</url>
-    <content><![CDATA[<p><img src="/images/argos_gnome42.png" alt="argos_gnome42.png"><br><a href="https://github.com/ktkr3d/argos">https://github.com/ktkr3d/argos</a><br>GNOME Shell Extension のArgos をGNOME Shell 42 で実行できるようにしてみました。</p>
-<span id="more"></span>
-
-<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
-<li>Ubuntu 22.04 Jammy</li>
-<li>GNOME Shell 42.beta</li>
-</ul>
-<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/ktkr3d/argos.git</span><br><span class="line">$ <span class="built_in">mkdir</span> -p ~/.local/share/gnome-shell/extensions</span><br><span class="line">$ <span class="built_in">cp</span> -r argos/argos@pew.worldwidemann.com ~/.local/share/gnome-shell/extensions</span><br></pre></td></tr></table></figure>
-
-<p>X11 の場合は[Alt]-[F2] で<code>r</code>してから拡張機能を有効化</p>
-<h3 id="パッチの内容"><a href="#パッチの内容" class="headerlink" title="パッチの内容"></a>パッチの内容</h3><p><a href="/images/argos_gnome42.patch">argos_gnome42.patch</a></p>
-<figure class="highlight patch"><figcaption><span>argos_gnome42.patch</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">diff --git argos@pew.worldwidemann.com/button.js argos@pew.worldwidemann.com/button.js</span></span><br><span class="line"><span class="comment">index 3565603..8c4164d 100644</span></span><br><span class="line"><span class="comment">--- argos@pew.worldwidemann.com/button.js</span></span><br><span class="line"><span class="comment">+++ argos@pew.worldwidemann.com/button.js</span></span><br><span class="line"><span class="meta">@@ -12,6 +12,7 @@</span></span><br><span class="line"> const Lang = imports.lang;</span><br><span class="line"> const GLib = imports.gi.GLib;</span><br><span class="line"> const Gio = imports.gi.Gio;</span><br><span class="line"><span class="addition">+const GObject = imports.gi.GObject;</span></span><br><span class="line"> const PanelMenu = imports.ui.panelMenu;</span><br><span class="line"> const PopupMenu = imports.ui.popupMenu;</span><br><span class="line"> const Mainloop = imports.mainloop;</span><br><span class="line"><span class="meta">@@ -21,12 +22,10 @@</span> const ArgosLineView = Extension.imports.lineview.ArgosLineView;</span><br><span class="line"> const ArgosMenuItem = Extension.imports.menuitem.ArgosMenuItem;</span><br><span class="line"> const Utilities = Extension.imports.utilities;</span><br><span class="line"> </span><br><span class="line"><span class="deletion">-var ArgosButton = new Lang.Class(&#123;</span></span><br><span class="line"><span class="deletion">-  Name: &quot;ArgosButton&quot;,</span></span><br><span class="line"><span class="deletion">-  Extends: PanelMenu.Button,</span></span><br><span class="line"><span class="deletion">-</span></span><br><span class="line"><span class="deletion">-  _init: function(file, settings) &#123;</span></span><br><span class="line"><span class="deletion">-    this.parent(0, &quot;&quot;, false);</span></span><br><span class="line"><span class="addition">+var ArgosButton = GObject.registerClass(</span></span><br><span class="line"><span class="addition">+class ArgosButton extends PanelMenu.Button &#123;</span></span><br><span class="line"><span class="addition">+  _init(file, settings) &#123;</span></span><br><span class="line"><span class="addition">+    super._init(0, &quot;&quot;, false);</span></span><br><span class="line"> </span><br><span class="line">     this._file = file;</span><br><span class="line">     this._updateInterval = settings.updateInterval;</span><br><span class="line"><span class="meta">@@ -52,9 +51,9 @@</span> var ArgosButton = new Lang.Class(&#123;</span><br><span class="line">           this.update();</span><br><span class="line">       &#125;));</span><br><span class="line">     &#125;</span><br><span class="line"><span class="deletion">-  &#125;,</span></span><br><span class="line"><span class="addition">+  &#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="deletion">-  _onDestroy: function() &#123;</span></span><br><span class="line"><span class="addition">+  _onDestroy() &#123;</span></span><br><span class="line">     this._isDestroyed = true;</span><br><span class="line"> </span><br><span class="line">     if (this._updateTimeout !== null)</span><br><span class="line"><span class="meta">@@ -63,18 +62,18 @@</span> var ArgosButton = new Lang.Class(&#123;</span><br><span class="line">       Mainloop.source_remove(this._cycleTimeout);</span><br><span class="line"> </span><br><span class="line">     this.menu.removeAll();</span><br><span class="line"><span class="deletion">-  &#125;,</span></span><br><span class="line"><span class="addition">+  &#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="deletion">-  update: function() &#123;</span></span><br><span class="line"><span class="addition">+  update() &#123;</span></span><br><span class="line">     if (this._updateTimeout !== null) &#123;</span><br><span class="line">       Mainloop.source_remove(this._updateTimeout);</span><br><span class="line">       this._updateTimeout = null;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     this._update();</span><br><span class="line"><span class="deletion">-  &#125;,</span></span><br><span class="line"><span class="addition">+  &#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="deletion">-  _update: function() &#123;</span></span><br><span class="line"><span class="addition">+  _update() &#123;</span></span><br><span class="line">     if (this._updateRunning)</span><br><span class="line">       return;</span><br><span class="line"> </span><br><span class="line"><span class="meta">@@ -106,9 +105,9 @@</span> var ArgosButton = new Lang.Class(&#123;</span><br><span class="line">       log(&quot;Unable to execute file &#x27;&quot; + this._file.get_basename() + &quot;&#x27;: &quot; + error);</span><br><span class="line">       this._updateRunning = false;</span><br><span class="line">     &#125;</span><br><span class="line"><span class="deletion">-  &#125;,</span></span><br><span class="line"><span class="addition">+  &#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="deletion">-  _processOutput: function(output) &#123;</span></span><br><span class="line"><span class="addition">+  _processOutput(output) &#123;</span></span><br><span class="line">     let buttonLines = [];</span><br><span class="line">     let dropdownLines = [];</span><br><span class="line"> </span><br><span class="line"><span class="comment">diff --git argos@pew.worldwidemann.com/metadata.json argos@pew.worldwidemann.com/metadata.json</span></span><br><span class="line"><span class="comment">index bafe390..722244c 100644</span></span><br><span class="line"><span class="comment">--- argos@pew.worldwidemann.com/metadata.json</span></span><br><span class="line"><span class="comment">+++ argos@pew.worldwidemann.com/metadata.json</span></span><br><span class="line"><span class="meta">@@ -12,6 +12,7 @@</span></span><br><span class="line">     &quot;3.36&quot;,</span><br><span class="line">     &quot;3.38&quot;,</span><br><span class="line">     &quot;40&quot;,</span><br><span class="line"><span class="deletion">-    &quot;41&quot;</span></span><br><span class="line"><span class="addition">+    &quot;41&quot;,</span></span><br><span class="line"><span class="addition">+    &quot;42&quot;</span></span><br><span class="line">   ]</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3>]]></content>
-      <tags>
-        <tag>gnome-shell</tag>
-        <tag>argos</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Draw.io on code-server</title>
     <url>/2022/02/22/Draw-io-on-Code-Server/</url>
     <content><![CDATA[<p><img src="/images/drawio_codeserver.png"></p>
@@ -14632,6 +14643,28 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
       <tags>
         <tag>vscode</tag>
         <tag>draw.io</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Argos GNOME 42 Support</title>
+    <url>/2022/03/19/Argos-GNOME-42-Support/</url>
+    <content><![CDATA[<p><img src="/images/argos_gnome42.png" alt="argos_gnome42.png"><br><a href="https://github.com/ktkr3d/argos">https://github.com/ktkr3d/argos</a><br>GNOME Shell Extension のArgos をGNOME Shell 42 で実行できるようにしてみました。</p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Ubuntu 22.04 Jammy</li>
+<li>GNOME Shell 42.beta</li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/ktkr3d/argos.git</span><br><span class="line">$ <span class="built_in">mkdir</span> -p ~/.local/share/gnome-shell/extensions</span><br><span class="line">$ <span class="built_in">cp</span> -r argos/argos@pew.worldwidemann.com ~/.local/share/gnome-shell/extensions</span><br></pre></td></tr></table></figure>
+
+<p>X11 の場合は[Alt]-[F2] で<code>r</code>してから拡張機能を有効化</p>
+<h3 id="パッチの内容"><a href="#パッチの内容" class="headerlink" title="パッチの内容"></a>パッチの内容</h3><p><a href="/images/argos_gnome42.patch">argos_gnome42.patch</a></p>
+<figure class="highlight patch"><figcaption><span>argos_gnome42.patch</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">diff --git argos@pew.worldwidemann.com/button.js argos@pew.worldwidemann.com/button.js</span></span><br><span class="line"><span class="comment">index 3565603..8c4164d 100644</span></span><br><span class="line"><span class="comment">--- argos@pew.worldwidemann.com/button.js</span></span><br><span class="line"><span class="comment">+++ argos@pew.worldwidemann.com/button.js</span></span><br><span class="line"><span class="meta">@@ -12,6 +12,7 @@</span></span><br><span class="line"> const Lang = imports.lang;</span><br><span class="line"> const GLib = imports.gi.GLib;</span><br><span class="line"> const Gio = imports.gi.Gio;</span><br><span class="line"><span class="addition">+const GObject = imports.gi.GObject;</span></span><br><span class="line"> const PanelMenu = imports.ui.panelMenu;</span><br><span class="line"> const PopupMenu = imports.ui.popupMenu;</span><br><span class="line"> const Mainloop = imports.mainloop;</span><br><span class="line"><span class="meta">@@ -21,12 +22,10 @@</span> const ArgosLineView = Extension.imports.lineview.ArgosLineView;</span><br><span class="line"> const ArgosMenuItem = Extension.imports.menuitem.ArgosMenuItem;</span><br><span class="line"> const Utilities = Extension.imports.utilities;</span><br><span class="line"> </span><br><span class="line"><span class="deletion">-var ArgosButton = new Lang.Class(&#123;</span></span><br><span class="line"><span class="deletion">-  Name: &quot;ArgosButton&quot;,</span></span><br><span class="line"><span class="deletion">-  Extends: PanelMenu.Button,</span></span><br><span class="line"><span class="deletion">-</span></span><br><span class="line"><span class="deletion">-  _init: function(file, settings) &#123;</span></span><br><span class="line"><span class="deletion">-    this.parent(0, &quot;&quot;, false);</span></span><br><span class="line"><span class="addition">+var ArgosButton = GObject.registerClass(</span></span><br><span class="line"><span class="addition">+class ArgosButton extends PanelMenu.Button &#123;</span></span><br><span class="line"><span class="addition">+  _init(file, settings) &#123;</span></span><br><span class="line"><span class="addition">+    super._init(0, &quot;&quot;, false);</span></span><br><span class="line"> </span><br><span class="line">     this._file = file;</span><br><span class="line">     this._updateInterval = settings.updateInterval;</span><br><span class="line"><span class="meta">@@ -52,9 +51,9 @@</span> var ArgosButton = new Lang.Class(&#123;</span><br><span class="line">           this.update();</span><br><span class="line">       &#125;));</span><br><span class="line">     &#125;</span><br><span class="line"><span class="deletion">-  &#125;,</span></span><br><span class="line"><span class="addition">+  &#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="deletion">-  _onDestroy: function() &#123;</span></span><br><span class="line"><span class="addition">+  _onDestroy() &#123;</span></span><br><span class="line">     this._isDestroyed = true;</span><br><span class="line"> </span><br><span class="line">     if (this._updateTimeout !== null)</span><br><span class="line"><span class="meta">@@ -63,18 +62,18 @@</span> var ArgosButton = new Lang.Class(&#123;</span><br><span class="line">       Mainloop.source_remove(this._cycleTimeout);</span><br><span class="line"> </span><br><span class="line">     this.menu.removeAll();</span><br><span class="line"><span class="deletion">-  &#125;,</span></span><br><span class="line"><span class="addition">+  &#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="deletion">-  update: function() &#123;</span></span><br><span class="line"><span class="addition">+  update() &#123;</span></span><br><span class="line">     if (this._updateTimeout !== null) &#123;</span><br><span class="line">       Mainloop.source_remove(this._updateTimeout);</span><br><span class="line">       this._updateTimeout = null;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     this._update();</span><br><span class="line"><span class="deletion">-  &#125;,</span></span><br><span class="line"><span class="addition">+  &#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="deletion">-  _update: function() &#123;</span></span><br><span class="line"><span class="addition">+  _update() &#123;</span></span><br><span class="line">     if (this._updateRunning)</span><br><span class="line">       return;</span><br><span class="line"> </span><br><span class="line"><span class="meta">@@ -106,9 +105,9 @@</span> var ArgosButton = new Lang.Class(&#123;</span><br><span class="line">       log(&quot;Unable to execute file &#x27;&quot; + this._file.get_basename() + &quot;&#x27;: &quot; + error);</span><br><span class="line">       this._updateRunning = false;</span><br><span class="line">     &#125;</span><br><span class="line"><span class="deletion">-  &#125;,</span></span><br><span class="line"><span class="addition">+  &#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="deletion">-  _processOutput: function(output) &#123;</span></span><br><span class="line"><span class="addition">+  _processOutput(output) &#123;</span></span><br><span class="line">     let buttonLines = [];</span><br><span class="line">     let dropdownLines = [];</span><br><span class="line"> </span><br><span class="line"><span class="comment">diff --git argos@pew.worldwidemann.com/metadata.json argos@pew.worldwidemann.com/metadata.json</span></span><br><span class="line"><span class="comment">index bafe390..722244c 100644</span></span><br><span class="line"><span class="comment">--- argos@pew.worldwidemann.com/metadata.json</span></span><br><span class="line"><span class="comment">+++ argos@pew.worldwidemann.com/metadata.json</span></span><br><span class="line"><span class="meta">@@ -12,6 +12,7 @@</span></span><br><span class="line">     &quot;3.36&quot;,</span><br><span class="line">     &quot;3.38&quot;,</span><br><span class="line">     &quot;40&quot;,</span><br><span class="line"><span class="deletion">-    &quot;41&quot;</span></span><br><span class="line"><span class="addition">+    &quot;41&quot;,</span></span><br><span class="line"><span class="addition">+    &quot;42&quot;</span></span><br><span class="line">   ]</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3>]]></content>
+      <tags>
+        <tag>gnome-shell</tag>
+        <tag>argos</tag>
       </tags>
   </entry>
   <entry>
@@ -14819,39 +14852,6 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 ]]></content>
       <tags>
         <tag>tauri</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Slidev</title>
-    <url>/2021/12/19/Slidev/</url>
-    <content><![CDATA[<p><a href="https://sli.dev/">https://sli.dev/</a><br><a href="https://github.com/slidevjs/slidev">https://github.com/slidevjs/slidev</a><br>Slidev でスライドを作成してみました。</p>
-<span id="more"></span>
-
-<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
-<li>Windows 10 Pro</li>
-<li>node v14.60.0</li>
-</ul>
-<h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><ul>
-<li>NTFS 上にプロジェクトを配置するのであれば、Windows のnode を利用するのがよいかもしれない。WSL のnode ではファイルの更新がうまく検知されないみたい。</li>
-<li><code>npm init slidev</code> でプロジェクトを作成するとnode_modules フォルダで260MB消費された。プロジェクトは一つだけにした方がよさそう。</li>
-<li>生成された<code>slides.md</code> は使用せず、このフォルダ下にスライド群(.md)を作っていくのがよいかもしれない。</li>
-<li>PDF にエクスポートするには<code>npm i -D playwright-chromium</code>しておく。<br><code>npx slidev export slidev-test.md</code>すると、<code>slidev-test-export.pdf</code>が生成される。</li>
-<li>ローカル画像は<code>public</code>フォルダ下に配置する。<code>/hoge.png</code>で参照する。</li>
-</ul>
-<h3 id="マークダウンの例（作成中）"><a href="#マークダウンの例（作成中）" class="headerlink" title="マークダウンの例（作成中）"></a>マークダウンの例（作成中）</h3><ul>
-<li><a href="/images/slidev-test.md">slidev-test.md</a></li>
-</ul>
-<h3 id="スライド例"><a href="#スライド例" class="headerlink" title="スライド例"></a>スライド例</h3>
-
-	<div class="row">
-    <embed src="/images/slidev-test-export.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <tags>
-        <tag>markdown</tag>
-        <tag>slidev</tag>
       </tags>
   </entry>
   <entry>
@@ -15676,7 +15676,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>A: Windows 11 Home</li>
 <li>B: Ubuntu 23.04</li>
 </ul>
-<h4 id="💻本体確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#💻本体確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart224"></div>
+<h4 id="💻本体確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#💻本体確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart9489"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15685,13 +15685,13 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart224"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['CPU', 'Intel Alder Lake-N100', "✔", "✔"],['メモリ', '12GB (LPDDR5)', "✔", "✔"],['ストレージ', '512GB (NVMe SSD)', "✔", "✔"],['内蔵ディスプレイ', 'IPS 10.51 inch 1920×1200', "✔", "✔"],['タッチスクリーン', '', "✔", "✔"],['タッチパッド', '', "✔", "✔"],['キーボード/バックライト', '', "✔", "✔"],['Wi-Fi', 'Wi-Fi 6', "✔", "✔"],['Bluetooth', 'Bluetooth 5.2', "✔", "✔"],['Audio Jack', '3.5mm (ステレオ)', "✔", "✔"],['内蔵スピーカ', '', "✔", "✔"],['内蔵マイク', '', "✔", "✔"],['内蔵カメラ', '', "✔", "✔"],['USB Port #1 (奥)', 'Type-C USB 3.0', "✔", "✔"],['USB Port #2 (手前)', 'Type-C USB 3.0', "✔", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart9489"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['CPU', 'Intel Alder Lake-N100', "✔", "✔"],['メモリ', '12GB (LPDDR5)', "✔", "✔"],['ストレージ', '512GB (NVMe SSD)', "✔", "✔"],['内蔵ディスプレイ', 'IPS 10.51 inch 1920×1200', "✔", "✔"],['タッチスクリーン', '', "✔", "✔"],['タッチパッド', '', "✔", "✔"],['キーボード/バックライト', '', "✔", "✔"],['Wi-Fi', 'Wi-Fi 6', "✔", "✔"],['Bluetooth', 'Bluetooth 5.2', "✔", "✔"],['Audio Jack', '3.5mm (ステレオ)', "✔", "✔"],['内蔵スピーカ', '', "✔", "✔"],['内蔵マイク', '', "✔", "✔"],['内蔵カメラ', '', "✔", "✔"],['USB Port #1 (奥)', 'Type-C USB 3.0', "✔", "✔"],['USB Port #2 (手前)', 'Type-C USB 3.0', "✔", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
 </script>
 
-<h4 id="🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart7318"></div>
+<h4 id="🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart6197"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15700,7 +15700,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart7318"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['外部ディスプレイ接続', '4K Dell', "✔", "✔"],['外部タッチスクリーンディスプレイ', 'FHD Touch Screen(USB Type-C)', "✔", ""],['ゲームパッド', 'Microsoft', "", ""],['Bluetooth ヘッドセット #1', 'Sony', "✔", "✔"],['Bluetooth ヘッドセット #2', '', "", ""],['USB Camera', 'Logi', "", ""],['USB Mouse', 'Logi', "", ""],['Bluetooth Mouse', 'Logi', "", ""],['タッチペン', '', "", ""],['USB-LAN', '', "", ""],['Video Capture', '別PC のHDMI出力 → MiniBook X のUSB-Cポート', "", ""]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart6197"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['外部ディスプレイ接続', '4K Dell', "✔", "✔"],['外部タッチスクリーンディスプレイ', 'FHD Touch Screen(USB Type-C)', "✔", ""],['ゲームパッド', 'Microsoft', "", ""],['Bluetooth ヘッドセット #1', 'Sony', "✔", "✔"],['Bluetooth ヘッドセット #2', '', "", ""],['USB Camera', 'Logi', "", ""],['USB Mouse', 'Logi', "", ""],['Bluetooth Mouse', 'Logi', "", ""],['タッチペン', '', "", ""],['USB-LAN', '', "", ""],['Video Capture', '別PC のHDMI出力 → MiniBook X のUSB-Cポート', "", ""]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15729,7 +15729,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>Ubunutu ISO<br><a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a><br>Ventoy USBメモリにISO をコピー、USB Type-C ⇔ Type-A 変換経由でブート</li>
 <li>gparted で512GB(477GiB)ストレージのパーティションを再構成</li>
 </ul>
-<div id="googleChart9130"></div>
+<div id="googleChart5639"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15738,7 +15738,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart9130"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart5639"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15810,7 +15810,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>Boss<br><a href="https://www.wowhead.com/guide/raids/aberrus-the-shadowed-crucible/overview#bosses">https://www.wowhead.com/guide/raids/aberrus-the-shadowed-crucible/overview#bosses</a><br>のボス9体</li>
 <li>難易度<br>LFR: Looking for Raid</li>
 </ul>
-<h3 id="耐久実績"><a href="#耐久実績" class="headerlink" title="耐久実績"></a>耐久実績</h3><div id="googleChart2164"></div>
+<h3 id="耐久実績"><a href="#耐久実績" class="headerlink" title="耐久実績"></a>耐久実績</h3><div id="googleChart3611"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15819,7 +15819,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart2164"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類', '実績'],['Death Knight', 'Frost', "Melee", "✔"],['Demon Hunter', 'Havoc', "Melee", "✔"],['Druid', 'Balance', "Ranged", "✔"],['Evoker', 'Devastation', "Ranged", "✔"],['Hunter', 'Beast Mastery', "Ranged", "✔"],['Monk', 'Windwalker', "Melee", "✔"],['Mage', 'Frost', "Ranged", "✔"],['Warlock', 'Demonology', "Ranged", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart3611"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類', '実績'],['Death Knight', 'Frost', "Melee", "✔"],['Demon Hunter', 'Havoc', "Melee", "✔"],['Druid', 'Balance', "Ranged", "✔"],['Evoker', 'Devastation', "Ranged", "✔"],['Hunter', 'Beast Mastery', "Ranged", "✔"],['Monk', 'Windwalker', "Melee", "✔"],['Mage', 'Frost', "Ranged", "✔"],['Warlock', 'Demonology', "Ranged", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15838,7 +15838,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>TipTac<br>情報を追加するオプション機能がとても便利だけど無くても困らない</li>
 <li>Dugi<br>ギアを入手したタイミングで装着を提案してくれる機能は残しておきたい<br>使っていない機能があるので設定を見直そう<br>AutoRepair は他のアドオンでも代替可能</li>
 </ul>
-<h3 id="育成枠"><a href="#育成枠" class="headerlink" title="育成枠"></a>育成枠</h3><div id="googleChart6502"></div>
+<h3 id="育成枠"><a href="#育成枠" class="headerlink" title="育成枠"></a>育成枠</h3><div id="googleChart1788"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15847,7 +15847,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart6502"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類'],['Paladin', 'Retribution', "Melee"],['Priest', 'Shadow', "Ranged"],['Rogue', 'Subtlety', "Melle"],['Shaman', 'Elemental', "Ranged"],['Warrior', 'Arms', "Melee"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart1788"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類'],['Paladin', 'Retribution', "Melee"],['Priest', 'Shadow', "Ranged"],['Rogue', 'Subtlety', "Melle"],['Shaman', 'Elemental', "Ranged"],['Warrior', 'Arms', "Melee"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15971,7 +15971,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>Calam Arch Installer 2023-08</li>
 <li>gparted で512GB(477GiB)ストレージにArch Linux 用パーティションとして50GiBを準備</li>
 </ul>
-<div id="googleChart1657"></div>
+<div id="googleChart7641"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15980,7 +15980,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart1657"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart7641"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -16064,7 +16064,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><p><a href="https://wiki.hyprland.org/">https://wiki.hyprland.org/</a><br><a href="https://github.com/hyprland-community/awesome-hyprland">https://github.com/hyprland-community/awesome-hyprland</a></p>
-<div id="googleChart7493"></div>
+<div id="googleChart9571"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -16073,7 +16073,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart7493"))).draw(google.visualization.arrayToDataTable([['項目', '選択肢', '2023-08-25'],['Distribution', 'Arch Linux', "✔"],['Display Manager', 'GDM', "✔"],['WM / Wayland Compositor', 'Hyprland', "✔"],['', 'Sway', ""],['Terminal Emulator', 'kitty', "✔"],['Status Bar', 'Waybar', "✔"],['', 'Eww', ""],['', 'Ags', ""],['Wallpaper', 'hyprpaper', "✔"],['App Launcher', 'Wofi', "✔"],['', 'Rofi', ""],['Screenshot', 'hyprshot', "✔"],['Idle Daemon', 'swayidle', ""],['Locker', "swaylock", ""],['Color Picker', 'hyprpicker', "✔"],['Power Menu', 'Wofi (Script)', "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart9571"))).draw(google.visualization.arrayToDataTable([['項目', '選択肢', '2023-08-25'],['Distribution', 'Arch Linux', "✔"],['Display Manager', 'GDM', "✔"],['WM / Wayland Compositor', 'Hyprland', "✔"],['', 'Sway', ""],['Terminal Emulator', 'kitty', "✔"],['Status Bar', 'Waybar', "✔"],['', 'Eww', ""],['', 'Ags', ""],['Wallpaper', 'hyprpaper', "✔"],['App Launcher', 'Wofi', "✔"],['', 'Rofi', ""],['Screenshot', 'hyprshot', "✔"],['Idle Daemon', 'swayidle', ""],['Locker', "swaylock", ""],['Color Picker', 'hyprpicker', "✔"],['Power Menu', 'Wofi (Script)', "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -17132,7 +17132,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <ol start="2">
 <li>USBメモリで起動し、gpartedでMiniBook X のストレージにUbuntu用のパーティションを作成する。画面が傾いているのでディスプレイの設定を変更する。</li>
 </ol>
-<div id="googleChart8467"></div>
+<div id="googleChart1466"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -17141,7 +17141,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart8467"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart1466"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -18174,15 +18174,17 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </ol>
 <ul>
 <li>設定ファイルは<code>%userprofile%\.glzr\glazewm\config.yaml</code>。<br>トレイアイコンを右クリックして<code>Show config folder</code>でフォルダを表示できます。</li>
-<li>上部のバーを起動しないようにする。<figure class="highlight yaml"><figcaption><span>%userprofile%\.glzr\glazewm\config.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">general:</span></span><br><span class="line">  <span class="comment"># Commands to run when the WM has started. This is useful for running a</span></span><br><span class="line">  <span class="comment"># script or launching another application.</span></span><br><span class="line">  <span class="comment"># Example: The below command launches Zebar.</span></span><br><span class="line">  <span class="comment"># startup_commands: [&#x27;shell-exec zebar&#x27;]</span></span><br><span class="line">  <span class="attr">startup_commands:</span> []</span><br></pre></td></tr></table></figure></li>
+<li>上部のバーを起動しないようにする。<figure class="highlight yaml"><figcaption><span>%userprofile%\.glzr\glazewm\config.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">general:</span></span><br><span class="line">  <span class="comment"># Commands to run when the WM has started. This is useful for running a</span></span><br><span class="line">  <span class="comment"># script or launching another application.</span></span><br><span class="line">  <span class="comment"># Example: The below command launches Zebar.</span></span><br><span class="line">  <span class="comment">#startup_commands: [&#x27;shell-exec zebar&#x27;]</span></span><br><span class="line">  <span class="attr">startup_commands:</span> []</span><br></pre></td></tr></table></figure></li>
 <li>ウィンドウ間の隙間を狭くする。<figure class="highlight yaml"><figcaption><span>%userprofile%\.glzr\glazewm\config.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">gaps:</span></span><br><span class="line">  <span class="comment"># Whether to scale the gaps with the DPI of the monitor.</span></span><br><span class="line">  <span class="attr">scale_with_dpi:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Gap between adjacent windows.</span></span><br><span class="line">  <span class="comment">#inner_gap: &#x27;20px&#x27;</span></span><br><span class="line">  <span class="attr">inner_gap:</span> <span class="string">&#x27;4px&#x27;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Gap between windows and the screen edge.</span></span><br><span class="line">  <span class="attr">outer_gap:</span></span><br><span class="line">    <span class="comment">#top: &#x27;60px&#x27;</span></span><br><span class="line">    <span class="comment">#right: &#x27;20px&#x27;</span></span><br><span class="line">    <span class="comment">#bottom: &#x27;20px&#x27;</span></span><br><span class="line">    <span class="comment">#left: &#x27;20px&#x27;</span></span><br><span class="line">    <span class="attr">top:</span> <span class="string">&#x27;4px&#x27;</span></span><br><span class="line">    <span class="attr">right:</span> <span class="string">&#x27;4px&#x27;</span></span><br><span class="line">    <span class="attr">bottom:</span> <span class="string">&#x27;4px&#x27;</span></span><br><span class="line">    <span class="attr">left:</span> <span class="string">&#x27;4px&#x27;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 <ol start="3">
-<li>設定の再読み込み<br>  トレイアイコンを右クリックして<code>Reload config</code></li>
+<li>設定の再読み込み<br>  トレイアイコンを右クリックして<code>Reload config</code>。<br>  もしくは<code>Alt Shift R</code>。</li>
 <li>自動起動<br>  <a href="https://github.com/glzr-io/glazewm#user-content-faq">https://github.com/glzr-io/glazewm#user-content-faq</a><br>  <code>C:\ProgramData\Microsoft\Windows\Start Menu\Programs\</code>にあるアプリケーションショートカット<code>GlazeWM</code>を<code>shell:startup</code>にコピーする。</li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>キー割り当て<br><a href="https://github.com/glzr-io/glazewm?tab=readme-ov-file#default-keybindings">https://github.com/glzr-io/glazewm?tab=readme-ov-file#default-keybindings</a><br><img src="https://github.com/glzr-io/glazewm/raw/main/resources/assets/cheatsheet.png"></li>
+<li><code>Alt Shift Space</code> : ウインドウのタイリング状態を切り替え</li>
+<li><code>Alt Shift R</code> : 設定ファイルの再読み込み</li>
 </ul>
 ]]></content>
       <tags>
