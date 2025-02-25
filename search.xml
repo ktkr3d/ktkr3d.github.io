@@ -18195,4 +18195,40 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
         <tag>glazewm</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Task tray script launcher</title>
+    <url>/2025/02/25/Task-tray-script-launcher/</url>
+    <content><![CDATA[<p><img src="/images/task-tray-script-launcher.png"></p>
+<p>タスクトレイからスクリプトを起動するランチャーをPower Shellで作ってみました。</p>
+<p><a href="https://github.com/ktkr3d/task-tray-script-launcher">https://github.com/ktkr3d/task-tray-script-launcher</a></p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Windows 11 24H2</li>
+</ul>
+<h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><ul>
+<li><p>クローン</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/ktkr3d/task-tray-script-launcher.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>task-tray-script-launcher.ps1</code>がプログラム本体<br>スクリプト格納フォルダを第一引数に渡す</p>
+</li>
+<li><p><code>task-tray-script-launcher.vbs</code>はラッパでPowerShell画面の表示を抑止する<br>インストール先に合わせてパスを修正します。</p>
+</li>
+</ul>
+<h3 id="自動起動設定"><a href="#自動起動設定" class="headerlink" title="自動起動設定"></a>自動起動設定</h3><p><code>task-tray-script-launcher.vbs</code>のショートカットを作成して<code>shell:startup</code>フォルダに格納します。</p>
+<h3 id="スクリプトの設定"><a href="#スクリプトの設定" class="headerlink" title="スクリプトの設定"></a>スクリプトの設定</h3><p>タスクトレイのアイコンを右クリックして<code>Open script folder</code>を選択するとスクリプトフォルダが表示されます。<br>スクリプトフォルダにスクリプトファイルやアプリケーションのショートカットを格納します。<br>スクリプトの追加や削除の後に<code>Reload script files</code>を選択するとスクリプトの一覧が更新されます。</p>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><p>タスクトレイのアイコンを右クリックして表示されるスクリプトをクリックします。</p>
+<h3 id="参考にしたプロジェクト"><a href="#参考にしたプロジェクト" class="headerlink" title="参考にしたプロジェクト"></a>参考にしたプロジェクト</h3><p>以下を参考にしました。ありがとうございます。</p>
+<ul>
+<li><a href="https://qiita.com/sumikko_tester/items/b3c8440fd182cdabe31b">【powershell】アプリ起動ランチャー作ってみた</a></li>
+<li><a href="https://github.com/Jayich-Lab/tray-launcher">tray-launcher</a></li>
+<li><a href="https://github.com/zozonteq/task-tray-launcher">task-tray-launcher</a></li>
+<li><a href="https://github.com/p-e-w/argos">argos</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>windows</tag>
+        <tag>task-tray-script-launcher</tag>
+      </tags>
+  </entry>
 </search>
