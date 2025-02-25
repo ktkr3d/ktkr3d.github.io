@@ -18209,7 +18209,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </ul>
 <h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><ul>
 <li><p>クローン</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/ktkr3d/task-tray-script-launcher.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> C:¥repos</span><br><span class="line"><span class="built_in">cd</span> C:¥repos</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/ktkr3d/task-tray-script-launcher.git</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>task-tray-script-launcher.ps1</code>がプログラム本体<br>スクリプト格納フォルダを第一引数に渡す</p>
 </li>
