@@ -15,31 +15,8 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 26 Feb 2025 15:06:35 GMT</pubDate>
+    <pubDate>Wed, 26 Feb 2025 13:21:34 GMT</pubDate>
     <generator>http://hexo.io/</generator>
-    
-    <item>
-      <title>Task tray script launcher</title>
-      <link>https://ktkr3d.github.io/2025/02/25/Task-tray-script-launcher/</link>
-      <guid>https://ktkr3d.github.io/2025/02/25/Task-tray-script-launcher/</guid>
-      <pubDate>Tue, 25 Feb 2025 10:14:46 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/task-tray-script-launcher.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;タスクトレイからスクリプトを起動するランチャーをPower Shellで作ってみました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/task-tray-script-launcher&quot;&gt;https://github.com/ktkr3d/task-tray-script-launcher&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/task-tray-script-launcher/">task-tray-script-launcher</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/02/25/Task-tray-script-launcher/#disqus_thread</comments>
-      
-    </item>
     
     <item>
       <title>GlazeWM</title>
@@ -479,6 +456,26 @@
       
       
       <comments>https://ktkr3d.github.io/2023/12/31/Nuxt3-VOICEVOX/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Nuxt3 + Vue-good-table-next</title>
+      <link>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/</link>
+      <guid>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/</guid>
+      <pubDate>Sat, 30 Dec 2023 12:24:45 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/vue-good-table-next.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://nuxt.com/&quot;&gt;https://nuxt.com/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/borisflesch/vue-good-table-next&quot;&gt;https://github.com/borisflesch/vue-good-table-next&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Nuxt 3 でVue-good-table-nextを使ってみました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/nuxt3/">nuxt3</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/#disqus_thread</comments>
       
     </item>
     
