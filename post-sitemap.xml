@@ -9,8 +9,8 @@
 
 
     <url>
-        <loc>https://ktkr3d.github.io/2025/02/24/GlazeWM/</loc>
-        <lastmod>2025-02-26T13:21:34.140Z</lastmod>
+        <loc>https://ktkr3d.github.io/2025/02/25/Script-Launcher/</loc>
+        <lastmod>2025-02-27T11:42:42.615Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,7 +18,23 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2025/01/23/tray-launcher/</loc>
-        <lastmod>2025-02-25T10:37:13.034Z</lastmod>
+        <lastmod>2025-02-27T08:22:53.615Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2025/01/29/Vertical-Taskbar-for-Windows-11/</loc>
+        <lastmod>2025-02-27T08:18:54.115Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2025/02/24/GlazeWM/</loc>
+        <lastmod>2025-02-26T13:21:34.140Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -51,14 +67,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2021/03/18/EPGStation-Settings/</loc>
         <lastmod>2025-02-03T07:24:09.633Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2025/01/29/Vertical-Taskbar-for-Windows-11/</loc>
-        <lastmod>2025-01-29T21:08:39.947Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

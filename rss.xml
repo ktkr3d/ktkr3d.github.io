@@ -15,8 +15,37 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 26 Feb 2025 13:21:34 GMT</pubDate>
+    <pubDate>Thu, 27 Feb 2025 11:42:42 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Script Launcher</title>
+      <link>https://ktkr3d.github.io/2025/02/25/Script-Launcher/</link>
+      <guid>https://ktkr3d.github.io/2025/02/25/Script-Launcher/</guid>
+      <pubDate>Tue, 25 Feb 2025 10:14:46 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/script-launcher.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;タスクバーからスクリプトを起動するランチャーです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/script-launcher&quot;&gt;https://github.com/ktkr3d/script-launcher&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以下を参考にしました。ありがとうございます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiita.com/sumikko_tester/items/b3c8440fd182cdabe31b&quot;&gt;【powershell】アプリ起動ランチャー作ってみた&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Jayich-Lab/tray-launcher&quot;&gt;tray-launcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zozonteq/task-tray-launcher&quot;&gt;task-tray-launcher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/script-launcher/">script-launcher</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/02/25/Script-Launcher/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>GlazeWM</title>
@@ -72,7 +101,11 @@
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/windhawk_vertical_taskbar.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Vertical Taskbar for Windows 11はWindows 11でタスクバーを左側や右側に配置できるWindhawkのmodです。&lt;br&gt;ExplorerPatcherよりもWindows 11に対する親和性が高そうです。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://windhawk.net/mods/taskbar-vertical&quot;&gt;https://windhawk.net/mods/taskbar-vertical&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://windhawk.net/&quot;&gt;https://windhawk.net/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/microsoft/PowerToys/issues/25101#issuecomment-2364732359&quot;&gt;https://github.com/microsoft/PowerToys/issues/25101#issuecomment-2364732359&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&quot;https://windhawk.net/mods/taskbar-vertical&quot;&gt;https://windhawk.net/mods/taskbar-vertical&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://windhawk.net/&quot;&gt;https://windhawk.net/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/microsoft/PowerToys/issues/25101#issuecomment-2364732359&quot;&gt;https://github.com/microsoft/PowerToys/issues/25101#issuecomment-2364732359&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2025-02-27-メモ&quot;&gt;&lt;a href=&quot;#2025-02-27-メモ&quot; class=&quot;headerlink&quot; title=&quot;2025-02-27 メモ&quot;&gt;&lt;/a&gt;2025-02-27 メモ&lt;/h4&gt;&lt;p&gt;WindhawkとVirtualBoxが干渉してVirtualBoxのVM起動時に「supHardenedWinVerifyProcess failed」エラーが発生する。&lt;br&gt;&lt;a href=&quot;https://github.com/ramensoftware/windhawk/issues/25&quot;&gt;https://github.com/ramensoftware/windhawk/issues/25&lt;/a&gt;&lt;br&gt;Windhawkの設定→詳細設定→さらに詳細設定を表示→プロセス除外リストに以下を追加する。&lt;/p&gt;
+&lt;figure class=&quot;highlight gcode&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;%&lt;/span&gt;ProgramFiles&lt;span class=&quot;meta&quot;&gt;%&lt;/span&gt;&#92;Oracle&#92;VirtualBox&#92;*&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上記対応後、VirtualBoxのVM起動時に「NtCreateFile(&#92;Device&#92;VBoxDrvStub) failed」エラーが発生した場合は以下を実行する。&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;figcaption&gt;&lt;span&gt;管理者権限のコマンドプロンプト&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sc.exe &lt;span class=&quot;built_in&quot;&gt;start&lt;/span&gt; vboxsup&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
       
       
       
@@ -98,7 +131,7 @@
 &lt;h4 id=&quot;2025-02-25&quot;&gt;&lt;a href=&quot;#2025-02-25&quot; class=&quot;headerlink&quot; title=&quot;2025-02-25&quot;&gt;&lt;/a&gt;2025-02-25&lt;/h4&gt;&lt;p&gt;起動時にPythonのウィンドウが開きっぱなしになってしまうことがあった。&lt;br&gt;まだ報告されていないようだ。複数の環境で発生したが、再現性はないかもしれない。&lt;br&gt;&lt;a href=&quot;https://github.com/Jayich-Lab/tray-launcher/issues&quot;&gt;https://github.com/Jayich-Lab/tray-launcher/issues&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;以下のソフトが動作したので取り急ぎ切り替えた。&lt;br&gt;&lt;a href=&quot;https://github.com/zozonteq/task-tray-launcher&quot;&gt;https://github.com/zozonteq/task-tray-launcher&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;自分でPowerShellで作るのもよいかもしれない。&lt;/p&gt;
-&lt;h4 id=&quot;2025-02-25-1&quot;&gt;&lt;a href=&quot;#2025-02-25-1&quot; class=&quot;headerlink&quot; title=&quot;2025-02-25&quot;&gt;&lt;/a&gt;2025-02-25&lt;/h4&gt;&lt;p&gt;作ってみました。&lt;br&gt;&lt;a href=&quot;https://ktkr3d.github.io/2025/02/25/Task-tray-script-launcher/&quot;&gt;https://ktkr3d.github.io/2025/02/25/Task-tray-script-launcher/&lt;/a&gt;&lt;/p&gt;</description>
+&lt;h4 id=&quot;2025-02-25-1&quot;&gt;&lt;a href=&quot;#2025-02-25-1&quot; class=&quot;headerlink&quot; title=&quot;2025-02-25&quot;&gt;&lt;/a&gt;2025-02-25&lt;/h4&gt;&lt;p&gt;作ってみました。&lt;br&gt;&lt;a href=&quot;https://ktkr3d.github.io/2025/02/25/Script-Launcher/&quot;&gt;https://ktkr3d.github.io/2025/02/25/Script-Launcher/&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
@@ -456,26 +489,6 @@
       
       
       <comments>https://ktkr3d.github.io/2023/12/31/Nuxt3-VOICEVOX/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Nuxt3 + Vue-good-table-next</title>
-      <link>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/</link>
-      <guid>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/</guid>
-      <pubDate>Sat, 30 Dec 2023 12:24:45 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/vue-good-table-next.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://nuxt.com/&quot;&gt;https://nuxt.com/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/borisflesch/vue-good-table-next&quot;&gt;https://github.com/borisflesch/vue-good-table-next&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Nuxt 3 でVue-good-table-nextを使ってみました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/nuxt3/">nuxt3</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2023/12/30/Nuxt3-Vue-good-table-next/#disqus_thread</comments>
       
     </item>
     
