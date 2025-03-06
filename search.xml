@@ -18269,4 +18269,54 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
         <tag>script-launcher</tag>
       </tags>
   </entry>
+  <entry>
+    <title>File Sync</title>
+    <url>/2025/03/05/File-Sync/</url>
+    <content><![CDATA[<p><img src="/images/file_sync.drawio.svg"></p>
+<p>共有フォルダのテキストファイルをWindows クライアントとLinuxクライアントでマウントせずに同期してみました。</p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>サーバ：Windows 11<br>SMB経由 <code>\\192.168.11.2\media11\home\Documents\memo.txt</code><br>SSH経由 <code>hoge@192.168.11.2:/mnt/d/home/Documents/memo.txt</code></li>
+<li>クライアントWindows：Windows 11 (robocopy)<br><code>%USERPROFILE%\Documents\memo.txt</code></li>
+<li>クライアントLinux：Arch Linux (rsync ssh)<br><code>~/Documents/memo.txt</code></li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="サーバ"><a href="#サーバ" class="headerlink" title="サーバ"></a>サーバ</h4><ol>
+<li>共有フォルダを作成</li>
+<li>Windows 共有の設定</li>
+<li>WSL の導入</li>
+</ol>
+<h4 id="クライアントWindows"><a href="#クライアントWindows" class="headerlink" title="クライアントWindows"></a>クライアントWindows</h4><ol>
+<li>script-launcherの導入<br>  <a href="https://ktkr3d.github.io/2025/02/25/Script-Launcher/">https://ktkr3d.github.io/2025/02/25/Script-Launcher/</a></li>
+<li>バッチの設置<figure class="highlight bat"><figcaption><span>C:\repos\script-launcher\scripts\Edit_memo.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">robocopy \\<span class="number">192</span>.<span class="number">168</span>.<span class="number">11</span>.<span class="number">2</span>\media11\home\Documents <span class="variable">%USERPROFILE%</span>\Documents elist.txt /XO</span><br><span class="line">&quot;C:\Program Files (x86)\sakura\sakura.exe&quot; <span class="variable">%UserProfile%</span>\Documents\elist.txt</span><br><span class="line">timeout /t <span class="number">2</span> /nobreak &gt;<span class="built_in">nul</span></span><br><span class="line">robocopy <span class="variable">%USERPROFILE%</span>\Documents \\<span class="number">192</span>.<span class="number">168</span>.<span class="number">11</span>.<span class="number">2</span>\media11\home\Documents elist.txt /XO</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="クライアントLinux"><a href="#クライアントLinux" class="headerlink" title="クライアントLinux"></a>クライアントLinux</h4><ol>
+<li>argosの導入<br>  <a href="https://github.com/p-e-w/argos">https://github.com/p-e-w/argos</a>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/p-e-w/argos</span><br><span class="line"><span class="built_in">cp</span> -r argos/argos@pew.worldwidemann.com/ ~/.local/share/gnome-shell/extensions/</span><br></pre></td></tr></table></figure></li>
+<li>argos.shへの追記<figure class="highlight bash"><figcaption><span>~/.config/argos/argos.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Edit E List | iconName=edit-paste-symbolic bash=&#x27;rsync -a -u --info=progress2 -e ssh ubuntu@192.168.11.2:/mnt/d/home/Documents/elist.txt ~/Documents/ ; gnome-text-editor ~/Documents/elist.txt ; sleep 2 ; rsync -a -u --info=progress2 -e ssh ~/Documents/elist.txt ubuntu@192.168.11.2:/mnt/d/home/Documents/&#x27; terminal=false&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>ssh-copy-id</li>
+</ol>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
+<li>サーバでは直接編集</li>
+<li>クライアントではスクリプトを実行して編集</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>Wayland + VSCode + text-input-v3</title>
+    <url>/2025/03/06/Wayland-VSCode-text-input-v3/</url>
+    <content><![CDATA[<p><img src="/images/wayland-vscode-textinputv3.png"></p>
+<p>Visual Studio Code 1.98.0 でWalandモードで日本語入力できるようになりました。Chromium 130以上が採用されていますのでtext-input-v3が動作します。<br>以前はmutter-text-input-v1を導入して実現しましたが、もうMutterを入れ替える必要はなくなりました。</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">バージョン: 1.98.0</span></span><br><span class="line"><span class="section">コミット: 6609ac3d66f4eade5cf376d1cb76f13985724bcb</span></span><br><span class="line"><span class="section">日付: 2025-03-04T21:06:18.612Z</span></span><br><span class="line"><span class="section">Electron: 34.2.0</span></span><br><span class="line"><span class="section">ElectronBuildId: 11044223</span></span><br><span class="line"><span class="section">Chromium: 132.0.6834.196</span></span><br><span class="line"><span class="section">Node.js: 20.18.2</span></span><br><span class="line"><span class="section">V8: 13.2.152.36-electron.0</span></span><br><span class="line"><span class="section">OS: Linux x64 6.13.5-arch1-1</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Arch Linux</li>
+<li>GNOME Shell 47.5</li>
+<li>Mutter 47.6</li>
+<li>Visual Studio Code 1.98.0</li>
+<li>text-input-v3</li>
+</ul>
+]]></content>
+  </entry>
 </search>
