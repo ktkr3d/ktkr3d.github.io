@@ -18401,10 +18401,10 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </tbody></table>
 <p>私はGNOMEを利用するのですが、alg-gnomeとalg-gnome-pureでは以下の違いがありました。</p>
 <ul>
-<li>alg-gnome<br><a href="https://github.com/arch-linux-gui/alg-gnome/blob/master/packages.x86_64">https://github.com/arch-linux-gui/alg-gnome/blob/master/packages.x86_64</a><br>Firefox、LibreOffice、VLC、nvidiaなどのソフトウェアがインストールされる<br>AURヘルパーのparuがインストールされている<br>拡張機能(Apps、User Theme)が有効になっている<br>アイコン(tela-circle-icon)や壁紙(archlinux-wallpaper)がカスタマイズされている<br>日本語表示(noto-fonts-cjk)に対応(インストール時、インストール後)しているが日本語入力はできないっぽい</li>
+<li>alg-gnome<br><a href="https://github.com/arch-linux-gui/alg-gnome/blob/master/packages.x86_64">https://github.com/arch-linux-gui/alg-gnome/blob/master/packages.x86_64</a><br>Firefox、LibreOffice、VLC、nvidiaなどのソフトウェアがインストールされる<br>AURヘルパーのparuがインストールされている<br>拡張機能(Apps Menu、User Theme)が有効になっている<br>アイコン(tela-circle-icon)や壁紙(archlinux-wallpaper)がカスタマイズされている<br>日本語表示(noto-fonts-cjk)に対応(インストール時、インストール後)しているが日本語入力はできないっぽい</li>
 <li>alg-gnome-pure<br><a href="https://github.com/arch-linux-gui/alg-gnome-pure/blob/main/packages.x86_64">https://github.com/arch-linux-gui/alg-gnome-pure/blob/main/packages.x86_64</a><br>GNOME標準のソフトウェアがインストールされる<br>日本語フォントは自分でインストールする必要がある</li>
 </ul>
-<h3 id="構築-alg-gnome-pureの場合"><a href="#構築-alg-gnome-pureの場合" class="headerlink" title="構築(alg-gnome-pureの場合)"></a>構築(alg-gnome-pureの場合)</h3><ol>
+<h3 id="利用-alg-gnome-pureの場合"><a href="#利用-alg-gnome-pureの場合" class="headerlink" title="利用 (alg-gnome-pureの場合)"></a>利用 (alg-gnome-pureの場合)</h3><ol>
 <li>Welcomeアプリ<br>  Update Mirrorlist (Japanを選択)<br>  Update System</li>
 <li>日本語フォントのインストール<br>  スーパーキー + <code>A</code>を押下してアプリケーション一覧からTerminalを起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S otf-ipafont</span><br></pre></td></tr></table></figure></li>
 <li>Arch Linuxのインストール<br>  WelcomeアプリでInstall ALGを選択<br>  自動ログインにしておくと便利</li>
