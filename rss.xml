@@ -15,8 +15,31 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 06 Mar 2025 17:11:22 GMT</pubDate>
+    <pubDate>Tue, 11 Mar 2025 00:21:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>ALG - Arch Linux GUI</title>
+      <link>https://ktkr3d.github.io/2025/03/11/ALG-Arch-Linux-GUI/</link>
+      <guid>https://ktkr3d.github.io/2025/03/11/ALG-Arch-Linux-GUI/</guid>
+      <pubDate>Mon, 10 Mar 2025 23:20:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/alg-welcome.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Arch LinuxのGUIインストーラであるALG(Arch Linux GUI)を試してみました。&lt;br&gt;&lt;a href=&quot;https://github.com/arch-linux-gui/alg-releases&quot;&gt;https://github.com/arch-linux-gui/alg-releases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Welcomeアプリ(alg-welcome)とOSインストーラ(calamares)で構成されているようです。&lt;br&gt;インストール時やインストール後に日本語が表示できるのは便利ですね。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/alg/">alg</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/03/11/ALG-Arch-Linux-GUI/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Wayland + VSCode + text-input-v3</title>
@@ -31,6 +54,10 @@
       
       
       
+      
+      <category domain="https://ktkr3d.github.io/tags/wayland/">wayland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/textinput/">textinput</category>
       
       
       <comments>https://ktkr3d.github.io/2025/03/06/Wayland-VSCode-text-input-v3/#disqus_thread</comments>
@@ -459,27 +486,6 @@
       
       
       <comments>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>VirtualBox + Arch Linux</title>
-      <link>https://ktkr3d.github.io/2024/04/17/VirtualBox-Arch-Linux/</link>
-      <guid>https://ktkr3d.github.io/2024/04/17/VirtualBox-Arch-Linux/</guid>
-      <pubDate>Wed, 17 Apr 2024 12:20:25 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/archlinuxvbox.png&quot;&gt;&lt;br&gt;VirtualBox でArch Linux の環境を構築してみました。&lt;br&gt;&lt;a href=&quot;https://archlinux.org/&quot;&gt;https://archlinux.org/&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/virtualbox/">virtualbox</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2024/04/17/VirtualBox-Arch-Linux/#disqus_thread</comments>
       
     </item>
     

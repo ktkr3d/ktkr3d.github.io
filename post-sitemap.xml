@@ -9,8 +9,16 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2025/03/11/ALG-Arch-Linux-GUI/</loc>
+        <lastmod>2025-03-11T00:21:24.843Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2025/03/06/Wayland-VSCode-text-input-v3/</loc>
-        <lastmod>2025-03-06T17:11:22.168Z</lastmod>
+        <lastmod>2025-03-11T00:14:24.029Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

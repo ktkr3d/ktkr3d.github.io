@@ -18321,5 +18321,101 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 
 <h4 id="mutter-fractional-scaling"><a href="#mutter-fractional-scaling" class="headerlink" title="mutter fractional scaling"></a>mutter fractional scaling</h4><p>125%</p>
 ]]></content>
+      <tags>
+        <tag>wayland</tag>
+        <tag>textinput</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ALG - Arch Linux GUI</title>
+    <url>/2025/03/11/ALG-Arch-Linux-GUI/</url>
+    <content><![CDATA[<p><img src="/images/alg-welcome.png"></p>
+<p>Arch LinuxのGUIインストーラであるALG(Arch Linux GUI)を試してみました。<br><a href="https://github.com/arch-linux-gui/alg-releases">https://github.com/arch-linux-gui/alg-releases</a></p>
+<p>Welcomeアプリ(alg-welcome)とOSインストーラ(calamares)で構成されているようです。<br>インストール時やインストール後に日本語が表示できるのは便利ですね。</p>
+<span id="more"></span>
+
+<h3 id="公開されているメディア"><a href="#公開されているメディア" class="headerlink" title="公開されているメディア"></a>公開されているメディア</h3><p><a href="https://sourceforge.net/projects/arch-linux-gui/files/">https://sourceforge.net/projects/arch-linux-gui/files/</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">Folder</th>
+<th align="left">File</th>
+<th align="left">Date</th>
+<th align="left">Size</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">beta-iso&#x2F;</td>
+<td align="left">alg-plasma-2025.03-x86_64.iso</td>
+<td align="left">2025-03-05</td>
+<td align="left">3.0 GB</td>
+</tr>
+<tr>
+<td align="left">experimental-editions&#x2F;</td>
+<td align="left">archlinux-gui-zen-2022.07-x86_64.iso</td>
+<td align="left">2022-07-07</td>
+<td align="left">2.5 GB</td>
+</tr>
+<tr>
+<td align="left">virtualbox-preview&#x2F;</td>
+<td align="left">Arch-Linux-GUI-KDE.ova</td>
+<td align="left">2021-01-09</td>
+<td align="left">4.3 GB</td>
+</tr>
+<tr>
+<td align="left">&#x2F;</td>
+<td align="left">alg-plasma-2024.08-x86_64.iso</td>
+<td align="left">2024-08-25</td>
+<td align="left">2.8 GB</td>
+</tr>
+<tr>
+<td align="left">&#x2F;</td>
+<td align="left">alg-gnome-2024.08-x86_64.iso</td>
+<td align="left">2024-08-25</td>
+<td align="left">2.7 GB</td>
+</tr>
+<tr>
+<td align="left">&#x2F;</td>
+<td align="left">alg-xfce-2024.08-x86_64.iso</td>
+<td align="left">2024-08-25</td>
+<td align="left">2.3 GB</td>
+</tr>
+<tr>
+<td align="left">&#x2F;</td>
+<td align="left">alg-plasma-pure-2024.08-x86_64.iso</td>
+<td align="left">2024-08-25</td>
+<td align="left">2.0 GB</td>
+</tr>
+<tr>
+<td align="left">&#x2F;</td>
+<td align="left">alg-gnome-pure-2024.08-x86_64.iso</td>
+<td align="left">2024-08-25</td>
+<td align="left">1.7 GB</td>
+</tr>
+<tr>
+<td align="left">&#x2F;</td>
+<td align="left">alg-xfce-pure-2024.08-x86_64.iso</td>
+<td align="left">2024-08-25</td>
+<td align="left">1.5 GB</td>
+</tr>
+</tbody></table>
+<p>私はGNOMEを利用するのですが、alg-gnomeとalg-gnome-pureでは以下の違いがありました。</p>
+<ul>
+<li>alg-gnome<br><a href="https://github.com/arch-linux-gui/alg-gnome/blob/master/packages.x86_64">https://github.com/arch-linux-gui/alg-gnome/blob/master/packages.x86_64</a><br>Firefox、LibreOffice、VLC、nvidiaなどのソフトウェアがインストールされる<br>AURヘルパーのparuがインストールされている<br>拡張機能(Apps、User Theme)が有効になっている<br>アイコン(tela-circle-icon)や壁紙(archlinux-wallpaper)がカスタマイズされている<br>日本語表示(noto-fonts-cjk)に対応(インストール時、インストール後)しているが日本語入力はできないっぽい</li>
+<li>alg-gnome-pure<br><a href="https://github.com/arch-linux-gui/alg-gnome-pure/blob/main/packages.x86_64">https://github.com/arch-linux-gui/alg-gnome-pure/blob/main/packages.x86_64</a><br>GNOME標準のソフトウェアがインストールされる<br>日本語フォントは自分でインストールする必要がある</li>
+</ul>
+<h3 id="構築-alg-gnome-pureの場合"><a href="#構築-alg-gnome-pureの場合" class="headerlink" title="構築(alg-gnome-pureの場合)"></a>構築(alg-gnome-pureの場合)</h3><ol>
+<li>Welcomeアプリ<br>  Update Mirrorlist (Japanを選択)<br>  Update System</li>
+<li>日本語フォントのインストール<br>  スーパーキー + <code>A</code>を押下してアプリケーション一覧からTerminalを起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S otf-ipafont</span><br></pre></td></tr></table></figure></li>
+<li>Arch Linuxのインストール<br>  WelcomeアプリでInstall ALGを選択<br>  自動ログインにしておくと便利</li>
+<li>日本語フォントのコピー<br>  Fileアプリでインストール先パーティションをマウント<br>  インストール先パーティションのユーザディレクトリに<code>.fonts/</code>フォルダを作成  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/fonts/OTF/*.ttf &lt;インストール先パーティションのユーザディレクトリ&gt;/.fonts/</span><br></pre></td></tr></table></figure></li>
+<li>シャットダウン</li>
+<li>インストールメディアの取り外し</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>archlinux</tag>
+        <tag>alg</tag>
+      </tags>
   </entry>
 </search>
