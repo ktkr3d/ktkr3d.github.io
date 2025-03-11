@@ -18331,7 +18331,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     <url>/2025/03/11/ALG-Arch-Linux-GUI/</url>
     <content><![CDATA[<p><img src="/images/alg-welcome.png"></p>
 <p>Arch LinuxのGUIインストーラであるALG(Arch Linux GUI)を試してみました。<br><a href="https://github.com/arch-linux-gui/alg-releases">https://github.com/arch-linux-gui/alg-releases</a></p>
-<p>Welcomeアプリ(alg-welcome)とOSインストーラ(calamares)で構成されているようです。<br>インストール時やインストール後に日本語が表示できるのは便利ですね。</p>
+<p>Welcomeアプリ(alg-welcome)とOSインストーラ(calamares)で構成されているようです。<br>Calam-Arch-Installerのようにインストール中にデスクトップ環境を選択することはできないようですが、インストール時やインストール後に日本語が表示されるのは便利ですね。</p>
 <span id="more"></span>
 
 <h3 id="公開されているメディア"><a href="#公開されているメディア" class="headerlink" title="公開されているメディア"></a>公開されているメディア</h3><p><a href="https://sourceforge.net/projects/arch-linux-gui/files/">https://sourceforge.net/projects/arch-linux-gui/files/</a></p>
@@ -18401,7 +18401,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </tbody></table>
 <p>私はGNOMEを利用するのですが、alg-gnomeとalg-gnome-pureでは以下の違いがありました。</p>
 <ul>
-<li>alg-gnome<br><a href="https://github.com/arch-linux-gui/alg-gnome/blob/master/packages.x86_64">https://github.com/arch-linux-gui/alg-gnome/blob/master/packages.x86_64</a><br>Firefox、LibreOffice、VLC、nvidiaなどのソフトウェアがインストールされる<br>AURヘルパーのparuがインストールされている<br>拡張機能(Apps Menu、User Theme)が有効になっている<br>アイコン(tela-circle-icon)や壁紙(archlinux-wallpaper)がカスタマイズされている<br>インストール時、インストール後の日本語表示(noto-fonts-cjk)に対応しているが日本語入力はできないっぽい</li>
+<li>alg-gnome<br><a href="https://github.com/arch-linux-gui/alg-gnome/blob/master/packages.x86_64">https://github.com/arch-linux-gui/alg-gnome/blob/master/packages.x86_64</a><br>Firefox、LibreOffice、VLC、nvidiaなどのソフトウェアがインストールされる<br>AURヘルパーのparuがインストールされる<br>拡張機能(Apps Menu、User Theme)が有効になっている<br>アイコン(tela-circle-icon)や壁紙(archlinux-wallpaper)がカスタマイズされている<br>インストール時、インストール後の日本語表示(noto-fonts-cjk)に対応しているが日本語入力はできないっぽい</li>
 <li>alg-gnome-pure<br><a href="https://github.com/arch-linux-gui/alg-gnome-pure/blob/main/packages.x86_64">https://github.com/arch-linux-gui/alg-gnome-pure/blob/main/packages.x86_64</a><br>GNOME標準のソフトウェアがインストールされる<br>日本語フォントは自分でインストールする必要がある</li>
 </ul>
 <h3 id="利用-alg-gnome-pureの場合"><a href="#利用-alg-gnome-pureの場合" class="headerlink" title="利用 (alg-gnome-pureの場合)"></a>利用 (alg-gnome-pureの場合)</h3><ol>
