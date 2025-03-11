@@ -15,17 +15,17 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 11 Mar 2025 03:28:23 GMT</pubDate>
+    <pubDate>Tue, 11 Mar 2025 04:35:06 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>ALG - Arch Linux GUI</title>
-      <link>https://ktkr3d.github.io/2025/03/11/ALG-Arch-Linux-GUI/</link>
-      <guid>https://ktkr3d.github.io/2025/03/11/ALG-Arch-Linux-GUI/</guid>
+      <title>ALG - Arka Linux GUI</title>
+      <link>https://ktkr3d.github.io/2025/03/11/ALG-Arka-Linux-GUI/</link>
+      <guid>https://ktkr3d.github.io/2025/03/11/ALG-Arka-Linux-GUI/</guid>
       <pubDate>Mon, 10 Mar 2025 23:20:02 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/alg-welcome.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Arch LinuxのGUIインストーラであるALG(Arch Linux GUI)を試してみました。&lt;br&gt;&lt;a href=&quot;https://github.com/arch-linux-gui/alg-releases&quot;&gt;https://github.com/arch-linux-gui/alg-releases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Arch LinuxのGUIインストーラであるALG(Arka Linux GUI)を試してみました。&lt;br&gt;&lt;a href=&quot;https://github.com/arch-linux-gui/alg-releases&quot;&gt;https://github.com/arch-linux-gui/alg-releases&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Welcomeアプリ(alg-welcome)とOSインストーラ(calamares)で構成されているようです。&lt;br&gt;Calam-Arch-Installerのようにインストール中にデスクトップ環境を選択することはできないようですが、インストール時やインストール後に日本語が表示されるのは便利ですね。&lt;/p&gt;</description>
       
       
@@ -37,7 +37,7 @@
       <category domain="https://ktkr3d.github.io/tags/alg/">alg</category>
       
       
-      <comments>https://ktkr3d.github.io/2025/03/11/ALG-Arch-Linux-GUI/#disqus_thread</comments>
+      <comments>https://ktkr3d.github.io/2025/03/11/ALG-Arka-Linux-GUI/#disqus_thread</comments>
       
     </item>
     
