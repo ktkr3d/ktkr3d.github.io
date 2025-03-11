@@ -18406,11 +18406,14 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </ul>
 <h3 id="利用-alg-gnome-pureの場合"><a href="#利用-alg-gnome-pureの場合" class="headerlink" title="利用 (alg-gnome-pureの場合)"></a>利用 (alg-gnome-pureの場合)</h3><ol>
 <li>Welcomeアプリ<br>  <img src="/images/alg-welcome.png"><br>  Update Mirrorlist (Japanを選択)<br>  <img src="/images/alg_update-mirrorlist.png"><br>  Update System</li>
-<li>日本語フォントのインストール (インストーラの日本語表示用)<br>  スーパーキー + <code>A</code>を押下してアプリケーション一覧からTerminalを起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S otf-ipafont</span><br></pre></td></tr></table></figure></li>
+<li>日本語フォントのインストール (インストーラの日本語表示用)<br>  スーパーキー + <code>A</code>を押下してアプリケーション一覧からTerminalを起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S noto-fonts-cjk</span><br></pre></td></tr></table></figure></li>
 <li>Arch Linuxのインストール<br>  WelcomeアプリでInstall ALGを選択<br>  自動ログインにしておくと便利</li>
-<li>日本語フォントのコピー (初回ログイン後の日本語表示用)<br>  Fileアプリでインストール先パーティションをマウント<br>  インストール先パーティションのユーザディレクトリに<code>.fonts/</code>フォルダを作成  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/fonts/OTF/*.ttf &lt;インストール先パーティションのユーザディレクトリ&gt;/.fonts/</span><br></pre></td></tr></table></figure></li>
+<li>日本語フォントのコピー (初回ログイン後の日本語表示用)  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /tmp/calamares-root-*/home/*/.fonts/</span><br><span class="line"><span class="built_in">cp</span> /usr/share/fonts/noto-cjk/*.ttc /tmp/calamares-root-*/home/*/.fonts/</span><br></pre></td></tr></table></figure></li>
 <li>シャットダウン</li>
 <li>インストールメディアの取り外し</li>
+<li>起動</li>
+<li>鍵の更新 (時間がかかる)  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S archlinux-keyring</span><br><span class="line">sudo pacman-key --refresh-key</span><br></pre></td></tr></table></figure></li>
+<li>アップデート  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -Syyu</span><br><span class="line">sudo pacman -S noto-fonts-cjk</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <tags>
