@@ -15,8 +15,32 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 12 Mar 2025 02:16:59 GMT</pubDate>
+    <pubDate>Wed, 12 Mar 2025 15:51:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Ghostty</title>
+      <link>https://ktkr3d.github.io/2025/03/12/Ghostty/</link>
+      <guid>https://ktkr3d.github.io/2025/03/12/Ghostty/</guid>
+      <pubDate>Wed, 12 Mar 2025 14:03:26 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/ghostty-shaders.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;ターミナルエミュレータGhostty 1.1.2を使ってみました。&lt;br&gt;&lt;a href=&quot;https://github.com/ghostty-org/ghostty&quot;&gt;https://github.com/ghostty-org/ghostty&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;今後の気になる情報&quot;&gt;&lt;a href=&quot;#今後の気になる情報&quot; class=&quot;headerlink&quot; title=&quot;今後の気になる情報&quot;&gt;&lt;/a&gt;今後の気になる情報&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;マイルストーン1.2&lt;br&gt;&lt;a href=&quot;https://github.com/ghostty-org/ghostty/milestone/5&quot;&gt;https://github.com/ghostty-org/ghostty/milestone/5&lt;/a&gt;&lt;br&gt;ローカライズはマージされてた&lt;/li&gt;
+&lt;li&gt;Windows対応&lt;br&gt;&lt;a href=&quot;https://github.com/ghostty-org/ghostty/discussions/2563&quot;&gt;https://github.com/ghostty-org/ghostty/discussions/2563&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/ghostty/">ghostty</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/03/12/Ghostty/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>ALG - Arka Linux GUI</title>
@@ -468,24 +492,6 @@
       
       
       <comments>https://ktkr3d.github.io/2024/07/06/Hyper-V/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Minibook X + Ubuntu 24.04 LTS</title>
-      <link>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/</link>
-      <guid>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/</guid>
-      <pubDate>Mon, 01 Jul 2024 05:06:00 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/ubuntu-24-04.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Minibook X にUbuntu 24.04 LTS を導入してみました。&lt;br&gt;ブラウザにはWaylandと相性のよいFirefoxを選択しました。&lt;br&gt;PWAに対応したかったのでSnapは削除しました。&lt;br&gt;タッチスクリーンで操作しやすいようにタスクバーを右側に配置し、GNOME Shellのタイリング拡張を導入しました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      
-      <comments>https://ktkr3d.github.io/2024/07/01/Minibook-X-Ubuntu-24-04-LTS/#disqus_thread</comments>
       
     </item>
     

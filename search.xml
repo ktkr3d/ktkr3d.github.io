@@ -18423,4 +18423,68 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
         <tag>alg</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Ghostty</title>
+    <url>/2025/03/12/Ghostty/</url>
+    <content><![CDATA[<p><img src="/images/ghostty-shaders.png"></p>
+<p>ターミナルエミュレータGhostty 1.1.2を使ってみました。<br><a href="https://github.com/ghostty-org/ghostty">https://github.com/ghostty-org/ghostty</a></p>
+<h4 id="今後の気になる情報"><a href="#今後の気になる情報" class="headerlink" title="今後の気になる情報"></a>今後の気になる情報</h4><ul>
+<li>マイルストーン1.2<br><a href="https://github.com/ghostty-org/ghostty/milestone/5">https://github.com/ghostty-org/ghostty/milestone/5</a><br>ローカライズはマージされてた</li>
+<li>Windows対応<br><a href="https://github.com/ghostty-org/ghostty/discussions/2563">https://github.com/ghostty-org/ghostty/discussions/2563</a></li>
+</ul>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Arch Linux</li>
+<li>GNOME 47.5</li>
+<li>ghostty 1.1.2</li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
+<li>インストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S ghostty</span><br></pre></td></tr></table></figure></li>
+<li>設定</li>
+</ol>
+<ul>
+<li>設定ファイル<br>$HOME&#x2F;.config&#x2F;ghostty&#x2F;config</li>
+<li>設定リファレンス<br><a href="https://ghostty.org/docs/config/reference">https://ghostty.org/docs/config/reference</a></li>
+<li>フォントの変更<br>標準の<code>JetBrainsMono Nerd Font</code> 13ptを<code>HackGen Console NF</code> 11ptに変更<br>標準の場合<code>!=</code>とかが合字になってしまって使いにくい<figure class="highlight text"><figcaption><span>$HOME/.config/ghostty/config</span></figcaption><table><tr><td class="code"><pre><span class="line">font-family = HackGen Console NF</span><br><span class="line">font-size = 11</span><br></pre></td></tr></table></figure></li>
+<li>背景の透過<figure class="highlight text"><figcaption><span>$HOME/.config/ghostty/config</span></figcaption><table><tr><td class="code"><pre><span class="line">background-opacity = 0.9</span><br></pre></td></tr></table></figure></li>
+<li>カスタムシェーダ (実用的かはさておき)<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/hackr-sh/ghostty-shaders.git <span class="variable">$HOME</span>/.config/ghostty/shaders</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>$HOME/.config/ghostty/config</span></figcaption><table><tr><td class="code"><pre><span class="line">background-opacity = 0.5</span><br><span class="line">custom-shader-animation = always</span><br><span class="line"></span><br><span class="line">custom-shader = ./shaders/animated-gradient-shader.glsl</span><br><span class="line">#custom-shader = ./shaders/bettercrt.glsl</span><br><span class="line">#custom-shader = ./shaders/bloom.glsl</span><br><span class="line">#custom-shader = ./shaders/cineShader-Lava.glsl</span><br><span class="line">#custom-shader = ./shaders/crt.glsl</span><br><span class="line">#custom-shader = ./shaders/cubes.glsl</span><br><span class="line">#custom-shader = ./shaders/dither.glsl</span><br><span class="line">#custom-shader = ./shaders/drunkard.glsl</span><br><span class="line">#custom-shader = ./shaders/fireworks-rockets.glsl</span><br><span class="line">#custom-shader = ./shaders/fireworks.glsl</span><br><span class="line">#custom-shader = ./shaders/galaxy.glsl</span><br><span class="line">#custom-shader = ./shaders/gears-and-belts.glsl</span><br><span class="line">#custom-shader = ./shaders/glitchy.glsl</span><br><span class="line">#custom-shader = ./shaders/glow-rgbsplit-twitchy.glsl</span><br><span class="line">#custom-shader = ./shaders/gradient-background.glsl</span><br><span class="line">#custom-shader = ./shaders/in-game-crt.glsl</span><br><span class="line">#custom-shader = ./shaders/inside-the-matrix.glsl</span><br><span class="line">#custom-shader = ./shaders/just-snow.glsl</span><br><span class="line">#custom-shader = ./shaders/matrix-hallway.glsl</span><br><span class="line">#custom-shader = ./shaders/negative.glsl</span><br><span class="line">#custom-shader = ./shaders/retro-terminal.glsl</span><br><span class="line">#custom-shader = ./shaders/sin-interference.glsl</span><br><span class="line">#custom-shader = ./shaders/smoke-and-ghost.glsl</span><br><span class="line">#custom-shader = ./shaders/sparks-from-fire.glsl</span><br><span class="line">#custom-shader = ./shaders/spotlight.glsl</span><br><span class="line">#custom-shader = ./shaders/starfield-colors.glsl</span><br><span class="line">#custom-shader = ./shaders/starfield.glsl</span><br><span class="line">#custom-shader = ./shaders/tft.glsl</span><br><span class="line">#custom-shader = ./shaders/underwater.glsl</span><br><span class="line">#custom-shader = ./shaders/water.glsl</span><br></pre></td></tr></table></figure>
+環境によっては動作しないものもあるかもしれない<br>シェーダーは重ね掛けが可能</li>
+<li>カラーテーマ<br>以下コマンドでカラーテーマをプレビュー<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ghostty +list-themes</span><br></pre></td></tr></table></figure>
+<code>/</code>で検索、<code>Q</code>で抜ける<figure class="highlight text"><figcaption><span>$HOME/.config/ghostty/config</span></figcaption><table><tr><td class="code"><pre><span class="line">theme = Monokai Remastered</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><h4 id="ショートカット"><a href="#ショートカット" class="headerlink" title="ショートカット"></a>ショートカット</h4><table>
+<thead>
+<tr>
+<th align="left">動作</th>
+<th align="left">ショートカット</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">設定ファイルの表示</td>
+<td align="left">Ctrl + ,</td>
+</tr>
+<tr>
+<td align="left">コピー</td>
+<td align="left">Ctrl + Shift + C</td>
+</tr>
+<tr>
+<td align="left">ペースト</td>
+<td align="left">Ctrl + Shift + V</td>
+</tr>
+<tr>
+<td align="left">右に分割</td>
+<td align="left">Ctrl + Shift + O</td>
+</tr>
+<tr>
+<td align="left">下に分割</td>
+<td align="left">Ctrl + Shift + E</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>ghostty</tag>
+      </tags>
+  </entry>
 </search>
