@@ -15,8 +15,30 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 13 Mar 2025 12:36:23 GMT</pubDate>
+    <pubDate>Fri, 14 Mar 2025 14:29:55 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Ghostty Shaders</title>
+      <link>https://ktkr3d.github.io/2025/03/14/Ghostty-Shaders/</link>
+      <guid>https://ktkr3d.github.io/2025/03/14/Ghostty-Shaders/</guid>
+      <pubDate>Fri, 14 Mar 2025 14:18:16 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/ghostty_shaders.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;ターミナルエミュレータGhosttyのシェーダ機能を試してみました。&lt;/p&gt;
+&lt;p&gt;以下のサイトのコードがそのまま利用できました。&lt;br&gt;&lt;a href=&quot;https://www.shadertoy.com/&quot;&gt;https://www.shadertoy.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;端末としては使えていませんが綺麗にレンダリングされてアニメーションします。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/ghostty/">ghostty</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/03/14/Ghostty-Shaders/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Ghostty</title>
@@ -466,32 +488,6 @@
       
       
       <comments>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Hyper-V</title>
-      <link>https://ktkr3d.github.io/2024/07/06/Hyper-V/</link>
-      <guid>https://ktkr3d.github.io/2024/07/06/Hyper-V/</guid>
-      <pubDate>Sat, 06 Jul 2024 13:14:26 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/hyperv.drawio.svg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;次のような制約のある環境でLinuxやVisual Studio Codeを使いたい場合にはHyper-Vを活用するとよいかもしれません。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Windows にWSL、VirtualboxやVisual Studio Code等を自由にインストールできない&amp;#x2F;したくない&lt;/li&gt;
-&lt;li&gt;インターネットへのアウトバウンド通信はブラウザでの認証が必要&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/code-server/">code-server</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/hyperv/">hyperv</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2024/07/06/Hyper-V/#disqus_thread</comments>
       
     </item>
     
