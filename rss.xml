@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 14 Mar 2025 17:06:30 GMT</pubDate>
+    <pubDate>Fri, 14 Mar 2025 21:36:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -32,7 +32,7 @@
   &lt;source src=&quot;/images/ghostty_shader_nyancat.mp4&quot; type=&quot;video/mp4&quot; /&gt;
 &lt;/video&gt;
 
-&lt;p&gt;テクスチャの読み込ませ方がわかりません。。。&lt;/p&gt;</description>
+&lt;p&gt;テクスチャの読み込ませ方がわかりません。。。&lt;br&gt;&lt;code&gt;custom-shader-ichannel1 = ./texture.png&lt;/code&gt; みたいなローダが実装されないかなぁ。&lt;/p&gt;</description>
       
       
       
