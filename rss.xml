@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 14 Mar 2025 15:48:02 GMT</pubDate>
+    <pubDate>Fri, 14 Mar 2025 16:44:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -29,7 +29,7 @@
 &lt;p&gt;以下のサイトのコードがそのまま利用できました。&lt;br&gt;&lt;a href=&quot;https://www.shadertoy.com/&quot;&gt;https://www.shadertoy.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;端末としては使えていませんが綺麗にレンダリングされてアニメーションします。&lt;/p&gt;
 &lt;video controls width=&quot;100%&quot;&gt;
-  &lt;source src=&quot;/images/ghostty_shader.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;/images/ghostty_shader_nyancat.mp4&quot; type=&quot;video/mp4&quot; /&gt;
 &lt;/video&gt;
 
 &lt;p&gt;テクスチャの読み込ませ方がわかりません。。。&lt;/p&gt;</description>

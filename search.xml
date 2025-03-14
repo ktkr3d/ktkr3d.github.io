@@ -18497,7 +18497,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <p>以下のサイトのコードがそのまま利用できました。<br><a href="https://www.shadertoy.com/">https://www.shadertoy.com/</a></p>
 <p>端末としては使えていませんが綺麗にレンダリングされてアニメーションします。</p>
 <video controls width="100%">
-  <source src="/images/ghostty_shader.mp4" type="video/mp4" />
+  <source src="/images/ghostty_shader_nyancat.mp4" type="video/mp4" />
 </video>
 
 <p>テクスチャの読み込ませ方がわかりません。。。</p>
