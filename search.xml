@@ -18496,6 +18496,11 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <p>ターミナルエミュレータGhosttyのシェーダ機能を試してみました。</p>
 <p>以下のサイトのコードがそのまま利用できました。<br><a href="https://www.shadertoy.com/">https://www.shadertoy.com/</a></p>
 <p>端末としては使えていませんが綺麗にレンダリングされてアニメーションします。</p>
+<video controls width="100%">
+  <source src="/images/ghostty_shader.mp4" type="video/mp4" />
+</video>
+
+<p>テクスチャの読み込ませ方がわかりません。。。</p>
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
