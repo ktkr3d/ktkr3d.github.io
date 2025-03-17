@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 15 Mar 2025 10:39:48 GMT</pubDate>
+    <pubDate>Mon, 17 Mar 2025 08:26:28 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,13 +26,11 @@
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/ghostty_shaders.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;ターミナルエミュレータGhosttyのシェーダ機能を試してみました。&lt;/p&gt;
-&lt;p&gt;以下のサイトのコードがほぼそのまま利用できました。&lt;br&gt;&lt;a href=&quot;https://www.shadertoy.com/&quot;&gt;https://www.shadertoy.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;端末としては使えていませんが綺麗にレンダリングされてアニメーションします。&lt;/p&gt;
-&lt;video controls width=&quot;100%&quot;&gt;
-  &lt;source src=&quot;/images/ghostty_shader_nyancat.mp4&quot; type=&quot;video/mp4&quot; /&gt;
-&lt;/video&gt;
+&lt;p&gt;以下のサイトのコードがほぼそのまま利用できました。&lt;br&gt;残念ながらテクスチャを利用するコードは使えませんでした。&lt;br&gt;&lt;a href=&quot;https://www.shadertoy.com/&quot;&gt;https://www.shadertoy.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;コードを改造することによりターミナルエミュレータとして利用可能になります。&lt;/p&gt;
+&lt;div class=&quot;video-container&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/h02c9RyyfPQ&quot; frameborder=&quot;0&quot; loading=&quot;lazy&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;p&gt;テクスチャの読み込ませ方がわかりません。。。&lt;br&gt;&lt;code&gt;custom-shader-ichannel1 = ./texture.png&lt;/code&gt; みたいなローダが実装されないかなぁ。&lt;/p&gt;</description>
+&lt;p&gt;iChannel0にはターミナルエミュレータの出力が割り当てられていて変更はできないようです。&lt;br&gt;&lt;code&gt;custom-shader-ichannel1 = ./texture.png&lt;/code&gt; みたいなテクスチャのローダが実装されないかなぁ。&lt;/p&gt;</description>
       
       
       

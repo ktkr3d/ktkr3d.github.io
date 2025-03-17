@@ -10,7 +10,15 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2025/03/14/Ghostty-Shaders/</loc>
-        <lastmod>2025-03-15T10:39:48.318Z</lastmod>
+        <lastmod>2025-03-17T08:26:28.279Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2025/02/24/GlazeWM/</loc>
+        <lastmod>2025-03-17T03:33:35.879Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -43,14 +51,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2025/03/05/File-Sync/</loc>
         <lastmod>2025-03-06T11:42:50.885Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2025/02/24/GlazeWM/</loc>
-        <lastmod>2025-03-03T05:44:33.850Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

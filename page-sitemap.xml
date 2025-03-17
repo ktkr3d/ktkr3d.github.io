@@ -10,8 +10,17 @@
     
     
     <url>
+        <loc>https://ktkr3d.github.io/hexo/</loc>
+        <lastmod>2025-03-17T11:19:13.236Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://ktkr3d.github.io/archlinux/</loc>
-        <lastmod>2025-03-16T02:29:47.211Z</lastmod>
+        <lastmod>2025-03-17T02:44:14.452Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
