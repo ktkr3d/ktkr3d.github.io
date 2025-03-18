@@ -5297,6 +5297,34 @@ blockquote.pullquote.right {
 .hl-label.green {
   background-color: #5cb85c;
 }
+.link-preview {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #cbd0d3;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-size: 1rem;
+  background-color: #f2f3f5;
+}
+.link-preview .og-image img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 40/21;
+  width: 100%;
+  height: auto;
+}
+.link-preview .descriptions {
+  padding: 0.5rem 1rem;
+}
+.link-preview .descriptions .og-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.link-preview .descriptions .og-description {
+  color: #525252;
+}
 .note {
   position: relative;
   margin: 0 0 20px;

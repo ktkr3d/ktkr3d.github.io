@@ -921,14 +921,6 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/08/23/shield_effect/</loc>
-        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://ktkr3d.github.io/2010/08/22/caudio_openal/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -937,7 +929,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/09/07/h-craft_championship/</loc>
+        <loc>https://ktkr3d.github.io/2010/08/23/shield_effect/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -953,6 +945,14 @@
     </url>
 
     <url>
+        <loc>https://ktkr3d.github.io/2010/09/07/h-craft_championship/</loc>
+        <lastmod>2020-08-02T17:44:33.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2010/09/12/puzzle_game/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -961,7 +961,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/10/23/post_11/</loc>
+        <loc>https://ktkr3d.github.io/2010/10/16/billardgl/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -969,7 +969,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/10/16/billardgl/</loc>
+        <loc>https://ktkr3d.github.io/2010/10/23/post_11/</loc>
         <lastmod>2020-08-02T17:44:33.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1209,7 +1209,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/10/17/blood_water/</loc>
+        <loc>https://ktkr3d.github.io/2010/09/29/caph/</loc>
         <lastmod>2020-08-02T17:44:33.425Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1217,7 +1217,7 @@
     </url>
 
     <url>
-        <loc>https://ktkr3d.github.io/2010/09/29/caph/</loc>
+        <loc>https://ktkr3d.github.io/2010/10/17/blood_water/</loc>
         <lastmod>2020-08-02T17:44:33.425Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
