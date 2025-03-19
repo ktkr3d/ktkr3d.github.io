@@ -15,8 +15,26 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 17 Mar 2025 08:26:28 GMT</pubDate>
+    <pubDate>Wed, 19 Mar 2025 21:01:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>GNOME 48</title>
+      <link>https://ktkr3d.github.io/2025/03/20/GNOME-48/</link>
+      <guid>https://ktkr3d.github.io/2025/03/20/GNOME-48/</guid>
+      <pubDate>Wed, 19 Mar 2025 20:17:56 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/arch_gnome48_unstable.png&quot;&gt;&lt;br&gt;GNOME 48がリリースされたのでArch LinuxにGNOME 48.0 (gnome-unstableリポジトリ)を導入してみました。&lt;br&gt;&lt;a href=&quot;https://release.gnome.org/48/&quot;&gt;https://release.gnome.org/48/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://archlinux.org/groups/x86_64/gnome/&quot;&gt;https://archlinux.org/groups/x86_64/gnome/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GNOME関連アプリの起動の設定が不足しているみたいなのでextraリポジトリに反映されるのをまとう。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      
+      <comments>https://ktkr3d.github.io/2025/03/20/GNOME-48/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Ghostty Shaders</title>
@@ -468,29 +486,6 @@
       
       
       <comments>https://ktkr3d.github.io/2024/07/25/Customize-lock-screen-date-format/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>mutter-text-input-v1</title>
-      <link>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/</link>
-      <guid>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/</guid>
-      <pubDate>Mon, 22 Jul 2024 18:14:06 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/mutter-text-input-v1.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;WaylandモードのGoogle Chrome&amp;#x2F;Visual Studio Codeで日本語入力ができるようになりました。私はWaylandの分数スケーリング(Fractional Scaling)設定を利用していますので大変助かりました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/mutter-text-input-v1&quot;&gt;https://aur.archlinux.org/packages/mutter-text-input-v1&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/mutter/">mutter</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2024/07/23/mutter-text-input-v1/#disqus_thread</comments>
       
     </item>
     
