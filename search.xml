@@ -18603,10 +18603,10 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <figure class="highlight json"><figcaption><span>metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;shell-version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;47&quot;</span><span class="punctuation">,</span><span class="string">&quot;48&quot;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="実行結果"><a href="#実行結果" class="headerlink" title="実行結果"></a>実行結果</h3><h4 id="GNOME"><a href="#GNOME" class="headerlink" title="GNOME"></a>GNOME</h4><ul>
-<li>gnome-control-center<br>起動しない</li>
-<li>gnome-terminal<br>起動しない</li>
-<li>gnome-text-editor<br>起動しない</li>
-<li>nautilus<br>起動しない</li>
+<li>gnome-control-center<br>起動しない<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gnome-control-center</span><br><span class="line">gnome-control-center: symbol lookup error: gnome-control-center: undefined symbol: adw_toggle_group_get_toggle, version LIBADWAITA_1_0</span><br></pre></td></tr></table></figure></li>
+<li>gnome-terminal<br>起動しない<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gnome-terminal</span><br><span class="line"><span class="comment"># Error creating terminal: Could not activate remote peer &#x27;org.gnome.Terminal&#x27;: startup job failed</span></span><br></pre></td></tr></table></figure></li>
+<li>gnome-text-editor<br>起動しない<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gnome-text-editor</span><br><span class="line">gnome-text-editor: symbol lookup error: gnome-text-editor: undefined symbol: gtk_file_dialog_save_text_file</span><br></pre></td></tr></table></figure></li>
+<li>nautilus<br>起動しない<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nautilus</span><br><span class="line">nautilus: symbol lookup error: nautilus: undefined symbol: gtk_list_box_set_tab_behavior</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="GNOME-Shell-Extension"><a href="#GNOME-Shell-Extension" class="headerlink" title="GNOME Shell Extension"></a>GNOME Shell Extension</h4><ul>
 <li>argos<br>タスクバーに表示されメニューも表示されるが、gnome-terminalの起動に失敗する<br>GNOME側の問題と思われる</li>
