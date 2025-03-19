@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 19 Mar 2025 21:01:35 GMT</pubDate>
+    <pubDate>Wed, 19 Mar 2025 21:05:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -30,6 +30,10 @@
       
       
       
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome/">gnome</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
       
       
       <comments>https://ktkr3d.github.io/2025/03/20/GNOME-48/#disqus_thread</comments>

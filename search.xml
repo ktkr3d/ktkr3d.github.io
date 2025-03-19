@@ -18593,7 +18593,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </li>
 <li><p>リポジトリの追加<br>  <a href="https://wiki.archlinux.jp/index.php/%E5%85%AC%E5%BC%8F%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA#gnome-unstable">https://wiki.archlinux.jp/index.php/公式リポジトリ#gnome-unstable</a></p>
   <figure class="highlight ini"><figcaption><span>/etc/pacman.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[gnome-unstable]</span></span><br><span class="line"><span class="attr">Include</span> = /etc/pacman.d/mirrorlist</span><br></pre></td></tr></table></figure>
-  <div class="note info flat"><p>extraの前に以下を挿入する。</p>
+  <div class="note info flat"><p><code>[extra]</code>の前に<code>[gnome-unstable]</code>を挿入する。</p>
 </div>
 </li>
 <li><p>パッケージの更新</p>
@@ -18609,7 +18609,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>nautilus<br>起動しない</li>
 </ul>
 <h4 id="GNOME-Shell-Extension"><a href="#GNOME-Shell-Extension" class="headerlink" title="GNOME Shell Extension"></a>GNOME Shell Extension</h4><ul>
-<li>argos<br>gnome-terminalの起動に失敗する<br>GNOME側の問題</li>
+<li>argos<br>タスクバーに表示されメニューも表示されるが、gnome-terminalの起動に失敗する<br>GNOME側の問題と思われる</li>
 <li>date menu formatter<br>動作する</li>
 <li>forge<br>動作する</li>
 </ul>
@@ -18618,5 +18618,9 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>ghostty<br>動作する</li>
 </ul>
 ]]></content>
+      <tags>
+        <tag>gnome</tag>
+        <tag>archlinux</tag>
+      </tags>
   </entry>
 </search>
