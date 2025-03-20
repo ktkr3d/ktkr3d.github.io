@@ -18579,9 +18579,9 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     <url>/2025/03/20/GNOME-48/</url>
     <content><![CDATA[<p><img src="/images/arch_gnome48_unstable.png"><br>GNOME 48がリリースされたのでArch LinuxにGNOME 48.0 (gnome-unstableリポジトリ)を導入してみました。<br><a href="https://release.gnome.org/48/">https://release.gnome.org/48/</a><br><a href="https://archlinux.org/groups/x86_64/gnome/">https://archlinux.org/groups/x86_64/gnome/</a></p>
 <p>GNOME関連アプリの起動の設定が不足しているみたいなのでextraリポジトリに反映されるのをまとう。</p>
-<h4 id="2025-03-20"><a href="#2025-03-20" class="headerlink" title="2025-03-20"></a>2025-03-20</h4><p><a href="https://archlinux.org/groups/x86_64/gnome/">https://archlinux.org/groups/x86_64/gnome/</a><br>extra-testing に入りました。</p>
+<h4 id="2025-03-20"><a href="#2025-03-20" class="headerlink" title="2025-03-20"></a>2025-03-20</h4><p><a href="https://archlinux.org/groups/x86_64/gnome/">https://archlinux.org/groups/x86_64/gnome/</a><br>GNOME 48.0 (extra-testing リポジトリ) に入りました。</p>
 <ol>
-<li><p>リポジトリの追加<br>  <a href="https://wiki.archlinux.jp/index.php/%E5%85%AC%E5%BC%8F%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA#gnome-unstable">https://wiki.archlinux.jp/index.php/公式リポジトリ#gnome-unstable</a></p>
+<li><p>リポジトリの追加<br>  <a href="https://wiki.archlinux.jp/index.php/%E5%85%AC%E5%BC%8F%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA#extra-testing">https://wiki.archlinux.jp/index.php/公式リポジトリ#extra-testing</a></p>
   <figure class="highlight ini"><figcaption><span>/etc/pacman.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[extra-testing]</span></span><br><span class="line"><span class="attr">Include</span> = /etc/pacman.d/mirrorlist</span><br></pre></td></tr></table></figure>
   <div class="note info flat"><p><code>[extra]</code>の前に<code>[extra-testing]</code>を挿入する。</p>
 </div>

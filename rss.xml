@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 20 Mar 2025 06:21:39 GMT</pubDate>
+    <pubDate>Thu, 20 Mar 2025 06:23:42 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,9 +26,9 @@
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/arch_gnome48_unstable.png&quot;&gt;&lt;br&gt;GNOME 48がリリースされたのでArch LinuxにGNOME 48.0 (gnome-unstableリポジトリ)を導入してみました。&lt;br&gt;&lt;a href=&quot;https://release.gnome.org/48/&quot;&gt;https://release.gnome.org/48/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://archlinux.org/groups/x86_64/gnome/&quot;&gt;https://archlinux.org/groups/x86_64/gnome/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;GNOME関連アプリの起動の設定が不足しているみたいなのでextraリポジトリに反映されるのをまとう。&lt;/p&gt;
-&lt;h4 id=&quot;2025-03-20&quot;&gt;&lt;a href=&quot;#2025-03-20&quot; class=&quot;headerlink&quot; title=&quot;2025-03-20&quot;&gt;&lt;/a&gt;2025-03-20&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://archlinux.org/groups/x86_64/gnome/&quot;&gt;https://archlinux.org/groups/x86_64/gnome/&lt;/a&gt;&lt;br&gt;extra-testing に入りました。&lt;/p&gt;
+&lt;h4 id=&quot;2025-03-20&quot;&gt;&lt;a href=&quot;#2025-03-20&quot; class=&quot;headerlink&quot; title=&quot;2025-03-20&quot;&gt;&lt;/a&gt;2025-03-20&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://archlinux.org/groups/x86_64/gnome/&quot;&gt;https://archlinux.org/groups/x86_64/gnome/&lt;/a&gt;&lt;br&gt;GNOME 48.0 (extra-testing リポジトリ) に入りました。&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;リポジトリの追加&lt;br&gt;  &lt;a href=&quot;https://wiki.archlinux.jp/index.php/%E5%85%AC%E5%BC%8F%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA#gnome-unstable&quot;&gt;https://wiki.archlinux.jp/index.php/公式リポジトリ#gnome-unstable&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;リポジトリの追加&lt;br&gt;  &lt;a href=&quot;https://wiki.archlinux.jp/index.php/%E5%85%AC%E5%BC%8F%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA#extra-testing&quot;&gt;https://wiki.archlinux.jp/index.php/公式リポジトリ#extra-testing&lt;/a&gt;&lt;/p&gt;
   &lt;figure class=&quot;highlight ini&quot;&gt;&lt;figcaption&gt;&lt;span&gt;/etc/pacman.conf&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;[extra-testing]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;Include&lt;/span&gt; = /etc/pacman.d/mirrorlist&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
   &lt;div class=&quot;note info flat&quot;&gt;&lt;p&gt;&lt;code&gt;[extra]&lt;/code&gt;の前に&lt;code&gt;[extra-testing]&lt;/code&gt;を挿入する。&lt;/p&gt;
 &lt;/div&gt;
