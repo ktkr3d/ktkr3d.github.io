@@ -18579,7 +18579,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     <url>/2025/03/20/GNOME-48/</url>
     <content><![CDATA[<p><img src="/images/arch_gnome48_gnome-unstable.png"><br>GNOME 48がリリースされたのでArch LinuxにGNOME 48.0 (gnome-unstableリポジトリ)を導入してみました。<br><a href="https://release.gnome.org/48/">https://release.gnome.org/48/</a><br><a href="https://archlinux.org/groups/x86_64/gnome/">https://archlinux.org/groups/x86_64/gnome/</a></p>
 <p>GNOME関連アプリが起動しません。extraリポジトリに反映されるのをまちましょう。</p>
-<h4 id="2025-03-20"><a href="#2025-03-20" class="headerlink" title="2025-03-20"></a>2025-03-20</h4><p><img src="/images/arch_gnome48_extra-testing.png"></p>
+<h4 id="2025-03-20-追記"><a href="#2025-03-20-追記" class="headerlink" title="2025-03-20 追記"></a>2025-03-20 追記</h4><p><img src="/images/arch_gnome48_extra-testing.png"></p>
 <p><a href="https://archlinux.org/groups/x86_64/gnome/">https://archlinux.org/groups/x86_64/gnome/</a><br>GNOME 48.0 (extra-testing リポジトリ) に入りました。<br>gnome-control-center, gnome-terminal, gnome-text-editor, nautilus, argos が動くようになりました。</p>
 <ol>
 <li><p>リポジトリの追加<br>  <a href="https://wiki.archlinux.jp/index.php/%E5%85%AC%E5%BC%8F%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA#extra-testing">https://wiki.archlinux.jp/index.php/公式リポジトリ#extra-testing</a></p>
@@ -18590,6 +18590,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><p>パッケージの更新</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -Syyu</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
 </ol>
+<hr>
 <span id="more"></span>
 
 <a href="https://www.gnome.org/" target="_blank" rel="nofollow" class="link-preview"><div class="og-image"><img src="https://www.gnome.org/img/card.png" alt="GNOME" class="not-gallery-item" loading="lazy"></div><div class="descriptions"><div class="og-title">GNOME</div><div class="og-description">An easy and elegant way to use your computer</div></div></a>
