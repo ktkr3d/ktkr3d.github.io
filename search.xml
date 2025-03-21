@@ -128,6 +128,15 @@
       </categories>
   </entry>
   <entry>
+    <title>ディスプレイ上を歩いてみた</title>
+    <url>/2010/07/24/post_9/</url>
+    <content><![CDATA[<p><img src="/images/artk_test.png" alt="artoolkit irrlicht"><br>Irrlicht + ARToolKit を使ってディスプレイの中から出て歩いてみた<br><a href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=30000">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=30000</a><br>このスレより元スレの方がシンプルな気もするけれど・・・<br>多謝: irrAR のひと、ARToolKit のひと</p>
+]]></content>
+      <categories>
+        <category>irrlicht</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Sunflow でレンダリングしてみた</title>
     <url>/2010/08/02/sunflow/</url>
     <content><![CDATA[<p><img src="/images/sunflow_alien.png" alt="sunflow"><br>Software Center にあったSunflow というソフトでサンプルのエイリアンをレンダリングしてみた</p>
@@ -138,15 +147,6 @@
       <tags>
         <tag>sunflow</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>ディスプレイ上を歩いてみた</title>
-    <url>/2010/07/24/post_9/</url>
-    <content><![CDATA[<p><img src="/images/artk_test.png" alt="artoolkit irrlicht"><br>Irrlicht + ARToolKit を使ってディスプレイの中から出て歩いてみた<br><a href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=30000">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=30000</a><br>このスレより元スレの方がシンプルな気もするけれど・・・<br>多謝: irrAR のひと、ARToolKit のひと</p>
-]]></content>
-      <categories>
-        <category>irrlicht</category>
-      </categories>
   </entry>
   <entry>
     <title>XEffects 使ってみた</title>
@@ -275,21 +275,21 @@
       </tags>
   </entry>
   <entry>
-    <title>irrlamb で遊んでみた</title>
-    <url>/2010/09/04/irrlamb/</url>
-    <content><![CDATA[<p><img src="/images/irrlamb.png" alt="irrlamb irrlicht"><br>irrlamb で遊んでみた<br>面クリアタイプの3D アクションゲームで、ちょっと慣れが必要だけれどおもしろい!!<br>物理エンジンはBullet を使っている<br>画面構成がかっこよくて、リプレイ機能もある<br><a href="http://code.google.com/p/irrlamb/">http://code.google.com/p/irrlamb/</a><br><a href="http://www.youtube.com/profile?user=irrlamb">http://www.youtube.com/profile?user=irrlamb</a><br>ubuntu lucid&#x2F;universe のリポジトリにlibirrlicht1.7,<br>libirrlicht-dev(&#x2F;usr&#x2F;include&#x2F;irrlicht, &#x2F;usr&#x2F;lib&#x2F;libirrlicht.a,<br>&#x2F;usr&#x2F;lib&#x2F;libirrlicht.so とか), libirrlicht1.7-dbg,<br>libirrlicht-doc(リファレンスとexamples)<br>のパッケージ(1.7+dfsg1-1)があることを初めて知った・・・いつできたんだろう<br>ubuntu maverick&#x2F;universe の方は1.7.1+dfsg1-1 になっているっぽい</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-  </entry>
-  <entry>
     <title>H-Craft Championship で遊んでみた</title>
     <url>/2010/09/07/h-craft_championship/</url>
     <content><![CDATA[<p><img src="/images/hcraft.jpg" alt="hcraft irrlicht"><br>F-Zero&#x2F;wipEout ライクな3D レースゲームでデモ版と商用版がある<br>2006 年リリースだからかなり古いけど画面が綺麗で完成度が高い<br>操作に慣れると気持ちいい<br><a href="http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=17871">http://irrlicht.sourceforge.net/phpBB2/viewtopic.php?t=17871</a><br><a href="http://www.irrgheist.com/">http://www.irrgheist.com/</a><br>サウンドはwav とogg でOpenAL<br>モデルはX とobj<br>GUI はxml 化、フォントはgun4fc.ttf</p>
 ]]></content>
       <categories>
         <category>irrlicht</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>irrlamb で遊んでみた</title>
+    <url>/2010/09/04/irrlamb/</url>
+    <content><![CDATA[<p><img src="/images/irrlamb.png" alt="irrlamb irrlicht"><br>irrlamb で遊んでみた<br>面クリアタイプの3D アクションゲームで、ちょっと慣れが必要だけれどおもしろい!!<br>物理エンジンはBullet を使っている<br>画面構成がかっこよくて、リプレイ機能もある<br><a href="http://code.google.com/p/irrlamb/">http://code.google.com/p/irrlamb/</a><br><a href="http://www.youtube.com/profile?user=irrlamb">http://www.youtube.com/profile?user=irrlamb</a><br>ubuntu lucid&#x2F;universe のリポジトリにlibirrlicht1.7,<br>libirrlicht-dev(&#x2F;usr&#x2F;include&#x2F;irrlicht, &#x2F;usr&#x2F;lib&#x2F;libirrlicht.a,<br>&#x2F;usr&#x2F;lib&#x2F;libirrlicht.so とか), libirrlicht1.7-dbg,<br>libirrlicht-doc(リファレンスとexamples)<br>のパッケージ(1.7+dfsg1-1)があることを初めて知った・・・いつできたんだろう<br>ubuntu maverick&#x2F;universe の方は1.7.1+dfsg1-1 になっているっぽい</p>
+]]></content>
+      <categories>
+        <category>linux</category>
       </categories>
   </entry>
   <entry>
@@ -1163,7 +1163,7 @@
 
 
 <blockquote>
-<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#114;&#111;&#111;&#116;&#x40;&#x62;&#117;&#105;&#108;&#100;&#56;&#120;&#51;&#50;&#x2e;&#x70;&#99;&#x62;&#115;&#100;&#46;&#111;&#114;&#103;">&#114;&#111;&#111;&#116;&#x40;&#x62;&#117;&#105;&#108;&#100;&#56;&#120;&#51;&#50;&#x2e;&#x70;&#99;&#x62;&#115;&#100;&#46;&#111;&#114;&#103;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
+<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#x72;&#111;&#111;&#x74;&#64;&#x62;&#117;&#x69;&#x6c;&#x64;&#56;&#x78;&#x33;&#x32;&#46;&#x70;&#x63;&#x62;&#x73;&#100;&#46;&#111;&#114;&#x67;">&#x72;&#111;&#111;&#x74;&#64;&#x62;&#117;&#x69;&#x6c;&#x64;&#56;&#x78;&#x33;&#x32;&#46;&#x70;&#x63;&#x62;&#x73;&#100;&#46;&#111;&#114;&#x67;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
 </blockquote>
 <p>デスクトップ環境はKDE で、Firefox, Thunderbird, VLC 等をインストール時に追加できる。特に設定しなくても日本語も使えるし、mp3 も再生できる。GRUB からのチェインロードも問題無し。すごく頑張ってると思う。<br>Inspiron duo の1366x768 の解像度に設定すると、ディスプレイが表示されなくなってしまうので、とりあえずVESA で凌ごう。Linux と比べてドライバ(ディスプレイ、ファイルシステム)の情報は少ないかも。<br>ps コマンドやdf コマンドがBSD っぽくて少し懐かしい感じがした。</p>
 ]]></content>
@@ -1177,7 +1177,7 @@
     <content><![CDATA[<p><img src="/images/my_gnome_shell_extension.png" alt="gnome shell extension"></p>
 <p><a href="http://live.gnome.org/GnomeShell/Extensions">http://live.gnome.org/GnomeShell/Extensions</a><br><a href="http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html">http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html</a></p>
 <p>まずは、上部のパネルをクリックすると一定時間メッセージを表示するHello World 的な物から！！とりあえず日本語はunescape() してみた。</p>
-<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x68;&#x65;&#x6c;&#108;&#x6f;&#45;&#119;&#111;&#114;&#x6c;&#100;&#64;&#x6b;&#116;&#107;&#x72;&#x33;&#x64;&#x2e;&#115;&#105;&#116;&#101;&#49;&#x31;&#46;&#x63;&#x6f;&#x6d;">&#x68;&#x65;&#x6c;&#108;&#x6f;&#45;&#119;&#111;&#114;&#x6c;&#100;&#64;&#x6b;&#116;&#107;&#x72;&#x33;&#x64;&#x2e;&#115;&#105;&#116;&#101;&#49;&#x31;&#46;&#x63;&#x6f;&#x6d;</a>&#x2F;</p>
+<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#104;&#101;&#x6c;&#108;&#111;&#x2d;&#x77;&#111;&#114;&#108;&#x64;&#x40;&#107;&#x74;&#107;&#x72;&#x33;&#100;&#x2e;&#x73;&#105;&#116;&#101;&#x31;&#x31;&#46;&#99;&#111;&#x6d;">&#104;&#101;&#x6c;&#108;&#111;&#x2d;&#x77;&#111;&#114;&#108;&#x64;&#x40;&#107;&#x74;&#107;&#x72;&#x33;&#100;&#x2e;&#x73;&#105;&#116;&#101;&#x31;&#x31;&#46;&#99;&#111;&#x6d;</a>&#x2F;</p>
 <h3 id="extension-js-ファイル"><a href="#extension-js-ファイル" class="headerlink" title="extension.js ファイル"></a>extension.js ファイル</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">// Sample extension code, makes clicking on the panel show a message</span><br><span class="line">const St = imports.gi.St;</span><br><span class="line">const Mainloop = imports.mainloop;</span><br><span class="line"></span><br><span class="line">const Gettext = imports.gettext.domain(&#x27;gnome-shell-extensions&#x27;);</span><br><span class="line">const _ = Gettext.gettext;</span><br><span class="line"></span><br><span class="line">const Main = imports.ui.main;</span><br><span class="line"></span><br><span class="line">function _showHello() &#123;</span><br><span class="line">    let text = new St.Label(&#123; style_class: &#x27;helloworld-label&#x27;, text: _(unescape(&quot;%uFF0F%u4EBA%u25D5%u203F%u203F%u25D5%u4EBA%uFF3C%u300C%u50D5%u3068%u5951%u7D04%u3057%u3066%u9B54%u6CD5%u5C11%u5973%u306B%u306A%u3063%u3066%u3088%uFF01%uFF01%u300D&quot;)) &#125;);</span><br><span class="line">    let monitor = global.get_primary_monitor();</span><br><span class="line">    global.stage.add_actor(text);</span><br><span class="line">    text.set_position(Math.floor (monitor.width / 2 - text.width / 2), Math.floor(monitor.height / 2 - text.height / 2));</span><br><span class="line">    Mainloop.timeout_add(3000, function () &#123; text.destroy(); &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Put your extension initialization code here</span><br><span class="line">function main(metadata) &#123;</span><br><span class="line">    imports.gettext.bindtextdomain(&#x27;gnome-shell-extensions&#x27;, metadata.localedir);</span><br><span class="line"></span><br><span class="line">    Main.panel.actor.reactive = true;</span><br><span class="line">    Main.panel.actor.connect(&#x27;button-release-event&#x27;, _showHello);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -1217,7 +1217,7 @@
 <ol start="3">
 <li><p>$HOME&#x2F;.themes&#x2F; ディレクトリを作成して、アーカイブの中のテーマを展開する。</p>
 </li>
-<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#116;&#x68;&#x65;&#x6d;&#101;&#115;&#101;&#108;&#101;&#x63;&#116;&#x6f;&#114;&#x40;&#102;&#112;&#109;&#117;&#114;&#x70;&#104;&#121;&#46;&#x63;&#x6f;&#109;">&#116;&#x68;&#x65;&#x6d;&#101;&#115;&#101;&#108;&#101;&#x63;&#116;&#x6f;&#114;&#x40;&#102;&#112;&#109;&#117;&#114;&#x70;&#104;&#121;&#46;&#x63;&#x6f;&#109;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
+<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#116;&#104;&#x65;&#109;&#101;&#115;&#101;&#x6c;&#x65;&#99;&#x74;&#111;&#114;&#x40;&#x66;&#112;&#109;&#117;&#114;&#x70;&#x68;&#121;&#46;&#99;&#111;&#109;">&#116;&#104;&#x65;&#109;&#101;&#115;&#101;&#x6c;&#x65;&#99;&#x74;&#111;&#114;&#x40;&#x66;&#112;&#109;&#117;&#114;&#x70;&#x68;&#121;&#46;&#99;&#111;&#109;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
 </li>
 <li><p>[Alt]+[F2]を押して、r を入力して、[Enter] を押す。</p>
 </li>
@@ -1390,9 +1390,9 @@
     <url>/2011/05/30/gnome-shell-extension-e38292e5bea9e6b4bbe38195e3819be381a6e381bfe3819f/</url>
     <content><![CDATA[<p>GNOME Shell を3.0.2 にしたらdock が消えたので復活させてみた。</p>
 <ul>
-<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#111;&#99;&#107;&#x40;&#103;&#x6e;&#x6f;&#x6d;&#101;&#45;&#x73;&#x68;&#101;&#x6c;&#x6c;&#45;&#101;&#120;&#x74;&#101;&#110;&#115;&#105;&#111;&#x6e;&#115;&#x2e;&#103;&#110;&#x6f;&#x6d;&#x65;&#46;&#x6f;&#114;&#103;">&#100;&#111;&#99;&#107;&#x40;&#103;&#x6e;&#x6f;&#x6d;&#101;&#45;&#x73;&#x68;&#101;&#x6c;&#x6c;&#45;&#101;&#120;&#x74;&#101;&#110;&#115;&#105;&#111;&#x6e;&#115;&#x2e;&#103;&#110;&#x6f;&#x6d;&#x65;&#46;&#x6f;&#114;&#103;</a>&#x2F;metadata.json</p>
+<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#x6f;&#x63;&#107;&#x40;&#x67;&#110;&#111;&#109;&#101;&#45;&#115;&#104;&#101;&#x6c;&#108;&#x2d;&#101;&#x78;&#116;&#x65;&#x6e;&#115;&#105;&#111;&#x6e;&#x73;&#x2e;&#103;&#110;&#111;&#109;&#101;&#x2e;&#x6f;&#x72;&#x67;">&#x64;&#x6f;&#x63;&#107;&#x40;&#x67;&#110;&#111;&#109;&#101;&#45;&#115;&#104;&#101;&#x6c;&#108;&#x2d;&#101;&#x78;&#116;&#x65;&#x6e;&#115;&#105;&#111;&#x6e;&#x73;&#x2e;&#103;&#110;&#111;&#109;&#101;&#x2e;&#x6f;&#x72;&#x67;</a>&#x2F;metadata.json</p>
 </li>
-<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#111;&#x63;&#107;&#64;&#x67;&#x6e;&#111;&#109;&#x65;&#45;&#115;&#104;&#x65;&#108;&#108;&#45;&#101;&#x78;&#x74;&#101;&#110;&#115;&#x69;&#111;&#x6e;&#115;&#x2e;&#x67;&#x6e;&#111;&#x6d;&#101;&#46;&#x6f;&#x72;&#103;">&#100;&#111;&#x63;&#107;&#64;&#x67;&#x6e;&#111;&#109;&#x65;&#45;&#115;&#104;&#x65;&#108;&#108;&#45;&#101;&#x78;&#x74;&#101;&#110;&#115;&#x69;&#111;&#x6e;&#115;&#x2e;&#x67;&#x6e;&#111;&#x6d;&#101;&#46;&#x6f;&#x72;&#103;</a>&#x2F;metadata.json</p>
+<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#x6f;&#99;&#x6b;&#64;&#103;&#110;&#x6f;&#x6d;&#101;&#45;&#x73;&#x68;&#x65;&#108;&#x6c;&#x2d;&#x65;&#120;&#116;&#x65;&#110;&#x73;&#x69;&#111;&#110;&#x73;&#x2e;&#103;&#x6e;&#111;&#x6d;&#x65;&#x2e;&#111;&#114;&#x67;">&#100;&#x6f;&#99;&#x6b;&#64;&#103;&#110;&#x6f;&#x6d;&#101;&#45;&#x73;&#x68;&#x65;&#108;&#x6c;&#x2d;&#x65;&#120;&#116;&#x65;&#110;&#x73;&#x69;&#111;&#110;&#x73;&#x2e;&#103;&#x6e;&#111;&#x6d;&#x65;&#x2e;&#111;&#114;&#x67;</a>&#x2F;metadata.json</p>
 </li>
 </ul>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;uuid&quot;: &quot;dock@gnome-shell-extensions.gnome.org&quot;,</span><br><span class="line">&quot;name&quot;: &quot;Dock&quot;,</span><br><span class="line">&quot;description&quot;: &quot;A dock for the GNOME Shell -- displays favorite and running applications&quot;,</span><br><span class="line">&quot;original-author&quot;: &quot;tclaesson@gmail.com&quot;,</span><br><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot; ],</span><br><span class="line">&quot;localedir&quot;: &quot;/usr/local/share/locale&quot;,</span><br><span class="line">&quot;url&quot;: &quot;http://git.gnome.org/gnome-shell-extensions&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1625,6 +1625,18 @@
       </categories>
   </entry>
   <entry>
+    <title>Linux Mint 12 を試してみた</title>
+    <url>/2011/11/06/linux-mint-12/</url>
+    <content><![CDATA[<p><img src="/images/linux_mint_12_gnome_shell.png" alt="linux mint 12 gnome shell"></p>
+<p><a href="http://ohheyitslou.blogspot.com/2011/11/tutorial-how-to-install-linux-mint-12.html">http://ohheyitslou.blogspot.com/2011/11/tutorial-how-to-install-linux-mint-12.html</a></p>
+<p><a href="http://blog.linuxmint.com/?p=1851">http://blog.linuxmint.com/?p=1851</a></p>
+<p>Ubuntu ベースで人気のディストリビューションLinux Mint のバージョン12 RC1 版が2011.11.11 にリリースされるようなので、リポジトリを更新してひと足お先に試してみた。(Daily Builds は公開されてないみたい？)<br>Linux Mint ではMint GNOME Shell Extensions (MGSE) でGNOME Shell の拡張機能が整理されていて、GNOME Shell 上でクラシックメニューのようなものを提供している。Ubuntu 同様、fglrx を組み込むと一部の画像やテキストがうまく描画されないのは仕方なしか。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Android 4.0 をビルドしてみよう（その1）</title>
     <url>/2011/11/15/android-4-0/</url>
     <content><![CDATA[<p><a href="http://source.android.com/source/download.html">http://source.android.com/source/download.html</a><br>Android 4.0 のソースコード（android-4.0.1_r1）が公開されたので、Ubuntu 11.10 64bit の環境でビルドしてみよう。手順はAndroid 2.3 の時と同じみたい。今回から（?）実験的に32bit 環境での手順も記載されている。<br>はやくAndroid-x86 にも取り込まれないかな。</p>
@@ -1641,18 +1653,6 @@
 ]]></content>
       <categories>
         <category>android</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Linux Mint 12 を試してみた</title>
-    <url>/2011/11/06/linux-mint-12/</url>
-    <content><![CDATA[<p><img src="/images/linux_mint_12_gnome_shell.png" alt="linux mint 12 gnome shell"></p>
-<p><a href="http://ohheyitslou.blogspot.com/2011/11/tutorial-how-to-install-linux-mint-12.html">http://ohheyitslou.blogspot.com/2011/11/tutorial-how-to-install-linux-mint-12.html</a></p>
-<p><a href="http://blog.linuxmint.com/?p=1851">http://blog.linuxmint.com/?p=1851</a></p>
-<p>Ubuntu ベースで人気のディストリビューションLinux Mint のバージョン12 RC1 版が2011.11.11 にリリースされるようなので、リポジトリを更新してひと足お先に試してみた。(Daily Builds は公開されてないみたい？)<br>Linux Mint ではMint GNOME Shell Extensions (MGSE) でGNOME Shell の拡張機能が整理されていて、GNOME Shell 上でクラシックメニューのようなものを提供している。Ubuntu 同様、fglrx を組み込むと一部の画像やテキストがうまく描画されないのは仕方なしか。</p>
-]]></content>
-      <categories>
-        <category>linux</category>
       </categories>
   </entry>
   <entry>
@@ -2398,6 +2398,18 @@
       </categories>
   </entry>
   <entry>
+    <title>Inspiron duo + Windows 8 64bit</title>
+    <url>/2012/06/04/inspiron-duo-windows-8-64bit/</url>
+    <content><![CDATA[<p><img src="/images/windows8_inspiron_duo.png" alt="windows 8 inspiron duo"></p>
+<p>Inspiron duo にWindows 8 Release Preview をインストールしてみた。Inspiron duo のCPU はDual Core ATOM N550 で64bit 対応しているので、Windows 8 の64bit 版がインストールできる。</p>
+<p><a href="/images/uploads/2012/06/windows8_metro.png"><img src="/images/uploads/2012/06/windows8_metro.png" alt="windows 8 metro"></a></p>
+<p>Inspiron duo のスクリーンは10.1 インチの1366x768 でMetro はこんな感じで表示された。タッチスクリーンで横にスライドする。</p>
+]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Burg + Ubuntu 12.04 + Windows 8 + Android-x86 4.0</title>
     <url>/2012/06/06/burg-ubuntu-12-04-windows-8-android-x86-4-0/</url>
     <content><![CDATA[<p><img src="/images/burg_windows_8_ubuntu_12.04_android-x86_4.0.png" alt="burg windows 8 ubuntu 12.04 android-x86 4.0"></p>
@@ -2492,30 +2504,42 @@
       </categories>
   </entry>
   <entry>
-    <title>Inspiron duo + Windows 8 64bit</title>
-    <url>/2012/06/04/inspiron-duo-windows-8-64bit/</url>
-    <content><![CDATA[<p><img src="/images/windows8_inspiron_duo.png" alt="windows 8 inspiron duo"></p>
-<p>Inspiron duo にWindows 8 Release Preview をインストールしてみた。Inspiron duo のCPU はDual Core ATOM N550 で64bit 対応しているので、Windows 8 の64bit 版がインストールできる。</p>
-<p><a href="/images/uploads/2012/06/windows8_metro.png"><img src="/images/uploads/2012/06/windows8_metro.png" alt="windows 8 metro"></a></p>
-<p>Inspiron duo のスクリーンは10.1 インチの1366x768 でMetro はこんな感じで表示された。タッチスクリーンで横にスライドする。</p>
+    <title>Android NDK + Android-x86 4.0.3</title>
+    <url>/2012/06/17/android-ndk-android-x86-4-0-3/</url>
+    <content><![CDATA[<p><img src="/images/android_ndk_android-x86.png" alt="android ndk android-x86 irrlicht"></p>
+<p>Android 2.3 用のアプリをAndroid-x86 4.0.3 用にリビルドして、Inspiron duo 実機で動かしてみた。さすがにスマートフォンより動作が非常に軽快だけど、画面がiPod の広告みたいになってしまった。画像やフォントが表示されてないのは、なんでだろう。パスがずれているのかな。パスが違っていたらエラーになるはずなんだけど。ボタンイベントはタッチスクリーン上を指で押したら正しく動作した。</p>
+<ol>
+<li>Android 4.0.3 のターゲット情報は以下のとおり。ID は10。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android list target</span><br><span class="line"><span class="built_in">id</span>: 10 or <span class="string">&quot;android-15&quot;</span></span><br><span class="line">     Name: Android 4.0.3</span><br><span class="line">     Type: Platform</span><br><span class="line">     API level: 15</span><br><span class="line">     Revision: 3</span><br><span class="line">     Skins: WXGA720, QVGA, WSVGA, WQVGA400, WQVGA432, HVGA, WVGA854, WXGA800, WVGA800 (default)</span><br><span class="line">     ABIs : armeabi-v7a, x86</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li>Application.mk でx86 を指定</li>
+</ol>
+<figure class="highlight text"><figcaption><span>Application.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">#APP_ABI := armeabi armeabi-v7a</span><br><span class="line">APP_ABI := armeabi-v7a x86</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li>プロジェクトをアップデート</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android update project --path . --target 10</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="4">
+<li>ビルド</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ndk-build clean</span><br><span class="line">$ ndk-build -j 4</span><br><span class="line">$ ant clean</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
       <categories>
-        <category>windows</category>
+        <category>android</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Irrlicht 1.8 trunk + XEffects</title>
-    <url>/2012/06/30/irrlicht-1-8-trunk-xeffects/</url>
-    <content><![CDATA[<p><img src="/images/irrlicht_1.8_xeffects.png" alt="irrlicht 1.8 xeffects"></p>
-<p>Irrlicht 1.8 trunk でXEffects の影が有効にならなくなっていたので、XEffects のヘッダを修正してみた。Irrlicht 側のインタフェースが変わったのが原因かな。Irrlicht 1.8 ではXEffects を使っても画像が反転しないし、CGUITTFONT とも同時に使えるし、便利になったなぁ。環境はUbuntu 12.04 x86_64 + Irrlicht 1.8 trunk (SVN rev: 4170 ) + XEffects v1.3。</p>
-<figure class="highlight cpp"><figcaption><span>EffectCB.h</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">OnSetConstants</span><span class="params">(irr::video::IMaterialRendererServices* services, irr::s32 userData)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(services-&gt;<span class="built_in">getVideoDriver</span>()-&gt;<span class="built_in">getDriverType</span>() == irr::video::EDT_OPENGL)</span><br><span class="line">	&#123;</span><br><span class="line"><span class="comment">//		irr::f32 TexVar = 0;</span></span><br><span class="line">		irr::s32 TexVar = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;ColorMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;ColorMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;ScreenMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;ScreenMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;DepthMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;DepthMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">3</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;UserMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;UserMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>develop</category>
-      </categories>
-      <tags>
-        <tag>irrlicht</tag>
-      </tags>
   </entry>
   <entry>
     <title>Android-x86 4.0.3 + Firefox(Fennec) 16.0a1</title>
@@ -2586,6 +2610,20 @@
       <categories>
         <category>android</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Irrlicht 1.8 trunk + XEffects</title>
+    <url>/2012/06/30/irrlicht-1-8-trunk-xeffects/</url>
+    <content><![CDATA[<p><img src="/images/irrlicht_1.8_xeffects.png" alt="irrlicht 1.8 xeffects"></p>
+<p>Irrlicht 1.8 trunk でXEffects の影が有効にならなくなっていたので、XEffects のヘッダを修正してみた。Irrlicht 側のインタフェースが変わったのが原因かな。Irrlicht 1.8 ではXEffects を使っても画像が反転しないし、CGUITTFONT とも同時に使えるし、便利になったなぁ。環境はUbuntu 12.04 x86_64 + Irrlicht 1.8 trunk (SVN rev: 4170 ) + XEffects v1.3。</p>
+<figure class="highlight cpp"><figcaption><span>EffectCB.h</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">OnSetConstants</span><span class="params">(irr::video::IMaterialRendererServices* services, irr::s32 userData)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(services-&gt;<span class="built_in">getVideoDriver</span>()-&gt;<span class="built_in">getDriverType</span>() == irr::video::EDT_OPENGL)</span><br><span class="line">	&#123;</span><br><span class="line"><span class="comment">//		irr::f32 TexVar = 0;</span></span><br><span class="line">		irr::s32 TexVar = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;ColorMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;ColorMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;ScreenMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;ScreenMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;DepthMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;DepthMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		TexVar = <span class="number">3</span>;</span><br><span class="line"><span class="comment">//		services-&gt;setPixelShaderConstant(&quot;UserMapSampler&quot;, (irr::f32*)(&amp;TexVar), 1);</span></span><br><span class="line">		services-&gt;<span class="built_in">setPixelShaderConstant</span>(<span class="string">&quot;UserMapSampler&quot;</span>, &amp;TexVar, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>develop</category>
+      </categories>
+      <tags>
+        <tag>irrlicht</tag>
+      </tags>
   </entry>
   <entry>
     <title>Playing Diablo 3</title>
@@ -2730,44 +2768,6 @@
 ]]></content>
       <categories>
         <category>linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Android NDK + Android-x86 4.0.3</title>
-    <url>/2012/06/17/android-ndk-android-x86-4-0-3/</url>
-    <content><![CDATA[<p><img src="/images/android_ndk_android-x86.png" alt="android ndk android-x86 irrlicht"></p>
-<p>Android 2.3 用のアプリをAndroid-x86 4.0.3 用にリビルドして、Inspiron duo 実機で動かしてみた。さすがにスマートフォンより動作が非常に軽快だけど、画面がiPod の広告みたいになってしまった。画像やフォントが表示されてないのは、なんでだろう。パスがずれているのかな。パスが違っていたらエラーになるはずなんだけど。ボタンイベントはタッチスクリーン上を指で押したら正しく動作した。</p>
-<ol>
-<li>Android 4.0.3 のターゲット情報は以下のとおり。ID は10。</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android list target</span><br><span class="line"><span class="built_in">id</span>: 10 or <span class="string">&quot;android-15&quot;</span></span><br><span class="line">     Name: Android 4.0.3</span><br><span class="line">     Type: Platform</span><br><span class="line">     API level: 15</span><br><span class="line">     Revision: 3</span><br><span class="line">     Skins: WXGA720, QVGA, WSVGA, WQVGA400, WQVGA432, HVGA, WVGA854, WXGA800, WVGA800 (default)</span><br><span class="line">     ABIs : armeabi-v7a, x86</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>Application.mk でx86 を指定</li>
-</ol>
-<figure class="highlight text"><figcaption><span>Application.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">#APP_ABI := armeabi armeabi-v7a</span><br><span class="line">APP_ABI := armeabi-v7a x86</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="3">
-<li>プロジェクトをアップデート</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android update project --path . --target 10</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="4">
-<li>ビルド</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ndk-build clean</span><br><span class="line">$ ndk-build -j 4</span><br><span class="line">$ ant clean</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>android</category>
       </categories>
   </entry>
   <entry>
@@ -4026,7 +4026,7 @@ $ sudo apt-get install gnome-shell
 <h4 id="ドックの設定"><a href="#ドックの設定" class="headerlink" title="ドックの設定"></a>ドックの設定</h4><p>前回のAWN に続き、このバージョンではCairo-Dock も動かなくなりました。Dash to Dock GNOME Shell 拡張も正常に動かないようです。Docky を使うことにしました。</p>
 <pre><code>$ sudo apt-get install docky
 </code></pre>
-<h4 id="トップバーの非表示"><a href="#トップバーの非表示" class="headerlink" title="トップバーの非表示"></a>トップバーの非表示</h4><p>Hide Top Bar GNOME Shell 拡張が正常に動かなかったので、以前使用していた<a href="mailto:&#97;&#x75;&#116;&#111;&#104;&#105;&#100;&#x65;&#x74;&#111;&#x70;&#98;&#97;&#114;&#x32;&#64;&#x77;&#x65;&#114;&#101;&#x77;&#111;&#108;&#118;&#x65;&#115;&#46;&#x75;&#115;">&#97;&#x75;&#116;&#111;&#104;&#105;&#100;&#x65;&#x74;&#111;&#x70;&#98;&#97;&#114;&#x32;&#64;&#x77;&#x65;&#114;&#101;&#x77;&#111;&#108;&#118;&#x65;&#115;&#46;&#x75;&#115;</a> の方のGNOME Shell 拡張を使用してみました。<br>shell-version は3.9.4 を指定しました。</p>
+<h4 id="トップバーの非表示"><a href="#トップバーの非表示" class="headerlink" title="トップバーの非表示"></a>トップバーの非表示</h4><p>Hide Top Bar GNOME Shell 拡張が正常に動かなかったので、以前使用していた<a href="mailto:&#97;&#117;&#116;&#111;&#104;&#105;&#100;&#x65;&#x74;&#x6f;&#112;&#98;&#x61;&#114;&#x32;&#x40;&#119;&#x65;&#x72;&#101;&#119;&#111;&#108;&#118;&#101;&#x73;&#46;&#117;&#x73;">&#97;&#117;&#116;&#111;&#104;&#105;&#100;&#x65;&#x74;&#x6f;&#112;&#98;&#x61;&#114;&#x32;&#x40;&#119;&#x65;&#x72;&#101;&#119;&#111;&#108;&#118;&#101;&#x73;&#46;&#117;&#x73;</a> の方のGNOME Shell 拡張を使用してみました。<br>shell-version は3.9.4 を指定しました。</p>
 <figure class="highlight js"><figcaption><span>metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;Auto hide the top panel&quot;</span>,</span><br><span class="line">  <span class="string">&quot;extension-id&quot;</span>: <span class="string">&quot;auto-hide-top-panel&quot;</span>, </span><br><span class="line">  <span class="string">&quot;gettext-domain&quot;</span>: <span class="string">&quot;gnome-shell-extensions&quot;</span>, </span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Auto Hide Top Panel&quot;</span>,</span><br><span class="line">  <span class="string">&quot;settings-schema&quot;</span>: <span class="string">&quot;org.gnome.shell.extensions.auto-hide-top-panel&quot;</span>, </span><br><span class="line">  <span class="string">&quot;shell-version&quot;</span>: [</span><br><span class="line">	<span class="string">&quot;3.5.92&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.6&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.6.1&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.9.4&quot;</span></span><br><span class="line">  ], </span><br><span class="line">  <span class="string">&quot;url&quot;</span>: <span class="string">&quot;http://fpmurphy.com/gnome-shell-extensions&quot;</span>,</span><br><span class="line">  <span class="string">&quot;uuid&quot;</span>: <span class="string">&quot;autohidetopbar2@werewolves.us&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
@@ -6367,6 +6367,26 @@ $ sudo apt-get install cardapio
 ]]></content>
   </entry>
   <entry>
+    <title>PeerCastStation on Raspberry Pi 2</title>
+    <url>/2015/03/10/PeerCastStation-on-Raspberry-Pi-2/</url>
+    <content><![CDATA[<p><img src="/images/peercaststation-on-raspberry-pi-2.png" alt="PeerCastStation on Raspberry Pi 2" title="PeerCastStation on Raspberry Pi 2"></p>
+<p>Raspberry Pi 2 でPeerCastStation を動かしてみました。</p>
+<span id="more"></span>
+
+<h2 id="PeerCastStation-の取得と実行"><a href="#PeerCastStation-の取得と実行" class="headerlink" title="PeerCastStation の取得と実行"></a>PeerCastStation の取得と実行</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install mono-complete unzip</span><br><span class="line">$ wget http://www.pecastation.org/files/PeerCastStation-1.9.1.zip</span><br><span class="line">$ unzip PeerCastStation-1.9.1.zip</span><br><span class="line">$ <span class="built_in">cd</span> PeerCastStation-1.9.1</span><br><span class="line">$ mono PeerCastStation.exe</span><br></pre></td></tr></table></figure>
+
+<h2 id="接続"><a href="#接続" class="headerlink" title="接続"></a>接続</h2><p><a href="http://192.168.0.6:7144/">http://192.168.0.6:7144/</a></p>
+<h2 id="サービスとして実行する場合"><a href="#サービスとして実行する場合" class="headerlink" title="サービスとして実行する場合"></a>サービスとして実行する場合</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mono-service PeerCastStation.exe</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>peercast</tag>
+        <tag>raspberrypi</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Raspberry Pi 2 + Docker + ownCloud</title>
     <url>/2015/04/02/Raspberry-Pi-2-Docker-ownCloud/</url>
     <content><![CDATA[<p><img src="/images/raspberrypi2-docker-owncloud.png" alt="Raspberry Pi 2 + Docker + ownCloud" title="Raspberry Pi 2 + Docker + ownCloud"></p>
@@ -6588,28 +6608,8 @@ $ sudo apt-get install cardapio
         <category>operation</category>
       </categories>
       <tags>
+        <tag>raspberrypi</tag>
         <tag>nagios</tag>
-        <tag>raspberrypi</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PeerCastStation on Raspberry Pi 2</title>
-    <url>/2015/03/10/PeerCastStation-on-Raspberry-Pi-2/</url>
-    <content><![CDATA[<p><img src="/images/peercaststation-on-raspberry-pi-2.png" alt="PeerCastStation on Raspberry Pi 2" title="PeerCastStation on Raspberry Pi 2"></p>
-<p>Raspberry Pi 2 でPeerCastStation を動かしてみました。</p>
-<span id="more"></span>
-
-<h2 id="PeerCastStation-の取得と実行"><a href="#PeerCastStation-の取得と実行" class="headerlink" title="PeerCastStation の取得と実行"></a>PeerCastStation の取得と実行</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install mono-complete unzip</span><br><span class="line">$ wget http://www.pecastation.org/files/PeerCastStation-1.9.1.zip</span><br><span class="line">$ unzip PeerCastStation-1.9.1.zip</span><br><span class="line">$ <span class="built_in">cd</span> PeerCastStation-1.9.1</span><br><span class="line">$ mono PeerCastStation.exe</span><br></pre></td></tr></table></figure>
-
-<h2 id="接続"><a href="#接続" class="headerlink" title="接続"></a>接続</h2><p><a href="http://192.168.0.6:7144/">http://192.168.0.6:7144/</a></p>
-<h2 id="サービスとして実行する場合"><a href="#サービスとして実行する場合" class="headerlink" title="サービスとして実行する場合"></a>サービスとして実行する場合</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mono-service PeerCastStation.exe</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>tools</category>
-      </categories>
-      <tags>
-        <tag>raspberrypi</tag>
-        <tag>peercast</tag>
       </tags>
   </entry>
   <entry>
@@ -9325,6 +9325,28 @@ $ sudo apt-get install cardapio
       </tags>
   </entry>
   <entry>
+    <title>Set Windows clock to UTC time</title>
+    <url>/2017/04/29/Set-Windows-clock-to-UTC-time/</url>
+    <content><![CDATA[<p>Linux はハードウェアクロックの値をUTC と解釈して動作するのがデフォルトです。<br>Windows はハードウェアクロックの値をローカルタイムと解釈するので、Windowsをブートする度に時計が9時間ずれて表示されてしまいます。<br>デュアルブート構成のLinux とWindows の時計が正しく表示されるように設定を追加しました。</p>
+<span id="more"></span>
+
+<h2 id="Windows-レジストリの追加"><a href="#Windows-レジストリの追加" class="headerlink" title="Windows レジストリの追加"></a>Windows レジストリの追加</h2><ol>
+<li><p>コマンドプロンプトを管理者として実行</p>
+</li>
+<li><p>レジストリエントリの追加</p>
+</li>
+</ol>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">&gt; reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d <span class="number">1</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>system</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>utc</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Be Careful using Ext2Fsd</title>
     <url>/2017/04/18/Be-Careful-using-Ext2Fsd/</url>
     <content><![CDATA[<p><a href="https://askubuntu.com/questions/849872/how-can-i-prevent-windows-10-from-corrupting-the-ext4-superblock-every-time">https://askubuntu.com/questions/849872/how-can-i-prevent-windows-10-from-corrupting-the-ext4-superblock-every-time</a><br>Windows を再起動した後にUbuntu 16.10 やUbuntu 17.04 が起動しなくなってしまいました。Ubuntu 16.04 は問題無かったので不思議に思っていたところ原因がわかりました。</p>
@@ -9372,28 +9394,6 @@ $ sudo apt-get install cardapio
       <tags>
         <tag>windows</tag>
         <tag>ext2fsd</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Set Windows clock to UTC time</title>
-    <url>/2017/04/29/Set-Windows-clock-to-UTC-time/</url>
-    <content><![CDATA[<p>Linux はハードウェアクロックの値をUTC と解釈して動作するのがデフォルトです。<br>Windows はハードウェアクロックの値をローカルタイムと解釈するので、Windowsをブートする度に時計が9時間ずれて表示されてしまいます。<br>デュアルブート構成のLinux とWindows の時計が正しく表示されるように設定を追加しました。</p>
-<span id="more"></span>
-
-<h2 id="Windows-レジストリの追加"><a href="#Windows-レジストリの追加" class="headerlink" title="Windows レジストリの追加"></a>Windows レジストリの追加</h2><ol>
-<li><p>コマンドプロンプトを管理者として実行</p>
-</li>
-<li><p>レジストリエントリの追加</p>
-</li>
-</ol>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">&gt; reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d <span class="number">1</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>system</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>utc</tag>
       </tags>
   </entry>
   <entry>
@@ -10870,7 +10870,7 @@ merge newbranch</pre>
     <url>/2019/06/26/Hexo-Tag-Google-Charts/</url>
     <content><![CDATA[<p><a href="https://github.com/juampi92/hexo-tag-googlecharts">https://github.com/juampi92/hexo-tag-googlecharts</a><br><a href="https://developers.google.com/chart/interactive/docs/gallery">https://developers.google.com/chart/interactive/docs/gallery</a><br>hexo-tag-googlecharts を使ってチャートを表示してみました。</p>
 <p>Google Charts を直接Javascript から使うよりも簡単に利用できて便利です。<br>カスタマイズに少しコツが必要なのでよく使う構成をテンプレートとして作っておくとよさそうです。</p>
-<div id="googleChart60"></div>
+<div id="googleChart5251"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10879,7 +10879,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.LineChart(document.getElementById("googleChart60"))).draw(google.visualization.arrayToDataTable([['Date', 'Druid', 'Death Knight', 'Monk', 'Demon Hunter', 'Mage', 'Warlock', 'Shaman'],[new Date('2019/03/21'), 376, 378, 371, 373, 376, 377, 372],[new Date('2019/03/25'), 377, 378, 374, 374, 376, 378, 374],[new Date('2019/03/31'), 377, 380, 376, 375, 376, 378, 375],[new Date('2019/04/05'), 378, 382, 378, 376, 377, 380, 376],[new Date('2019/04/07'), 380, 383, 379, 376, 378, 381, 378],[new Date('2019/04/20'), 382, 384, 382, 377, 379, 383, 379],[new Date('2019/04/27'), 383, 385, 383, 379, 379, 384, 380],[new Date('2019/04/28'), 384, 385, 383, 379, 379, 387, 381],[new Date('2019/04/29'), 385, 385, 383, 380, 380, 388, 381],[new Date('2019/05/06'), 388, 388, 387, 383, 383, 389, 386],[new Date('2019/05/13'), 392, 391, 388, 386, 386, 391, 390],[new Date('2019/05/19'), 394, 392, 390, 388, 387, 392, 391],[new Date('2019/06/09'), 398, 394, 392, 391, 389, 395, 393],[new Date('2019/06/22'), 399, 397, 395, 394, 394, 398, 396]]),{"hAxis":{"title":"Date","format":"M/d"},"vAxis":{"title":"iLevel","format":"#"},"pointSize":"10","series":[{"color":"#FF7D0A"},{"color":"#C41F3B"},{"color":"#00FF96"},{"color":"#A330C9"},{"color":"#40C7EB"},{"color":"#8787ED"},{"color":"#0070DE"}],"title":" ","width":"100%","height":"600"});
+        (new google.visualization.LineChart(document.getElementById("googleChart5251"))).draw(google.visualization.arrayToDataTable([['Date', 'Druid', 'Death Knight', 'Monk', 'Demon Hunter', 'Mage', 'Warlock', 'Shaman'],[new Date('2019/03/21'), 376, 378, 371, 373, 376, 377, 372],[new Date('2019/03/25'), 377, 378, 374, 374, 376, 378, 374],[new Date('2019/03/31'), 377, 380, 376, 375, 376, 378, 375],[new Date('2019/04/05'), 378, 382, 378, 376, 377, 380, 376],[new Date('2019/04/07'), 380, 383, 379, 376, 378, 381, 378],[new Date('2019/04/20'), 382, 384, 382, 377, 379, 383, 379],[new Date('2019/04/27'), 383, 385, 383, 379, 379, 384, 380],[new Date('2019/04/28'), 384, 385, 383, 379, 379, 387, 381],[new Date('2019/04/29'), 385, 385, 383, 380, 380, 388, 381],[new Date('2019/05/06'), 388, 388, 387, 383, 383, 389, 386],[new Date('2019/05/13'), 392, 391, 388, 386, 386, 391, 390],[new Date('2019/05/19'), 394, 392, 390, 388, 387, 392, 391],[new Date('2019/06/09'), 398, 394, 392, 391, 389, 395, 393],[new Date('2019/06/22'), 399, 397, 395, 394, 394, 398, 396]]),{"hAxis":{"title":"Date","format":"M/d"},"vAxis":{"title":"iLevel","format":"#"},"pointSize":"10","series":[{"color":"#FF7D0A"},{"color":"#C41F3B"},{"color":"#00FF96"},{"color":"#A330C9"},{"color":"#40C7EB"},{"color":"#8787ED"},{"color":"#0070DE"}],"title":" ","width":"100%","height":"600"});
       });
     })();
   }
@@ -10930,7 +10930,7 @@ merge newbranch</pre>
 
 <h3 id="Hexo-Tag-Google-Charts-の利用例"><a href="#Hexo-Tag-Google-Charts-の利用例" class="headerlink" title="Hexo Tag Google Charts の利用例"></a>Hexo Tag Google Charts の利用例</h3><p><a href="https://developers.google.com/chart/interactive/docs/gallery">https://developers.google.com/chart/interactive/docs/gallery</a><br>Chart Gallery の中でよく使いそうな例を移植してみました。</p>
 <h4 id="表-Table"><a href="#表-Table" class="headerlink" title="表(Table)"></a>表(Table)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/table">https://developers.google.com/chart/interactive/docs/gallery/table</a></p>
-<div id="googleChart8416"></div>
+<div id="googleChart4843"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10939,7 +10939,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart8416"))).draw(google.visualization.arrayToDataTable([['Name', 'Salary', 'Full Time Employee'],['Mike',  {v: 10000, f: '$10,000'}, true],['Jim',   {v:8000,   f: '$8,000'},  false],['Alice', {v: 12500, f: '$12,500'}, true],['Bob',   {v: 7000,  f: '$7,000'},  true]]),{"showRowNumber":true,"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart4843"))).draw(google.visualization.arrayToDataTable([['Name', 'Salary', 'Full Time Employee'],['Mike',  {v: 10000, f: '$10,000'}, true],['Jim',   {v:8000,   f: '$8,000'},  false],['Alice', {v: 12500, f: '$12,500'}, true],['Bob',   {v: 7000,  f: '$7,000'},  true]]),{"showRowNumber":true,"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -10947,7 +10947,7 @@ merge newbranch</pre>
 
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts Table 100% 100% %&#125;</span><br><span class="line"> </span><br><span class="line">&#123;&quot;showRowNumber&quot;: true&#125;</span><br><span class="line">&#x27;Name&#x27;, &#x27;Salary&#x27;, &#x27;Full Time Employee&#x27;</span><br><span class="line">&#x27;Mike&#x27;,  &#123;v: 10000, f: &#x27;$10,000&#x27;&#125;, true</span><br><span class="line">&#x27;Jim&#x27;,   &#123;v:8000,   f: &#x27;$8,000&#x27;&#125;,  false</span><br><span class="line">&#x27;Alice&#x27;, &#123;v: 12500, f: &#x27;$12,500&#x27;&#125;, true</span><br><span class="line">&#x27;Bob&#x27;,   &#123;v: 7000,  f: &#x27;$7,000&#x27;&#125;,  true</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="複合グラフ-ComboChart"><a href="#複合グラフ-ComboChart" class="headerlink" title="複合グラフ(ComboChart)"></a>複合グラフ(ComboChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/combochart">https://developers.google.com/chart/interactive/docs/gallery/combochart</a></p>
-<div id="googleChart1297"></div>
+<div id="googleChart4842"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10956,7 +10956,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.ComboChart(document.getElementById("googleChart1297"))).draw(google.visualization.arrayToDataTable([['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],['2004/05',  165,      938,         522,             998,           450,      614.6],['2005/06',  135,      1120,        599,             1268,          288,      682],['2006/07',  157,      1167,        587,             807,           397,      623],['2007/08',  139,      1110,        615,             968,           215,      609.4],['2008/09',  136,      691,         629,             1026,          366,      569.6]]),{"vAxis":{"title":"Cups"},"hAxis":{"title":"Month"},"seriesType":"bars","series":[{},{},{},{},{"type":"line"}],"title":"Monthly Coffee Production by Country","width":"900","height":"500"});
+        (new google.visualization.ComboChart(document.getElementById("googleChart4842"))).draw(google.visualization.arrayToDataTable([['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],['2004/05',  165,      938,         522,             998,           450,      614.6],['2005/06',  135,      1120,        599,             1268,          288,      682],['2006/07',  157,      1167,        587,             807,           397,      623],['2007/08',  139,      1110,        615,             968,           215,      609.4],['2008/09',  136,      691,         629,             1026,          366,      569.6]]),{"vAxis":{"title":"Cups"},"hAxis":{"title":"Month"},"seriesType":"bars","series":[{},{},{},{},{"type":"line"}],"title":"Monthly Coffee Production by Country","width":"900","height":"500"});
       });
     })();
   }
@@ -10965,7 +10965,7 @@ merge newbranch</pre>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts ComboChart 900 500 %&#125;</span><br><span class="line">Monthly Coffee Production by Country</span><br><span class="line">&#123;&quot;vAxis&quot;: &#123;&quot;title&quot;: &quot;Cups&quot;&#125;, &quot;hAxis&quot;: &#123;&quot;title&quot;: &quot;Month&quot;&#125;, &quot;seriesType&quot;: &quot;bars&quot;, &quot;series&quot;: [&#123;&#125;, &#123;&#125;, &#123;&#125;, &#123;&#125;, &#123;&quot;type&quot;: &quot;line&quot;&#125;]&#125;</span><br><span class="line">&#x27;Month&#x27;, &#x27;Bolivia&#x27;, &#x27;Ecuador&#x27;, &#x27;Madagascar&#x27;, &#x27;Papua New Guinea&#x27;, &#x27;Rwanda&#x27;, &#x27;Average&#x27;</span><br><span class="line">&#x27;2004/05&#x27;,  165,      938,         522,             998,           450,      614.6</span><br><span class="line">&#x27;2005/06&#x27;,  135,      1120,        599,             1268,          288,      682</span><br><span class="line">&#x27;2006/07&#x27;,  157,      1167,        587,             807,           397,      623</span><br><span class="line">&#x27;2007/08&#x27;,  139,      1110,        615,             968,           215,      609.4</span><br><span class="line">&#x27;2008/09&#x27;,  136,      691,         629,             1026,          366,      569.6</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/piechart">https://developers.google.com/chart/interactive/docs/gallery/piechart</a></p>
-<div id="googleChart8136"></div>
+<div id="googleChart2871"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10974,7 +10974,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.PieChart(document.getElementById("googleChart8136"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"title":"My Daily Activities","width":"100%","height":400});
+        (new google.visualization.PieChart(document.getElementById("googleChart2871"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"title":"My Daily Activities","width":"100%","height":400});
       });
     })();
   }
@@ -10983,7 +10983,7 @@ merge newbranch</pre>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts PieChart 100% %&#125;</span><br><span class="line">My Daily Activities</span><br><span class="line">&#123;&quot;is3D&quot;: true&#125;</span><br><span class="line">&#x27;Task&#x27;, &#x27;Hours per Day&#x27;</span><br><span class="line">&#x27;Work&#x27;,     11</span><br><span class="line">&#x27;Eat&#x27;,      2</span><br><span class="line">&#x27;Commute&#x27;,  2</span><br><span class="line">&#x27;Watch TV&#x27;, 2</span><br><span class="line">&#x27;Sleep&#x27;,    7</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="地図-GeoChart"><a href="#地図-GeoChart" class="headerlink" title="地図(GeoChart)"></a>地図(GeoChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">https://developers.google.com/chart/interactive/docs/gallery/geochart</a></p>
-<div id="googleChart5643"></div>
+<div id="googleChart6829"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10992,7 +10992,7 @@ merge newbranch</pre>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.GeoChart(document.getElementById("googleChart5643"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":" ","width":"900","height":"500"});
+        (new google.visualization.GeoChart(document.getElementById("googleChart6829"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":" ","width":"900","height":"500"});
       });
     })();
   }
@@ -11291,6 +11291,50 @@ merge newbranch</pre>
       </tags>
   </entry>
   <entry>
+    <title>Docker RPi4 ImageBuilder</title>
+    <url>/2019/08/04/Docker-RPi4-ImageBuilder/</url>
+    <content><![CDATA[<p><img src="/images/rpi4-aarch64.png" alt="rpi4 aarch64"><br><a href="https://github.com/satmandu/docker-rpi4-imagebuilder">https://github.com/satmandu/docker-rpi4-imagebuilder</a></p>
+<p>RPi4 64bit 用のUbuntu Server イメージを作成する環境を構築してみました。</p>
+<h4 id="Update-2019-08-05-aarch64-でメモリ4GB-起動しました！"><a href="#Update-2019-08-05-aarch64-でメモリ4GB-起動しました！" class="headerlink" title="Update: 2019-08-05 aarch64 でメモリ4GB 起動しました！"></a><strong>Update:</strong> 2019-08-05 aarch64 でメモリ4GB 起動しました！</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ubuntu@ubuntu:~$ <span class="built_in">uname</span> -a</span><br><span class="line">Linux ubuntu 4.19.63-v8-gdee436110 <span class="comment">#1 SMP PREEMPT Sun Aug 4 05:51:39 UTC 2019 aarch64 aarch64 aarch64 GNU/Linux</span></span><br><span class="line">ubuntu@ubuntu:~$ <span class="built_in">cat</span> /etc/lsb-release </span><br><span class="line">DISTRIB_ID=Ubuntu</span><br><span class="line">DISTRIB_RELEASE=19.10</span><br><span class="line">DISTRIB_CODENAME=eoan</span><br><span class="line">DISTRIB_DESCRIPTION=<span class="string">&quot;Ubuntu Eoan Ermine (development branch)&quot;</span></span><br><span class="line">ubuntu@ubuntu:~$ free -m -h</span><br><span class="line">              total        used        free      shared  buff/cache   available</span><br><span class="line">Mem:          3.7Gi       112Mi       3.4Gi       2.0Mi       204Mi       3.6Gi</span><br><span class="line">Swap:            0B          0B          0B</span><br></pre></td></tr></table></figure>
+
+<h4 id="Update-2019-08-15-aarch64-でメモリ4GB-とUSB-動作しました！"><a href="#Update-2019-08-15-aarch64-でメモリ4GB-とUSB-動作しました！" class="headerlink" title="Update: 2019-08-15 aarch64 でメモリ4GB とUSB 動作しました！"></a><strong>Update:</strong> 2019-08-15 aarch64 でメモリ4GB とUSB 動作しました！</h4><span id="more"></span>
+
+<h3 id="環境の準備"><a href="#環境の準備" class="headerlink" title="環境の準備"></a>環境の準備</h3><h4 id="ビルド環境の構成"><a href="#ビルド環境の構成" class="headerlink" title="ビルド環境の構成"></a>ビルド環境の構成</h4><ul>
+<li>ホストOS: Windows 10 Pro Insider Preview 1903</li>
+<li>ゲストOS: Ubuntu Server 19.10 x86_64<br><a href="http://cdimage.ubuntu.com/ubuntu-server/daily-live/current/eoan-live-server-amd64.iso">http://cdimage.ubuntu.com/ubuntu-server/daily-live/current/eoan-live-server-amd64.iso</a></li>
+</ul>
+<h4 id="ゲストOS-にDocker-をインストール"><a href="#ゲストOS-にDocker-をインストール" class="headerlink" title="ゲストOS にDocker をインストール"></a>ゲストOS にDocker をインストール</h4><ul>
+<li>Docker をインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/etc/apt/sources.list.d/docker.list</span></figcaption><table><tr><td class="code"><pre><span class="line">deb [arch=amd64] https://download.docker.com/linux/ubuntu disco stable</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install docker-ce qemu-user-static</span><br><span class="line">$ docker --version</span><br><span class="line">Docker version 19.03.1, build 74b1e89</span><br><span class="line">$ sudo usermod -aG docker <span class="variable">$USER</span></span><br><span class="line">$ sudo reboot</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="起動用SD-カードの作成"><a href="#起動用SD-カードの作成" class="headerlink" title="起動用SD カードの作成"></a>起動用SD カードの作成</h3><h4 id="イメージの作成"><a href="#イメージの作成" class="headerlink" title="イメージの作成"></a>イメージの作成</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> ~/rpi4-build</span><br><span class="line">$ <span class="built_in">cd</span> ~/rpi4-build</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/satmandu/docker-rpi4-imagebuilder</span><br><span class="line">$ <span class="built_in">cd</span> docker-rpi4-imagebuilder</span><br><span class="line">$ docker build -t docker-rpi4-imagebuilder:19.10 -f Dockerfile-ubuntu-19.10 .</span><br><span class="line">$ <span class="built_in">mkdir</span> output</span><br><span class="line">$ git pull ; NOXZ=1 time ./build-image -i docker-rpi4-imagebuilder:19.10 -o output .</span><br><span class="line">$ <span class="built_in">ls</span> -og output/</span><br><span class="line">total 2351720</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 andrei_gherzan_uboot_fork.git.log</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 armstub8-gic.git.log</span><br><span class="line">-rw-r--r-- 1      24335 Aug  4 06:49 build-log-08_04_2019_0544UTC.<span class="built_in">log</span></span><br><span class="line">-rw-r--r-- 1      23572 Aug  4 08:16 build-log-08_04_2019_0811UTC.<span class="built_in">log</span></span><br><span class="line">-rw-r--r-- 1  952065544 Aug  4 06:49 eoan-preinstalled-server-arm64+raspi4-08_04_2019_0544UTC.img.lz4</span><br><span class="line">-rw-r--r-- 1 1426237866 Aug  4 08:16 eoan-preinstalled-server-arm64+raspi4-08_04_2019_0811UTC.img.lz4</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 kernelbuild_setup.git.log</span><br><span class="line">-rw-r--r-- 1   10759680 Aug  4 08:13 linux-headers-4.19.63-v8-gdee436110_4.19.63-v8-gdee436110-1_arm64.deb</span><br><span class="line">-rw-r--r-- 1   19012932 Aug  4 08:13 linux-image-4.19.63-v8-gdee436110_4.19.63-v8-gdee436110-1_arm64.deb</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 non-free_firmware.git.log</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 rpi_firmware.git.log</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 rpi_userland.git.log</span><br></pre></td></tr></table></figure>
+
+<p>.xz にしたい場合は<code>NOXZ=1</code>の指定を外す。<br>イメージは小さくなるが、圧縮に時間がかかるらしい。</p>
+<h4 id="ログの確認とリビルド"><a href="#ログの確認とリビルド" class="headerlink" title="ログの確認とリビルド"></a>ログの確認とリビルド</h4><p><code>./output/build-log-*.log</code> でエラーが出力されていたらリビルド</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git pull ; NOXZ=1 time ./build-image -i docker-rpi4-imagebuilder:19.10 -o output .</span><br></pre></td></tr></table></figure>
+
+<h4 id="SD-カードへ書き込み"><a href="#SD-カードへ書き込み" class="headerlink" title="SD カードへ書き込み"></a>SD カードへ書き込み</h4><p><code>sdX</code> をSD カードのデバイスに置換して実行します。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install lz4</span><br><span class="line">$ lz4cat eoan-preinstalled-server-arm64+raspi4-MM-DD-YYYY_hhmmUTC.img.lz4 | sudo <span class="built_in">dd</span> of=/dev/sdX bs=32M</span><br></pre></td></tr></table></figure>
+
+<h3 id="カーネルのカスタマイズ"><a href="#カーネルのカスタマイズ" class="headerlink" title="カーネルのカスタマイズ"></a>カーネルのカスタマイズ</h3><p>3種類のカスタマイズ方法が用意されてします。</p>
+<ul>
+<li><p>RAM: 1GB, USB: Works</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> /boot/firmware/uboot.bin /boot/firmware/kernel8.img ; sudo reboot</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RAM: 4GB, USB: No</p>
+<figure class="highlight text"><figcaption><span>/boot/firmware/config.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">#total_mem=3072</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> /boot/firmware/kernel8.img.nouboot /boot/firmware/kernel8.img ; sudo reboot</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RAM: 3GB, USB: Works [現在のデフォルト]</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> /boot/firmware/kernel8.img.nouboot /boot/firmware/kernel8.img ; [ `grep -cs <span class="string">&quot;total_mem=&quot;</span> /boot/firmware/config.txt` -gt 0 ] &amp;&amp; sudo sed <span class="string">&#x27;s/total_mem=*$/total_mem=3072/&#x27;</span> /boot/firmware/config.txt || <span class="built_in">echo</span> <span class="string">&quot;total_mem=3072&quot;</span> | sudo <span class="built_in">tee</span> -a /boot/firmware/config.txt</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>raspberry-pi</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>RPi4 - Ubuntu Server 19.10 64bit</title>
     <url>/2019/08/07/Raspberry-Pi-4B-Ubuntu-Server-19-10-64bit/</url>
     <content><![CDATA[<p><img src="/images/ubuntu-portainer-rpi4.png" alt="ubuntu portainer rpi4"><br>Raspberry Pi 4B でUbuntu Server 64bit が起動するようになったので環境設定をします。</p>
@@ -11377,7 +11421,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li><code>Add Environment</code></li>
 </ol>
 <ul>
-<li>GIT_USER_EMAIL<br><a href="mailto:&#x68;&#111;&#x67;&#101;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;">&#x68;&#111;&#x67;&#101;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;</a></li>
+<li>GIT_USER_EMAIL<br><a href="mailto:&#x68;&#111;&#103;&#x65;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#x68;&#111;&#103;&#x65;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a></li>
 </ul>
 <ol start="5">
 <li><code>Create the template</code></li>
@@ -11402,50 +11446,6 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
         <tag>raspberry-pi</tag>
         <tag>hexo</tag>
         <tag>portainer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker RPi4 ImageBuilder</title>
-    <url>/2019/08/04/Docker-RPi4-ImageBuilder/</url>
-    <content><![CDATA[<p><img src="/images/rpi4-aarch64.png" alt="rpi4 aarch64"><br><a href="https://github.com/satmandu/docker-rpi4-imagebuilder">https://github.com/satmandu/docker-rpi4-imagebuilder</a></p>
-<p>RPi4 64bit 用のUbuntu Server イメージを作成する環境を構築してみました。</p>
-<h4 id="Update-2019-08-05-aarch64-でメモリ4GB-起動しました！"><a href="#Update-2019-08-05-aarch64-でメモリ4GB-起動しました！" class="headerlink" title="Update: 2019-08-05 aarch64 でメモリ4GB 起動しました！"></a><strong>Update:</strong> 2019-08-05 aarch64 でメモリ4GB 起動しました！</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ubuntu@ubuntu:~$ <span class="built_in">uname</span> -a</span><br><span class="line">Linux ubuntu 4.19.63-v8-gdee436110 <span class="comment">#1 SMP PREEMPT Sun Aug 4 05:51:39 UTC 2019 aarch64 aarch64 aarch64 GNU/Linux</span></span><br><span class="line">ubuntu@ubuntu:~$ <span class="built_in">cat</span> /etc/lsb-release </span><br><span class="line">DISTRIB_ID=Ubuntu</span><br><span class="line">DISTRIB_RELEASE=19.10</span><br><span class="line">DISTRIB_CODENAME=eoan</span><br><span class="line">DISTRIB_DESCRIPTION=<span class="string">&quot;Ubuntu Eoan Ermine (development branch)&quot;</span></span><br><span class="line">ubuntu@ubuntu:~$ free -m -h</span><br><span class="line">              total        used        free      shared  buff/cache   available</span><br><span class="line">Mem:          3.7Gi       112Mi       3.4Gi       2.0Mi       204Mi       3.6Gi</span><br><span class="line">Swap:            0B          0B          0B</span><br></pre></td></tr></table></figure>
-
-<h4 id="Update-2019-08-15-aarch64-でメモリ4GB-とUSB-動作しました！"><a href="#Update-2019-08-15-aarch64-でメモリ4GB-とUSB-動作しました！" class="headerlink" title="Update: 2019-08-15 aarch64 でメモリ4GB とUSB 動作しました！"></a><strong>Update:</strong> 2019-08-15 aarch64 でメモリ4GB とUSB 動作しました！</h4><span id="more"></span>
-
-<h3 id="環境の準備"><a href="#環境の準備" class="headerlink" title="環境の準備"></a>環境の準備</h3><h4 id="ビルド環境の構成"><a href="#ビルド環境の構成" class="headerlink" title="ビルド環境の構成"></a>ビルド環境の構成</h4><ul>
-<li>ホストOS: Windows 10 Pro Insider Preview 1903</li>
-<li>ゲストOS: Ubuntu Server 19.10 x86_64<br><a href="http://cdimage.ubuntu.com/ubuntu-server/daily-live/current/eoan-live-server-amd64.iso">http://cdimage.ubuntu.com/ubuntu-server/daily-live/current/eoan-live-server-amd64.iso</a></li>
-</ul>
-<h4 id="ゲストOS-にDocker-をインストール"><a href="#ゲストOS-にDocker-をインストール" class="headerlink" title="ゲストOS にDocker をインストール"></a>ゲストOS にDocker をインストール</h4><ul>
-<li>Docker をインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
-<figure class="highlight text"><figcaption><span>/etc/apt/sources.list.d/docker.list</span></figcaption><table><tr><td class="code"><pre><span class="line">deb [arch=amd64] https://download.docker.com/linux/ubuntu disco stable</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install docker-ce qemu-user-static</span><br><span class="line">$ docker --version</span><br><span class="line">Docker version 19.03.1, build 74b1e89</span><br><span class="line">$ sudo usermod -aG docker <span class="variable">$USER</span></span><br><span class="line">$ sudo reboot</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="起動用SD-カードの作成"><a href="#起動用SD-カードの作成" class="headerlink" title="起動用SD カードの作成"></a>起動用SD カードの作成</h3><h4 id="イメージの作成"><a href="#イメージの作成" class="headerlink" title="イメージの作成"></a>イメージの作成</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> ~/rpi4-build</span><br><span class="line">$ <span class="built_in">cd</span> ~/rpi4-build</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/satmandu/docker-rpi4-imagebuilder</span><br><span class="line">$ <span class="built_in">cd</span> docker-rpi4-imagebuilder</span><br><span class="line">$ docker build -t docker-rpi4-imagebuilder:19.10 -f Dockerfile-ubuntu-19.10 .</span><br><span class="line">$ <span class="built_in">mkdir</span> output</span><br><span class="line">$ git pull ; NOXZ=1 time ./build-image -i docker-rpi4-imagebuilder:19.10 -o output .</span><br><span class="line">$ <span class="built_in">ls</span> -og output/</span><br><span class="line">total 2351720</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 andrei_gherzan_uboot_fork.git.log</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 armstub8-gic.git.log</span><br><span class="line">-rw-r--r-- 1      24335 Aug  4 06:49 build-log-08_04_2019_0544UTC.<span class="built_in">log</span></span><br><span class="line">-rw-r--r-- 1      23572 Aug  4 08:16 build-log-08_04_2019_0811UTC.<span class="built_in">log</span></span><br><span class="line">-rw-r--r-- 1  952065544 Aug  4 06:49 eoan-preinstalled-server-arm64+raspi4-08_04_2019_0544UTC.img.lz4</span><br><span class="line">-rw-r--r-- 1 1426237866 Aug  4 08:16 eoan-preinstalled-server-arm64+raspi4-08_04_2019_0811UTC.img.lz4</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 kernelbuild_setup.git.log</span><br><span class="line">-rw-r--r-- 1   10759680 Aug  4 08:13 linux-headers-4.19.63-v8-gdee436110_4.19.63-v8-gdee436110-1_arm64.deb</span><br><span class="line">-rw-r--r-- 1   19012932 Aug  4 08:13 linux-image-4.19.63-v8-gdee436110_4.19.63-v8-gdee436110-1_arm64.deb</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 non-free_firmware.git.log</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 rpi_firmware.git.log</span><br><span class="line">-rw-r--r-- 1        788 Aug  4 05:42 rpi_userland.git.log</span><br></pre></td></tr></table></figure>
-
-<p>.xz にしたい場合は<code>NOXZ=1</code>の指定を外す。<br>イメージは小さくなるが、圧縮に時間がかかるらしい。</p>
-<h4 id="ログの確認とリビルド"><a href="#ログの確認とリビルド" class="headerlink" title="ログの確認とリビルド"></a>ログの確認とリビルド</h4><p><code>./output/build-log-*.log</code> でエラーが出力されていたらリビルド</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git pull ; NOXZ=1 time ./build-image -i docker-rpi4-imagebuilder:19.10 -o output .</span><br></pre></td></tr></table></figure>
-
-<h4 id="SD-カードへ書き込み"><a href="#SD-カードへ書き込み" class="headerlink" title="SD カードへ書き込み"></a>SD カードへ書き込み</h4><p><code>sdX</code> をSD カードのデバイスに置換して実行します。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install lz4</span><br><span class="line">$ lz4cat eoan-preinstalled-server-arm64+raspi4-MM-DD-YYYY_hhmmUTC.img.lz4 | sudo <span class="built_in">dd</span> of=/dev/sdX bs=32M</span><br></pre></td></tr></table></figure>
-
-<h3 id="カーネルのカスタマイズ"><a href="#カーネルのカスタマイズ" class="headerlink" title="カーネルのカスタマイズ"></a>カーネルのカスタマイズ</h3><p>3種類のカスタマイズ方法が用意されてします。</p>
-<ul>
-<li><p>RAM: 1GB, USB: Works</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> /boot/firmware/uboot.bin /boot/firmware/kernel8.img ; sudo reboot</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>RAM: 4GB, USB: No</p>
-<figure class="highlight text"><figcaption><span>/boot/firmware/config.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">#total_mem=3072</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> /boot/firmware/kernel8.img.nouboot /boot/firmware/kernel8.img ; sudo reboot</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>RAM: 3GB, USB: Works [現在のデフォルト]</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="built_in">cp</span> /boot/firmware/kernel8.img.nouboot /boot/firmware/kernel8.img ; [ `grep -cs <span class="string">&quot;total_mem=&quot;</span> /boot/firmware/config.txt` -gt 0 ] &amp;&amp; sudo sed <span class="string">&#x27;s/total_mem=*$/total_mem=3072/&#x27;</span> /boot/firmware/config.txt || <span class="built_in">echo</span> <span class="string">&quot;total_mem=3072&quot;</span> | sudo <span class="built_in">tee</span> -a /boot/firmware/config.txt</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>raspberry-pi</tag>
       </tags>
   </entry>
   <entry>
@@ -12089,7 +12089,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 </ul>
 </li>
 </ul>
-<h4 id="ネットワーク"><a href="#ネットワーク" class="headerlink" title="ネットワーク"></a>ネットワーク</h4><div id="googleChart394"></div>
+<h4 id="ネットワーク"><a href="#ネットワーク" class="headerlink" title="ネットワーク"></a>ネットワーク</h4><div id="googleChart5457"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12098,7 +12098,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.OrgChart(document.getElementById("googleChart394"))).draw(google.visualization.arrayToDataTable([['Name', 'Manager', 'ToolTip'],['Router#1', '', ''],['<b  style="white-space: nowrap"><i class="fas fa-tv"></i>Client</b>', 'Router#1', ''],['<u style="white-space: nowrap">Windows 10</u>', 'Router#1', ''],['VirtualBox', '<u style="white-space: nowrap">Windows 10</u>', ''],['<u>UbuntuDDE</u>', 'VirtualBox', ''],['<u>Deepin</u>', 'VirtualBox', ''],['<u>WSL2</u>', '<u style="white-space: nowrap">Windows 10</u>', ''],['Router#2', 'Router#1', ''],['<u style="white-space: nowrap">Raspberry Pi 2</u>', 'Router#2', ''],['<u style="white-space: nowrap">Raspberry Pi 4</u>', 'Router#2', '']]),{"allowHtml":true,"title":" ","width":400,"height":400});
+        (new google.visualization.OrgChart(document.getElementById("googleChart5457"))).draw(google.visualization.arrayToDataTable([['Name', 'Manager', 'ToolTip'],['Router#1', '', ''],['<b  style="white-space: nowrap"><i class="fas fa-tv"></i>Client</b>', 'Router#1', ''],['<u style="white-space: nowrap">Windows 10</u>', 'Router#1', ''],['VirtualBox', '<u style="white-space: nowrap">Windows 10</u>', ''],['<u>UbuntuDDE</u>', 'VirtualBox', ''],['<u>Deepin</u>', 'VirtualBox', ''],['<u>WSL2</u>', '<u style="white-space: nowrap">Windows 10</u>', ''],['Router#2', 'Router#1', ''],['<u style="white-space: nowrap">Raspberry Pi 2</u>', 'Router#2', ''],['<u style="white-space: nowrap">Raspberry Pi 4</u>', 'Router#2', '']]),{"allowHtml":true,"title":" ","width":400,"height":400});
       });
     })();
   }
@@ -12245,7 +12245,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     <title>Sharing Folders for VMs</title>
     <url>/2020/05/08/Sharing-Folders-for-VMs/</url>
     <content><![CDATA[<p>ホストOS(Windows 10) のフォルダをゲストOS(Linux)と共有してみました。</p>
-<div id="googleChart6444"></div>
+<div id="googleChart6408"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12254,7 +12254,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart6444"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart6408"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12413,7 +12413,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>node_attr</li>
 <li>edge_attr</li>
 </ul>
-<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart5862"></div>
+<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart3202"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12422,7 +12422,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.PieChart(document.getElementById("googleChart5862"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
+        (new google.visualization.PieChart(document.getElementById("googleChart3202"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
       });
     })();
   }
@@ -12813,7 +12813,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>新しいスプレッドシートを作成「空白」を選択</li>
 <li>データの登録</li>
 </ol>
-  <div id="googleChart3651"></div>
+  <div id="googleChart6028"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12822,7 +12822,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart3651"))).draw(google.visualization.arrayToDataTable([['カラム', '1行目', '2行目以降の内容例'],['A', 'region',  'us'],['B', 'id1', '111 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['C', 'id2', '222222 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['D', 'realm', 'Blackrock'],['E', 'faction', 'Horde'],['F', 'name', 'Name01'],['G', 'race', 'vulpera'],['H', 'gender', 'male'],['I', 'class', 'Priest'],['J', 'title', 'the Explorer'],['K', 'spec', 'Shadow'],['L', 'guild', 'guild01'],['M', 'level', '120'],['N', 'achievement', '10000'],['O', 'ilevel', '433'],['P', 'url_profile', '="https://worldofwarcraft.com/en-us/character/"&A2&"/"&D2&"/"&F2'],['Q', 'url_avator', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-avatar.jpg"'],['R', 'url_inset', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-inset.jpg"'],['S', 'url_main', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-main.jpg"'],['T', 'url_wowhead', '="https://www.wowhead.com/"&SUBSTITUTE(K2, " ", "-")&"-"&SUBSTITUTE(I2, " ", "-")&"-guide"']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart6028"))).draw(google.visualization.arrayToDataTable([['カラム', '1行目', '2行目以降の内容例'],['A', 'region',  'us'],['B', 'id1', '111 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['C', 'id2', '222222 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['D', 'realm', 'Blackrock'],['E', 'faction', 'Horde'],['F', 'name', 'Name01'],['G', 'race', 'vulpera'],['H', 'gender', 'male'],['I', 'class', 'Priest'],['J', 'title', 'the Explorer'],['K', 'spec', 'Shadow'],['L', 'guild', 'guild01'],['M', 'level', '120'],['N', 'achievement', '10000'],['O', 'ilevel', '433'],['P', 'url_profile', '="https://worldofwarcraft.com/en-us/character/"&A2&"/"&D2&"/"&F2'],['Q', 'url_avator', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-avatar.jpg"'],['R', 'url_inset', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-inset.jpg"'],['S', 'url_main', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-main.jpg"'],['T', 'url_wowhead', '="https://www.wowhead.com/"&SUBSTITUTE(K2, " ", "-")&"-"&SUBSTITUTE(I2, " ", "-")&"-guide"']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12839,7 +12839,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>Google スプレッドシートのURL を貼り付け</li>
 <li>Customize UI の設定</li>
 </ol>
-  <div id="googleChart7599"></div>
+  <div id="googleChart4104"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12848,7 +12848,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart7599"))).draw(google.visualization.arrayToDataTable([['項目', '値'],['Page Title',  'Champions'],['Page Description', 'from World of Warcraft Armory'],['Select Container', 'Responsive Grid を選択'],['Select Item', 'Media Card を選択']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart4104"))).draw(google.visualization.arrayToDataTable([['項目', '値'],['Page Title',  'Champions'],['Page Description', 'from World of Warcraft Armory'],['Select Container', 'Responsive Grid を選択'],['Select Item', 'Media Card を選択']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12857,7 +12857,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <ol start="5">
 <li>Configure Content の設定</li>
 </ol>
-  <div id="googleChart2868"></div>
+  <div id="googleChart5455"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12866,7 +12866,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart2868"))).draw(google.visualization.arrayToDataTable([['カテゴリ', '項目', '値'],['Image', 'Source', '\{\{url_inset}}'],['', 'Title', ''],['', 'Image Height', '250'],['Title',  'Title',  '\{\{name}}'],['Description', 'Description', '\{\{level}} \{\{race}} \{\{spec}} \{\{class}} <\{\{guild}}> \{\{realm}}'],['Primary Button', 'Caption', 'ARMORY'],['', 'Link', '\{\{url_profile}}'],['Secondary Button', 'Caption', 'GUIDE'],['', 'Link', '\{\{url_wowhead}}']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart5455"))).draw(google.visualization.arrayToDataTable([['カテゴリ', '項目', '値'],['Image', 'Source', '\{\{url_inset}}'],['', 'Title', ''],['', 'Image Height', '250'],['Title',  'Title',  '\{\{name}}'],['Description', 'Description', '\{\{level}} \{\{race}} \{\{spec}} \{\{class}} <\{\{guild}}> \{\{realm}}'],['Primary Button', 'Caption', 'ARMORY'],['', 'Link', '\{\{url_profile}}'],['Secondary Button', 'Caption', 'GUIDE'],['', 'Link', '\{\{url_wowhead}}']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12914,7 +12914,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 </ul>
 </li>
 <li><p>ディレクトリ配置</p>
-<div id="googleChart4399"></div>
+<div id="googleChart1741"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12923,7 +12923,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart4399"))).draw(google.visualization.arrayToDataTable([['環境', '項目', 'パス'],['WSL (Ubuntu)', 'mirakurun コマンド', '/usr/loca/bin/mirakurun'],['', 'mirakurun 設定', '/usr/local/etc/mirakurun/'],['', 'mirakurun ログ', '/usr/local/var/log/'],['', 'mirakurun データ', '/usr/local/var/db/mirakurun/'],['', 'mirakurun プロセス', '/usr/local/var/run/'],['', 'EPGStation 環境', '$HOME/EPGStation/'],['', 'EPGStation の設定', '$HOME/EPGStation/config/'],['', 'EPGStation の録画保存先', '/mnt/j/home/epgstation/'],['', 'シェルスクリプト', '$HOME/bin/'],['Windows 10', 'BonRecTest', 'C:\\tools\\PT3\\']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart1741"))).draw(google.visualization.arrayToDataTable([['環境', '項目', 'パス'],['WSL (Ubuntu)', 'mirakurun コマンド', '/usr/loca/bin/mirakurun'],['', 'mirakurun 設定', '/usr/local/etc/mirakurun/'],['', 'mirakurun ログ', '/usr/local/var/log/'],['', 'mirakurun データ', '/usr/local/var/db/mirakurun/'],['', 'mirakurun プロセス', '/usr/local/var/run/'],['', 'EPGStation 環境', '$HOME/EPGStation/'],['', 'EPGStation の設定', '$HOME/EPGStation/config/'],['', 'EPGStation の録画保存先', '/mnt/j/home/epgstation/'],['', 'シェルスクリプト', '$HOME/bin/'],['Windows 10', 'BonRecTest', 'C:\\tools\\PT3\\']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -14409,39 +14409,6 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3>]]></content>
   </entry>
   <entry>
-    <title>Slidev</title>
-    <url>/2021/12/19/Slidev/</url>
-    <content><![CDATA[<p><a href="https://sli.dev/">https://sli.dev/</a><br><a href="https://github.com/slidevjs/slidev">https://github.com/slidevjs/slidev</a><br>Slidev でスライドを作成してみました。</p>
-<span id="more"></span>
-
-<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
-<li>Windows 10 Pro</li>
-<li>node v14.60.0</li>
-</ul>
-<h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><ul>
-<li>NTFS 上にプロジェクトを配置するのであれば、Windows のnode を利用するのがよいかもしれない。WSL のnode ではファイルの更新がうまく検知されないみたい。</li>
-<li><code>npm init slidev</code> でプロジェクトを作成するとnode_modules フォルダで260MB消費された。プロジェクトは一つだけにした方がよさそう。</li>
-<li>生成された<code>slides.md</code> は使用せず、このフォルダ下にスライド群(.md)を作っていくのがよいかもしれない。</li>
-<li>PDF にエクスポートするには<code>npm i -D playwright-chromium</code>しておく。<br><code>npx slidev export slidev-test.md</code>すると、<code>slidev-test-export.pdf</code>が生成される。</li>
-<li>ローカル画像は<code>public</code>フォルダ下に配置する。<code>/hoge.png</code>で参照する。</li>
-</ul>
-<h3 id="マークダウンの例（作成中）"><a href="#マークダウンの例（作成中）" class="headerlink" title="マークダウンの例（作成中）"></a>マークダウンの例（作成中）</h3><ul>
-<li><a href="/images/slidev-test.md">slidev-test.md</a></li>
-</ul>
-<h3 id="スライド例"><a href="#スライド例" class="headerlink" title="スライド例"></a>スライド例</h3>
-
-	<div class="row">
-    <embed src="/images/slidev-test-export.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <tags>
-        <tag>markdown</tag>
-        <tag>slidev</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Development Environment on WSL</title>
     <url>/2022/02/08/Develop-Environment-on-WSL/</url>
     <content><![CDATA[<p><img src="/images/wsl-dev.png"><br><a href="https://github.com/coder/code-server">https://github.com/coder/code-server</a></p>
@@ -14573,6 +14540,39 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
       <tags>
         <tag>wsl</tag>
         <tag>code-server</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Slidev</title>
+    <url>/2021/12/19/Slidev/</url>
+    <content><![CDATA[<p><a href="https://sli.dev/">https://sli.dev/</a><br><a href="https://github.com/slidevjs/slidev">https://github.com/slidevjs/slidev</a><br>Slidev でスライドを作成してみました。</p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Windows 10 Pro</li>
+<li>node v14.60.0</li>
+</ul>
+<h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><ul>
+<li>NTFS 上にプロジェクトを配置するのであれば、Windows のnode を利用するのがよいかもしれない。WSL のnode ではファイルの更新がうまく検知されないみたい。</li>
+<li><code>npm init slidev</code> でプロジェクトを作成するとnode_modules フォルダで260MB消費された。プロジェクトは一つだけにした方がよさそう。</li>
+<li>生成された<code>slides.md</code> は使用せず、このフォルダ下にスライド群(.md)を作っていくのがよいかもしれない。</li>
+<li>PDF にエクスポートするには<code>npm i -D playwright-chromium</code>しておく。<br><code>npx slidev export slidev-test.md</code>すると、<code>slidev-test-export.pdf</code>が生成される。</li>
+<li>ローカル画像は<code>public</code>フォルダ下に配置する。<code>/hoge.png</code>で参照する。</li>
+</ul>
+<h3 id="マークダウンの例（作成中）"><a href="#マークダウンの例（作成中）" class="headerlink" title="マークダウンの例（作成中）"></a>マークダウンの例（作成中）</h3><ul>
+<li><a href="/images/slidev-test.md">slidev-test.md</a></li>
+</ul>
+<h3 id="スライド例"><a href="#スライド例" class="headerlink" title="スライド例"></a>スライド例</h3>
+
+	<div class="row">
+    <embed src="/images/slidev-test-export.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <tags>
+        <tag>markdown</tag>
+        <tag>slidev</tag>
       </tags>
   </entry>
   <entry>
@@ -15676,7 +15676,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>A: Windows 11 Home</li>
 <li>B: Ubuntu 23.04</li>
 </ul>
-<h4 id="💻本体確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#💻本体確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart6700"></div>
+<h4 id="💻本体確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#💻本体確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart9032"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15685,13 +15685,13 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart6700"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['CPU', 'Intel Alder Lake-N100', "✔", "✔"],['メモリ', '12GB (LPDDR5)', "✔", "✔"],['ストレージ', '512GB (NVMe SSD)', "✔", "✔"],['内蔵ディスプレイ', 'IPS 10.51 inch 1920×1200', "✔", "✔"],['タッチスクリーン', '', "✔", "✔"],['タッチパッド', '', "✔", "✔"],['キーボード/バックライト', '', "✔", "✔"],['Wi-Fi', 'Wi-Fi 6', "✔", "✔"],['Bluetooth', 'Bluetooth 5.2', "✔", "✔"],['Audio Jack', '3.5mm (ステレオ)', "✔", "✔"],['内蔵スピーカ', '', "✔", "✔"],['内蔵マイク', '', "✔", "✔"],['内蔵カメラ', '', "✔", "✔"],['USB Port #1 (奥)', 'Type-C USB 3.0', "✔", "✔"],['USB Port #2 (手前)', 'Type-C USB 3.0', "✔", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart9032"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['CPU', 'Intel Alder Lake-N100', "✔", "✔"],['メモリ', '12GB (LPDDR5)', "✔", "✔"],['ストレージ', '512GB (NVMe SSD)', "✔", "✔"],['内蔵ディスプレイ', 'IPS 10.51 inch 1920×1200', "✔", "✔"],['タッチスクリーン', '', "✔", "✔"],['タッチパッド', '', "✔", "✔"],['キーボード/バックライト', '', "✔", "✔"],['Wi-Fi', 'Wi-Fi 6', "✔", "✔"],['Bluetooth', 'Bluetooth 5.2', "✔", "✔"],['Audio Jack', '3.5mm (ステレオ)', "✔", "✔"],['内蔵スピーカ', '', "✔", "✔"],['内蔵マイク', '', "✔", "✔"],['内蔵カメラ', '', "✔", "✔"],['USB Port #1 (奥)', 'Type-C USB 3.0', "✔", "✔"],['USB Port #2 (手前)', 'Type-C USB 3.0', "✔", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
 </script>
 
-<h4 id="🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart9941"></div>
+<h4 id="🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart3336"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15700,7 +15700,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart9941"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['外部ディスプレイ接続', '4K Dell', "✔", "✔"],['外部タッチスクリーンディスプレイ', 'FHD Touch Screen(USB Type-C)', "✔", ""],['ゲームパッド', 'Microsoft', "", ""],['Bluetooth ヘッドセット #1', 'Sony', "✔", "✔"],['Bluetooth ヘッドセット #2', '', "", ""],['USB Camera', 'Logi', "", ""],['USB Mouse', 'Logi', "", ""],['Bluetooth Mouse', 'Logi', "", ""],['タッチペン', '', "", ""],['USB-LAN', '', "", ""],['Video Capture', '別PC のHDMI出力 → MiniBook X のUSB-Cポート', "", ""]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart3336"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['外部ディスプレイ接続', '4K Dell', "✔", "✔"],['外部タッチスクリーンディスプレイ', 'FHD Touch Screen(USB Type-C)', "✔", ""],['ゲームパッド', 'Microsoft', "", ""],['Bluetooth ヘッドセット #1', 'Sony', "✔", "✔"],['Bluetooth ヘッドセット #2', '', "", ""],['USB Camera', 'Logi', "", ""],['USB Mouse', 'Logi', "", ""],['Bluetooth Mouse', 'Logi', "", ""],['タッチペン', '', "", ""],['USB-LAN', '', "", ""],['Video Capture', '別PC のHDMI出力 → MiniBook X のUSB-Cポート', "", ""]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15729,7 +15729,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>Ubunutu ISO<br><a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a><br>Ventoy USBメモリにISO をコピー、USB Type-C ⇔ Type-A 変換経由でブート</li>
 <li>gparted で512GB(477GiB)ストレージのパーティションを再構成</li>
 </ul>
-<div id="googleChart2836"></div>
+<div id="googleChart4572"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15738,7 +15738,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart2836"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart4572"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15810,7 +15810,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>Boss<br><a href="https://www.wowhead.com/guide/raids/aberrus-the-shadowed-crucible/overview#bosses">https://www.wowhead.com/guide/raids/aberrus-the-shadowed-crucible/overview#bosses</a><br>のボス9体</li>
 <li>難易度<br>LFR: Looking for Raid</li>
 </ul>
-<h3 id="耐久実績"><a href="#耐久実績" class="headerlink" title="耐久実績"></a>耐久実績</h3><div id="googleChart4128"></div>
+<h3 id="耐久実績"><a href="#耐久実績" class="headerlink" title="耐久実績"></a>耐久実績</h3><div id="googleChart4736"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15819,7 +15819,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart4128"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類', '実績'],['Death Knight', 'Frost', "Melee", "✔"],['Demon Hunter', 'Havoc', "Melee", "✔"],['Druid', 'Balance', "Ranged", "✔"],['Evoker', 'Devastation', "Ranged", "✔"],['Hunter', 'Beast Mastery', "Ranged", "✔"],['Monk', 'Windwalker', "Melee", "✔"],['Mage', 'Frost', "Ranged", "✔"],['Warlock', 'Demonology', "Ranged", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart4736"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類', '実績'],['Death Knight', 'Frost', "Melee", "✔"],['Demon Hunter', 'Havoc', "Melee", "✔"],['Druid', 'Balance', "Ranged", "✔"],['Evoker', 'Devastation', "Ranged", "✔"],['Hunter', 'Beast Mastery', "Ranged", "✔"],['Monk', 'Windwalker', "Melee", "✔"],['Mage', 'Frost', "Ranged", "✔"],['Warlock', 'Demonology', "Ranged", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15838,7 +15838,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>TipTac<br>情報を追加するオプション機能がとても便利だけど無くても困らない</li>
 <li>Dugi<br>ギアを入手したタイミングで装着を提案してくれる機能は残しておきたい<br>使っていない機能があるので設定を見直そう<br>AutoRepair は他のアドオンでも代替可能</li>
 </ul>
-<h3 id="育成枠"><a href="#育成枠" class="headerlink" title="育成枠"></a>育成枠</h3><div id="googleChart9957"></div>
+<h3 id="育成枠"><a href="#育成枠" class="headerlink" title="育成枠"></a>育成枠</h3><div id="googleChart3218"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15847,7 +15847,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart9957"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類'],['Paladin', 'Retribution', "Melee"],['Priest', 'Shadow', "Ranged"],['Rogue', 'Subtlety', "Melle"],['Shaman', 'Elemental', "Ranged"],['Warrior', 'Arms', "Melee"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart3218"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類'],['Paladin', 'Retribution', "Melee"],['Priest', 'Shadow', "Ranged"],['Rogue', 'Subtlety', "Melle"],['Shaman', 'Elemental', "Ranged"],['Warrior', 'Arms', "Melee"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15971,7 +15971,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>Calam Arch Installer 2023-08</li>
 <li>gparted で512GB(477GiB)ストレージにArch Linux 用パーティションとして50GiBを準備</li>
 </ul>
-<div id="googleChart1369"></div>
+<div id="googleChart1366"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15980,7 +15980,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart1369"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart1366"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -16064,7 +16064,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><p><a href="https://wiki.hyprland.org/">https://wiki.hyprland.org/</a><br><a href="https://github.com/hyprland-community/awesome-hyprland">https://github.com/hyprland-community/awesome-hyprland</a></p>
-<div id="googleChart6581"></div>
+<div id="googleChart3494"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -16073,7 +16073,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart6581"))).draw(google.visualization.arrayToDataTable([['項目', '選択肢', '2023-08-25'],['Distribution', 'Arch Linux', "✔"],['Display Manager', 'GDM', "✔"],['WM / Wayland Compositor', 'Hyprland', "✔"],['', 'Sway', ""],['Terminal Emulator', 'kitty', "✔"],['Status Bar', 'Waybar', "✔"],['', 'Eww', ""],['', 'Ags', ""],['Wallpaper', 'hyprpaper', "✔"],['App Launcher', 'Wofi', "✔"],['', 'Rofi', ""],['Screenshot', 'hyprshot', "✔"],['Idle Daemon', 'swayidle', ""],['Locker', "swaylock", ""],['Color Picker', 'hyprpicker', "✔"],['Power Menu', 'Wofi (Script)', "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart3494"))).draw(google.visualization.arrayToDataTable([['項目', '選択肢', '2023-08-25'],['Distribution', 'Arch Linux', "✔"],['Display Manager', 'GDM', "✔"],['WM / Wayland Compositor', 'Hyprland', "✔"],['', 'Sway', ""],['Terminal Emulator', 'kitty', "✔"],['Status Bar', 'Waybar', "✔"],['', 'Eww', ""],['', 'Ags', ""],['Wallpaper', 'hyprpaper', "✔"],['App Launcher', 'Wofi', "✔"],['', 'Rofi', ""],['Screenshot', 'hyprshot', "✔"],['Idle Daemon', 'swayidle', ""],['Locker', "swaylock", ""],['Color Picker', 'hyprpicker', "✔"],['Power Menu', 'Wofi (Script)', "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -17132,7 +17132,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <ol start="2">
 <li>USBメモリで起動し、gpartedでMiniBook X のストレージにUbuntu用のパーティションを作成する。画面が傾いているのでディスプレイの設定を変更する。</li>
 </ol>
-<div id="googleChart6513"></div>
+<div id="googleChart5383"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -17141,7 +17141,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart6513"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart5383"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
