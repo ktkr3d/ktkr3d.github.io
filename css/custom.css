@@ -6,13 +6,11 @@ html {
   object-fit: contain !important;
 }
 
+/*
 .layout {
-  /*
-  max-width: 95%;
-  */
   max-width: 1700px;
 }
-
+*/
 figcaption {
   background-color: #456789;
   padding: 10px !important;
@@ -23,22 +21,6 @@ figcaption {
 .highlight {
   border-radius: 5px !important;
 }
-
-/* Headers in Post : h2 - h3 */
-/*
-h2 {
-  margin: 40px 0 20px;
-  padding: 0 0 0 15px;
-  border-left: 6px solid #5ca3c5;
-  border-bottom: 1px solid #5ca3c5;
-}
-
-h3 {
-  border-bottom: 1px solid #ddd;
-}
-*/
-
-/* Headers in Post : h3 - h4 */
 
 h3 {
   font-size: 1.5rem;
@@ -53,150 +35,6 @@ h4 {
   border-bottom: 1px solid #ddd;
 }
 
-/*
-  h1{
-    font-size:1.8rem !important;
-  }
-  
-  h2{
-    border-bottom: 3px solid #00c4b6;
-    font-size: 1.3rem;
-    margin: 30px 0;
-  }
-  h3{
-    border-left: 6px #00c4b6 solid;
-    font-size: 1.2rem;
-    margin: 25px 0;
-    padding: 2px 5px;
-  }
-  h4{
-    border-left: 2px #00c4b6 solid;
-    font-size: 1.15rem;
-    margin: 25px 0;
-    padding: 2px 5px;
-  }
-  h5{
-    border-left: double 3px #00c4b6;
-    font-size: 1.1rem;
-    padding: 0 5px;
-  }
-  h6{
-    font-size: 1.0rem;
-    padding: 0.1em 0;
-  }
-  .post-content{
-    font-size: 1.0rem;
-  }
-  table{
-    font-size: 0.85rem;
-  }
-  .a
-  .archive .collection-title {
-    display: none !important;
-  }
-  
-  .post-body a:link { color: #0000ff; }
-  .post-body a:visited { color: #0000ff; }
-  .post-body a:hover { color: #ff0000; }
-  .post-body a:active { color: #ff8000; }
-*/
-
 #pagination {
   width: 100%;
 }
-
-/*
-@media screen and (min-width: 1000px) {
-*/
-/*
-@media screen and (min-width: 1400px) {
-
-#  #recent-posts>.recent-post-item:not(:first-child) {
-#    width:calc(100% / 2 - .5rem);
-#    margin-top: .32rem;
-#    margin-bottom: .9rem;
-#    box-shadow: 0 8px 16px -4px #2c2d300c
-#}
-
-
-  #recent-posts > .recent-post-item {
-    width: calc(100% / 2 - 0.5rem);
-    margin-top: 0px !important;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 16px -4px #2c2d300c;
-  }
-
-  #recent-posts > .recent-post-item > .recent-post-info > .content {
-    display: none;
-  }
-
-  #recent-posts > .recent-post-item {
-    height: 25em;
-    flex-direction: column;
-  }
-
-  #recent-posts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: flex-start;
-  }
-
-  #bbtalk-banner,
-  #category-bar,
-  #categoryBar-banner.recent-post-item,
-  #tags-bar {
-    width: 100% !important;
-    margin-top: 0.25rem;
-    margin-bottom: 0.75rem;
-    box-shadow: 0 8px 16px -4px #2c2d300c;
-  }
-
-  #recent-posts > .recent-post-item {
-    flex-direction: column;
-  }
-
-  #bbtalk-banner {
-    margin-top: 0;
-  }
-
-  #category-bar,
-  #tags-bar,
-  .category-in-bar-tips {
-    margin-bottom: 0.75rem;
-    box-shadow: 0 8px 16px -4px #2c2d300c;
-    animation: slide-in 0.6s 0.3s backwards;
-  }
-
-  .category-in-bar-tips {
-    margin-top: 0.25rem;
-  }
-
-  #recent-posts > .recent-post-item .post_cover {
-    transition: 1s !important;
-    height: 360px;
-    width: 100%;
-  }
-
-  .recent-post-item .recent-post-info {
-    padding: 20px !important;
-    width: 90% !important;
-  }
-
-  .recent-post-item .recent-post-info .recent-post-info-top a.article-title {
-    margin-top: 1rem;
-    padding: 20px !important;
-  }
-
-  #local-search .search-dialog {
-    margin-left: -21%;
-    width: 42%;
-  }
-
-  #aside-content {
-    padding-left: 1.25rem;
-    animation: slide-in 0.6s 0.3s backwards;
-  }
-}
-*/
