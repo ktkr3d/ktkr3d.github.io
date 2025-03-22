@@ -35,7 +35,7 @@
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;パッケージの更新&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo pacman -Syyu&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;reboot&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; pacman -Syyu&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;reboot&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;</description>
       
@@ -250,7 +250,7 @@
 &lt;p&gt;Vertical Taskbar for Windows 11はWindows 11でタスクバーを左側や右側に配置できるWindhawkのmodです。&lt;br&gt;ExplorerPatcherよりもWindows 11に対する親和性が高そうです。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://windhawk.net/mods/taskbar-vertical&quot;&gt;https://windhawk.net/mods/taskbar-vertical&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://windhawk.net/&quot;&gt;https://windhawk.net/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/microsoft/PowerToys/issues/25101#issuecomment-2364732359&quot;&gt;https://github.com/microsoft/PowerToys/issues/25101#issuecomment-2364732359&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;2025-02-27-メモ&quot;&gt;&lt;a href=&quot;#2025-02-27-メモ&quot; class=&quot;headerlink&quot; title=&quot;2025-02-27 メモ&quot;&gt;&lt;/a&gt;2025-02-27 メモ&lt;/h4&gt;&lt;p&gt;WindhawkとVirtualBoxが干渉してVirtualBoxのVM起動時に「supHardenedWinVerifyProcess failed」エラーが発生する。&lt;br&gt;&lt;a href=&quot;https://github.com/ramensoftware/windhawk/issues/25&quot;&gt;https://github.com/ramensoftware/windhawk/issues/25&lt;/a&gt;&lt;br&gt;Windhawkの設定→詳細設定→さらに詳細設定を表示→プロセス除外リストに以下を追加する。&lt;/p&gt;
-&lt;figure class=&quot;highlight gcode&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;%&lt;/span&gt;ProgramFiles&lt;span class=&quot;meta&quot;&gt;%&lt;/span&gt;&#92;Oracle&#92;VirtualBox&#92;*&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight haml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;%&lt;span class=&quot;selector-tag&quot;&gt;ProgramFiles&lt;/span&gt;&lt;/span&gt;%&#92;Oracle&#92;VirtualBox&#92;*&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;上記対応後、VirtualBoxのVM起動時に「NtCreateFile(&#92;Device&#92;VBoxDrvStub) failed」エラーが発生した場合は以下を実行する。&lt;/p&gt;
 &lt;figure class=&quot;highlight cmd&quot;&gt;&lt;figcaption&gt;&lt;span&gt;管理者権限のコマンドプロンプト&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sc.exe &lt;span class=&quot;built_in&quot;&gt;start&lt;/span&gt; vboxsup&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
       

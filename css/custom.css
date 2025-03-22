@@ -108,15 +108,16 @@ h4 {
 /*
 @media screen and (min-width: 1000px) {
 */
+/*
 @media screen and (min-width: 1400px) {
-  /*
-  #recent-posts>.recent-post-item:not(:first-child) {
-    width:calc(100% / 2 - .5rem);
-    margin-top: .32rem;
-    margin-bottom: .9rem;
-    box-shadow: 0 8px 16px -4px #2c2d300c
-}
-*/
+
+#  #recent-posts>.recent-post-item:not(:first-child) {
+#    width:calc(100% / 2 - .5rem);
+#    margin-top: .32rem;
+#    margin-bottom: .9rem;
+#    box-shadow: 0 8px 16px -4px #2c2d300c
+#}
+
 
   #recent-posts > .recent-post-item {
     width: calc(100% / 2 - 0.5rem);
@@ -198,3 +199,4 @@ h4 {
     animation: slide-in 0.6s 0.3s backwards;
   }
 }
+*/
