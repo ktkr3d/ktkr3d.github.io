@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 22 Mar 2025 18:03:25 GMT</pubDate>
+    <pubDate>Sun, 23 Mar 2025 03:26:23 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -27,6 +27,8 @@
       <description>&lt;p&gt;&lt;img src=&quot;/images/arch_gnome48_gnome-unstable.png&quot;&gt;&lt;br&gt;GNOME 48がリリースされたのでArch LinuxにGNOME 48.0 (gnome-unstableリポジトリ)を導入してみました。&lt;br&gt;&lt;a href=&quot;https://release.gnome.org/48/&quot;&gt;https://release.gnome.org/48/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://archlinux.org/groups/x86_64/gnome/&quot;&gt;https://archlinux.org/groups/x86_64/gnome/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;GNOME関連アプリが起動しません。extraリポジトリに反映されるのをまちましょう。&lt;/p&gt;
 &lt;h4 id=&quot;2025-03-23-追記&quot;&gt;&lt;a href=&quot;#2025-03-23-追記&quot; class=&quot;headerlink&quot; title=&quot;2025-03-23 追記&quot;&gt;&lt;/a&gt;2025-03-23 追記&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://archlinux.org/groups/x86_64/gnome/&quot;&gt;https://archlinux.org/groups/x86_64/gnome/&lt;/a&gt;&lt;br&gt;GNOME 48がextraリポジトリに来ました。&lt;/p&gt;
+&lt;p&gt;Chrome起動時のグローバルショートカットのポップアップ抑止&lt;br&gt;&lt;a href=&quot;https://www.reddit.com/r/gnome/comments/1jfejor/psa_chromechromiumbased_browsers_and_gnome_48/&quot;&gt;https://www.reddit.com/r/gnome/comments/1jfejor/psa_chromechromiumbased_browsers_and_gnome_48/&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight text&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/chrome-flags.conf&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;--disable-features=GlobalShortcutsPortal&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h4 id=&quot;2025-03-20-追記&quot;&gt;&lt;a href=&quot;#2025-03-20-追記&quot; class=&quot;headerlink&quot; title=&quot;2025-03-20 追記&quot;&gt;&lt;/a&gt;2025-03-20 追記&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/images/arch_gnome48_extra-testing.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://archlinux.org/groups/x86_64/gnome/&quot;&gt;https://archlinux.org/groups/x86_64/gnome/&lt;/a&gt;&lt;br&gt;GNOME 48.0 (extra-testing リポジトリ) に入りました。&lt;br&gt;gnome-control-center, gnome-terminal, gnome-text-editor, nautilus, argos が動くようになりました。&lt;/p&gt;
 &lt;ol&gt;
