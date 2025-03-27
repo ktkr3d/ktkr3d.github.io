@@ -18718,7 +18718,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><p>Create and mount the ext4 filesystem:</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkfs.ext4 /dev/sdX2</span><br><span class="line"><span class="built_in">mkdir</span> root</span><br><span class="line">mount /dev/sdX2 root</span><br></pre></td></tr></table></figure></li>
 <li><p>Download and extract the root filesystem (as root, not via sudo):</p>
-  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-aarch64-latest.tar.gz</span><br><span class="line">bsdtar -xpf ArchLinuxARM-rpi-armv7-latest.tar.gz -C root</span><br><span class="line"><span class="built_in">sync</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-aarch64-latest.tar.gz</span><br><span class="line">bsdtar -xpf ArchLinuxARM-rpi-aarch64-latest.tar.gz -C root</span><br><span class="line"><span class="built_in">sync</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Move boot files to the first partition:</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> root/boot/* boot</span><br></pre></td></tr></table></figure></li>
 <li><p>Edit fstab</p>
