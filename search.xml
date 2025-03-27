@@ -18742,7 +18742,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>base-develのインストール  <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">pacman -S <span class="keyword">base</span>-devel</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="Raspberry-Pi-2"><a href="#Raspberry-Pi-2" class="headerlink" title="Raspberry Pi (2)"></a>Raspberry Pi (2)</h4><ol start="17">
-<li>gnome-desktopのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gnome</span><br></pre></td></tr></table></figure></li>
+<li>gnomeのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gnome</span><br></pre></td></tr></table></figure></li>
 <li>GDMのインストールと有効化  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gdm</span><br><span class="line">systemctl <span class="built_in">enable</span> gdm</span><br></pre></td></tr></table></figure></li>
 <li>再起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
 </ol>
