@@ -18655,4 +18655,111 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
         <tag>archlinux</tag>
       </tags>
   </entry>
+  <entry>
+    <title>RPi4B - Arch Linux</title>
+    <url>/2025/03/27/RPi4B-Arch-Linux/</url>
+    <content><![CDATA[<p><img src="/images/rpi4b_arch_gnome.png"></p>
+<p>Raspberry Pi 4BにArch Linux (64it)をインストールしてみました。</p>
+<p><a href="https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4">https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4</a></p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Raspberry Pi 4B</li>
+<li>32GB SDカード<ul>
+<li>Arch Linux</li>
+</ul>
+</li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="作業PC"><a href="#作業PC" class="headerlink" title="作業PC"></a>作業PC</h4><ol>
+<li><p>gpartedでSDカードのパーティションを削除しておく</p>
+</li>
+<li><p>rootで作業する</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su</span><br></pre></td></tr></table></figure></li>
+<li><p>Start fdisk to partition the SD card:</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fdisk /dev/sdX</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>私の環境では&#x2F;dev&#x2F;sdaでした</p>
+</div></li>
+<li><p>At the fdisk prompt, delete old partitions and create a new one:</p>
+<table>
+<thead>
+<tr>
+<th align="left">入力</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><kbd>o</kbd></td>
+<td align="left">This will clear out any partitions on the drive</td>
+</tr>
+<tr>
+<td align="left"><kbd>p</kbd></td>
+<td align="left">list partitions. There should be no partitions left</td>
+</tr>
+<tr>
+<td align="left"><kbd>n</kbd><br /><kbd>p</kbd><br /><kbd>1</kbd><br /><kbd>ENTER</kbd><br />+400M</td>
+<td align="left">the first partition on the drive</td>
+</tr>
+<tr>
+<td align="left"><kbd>t</kbd><br /><kbd>c</kbd></td>
+<td align="left">set the first partition to type W95 FAT32 (LBA).</td>
+</tr>
+<tr>
+<td align="left"><kbd>n</kbd><br /><kbd>p</kbd><br /><kbd>2</kbd><br /><kbd>ENTER</kbd><br /><kbd>ENTER</kbd></td>
+<td align="left">the second partition on the drive</td>
+</tr>
+<tr>
+<td align="left"><kbd>w</kbd></td>
+<td align="left">Write the partition table and exit</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Create and mount the FAT filesystem:</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkfs.vfat /dev/sdX1</span><br><span class="line"><span class="built_in">mkdir</span> boot</span><br><span class="line">mount /dev/sdX1 boot</span><br></pre></td></tr></table></figure></li>
+<li><p>Create and mount the ext4 filesystem:</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkfs.ext4 /dev/sdX2</span><br><span class="line"><span class="built_in">mkdir</span> root</span><br><span class="line">mount /dev/sdX2 root</span><br></pre></td></tr></table></figure></li>
+<li><p>Download and extract the root filesystem (as root, not via sudo):</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-aarch64-latest.tar.gz</span><br><span class="line">bsdtar -xpf ArchLinuxARM-rpi-armv7-latest.tar.gz -C root</span><br><span class="line"><span class="built_in">sync</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Move boot files to the first partition:</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> root/boot/* boot</span><br></pre></td></tr></table></figure></li>
+<li><p>Edit fstab</p>
+  <figure class="highlight text"><figcaption><span>/etc/fstab</span></figcaption><table><tr><td class="code"><pre><span class="line"># Static information about the filesystems.</span><br><span class="line"># See fstab(5) for details.</span><br><span class="line"></span><br><span class="line"># &lt;file system&gt; &lt;dir&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;</span><br><span class="line">#/dev/mmcblk0p1  /boot   vfat    defaults        0       0</span><br><span class="line">/dev/mmcblk1p1  /boot   vfat    defaults        0       0</span><br><span class="line">/dev/mmcblk1p2  /       ext4    defaults        0       0</span><br></pre></td></tr></table></figure></li>
+<li><p>Unmount the two partitions:</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">umount boot root</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="Raspberry-Pi-1"><a href="#Raspberry-Pi-1" class="headerlink" title="Raspberry Pi (1)"></a>Raspberry Pi (1)</h4><ol start="11">
+<li>Insert the SD card into the Raspberry Pi, connect ethernet, and apply 5V power.</li>
+<li>Use the serial console or SSH to the IP address given to the board by your router.</li>
+</ol>
+<ul>
+<li>Login as the default user alarm with the password alarm.</li>
+<li>The default root password is root.</li>
+</ul>
+<ol start="13">
+<li>rootで作業する  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su</span><br></pre></td></tr></table></figure></li>
+<li>Initialize the pacman keyring and populate the Arch Linux ARM package signing keys:  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman-key --init</span><br><span class="line">pacman-key --populate archlinuxarm</span><br></pre></td></tr></table></figure></li>
+<li>ミラーの設定  <figure class="highlight text"><figcaption><span>/etc/pacman.d/mirrorlist</span></figcaption><table><tr><td class="code"><pre><span class="line">### Japan</span><br><span class="line">## Tokyo</span><br><span class="line"># Server = http://jp.mirror.archlinuxarm.org/$arch/$repo</span><br><span class="line">Server = http://jp.mirror.archlinuxarm.org/$arch/$repo</span><br></pre></td></tr></table></figure></li>
+<li>パッケージの更新  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -Syu</span><br></pre></td></tr></table></figure></li>
+<li>base-develのインストール  <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">pacman -S <span class="keyword">base</span>-devel</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="Raspberry-Pi-2"><a href="#Raspberry-Pi-2" class="headerlink" title="Raspberry Pi (2)"></a>Raspberry Pi (2)</h4><ol start="17">
+<li>gnome-desktopのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gnome-desktop</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>GNOME関連のアプリケーション一式を導入する場合はメタパッケージ<code>gnome</code>をインストールしてもよい</p>
+</div></li>
+<li>GDMのインストールと有効化  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gdm</span><br><span class="line">systemctl <span class="built_in">enable</span> gdm</span><br></pre></td></tr></table></figure></li>
+<li>好みのターミナルエミュレータの導入  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gnome-console</span><br></pre></td></tr></table></figure></li>
+<li>再起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
+<li>ターミナルエミュレータを入れ忘れた場合は<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F4</kbd>を押下、CUIにログインして必要なアプリケーションを追加する。<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F1</kbd>で復帰する。</li>
+<li>pacmanで入れておいた方がよさそうなもの。<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">chromium</span><br><span class="line">git</span><br><span class="line">gnome-control-center</span><br><span class="line">gnome-text-editor</span><br><span class="line">gnome-tweaks</span><br><span class="line">gparted</span><br><span class="line">noto-fonts-cjk</span><br><span class="line">openssh</span><br></pre></td></tr></table></figure></li>
+<li>AURヘルパー(paru等)で入れておいた方がよさそうなもの。<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">extension-manager</span><br></pre></td></tr></table></figure></li>
+<li>GNOME関連一式が必要であればメタパッケージ<code>gnome</code>を入れてもよい。全体の整合性が向上するかもしれない。</li>
+<li>その他設定<br><a href="https://ktkr3d.github.io/archlinux/">https://ktkr3d.github.io/archlinux/</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>raspberrypi</tag>
+        <tag>archlinux</tag>
+      </tags>
+  </entry>
 </search>
