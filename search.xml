@@ -18742,18 +18742,11 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>base-develのインストール  <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">pacman -S <span class="keyword">base</span>-devel</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="Raspberry-Pi-2"><a href="#Raspberry-Pi-2" class="headerlink" title="Raspberry Pi (2)"></a>Raspberry Pi (2)</h4><ol start="17">
-<li>gnome-desktopのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gnome-desktop</span><br></pre></td></tr></table></figure>
-  <div class="note info flat"><p>GNOME関連のアプリケーション一式を導入する場合はメタパッケージ<code>gnome</code>をインストールしてもよい</p>
-</div></li>
+<li>gnome-desktopのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gnome</span><br></pre></td></tr></table></figure></li>
 <li>GDMのインストールと有効化  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gdm</span><br><span class="line">systemctl <span class="built_in">enable</span> gdm</span><br></pre></td></tr></table></figure></li>
-<li>好みのターミナルエミュレータの導入  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gnome-console</span><br></pre></td></tr></table></figure></li>
 <li>再起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
-<li>ターミナルエミュレータを入れ忘れた場合は<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F4</kbd>を押下、CUIにログインして必要なアプリケーションを追加する。<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F1</kbd>で復帰する。</li>
-<li>pacmanで入れておいた方がよさそうなもの。<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">chromium</span><br><span class="line">git</span><br><span class="line">gnome-control-center</span><br><span class="line">gnome-text-editor</span><br><span class="line">gnome-tweaks</span><br><span class="line">gparted</span><br><span class="line">noto-fonts-cjk</span><br><span class="line">openssh</span><br></pre></td></tr></table></figure></li>
-<li>AURヘルパー(paru等)で入れておいた方がよさそうなもの。<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">extension-manager</span><br></pre></td></tr></table></figure></li>
-<li>GNOME関連一式が必要であればメタパッケージ<code>gnome</code>を入れてもよい。全体の整合性が向上するかもしれない。</li>
 <li>その他設定<br><a href="https://ktkr3d.github.io/archlinux/">https://ktkr3d.github.io/archlinux/</a></li>
 </ul>
 ]]></content>
