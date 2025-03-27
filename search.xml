@@ -18722,7 +18722,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><p>Move boot files to the first partition:</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> root/boot/* boot</span><br></pre></td></tr></table></figure></li>
 <li><p>Edit fstab</p>
-  <figure class="highlight text"><figcaption><span>/etc/fstab</span></figcaption><table><tr><td class="code"><pre><span class="line"># Static information about the filesystems.</span><br><span class="line"># See fstab(5) for details.</span><br><span class="line"></span><br><span class="line"># &lt;file system&gt; &lt;dir&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;</span><br><span class="line">#/dev/mmcblk0p1  /boot   vfat    defaults        0       0</span><br><span class="line">/dev/mmcblk1p1  /boot   vfat    defaults        0       0</span><br><span class="line">/dev/mmcblk1p2  /       ext4    defaults        0       0</span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight text"><figcaption><span>root/etc/fstab</span></figcaption><table><tr><td class="code"><pre><span class="line"># Static information about the filesystems.</span><br><span class="line"># See fstab(5) for details.</span><br><span class="line"></span><br><span class="line"># &lt;file system&gt; &lt;dir&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;</span><br><span class="line">#/dev/mmcblk0p1  /boot   vfat    defaults        0       0</span><br><span class="line">/dev/mmcblk1p1  /boot   vfat    defaults        0       0</span><br><span class="line">/dev/mmcblk1p2  /       ext4    defaults        0       0</span><br></pre></td></tr></table></figure></li>
 <li><p>Unmount the two partitions:</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">umount boot root</span><br></pre></td></tr></table></figure></li>
 </ol>
@@ -18744,11 +18744,12 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <h4 id="Raspberry-Pi-2"><a href="#Raspberry-Pi-2" class="headerlink" title="Raspberry Pi (2)"></a>Raspberry Pi (2)</h4><ol start="17">
 <li>gnomeのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gnome</span><br></pre></td></tr></table></figure></li>
 <li>GDMのインストールと有効化  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gdm</span><br><span class="line">systemctl <span class="built_in">enable</span> gdm</span><br></pre></td></tr></table></figure></li>
+<li>タイムゾーンの設定  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">timedatectl status</span><br><span class="line">curl https://ipapi.co/timezone</span><br><span class="line"><span class="built_in">sudo</span> timedatectl set-timezone <span class="string">&quot;Asia/Tokyo&quot;</span></span><br><span class="line">timedatectl status</span><br></pre></td></tr></table></figure></li>
+<li>ロケールの設定  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> locale-gen</span><br><span class="line"><span class="built_in">sudo</span> localectl set-locale LANG=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br></pre></td></tr></table></figure></li>
 <li>再起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>ChromiumはFlatpak版が動作する</li>
-<li>gnome-terminalが<code>could not activate remote peer</code>で起動しない場合<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> locale-gen</span><br><span class="line"><span class="built_in">sudo</span> localectl set-locale LANG=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
 <li>その他設定<br><a href="https://ktkr3d.github.io/archlinux/">https://ktkr3d.github.io/archlinux/</a></li>
 </ul>
 ]]></content>
