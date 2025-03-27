@@ -18745,12 +18745,12 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>gnomeのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gnome</span><br></pre></td></tr></table></figure></li>
 <li>GDMのインストールと有効化  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S gdm</span><br><span class="line">systemctl <span class="built_in">enable</span> gdm</span><br></pre></td></tr></table></figure></li>
 <li>タイムゾーンの設定  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl https://ipapi.co/timezone</span><br><span class="line">timedatectl set-timezone <span class="string">&quot;Asia/Tokyo&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>ロケールの設定  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> locale-gen</span><br><span class="line"><span class="built_in">sudo</span> localectl set-locale LANG=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>ロケールの設定  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">locale-gen</span><br><span class="line">localectl set-locale LANG=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br></pre></td></tr></table></figure></li>
 <li>再起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>ChromiumはFlatpak版が動作する</li>
-<li>その他設定<br><a href="https://ktkr3d.github.io/archlinux/">https://ktkr3d.github.io/archlinux/</a></li>
+<li>その他設定<br><a href="https://ktkr3d.github.io/archlinux/">https://ktkr3d.github.io/archlinux/</a><br><a href="https://ktkr3d.github.io/GNOME/">https://ktkr3d.github.io/GNOME/</a></li>
 </ul>
 ]]></content>
       <tags>
