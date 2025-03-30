@@ -18852,14 +18852,15 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><p>Configure GNOME Remote Desktop:</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl rdp set-tls-key ~/.local/share/gnome-remote-desktop/tls.key</span><br><span class="line">grdctl rdp set-tls-cert ~/.local/share/gnome-remote-desktop/tls.crt</span><br><span class="line">grdctl rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br><span class="line">grdctl rdp <span class="built_in">enable</span></span><br><span class="line">grdctl rdp disable-view-only</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Enable system remote login service.</p>
+<li><p>Enable remote assistance user service.</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure>
   <div class="note info no-icon flat"><p>接続できなくなった場合は再度認証情報を設定する</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br></pre></td></tr></table></figure></div></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>Disable remote assistance user service.</p>
+  <div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></div></li>
 </ol>
-<div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></div>
-
 <h4 id="GRD-Headless-multi-user-remote-login"><a href="#GRD-Headless-multi-user-remote-login" class="headerlink" title="GRD - Headless multi user remote login"></a>GRD - Headless multi user remote login</h4><p>GDMにアクセスできます。</p>
 <ol>
 <li><p>Generate a TLS key and certificate.</p>
@@ -18871,11 +18872,12 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> grdctl --system rdp set-tls-key ~gnome-remote-desktop/.local/share/gnome-remote-desktop/tls.key</span><br><span class="line"><span class="built_in">sudo</span> grdctl --system rdp set-tls-cert ~gnome-remote-desktop/.local/share/gnome-remote-desktop/tls.crt</span><br><span class="line"><span class="built_in">sudo</span> grdctl --system rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br><span class="line"><span class="built_in">sudo</span> grdctl --system rdp <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Enable system remote login service.</p>
-  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Disable system remote login service.</p>
+  <div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></div></li>
 </ol>
-<div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></div>
-
 <h4 id="GRD-Headless-single-user"><a href="#GRD-Headless-single-user" class="headerlink" title="GRD - Headless (single user)"></a>GRD - Headless (single user)</h4><ol>
 <li><p>Generate a TLS key and certificate.</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.local/share/gnome-remote-desktop/</span><br><span class="line">openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 -subj /C=SE/ST=NONE/L=NONE/O=GNOME/CN=$(hostname) -out ~/.local/share/gnome-remote-desktop/tls.crt -keyout ~/.local/share/gnome-remote-desktop/tls.key</span><br></pre></td></tr></table></figure>
@@ -18885,12 +18887,13 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <div class="note info no-icon flat"><p>ポート番号を3391に変更する場合</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl --headless rdp set-port 3391</span><br></pre></td></tr></table></figure></div>
 </li>
-<li><p>Enable system remote login service.</p>
-  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure></li>
+<li><p>Enable headless single user service.</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Disable headless single user service.</p>
+  <div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure></div></li>
 </ol>
-<div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure></div>
-
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>Windows<ul>
 <li>リモートデスクトップ接続(mstsc)</li>
