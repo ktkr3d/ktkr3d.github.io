@@ -18775,7 +18775,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     <title>GNOME Remote Desktop</title>
     <url>/2025/03/30/GNOME-Remote-Desktop/</url>
     <content><![CDATA[<p><img src="/images/gnome-remote-desktop.png"></p>
-<p>LinuxにGNOME Rmote Desktopを導入してクライアントからRDP接続してみました。<br>接続するとGDM画面からログインできます。</p>
+<p>LinuxにGNOME Remote Desktopを導入してクライアントからRDP接続してみました。<br>接続するとGDM画面からログインできます。</p>
 <p><a href="https://gitlab.gnome.org/GNOME/gnome-remote-desktop">https://gitlab.gnome.org/GNOME/gnome-remote-desktop</a></p>
 <span id="more"></span>
 
@@ -18810,6 +18810,13 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <td align="left">未</td>
 </tr>
 <tr>
+<td align="left">&nbsp;</td>
+<td align="left">Fedora</td>
+<td align="left">未</td>
+<td align="left">未</td>
+<td align="left">未</td>
+</tr>
+<tr>
 <td align="left">RPi 4B</td>
 <td align="left">Arch</td>
 <td align="left">OK</td>
@@ -18826,6 +18833,13 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <tr>
 <td align="left">&nbsp;</td>
 <td align="left">Ubuntu</td>
+<td align="left">未</td>
+<td align="left">未</td>
+<td align="left">未</td>
+</tr>
+<tr>
+<td align="left">&nbsp;</td>
+<td align="left">Fedora</td>
 <td align="left">未</td>
 <td align="left">未</td>
 <td align="left">未</td>
