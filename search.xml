@@ -18775,7 +18775,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     <title>GNOME Remote Desktop</title>
     <url>/2025/03/30/GNOME-Remote-Desktop/</url>
     <content><![CDATA[<p><img src="/images/gnome-remote-desktop.png"></p>
-<p>LinuxにGNOME Remote Desktopを導入してクライアントからRDP接続してみました。<br>接続するとGDM画面からログインできます。</p>
+<p>LinuxにGNOME Remote Desktopサービスを導入してクライアントからRDP接続してみました。接続するとGDM画面からログインできます。</p>
 <p><a href="https://gitlab.gnome.org/GNOME/gnome-remote-desktop">https://gitlab.gnome.org/GNOME/gnome-remote-desktop</a></p>
 <span id="more"></span>
 
@@ -18860,8 +18860,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><p>Disable remote assistance user service.</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="GRD-Headless-multi-user-remote-login"><a href="#GRD-Headless-multi-user-remote-login" class="headerlink" title="GRD - Headless multi user remote login"></a>GRD - Headless multi user remote login</h4><p>GDMにアクセスできます。</p>
-<ol>
+<h4 id="GRD-Headless-multi-user-remote-login"><a href="#GRD-Headless-multi-user-remote-login" class="headerlink" title="GRD - Headless multi user remote login"></a>GRD - Headless multi user remote login</h4><ol>
 <li><p>Generate a TLS key and certificate.</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> -u gnome-remote-desktop sh -c <span class="string">&#x27;mkdir -p ~/.local/share/gnome-remote-desktop/&#x27;</span></span><br><span class="line"><span class="built_in">sudo</span> -u gnome-remote-desktop sh -c <span class="string">&quot;openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 -subj /C=SE/ST=NONE/L=NONE/O=GNOME/CN=<span class="subst">$(hostname)</span> -out ~/.local/share/gnome-remote-desktop/tls.crt -keyout ~/.local/share/gnome-remote-desktop/tls.key&quot;</span></span><br></pre></td></tr></table></figure>
   <div class="note info flat"><p><code>/var/lib/gnome-remote-desktop/.local/share/gnome-remote-desktop/</code> に格納されます。</p>
@@ -18894,7 +18893,6 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>Windows<ul>
 <li>リモートデスクトップ接続(mstsc)</li>
-<li>mRemoteNG</li>
 </ul>
 </li>
 <li>Linux<ul>

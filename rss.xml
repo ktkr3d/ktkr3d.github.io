@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 30 Mar 2025 13:57:05 GMT</pubDate>
+    <pubDate>Sun, 30 Mar 2025 14:01:06 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Sun, 30 Mar 2025 06:49:51 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/gnome-remote-desktop.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;LinuxにGNOME Remote Desktopを導入してクライアントからRDP接続してみました。&lt;br&gt;接続するとGDM画面からログインできます。&lt;/p&gt;
+&lt;p&gt;LinuxにGNOME Remote Desktopサービスを導入してクライアントからRDP接続してみました。接続するとGDM画面からログインできます。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://gitlab.gnome.org/GNOME/gnome-remote-desktop&quot;&gt;https://gitlab.gnome.org/GNOME/gnome-remote-desktop&lt;/a&gt;&lt;/p&gt;</description>
       
       
