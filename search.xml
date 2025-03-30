@@ -18858,8 +18858,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br></pre></td></tr></table></figure></div>
 </li>
 <li><p>Disable remote assistance user service.</p>
-  <div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></div></li>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="GRD-Headless-multi-user-remote-login"><a href="#GRD-Headless-multi-user-remote-login" class="headerlink" title="GRD - Headless multi user remote login"></a>GRD - Headless multi user remote login</h4><p>GDMにアクセスできます。</p>
 <ol>
@@ -18875,8 +18874,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Disable system remote login service.</p>
-  <div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></div></li>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="GRD-Headless-single-user"><a href="#GRD-Headless-single-user" class="headerlink" title="GRD - Headless (single user)"></a>GRD - Headless (single user)</h4><ol>
 <li><p>Generate a TLS key and certificate.</p>
@@ -18891,8 +18889,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Disable headless single user service.</p>
-  <div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure></div></li>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>Windows<ul>
