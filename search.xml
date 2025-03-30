@@ -18800,7 +18800,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <td align="left">Arch</td>
 <td align="left">OK</td>
 <td align="left">OK</td>
-<td align="left">未</td>
+<td align="left">OK</td>
 </tr>
 <tr>
 <td align="left">&nbsp;</td>
@@ -18853,7 +18853,9 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl rdp set-tls-key ~/.local/share/gnome-remote-desktop/tls.key</span><br><span class="line">grdctl rdp set-tls-cert ~/.local/share/gnome-remote-desktop/tls.crt</span><br><span class="line">grdctl rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br><span class="line">grdctl rdp <span class="built_in">enable</span></span><br><span class="line">grdctl rdp disable-view-only</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Enable system remote login service.</p>
-  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure>
+  <div class="note info no-icon flat"><p>接続できなくなった場合は再度認証情報を設定する</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br></pre></td></tr></table></figure></div></li>
 </ol>
 <div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></div>
@@ -18880,6 +18882,8 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </li>
 <li><p>Configure GNOME Remote Desktop:</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl --headless rdp set-tls-key ~/.local/share/gnome-remote-desktop/tls.key</span><br><span class="line">grdctl --headless rdp set-tls-cert ~/.local/share/gnome-remote-desktop/tls.crt</span><br><span class="line">grdctl --headless rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br><span class="line">grdctl --headless rdp <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+  <div class="note info no-icon flat"><p>ポート番号を3391に変更する場合</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl --headless rdp set-port 3391</span><br></pre></td></tr></table></figure></div>
 </li>
 <li><p>Enable system remote login service.</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure></li>
