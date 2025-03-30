@@ -15,8 +15,31 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 27 Mar 2025 21:52:46 GMT</pubDate>
+    <pubDate>Sun, 30 Mar 2025 09:00:55 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>GNOME Remote Desktop</title>
+      <link>https://ktkr3d.github.io/2025/03/30/GNOME-Remote-Desktop/</link>
+      <guid>https://ktkr3d.github.io/2025/03/30/GNOME-Remote-Desktop/</guid>
+      <pubDate>Sun, 30 Mar 2025 06:49:51 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/gnome-remote-desktop.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;LinuxにGNOME Rmote Desktopを導入してクライアントからRDP接続してみました。&lt;br&gt;接続するとGDM画面からログインできます。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://gitlab.gnome.org/GNOME/gnome-remote-desktop&quot;&gt;https://gitlab.gnome.org/GNOME/gnome-remote-desktop&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome/">gnome</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/rdp/">rdp</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/03/30/GNOME-Remote-Desktop/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>RPi4B - Arch Linux</title>
@@ -486,27 +509,6 @@
       
       
       <comments>https://ktkr3d.github.io/2024/08/04/Custom-OSD/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Fastfetch</title>
-      <link>https://ktkr3d.github.io/2024/08/01/Fastfetch/</link>
-      <guid>https://ktkr3d.github.io/2024/08/01/Fastfetch/</guid>
-      <pubDate>Thu, 01 Aug 2024 12:35:36 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/fastfetch.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;システム情報を表示するツールであるNeofetchが開発終了とのことなので後継のFastfetchを使ってみました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/fastfetch-cli/fastfetch&quot;&gt;https://github.com/fastfetch-cli/fastfetch&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/fastfetch/">fastfetch</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2024/08/01/Fastfetch/#disqus_thread</comments>
       
     </item>
     

@@ -18750,12 +18750,145 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>ChromiumはFlatpak版が動作する</li>
+<li>alarmのユーザ名を変更(ユーザIDはそのまま)<br>GDMの画面で、<br><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F4</kbd><br>rootでログイン<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">usermod -l <span class="built_in">arch</span> alarm</span><br><span class="line">groupmod -n <span class="built_in">arch</span> alarm</span><br><span class="line">usermod -d /home/arch -m <span class="built_in">arch</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F1</kbd></li>
+<li>visudo</li>
+<li>openssh<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S openssh</span><br></pre></td></tr></table></figure></li>
+<li>ホスト名の変更<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hostnamectl set-hostname rpi4b</span><br></pre></td></tr></table></figure></li>
+<li>Bluetoothの有効化<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S bluez bluez-utils gnome-bluetooth-3.0</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> bluetooth</span><br><span class="line"><span class="built_in">sudo</span> systemctl start bluetooth</span><br></pre></td></tr></table></figure></li>
 <li>その他設定<br><a href="https://ktkr3d.github.io/archlinux/">https://ktkr3d.github.io/archlinux/</a><br><a href="https://ktkr3d.github.io/GNOME/">https://ktkr3d.github.io/GNOME/</a></li>
+</ul>
+<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ul>
+<li>Wifi</li>
+<li>pritunl&#x2F;wireguard</li>
+<li>rdp<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S gnome-remote-desktop freerdp inetutils</span><br><span class="line">RDP_USER=<span class="string">&quot;<span class="variable">$&#123;USER&#125;</span>&quot;</span></span><br><span class="line">RDP_PASS=<span class="string">&quot;12345678&quot;</span></span><br><span class="line"><span class="built_in">sudo</span> -u gnome-remote-desktop sh -c <span class="string">&#x27;mkdir -p ~/.local/share/gnome-remote-desktop/&#x27;</span></span><br><span class="line"><span class="built_in">sudo</span> -u gnome-remote-desktop sh -c <span class="string">&quot;openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 -subj /C=SE/ST=NONE/L=NONE/O=GNOME/CN=<span class="subst">$(hostname)</span> -out ~/.local/share/gnome-remote-desktop/tls.crt -keyout ~/.local/share/gnome-remote-desktop/tls.key&quot;</span></span><br><span class="line"><span class="built_in">sudo</span> grdctl --system rdp set-tls-key ~gnome-remote-desktop/.local/share/gnome-remote-desktop/tls.key</span><br><span class="line"><span class="built_in">sudo</span> grdctl --system rdp set-tls-cert ~gnome-remote-desktop/.local/share/gnome-remote-desktop/tls.crt</span><br><span class="line"><span class="built_in">sudo</span> grdctl --system rdp set-credentials <span class="string">&quot;<span class="variable">$&#123;RDP_USER&#125;</span>&quot;</span> <span class="string">&quot;<span class="variable">$&#123;RDP_PASS&#125;</span>&quot;</span></span><br><span class="line"><span class="built_in">sudo</span> grdctl --system rdp <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+接続しても画面が真っ黒・・・</li>
+<li>networkmanager<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S networkmanager</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <tags>
         <tag>raspberrypi</tag>
         <tag>archlinux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GNOME Remote Desktop</title>
+    <url>/2025/03/30/GNOME-Remote-Desktop/</url>
+    <content><![CDATA[<p><img src="/images/gnome-remote-desktop.png"></p>
+<p>LinuxにGNOME Rmote Desktopを導入してクライアントからRDP接続してみました。<br>接続するとGDM画面からログインできます。</p>
+<p><a href="https://gitlab.gnome.org/GNOME/gnome-remote-desktop">https://gitlab.gnome.org/GNOME/gnome-remote-desktop</a></p>
+<span id="more"></span>
+
+<h3 id="環境と動作確認結果（途中）"><a href="#環境と動作確認結果（途中）" class="headerlink" title="環境と動作確認結果（途中）"></a>環境と動作確認結果（途中）</h3><p>3つのモードがあるようです。</p>
+<ul>
+<li>Remote assistance<br>既存のユーザセッション画面を共有する。</li>
+<li>Headless multi user remote login<br>画面のサイズ指定可能。GDMから操作可能。</li>
+<li>Headless (single user)<br>画面のサイズ指定可能。既存のユーザセッション画面とは別に画面表示する（セッション情報は共有しているっぽい）。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Server</th>
+<th align="left">OS</th>
+<th align="left">RA&nbsp;&nbsp;&nbsp;</th>
+<th align="left">HL-M</th>
+<th align="left">HL-S</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">PC</td>
+<td align="left">Arch</td>
+<td align="left">OK</td>
+<td align="left">OK</td>
+<td align="left">未</td>
+</tr>
+<tr>
+<td align="left">&nbsp;</td>
+<td align="left">Ubuntu</td>
+<td align="left">OK</td>
+<td align="left">未</td>
+<td align="left">未</td>
+</tr>
+<tr>
+<td align="left">RPi 4B</td>
+<td align="left">Arch</td>
+<td align="left">OK</td>
+<td align="left">未</td>
+<td align="left">OK</td>
+</tr>
+<tr>
+<td align="left">VBox</td>
+<td align="left">Arch</td>
+<td align="left">OK</td>
+<td align="left">未</td>
+<td align="left">未</td>
+</tr>
+<tr>
+<td align="left">&nbsp;</td>
+<td align="left">Ubuntu</td>
+<td align="left">未</td>
+<td align="left">未</td>
+<td align="left">未</td>
+</tr>
+</tbody></table>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="GRD-Remote-assistance"><a href="#GRD-Remote-assistance" class="headerlink" title="GRD - Remote assistance"></a>GRD - Remote assistance</h4><ol>
+<li><p>Generate a TLS key and certificate.</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.local/share/gnome-remote-desktop/</span><br><span class="line">openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 -subj /C=SE/ST=NONE/L=NONE/O=GNOME/CN=$(hostname) -out ~/.local/share/gnome-remote-desktop/tls.crt -keyout ~/.local/share/gnome-remote-desktop/tls.key</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Configure GNOME Remote Desktop:</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl rdp set-tls-key ~/.local/share/gnome-remote-desktop/tls.key</span><br><span class="line">grdctl rdp set-tls-cert ~/.local/share/gnome-remote-desktop/tls.crt</span><br><span class="line">grdctl rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br><span class="line">grdctl rdp <span class="built_in">enable</span></span><br><span class="line">grdctl rdp disable-view-only</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Enable system remote login service.</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></li>
+</ol>
+<div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="GRD-Headless-multi-user-remote-login"><a href="#GRD-Headless-multi-user-remote-login" class="headerlink" title="GRD - Headless multi user remote login"></a>GRD - Headless multi user remote login</h4><p>GDMにアクセスできます。</p>
+<ol>
+<li><p>Generate a TLS key and certificate.</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> -u gnome-remote-desktop sh -c <span class="string">&#x27;mkdir -p ~/.local/share/gnome-remote-desktop/&#x27;</span></span><br><span class="line"><span class="built_in">sudo</span> -u gnome-remote-desktop sh -c <span class="string">&quot;openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 -subj /C=SE/ST=NONE/L=NONE/O=GNOME/CN=<span class="subst">$(hostname)</span> -out ~/.local/share/gnome-remote-desktop/tls.crt -keyout ~/.local/share/gnome-remote-desktop/tls.key&quot;</span></span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p><code>/var/lib/gnome-remote-desktop/.local/share/gnome-remote-desktop/</code> に格納されます。</p>
+</div>
+</li>
+<li><p>Configure GNOME Remote Desktop:</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> grdctl --system rdp set-tls-key ~gnome-remote-desktop/.local/share/gnome-remote-desktop/tls.key</span><br><span class="line"><span class="built_in">sudo</span> grdctl --system rdp set-tls-cert ~gnome-remote-desktop/.local/share/gnome-remote-desktop/tls.crt</span><br><span class="line"><span class="built_in">sudo</span> grdctl --system rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br><span class="line"><span class="built_in">sudo</span> grdctl --system rdp <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Enable system remote login service.</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></li>
+</ol>
+<div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="GRD-Headless-single-user"><a href="#GRD-Headless-single-user" class="headerlink" title="GRD - Headless (single user)"></a>GRD - Headless (single user)</h4><ol>
+<li><p>Generate a TLS key and certificate.</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.local/share/gnome-remote-desktop/</span><br><span class="line">openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 -subj /C=SE/ST=NONE/L=NONE/O=GNOME/CN=$(hostname) -out ~/.local/share/gnome-remote-desktop/tls.crt -keyout ~/.local/share/gnome-remote-desktop/tls.key</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Configure GNOME Remote Desktop:</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl --headless rdp set-tls-key ~/.local/share/gnome-remote-desktop/tls.key</span><br><span class="line">grdctl --headless rdp set-tls-cert ~/.local/share/gnome-remote-desktop/tls.crt</span><br><span class="line">grdctl --headless rdp set-credentials</span><br><span class="line">grdctl --headless rdp <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Enable system remote login service.</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure></li>
+</ol>
+<div class="note info no-icon flat"><p>無効化&amp;停止コマンド</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
+<li>Windows<ul>
+<li>リモートデスクトップ接続(mstsc)</li>
+<li>mRemoteNG</li>
+</ul>
+</li>
+<li>Linux<ul>
+<li>remmina</li>
+<li>gnome-connetions</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>gnome</tag>
+        <tag>rdp</tag>
       </tags>
   </entry>
 </search>
