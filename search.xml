@@ -18845,12 +18845,12 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <td align="left">未</td>
 </tr>
 </tbody></table>
-<h3 id="構築-GUI"><a href="#構築-GUI" class="headerlink" title="構築 - GUI"></a>構築 - GUI</h3><h4 id="Desktop-Sharing"><a href="#Desktop-Sharing" class="headerlink" title="Desktop Sharing"></a>Desktop Sharing</h4><p><img src="/images/grd_desktop_sharing.png"></p>
+<h3 id="構築-GUIの場合"><a href="#構築-GUIの場合" class="headerlink" title="構築 - GUIの場合"></a>構築 - GUIの場合</h3><h4 id="Desktop-Sharing"><a href="#Desktop-Sharing" class="headerlink" title="Desktop Sharing"></a>Desktop Sharing</h4><p><img src="/images/grd_desktop_sharing.png"></p>
 <h4 id="Remote-Login"><a href="#Remote-Login" class="headerlink" title="Remote Login"></a>Remote Login</h4><p><img src="/images/grd_remote_login.png"></p>
 <div class="note info flat"><p>Remote Loginを有効にするとDesktop Sharingのポート番号が変更される。</p>
 </div>
 
-<h3 id="構築-CUI"><a href="#構築-CUI" class="headerlink" title="構築 - CUI"></a>構築 - CUI</h3><h4 id="GRD-Remote-assistance"><a href="#GRD-Remote-assistance" class="headerlink" title="GRD - Remote assistance"></a>GRD - Remote assistance</h4><ol>
+<h3 id="構築-CUIの場合"><a href="#構築-CUIの場合" class="headerlink" title="構築 - CUIの場合"></a>構築 - CUIの場合</h3><h4 id="GRD-Remote-assistance"><a href="#GRD-Remote-assistance" class="headerlink" title="GRD - Remote assistance"></a>GRD - Remote assistance</h4><ol>
 <li><p>Generate a TLS key and certificate.</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.local/share/gnome-remote-desktop/</span><br><span class="line">openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 -subj /C=SE/ST=NONE/L=NONE/O=GNOME/CN=$(hostname) -out ~/.local/share/gnome-remote-desktop/tls.crt -keyout ~/.local/share/gnome-remote-desktop/tls.key</span><br></pre></td></tr></table></figure>
 </li>
@@ -18859,8 +18859,6 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </li>
 <li><p>Enable remote assistance user service.</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure>
-  <div class="note info no-icon flat"><p>接続できなくなった場合は再度認証情報を設定する</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br></pre></td></tr></table></figure></div>
 </li>
 <li><p>Disable remote assistance user service.</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop.service</span><br></pre></td></tr></table></figure></li>
