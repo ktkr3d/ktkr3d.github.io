@@ -18881,8 +18881,6 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </li>
 <li><p>Configure GNOME Remote Desktop:</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl --headless rdp set-tls-key ~/.local/share/gnome-remote-desktop/tls.key</span><br><span class="line">grdctl --headless rdp set-tls-cert ~/.local/share/gnome-remote-desktop/tls.crt</span><br><span class="line">grdctl --headless rdp set-credentials <span class="comment"># Enter credentials via standard input</span></span><br><span class="line">grdctl --headless rdp <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
-  <div class="note info no-icon flat"><p>ポート番号を3391に変更する場合</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grdctl --headless rdp set-port 3391</span><br></pre></td></tr></table></figure></div>
 </li>
 <li><p>Enable headless single user service.</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure>
@@ -18890,6 +18888,11 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><p>Disable headless single user service.</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">disable</span> --now gnome-remote-desktop-headless.service</span><br></pre></td></tr></table></figure></li>
 </ol>
+<h3 id="監理画面"><a href="#監理画面" class="headerlink" title="監理画面"></a>監理画面</h3><h4 id="Desktop-Sharing"><a href="#Desktop-Sharing" class="headerlink" title="Desktop Sharing"></a>Desktop Sharing</h4><p><img src="/images/grd_desktop_sharing.png"></p>
+<h4 id="Remote-Login"><a href="#Remote-Login" class="headerlink" title="Remote Login"></a>Remote Login</h4><p><img src="/images/grd_remote_login.png"></p>
+<div class="note info flat"><p>Remote Loginを有効にするとDesktop Sharingのポート番号が変更されるようだ。</p>
+</div>
+
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>Windows<ul>
 <li>リモートデスクトップ接続(mstsc)</li>
