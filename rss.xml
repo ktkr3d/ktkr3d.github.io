@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 03 Apr 2025 10:45:05 GMT</pubDate>
+    <pubDate>Thu, 03 Apr 2025 11:23:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -211,6 +211,8 @@
       
       
       
+      
+      <category domain="https://ktkr3d.github.io/tags/vpn/">vpn</category>
       
       <category domain="https://ktkr3d.github.io/tags/wireguard/">wireguard</category>
       

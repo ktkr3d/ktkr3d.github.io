@@ -19114,18 +19114,21 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </li>
 </ul>
 </li>
+<li>インターネット回線はv6プラス</li>
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="v6プラス接続環境の調査"><a href="#v6プラス接続環境の調査" class="headerlink" title="v6プラス接続環境の調査"></a>v6プラス接続環境の調査</h4><ol>
 <li>公開IPv4アドレスと公開IPv6アドレスを確認<br>  <a href="https://test-ipv6.com/">https://test-ipv6.com/</a></li>
 <li>公開IPv6 アドレスから公開可能なポート番号を確認<br>  <a href="http://ipv4.web.fc2.com/map-e.html">http://ipv4.web.fc2.com/map-e.html</a></li>
-<li>公開するポート番号を決定<br>  例えば60000&#x2F;udp<br>  wireguardの使用プロトコルはudpになります。</li>
+<li>公開するポート番号を決定<br>  例えば60000&#x2F;udp  <div class="note info flat"><p>wireguardの使用プロトコルはudpです。</p>
+</div></li>
 <li>wireguardを構築するサーバのローカルIPアドレスを確認  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure>
   例えば192.168.11.24</li>
 <li>ルータでポートフォワード設定<br>  インターネットからの60000&#x2F;udpアクセスを192.168.11.24の60000&#x2F;udpに転送</li>
 </ol>
 <h4 id="wireguardのインストール"><a href="#wireguardのインストール" class="headerlink" title="wireguardのインストール"></a>wireguardのインストール</h4><ol>
 <li>インストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install wireguard</span><br></pre></td></tr></table></figure>
-  wireguardとwireguard-toolsパッケージがインストールされます。</li>
+  <div class="note info flat"><p>wireguardとwireguard-toolsパッケージがインストールされます。</p>
+</div></li>
 </ol>
 <h4 id="wireguard-uiのインストール"><a href="#wireguard-uiのインストール" class="headerlink" title="wireguard-uiのインストール"></a>wireguard-uiのインストール</h4><ol>
 <li>インストール<br>  <a href="https://github.com/ngoduykhanh/wireguard-ui/releases">https://github.com/ngoduykhanh/wireguard-ui/releases</a><br>  raspberry pi &#x2F; Ubuntu arm64 の場合はwireguard-ui-v0.6.2-linux-arm64.tar.gz  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">VERSION=v0.6.2</span><br><span class="line">wget https://github.com/ngoduykhanh/wireguard-ui/releases/download/<span class="variable">$&#123;VERSION&#125;</span>/wireguard-ui-<span class="variable">$&#123;VERSION&#125;</span>-linux-arm64.tar.gz</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /opt/wireguard</span><br><span class="line"><span class="built_in">sudo</span> tar xvf wireguard-ui-<span class="variable">$&#123;VERSION&#125;</span>-linux-arm64.tar.gz -C /opt/wireguard/</span><br></pre></td></tr></table></figure></li>
@@ -19140,8 +19143,8 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <figure class="highlight text"><figcaption><span>/etc/systemd/system/wgui.path</span></figcaption><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Watch /etc/wireguard/wg0.conf for changes</span><br><span class="line"></span><br><span class="line">[Path]</span><br><span class="line">PathModified=/etc/wireguard/wg0.conf</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></li>
 <li>サービスの有効化と起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> wgui.&#123;path,service&#125;</span><br><span class="line"><span class="built_in">sudo</span> systemctl start wgui.&#123;path,service&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="内部ネットワークへのアクセス許可"><a href="#内部ネットワークへのアクセス許可" class="headerlink" title="内部ネットワークへのアクセス許可"></a>内部ネットワークへのアクセス許可</h4><ol>
-<li>設定  <figure class="highlight text"><figcaption><span>/etc/sysctl.conf (27行目から)</span></figcaption><table><tr><td class="code"><pre><span class="line"># Uncomment the next line to enable packet forwarding for IPv4</span><br><span class="line">#net.ipv4.ip_forward=1</span><br><span class="line">net.ipv4.ip_forward=1</span><br><span class="line"></span><br><span class="line"># Uncomment the next line to enable packet forwarding for IPv6</span><br><span class="line">#  Enabling this option disables Stateless Address Autoconfiguration</span><br><span class="line">#  based on Router Advertisements for this host</span><br><span class="line">#net.ipv6.conf.all.forwarding=1</span><br><span class="line">net.ipv6.conf.all.forwarding=1</span><br></pre></td></tr></table></figure></li>
+<h4 id="内部ネットワークへの転送許可"><a href="#内部ネットワークへの転送許可" class="headerlink" title="内部ネットワークへの転送許可"></a>内部ネットワークへの転送許可</h4><ol>
+<li>設定  <figure class="highlight ini"><figcaption><span>/etc/sysctl.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Uncomment the next line to enable packet forwarding for IPv4</span></span><br><span class="line"><span class="comment">#net.ipv4.ip_forward=1</span></span><br><span class="line marked"><span class="attr">net.ipv4.ip_forward</span>=<span class="number">1</span></span><br></pre></td></tr></table></figure></li>
 <li>反映  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> sysctl -p</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="再起動"><a href="#再起動" class="headerlink" title="再起動"></a>再起動</h4><ol>
@@ -19181,6 +19184,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 </ol>
 ]]></content>
       <tags>
+        <tag>vpn</tag>
         <tag>wireguard</tag>
       </tags>
   </entry>
