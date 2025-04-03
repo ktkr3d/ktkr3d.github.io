@@ -18915,4 +18915,273 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
         <tag>rdp</tag>
       </tags>
   </entry>
+  <entry>
+    <title>wireguard-ui</title>
+    <url>/2025/04/03/wireguard-ui/</url>
+    <content><![CDATA[<p><img src="https://www.logo.wine/a/logo/WireGuard/WireGuard-Icon-Logo.wine.svg"></p>
+<p>wireguad-uiを使ってRaspberry Pi 4BにVPNサーバ環境を構築しました。</p>
+<p><a href="https://github.com/ngoduykhanh/wireguard-ui">https://github.com/ngoduykhanh/wireguard-ui</a></p>
+<style>
+                /* css part */
+                .gr-card {
+
+                    --gr-header-width-proportion: 10%;
+                    --gr-footer-width-proportion: 10%;
+                    --gr-content-width-proportion: 80%;
+
+                    --gr-header-min-width: 80px;
+                    --gr-footer-min-width: 80px;
+
+                    --gr-card-element-margin: 6px 10px 6px 10px; /* header content footer*/
+
+                    display: flex;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, .12);
+                    margin-bottom: 20px;
+                    vertical-align: middle;
+                    position: relative;
+                }
+
+                .gr-header {
+                    width: var(--gr-header-width-proportion);
+                    min-width: var(--gr-header-min-width);
+                    margin: var(--gr-card-element-margin);
+                    background-color: #fff;
+                    /* background-color: blueviolet; */
+                }
+
+                .gr-header img {
+                    width: 80px;
+                    height: 80px;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin: 0px;
+                }
+
+                .gr-content {
+                    width: var(--gr-content-width-proportion);
+                    margin: var(--gr-card-element-margin);
+                    background-color: #fff;
+                    text-align: left;
+                }
+
+                #gr-github-icon {
+                    font-size: 1.3rem;
+                }
+                .gr-fullname {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .gr-fullname p {
+                    line-height: 2rem;
+                    margin: 10px 0px 0px 0px;
+                    padding: 0;
+                    font-size: .83rem;
+                    font-weight: bolder;
+                }
+
+                .gr-description {
+                    font-size: .8rem;
+                    line-height: 1.6rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .gr-footer {
+                    width: var(--gr-footer-width-proportion);
+                    min-width: var(--gr-footer-min-width);
+                    margin: var(--gr-card-element-margin);
+                    display: flex;
+                    /* background-color: aqua; */
+                    background-color: #fff;
+                    position: relative;
+                    padding: 0px;
+                }
+
+                .gr-language-star {
+                    margin: auto auto 22px auto;
+                    text-align: center;
+                    opacity: 1;
+                }
+
+                .gr-language {
+                    font-size: .8rem;
+                    font-weight: 600;
+                    line-height: 2.2rem;
+                    color: #2070d3;
+                }
+
+                #gr-star-icon {
+                    font-size: .8rem;
+                    display: inherit;
+                }
+
+                .gr-card-toolbar{
+                    display:flex;
+                    width: 100%;
+                    height: 100%;
+
+                    position: absolute;
+
+                    opacity: 0;
+                    animation: fade-out;
+                    animation-duration: .4s;
+                    z-index: -1;
+                    /* background-color: #2070d3; */
+                }
+
+                .gr-repo-link {
+                    margin: auto;
+                }
+
+                #gr-repo-link-icon {
+                    font-size: 16px;
+                }
+                /* animation part */
+
+                @keyframes fade-in {
+                    0% {opacity: 0;}/*初始状态 透明度为0*/
+                    100% {opacity: 1;}/*结束状态 透明度为1*/
+                }
+
+                @keyframes fade-out {
+                    0% {opacity: 1;}/*初始状态 透明度为0*/
+                    100% {opacity: 0;}/*结束状态 透明度为1*/
+                }
+
+                .gr-card:hover .gr-language-star{
+                    opacity: 0;
+                    animation: fade-out;
+                    animation-duration: .3s;
+                }
+
+                .gr-card:hover .gr-card-toolbar{
+                    opacity: 1;
+                    animation: fade-in;
+                    animation-duration: .6s;
+                    z-index: 1;
+                }
+                </style>
+
+                <div class="gr-card">
+                    <div class="gr-header">
+                        <img src="https://avatars.githubusercontent.com/u/6447444?v=4" alt="">
+                    </div>
+                    <div class="gr-content">
+                        <div class="gr-fullname">
+                            <p><i class="fab fa-github fa-lg" aria-hidden="true" id="gr-github-icon"></i> ngoduykhanh/wireguard-ui</p>
+                        </div>
+                        <div class="gr-description">
+                            Wireguard web interface
+                        </div>
+                    </div>
+                    <div class="gr-footer">
+                        <div class="gr-language-star">
+                            <span class="gr-language">Go</span>
+                            <i class="far fa-star" aria-hidden="true" id='gr-star-icon'> 4.6k</i>
+                        </div>
+                        <div class="gr-card-toolbar">
+                            <div class="gr-repo-link">
+                                <a href="https://github.com/ngoduykhanh/wireguard-ui" target="_blank" rel="noopener noreferrer"
+                                    title="Open in a new TAB">
+                                    <i class="fas fa-external-link-square-alt fa-lg" aria-hidden="true" style="color: black;" id="gr-repo-link-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><p><img src="/images/wireguard-rpi4b.drawio.svg"></p>
+<ul>
+<li>Raspberry Pi 4B<ul>
+<li>Ubuntu 24.10 (arm64)<ul>
+<li>wireguard 1.0.20210914</li>
+<li>wireguard-ui v0.6.2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="v6プラス接続環境の調査"><a href="#v6プラス接続環境の調査" class="headerlink" title="v6プラス接続環境の調査"></a>v6プラス接続環境の調査</h4><ol>
+<li>公開IPv4アドレスと公開IPv6アドレスを確認<br>  <a href="https://test-ipv6.com/">https://test-ipv6.com/</a></li>
+<li>公開IPv6 アドレスから公開可能なポート番号を確認<br>  <a href="http://ipv4.web.fc2.com/map-e.html">http://ipv4.web.fc2.com/map-e.html</a></li>
+<li>公開するポート番号を決定<br>  例えば60000&#x2F;udp<br>  wireguardの使用プロトコルはudpになります。</li>
+<li>wireguardを構築するサーバのローカルIPアドレスを確認  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure>
+  例えば192.168.11.24</li>
+<li>ルータでポートフォワード設定<br>  インターネットからの60000&#x2F;udpアクセスを192.168.11.24の60000&#x2F;udpに転送</li>
+</ol>
+<h4 id="wireguardのインストール"><a href="#wireguardのインストール" class="headerlink" title="wireguardのインストール"></a>wireguardのインストール</h4><ol>
+<li>インストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install wireguard</span><br></pre></td></tr></table></figure>
+  wireguardとwireguard-toolsパッケージがインストールされます。</li>
+</ol>
+<h4 id="wireguard-uiのインストール"><a href="#wireguard-uiのインストール" class="headerlink" title="wireguard-uiのインストール"></a>wireguard-uiのインストール</h4><ol>
+<li>インストール<br>  <a href="https://github.com/ngoduykhanh/wireguard-ui/releases">https://github.com/ngoduykhanh/wireguard-ui/releases</a><br>  raspberry pi &#x2F; Ubuntu arm64 の場合はwireguard-ui-v0.6.2-linux-arm64.tar.gz  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">VERSION=v0.6.2</span><br><span class="line">wget https://github.com/ngoduykhanh/wireguard-ui/releases/download/<span class="variable">$&#123;VERSION&#125;</span>/wireguard-ui-<span class="variable">$&#123;VERSION&#125;</span>-linux-arm64.tar.gz</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /opt/wireguard</span><br><span class="line"><span class="built_in">sudo</span> tar xvf wireguard-ui-<span class="variable">$&#123;VERSION&#125;</span>-linux-arm64.tar.gz -C /opt/wireguard/</span><br></pre></td></tr></table></figure></li>
+<li>ユニットファイルの作成  <figure class="highlight bash"><figcaption><span>/etc/systemd/system/wgui-worker.service</span></figcaption><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=wireguard web ui</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">WorkingDirectory=/opt/wireguard</span><br><span class="line">ExecStart=/opt/wireguard/wireguard-ui</span><br><span class="line">Restart=always</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></li>
+<li>サービス有効化と起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> wgui-worker.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl start wgui-worker.service</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>この時、<code>/etc/wireguard/wg0.conf</code>が生成されます。</p>
+</div></li>
+</ol>
+<h4 id="wireguardの自動再起動設定"><a href="#wireguardの自動再起動設定" class="headerlink" title="wireguardの自動再起動設定"></a>wireguardの自動再起動設定</h4><p>&#x2F;etc&#x2F;wireguard&#x2F;wg0.confを監視してwireguardを自動再起動します。</p>
+<ol>
+<li>ユニットファイルの作成  <figure class="highlight text"><figcaption><span>/etc/systemd/system/wgui.service</span></figcaption><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Restart WireGuard</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=oneshot</span><br><span class="line">ExecStart=/usr/bin/systemctl restart wg-quick@wg0.service</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">RequiredBy=wgui.path</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><figcaption><span>/etc/systemd/system/wgui.path</span></figcaption><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Watch /etc/wireguard/wg0.conf for changes</span><br><span class="line"></span><br><span class="line">[Path]</span><br><span class="line">PathModified=/etc/wireguard/wg0.conf</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></li>
+<li>サービスの有効化と起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> wgui.&#123;path,service&#125;</span><br><span class="line"><span class="built_in">sudo</span> systemctl start wgui.&#123;path,service&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="内部ネットワークへのアクセス許可"><a href="#内部ネットワークへのアクセス許可" class="headerlink" title="内部ネットワークへのアクセス許可"></a>内部ネットワークへのアクセス許可</h4><ol>
+<li>設定  <figure class="highlight text"><figcaption><span>/etc/sysctl.conf (27行目から)</span></figcaption><table><tr><td class="code"><pre><span class="line"># Uncomment the next line to enable packet forwarding for IPv4</span><br><span class="line">#net.ipv4.ip_forward=1</span><br><span class="line">net.ipv4.ip_forward=1</span><br><span class="line"></span><br><span class="line"># Uncomment the next line to enable packet forwarding for IPv6</span><br><span class="line">#  Enabling this option disables Stateless Address Autoconfiguration</span><br><span class="line">#  based on Router Advertisements for this host</span><br><span class="line">#net.ipv6.conf.all.forwarding=1</span><br><span class="line">net.ipv6.conf.all.forwarding=1</span><br></pre></td></tr></table></figure></li>
+<li>反映  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> sysctl -p</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="再起動"><a href="#再起動" class="headerlink" title="再起動"></a>再起動</h4><ol>
+<li>再起動  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> reboot</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="wireguardネットワーク設定"><a href="#wireguardネットワーク設定" class="headerlink" title="wireguardネットワーク設定"></a>wireguardネットワーク設定</h4><ol>
+<li><p>wireguard-uiにアクセス<br>  <a href="http://192.168.11.24:5000/">http://192.168.11.24:5000</a></p>
+</li>
+<li><p>ログイン<br>  admin &#x2F; admin</p>
+  <div class="note info flat"><p>パスワードはUsers Settingsで変更します。</p>
+</div></li>
+<li><p>Wireguard Serverの設定<br>  下記を設定して<kbd>Save</kbd>を押下。</p>
+  <table>
+  <tr><td style="background: #f5f6f8"><b>Server Interface Addresses<td>10.252.1.1/24
+  <tr><td style="background: #f5f6f8"><b>Listen Port<td>60000
+  <tr><td style="background: #f5f6f8"><b>Port Up Script<td>iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+  <tr><td style="background: #f5f6f8"><b>Post Down Script<td>iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+  </table>
+</li>
+<li><p>Wireguard Clientsの設定<br>  <kbd>New Client</kbd>を押下して以下を設定し、<kbd>Submit</kbd></p>
+  <table>
+  <tr><td style="background: #f5f6f8"><b>Name<td>wg0-cl01
+  <tr><td style="background: #f5f6f8"><b>IP Allocation<td>10.252.1.2/32
+  <tr><td style="background: #f5f6f8"><b>Allowed IPs<td>192.168.11.24/32, 192.168.11.2/32
+  </table>
+</li>
+<li><p>反映<br><kbd>Apply Config</kbd></p>
+</li>
+</ol>
+<h3 id="クライアント端末の設定"><a href="#クライアント端末の設定" class="headerlink" title="クライアント端末の設定"></a>クライアント端末の設定</h3><h4 id="Androidの場合"><a href="#Androidの場合" class="headerlink" title="Androidの場合"></a>Androidの場合</h4><ol>
+<li>wireguardアプリをインストール</li>
+<li>wireguardアプリで<kbd>+</kbd>を押下</li>
+<li>QRコードをスキャンを選択</li>
+<li>wireguard-uiのクライアント画面で<kbd>QR code</kbd>を押下して画像をスキャン</li>
+<li>トンネル名を設定してオンにする</li>
+<li>接続に成功するとwireguard-uiのStatus画面で接続実績が記録される</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>wireguard</tag>
+      </tags>
+  </entry>
 </search>
