@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 04 Apr 2025 12:13:10 GMT</pubDate>
+    <pubDate>Fri, 04 Apr 2025 14:02:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Thu, 03 Apr 2025 00:31:08 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;https://www.logo.wine/a/logo/WireGuard/WireGuard-Icon-Logo.wine.svg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;wireguad-uiを使ってRaspberry Pi 4BにVPNサーバ環境を構築しました。&lt;br&gt;wireguad-uiはGUI操作でwireguardのサーバ用設定ファイル(wg0.conf)やクライアント用の設定ファイル&amp;#x2F;QRコードを生成できます。&lt;br&gt;また、Wake on LANの機能もあります。&lt;/p&gt;
+&lt;p&gt;wireguard-uiを使ってRaspberry Pi 4BにVPNサーバ環境を構築しました。&lt;br&gt;wireguard-uiはGUI操作でwireguardのサーバ用設定ファイル(wg0.conf)やクライアント用の設定ファイル&amp;#x2F;QRコードを生成できます。&lt;br&gt;また、Wake on LANの機能もあります。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/ngoduykhanh/wireguard-ui&quot;&gt;https://github.com/ngoduykhanh/wireguard-ui&lt;/a&gt;&lt;/p&gt;
 &lt;style&gt;
                 /* css part */
