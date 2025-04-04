@@ -18919,7 +18919,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     <title>wireguard-ui</title>
     <url>/2025/04/03/wireguard-ui/</url>
     <content><![CDATA[<p><img src="https://www.logo.wine/a/logo/WireGuard/WireGuard-Icon-Logo.wine.svg"></p>
-<p>wireguad-uiを使ってRaspberry Pi 4BにVPNサーバ環境を構築しました。</p>
+<p>wireguad-uiを使ってRaspberry Pi 4BにVPNサーバ環境を構築しました。<br>wireguad-uiはGUI操作でwireguardのサーバ用設定ファイル(wg0.conf)やクライアント用の設定ファイル&#x2F;QRコードを生成できます。<br>また、Wake on LANの機能をあります。</p>
 <p><a href="https://github.com/ngoduykhanh/wireguard-ui">https://github.com/ngoduykhanh/wireguard-ui</a></p>
 <style>
                 /* css part */
