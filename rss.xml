@@ -15,8 +15,30 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 01 Apr 2025 16:22:58 GMT</pubDate>
+    <pubDate>Sat, 05 Apr 2025 21:59:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>WireGuard Easy (wg-easy)</title>
+      <link>https://ktkr3d.github.io/2025/04/06/WireGuard-Easy-wg-easy/</link>
+      <guid>https://ktkr3d.github.io/2025/04/06/WireGuard-Easy-wg-easy/</guid>
+      <pubDate>Sat, 05 Apr 2025 20:38:15 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;https://www.logo.wine/a/logo/WireGuard/WireGuard-Icon-Logo.wine.svg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;WireGuard Easy(wg-easy)でVPN環境を構築してみました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/docker/">docker</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/wireguard/">wireguard</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/04/06/WireGuard-Easy-wg-easy/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>GNOME Remote Desktop</title>
@@ -488,27 +510,6 @@
       
       
       <comments>https://ktkr3d.github.io/2024/08/04/ble-sh/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Custom OSD</title>
-      <link>https://ktkr3d.github.io/2024/08/04/Custom-OSD/</link>
-      <guid>https://ktkr3d.github.io/2024/08/04/Custom-OSD/</guid>
-      <pubDate>Sat, 03 Aug 2024 16:51:36 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/custom-osd.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;GNOME Shellのボリューム変更や輝度変更のOSDは数値を表示しません。&lt;br&gt;Custom OSD拡張を利用して数値表示やスタイルのカスタマイズをします。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/6142/custom-osd/&quot;&gt;https://extensions.gnome.org/extension/6142/custom-osd/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/neuromorph/custom-osd&quot;&gt;https://github.com/neuromorph/custom-osd&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/gnome-shell/">gnome-shell</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2024/08/04/Custom-OSD/#disqus_thread</comments>
       
     </item>
     
