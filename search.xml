@@ -19187,7 +19187,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     <title>WireGuard Easy (wg-easy)</title>
     <url>/2025/04/06/WireGuard-Easy-wg-easy/</url>
     <content><![CDATA[<p><img src="https://www.logo.wine/a/logo/WireGuard/WireGuard-Icon-Logo.wine.svg"></p>
-<p>WireGuard Easy(wg-easy)でVPN環境を構築してみました。<br>Dockerであることと設定に必要な項目が少ないことから構築で迷うことはありません。<br>細かな制御をしたい場合はは設定ファイルを直接編集するようなことが必要かもしれません。</p>
+<p>WireGuard Easy(wg-easy)でVPN環境を構築してみました。<br>Dockerであることと設定に必要な項目が少ないことから構築で迷うことはありません。<br>細かな制御をしたい場合は設定ファイルを直接編集するようなことが必要かもしれません。</p>
 <style>
                 /* css part */
                 .gr-card {
