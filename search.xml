@@ -18918,8 +18918,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <entry>
     <title>Wireguard-ui</title>
     <url>/2025/04/03/wireguard-ui/</url>
-    <content><![CDATA[<p><img src="https://www.logo.wine/a/logo/WireGuard/WireGuard-Icon-Logo.wine.svg"></p>
-<p>Wireguard-uiを使ってRaspberry Pi 4BにVPNサーバ環境を構築しました。<br>Wireguard-uiはGUI操作でWireguardのサーバ用設定ファイル(wg0.conf)やクライアント用の設定ファイル&#x2F;QRコードを生成できます。<br>また、Wake on LANの機能もあります。</p>
+    <content><![CDATA[<p>Wireguard-uiを使ってRaspberry Pi 4BにVPNサーバ環境を構築しました。<br>Wireguard-uiはGUI操作でWireguardのサーバ用設定ファイル(wg0.conf)やクライアント用の設定ファイル&#x2F;QRコードを生成できます。<br>また、Wake on LANの機能もあります。</p>
 <p><a href="https://github.com/ngoduykhanh/wireguard-ui">https://github.com/ngoduykhanh/wireguard-ui</a></p>
 <style>
                 /* css part */
@@ -19152,7 +19151,9 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <div class="note info flat"><p>パスワードはUsers Settingsで変更します。</p>
 </div></li>
 <li><p>Global Settingsの設定<br>  MTUの値を削除して<kbd>Save</kbd></p>
-  <div class="note info flat"><p>私の環境ではMTUを設定すると通信が不安定になりました。</p>
+  <div class="note info flat"><p>私の環境ではデフォルトの1500や一般的な1420を設定すると通信が不安定になったので削除しました。</p>
+</div>
+  <div class="note info flat"><p><a href="https://www.speedguide.net/analyzer.php">https://www.speedguide.net/analyzer.php</a><br>もし設定するとしたら各接続拠点から上記サイトで調べたMTU値からIPv4なら60、IPv6なら80を引いた値の小さい方を設定します。<br>自宅PC：MTU 1460、MSS 1420 → MTU 1400<br>スマートフォン：MTU 1420、MSS 1380 → MTU 1360</p>
 </div>
 </li>
 <li><p>Wireguard Serverの設定<br>  下記を設定して<kbd>Save</kbd></p>
@@ -19186,8 +19187,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
   <entry>
     <title>WireGuard Easy (wg-easy)</title>
     <url>/2025/04/06/WireGuard-Easy-wg-easy/</url>
-    <content><![CDATA[<p><img src="https://www.logo.wine/a/logo/WireGuard/WireGuard-Icon-Logo.wine.svg"></p>
-<p>WireGuard Easy(wg-easy)でVPN環境を構築してみました。<br>Dockerであることと設定に必要な項目が少ないことから構築で迷うことはありません。<br>細かな制御をしたい場合は設定ファイルを直接編集するようなことが必要かもしれません。</p>
+    <content><![CDATA[<p>WireGuard Easy(wg-easy)でVPN環境を構築してみました。<br>Dockerであることと設定に必要な項目が少ないことから構築で迷うことはありません。<br>細かな制御をしたい場合は設定ファイルを直接編集するようなことが必要かもしれません。</p>
 <style>
                 /* css part */
                 .gr-card {
