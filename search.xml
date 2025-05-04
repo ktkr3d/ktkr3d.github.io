@@ -19064,4 +19064,72 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
         <tag>wireguard</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Windows 11 NAS</title>
+    <url>/2025/05/04/Windows-11-NAS/</url>
+    <content><![CDATA[<p><img src="https://www.logitec.co.jp/products/hd/lhrbnu3/images/img_05.jpg"></p>
+<p>古いWindows 10 ProマシンをWindows 11 ProにアップグレードしてNASとして利用します。Windows 10のHDDはMBRフォーマットでしたのでGPTフォーマットのSSDに移行しました。<br>しばらく利用しない時はリモートからスリープさせます。利用する際にはリモートからWake on LANで起動します。<br>私の持っている外付けディスクケースは電源連動のさせ方が少し複雑でしたが設定することにより安定して動作するようになりました。</p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Windows 10 Pro</li>
+<li>外付けディスクケースLHR-4BNHEU3</li>
+</ul>
+<h3 id="Windows-10パーティションの移行"><a href="#Windows-10パーティションの移行" class="headerlink" title="Windows 10パーティションの移行"></a>Windows 10パーティションの移行</h3><p>MBR HDD上のWindowsシステムパーティションをGPT SSDのパーティションに移行します。</p>
+<h4 id="HDDのWindowsパーティションサイズを変更"><a href="#HDDのWindowsパーティションサイズを変更" class="headerlink" title="HDDのWindowsパーティションサイズを変更"></a>HDDのWindowsパーティションサイズを変更</h4><p>パーティションを移動しやすいようにLinuxのgpartedでWindows 10のシステムパーティションを適当なサイズに縮小します。(例えば60,000MiB)<br>NTFSパーティションのコピーにCloneZillaを使う場合は不要な操作と思います。</p>
+<h4 id="Windowsパーティションの修復"><a href="#Windowsパーティションの修復" class="headerlink" title="Windowsパーティションの修復"></a>Windowsパーティションの修復</h4><p>一旦、Windowsでディスクを修復しておきます。（重要）<br>Windowsからは中身が正常に見えますがLinuxでは中身が参照できないという状態を回復できます。</p>
+<h4 id="SSDをGPTフォーマット"><a href="#SSDをGPTフォーマット" class="headerlink" title="SSDをGPTフォーマット"></a>SSDをGPTフォーマット</h4><p>LinuxのgpartedでSSDをGPTフォーマットして各パーティションを作成</p>
+<ul>
+<li>EFI用<br>fat32&#x2F;1000MiB</li>
+<li>Windows用<br>ntfs&#x2F;60000MiB</li>
+</ul>
+<h4 id="Windowsパーティションのコピー"><a href="#Windowsパーティションのコピー" class="headerlink" title="Windowsパーティションのコピー"></a>Windowsパーティションのコピー</h4><p>HDDのパーティションをSSDのパーティションにコピー</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">dd</span> <span class="keyword">if</span>=/dev/sdbX of=/dev/sdaX bs=4M status=progress</span><br></pre></td></tr></table></figure>
+<h4 id="パーティションの拡大"><a href="#パーティションの拡大" class="headerlink" title="パーティションの拡大"></a>パーティションの拡大</h4><p>gpartedでSSDのWindowsシステムパーティションを拡大</p>
+<h3 id="Windows-10のUEFIブート設定"><a href="#Windows-10のUEFIブート設定" class="headerlink" title="Windows 10のUEFIブート設定"></a>Windows 10のUEFIブート設定</h3><h4 id="EFIパーティションの構築"><a href="#EFIパーティションの構築" class="headerlink" title="EFIパーティションの構築"></a>EFIパーティションの構築</h4><p>Windows 10 インストーラディスクでブートしてトラブルシュートからコマンドプロンプトを実行</p>
+<ul>
+<li>EFIパーティションにドライブ文字Nをマッピング<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">diskpart</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">List disk</span><br><span class="line">select disk n</span><br><span class="line">list volume</span><br><span class="line">select volume m</span><br><span class="line">assign letter=N:</span><br><span class="line"><span class="keyword">Exit</span></span><br></pre></td></tr></table></figure>
+nはディスク番号(例: 0)、mはEFIパーティション番号</li>
+<li>ドライブNをfat32でフォーマット<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">format</span> N: /<span class="built_in">FS</span>:FAT32</span><br></pre></td></tr></table></figure></li>
+<li>ブートマネージャの設定<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">bcdboot C:\windows /s N: /f UEFI</span><br></pre></td></tr></table></figure></li>
+<li>ブートローダの修復<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">bootrec /fixboot</span><br></pre></td></tr></table></figure>
+エラーがでないことを確認</li>
+</ul>
+<h4 id="確認"><a href="#確認" class="headerlink" title="確認"></a>確認</h4><p>BIOSの設定をUEFI起動に切り替えてWindows 10が起動できることを確認</p>
+<h3 id="Windows-11にアップグレード"><a href="#Windows-11にアップグレード" class="headerlink" title="Windows 11にアップグレード"></a>Windows 11にアップグレード</h3><ul>
+<li>Windows 10で起動してWindows 11 インストーラISOをマウント</li>
+<li>インストール実行<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">setup /product server</span><br></pre></td></tr></table></figure>
+インストール中、1つ目の「個人用ファイルとアプリを引き継ぐ」を選択するとエラーがでたので２つ目の「個人用ファイルを引き継ぐ」を選択（アプリはひきつがない）</li>
+</ul>
+<h3 id="ディスクケースとPCの電源連動"><a href="#ディスクケースとPCの電源連動" class="headerlink" title="ディスクケースとPCの電源連動"></a>ディスクケースとPCの電源連動</h3><h4 id="ディスクケース側の電源連動モード設定"><a href="#ディスクケース側の電源連動モード設定" class="headerlink" title="ディスクケース側の電源連動モード設定"></a>ディスクケース側の電源連動モード設定</h4><ul>
+<li>LHR-4BNHEU3のSYNCボタンを3秒間押して電源連動スリープ機能を有効に設定<br>電源連動 LED（SYNC）がオレンジになることを確認</li>
+<li>パソコンが電源オフ&#x2F;スリープになるとディスクケースがスリープ状態になります。</li>
+</ul>
+<h4 id="Windows側の電源管理設定"><a href="#Windows側の電源管理設定" class="headerlink" title="Windows側の電源管理設定"></a>Windows側の電源管理設定</h4><ul>
+<li>デバイスマネージャから「ユニバーサルシリアルバスコントローラー」の下の「USB大容量記憶装置」のプロパティで「電源管理」タブの「電力の節約のために、コンピュータでこのデバイスの電源をオフにできるようにする」をオフ</li>
+</ul>
+<h3 id="Windowsの自動スリープ抑止"><a href="#Windowsの自動スリープ抑止" class="headerlink" title="Windowsの自動スリープ抑止"></a>Windowsの自動スリープ抑止</h3><h4 id="無人スリープタイムアウトの設定"><a href="#無人スリープタイムアウトの設定" class="headerlink" title="無人スリープタイムアウトの設定"></a>無人スリープタイムアウトの設定</h4><ul>
+<li>無人スリープタイムアウトの設定項目表示<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">powercfg -attributes SUB_SLEEP <span class="number">7</span>bc4a2f9-d8fc-<span class="number">4469</span>-b07b-<span class="number">33</span>eb785aaca0 -ATTRIB_HIDE</span><br></pre></td></tr></table></figure></li>
+<li>電源オプションの「システム無人スリープタイムアウト」で2分→0分</li>
+</ul>
+<h4 id="モダンスタンバイの状態確認"><a href="#モダンスタンバイの状態確認" class="headerlink" title="モダンスタンバイの状態確認"></a>モダンスタンバイの状態確認</h4><ul>
+<li>Windowsの電源設定を確認<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">powercfg /a</span><br></pre></td></tr></table></figure>
+「スタンバイ（S0 低電力アイドル）」が利用できない状態であることを確認</li>
+</ul>
+<h3 id="Wake-on-LAN"><a href="#Wake-on-LAN" class="headerlink" title="Wake on LAN"></a>Wake on LAN</h3><h4 id="サーバ"><a href="#サーバ" class="headerlink" title="サーバ"></a>サーバ</h4><p>UEFI設定のブートメニューでWake on LANを有効化</p>
+<h4 id="クライアントWindows"><a href="#クライアントWindows" class="headerlink" title="クライアントWindows"></a>クライアントWindows</h4><ul>
+<li>インストール<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">winget install --id DarkfullDante.wol </span><br></pre></td></tr></table></figure></li>
+<li>実行<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">wol -m=&quot;XX:XX:XX:XX:XX:XX&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="クライアントUbuntu"><a href="#クライアントUbuntu" class="headerlink" title="クライアントUbuntu"></a>クライアントUbuntu</h4><ul>
+<li>インストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install wakeonlan</span><br></pre></td></tr></table></figure></li>
+<li>実行<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wakeonlan wakeonlan XX:XX:XX:XX:XX:XX</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>windows</tag>
+        <tag>nas</tag>
+      </tags>
+  </entry>
 </search>

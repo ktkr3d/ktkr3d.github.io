@@ -15,8 +15,30 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 09 Apr 2025 14:56:32 GMT</pubDate>
+    <pubDate>Sun, 04 May 2025 12:50:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Windows 11 NAS</title>
+      <link>https://ktkr3d.github.io/2025/05/04/Windows-11-NAS/</link>
+      <guid>https://ktkr3d.github.io/2025/05/04/Windows-11-NAS/</guid>
+      <pubDate>Sun, 04 May 2025 05:15:49 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;https://www.logitec.co.jp/products/hd/lhrbnu3/images/img_05.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;古いWindows 10 ProマシンをWindows 11 ProにアップグレードしてNASとして利用します。Windows 10のHDDはMBRフォーマットでしたのでGPTフォーマットのSSDに移行しました。&lt;br&gt;しばらく利用しない時はリモートからスリープさせます。利用する際にはリモートからWake on LANで起動します。&lt;br&gt;私の持っている外付けディスクケースは電源連動のさせ方が少し複雑でしたが設定することにより安定して動作するようになりました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/nas/">nas</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/05/04/Windows-11-NAS/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>WireGuard Easy (wg-easy)</title>
@@ -488,31 +510,6 @@
       
       
       <comments>https://ktkr3d.github.io/2024/09/22/GNOME-47/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Trinket Button Custom</title>
-      <link>https://ktkr3d.github.io/2024/08/10/Trinket-Button-Custom/</link>
-      <guid>https://ktkr3d.github.io/2024/08/10/Trinket-Button-Custom/</guid>
-      <pubDate>Sat, 10 Aug 2024 09:40:53 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/trinket_button_custom.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;World of WarcraftのTrinket Button拡張機能をカスタマイズしてみました。&lt;br&gt;&lt;a href=&quot;https://wago.io/Nn9Hg5PH7&quot;&gt;https://wago.io/Nn9Hg5PH7&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Trinket Buttonは装備しているトリンケットが利用（Use）可能な場合にクリック可能なボタンとして表示します。&lt;br&gt;World of Warcraftではトリンケットの他に利用可能な装備としてメインハンドがあります。Trinket Buttonを改造してメインハンドにも対応させてみました。&lt;/p&gt;
-&lt;h4 id=&quot;2024-08-14-更新：WoW-11-0-2-対応&quot;&gt;&lt;a href=&quot;#2024-08-14-更新：WoW-11-0-2-対応&quot; class=&quot;headerlink&quot; title=&quot;2024&amp;#x2F;08&amp;#x2F;14 更新：WoW 11.0.2 対応&quot;&gt;&lt;/a&gt;2024&amp;#x2F;08&amp;#x2F;14 更新：WoW 11.0.2 対応&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;deprecatedなAPIを修正&lt;br&gt;&lt;a href=&quot;https://warcraft.wiki.gg/wiki/Patch_11.0.2/API_changes#Deprecated_API&quot;&gt;https://warcraft.wiki.gg/wiki/Patch_11.0.2/API_changes#Deprecated_API&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;仕様が変更されたAPIを修正&lt;br&gt;&lt;a href=&quot;https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCooldown&quot;&gt;https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCooldown&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2024/08/10/Trinket-Button-Custom/#disqus_thread</comments>
       
     </item>
     
