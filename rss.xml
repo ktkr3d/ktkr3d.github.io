@@ -15,8 +15,31 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 04 May 2025 13:28:19 GMT</pubDate>
+    <pubDate>Mon, 19 May 2025 09:32:53 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Reflector</title>
+      <link>https://ktkr3d.github.io/2025/05/19/Reflector/</link>
+      <guid>https://ktkr3d.github.io/2025/05/19/Reflector/</guid>
+      <pubDate>Mon, 19 May 2025 09:05:23 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/reflector.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Reflectorを利用してArch Linuxのミラーリストを週次で自動更新するように設定します。タイマー&lt;code&gt;reflector.timer&lt;/code&gt;が週次で&lt;code&gt;reflector.service&lt;/code&gt;をキックします。即時実行したい場合は&lt;code&gt;reflector.service&lt;/code&gt;を開始(start)します。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://man.archlinux.org/man/reflector.1&quot;&gt;https://man.archlinux.org/man/reflector.1&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://wiki.archlinux.jp/index.php/Reflector&quot;&gt;https://wiki.archlinux.jp/index.php/Reflector&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/reflector/">reflector</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/05/19/Reflector/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Windows 11 NAS</title>
@@ -482,34 +505,6 @@
       
       
       <comments>https://ktkr3d.github.io/2024/10/17/fish_starship/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>GNOME 47</title>
-      <link>https://ktkr3d.github.io/2024/09/22/GNOME-47/</link>
-      <guid>https://ktkr3d.github.io/2024/09/22/GNOME-47/</guid>
-      <pubDate>Sun, 22 Sep 2024 02:05:29 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/gnome-47.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://release.gnome.org/47/&quot;&gt;https://release.gnome.org/47/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;GNOME 47がリリースされたのでインストールしてみました。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Chromeはtext-input v3に対応したのでWaylandモードで日本語入力可能です&lt;/li&gt;
-&lt;li&gt;vscodeはWaylandモードで日本語入力に対応していません&lt;/li&gt;
-&lt;li&gt;code-serverは日本語入力できます(Chromeだから)&lt;br&gt;日本語入力中の文字列の背景が黄色になっているのはなんとかしたい&lt;/li&gt;
-&lt;li&gt;GNOME Shell拡張のPenguin: AI Chatbotを使ってみました&lt;br&gt;&lt;a href=&quot;https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/&quot;&gt;https://extensions.gnome.org/extension/7338/penguin-ai-chatbot/&lt;/a&gt;&lt;br&gt;とりあえずデフォルトの無料AIモデルに質問してみましたが調整が必要そうですね。。。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2025-02-04-更新&quot;&gt;&lt;a href=&quot;#2025-02-04-更新&quot; class=&quot;headerlink&quot; title=&quot;2025-02-04 更新&quot;&gt;&lt;/a&gt;2025-02-04 更新&lt;/h4&gt;&lt;p&gt;タスクトレイのアイコン上にエラーが表示されるので修正する&lt;br&gt;無効な値を指定している&lt;code&gt;icon_name&lt;/code&gt;行をコメントアウトする&lt;br&gt;アイコンはstylesheet.cssで指定している&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;figcaption&gt;&lt;span&gt;extensions.js&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;title function_&quot;&gt;_init&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;extension&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// --- INITIALIZATION AND ICON IN TOPBAR&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;variable language_&quot;&gt;super&lt;/span&gt;.&lt;span class=&quot;title function_&quot;&gt;_init&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0.0&lt;/span&gt;, &lt;span class=&quot;title function_&quot;&gt;_&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Penguin: AI Chatbot&amp;#x27;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;variable language_&quot;&gt;this&lt;/span&gt;.&lt;span class=&quot;property&quot;&gt;extension&lt;/span&gt; = extension&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;variable language_&quot;&gt;this&lt;/span&gt;.&lt;span class=&quot;title function_&quot;&gt;_loadSettings&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;variable language_&quot;&gt;this&lt;/span&gt;.&lt;span class=&quot;title function_&quot;&gt;add_child&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;St&lt;/span&gt;.&lt;span class=&quot;title class_&quot;&gt;Icon&lt;/span&gt;(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// icon_name: &amp;#x27;Penguin: AI Chatbot&amp;#x27;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;style_class&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&amp;#x27;icon&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;));&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/gnome/">gnome</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2024/09/22/GNOME-47/#disqus_thread</comments>
       
     </item>
     
