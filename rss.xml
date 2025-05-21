@@ -15,8 +15,35 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 19 May 2025 09:32:53 GMT</pubDate>
+    <pubDate>Wed, 21 May 2025 14:09:45 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>AnduinOS</title>
+      <link>https://ktkr3d.github.io/2025/05/21/AnduinOS/</link>
+      <guid>https://ktkr3d.github.io/2025/05/21/AnduinOS/</guid>
+      <pubDate>Wed, 21 May 2025 13:33:48 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/anduinos.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;AnduinOSを試してみました。インタフェースに癖がないのですぐに使えそうですね。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.anduinos.com/&quot;&gt;https://www.anduinos.com/&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;https://www.anduinos.com/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://docs.anduinos.com/Assets/logo.svg&quot; alt=&quot;AnduinOS&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;AnduinOS&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;AnduinOS is a custom Ubuntu-based Linux distribution that aims to facilitate developers transitioning from Windows to Linux by maintaining familiar operational habits and workflows.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/anduinos/">anduinos</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/05/21/AnduinOS/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Reflector</title>
@@ -483,28 +510,6 @@
       
       
       <comments>https://ktkr3d.github.io/2024/10/29/Lutris-Arch-Linux/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>fish + starship</title>
-      <link>https://ktkr3d.github.io/2024/10/17/fish_starship/</link>
-      <guid>https://ktkr3d.github.io/2024/10/17/fish_starship/</guid>
-      <pubDate>Thu, 17 Oct 2024 08:10:51 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/fish_starship_arch.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;fish(friendly interactive shell)はユーザフレンドリーなコマンドラインシェルです。シェルをfishに切り替えてみました。&lt;br&gt;またプロンプトを装飾するためにStarshipを使ってみました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/fish/">fish</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/starship/">starship</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2024/10/17/fish_starship/#disqus_thread</comments>
       
     </item>
     
