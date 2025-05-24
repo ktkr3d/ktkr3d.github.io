@@ -19199,7 +19199,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>「英語、日本語(Mozc)、日本語(Mozc)」を削除</li>
 <li>あらためて「日本語(Mozc)」を追加</li>
 </ul>
-<h4 id="vi"><a href="#vi" class="headerlink" title="vi"></a>vi</h4><p>viがインストールされていないのでvimをインストールしました。</p>
+<h4 id="vi"><a href="#vi" class="headerlink" title="vi"></a>vi</h4><p>viがインストールされていないのでvimをインストールしました。<br><a href="https://docs.anduinos.com/CHANGELOG.html#v132-under-development">https://docs.anduinos.com/CHANGELOG.html#v132-under-development</a><br>次のバージョンv1.3.2では追加されるみたい</p>
 <h4 id="gnome-terminal"><a href="#gnome-terminal" class="headerlink" title="gnome-terminal"></a>gnome-terminal</h4><p>デフォルトのターミナルアプリケーションはコンソール(kgx)です。gnome-terminalをインストールして起動してみたところkgxが起動します。なんでだろう。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">which</span> gnome-terminal</span><br><span class="line">/usr/local/bin/gnome-terminal</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">ls</span> -l /usr/local/bin/gnome-terminal</span><br><span class="line">lrwxrwxrwx 1 root root 12  5月 21 21:03 /usr/local/bin/gnome-terminal -&gt; /usr/bin/kgx*</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">ls</span> -l /usr/bin/gnome-terminal</span><br><span class="line">-rwxr-xr-x 1 root root 93984  3月 18 04:57 /usr/bin/gnome-terminal*</span><br></pre></td></tr></table></figure>
 <p>なるほど</p>
