@@ -15,8 +15,29 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 24 May 2025 22:52:22 GMT</pubDate>
+    <pubDate>Sun, 25 May 2025 16:32:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>archiso</title>
+      <link>https://ktkr3d.github.io/2025/05/26/archiso/</link>
+      <guid>https://ktkr3d.github.io/2025/05/26/archiso/</guid>
+      <pubDate>Sun, 25 May 2025 15:23:53 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/archiso-gnome.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;archisoでGNOMEデスクトップ環境のArch LinuxライブISOを作成します。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jorisdrenth/archiso-liveusb-gnome&quot;&gt;https://github.com/jorisdrenth/archiso-liveusb-gnome&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/archiso/">archiso</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/05/26/archiso/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>AnduinOS</title>
@@ -491,25 +512,6 @@
       
       
       <comments>https://ktkr3d.github.io/2024/11/07/Libadwaita-Apps/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Lutris - Arch Linux</title>
-      <link>https://ktkr3d.github.io/2024/10/29/Lutris-Arch-Linux/</link>
-      <guid>https://ktkr3d.github.io/2024/10/29/Lutris-Arch-Linux/</guid>
-      <pubDate>Tue, 29 Oct 2024 11:45:49 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/lutris-archlinux.png&quot;&gt;&lt;br&gt;Arch LinuxにLutrisをインストールしてみました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/lutris/">lutris</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2024/10/29/Lutris-Arch-Linux/#disqus_thread</comments>
       
     </item>
     

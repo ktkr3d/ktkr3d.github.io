@@ -19210,4 +19210,35 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
         <tag>anduinos</tag>
       </tags>
   </entry>
+  <entry>
+    <title>archiso</title>
+    <url>/2025/05/26/archiso/</url>
+    <content><![CDATA[<p><img src="/images/archiso-gnome.png"></p>
+<p>archisoでGNOMEデスクトップ環境のArch LinuxライブISOを作成します。</p>
+<p><a href="https://github.com/jorisdrenth/archiso-liveusb-gnome">https://github.com/jorisdrenth/archiso-liveusb-gnome</a></p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Arch Linux</li>
+<li>archiso 83-1</li>
+<li>Arch Linux Live USB with Gnome<br><a href="https://github.com/jorisdrenth/archiso-liveusb-gnome">https://github.com/jorisdrenth/archiso-liveusb-gnome</a></li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
+<li>Install archiso   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S archiso</span><br></pre></td></tr></table></figure></li>
+<li>clone  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/jorisdrenth/archiso-liveusb-gnome.git</span><br></pre></td></tr></table></figure></li>
+<li>comment out   <figure class="highlight text"><figcaption><span>archiso-liveusb-gnome/packages.x86_64</span></figcaption><table><tr><td class="code"><pre><span class="line"># virtualbox-guest-utils #-nox</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><figcaption><span>archiso-liveusb-gnome/packages.x86_64</span></figcaption><table><tr><td class="code"><pre><span class="line"># xorg # VMSVGA support (Virtualbox, VMware)</span><br></pre></td></tr></table></figure></li>
+<li>build  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mkarchiso -v -o ./ archiso-liveusb-gnome</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">archlinux-2025.05.25-x86_64.iso</span><br></pre></td></tr></table></figure></li>
+<li>clean  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf ./work</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ul>
+<li>壁紙のカスタマイズ<br>.&#x2F;airootfs&#x2F;usr&#x2F;local&#x2F;share&#x2F;backgrounds&#x2F;wallpaper.png</li>
+<li>GUIインストーラ<br>calamares</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>archiso</tag>
+      </tags>
+  </entry>
 </search>
