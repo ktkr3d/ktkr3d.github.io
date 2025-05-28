@@ -15,8 +15,30 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 25 May 2025 16:32:44 GMT</pubDate>
+    <pubDate>Wed, 28 May 2025 15:24:39 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>archiso-gnome</title>
+      <link>https://ktkr3d.github.io/2025/05/28/archiso-gnome/</link>
+      <guid>https://ktkr3d.github.io/2025/05/28/archiso-gnome/</guid>
+      <pubDate>Tue, 27 May 2025 21:16:46 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/archiso-gnome-desktop.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;archisoでGNOMEデスクトップ環境のライブISOイメージを作成してみました。&lt;br&gt;Fluentテーマを利用していてすっきりした見た目になっています。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome/">gnome</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/archiso/">archiso</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/05/28/archiso-gnome/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>archiso</title>
@@ -26,7 +48,7 @@
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/archiso-gnome.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;archisoでGNOMEデスクトップ環境のArch LinuxライブISOを作成します。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/jorisdrenth/archiso-liveusb-gnome&quot;&gt;https://github.com/jorisdrenth/archiso-liveusb-gnome&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.jp/index.php/Archiso&quot;&gt;https://wiki.archlinux.jp/index.php/Archiso&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
@@ -480,38 +502,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/01/23/tray-launcher/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Libadwaita Apps</title>
-      <link>https://ktkr3d.github.io/2024/11/07/Libadwaita-Apps/</link>
-      <guid>https://ktkr3d.github.io/2024/11/07/Libadwaita-Apps/</guid>
-      <pubDate>Thu, 07 Nov 2024 04:51:11 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/libadwaita_apps_on_windows.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;GTK4, libAdwaitaのアプリケーションをWindowsでビルド&amp;amp;実行してみました。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://gtk-rs.org/gtk4-rs/stable/latest/book/introduction.html&quot;&gt;https://gtk-rs.org/gtk4-rs/stable/latest/book/introduction.html&lt;/a&gt;&lt;br&gt;GUI development with Rust and GTK 4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以下はlibadwaitaアプリケーション情報&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://apps.gnome.org/&quot;&gt;https://apps.gnome.org/&lt;/a&gt;&lt;br&gt;Apps for GNOME&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arewelibadwaitayet.com/&quot;&gt;https://arewelibadwaitayet.com/&lt;/a&gt;&lt;br&gt;Discover the Best LibAdwaita Apps in One Place&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/valpackett/awesome-gtk&quot;&gt;https://github.com/valpackett/awesome-gtk&lt;/a&gt;&lt;br&gt;Awesome GTK - Collections of awesome native open-source GTK (4 and 3) applications.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/gtk/">gtk</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2024/11/07/Libadwaita-Apps/#disqus_thread</comments>
       
     </item>
     

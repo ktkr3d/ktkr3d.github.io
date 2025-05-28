@@ -19215,29 +19215,221 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
     <url>/2025/05/26/archiso/</url>
     <content><![CDATA[<p><img src="/images/archiso-gnome.png"></p>
 <p>archisoでGNOMEデスクトップ環境のArch LinuxライブISOを作成します。</p>
-<p><a href="https://github.com/jorisdrenth/archiso-liveusb-gnome">https://github.com/jorisdrenth/archiso-liveusb-gnome</a></p>
+<p><a href="https://wiki.archlinux.jp/index.php/Archiso">https://wiki.archlinux.jp/index.php/Archiso</a></p>
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
 <li>Arch Linux</li>
 <li>archiso 83-1</li>
 <li>Arch Linux Live USB with Gnome<br><a href="https://github.com/jorisdrenth/archiso-liveusb-gnome">https://github.com/jorisdrenth/archiso-liveusb-gnome</a></li>
+<li>alg-gnome (devel-iso branch)<br><a href="https://github.com/arch-linux-gui/alg-gnome">https://github.com/arch-linux-gui/alg-gnome</a></li>
+</ul>
+<p>TODO</p>
+<ul>
+<li>User Theme<br>Enable<br>Select<br>org&#x2F;gnome&#x2F;shell&#x2F;extensions&#x2F;user-theme<br>name&#x3D;’Fluent-round-Dark’</li>
+<li>ArcMenu<br>Button<br>Button Foreground Color</li>
+<li>ArcMenu Pinned Apps<br>welcome</li>
+<li>Overview<br>Disable</li>
+<li>Power Icon<br>Just Perfection?</li>
+<li>vim<br>&#x2F;org&#x2F;gnome&#x2F;shell&#x2F;extensions&#x2F;openweatherrefined&#x2F;<br>[&#x2F;]<br>actual-city&#x3D;0<br>has-run&#x3D;true<br>locs&#x3D;[(uint32 0, ‘東京都, 日本’, uint32 0, ‘35.6768601,139.7638947’)]<br>my-loc-prov&#x3D;’ipinfoio’<br>position-in-panel&#x3D;’left’</li>
+</ul>
+<h3 id="archiso"><a href="#archiso" class="headerlink" title="archiso"></a>archiso</h3><ol>
+<li>archisoのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S archiso</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="Arch-Linux-Live-USB-with-Gnomeの場合"><a href="#Arch-Linux-Live-USB-with-Gnomeの場合" class="headerlink" title="Arch Linux Live USB with Gnomeの場合"></a>Arch Linux Live USB with Gnomeの場合</h3><p>インストーラは含まれません。<br>xorgでエラーが出たので一旦削除。</p>
+<h4 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h4><ol>
+<li>リポジトリをクローン  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/jorisdrenth/archiso-liveusb-gnome.git</span><br><span class="line"><span class="built_in">cd</span> archiso-liveusb-gnome</span><br></pre></td></tr></table></figure></li>
+<li>パッケージを編集</li>
+</ol>
+<ul>
+<li>削除<figure class="highlight text"><figcaption><span>./packages.x86_64</span></figcaption><table><tr><td class="code"><pre><span class="line"># virtualbox-guest-utils #-nox</span><br><span class="line"># xorg # VMSVGA support (Virtualbox, VMware)</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>virtualbox-guest-utilsとxorgでエラーが発生するので一旦コメントアウト</p>
+</div></li>
+</ul>
+<ol start="3">
+<li>ISOをビルド  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mkarchiso -v -o ./ ./</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">./archlinux-YYYY.MM.DD-x86_64.iso</span><br></pre></td></tr></table></figure>
+  1.9GB</li>
+<li>作業ディレクトリの削除  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf ./work</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="archiso-gnome"><a href="#archiso-gnome" class="headerlink" title="archiso-gnome"></a>archiso-gnome</h3><ul>
+<li><p>archiso-gnome</p>
+</li>
+<li><p>archiso-repo<br>paru<br>fastfetch<br>calamares<br>calamares-config<br>mkinitcpio-openswap</p>
+<p><a href="https://aur.archlinux.org/packages?K=gnome-shell-extension-">https://aur.archlinux.org/packages?K=gnome-shell-extension-</a><br>gnome-shell-extension-arc-menu<br>gnome-shell-extension-dash-to-panel<br>gnome-shell-extension-blur-my-shell<br>gnome-shell-extension-openweatherrefined<br>gnome-shell-extension-caffeine</p>
+<p>gnome-shell-extension-argos</p>
+</li>
+</ul>
+<h3 id="ALG-GNOMEの場合"><a href="#ALG-GNOMEの場合" class="headerlink" title="ALG GNOMEの場合"></a>ALG GNOMEの場合</h3><p>一般的なGNOMEデスクトップ環境のライブISO。<br>インストーラあり。<br>(&#x2F;usr&#x2F;lib&#x2F;libkpmcore.so.12 -&gt; &#x2F;usr&#x2F;lib&#x2F;libkpmcore.so.)</p>
+<h4 id="カスタマイズ方法"><a href="#カスタマイズ方法" class="headerlink" title="カスタマイズ方法"></a>カスタマイズ方法</h4><ul>
+<li>個別壁紙<ul>
+<li>ファイル<ul>
+<li>&#x2F;usr&#x2F;local&#x2F;share&#x2F;backgrounds&#x2F; に配置</li>
+</ul>
+</li>
+<li>有効化設定<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-background</li>
+</ul>
+</li>
+<li>AUR パッケージ<ul>
+<li>ファイル<ul>
+<li>個別リポジトリを作成してパッケージを導入(*.pkg.tar.zst)</li>
+</ul>
+</li>
+<li>有効化設定<br>.&#x2F;pacman.conf<br>.&#x2F;packages_x86_64</li>
+</ul>
+</li>
+<li>GNOME Shell extensions<ul>
+<li>ファイル<br>以下の方法がある。今回は2番目の方法を選択。<ul>
+<li>AURパッケージがあれば、個別リポジトリを作成してパッケージを導入(*.pkg.tar.zst)</li>
+<li>&#x2F;etc&#x2F;skel&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F; に配置</li>
+<li>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F; に配置</li>
+<li>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F; に配置</li>
+</ul>
+</li>
+<li>有効化設定<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-enabled-extensions</li>
+<li>個別設定<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-extensions-*******</li>
+</ul>
+</li>
+<li>GNOME Shellテーマ<ul>
+<li>ファイル<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;themes&#x2F;</li>
+<li>有効化設定<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-enabled-extensions<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-extensions-usertheme</li>
+</ul>
+</li>
+<li>GTKテーマ<ul>
+<li>ファイル<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;themes&#x2F;</li>
+<li>有効化設定<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-interface</li>
+</ul>
+</li>
+<li>アイコン<ul>
+<li>ファイル<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;icons&#x2F;</li>
+<li>有効化設定<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-interface</li>
+</ul>
+</li>
+<li>カーソル<ul>
+<li>ファイル<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;cursors&#x2F;</li>
+<li>有効化設定<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-interface</li>
+</ul>
+</li>
+<li>ArcMenuピン止め<ul>
+<li>有効化設定<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-extensions-arcmenu</li>
+</ul>
+</li>
+<li>ダッシュボードピン止め<ul>
+<li>有効化設定<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-interface</li>
+</ul>
+</li>
+<li>日付を非表示して時刻のみ表示<ul>
+<li>有効化設定<br>.&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;00-interface</li>
+</ul>
+</li>
+</ul>
+<h2 id="TODOwelcome-スキップ-org-gnome-shell-welcome-dialog-last-shown-version-‘48-2’max-min-gsettings-set-org-gnome-desktop-wm-preferences-button-layout-“-minimize-maximize-close”dconf-editor"><a href="#TODOwelcome-スキップ-org-gnome-shell-welcome-dialog-last-shown-version-‘48-2’max-min-gsettings-set-org-gnome-desktop-wm-preferences-button-layout-“-minimize-maximize-close”dconf-editor" class="headerlink" title="TODOwelcome スキップ  org.gnome.shell welcome-dialog-last-shown-version ‘48.2’max&#x2F;min  gsettings set org.gnome.desktop.wm.preferences button-layout “:minimize,maximize,close”dconf-editor"></a>TODO<br>welcome スキップ<br>  org.gnome.shell welcome-dialog-last-shown-version ‘48.2’<br>max&#x2F;min<br>  gsettings set org.gnome.desktop.wm.preferences button-layout “:minimize,maximize,close”<br>dconf-editor</h2><p>arcmenu アップデート通知無視</p>
+<p>cd .local&#x2F;share&#x2F;glib-2.0&#x2F;schemas&#x2F;<br>glib-compile-schemas .</p>
+<p>into my .local&#x2F;share&#x2F;glib-2.0&#x2F;schemas&#x2F;org.gnome.shell.extensions.ding.gschema.xml then ran the schema compiler in that directory glib-compile-schemas and the desktop icons all popped up.</p>
+<h4 id="構築-1"><a href="#構築-1" class="headerlink" title="構築"></a>構築</h4><ol>
+<li>リポジトリをクローン  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/arch-linux-gui/alg-gnome.git -b devel-iso</span><br><span class="line"><span class="built_in">cd</span> alg-gnome</span><br></pre></td></tr></table></figure></li>
+<li>パッケージを編集</li>
+</ol>
+<ul>
+<li>追加<figure class="highlight text"><figcaption><span>./packages.x86_64</span></figcaption><table><tr><td class="code"><pre><span class="line">   </span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li><p>gnome-shell-extension<br>  .&#x2F;airootfs&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;</p>
+</li>
+<li><p>user profile database<br>  .&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;profile&#x2F;user</p>
+</li>
+<li><p>wallpaper</p>
+</li>
+<li><p>themes</p>
+</li>
+<li><p>ISOをビルド</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mkarchiso -v -o ./ ./</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">./alg-gnome-YYYY.MM-x86_64.iso</span><br></pre></td></tr></table></figure>
+<p>  2.8GB</p>
+</li>
+<li><p>作業ディレクトリの削除</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf ./work</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>  gnome-shell-extension-dash-to-panel<br>  gnome-shell-extension-arc-menu<br>  extension-manager</p>
+<p>makepkg –printsrcinfo &gt; .SRCINFO<br>makepkg -efi</p>
+<p>[alg-repo]<br>SigLevel &#x3D; Optional TrustedOnly<br>Server &#x3D; <a href="https://arch-linux-gui.github.io/$repo/$arch">https://arch-linux-gui.github.io/$repo/$arch</a></p>
+]]></content>
+      <tags>
+        <tag>archiso</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>archiso-gnome</title>
+    <url>/2025/05/28/archiso-gnome/</url>
+    <content><![CDATA[<p><img src="/images/archiso-gnome-desktop.png"></p>
+<p>archisoでGNOMEデスクトップ環境のライブISOイメージを作成してみました。<br>Fluentテーマを利用していてすっきりした見た目になっています。</p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Arch Linux</li>
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
-<li>Install archiso   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S archiso</span><br></pre></td></tr></table></figure></li>
-<li>clone  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/jorisdrenth/archiso-liveusb-gnome.git</span><br></pre></td></tr></table></figure></li>
-<li>comment out   <figure class="highlight text"><figcaption><span>archiso-liveusb-gnome/packages.x86_64</span></figcaption><table><tr><td class="code"><pre><span class="line"># virtualbox-guest-utils #-nox</span><br></pre></td></tr></table></figure>
-  <figure class="highlight text"><figcaption><span>archiso-liveusb-gnome/packages.x86_64</span></figcaption><table><tr><td class="code"><pre><span class="line"># xorg # VMSVGA support (Virtualbox, VMware)</span><br></pre></td></tr></table></figure></li>
-<li>build  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mkarchiso -v -o ./ archiso-liveusb-gnome</span><br></pre></td></tr></table></figure>
-  <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">archlinux-2025.05.25-x86_64.iso</span><br></pre></td></tr></table></figure></li>
-<li>clean  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf ./work</span><br></pre></td></tr></table></figure></li>
+<li>インストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S archiso</span><br></pre></td></tr></table></figure></li>
+<li>プロジェクトディレクトリの作成  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/repos</span><br><span class="line"><span class="built_in">cp</span> -r /usr/share/archiso/configs/releng/ archiso-gnome</span><br><span class="line"><span class="built_in">cd</span> archiso-gnome</span><br></pre></td></tr></table></figure></li>
+<li>ISOをビルド  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">time</span> <span class="built_in">sudo</span> mkarchiso -v -o ./ ./</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>N100で7分30秒<br>サイズは1.2GB</p>
+</div></li>
+<li>作業ディレクトリの削除  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf work</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ul>
-<li>壁紙のカスタマイズ<br>.&#x2F;airootfs&#x2F;usr&#x2F;local&#x2F;share&#x2F;backgrounds&#x2F;wallpaper.png</li>
-<li>GUIインストーラ<br>calamares</li>
+<h3 id="カスタマイズ方針"><a href="#カスタマイズ方針" class="headerlink" title="カスタマイズ方針"></a>カスタマイズ方針</h3><ul>
+<li>ブートローダはGRUB</li>
+<li>デスクトップ環境はGNOME</li>
+<li>GNOME Shell拡張機能を有効化</li>
+<li>テーマはFluent round </li>
+<li>GUIインストーラCalamaresを組み込み（対応中）</li>
+</ul>
+<h3 id="カスタマイズ"><a href="#カスタマイズ" class="headerlink" title="カスタマイズ"></a>カスタマイズ</h3><h4 id="リポジトリ（検討中）"><a href="#リポジトリ（検討中）" class="headerlink" title="リポジトリ（検討中）"></a>リポジトリ（検討中）</h4><p>AURパッケージや独自パッケージをインストールするために独自リポジトリを作成します。</p>
+<ol>
+<li>リポジトリの作成<br>  <a href="https://github.com/ktkr3d/arch-repo">https://github.com/ktkr3d/arch-repo</a></li>
+<li>パッケージの登録<br>  paru<br>  fastfetch<br>  calamares<br>  calamares-config<br>  mkinitcpio-openswap</li>
+<li>リポジトリの有効化<br>  .&#x2F;pacman.conf</li>
+</ol>
+<h4 id="インストールするパッケージ"><a href="#インストールするパッケージ" class="headerlink" title="インストールするパッケージ"></a>インストールするパッケージ</h4><ol>
+<li>ファイル<br>  .&#x2F;packages.x86_64</li>
+<li>パッケージ</li>
+</ol>
+<ul>
+<li>archisoデフォルトパッケージ</li>
+<li>GNOME</li>
+<li>GUIインストーラCalamares</li>
+<li>ブラウザ</li>
+<li>アプリケーション</li>
+<li>テーマ</li>
+<li>bluetooth</li>
+<li>フォント</li>
+<li>プリンタ</li>
+<li>AURヘルパー</li>
+<li>GPUドライバ</li>
+</ul>
+<ol start="3">
+<li>GNOME Shell拡張機能<br>3.1 パッケージ<br>  gnome-shell-extension-arc-menu<br>  gnome-shell-extension-dash-to-panel<br>  gnome-shell-extension-caffeine<br>  gnome-shell-extension-desktop-icons-ng<br>3.2 ファイル<br>  gnome-shell-extension-blur-my-shell<br>  gnome-shell-extension-openweatherrefined<br>  gnome-shell-extension-argos<br>  gnome-shell-extension-azwallpaper<br>  gnome-shell-extension-custom-osd<br>  gnome-shell-extension-date-menu-formatter<br>  gnome-shell-extension-forge<br>  gnome-shell-extension-kimpanel</li>
+</ol>
+<h4 id="テーマ"><a href="#テーマ" class="headerlink" title="テーマ"></a>テーマ</h4><p>fluent-icon-theme<br>fluent-cursor-theme<br>fluent-gtk-theme<br>Fluent round wallpapers<br><a href="https://store.kde.org/p/1574124">https://store.kde.org/p/1574124</a></p>
+<h4 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h4><ol>
+<li>dconf</li>
+</ol>
+<ul>
+<li>gdm</li>
+<li>user</li>
+</ul>
+<ol start="2">
+<li>ユーザ設定<br>  .&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;</li>
+</ol>
+<ul>
+<li>背景画像(org&#x2F;gnome&#x2F;desktop&#x2F;background)</li>
+<li>インタフェース(org&#x2F;gnome&#x2F;desktop&#x2F;interface)</li>
+<li>ウィンドウボタン(org&#x2F;gnome&#x2F;desktop&#x2F;wm&#x2F;preferences)</li>
+<li>GNOME Shell(org&#x2F;gnome&#x2F;shell)<br>拡張機能の有効化<br>お気に入りアプリ<br>ツアーのスキップ</li>
+<li>各GNOME Shell拡張機能の設定(org&#x2F;gnome&#x2F;shell&#x2F;extensions&#x2F;***)</li>
 </ul>
 ]]></content>
       <tags>
+        <tag>gnome</tag>
         <tag>archiso</tag>
       </tags>
   </entry>
