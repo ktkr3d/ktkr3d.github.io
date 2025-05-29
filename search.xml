@@ -19279,14 +19279,16 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li><p>リポジトリディレクトリの作成</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> -p /opt/custom-repo/x86_64</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chown</span> -R <span class="variable">$USER</span>:<span class="variable">$GROUP</span> /opt/custom-repo</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>パッケージファイルの準備<br>  AURヘルパーparuのキャッシュディレクトリ<code>~/.cache/paru/clone/</code>配下から過去にインストールしたパッケージファイルを抽出できます。</p>
+<li><p>パッケージファイルの準備<br>  インストール済のAURパッケージを更新します。</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru</span><br></pre></td></tr></table></figure>
+<p>  AURヘルパーparuのキャッシュディレクトリ<code>~/.cache/paru/clone/</code>配下から過去にインストールしたパッケージファイルを抽出できます。最新バージョンを利用します。</p>
   <figure class="highlight bash"><figcaption><span>例</span></figcaption><table><tr><td class="code"><pre><span class="line">extension-manager-0.6.3-3-x86_64.pkg.tar.zst</span><br><span class="line">fluent-cursor-theme-git-2025.02.26.r6.ge8ac55a-1-any.pkg.tar.zst</span><br><span class="line">fluent-gtk-theme-2025.04.17-1-any.pkg.tar.zst</span><br><span class="line">fluent-icon-theme-git-2025.02.26.r6.ge8ac55a-1-any.pkg.tar.zst</span><br><span class="line">gnome-shell-extension-blur-my-shell-68-1-any.pkg.tar.zst</span><br><span class="line">gnome-shell-extension-openweatherrefined-139-1-any.pkg.tar.zst</span><br><span class="line">paru-bin-2.0.4-3-x86_64.pkg.tar.zst</span><br><span class="line">ttf-hackgen-2.10.0-1-any.pkg.tar.zst</span><br><span class="line">yay-12.5.0-1-x86_64.pkg.tar.zst</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>パッケージファイルのコードを修正したい場合</p>
+<li><p>パッケージファイルのコードを修正したい場合<br>  例えば拡張機能のmetadata.jsonを修正したい場合</p>
   <figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">paru -G gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">cd gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">makepkg -s</span><br></pre></td></tr></table></figure>
-<p>  File-Rollerでソースアーカイブ(*.tar.gz)を開いてコードを修正して上書き保存</p>
+<p>  File-Rollerでソースアーカイブ(*.tar.gz)を開いてmetadata.jsonを修正して上書き保存</p>
   <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">makepkg -f -<span class="selector-tag">A</span> <span class="attr">--skipchecksums</span></span><br></pre></td></tr></table></figure>
-<p>  パッケージ(*.pkg.tar.zst)が生成される<br>  インストール確認は</p>
+<p>  パッケージ(*.pkg.tar.zst)が生成される。<br>  インストール確認する。</p>
   <figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">sudo</span> pacman -U <span class="regexp">*.pkg.tar.zst</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>パッケージファイルの配置<br>  パッケージファイル<code>*.pkg.tar.zst</code>をカスタムリポジトリディレクトリ<code>/opt/custom-repo/x86_64/</code>に配置します。</p>
@@ -19320,6 +19322,20 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
   <div class="note info flat"><p>N100 CPUで24分で生成し、サイズは2.7GB</p>
 </div></li>
 </ol>
+<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ul>
+<li>ソースアーカイブ内ファイルの差し替え手順整理、コマンド化<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -tvf openweatherrefined-v139.tar.gz | grep metadata.json</span><br><span class="line">tar -xvf openweatherrefined-v139.tar.gz gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><figcaption><span>gnome-openweather-139/metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;shell-version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="string">&quot;45&quot;</span><span class="punctuation">,</span> <span class="string">&quot;46&quot;</span><span class="punctuation">,</span> <span class="string">&quot;47&quot;</span><span class="punctuation">,</span> <span class="string">&quot;48&quot;</span> <span class="punctuation">]</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -uvfz openweatherrefined-v139.tar.gz gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure></li>
+<li>GUIインストーラの組み込み</li>
+<li>構築手順整備</li>
+<li>GitHubにプロジェクトを登録</li>
+<li>生成したISOファイルをどこかに配置</li>
+<li>CI</li>
+<li>サイズ最適化（パッケージ削減）</li>
+<li>起動速度最適化</li>
+<li>天気の拡張の比較&#x2F;選択</li>
+<li>電源アイコンの非表示(Just Perfectionかdconfで)</li>
+</ul>
 ]]></content>
       <tags>
         <tag>gnome</tag>
