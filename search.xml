@@ -19311,12 +19311,15 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>背景画像(org&#x2F;gnome&#x2F;desktop&#x2F;background)の設定</li>
 <li>インタフェース(org&#x2F;gnome&#x2F;desktop&#x2F;interface)の設定</li>
 <li>ウィンドウボタン(org&#x2F;gnome&#x2F;desktop&#x2F;wm&#x2F;preferences)の設定</li>
-<li>GNOME Shell(org&#x2F;gnome&#x2F;shell)の設定<br>拡張機能の有効化<br>お気に入りアプリ<br>ツアーのスキップ</li>
+<li>GNOME Shell(org&#x2F;gnome&#x2F;shell)の設定<br>拡張機能の有効化、お気に入りアプリの指定、ツアーのスキップ 等</li>
 <li>各GNOME Shell拡張機能(org&#x2F;gnome&#x2F;shell&#x2F;extensions&#x2F;***)の設定  <div class="note info flat"><p>現在の設定値の確認は<code>dconf-editor</code><br>設定値のエクスポートは<code>dconf dump &lt;パス&gt;</code></p>
 </div></li>
 </ul>
-<h4 id="ISO生成"><a href="#ISO生成" class="headerlink" title="ISO生成"></a>ISO生成</h4>  <div class="note info flat"><p>N100 CPUで24分で生成し、サイズは2.7GB</p>
-</div>
+<h4 id="ISO生成"><a href="#ISO生成" class="headerlink" title="ISO生成"></a>ISO生成</h4><ol>
+<li>ISOをビルド  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf work</span><br><span class="line"><span class="keyword">time</span> <span class="built_in">sudo</span> mkarchiso -v -o ./ ./</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>N100 CPUで24分で生成し、サイズは2.7GB</p>
+</div></li>
+</ol>
 ]]></content>
       <tags>
         <tag>gnome</tag>
