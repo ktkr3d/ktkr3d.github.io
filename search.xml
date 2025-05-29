@@ -19368,65 +19368,67 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
 <li>Arch Linux</li>
 </ul>
-<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
-<li>インストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S archiso</span><br></pre></td></tr></table></figure></li>
-<li>プロジェクトディレクトリの作成  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/repos</span><br><span class="line"><span class="built_in">cp</span> -r /usr/share/archiso/configs/releng/ archiso-gnome</span><br><span class="line"><span class="built_in">cd</span> archiso-gnome</span><br></pre></td></tr></table></figure></li>
-<li>ISOをビルド  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">time</span> <span class="built_in">sudo</span> mkarchiso -v -o ./ ./</span><br></pre></td></tr></table></figure>
-  <div class="note info flat"><p>N100で7分30秒<br>サイズは1.2GB</p>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><p>一旦、カスタマイズ前の状態でISOを作成してみます。</p>
+<ol>
+<li>archisoをインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S archiso</span><br></pre></td></tr></table></figure></li>
+<li>プロジェクトディレクトリを作成  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> -r /usr/share/archiso/configs/releng/ archiso-gnome</span><br><span class="line"><span class="built_in">cd</span> archiso-gnome</span><br></pre></td></tr></table></figure></li>
+<li>ISOをビルド  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf work</span><br><span class="line"><span class="keyword">time</span> <span class="built_in">sudo</span> mkarchiso -v -o ./ ./</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>N100 CPUで7分30秒で生成し、サイズは1.2GB</p>
 </div></li>
-<li>作業ディレクトリの削除  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf work</span><br></pre></td></tr></table></figure></li>
+<li>VirtualBox等で生成されたISOが起動するか確認する</li>
 </ol>
-<h3 id="カスタマイズ方針"><a href="#カスタマイズ方針" class="headerlink" title="カスタマイズ方針"></a>カスタマイズ方針</h3><ul>
+<h3 id="カスタマイズ"><a href="#カスタマイズ" class="headerlink" title="カスタマイズ"></a>カスタマイズ</h3><h4 id="カスタマイズ方針"><a href="#カスタマイズ方針" class="headerlink" title="カスタマイズ方針"></a>カスタマイズ方針</h4><ul>
 <li>ブートローダはGRUB</li>
 <li>デスクトップ環境はGNOME</li>
 <li>GNOME Shell拡張機能を有効化</li>
-<li>テーマはFluent round </li>
-<li>GUIインストーラCalamaresを組み込み（対応中）</li>
+<li>テーマはFluent</li>
+<li>できるだけパッケージを利用する(後でアップデートできるように)</li>
+<li>GUIインストーラCalamaresを有効化（調査中）</li>
 </ul>
-<h3 id="カスタマイズ"><a href="#カスタマイズ" class="headerlink" title="カスタマイズ"></a>カスタマイズ</h3><h4 id="リポジトリ（検討中）"><a href="#リポジトリ（検討中）" class="headerlink" title="リポジトリ（検討中）"></a>リポジトリ（検討中）</h4><p>AURパッケージや独自パッケージをインストールするために独自リポジトリを作成します。</p>
+<h4 id="カスタムローカルリポジトリ"><a href="#カスタムローカルリポジトリ" class="headerlink" title="カスタムローカルリポジトリ"></a>カスタムローカルリポジトリ</h4><p>AURパッケージや独自パッケージをインストールするためにカスタムローカルリポジトリを作成します。</p>
 <ol>
-<li>リポジトリの作成<br>  <a href="https://github.com/ktkr3d/arch-repo">https://github.com/ktkr3d/arch-repo</a></li>
-<li>パッケージの登録<br>  paru<br>  fastfetch<br>  calamares<br>  calamares-config<br>  mkinitcpio-openswap</li>
-<li>リポジトリの有効化<br>  .&#x2F;pacman.conf</li>
-</ol>
-<h4 id="インストールするパッケージ"><a href="#インストールするパッケージ" class="headerlink" title="インストールするパッケージ"></a>インストールするパッケージ</h4><ol>
-<li>ファイル<br>  .&#x2F;packages.x86_64</li>
-<li>パッケージ</li>
+<li><p>リポジトリディレクトリの作成</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> -p /opt/custom-repo/x86_64</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chown</span> -R <span class="variable">$USER</span>:<span class="variable">$GROUP</span> /opt/custom-repo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>パッケージの登録</p>
+</li>
 </ol>
 <ul>
-<li>archisoデフォルトパッケージ</li>
-<li>GNOME</li>
-<li>GUIインストーラCalamares</li>
-<li>ブラウザ</li>
-<li>アプリケーション</li>
-<li>テーマ</li>
-<li>bluetooth</li>
-<li>フォント</li>
-<li>プリンタ</li>
-<li>AURヘルパー</li>
-<li>GPUドライバ</li>
+<li><p>パッケージファイルのコピー<br>paruのキャッシュディレクトリ<code>~/.cache/paru/clone/</code>配下のパッケージ<code>*.pkg.tar.zst</code>をカスタムリポジトリディレクトリ<code>/opt/custom-repo/x86_64/</code>にコピーします。</p>
+<figure class="highlight bash"><figcaption><span>例</span></figcaption><table><tr><td class="code"><pre><span class="line">extension-manager-0.6.3-3-x86_64.pkg.tar.zst</span><br><span class="line">fluent-cursor-theme-git-2025.02.26.r6.ge8ac55a-1-any.pkg.tar.zst</span><br><span class="line">fluent-gtk-theme-2025.04.17-1-any.pkg.tar.zst</span><br><span class="line">fluent-icon-theme-git-2025.02.26.r6.ge8ac55a-1-any.pkg.tar.zst</span><br><span class="line">gnome-shell-extension-blur-my-shell-68-1-any.pkg.tar.zst</span><br><span class="line">gnome-shell-extension-openweatherrefined-139-1-any.pkg.tar.zst</span><br><span class="line">paru-bin-2.0.4-3-x86_64.pkg.tar.zst</span><br><span class="line">ttf-hackgen-2.10.0-1-any.pkg.tar.zst</span><br><span class="line">yay-12.5.0-1-x86_64.pkg.tar.zst</span><br></pre></td></tr></table></figure></li>
+<li><p>パッケージを修正したい場合</p>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">paru -G gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">cd gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">makepkg -s</span><br></pre></td></tr></table></figure>
+<p>File-Rollerでソースアーカイブ(*.tar.gz)を開いてコードを修正してソースアーカイブに上書き保存</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">makepkg -f -<span class="selector-tag">A</span> <span class="attr">--skipchecksums</span></span><br></pre></td></tr></table></figure>
+<p>パッケージ(*.pkg.tar.zst)が生成される<br>インストール確認は</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">sudo</span> pacman -U <span class="regexp">*.pkg.tar.zst</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>パッケージの登録</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/custom-repo/x86_64/</span><br><span class="line"><span class="built_in">rm</span> custom-repo.*</span><br><span class="line">repo-add /opt/custom-repo/x86_64/custom-repo.db.tar.zst /opt/custom-repo/x86_64/*.pkg.tar.zst</span><br></pre></td></tr></table></figure></li>
 </ul>
 <ol start="3">
-<li>GNOME Shell拡張機能<br>3.1 パッケージ<br>  gnome-shell-extension-arc-menu<br>  gnome-shell-extension-dash-to-panel<br>  gnome-shell-extension-caffeine<br>  gnome-shell-extension-desktop-icons-ng<br>3.2 ファイル<br>  gnome-shell-extension-blur-my-shell<br>  gnome-shell-extension-openweatherrefined<br>  gnome-shell-extension-argos<br>  gnome-shell-extension-azwallpaper<br>  gnome-shell-extension-custom-osd<br>  gnome-shell-extension-date-menu-formatter<br>  gnome-shell-extension-forge<br>  gnome-shell-extension-kimpanel</li>
+<li>カスタムローカルリポジトリの参照設定  <figure class="highlight ini"><figcaption><span>./pacman.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[custom-repo]</span></span><br><span class="line"><span class="attr">SigLevel</span> = Optional TrustAll</span><br><span class="line"><span class="attr">Server</span> = file:///opt/<span class="variable">$repo</span>/<span class="variable">$arch</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="テーマ"><a href="#テーマ" class="headerlink" title="テーマ"></a>テーマ</h4><p>fluent-icon-theme<br>fluent-cursor-theme<br>fluent-gtk-theme<br>Fluent round wallpapers<br><a href="https://store.kde.org/p/1574124">https://store.kde.org/p/1574124</a></p>
-<h4 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h4><ol>
-<li>dconf</li>
-</ol>
+<h4 id="インストールするパッケージ"><a href="#インストールするパッケージ" class="headerlink" title="インストールするパッケージ"></a>インストールするパッケージ</h4><p>インストールしたいパッケージ名を設定ファイル<code>./packages.x86_64</code>に追記する。</p>
+<h4 id="インストールするファイル"><a href="#インストールするファイル" class="headerlink" title="インストールするファイル"></a>インストールするファイル</h4><p>インストールしたいファイルをディレクトリ<code>./airootfs/</code>配下に格納する。</p>
 <ul>
-<li>gdm</li>
-<li>user</li>
+<li>壁紙の場合<br><code>./airootfs/usr/local/share/backgrouns/</code></li>
+<li>ユーザのホームディレクトリに配置したい場合(<code>.bashrc</code>等)<br><code>./airootfs/etc/skel/</code></li>
 </ul>
-<ol start="2">
-<li>ユーザ設定<br>  .&#x2F;airootfs&#x2F;etc&#x2F;dconf&#x2F;db&#x2F;local.d&#x2F;</li>
+<h4 id="dconf設定"><a href="#dconf設定" class="headerlink" title="dconf設定"></a>dconf設定</h4><ol>
+<li>データベースの作成<br>  <code>./airootfs/etc/dconf/</code>配下にgdmとuserのデータベースを作成する。</li>
+<li>ユーザ設定<br>  <code>./airootfs/etc/dconf/db/local.d/</code>に設定ファイルを格納する。</li>
 </ol>
 <ul>
 <li>背景画像(org&#x2F;gnome&#x2F;desktop&#x2F;background)</li>
 <li>インタフェース(org&#x2F;gnome&#x2F;desktop&#x2F;interface)</li>
 <li>ウィンドウボタン(org&#x2F;gnome&#x2F;desktop&#x2F;wm&#x2F;preferences)</li>
 <li>GNOME Shell(org&#x2F;gnome&#x2F;shell)<br>拡張機能の有効化<br>お気に入りアプリ<br>ツアーのスキップ</li>
-<li>各GNOME Shell拡張機能の設定(org&#x2F;gnome&#x2F;shell&#x2F;extensions&#x2F;***)</li>
+<li>各GNOME Shell拡張機能の設定(org&#x2F;gnome&#x2F;shell&#x2F;extensions&#x2F;***)  <div class="note info flat"><p>現在の設定値の確認は<code>dconf-editor</code><br>設定値のエクスポートは<code>dconf dump &lt;パス&gt;</code></p>
+</div></li>
 </ul>
+<h4 id="ISO生成"><a href="#ISO生成" class="headerlink" title="ISO生成"></a>ISO生成</h4>  <div class="note info flat"><p>N100 CPUで24分で生成し、サイズは2.7GB</p>
+</div>
 ]]></content>
       <tags>
         <tag>gnome</tag>
