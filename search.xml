@@ -19286,9 +19286,9 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
   <figure class="highlight bash"><figcaption><span>例</span></figcaption><table><tr><td class="code"><pre><span class="line">extension-manager-0.6.3-3-x86_64.pkg.tar.zst</span><br><span class="line">fluent-cursor-theme-git-2025.02.26.r6.ge8ac55a-1-any.pkg.tar.zst</span><br><span class="line">fluent-gtk-theme-2025.04.17-1-any.pkg.tar.zst</span><br><span class="line">fluent-icon-theme-git-2025.02.26.r6.ge8ac55a-1-any.pkg.tar.zst</span><br><span class="line">gnome-shell-extension-blur-my-shell-68-1-any.pkg.tar.zst</span><br><span class="line">gnome-shell-extension-openweatherrefined-139-1-any.pkg.tar.zst</span><br><span class="line">paru-bin-2.0.4-3-x86_64.pkg.tar.zst</span><br><span class="line">ttf-hackgen-2.10.0-1-any.pkg.tar.zst</span><br><span class="line">yay-12.5.0-1-x86_64.pkg.tar.zst</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>パッケージファイルのコードを修正したい場合<br>  例えば拡張機能のmetadata.jsonを修正したい場合</p>
-  <figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">paru -G gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">cd gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">makepkg -s</span><br></pre></td></tr></table></figure>
+  <figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">paru -G gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">cd gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">makepkg -o</span><br></pre></td></tr></table></figure>
 <p>  File-Rollerでソースアーカイブ(*.tar.gz)を開いてmetadata.jsonを修正して上書き保存</p>
-  <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">makepkg -f -<span class="selector-tag">A</span> <span class="attr">--skipchecksums</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">makepkg -f -e <span class="comment">--skipchecksums</span></span><br></pre></td></tr></table></figure>
 <p>  パッケージ(*.pkg.tar.zst)が生成される。<br>  インストール確認する。</p>
   <figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">sudo</span> pacman -U <span class="regexp">*.pkg.tar.zst</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -19324,10 +19324,10 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </div></li>
 </ol>
 <h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ul>
-<li>ソースアーカイブ内ファイルの差し替え手順整理、コマンド化<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -tvf openweatherrefined-v139.tar.gz | grep metadata.json</span><br><span class="line">tar -xvf openweatherrefined-v139.tar.gz gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure>
+<li>ソースアーカイブ内ファイルの差し替え手順整理、コマンド化<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -tvf openweatherrefined-v139.tar.gz | grep metadata.json</span><br><span class="line">tar -xvf openweatherrefined-v139.tar.gz gnome-openweather-139/metadata.json</span><br><span class="line">sed -i <span class="string">&quot;s/\&quot;47\&quot; ]/\&quot;47\&quot;, \&quot;48\&quot; ]/&quot;</span> gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure>
 <figure class="highlight json"><figcaption><span>gnome-openweather-139/metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;shell-version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="string">&quot;45&quot;</span><span class="punctuation">,</span> <span class="string">&quot;46&quot;</span><span class="punctuation">,</span> <span class="string">&quot;47&quot;</span><span class="punctuation">,</span> <span class="string">&quot;48&quot;</span> <span class="punctuation">]</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -uvfz openweatherrefined-v139.tar.gz gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure></li>
-<li>GUIインストーラの組み込み</li>
+<li>GUIインストーラの組み込み<br>calamares-3.3.8.tar.gz</li>
 <li>構築手順整備</li>
 <li>GitHubにプロジェクトを登録</li>
 <li>生成したISOファイルをどこかに配置</li>
