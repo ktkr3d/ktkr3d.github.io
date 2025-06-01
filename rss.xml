@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 01 Jun 2025 05:11:01 GMT</pubDate>
+    <pubDate>Sun, 01 Jun 2025 05:22:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,12 +25,14 @@
       <pubDate>Sat, 31 May 2025 20:36:07 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/calamares.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;GUIインストーラCalamaresをカスタマイズしてみました。&lt;br&gt;カスタマイズしたCalamaresを組み込んだライブISOイメージで起動し、Arch Linuxをインストールして、Arch Linuxが起動しました！&lt;/p&gt;
+&lt;p&gt;GUIインストーラCalamaresをカスタマイズしてみました。&lt;br&gt;カスタマイズしたCalamaresを組み込んだライブISOイメージで起動し、Arch Linuxをインストールして、Arch Linuxが起動しました。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/calamares_restarted.png&quot;&gt;&lt;/p&gt;</description>
       
       
       
       
+      
+      <category domain="https://ktkr3d.github.io/tags/archiso/">archiso</category>
       
       <category domain="https://ktkr3d.github.io/tags/calamares/">calamares</category>
       
