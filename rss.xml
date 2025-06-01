@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 01 Jun 2025 09:13:54 GMT</pubDate>
+    <pubDate>Sun, 01 Jun 2025 10:06:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,15 @@
       <pubDate>Sat, 31 May 2025 20:36:07 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/calamares.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;GUIインストーラCalamaresをカスタマイズしてみました。&lt;br&gt;カスタマイズしたCalamaresを組み込んだライブISOイメージで起動し、Arch Linuxをインストールして、Arch Linuxが起動しました。&lt;/p&gt;
+&lt;p&gt;GUIインストーラCalamaresをカスタマイズしてみました。&lt;/p&gt;
+&lt;a href=&quot;https://calamares.io/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://raw.githubusercontent.com/calamares/calamares/calamares/src/branding/default/squid.png&quot; alt=&quot;Calamares&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;Calamares&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
+
+&lt;p&gt;カスタマイズしたCalamaresを組み込んだライブISOイメージで起動し、Arch Linuxをインストールして、Arch Linuxが起動しました。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/calamares_restarted.png&quot;&gt;&lt;/p&gt;</description>
       
       
