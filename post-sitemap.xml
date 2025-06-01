@@ -10,7 +10,15 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2025/06/01/calamares/</loc>
-        <lastmod>2025-06-01T05:25:46.129Z</lastmod>
+        <lastmod>2025-06-01T08:50:55.094Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2025/05/21/AnduinOS/</loc>
+        <lastmod>2025-06-01T07:38:54.819Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -27,14 +35,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2025/05/26/archiso/</loc>
         <lastmod>2025-05-29T20:01:08.442Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2025/05/21/AnduinOS/</loc>
-        <lastmod>2025-05-24T22:52:22.870Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
