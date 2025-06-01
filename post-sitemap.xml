@@ -9,8 +9,16 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2025/06/01/calamares/</loc>
+        <lastmod>2025-06-01T05:11:01.340Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2025/05/28/archiso-gnome/</loc>
-        <lastmod>2025-05-30T12:08:12.780Z</lastmod>
+        <lastmod>2025-06-01T01:30:13.148Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

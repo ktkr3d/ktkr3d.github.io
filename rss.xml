@@ -15,8 +15,29 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 30 May 2025 12:08:12 GMT</pubDate>
+    <pubDate>Sun, 01 Jun 2025 05:11:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>calamares</title>
+      <link>https://ktkr3d.github.io/2025/06/01/calamares/</link>
+      <guid>https://ktkr3d.github.io/2025/06/01/calamares/</guid>
+      <pubDate>Sat, 31 May 2025 20:36:07 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/calamares.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;GUIインストーラCalamaresをカスタマイズしてみました。&lt;br&gt;カスタマイズしたCalamaresを組み込んだライブISOイメージで起動し、Arch Linuxをインストールして、Arch Linuxが起動しました！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/calamares_restarted.png&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/calamares/">calamares</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/06/01/calamares/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>archiso-gnome</title>
@@ -476,32 +497,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/01/29/Vertical-Taskbar-for-Windows-11/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>tray-launcher</title>
-      <link>https://ktkr3d.github.io/2025/01/23/tray-launcher/</link>
-      <guid>https://ktkr3d.github.io/2025/01/23/tray-launcher/</guid>
-      <pubDate>Thu, 23 Jan 2025 10:09:02 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/tray-launcher.png&quot;&gt;&lt;br&gt;Windowsのタスクトレイからスクリプトを実行できるランチャーです。&lt;br&gt;GNOME Shell ExtensionのArgosのような使い方ができて便利です。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Jayich-Lab/tray-launcher&quot;&gt;https://github.com/Jayich-Lab/tray-launcher&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;2025-02-25&quot;&gt;&lt;a href=&quot;#2025-02-25&quot; class=&quot;headerlink&quot; title=&quot;2025-02-25&quot;&gt;&lt;/a&gt;2025-02-25&lt;/h4&gt;&lt;p&gt;起動時にPythonのウィンドウが開きっぱなしになってしまうことがあった。&lt;br&gt;まだ報告されていないようだ。複数の環境で発生したが、再現性はないかもしれない。&lt;br&gt;&lt;a href=&quot;https://github.com/Jayich-Lab/tray-launcher/issues&quot;&gt;https://github.com/Jayich-Lab/tray-launcher/issues&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;以下のソフトが動作したので取り急ぎ切り替えた。&lt;br&gt;&lt;a href=&quot;https://github.com/zozonteq/task-tray-launcher&quot;&gt;https://github.com/zozonteq/task-tray-launcher&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;自分でPowerShellで作るのもよいかもしれない。&lt;/p&gt;
-&lt;h4 id=&quot;2025-02-25-1&quot;&gt;&lt;a href=&quot;#2025-02-25-1&quot; class=&quot;headerlink&quot; title=&quot;2025-02-25&quot;&gt;&lt;/a&gt;2025-02-25&lt;/h4&gt;&lt;p&gt;作ってみました。&lt;br&gt;&lt;a href=&quot;https://ktkr3d.github.io/2025/02/25/Script-Launcher/&quot;&gt;https://ktkr3d.github.io/2025/02/25/Script-Launcher/&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/tray-launcher/">tray-launcher</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/01/23/tray-launcher/#disqus_thread</comments>
       
     </item>
     
