@@ -19323,15 +19323,17 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
   <div class="note info flat"><p>N100 CPUで24分で生成し、サイズは2.7GB</p>
 </div></li>
 </ol>
-<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ul>
+<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><p>&lt;!–&gt;</p>
+<ul>
 <li>AURのパッケージのコードを修正してパッケージファイルを生成する手順<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">paru -G gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">cd gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">makepkg -o</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -tvf openweatherrefined-v139.tar.gz | grep metadata.json</span><br><span class="line">tar -xvf openweatherrefined-v139.tar.gz gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure>
 <figure class="highlight json"><figcaption><span>gnome-openweather-139/metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;shell-version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="string">&quot;45&quot;</span><span class="punctuation">,</span> <span class="string">&quot;46&quot;</span><span class="punctuation">,</span> <span class="string">&quot;47&quot;</span><span class="punctuation">,</span> <span class="punctuation">]</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s/\&quot;47\&quot; ]/\&quot;47\&quot;, \&quot;48\&quot; ]/&quot;</span> gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure>
 <figure class="highlight json"><figcaption><span>gnome-openweather-139/metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;shell-version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="string">&quot;45&quot;</span><span class="punctuation">,</span> <span class="string">&quot;46&quot;</span><span class="punctuation">,</span> <span class="string">&quot;47&quot;</span><span class="punctuation">,</span> <span class="string">&quot;48&quot;</span> <span class="punctuation">]</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -uvfz openweatherrefined-v139.tar.gz gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure>
-makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">```bash</span><br><span class="line">sudo pacman -U gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined<span class="number">-139</span><span class="number">-1</span>-<span class="keyword">any</span>.pkg.tar.zst</span><br></pre></td></tr></table></figure></li>
-<li>GUIインストーラの組み込み<br>calamares 3.3.8<br>calamares-git 3.3.14</li>
+makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">```bash</span><br><span class="line">sudo pacman -U gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined<span class="number">-139</span><span class="number">-1</span>-<span class="keyword">any</span>.pkg.tar.zst</span><br></pre></td></tr></table></figure>
+–&gt;</li>
+<li>GUIインストーラの組み込み<br>calamares 3.3.8<br>calamares-git 3.3.14<br><a href="https://ktkr3d.github.io/2025/06/01/calamares/">https://ktkr3d.github.io/2025/06/01/calamares/</a></li>
 <li>構築手順整備</li>
 <li>GitHubにプロジェクトを登録</li>
 <li>生成したISOファイルをどこかに配置</li>
@@ -19367,7 +19369,7 @@ makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><t
 <li>calamares-git 3.3.14<br><a href="https://github.com/calamares/calamares">https://github.com/calamares/calamares</a></li>
 <li>ckbcomp 1.234-1<br><a href="https://aur.archlinux.org/packages/ckbcomp">https://aur.archlinux.org/packages/ckbcomp</a></li>
 </ul>
-<h4 id="主なインストールディレクトリ、ファイル"><a href="#主なインストールディレクトリ、ファイル" class="headerlink" title="主なインストールディレクトリ、ファイル"></a>主なインストールディレクトリ、ファイル</h4><ul>
+<h4 id="Calamaresの主なインストールディレクトリ、ファイル"><a href="#Calamaresの主なインストールディレクトリ、ファイル" class="headerlink" title="Calamaresの主なインストールディレクトリ、ファイル"></a>Calamaresの主なインストールディレクトリ、ファイル</h4><ul>
 <li>&#x2F;usr&#x2F;bin&#x2F;calamares</li>
 <li>&#x2F;usr&#x2F;lib&#x2F;calamares&#x2F;</li>
 <li>&#x2F;usr&#x2F;lib&#x2F;libcalamares.so</li>
@@ -19380,6 +19382,7 @@ makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><t
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -G ckbcomp</span><br><span class="line"><span class="built_in">cd</span> ckbcomp</span><br></pre></td></tr></table></figure>
   <figure class="highlight txt"><figcaption><span>PKGBUILD</span></figcaption><table><tr><td class="code"><pre><span class="line"># source=(&quot;http://ftp.debian.org/debian/pool/main/c/console-setup/console-setup_$&#123;pkgver&#125;.tar.xz&quot;)</span><br><span class="line">source=(&quot;https://salsa.debian.org/installer-team/console-setup/-/archive/$pkgver/console-setup-$pkgver.tar.gz&quot;)  </span><br></pre></td></tr></table></figure>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">makepkg -o --skipchecksums</span><br><span class="line">makepkg -f -e</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -U ckbcomp-1.234-1-any.pkg.tar.zst</span><br></pre></td></tr></table></figure>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> ckbcomp-1.234-1-any.pkg.tar.zst /opt/custom-repo/x86_64/</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>calamares-gitパッケージの作成</p>
@@ -19393,7 +19396,9 @@ makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><t
 </ul>
 <h4 id="カスタマイズ"><a href="#カスタマイズ" class="headerlink" title="カスタマイズ"></a>カスタマイズ</h4><ul>
 <li><p>設定ファイルのひな型をarchisoのプロジェクトにコピー</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> -r /usr/share/calamares ./airootfs/etc/</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> -r /usr/share/calamares ./airootfs/etc/</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>使わないモジュールは削除してよいです。</p>
+</div></li>
 <li><p>calamaresの設定</p>
 <figure class="highlight yaml"><figcaption><span>./airootfs/etc/calamares/settings.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">sequence:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">show:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">welcome</span></span><br><span class="line"><span class="comment">#  - notesqml</span></span><br><span class="line"><span class="comment">#  - packagechooserq@licenseq</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">locale</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">keyboard</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">partition</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">users</span></span><br><span class="line"><span class="comment">#  - tracking</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">summary</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">exec:</span></span><br><span class="line"><span class="comment">#  - dummycpp</span></span><br><span class="line"><span class="comment">#  - dummyprocess</span></span><br><span class="line"><span class="comment">#  - dummypython</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">partition</span></span><br><span class="line"><span class="comment">#  - zfs</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">mount</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">unpackfs</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">machineid</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">locale</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">keyboard</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">localecfg</span></span><br><span class="line"><span class="comment">#  - luksbootkeyfile</span></span><br><span class="line"><span class="comment">#  - luksopenswaphookcfg</span></span><br><span class="line"><span class="comment">#  - dracutlukscfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">fstab</span></span><br><span class="line"><span class="comment">#  - plymouthcfg</span></span><br><span class="line"><span class="comment">#  - zfshostid</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">initcpiocfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">initcpio</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">users</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">displaymanager</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">networkcfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hwclock</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">services-systemd</span></span><br><span class="line"><span class="comment">#  - dracut</span></span><br><span class="line marked"><span class="comment">#  - initramfs</span></span><br><span class="line"><span class="comment">#  - grubcfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">bootloader</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">umount</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">show:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">finished</span></span><br><span class="line"></span><br><span class="line"><span class="attr">branding:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">prompt-install:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">dont-chroot:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">oem-setup:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">quit-at-end:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <div class="note info flat"><p>initramfsはDebian用みたいなので無効化</p>
@@ -19421,21 +19426,32 @@ makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><t
 <div class="note info flat"><p>pastbinへの貼り付けを無効化</p>
 </div></li>
 </ul>
-<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ul>
-<li><p>Wayland対応</p>
-<figure class="highlight ini"><figcaption><span>./airootfs/etc/gdm/custom.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#WaylandEnable=false</span></span><br><span class="line"><span class="attr">WaylandEnable</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">WaylandOnByDefault</span>=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="/images/calamares_800_600_wayland.png"></p>
-<p>X11、 Waylandともに動作した。xorgを削除してどうなるか確認したい。</p>
+<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><h4 id="対応済"><a href="#対応済" class="headerlink" title="対応済"></a>対応済</h4><ul>
+<li>Wayland対応<figure class="highlight ini"><figcaption><span>./airootfs/etc/gdm/custom.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#WaylandEnable=false</span></span><br><span class="line"><span class="attr">WaylandEnable</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">WaylandOnByDefault</span>=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<img src="/images/calamares_800_600_wayland.png"></li>
+<li>Nvidiaドライバ組み込み</li>
+</ul>
+<h4 id="これから"><a href="#これから" class="headerlink" title="これから"></a>これから</h4><ul>
+<li>動作確認<ul>
+<li>VirtualBox : OK</li>
+<li>Gnome Boxes (qemu&#x2F;KVM&#x2F;livirt) ; OK</li>
+<li>VMWare : not tested</li>
+<li>物理環境 : not tested</li>
+</ul>
 </li>
-<li><p>Nvidiaドライバ有効化<br>packages.x86_64にnvidia, nvidia-utils, nvidia-settingsを追加</p>
+<li>インストール後の後始末<ul>
+<li>liveuserの削除</li>
+<li>追加ユーザにはreflector-simpleとcalamaresのPIN止めは不要</li>
+</ul>
 </li>
-<li><p>waylandとnvidiaドライバを組み込んでビルド</p>
-<div class="note info flat"><p>archlinux-2025.06.01-x86_64.iso, 2.6G, 23.57 mins</p>
-</div></li>
-<li><p>インストール後の後始末<br>追加ユーザにはreflector-simpleとcalamaresのPIN止めは不要</p>
-</li>
-<li><p>物理環境で動作確認</p>
-</li>
+<li>環境によってDash to Panelの初回設定が反映されない場合がある</li>
+<li>ブランディングとスライドショー</li>
+<li>パッケージ削減（現在、15分でビルド、2.6GB）</li>
+</ul>
+<h4 id="多分やらない"><a href="#多分やらない" class="headerlink" title="多分やらない"></a>多分やらない</h4><ul>
+<li>archinstall含める？</li>
+<li>xorgの削除</li>
+<li>package chooserモジュール</li>
 </ul>
 ]]></content>
       <tags>
