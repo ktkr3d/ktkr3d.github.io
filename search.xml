@@ -19371,14 +19371,14 @@ makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><t
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><p>AURには<a href="https://aur.archlinux.org/packages/calamares">calamares</a> 3.3.8と<a href="https://aur.archlinux.org/packages/calamares-git">calamares-git</a> 3.3.14が存在します。最新バージョンであるcalamares-gitの方を利用します。<br>calamares-gitではAURにある<a href="https://aur.archlinux.org/packages/ckbcomp">ckbcomp</a>が前提パッケージになっています。なお、ckbcompのPKGBUILDに記載されているソースアーカイブのURLがリンク切れの状態なので自動でインストールできません。URLを修正してビルドしてインストールします。</p>
 <ol>
-<li><p>ckbcompパッケージの作成<br>  <a href="https://aur.archlinux.org/packages/ckbcomp">https://aur.archlinux.org/packages/ckbcomp</a><br>  PKGBUILD内のソースURLが無効なので修正してパッケージを作成します。</p>
+<li><p>ckbcomp</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -G ckbcomp</span><br><span class="line"><span class="built_in">cd</span> ckbcomp</span><br></pre></td></tr></table></figure>
   <figure class="highlight txt"><figcaption><span>PKGBUILD</span></figcaption><table><tr><td class="code"><pre><span class="line"># source=(&quot;http://ftp.debian.org/debian/pool/main/c/console-setup/console-setup_$&#123;pkgver&#125;.tar.xz&quot;)</span><br><span class="line">source=(&quot;https://salsa.debian.org/installer-team/console-setup/-/archive/$pkgver/console-setup-$pkgver.tar.gz&quot;)  </span><br></pre></td></tr></table></figure>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">makepkg -o --skipchecksums</span><br><span class="line">makepkg -f -e</span><br></pre></td></tr></table></figure>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -U ckbcomp-1.234-1-any.pkg.tar.zst</span><br></pre></td></tr></table></figure>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> ckbcomp-1.234-1-any.pkg.tar.zst /opt/custom-repo/x86_64/</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>calamares-gitパッケージの作成</p>
+<li><p>calamares-git</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S calamares-git</span><br></pre></td></tr></table></figure>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> ~/.cache/paru/clone/calamares-git/calamares-git-3.3.14.r25.g95aa33f-1-x86_64.pkg.tar.zst /opt/custom-repo/x86_64/</span><br></pre></td></tr></table></figure></li>
 </ol>
