@@ -19286,10 +19286,10 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
   <figure class="highlight bash"><figcaption><span>例</span></figcaption><table><tr><td class="code"><pre><span class="line">extension-manager-0.6.3-3-x86_64.pkg.tar.zst</span><br><span class="line">fluent-cursor-theme-git-2025.02.26.r6.ge8ac55a-1-any.pkg.tar.zst</span><br><span class="line">fluent-gtk-theme-2025.04.17-1-any.pkg.tar.zst</span><br><span class="line">fluent-icon-theme-git-2025.02.26.r6.ge8ac55a-1-any.pkg.tar.zst</span><br><span class="line">gnome-shell-extension-blur-my-shell-68-1-any.pkg.tar.zst</span><br><span class="line">gnome-shell-extension-openweatherrefined-139-1-any.pkg.tar.zst</span><br><span class="line">paru-bin-2.0.4-3-x86_64.pkg.tar.zst</span><br><span class="line">ttf-hackgen-2.10.0-1-any.pkg.tar.zst</span><br><span class="line">yay-12.5.0-1-x86_64.pkg.tar.zst</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>パッケージファイルのコードを修正したい場合<br>  例えば拡張機能のmetadata.jsonを修正したい場合</p>
-  <figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">paru -G gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">cd gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">makepkg -o</span><br></pre></td></tr></table></figure>
-<p>  File-Rollerでソースアーカイブ(*.tar.gz)を開いてmetadata.jsonを修正して上書き保存</p>
-  <figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">makepkg -f -e <span class="comment">--skipchecksums</span></span><br></pre></td></tr></table></figure>
-<p>  パッケージ(*.pkg.tar.zst)が生成される。<br>  インストール確認する。</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -G gnome-shell-extension-openweatherrefined</span><br><span class="line"><span class="built_in">cd</span> gnome-shell-extension-openweatherrefined</span><br><span class="line">makepkg -o</span><br></pre></td></tr></table></figure>
+  <figure class="highlight json"><figcaption><span>./src/gnome-openweather-139/metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;shell-version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="string">&quot;45&quot;</span><span class="punctuation">,</span> <span class="string">&quot;46&quot;</span><span class="punctuation">,</span> <span class="string">&quot;47&quot;</span><span class="punctuation">,</span> <span class="string">&quot;48&quot;</span> <span class="punctuation">]</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">makepkg -f -e --skipchecksums</span><br></pre></td></tr></table></figure>
+<p>  パッケージ(*.pkg.tar.zst)が生成される。インストール確認する。</p>
   <figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">sudo</span> pacman -U <span class="regexp">*.pkg.tar.zst</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>パッケージファイルの配置<br>  パッケージファイル<code>*.pkg.tar.zst</code>をカスタムリポジトリディレクトリ<code>/opt/custom-repo/x86_64/</code>に配置します。</p>
@@ -19303,7 +19303,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <h4 id="インストールするパッケージの指定"><a href="#インストールするパッケージの指定" class="headerlink" title="インストールするパッケージの指定"></a>インストールするパッケージの指定</h4><p>インストールしたいパッケージ名を設定ファイル<code>./packages.x86_64</code>に追記する。</p>
 <h4 id="インストールするファイルの配置"><a href="#インストールするファイルの配置" class="headerlink" title="インストールするファイルの配置"></a>インストールするファイルの配置</h4><p>インストールしたいファイルをディレクトリ<code>./airootfs/</code>配下に格納する。</p>
 <ul>
-<li>壁紙の場合<br><code>./airootfs/usr/local/share/backgrouns/</code></li>
+<li>壁紙の場合<br><code>./airootfs/usr/local/share/backgrounds/</code></li>
 <li>ユーザのホームディレクトリに配置したい場合(<code>.bashrc</code>等)<br><code>./airootfs/etc/skel/</code></li>
 </ul>
 <h4 id="dconf設定"><a href="#dconf設定" class="headerlink" title="dconf設定"></a>dconf設定</h4><ol>
@@ -19323,17 +19323,8 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
   <div class="note info flat"><p>N100 CPUで24分で生成し、サイズは2.7GB</p>
 </div></li>
 </ol>
-<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><p>&lt;!–&gt;</p>
-<ul>
-<li>AURのパッケージのコードを修正してパッケージファイルを生成する手順<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">paru -G gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">cd gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined</span><br><span class="line">makepkg -o</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -tvf openweatherrefined-v139.tar.gz | grep metadata.json</span><br><span class="line">tar -xvf openweatherrefined-v139.tar.gz gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure>
-<figure class="highlight json"><figcaption><span>gnome-openweather-139/metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;shell-version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="string">&quot;45&quot;</span><span class="punctuation">,</span> <span class="string">&quot;46&quot;</span><span class="punctuation">,</span> <span class="string">&quot;47&quot;</span><span class="punctuation">,</span> <span class="punctuation">]</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s/\&quot;47\&quot; ]/\&quot;47\&quot;, \&quot;48\&quot; ]/&quot;</span> gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure>
-<figure class="highlight json"><figcaption><span>gnome-openweather-139/metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;shell-version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="string">&quot;45&quot;</span><span class="punctuation">,</span> <span class="string">&quot;46&quot;</span><span class="punctuation">,</span> <span class="string">&quot;47&quot;</span><span class="punctuation">,</span> <span class="string">&quot;48&quot;</span> <span class="punctuation">]</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -uvfz openweatherrefined-v139.tar.gz gnome-openweather-139/metadata.json</span><br></pre></td></tr></table></figure>
-makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">```bash</span><br><span class="line">sudo pacman -U gnome-<span class="built_in">shell</span>-<span class="built_in">extension</span>-openweatherrefined<span class="number">-139</span><span class="number">-1</span>-<span class="keyword">any</span>.pkg.tar.zst</span><br></pre></td></tr></table></figure>
-–&gt;</li>
-<li>GUIインストーラの組み込み<br>calamares 3.3.8<br>calamares-git 3.3.14<br><a href="https://ktkr3d.github.io/2025/06/01/calamares/">https://ktkr3d.github.io/2025/06/01/calamares/</a></li>
+<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ul>
+<li>GUIインストーラcalamaresの組み込み<br><a href="https://ktkr3d.github.io/2025/06/01/calamares/">https://ktkr3d.github.io/2025/06/01/calamares/</a></li>
 <li>構築手順整備</li>
 <li>GitHubにプロジェクトを登録</li>
 <li>生成したISOファイルをどこかに配置</li>
@@ -19343,7 +19334,19 @@ makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><t
 <li>電源アイコンの非表示(Just Perfectionかdconfで)</li>
 <li>pamac追加する？</li>
 </ul>
-]]></content>
+<h3 id="テーマリソースの最適化"><a href="#テーマリソースの最適化" class="headerlink" title="テーマリソースの最適化"></a>テーマリソースの最適化</h3><p>Fluent round dark</p>
+<h4 id="GTKテーマ"><a href="#GTKテーマ" class="headerlink" title="GTKテーマ"></a>GTKテーマ</h4><p><a href="https://github.com/vinceliuice/Fluent-gtk-theme">https://github.com/vinceliuice/Fluent-gtk-theme</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vinceliuice/Fluent-gtk-theme.git</span><br><span class="line"><span class="built_in">cd</span> Fluent-gtk-theme</span><br><span class="line">./install.sh -c dark -s standard -i <span class="built_in">arch</span> --tweaks round</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>出力先</span></figcaption><table><tr><td class="code"><pre><span class="line">~/.themes/Fluent-round-Dark/</span><br></pre></td></tr></table></figure>
+<h4 id="アイコン、カーソルテーマ"><a href="#アイコン、カーソルテーマ" class="headerlink" title="アイコン、カーソルテーマ"></a>アイコン、カーソルテーマ</h4><p><a href="https://github.com/vinceliuice/Fluent-icon-theme">https://github.com/vinceliuice/Fluent-icon-theme</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vinceliuice/Fluent-icon-theme.git</span><br><span class="line"><span class="built_in">cd</span> Fluent-icon-theme</span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>出力先</span></figcaption><table><tr><td class="code"><pre><span class="line">~/.local/share/icons/Fluent/</span><br><span class="line">~/.local/share/icons/Fluent-dark/</span><br><span class="line">~/.local/share/icons/Fluent-light/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> cursors</span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>出力先</span></figcaption><table><tr><td class="code"><pre><span class="line">~/.local/share/icons/Fluent-cursors/</span><br><span class="line">~/.local/share/icons/Fluent-dark-cursors/</span><br></pre></td></tr></table></figure>
+
+<h4 id="壁紙"><a href="#壁紙" class="headerlink" title="壁紙"></a>壁紙</h4><p><a href="https://github.com/vinceliuice/Fluent-gtk-theme/tree/Wallpaper">https://github.com/vinceliuice/Fluent-gtk-theme/tree/Wallpaper</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b Wallpaper https://github.com/vinceliuice/Fluent-gtk-theme.git Wallpaper</span><br><span class="line"><span class="built_in">cd</span> Wallpaper</span><br><span class="line"><span class="built_in">sudo</span> ./install-gnome-backgrounds.sh</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /usr/share/backgrounds/fluent/</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /usr/share/backgrounds/fluent-mountain/</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> /usr/share/gnome-background-properties/fluent.xml</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> /usr/share/gnome-background-properties/fluent-mountain.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>出力先</span></figcaption><table><tr><td class="code"><pre><span class="line">/usr/share/backgrounds/fluent-building/</span><br><span class="line">  fluent-building-day.jpg</span><br><span class="line">  fluent-building-morning.jpg</span><br><span class="line">  fluent-building-night.jpg</span><br><span class="line">  fluent-building-timed.xml</span><br><span class="line"></span><br><span class="line">/usr/share/gnome-background-properties/</span><br><span class="line">  fluent-building.xml</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>gnome</tag>
         <tag>archiso</tag>
@@ -19371,15 +19374,12 @@ makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><t
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><p>AURには<a href="https://aur.archlinux.org/packages/calamares">calamares</a> 3.3.8と<a href="https://aur.archlinux.org/packages/calamares-git">calamares-git</a> 3.3.14が存在します。最新バージョンであるcalamares-gitの方を利用します。<br>calamares-gitではAURにある<a href="https://aur.archlinux.org/packages/ckbcomp">ckbcomp</a>が前提パッケージになっています。なお、ckbcompのPKGBUILDに記載されているソースアーカイブのURLがリンク切れの状態なので自動でインストールできません。URLを修正してビルドしてインストールします。</p>
 <ol>
-<li><p>ckbcomp</p>
-  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -G ckbcomp</span><br><span class="line"><span class="built_in">cd</span> ckbcomp</span><br></pre></td></tr></table></figure>
+<li>ckbcomp  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -G ckbcomp</span><br><span class="line"><span class="built_in">cd</span> ckbcomp</span><br></pre></td></tr></table></figure>
   <figure class="highlight txt"><figcaption><span>PKGBUILD</span></figcaption><table><tr><td class="code"><pre><span class="line"># source=(&quot;http://ftp.debian.org/debian/pool/main/c/console-setup/console-setup_$&#123;pkgver&#125;.tar.xz&quot;)</span><br><span class="line">source=(&quot;https://salsa.debian.org/installer-team/console-setup/-/archive/$pkgver/console-setup-$pkgver.tar.gz&quot;)  </span><br></pre></td></tr></table></figure>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">makepkg -o --skipchecksums</span><br><span class="line">makepkg -f -e</span><br></pre></td></tr></table></figure>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -U ckbcomp-1.234-1-any.pkg.tar.zst</span><br></pre></td></tr></table></figure>
-  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> ckbcomp-1.234-1-any.pkg.tar.zst /opt/custom-repo/x86_64/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>calamares-git</p>
-  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S calamares-git</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> ckbcomp-1.234-1-any.pkg.tar.zst /opt/custom-repo/x86_64/</span><br></pre></td></tr></table></figure></li>
+<li>calamares-git  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S calamares-git</span><br></pre></td></tr></table></figure>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> ~/.cache/paru/clone/calamares-git/calamares-git-3.3.14.r25.g95aa33f-1-x86_64.pkg.tar.zst /opt/custom-repo/x86_64/</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h3><h4 id="設定ディレクトリ"><a href="#設定ディレクトリ" class="headerlink" title="設定ディレクトリ"></a>設定ディレクトリ</h4><p>以下の優先度で設定ファイルが参照されるようです。</p>
@@ -19391,8 +19391,10 @@ makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><t
 <li><p>設定ファイルのひな型をarchisoのプロジェクトにコピー</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> -r /usr/share/calamares ./airootfs/etc/</span><br></pre></td></tr></table></figure></li>
 <li><p>calamaresの設定</p>
-<figure class="highlight yaml"><figcaption><span>./airootfs/etc/calamares/settings.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">sequence:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">show:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">welcome</span></span><br><span class="line"><span class="comment">#  - notesqml</span></span><br><span class="line"><span class="comment">#  - packagechooserq@licenseq</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">locale</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">keyboard</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">partition</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">users</span></span><br><span class="line"><span class="comment">#  - tracking</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">summary</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">exec:</span></span><br><span class="line"><span class="comment">#  - dummycpp</span></span><br><span class="line"><span class="comment">#  - dummyprocess</span></span><br><span class="line"><span class="comment">#  - dummypython</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">partition</span></span><br><span class="line"><span class="comment">#  - zfs</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">mount</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">unpackfs</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">machineid</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">locale</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">keyboard</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">localecfg</span></span><br><span class="line"><span class="comment">#  - luksbootkeyfile</span></span><br><span class="line"><span class="comment">#  - luksopenswaphookcfg</span></span><br><span class="line"><span class="comment">#  - dracutlukscfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">fstab</span></span><br><span class="line"><span class="comment">#  - plymouthcfg</span></span><br><span class="line"><span class="comment">#  - zfshostid</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">initcpiocfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">initcpio</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">users</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">displaymanager</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">networkcfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hwclock</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">services-systemd</span></span><br><span class="line"><span class="comment">#  - dracut</span></span><br><span class="line marked"><span class="comment">#  - initramfs</span></span><br><span class="line"><span class="comment">#  - grubcfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">bootloader</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">umount</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">show:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">finished</span></span><br><span class="line"></span><br><span class="line"><span class="attr">branding:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">prompt-install:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">dont-chroot:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">oem-setup:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">quit-at-end:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<div class="note info flat"><p>initramfsは無効化</p>
+<figure class="highlight yaml"><figcaption><span>./airootfs/etc/calamares/settings.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">sequence:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">show:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">welcome</span></span><br><span class="line"><span class="comment">#  - notesqml</span></span><br><span class="line"><span class="comment">#  - packagechooserq@licenseq</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">locale</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">keyboard</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">partition</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">users</span></span><br><span class="line"><span class="comment">#  - tracking</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">summary</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">exec:</span></span><br><span class="line"><span class="comment">#  - dummycpp</span></span><br><span class="line"><span class="comment">#  - dummyprocess</span></span><br><span class="line"><span class="comment">#  - dummypython</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">partition</span></span><br><span class="line"><span class="comment">#  - zfs</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">mount</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">unpackfs</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">machineid</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">locale</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">keyboard</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">localecfg</span></span><br><span class="line"><span class="comment">#  - luksbootkeyfile</span></span><br><span class="line"><span class="comment">#  - luksopenswaphookcfg</span></span><br><span class="line"><span class="comment">#  - dracutlukscfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">fstab</span></span><br><span class="line"><span class="comment">#  - plymouthcfg</span></span><br><span class="line"><span class="comment">#  - zfshostid</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">initcpiocfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">initcpio</span></span><br><span class="line marked">  <span class="bullet">-</span> <span class="string">removeuser</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">users</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">displaymanager</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">networkcfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hwclock</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">services-systemd</span></span><br><span class="line"><span class="comment">#  - dracut</span></span><br><span class="line marked"><span class="comment">#  - initramfs</span></span><br><span class="line"><span class="comment">#  - grubcfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">bootloader</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">umount</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">show:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">finished</span></span><br><span class="line"></span><br><span class="line"><span class="attr">branding:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">prompt-install:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">dont-chroot:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">oem-setup:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">quit-at-end:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>removeuserを有効化し、modules&#x2F;removeuser.confを設定</p>
+</div>
+<div class="note info flat"><p>initramfsを無効化</p>
 </div>
 </li>
 <li><p>ようこそ画面</p>
@@ -19422,7 +19424,20 @@ makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><t
 <h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><h4 id="対応済"><a href="#対応済" class="headerlink" title="対応済"></a>対応済</h4><ul>
 <li>Wayland対応<figure class="highlight ini"><figcaption><span>./airootfs/etc/gdm/custom.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#WaylandEnable=false</span></span><br><span class="line"><span class="attr">WaylandEnable</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">WaylandOnByDefault</span>=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <img src="/images/calamares_800_600_wayland.png"></li>
-<li>Nvidiaドライバ組み込み</li>
+<li>Nvidiaドライバ組み込み<br>nvidia nvidia-utils nvidia-settings</li>
+<li>未使用のテーマリソースの削減</li>
+<li>liveuserの削除</li>
+<li>firefox -&gt; chromium</li>
+<li>環境によってDash to Panelの初回設定が反映されない場合がある</li>
+<li>reflectorサービスによる自動設定</li>
+<li>fish</li>
+<li>starship with custom theme</li>
+<li>fastfetch custom theme</li>
+<li>gnome-shell-extension-kimpanel-git (‘<a href="mailto:&#x6b;&#x69;&#x6d;&#112;&#x61;&#110;&#x65;&#x6c;&#x40;&#107;&#100;&#101;&#x2e;&#x6f;&#x72;&#x67;">&#x6b;&#x69;&#x6d;&#112;&#x61;&#110;&#x65;&#x6c;&#x40;&#107;&#100;&#101;&#x2e;&#x6f;&#x72;&#x67;</a>‘)</li>
+<li>fcitx5 fcitx5-im fcitx5-mozc</li>
+<li>日本語キーボード</li>
+<li>日本語入力</li>
+<li>Time format (AM&#x2F;PM -&gt; 24)</li>
 </ul>
 <h4 id="これから"><a href="#これから" class="headerlink" title="これから"></a>これから</h4><ul>
 <li>動作確認<ul>
@@ -19432,18 +19447,10 @@ makepkg -f -e –skipchecksums<figure class="highlight livecodeserver"><table><t
 <li>物理環境(wifi, bluetooth等も) : 未テスト</li>
 </ul>
 </li>
-<li>インストール後の後始末<ul>
-<li>liveuserの削除</li>
+<li>インストール後の後始末</li>
 <li>追加ユーザにはreflector-simpleとcalamaresのPIN止めは不要</li>
-</ul>
-</li>
-<li>環境によってDash to Panelの初回設定が反映されない場合がある</li>
 <li>ブランディングとスライドショー</li>
-<li>パッケージ削減（現在、15分でビルド、2.6GB）<ul>
-<li>パッケージの削除</li>
-<li>未使用のテーマリソースの削減</li>
-</ul>
-</li>
+<li>パッケージ削減（現在、15分でビルド、2.6GB）</li>
 <li>unpackfsモジュールのソース指定の考慮(ramに展開済の場合)</li>
 </ul>
 <h4 id="多分やらない"><a href="#多分やらない" class="headerlink" title="多分やらない"></a>多分やらない</h4><ul>
