@@ -19422,22 +19422,38 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </div></li>
 </ul>
 <h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><h4 id="対応済"><a href="#対応済" class="headerlink" title="対応済"></a>対応済</h4><ul>
+<li>インストーラ<ul>
+<li>ライブイメージのユーザliveuserをインストール後に削除</li>
+<li>calamaresのPIN止めを削除</li>
+</ul>
+</li>
+<li>GNOME<ul>
 <li>Wayland対応<figure class="highlight ini"><figcaption><span>./airootfs/etc/gdm/custom.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#WaylandEnable=false</span></span><br><span class="line"><span class="attr">WaylandEnable</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">WaylandOnByDefault</span>=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <img src="/images/calamares_800_600_wayland.png"></li>
+<li>環境によってDash to Panelの初回設定が反映されない場合の対策(モニタ指定)</li>
+<li>時刻表示を24時間表示に変更</li>
+</ul>
+</li>
+<li>パッケージ<ul>
 <li>Nvidiaドライバ組み込み<br>nvidia nvidia-utils nvidia-settings</li>
-<li>未使用のテーマリソースの削減</li>
-<li>liveuserの削除</li>
-<li>firefox -&gt; chromium</li>
-<li>環境によってDash to Panelの初回設定が反映されない場合がある</li>
-<li>reflectorサービスによる自動設定</li>
-<li>fish</li>
-<li>starship with custom theme</li>
-<li>fastfetch custom theme</li>
-<li>gnome-shell-extension-kimpanel-git (‘<a href="mailto:&#x6b;&#x69;&#x6d;&#112;&#x61;&#110;&#x65;&#x6c;&#x40;&#107;&#100;&#101;&#x2e;&#x6f;&#x72;&#x67;">&#x6b;&#x69;&#x6d;&#112;&#x61;&#110;&#x65;&#x6c;&#x40;&#107;&#100;&#101;&#x2e;&#x6f;&#x72;&#x67;</a>‘)</li>
-<li>fcitx5 fcitx5-im fcitx5-mozc</li>
-<li>日本語キーボード</li>
-<li>日本語入力</li>
-<li>Time format (AM&#x2F;PM -&gt; 24)</li>
+<li>未使用のテーマリソースの削減<br>利用していない色テーマ等を除外</li>
+<li>ブラウザをfirefoxからchromiumに変更</li>
+<li>reflector-simpleを削除してreflectorサービスによる定期自動ミラーリスト更新設定を有効化</li>
+<li>fastfetchカスタムテーマを追加</li>
+</ul>
+</li>
+<li>シェル<ul>
+<li>fishを追加</li>
+<li>starshipとカスタムテーマを追加</li>
+</ul>
+</li>
+<li>日本語環境<ul>
+<li>gnome-shell-extension-kimpanel-git (‘<a href="mailto:&#107;&#x69;&#109;&#x70;&#x61;&#x6e;&#101;&#x6c;&#64;&#x6b;&#100;&#101;&#x2e;&#x6f;&#114;&#x67;">&#107;&#x69;&#109;&#x70;&#x61;&#x6e;&#101;&#x6c;&#64;&#x6b;&#100;&#101;&#x2e;&#x6f;&#114;&#x67;</a>‘)を追加</li>
+<li>fcitx5 fcitx5-im fcitx5-mozcを追加</li>
+<li>日本語キーボードを追加</li>
+<li>日本語入力を追加、有効化</li>
+</ul>
+</li>
 </ul>
 <h4 id="これから"><a href="#これから" class="headerlink" title="これから"></a>これから</h4><ul>
 <li>動作確認<ul>
@@ -19447,10 +19463,9 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>物理環境(wifi, bluetooth等も) : 未テスト</li>
 </ul>
 </li>
-<li>インストール後の後始末</li>
-<li>追加ユーザにはreflector-simpleとcalamaresのPIN止めは不要</li>
+<li>インストール後のインストーラ削除</li>
 <li>ブランディングとスライドショー</li>
-<li>パッケージ削減（現在、15分でビルド、2.6GB）</li>
+<li>パッケージ削減（現在、15分でビルド、2.7GB）</li>
 <li>unpackfsモジュールのソース指定の考慮(ramに展開済の場合)</li>
 </ul>
 <h4 id="多分やらない"><a href="#多分やらない" class="headerlink" title="多分やらない"></a>多分やらない</h4><ul>
