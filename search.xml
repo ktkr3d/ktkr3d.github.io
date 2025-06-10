@@ -19438,6 +19438,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>argosスクリプトの追加<br>bashtop fastfetch paru</li>
 <li>タイムゾーンの自動設定<br>org.gnome.desktop.datetime automatic-timezone true<br>org.gnome.system.location enabled true<br>動作したけれどプライバシー的に止めた方がよいかもしれない。</li>
 <li>カラースキーマをデフォルト（ライト）に戻す<br>org.gnome.desktop.interface color-scheme ‘default’</li>
+<li>Chromiumのデザインをライトモードで起動<br>GtkテーマをLightテーマにしました</li>
 </ul>
 </li>
 <li>パッケージ<ul>
@@ -19478,7 +19479,6 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>Wi-Fi接続の確認</li>
 <li>Bluetooth接続の確認</li>
 <li>日本語ロケールでもホームフォルダの各ディレクトリ名を英語のままに<br>.config&#x2F;user-dirs.dirs<br>.config&#x2F;user-dirs.locale</li>
-<li>Chromiumのデザインをライトモードまたはデバイスモードで起動<br>~&#x2F;.config&#x2F;chromium-flags.conf</li>
 </ul>
 <h4 id="多分やらない"><a href="#多分やらない" class="headerlink" title="多分やらない"></a>多分やらない</h4><ul>
 <li>archinstall追加</li>
