@@ -19427,7 +19427,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li><code>pactree calamares -d 1</code>で依存パッケージを確認</li>
 <li>calamares削除後に依存パッケージの削除を試行し、依存関係破壊の有無を確認</li>
 <li><code>pactree -r &lt;package name&gt;</code>で各パッケージに依存しているパッケージを確認</li>
-<li>calamaresや削除可能なパッケージにのみ依存関係があるのなら削除可能と判断</li>
+<li>calamaresや削除可能なパッケージにのみ依存関係があるのなら削除可能と判断<br>boostlibs ckbcomp hwinfo kcolorscheme kconfig kcoreaddons ki18n kiconthemes kpmcore polkit-qt6 python-jsonschema python-yaml solid squashfs-tools yaml-cpp</li>
 </ol>
 </li>
 </ul>
@@ -19487,6 +19487,9 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>日本語ロケールでもホームフォルダの各ディレクトリ名を英語のままに<br>.config&#x2F;user-dirs.dirs<br>.config&#x2F;user-dirs.locale</li>
 <li>calamaresの起動方法<br><code>sudo -E</code>とか<code>pkexec</code></li>
 <li>xorgの削除</li>
+<li>openweatherrefindで自動位置補足</li>
+<li>alias (bash, fish)</li>
+<li>デスクトップ表示までの時間短縮</li>
 </ul>
 <h4 id="多分やらない"><a href="#多分やらない" class="headerlink" title="多分やらない"></a>多分やらない</h4><ul>
 <li>archinstall追加</li>
