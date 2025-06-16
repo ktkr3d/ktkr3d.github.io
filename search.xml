@@ -19374,6 +19374,9 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <h4 id="ライブISOで日本語入力"><a href="#ライブISOで日本語入力" class="headerlink" title="ライブISOで日本語入力"></a>ライブISOで日本語入力</h4><p><img src="/images/aic_04.png"></p>
 <h4 id="インストーラ"><a href="#インストーラ" class="headerlink" title="インストーラ"></a>インストーラ</h4><p><img src="/images/aic_05.png"><br><img src="/images/aic_06.png"></p>
 <h4 id="システム情報"><a href="#システム情報" class="headerlink" title="システム情報"></a>システム情報</h4><p><img src="/images/aic_07.png"></p>
+<h3 id="ライブISOでの日本語化"><a href="#ライブISOでの日本語化" class="headerlink" title="ライブISOでの日本語化"></a>ライブISOでの日本語化</h3><p>ライブISO作成時に初期言語を日本語にすることもできますが、英語版のISOでも<code>/etc/locale.conf</code>を更新してログアウトすることで日本語環境にできます。</p>
+<figure class="highlight ini"><figcaption><span>/etc/locale.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#LANG=en_US.UTF-8</span></span><br><span class="line"><span class="attr">LANG</span>=ja_JP.UTF-<span class="number">8</span></span><br></pre></td></tr></table></figure>
+<p>ログインすると標準フォルダーの名前を日本語化するか確認(<code>xdg-user-dirs-gtk-update</code>の挙動)されます。英語名称のままにすることもできます。<br><img src="/images/aic_10.png"></p>
 <h4 id="インストール後"><a href="#インストール後" class="headerlink" title="インストール後"></a>インストール後</h4><p><img src="/images/aic_08.png"></p>
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
 <li>Arch Linux</li>
