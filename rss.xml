@@ -15,8 +15,29 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 18 Jun 2025 13:54:21 GMT</pubDate>
+    <pubDate>Thu, 19 Jun 2025 22:09:06 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>mpd</title>
+      <link>https://ktkr3d.github.io/2025/06/19/mpd/</link>
+      <guid>https://ktkr3d.github.io/2025/06/19/mpd/</guid>
+      <pubDate>Wed, 18 Jun 2025 17:46:30 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;https://www.musicpd.org/logo.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;MPD(Music Player Daemon)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.musicpd.org/&quot;&gt;https://www.musicpd.org/&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/mpd/">mpd</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/06/19/mpd/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>calamares</title>
@@ -480,33 +501,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/01/31/FancyWM/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Vertical Taskbar for Windows 11</title>
-      <link>https://ktkr3d.github.io/2025/01/29/Vertical-Taskbar-for-Windows-11/</link>
-      <guid>https://ktkr3d.github.io/2025/01/29/Vertical-Taskbar-for-Windows-11/</guid>
-      <pubDate>Wed, 29 Jan 2025 11:46:17 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/windhawk_vertical_taskbar.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Vertical Taskbar for Windows 11はWindows 11でタスクバーを左側や右側に配置できるWindhawkのmodです。&lt;br&gt;ExplorerPatcherよりもWindows 11に対する親和性が高そうです。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://windhawk.net/mods/taskbar-vertical&quot;&gt;https://windhawk.net/mods/taskbar-vertical&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://windhawk.net/&quot;&gt;https://windhawk.net/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/microsoft/PowerToys/issues/25101#issuecomment-2364732359&quot;&gt;https://github.com/microsoft/PowerToys/issues/25101#issuecomment-2364732359&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;2025-02-27-メモ&quot;&gt;&lt;a href=&quot;#2025-02-27-メモ&quot; class=&quot;headerlink&quot; title=&quot;2025-02-27 メモ&quot;&gt;&lt;/a&gt;2025-02-27 メモ&lt;/h4&gt;&lt;p&gt;WindhawkとVirtualBoxが干渉してVirtualBoxのVM起動時に「supHardenedWinVerifyProcess failed」エラーが発生する。&lt;br&gt;&lt;a href=&quot;https://github.com/ramensoftware/windhawk/issues/25&quot;&gt;https://github.com/ramensoftware/windhawk/issues/25&lt;/a&gt;&lt;br&gt;Windhawkの設定→詳細設定→さらに詳細設定を表示→プロセス除外リストに以下を追加する。&lt;/p&gt;
-&lt;figure class=&quot;highlight haml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;%&lt;span class=&quot;selector-tag&quot;&gt;ProgramFiles&lt;/span&gt;&lt;/span&gt;%&#92;Oracle&#92;VirtualBox&#92;*&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上記対応後、VirtualBoxのVM起動時に「NtCreateFile(&#92;Device&#92;VBoxDrvStub) failed」エラーが発生した場合は以下を実行する。&lt;/p&gt;
-&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;figcaption&gt;&lt;span&gt;管理者権限のコマンドプロンプト&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sc.exe &lt;span class=&quot;built_in&quot;&gt;start&lt;/span&gt; vboxsup&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/windhawk/">windhawk</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/01/29/Vertical-Taskbar-for-Windows-11/#disqus_thread</comments>
       
     </item>
     

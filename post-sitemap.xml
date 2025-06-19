@@ -10,7 +10,15 @@
 
     <url>
         <loc>https://ktkr3d.github.io/2025/06/01/calamares/</loc>
-        <lastmod>2025-06-18T13:54:21.296Z</lastmod>
+        <lastmod>2025-06-19T22:12:41.203Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2025/06/19/mpd/</loc>
+        <lastmod>2025-06-19T22:09:06.357Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
