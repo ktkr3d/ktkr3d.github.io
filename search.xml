@@ -19566,9 +19566,14 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
   <entry>
     <title>mpd</title>
     <url>/2025/06/19/mpd/</url>
-    <content><![CDATA[<p><img src="https://www.musicpd.org/logo.png"></p>
-<p>MPD(Music Player Daemon)</p>
-<p><a href="https://www.musicpd.org/">https://www.musicpd.org/</a></p>
+    <content><![CDATA[<p>Music Player Daemon (MPD)を使ってみました。</p>
+<a href="https://www.musicpd.org/" target="_blank" rel="external nofollow noopener noreferrer" class="link-preview">
+    <div class="og-image">
+        <img src="https://www.musicpd.org/logo.png" alt="Music Player Daemon (MPD)" class="not-gallery-item" loading="lazy"></div>
+        <div class="descriptions">
+            <div class="og-title">Music Player Daemon (MPD)</div>
+            <div class="og-description">Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music.</div></div></a>
+
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
@@ -19582,12 +19587,16 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now mpd.service</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="cantata"><a href="#cantata" class="headerlink" title="cantata"></a>cantata</h4><ul>
-<li>Arch Linuxの場合<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak install flathub dog.unix.cantata.Cantata</span><br></pre></td></tr></table></figure></li>
+<li>Arch Linuxの場合<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak install flathub dog.unix.cantata.Cantata</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>AUR版は古いのでflatpak版を利用</p>
+</div></li>
 <li>Windowsの場合<br><a href="https://github.com/nullobsi/cantata/releases/">https://github.com/nullobsi/cantata/releases/</a><br>ダウンロードして展開</li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>cantataをインストールしたら初回起動時にmpdに<kbd>接続</kbd></li>
 <li>オーディオファイルを追加したらcantataで<kbd>≡</kbd>-<kbd>データベースの更新</kbd></li>
+<li>mpdは拡張子無しのオーディオファイルを認識しない</li>
+<li>mpdはオーディオファイルのシンボリックリンクを認識する</li>
 </ul>
 <p><a href="echo" title="Symlink (ln -s) | iconName=music-app-symbolic bash=&#39;cd ~/.local/share/monophony; for fname in ???????????; do ln -s ~/.local/share/monophony/$fname ~/Music/$fname.opus; done; exit&#39; terminal=false"></a></p>
 ]]></content>
