@@ -19587,13 +19587,15 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now mpd.service</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="cantata"><a href="#cantata" class="headerlink" title="cantata"></a>cantata</h4><ul>
-<li>Arch Linuxの場合<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak install flathub dog.unix.cantata.Cantata</span><br></pre></td></tr></table></figure>
-<div class="note info flat"><p>AUR版は古いのでflatpak版を利用</p>
+<li>Arch Linuxの場合<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S cantata-qt6-git</span><br></pre></td></tr></table></figure>
+または<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak install flathub dog.unix.cantata.Cantata</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>AURのバージョンはcantata 2.5.0, cantata-qt6 3.3.0, cantata-qt6-git 3.3.1</p>
 </div></li>
 <li>Windowsの場合<br><a href="https://github.com/nullobsi/cantata/releases/">https://github.com/nullobsi/cantata/releases/</a><br>ダウンロードして展開</li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>cantataをインストールしたら初回起動時にmpdに<kbd>接続</kbd></li>
+<li>cantataの設定-コネクション-音楽フォルダにmpdのmusic_directoryを指定<br>フォルダにアクセス可能な場合はコンテキストメニューの各種項目が選択できるようになる。</li>
 <li>オーディオファイルを追加したらcantataで<kbd>≡</kbd>-<kbd>データベースの更新</kbd></li>
 <li>mpdは拡張子無しのオーディオファイルを認識しない</li>
 <li>mpdはオーディオファイルのシンボリックリンクを認識する</li>
