@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 21 Jun 2025 14:51:46 GMT</pubDate>
+    <pubDate>Tue, 24 Jun 2025 12:15:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -30,7 +30,193 @@
         &lt;img src=&quot;https://www.musicpd.org/logo.png&quot; alt=&quot;Music Player Daemon (MPD)&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;descriptions&quot;&gt;
             &lt;div class=&quot;og-title&quot;&gt;Music Player Daemon (MPD)&lt;/div&gt;
-            &lt;div class=&quot;og-description&quot;&gt;Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;</description>
+            &lt;div class=&quot;og-description&quot;&gt;Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
+
+&lt;p&gt;MPDクライアントにはcantataを利用しました。&lt;/p&gt;
+&lt;style&gt;
+                /* css part */
+                .gr-card {
+
+                    --gr-header-width-proportion: 10%;
+                    --gr-footer-width-proportion: 10%;
+                    --gr-content-width-proportion: 80%;
+
+                    --gr-header-min-width: 80px;
+                    --gr-footer-min-width: 80px;
+
+                    --gr-card-element-margin: 6px 10px 6px 10px; /* header content footer*/
+
+                    display: flex;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, .12);
+                    margin-bottom: 20px;
+                    vertical-align: middle;
+                    position: relative;
+                }
+
+                .gr-header {
+                    width: var(--gr-header-width-proportion);
+                    min-width: var(--gr-header-min-width);
+                    margin: var(--gr-card-element-margin);
+                    background-color: #fff;
+                    /* background-color: blueviolet; */
+                }
+
+                .gr-header img {
+                    width: 80px;
+                    height: 80px;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin: 0px;
+                }
+
+                .gr-content {
+                    width: var(--gr-content-width-proportion);
+                    margin: var(--gr-card-element-margin);
+                    background-color: #fff;
+                    text-align: left;
+                }
+
+                #gr-github-icon {
+                    font-size: 1.3rem;
+                }
+                .gr-fullname {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .gr-fullname p {
+                    line-height: 2rem;
+                    margin: 10px 0px 0px 0px;
+                    padding: 0;
+                    font-size: .83rem;
+                    font-weight: bolder;
+                }
+
+                .gr-description {
+                    font-size: .8rem;
+                    line-height: 1.6rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .gr-footer {
+                    width: var(--gr-footer-width-proportion);
+                    min-width: var(--gr-footer-min-width);
+                    margin: var(--gr-card-element-margin);
+                    display: flex;
+                    /* background-color: aqua; */
+                    background-color: #fff;
+                    position: relative;
+                    padding: 0px;
+                }
+
+                .gr-language-star {
+                    margin: auto auto 22px auto;
+                    text-align: center;
+                    opacity: 1;
+                }
+
+                .gr-language {
+                    font-size: .8rem;
+                    font-weight: 600;
+                    line-height: 2.2rem;
+                    color: #2070d3;
+                }
+
+                .gr-stargazers_count {
+                    font-size: .8rem;
+                }
+
+                #gr-star-icon {
+                    font-size: .8rem;
+                    display: inherit;
+                }
+
+                .gr-card-toolbar{
+                    display:flex;
+                    width: 100%;
+                    height: 100%;
+
+                    position: absolute;
+
+                    opacity: 0;
+                    animation: fade-out;
+                    animation-duration: .4s;
+                    z-index: -1;
+                    /* background-color: #2070d3; */
+                }
+
+                .gr-repo-link {
+                    margin: auto;
+                }
+
+                #gr-repo-link-icon {
+                    font-size: 16px;
+                }
+                /* animation part */
+
+                @keyframes fade-in {
+                    0% {opacity: 0;}/*初始状态 透明度为0*/
+                    100% {opacity: 1;}/*结束状态 透明度为1*/
+                }
+
+                @keyframes fade-out {
+                    0% {opacity: 1;}/*初始状态 透明度为0*/
+                    100% {opacity: 0;}/*结束状态 透明度为1*/
+                }
+
+                .gr-card:hover .gr-language-star{
+                    opacity: 0;
+                    animation: fade-out;
+                    animation-duration: .3s;
+                }
+
+                .gr-card:hover .gr-card-toolbar{
+                    opacity: 1;
+                    animation: fade-in;
+                    animation-duration: .6s;
+                    z-index: 1;
+                }
+                &lt;/style&gt;
+
+                &lt;div class=&quot;gr-card&quot;&gt;
+                    &lt;div class=&quot;gr-header&quot;&gt;
+                        &lt;img src=&quot;https://avatars.githubusercontent.com/u/22283693?v=4&quot; alt=&quot;&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;gr-content&quot;&gt;
+                        &lt;div class=&quot;gr-fullname&quot;&gt;
+                            &lt;p&gt;&lt;i class=&quot;fab fa-github fa-lg&quot; aria-hidden=&quot;true&quot; id=&quot;gr-github-icon&quot;&gt;&lt;/i&gt; nullobsi/cantata&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;gr-description&quot;&gt;
+                            Qt Graphical MPD Client
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;gr-footer&quot;&gt;
+                        &lt;div class=&quot;gr-language-star&quot;&gt;
+                            &lt;span class=&quot;gr-language&quot;&gt;C++&lt;/span&gt;&lt;br&gt;
+                            &lt;span class=&quot;gr-stargazers_count&quot;&gt;&lt;i class=&quot;far fa-star&quot; aria-hidden=&quot;true&quot; id=&#39;gr-star-icon&#39;&gt;&lt;/i&gt; 87&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;gr-card-toolbar&quot;&gt;
+                            &lt;div class=&quot;gr-repo-link&quot;&gt;
+                                &lt;a href=&quot;https://github.com/nullobsi/cantata&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;
+                                    title=&quot;Open in a new TAB&quot;&gt;
+                                    &lt;i class=&quot;fas fa-external-link-square-alt fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color: black;&quot; id=&quot;gr-repo-link-icon&quot;&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;</description>
       
       
       

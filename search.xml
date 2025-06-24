@@ -19515,6 +19515,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>paru<figure class="highlight ini"><figcaption><span>./airootfs/etc/skel/.config/paru/paru.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[options]</span></span><br><span class="line">SudoLoop</span><br><span class="line">SkipReview</span><br></pre></td></tr></table></figure></li>
 <li>makepkg<figure class="highlight ini"><figcaption><span>./airootfs/etc/skel/.makepkg.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">MAKEFLAGS</span>=<span class="string">&quot;-j $(nproc)&quot;</span></span><br></pre></td></tr></table></figure></li>
 <li>vi<figure class="highlight ini"><figcaption><span>./airootfs/etc/skel/.exrc</span></figcaption><table><tr><td class="code"><pre><span class="line">set showmode</span><br><span class="line">set number</span><br><span class="line">set ruler</span><br><span class="line">set title</span><br><span class="line">set showcmd</span><br></pre></td></tr></table></figure></li>
+<li>archinstall<br>日本語ターミナル環境で実行できて便利かもしれない。<br><img src="/images/archinstall_japanese.png"></li>
 </ul>
 <h4 id="日本語環境"><a href="#日本語環境" class="headerlink" title="日本語環境"></a>日本語環境</h4><ul>
 <li>ライブイメージ起動時の言語を指定する場合<figure class="highlight ini"><figcaption><span>./airootfs/etc/locale.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#LANG=en_US.UTF-8</span></span><br><span class="line"><span class="attr">LANG</span>=ja_JP.UTF-<span class="number">8</span></span><br></pre></td></tr></table></figure></li>
@@ -19549,7 +19550,6 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>CalamaresのWelcome画面の言語一覧に日本語が2つ存在するのはなぜ？</li>
 </ul>
 <h3 id="TODO-多分やらない"><a href="#TODO-多分やらない" class="headerlink" title="TODO (多分やらない)"></a>TODO (多分やらない)</h3><ul>
-<li>archinstall<br>calamaresで代替するので保留。</li>
 <li>chromium → Google Chrome<br>なんとなくデフォルトはOSSで揃えておきたいので保留。</li>
 <li>nautilusのブックマークに<code>/</code>を追加<br><code>~/.config/gtk-3.0/bookmarks</code><br>スクリプト等での追加が必要そうなので保留。</li>
 <li>pamac追加<br>基本的にパッケージはコマンドで入れるので保留。</li>
@@ -19574,6 +19574,192 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
             <div class="og-title">Music Player Daemon (MPD)</div>
             <div class="og-description">Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music.</div></div></a>
 
+<p>MPDクライアントにはcantataを利用しました。</p>
+<style>
+                /* css part */
+                .gr-card {
+
+                    --gr-header-width-proportion: 10%;
+                    --gr-footer-width-proportion: 10%;
+                    --gr-content-width-proportion: 80%;
+
+                    --gr-header-min-width: 80px;
+                    --gr-footer-min-width: 80px;
+
+                    --gr-card-element-margin: 6px 10px 6px 10px; /* header content footer*/
+
+                    display: flex;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, .12);
+                    margin-bottom: 20px;
+                    vertical-align: middle;
+                    position: relative;
+                }
+
+                .gr-header {
+                    width: var(--gr-header-width-proportion);
+                    min-width: var(--gr-header-min-width);
+                    margin: var(--gr-card-element-margin);
+                    background-color: #fff;
+                    /* background-color: blueviolet; */
+                }
+
+                .gr-header img {
+                    width: 80px;
+                    height: 80px;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin: 0px;
+                }
+
+                .gr-content {
+                    width: var(--gr-content-width-proportion);
+                    margin: var(--gr-card-element-margin);
+                    background-color: #fff;
+                    text-align: left;
+                }
+
+                #gr-github-icon {
+                    font-size: 1.3rem;
+                }
+                .gr-fullname {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .gr-fullname p {
+                    line-height: 2rem;
+                    margin: 10px 0px 0px 0px;
+                    padding: 0;
+                    font-size: .83rem;
+                    font-weight: bolder;
+                }
+
+                .gr-description {
+                    font-size: .8rem;
+                    line-height: 1.6rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .gr-footer {
+                    width: var(--gr-footer-width-proportion);
+                    min-width: var(--gr-footer-min-width);
+                    margin: var(--gr-card-element-margin);
+                    display: flex;
+                    /* background-color: aqua; */
+                    background-color: #fff;
+                    position: relative;
+                    padding: 0px;
+                }
+
+                .gr-language-star {
+                    margin: auto auto 22px auto;
+                    text-align: center;
+                    opacity: 1;
+                }
+
+                .gr-language {
+                    font-size: .8rem;
+                    font-weight: 600;
+                    line-height: 2.2rem;
+                    color: #2070d3;
+                }
+
+                .gr-stargazers_count {
+                    font-size: .8rem;
+                }
+
+                #gr-star-icon {
+                    font-size: .8rem;
+                    display: inherit;
+                }
+
+                .gr-card-toolbar{
+                    display:flex;
+                    width: 100%;
+                    height: 100%;
+
+                    position: absolute;
+
+                    opacity: 0;
+                    animation: fade-out;
+                    animation-duration: .4s;
+                    z-index: -1;
+                    /* background-color: #2070d3; */
+                }
+
+                .gr-repo-link {
+                    margin: auto;
+                }
+
+                #gr-repo-link-icon {
+                    font-size: 16px;
+                }
+                /* animation part */
+
+                @keyframes fade-in {
+                    0% {opacity: 0;}/*初始状态 透明度为0*/
+                    100% {opacity: 1;}/*结束状态 透明度为1*/
+                }
+
+                @keyframes fade-out {
+                    0% {opacity: 1;}/*初始状态 透明度为0*/
+                    100% {opacity: 0;}/*结束状态 透明度为1*/
+                }
+
+                .gr-card:hover .gr-language-star{
+                    opacity: 0;
+                    animation: fade-out;
+                    animation-duration: .3s;
+                }
+
+                .gr-card:hover .gr-card-toolbar{
+                    opacity: 1;
+                    animation: fade-in;
+                    animation-duration: .6s;
+                    z-index: 1;
+                }
+                </style>
+
+                <div class="gr-card">
+                    <div class="gr-header">
+                        <img src="https://avatars.githubusercontent.com/u/22283693?v=4" alt="">
+                    </div>
+                    <div class="gr-content">
+                        <div class="gr-fullname">
+                            <p><i class="fab fa-github fa-lg" aria-hidden="true" id="gr-github-icon"></i> nullobsi/cantata</p>
+                        </div>
+                        <div class="gr-description">
+                            Qt Graphical MPD Client
+                        </div>
+                    </div>
+                    <div class="gr-footer">
+                        <div class="gr-language-star">
+                            <span class="gr-language">C++</span><br>
+                            <span class="gr-stargazers_count"><i class="far fa-star" aria-hidden="true" id='gr-star-icon'></i> 87</span>
+                        </div>
+                        <div class="gr-card-toolbar">
+                            <div class="gr-repo-link">
+                                <a href="https://github.com/nullobsi/cantata" target="_blank" rel="noopener noreferrer"
+                                    title="Open in a new TAB">
+                                    <i class="fas fa-external-link-square-alt fa-lg" aria-hidden="true" style="color: black;" id="gr-repo-link-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
@@ -19587,17 +19773,15 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl --user <span class="built_in">enable</span> --now mpd.service</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="cantata"><a href="#cantata" class="headerlink" title="cantata"></a>cantata</h4><ul>
-<li>Arch Linuxの場合<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S cantata-qt6-git</span><br></pre></td></tr></table></figure>
-または<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak install flathub dog.unix.cantata.Cantata</span><br></pre></td></tr></table></figure>
-<div class="note info flat"><p>AURのバージョンはcantata 2.5.0, cantata-qt6 3.3.0, cantata-qt6-git 3.3.1</p>
-</div></li>
+<li>Arch Linuxの場合<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S cantata-qt6-git</span><br></pre></td></tr></table></figure></li>
 <li>Windowsの場合<br><a href="https://github.com/nullobsi/cantata/releases/">https://github.com/nullobsi/cantata/releases/</a><br>ダウンロードして展開</li>
-<li>mpdのHTTPストリームに接続するには<br><code>http://192.168.8:8000</code>を指定</li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>cantataをインストールしたら初回起動時にmpdに<kbd>接続</kbd></li>
 <li>cantataの設定-コネクション-音楽フォルダにmpdのmusic_directoryを指定<br>フォルダにアクセス可能な場合はコンテキストメニューの各種項目が選択できるようになる。</li>
-<li>オーディオファイルを追加したらcantataで<kbd>≡</kbd>-<kbd>データベースの更新</kbd></li>
+<li>cantataでリモート(192.168.11.8)のmpdのHTTPストリームをローカルで再生するには<br>HTTPストリームURL:  <code>http://192.168.11.8:8000</code><br>出力先: <code>My HTTP Stream</code><br>HTTPアウトプットストリームを再生: チェック<div class="note info flat"><p>ポーズ、停止からの再開で音が出ない場合はcantataを再起動</p>
+</div></li>
+<li>mpdでオーディオファイルを追加したらcantataで<kbd>≡</kbd>-<kbd>データベースの更新</kbd></li>
 <li>mpdは拡張子無しのオーディオファイルを認識しない</li>
 <li>mpdはオーディオファイルのシンボリックリンクを認識する</li>
 </ul>
