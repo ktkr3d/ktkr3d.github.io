@@ -19544,7 +19544,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>デフォルトターミナルエミュレータの設定<br>gnome-terminalが依存され過ぎて削除できない</li>
 <li>フォント指定  <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/desktop/interface]</span></span><br><span class="line">font-name &#x27;Noto Sans CJK JP 11&#x27;</span><br><span class="line">document-font-name &#x27;Noto Sans CJK JP 11&#x27;</span><br><span class="line"><span class="attr">monospace-font-name</span> = <span class="string">&#x27;HackGen Console NF 11&#x27;</span></span><br></pre></td></tr></table></figure></li>
 <li>paruキャッシュとカスタムローカルリポジトリの連動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru</span><br><span class="line">find ~/.cache/paru/clone/ -name <span class="string">&quot;*.pkg.tar.zst&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>パッケージの削除(xorg)</li>
+<li>xorgの削除<br>xorg-serverを削除しても特に依存関係は崩れなかった</li>
 <li>colord<br>起動時にcolordがcore dumpする。その後正常にcolordサービスは実行されている。<br><a href="https://archlinux.org/packages/extra/x86_64/colord/">https://archlinux.org/packages/extra/x86_64/colord/</a></li>
 <li>カーネルパラメタ</li>
 <li>CalamaresのWelcome画面の言語一覧に日本語が2つ存在するのはなぜ？</li>
@@ -19776,14 +19776,18 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>Arch Linuxの場合<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S cantata-qt6-git</span><br></pre></td></tr></table></figure></li>
 <li>Windowsの場合<br><a href="https://github.com/nullobsi/cantata/releases/">https://github.com/nullobsi/cantata/releases/</a><br>ダウンロードして展開</li>
 </ul>
-<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><h4 id="mpd-1"><a href="#mpd-1" class="headerlink" title="mpd"></a>mpd</h4><ul>
+<li>オーディオファイルを<code>~/Music</code>に格納する</li>
+<li>mpdは拡張子無しのオーディオファイルを認識しない</li>
+<li>mpdはオーディオファイルのシンボリックリンクを認識する</li>
+<li>userサービスの場合はログインしている必要あり</li>
+</ul>
+<h4 id="cantata-1"><a href="#cantata-1" class="headerlink" title="cantata"></a>cantata</h4><ul>
 <li>cantataをインストールしたら初回起動時にmpdに<kbd>接続</kbd></li>
 <li>cantataの設定-コネクション-音楽フォルダにmpdのmusic_directoryを指定<br>フォルダにアクセス可能な場合はコンテキストメニューの各種項目が選択できるようになる。</li>
 <li>cantataでリモート(192.168.11.8)のmpdのHTTPストリームをローカルで再生するには<br>HTTPストリームURL:  <code>http://192.168.11.8:8000</code><br>出力先: <code>My HTTP Stream</code><br>HTTPアウトプットストリームを再生: チェック<div class="note info flat"><p>ポーズ、停止からの再開で音が出ない場合はcantataを再起動</p>
 </div></li>
 <li>mpdでオーディオファイルを追加したらcantataで<kbd>≡</kbd>-<kbd>データベースの更新</kbd></li>
-<li>mpdは拡張子無しのオーディオファイルを認識しない</li>
-<li>mpdはオーディオファイルのシンボリックリンクを認識する</li>
 </ul>
 <p><a href="echo" title="Symlink (ln -s) | iconName=music-app-symbolic bash=&#39;cd ~/.local/share/monophony; for fname in ???????????; do ln -s ~/.local/share/monophony/$fname ~/Music/$fname.opus; done; exit&#39; terminal=false"></a></p>
 ]]></content>
