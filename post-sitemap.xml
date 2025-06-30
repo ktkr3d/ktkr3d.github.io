@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2025/06/26/kdenlive/</loc>
+        <lastmod>2025-06-30T10:21:54.236Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2025/02/25/Script-Launcher/</loc>
+        <lastmod>2025-06-27T12:43:47.900Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2025/06/19/mpd/</loc>
         <lastmod>2025-06-24T21:42:35.387Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -163,14 +179,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2025/03/05/File-Sync/</loc>
         <lastmod>2025-03-06T11:42:50.885Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2025/02/25/Script-Launcher/</loc>
-        <lastmod>2025-02-28T06:32:35.564Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

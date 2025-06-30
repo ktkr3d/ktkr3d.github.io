@@ -18273,6 +18273,14 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li><a href="https://github.com/Jayich-Lab/tray-launcher">tray-launcher</a></li>
 <li><a href="https://github.com/zozonteq/task-tray-launcher">task-tray-launcher</a></li>
 </ul>
+<h4 id="2025-06-27-追記"><a href="#2025-06-27-追記" class="headerlink" title="2025-06-27 追記"></a>2025-06-27 追記</h4><p>起動用のvbsをショートカットファイルで代替できます。</p>
+<ol>
+<li>script-launcher.ps1のショートカットを作成</li>
+<li>リンク先を変更  <figure class="highlight text"><figcaption><span>リンク先(変更前)</span></figcaption><table><tr><td class="code"><pre><span class="line">C:\repos\script-launcher\script-launcher.ps1</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><figcaption><span>リンク先(変更後)</span></figcaption><table><tr><td class="code"><pre><span class="line">powershell.exe -WindowStyle Hidden -ExecutionPolicy RemoteSigned -File C:\repos\script-launcher\script-launcher.ps1 -arg1 C:\repos\script-launcher\scripts</span><br></pre></td></tr></table></figure></li>
+<li>実行時の大きさを「最小化」に変更</li>
+<li>Windows Terminalをインストールしている場合はWindows 11の 設定 &gt; システム &gt; 開発者向け &gt; ターミナル で「Windows コンソールホスト」を選択</li>
+</ol>
 <span id="more"></span>
 
 <h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><ul>
@@ -19793,6 +19801,86 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 ]]></content>
       <tags>
         <tag>mpd</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kdenlive</title>
+    <url>/2025/06/26/kdenlive/</url>
+    <content><![CDATA[<p>ビデオエディタKdenliveを使ってみました。</p>
+<a href="https://kdenlive.org/" target="_blank" rel="external nofollow noopener noreferrer" class="link-preview">
+    <div class="og-image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Kdenlive-logo.svg" alt="Kdenlive" class="not-gallery-item" loading="lazy"></div>
+        <div class="descriptions">
+            <div class="og-title">Kdenlive</div>
+            <div class="og-description">Kdenlive is the acronym for KDE Non-Linear Video Editor. It works on Linux, Windows, macOS, and BSD.</div></div></a>
+
+
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Arch Linux</li>
+<li>kdenlive 25.04.2</li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
+<li>インストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S kdenlive</span><br></pre></td></tr></table></figure></li>
+<li>設定<ul>
+<li>ツールバー(2種)を表示し、アイコンのみに設定</li>
+</ul>
+</li>
+</ol>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><h4 id="起動から書き出しまでの流れ"><a href="#起動から書き出しまでの流れ" class="headerlink" title="起動から書き出しまでの流れ"></a>起動から書き出しまでの流れ</h4><ol>
+<li>起動<br>  フルスリーンモードに変更</li>
+<li>プロジェクトの設定(オプション)<br>  必要に応じて解像度、フレームレートなどを変更</li>
+<li>プロジェクトビンにクリップを追加</li>
+<li>タイムラインにクリップを配置</li>
+<li>クリップの編集<ul>
+<li>クリップのトリミング（不要な部分の削除）</li>
+<li>トランジション（クリップ間の切り替え効果）を追加</li>
+<li>エフェクト（色補正、音声調整など）を適用</li>
+<li>テロップ（字幕）を作成・追加</li>
+</ul>
+</li>
+<li>レンダリング（プロジェクトを動画ファイルとして書き出す）</li>
+</ol>
+<h4 id="クリップを特定位置で分割"><a href="#クリップを特定位置で分割" class="headerlink" title="クリップを特定位置で分割"></a>クリップを特定位置で分割</h4><ol>
+<li>タイムライン上で分割したい位置にカーソルを移動<br>  左右矢印キーで微調整</li>
+<li>分割<br>  クリップを右クリックから「クリップの切り取り(Shift R)」</li>
+</ol>
+<h4 id="テロップ（字幕機能）"><a href="#テロップ（字幕機能）" class="headerlink" title="テロップ（字幕機能）"></a>テロップ（字幕機能）</h4><ul>
+<li>字幕の追加<br>プロジェクト 字幕 字幕を追加</li>
+<li>字幕トラックを表示&#x2F;非表示するには<br>プロジェクト 字幕 字幕ツールを編集</li>
+<li>字幕トラックのレイア―を追加&#x2F;削除するには<br>プロジェクト 字幕 字幕を管理</li>
+</ul>
+<h4 id="テロップ（ファイルから字幕生成）"><a href="#テロップ（ファイルから字幕生成）" class="headerlink" title="テロップ（ファイルから字幕生成）"></a>テロップ（ファイルから字幕生成）</h4><ol>
+<li>プロジェクト 字幕 Export Subtitle File</li>
+<li>Subtitle File(subtitle.ass) を編集</li>
+<li>プロジェクト 字幕 Import Subtitle File</li>
+</ol>
+<h4 id="テロップ（タイトル・クリップ機能）"><a href="#テロップ（タイトル・クリップ機能）" class="headerlink" title="テロップ（タイトル・クリップ機能）"></a>テロップ（タイトル・クリップ機能）</h4><ol>
+<li>プロジェクトウィンドウで追加<br>  「プロジェクト」「タイトル・クリップの追加」</li>
+<li>タイトルクリップの作成<br>  「タイトルエディター」で字幕テキストを入力し、フォント、サイズ、色、配置などのスタイルを設定</li>
+<li>タイムラインへの追加<br>  作成したタイトルクリップをタイムラインにドラッグ＆ドロップ</li>
+<li>字幕の調整<br>  必要に応じて、字幕の表示時間や位置を調整</li>
+</ol>
+<h4 id="ズームイン"><a href="#ズームイン" class="headerlink" title="ズームイン"></a>ズームイン</h4><ol>
+<li>Transformを適用<br>2, Keyframeを追加</li>
+<li>Sizeを変更</li>
+</ol>
+<h4 id="フェードイン-フェードアウト"><a href="#フェードイン-フェードアウト" class="headerlink" title="フェードイン&#x2F;フェードアウト"></a>フェードイン&#x2F;フェードアウト</h4><ul>
+<li>効果 - モーション - フェードイン</li>
+<li>効果 - モーション - フェードアウト</li>
+</ul>
+<h4 id="ショート動画"><a href="#ショート動画" class="headerlink" title="ショート動画"></a>ショート動画</h4><ol>
+<li>「プロジェクト」-&gt;「プロジェクト設定」</li>
+<li>「カスタム」を選択し、1080ｘ1920 （9：16）</li>
+<li>クリップを取り込み、タイムラインに配置</li>
+<li>効果 Transform, Distort and Perspective トランスフォーム をタイムラインのクリップにドロップ</li>
+<li>トランスフォームのスケールを調整<br>  元のクリップがFHDの場合、319％ (&#x3D; 1920 ^ 2 &#x2F; 1080 ^ 2)</li>
+</ol>
+<h4 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h4><p><a href="https://eng-blog.iij.ad.jp/archives/2643#%e3%82%88%e3%81%8f%e4%bd%bf%e3%81%86%e9%81%b7%e7%a7%bb%e5%8a%b9%e6%9e%9c%e3%83%bb%e5%8a%b9%e6%9e%9c%e3%81%ae%e3%83%aa%e3%82%b9%e3%83%88">https://eng-blog.iij.ad.jp/archives/2643#%e3%82%88%e3%81%8f%e4%bd%bf%e3%81%86%e9%81%b7%e7%a7%bb%e5%8a%b9%e6%9e%9c%e3%83%bb%e5%8a%b9%e6%9e%9c%e3%81%ae%e3%83%aa%e3%82%b9%e3%83%88</a></p>
+]]></content>
+      <tags>
+        <tag>kdenlive</tag>
       </tags>
   </entry>
 </search>

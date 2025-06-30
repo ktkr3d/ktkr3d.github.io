@@ -15,8 +15,33 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 24 Jun 2025 21:42:35 GMT</pubDate>
+    <pubDate>Mon, 30 Jun 2025 10:21:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Kdenlive</title>
+      <link>https://ktkr3d.github.io/2025/06/26/kdenlive/</link>
+      <guid>https://ktkr3d.github.io/2025/06/26/kdenlive/</guid>
+      <pubDate>Thu, 26 Jun 2025 06:28:25 GMT</pubDate>
+      
+      <description>&lt;p&gt;ビデオエディタKdenliveを使ってみました。&lt;/p&gt;
+&lt;a href=&quot;https://kdenlive.org/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/c/c6/Kdenlive-logo.svg&quot; alt=&quot;Kdenlive&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;Kdenlive&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;Kdenlive is the acronym for KDE Non-Linear Video Editor. It works on Linux, Windows, macOS, and BSD.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/kdenlive/">kdenlive</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/06/26/kdenlive/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>mpd</title>
@@ -633,7 +658,15 @@
 &lt;li&gt;&lt;a href=&quot;https://qiita.com/sumikko_tester/items/b3c8440fd182cdabe31b&quot;&gt;【powershell】アプリ起動ランチャー作ってみた&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/Jayich-Lab/tray-launcher&quot;&gt;tray-launcher&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/zozonteq/task-tray-launcher&quot;&gt;task-tray-launcher&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+&lt;h4 id=&quot;2025-06-27-追記&quot;&gt;&lt;a href=&quot;#2025-06-27-追記&quot; class=&quot;headerlink&quot; title=&quot;2025-06-27 追記&quot;&gt;&lt;/a&gt;2025-06-27 追記&lt;/h4&gt;&lt;p&gt;起動用のvbsをショートカットファイルで代替できます。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;script-launcher.ps1のショートカットを作成&lt;/li&gt;
+&lt;li&gt;リンク先を変更  &lt;figure class=&quot;highlight text&quot;&gt;&lt;figcaption&gt;&lt;span&gt;リンク先(変更前)&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;C:&#92;repos&#92;script-launcher&#92;script-launcher.ps1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+  &lt;figure class=&quot;highlight text&quot;&gt;&lt;figcaption&gt;&lt;span&gt;リンク先(変更後)&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;powershell.exe -WindowStyle Hidden -ExecutionPolicy RemoteSigned -File C:&#92;repos&#92;script-launcher&#92;script-launcher.ps1 -arg1 C:&#92;repos&#92;script-launcher&#92;scripts&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;実行時の大きさを「最小化」に変更&lt;/li&gt;
+&lt;li&gt;Windows Terminalをインストールしている場合はWindows 11の 設定 &amp;gt; システム &amp;gt; 開発者向け &amp;gt; ターミナル で「Windows コンソールホスト」を選択&lt;/li&gt;
+&lt;/ol&gt;</description>
       
       
       
@@ -668,29 +701,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/02/24/GlazeWM/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>FancyWM</title>
-      <link>https://ktkr3d.github.io/2025/01/31/FancyWM/</link>
-      <guid>https://ktkr3d.github.io/2025/01/31/FancyWM/</guid>
-      <pubDate>Fri, 31 Jan 2025 11:32:43 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/fancywm_windhawk.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;FancyWMはWindows用のタイリングマネージャです。&lt;br&gt;2-in-1 PCのタッチスクリーンで便利です。&lt;br&gt;Linux環境とほぼ同等の使い方ができるようになりました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/FancyWM/fancywm&quot;&gt;https://github.com/FancyWM/fancywm&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/fancywm/">fancywm</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/01/31/FancyWM/#disqus_thread</comments>
       
     </item>
     
