@@ -19870,12 +19870,12 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>効果 - モーション - フェードイン</li>
 <li>効果 - モーション - フェードアウト</li>
 </ul>
-<h4 id="ショート動画"><a href="#ショート動画" class="headerlink" title="ショート動画"></a>ショート動画</h4><ol>
-<li>「プロジェクト」-&gt;「プロジェクト設定」</li>
-<li>「カスタム」を選択し、1080ｘ1920 （9：16）</li>
+<h4 id="ショート動画用にポートレートレイアウトに変換"><a href="#ショート動画用にポートレートレイアウトに変換" class="headerlink" title="ショート動画用にポートレートレイアウトに変換"></a>ショート動画用にポートレートレイアウトに変換</h4><ol>
+<li>「プロジェクト」-「プロジェクト設定」で「カスタム」-「Vertical HD 30fps」を選択</li>
 <li>クリップを取り込み、タイムラインに配置</li>
-<li>効果 Transform, Distort and Perspective トランスフォーム をタイムラインのクリップにドロップ</li>
-<li>トランスフォームのスケールを調整<br>  元のクリップがFHDの場合、316.05 ％ (&#x3D; 1920 ^ 2 &#x2F; 1080 ^ 2)</li>
+<li>「効果」-「Transform, Distort and Perspective」-「トランスフォーム」をタイムラインのクリップにドロップ</li>
+<li>トランスフォームの「水平方向に中央」、「高さに合わせる」アイコンを選択</li>
+<li>レンダリングを実行</li>
 </ol>
 <h4 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h4><p><a href="https://eng-blog.iij.ad.jp/archives/2643#%e3%82%88%e3%81%8f%e4%bd%bf%e3%81%86%e9%81%b7%e7%a7%bb%e5%8a%b9%e6%9e%9c%e3%83%bb%e5%8a%b9%e6%9e%9c%e3%81%ae%e3%83%aa%e3%82%b9%e3%83%88">https://eng-blog.iij.ad.jp/archives/2643#%e3%82%88%e3%81%8f%e4%bd%bf%e3%81%86%e9%81%b7%e7%a7%bb%e5%8a%b9%e6%9e%9c%e3%83%bb%e5%8a%b9%e6%9e%9c%e3%81%ae%e3%83%aa%e3%82%b9%e3%83%88</a></p>
 ]]></content>
