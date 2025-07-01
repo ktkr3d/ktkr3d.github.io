@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 01 Jul 2025 18:53:40 GMT</pubDate>
+    <pubDate>Tue, 01 Jul 2025 19:00:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Mon, 30 Jun 2025 21:38:39 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/grd_keyboard.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Arch LinuxやUbuntuのPCへリモートデスクトップ接続した際にパイプ文字「|」が入力できない事象があります。gnome-remote-desktopのプロジェクトページではIssueが登録されていました。キーボードが正しく認識されないようです。&lt;br&gt;私の環境ではデスクトップPCが日本語キーボード、ノートPCが英語キーボードです。キーボードの設定はどちらでも構わないので当面英語キーボードの設定にしようと思います。&lt;/p&gt;</description>
+&lt;p&gt;Arch LinuxやUbuntuのPCへリモートデスクトップ接続した際にパイプ文字「|」が入力できない事象があります。gnome-remote-desktopのプロジェクトページではIssueが登録されていました。キーボードが正しく認識されないようです。&lt;br&gt;私の環境ではデスクトップPCが日本語キーボード、ノートPCが英語キーボードです。キーボードの設定はどちらでも構わないので当面英語キーボードの設定にしようと思います。&lt;br&gt;xrdpに戻すべきなのだろうか。&lt;/p&gt;</description>
       
       
       
