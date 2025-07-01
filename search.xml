@@ -19892,12 +19892,9 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <p>Arch LinuxやUbuntuのPCへリモートデスクトップ接続した際にパイプ文字「|」が入力できない事象があります。gnome-remote-desktopのプロジェクトページではIssueが登録されていました。キーボードが正しく認識されないようです。<br>私の環境ではデスクトップPCが日本語キーボード、ノートPCが英語キーボードです。キーボードの設定はどちらでも構わないので当面英語キーボードの設定にしようと思います。</p>
 <span id="more"></span>
 
-<h3 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h3><ul>
-<li><p>gnome-remote-desktop<br><a href="https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/issues/234">https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/issues/234</a></p>
+<h3 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h3><p>ｰ 事象<br>  日本語キーボードを接続したOS(WindowsやLinux)からGNOME Remote Desktopでリモート接続可能なLinux(Arch LinuxやUbuntu)にRDP接続した際にキーボードが正しく認識されない。パイプ文字が入力できない。半角&#x2F;全角キー押下でIMEが過度に切り替わる。テンキーの入力を受け付けない。</p>
 <ul>
-<li>パイプ文字が入力できない</li>
-<li>テンキーで入力できない</li>
-</ul>
+<li><p>gnome-remote-desktop<br><a href="https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/issues/234">https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/issues/234</a></p>
 </li>
 <li><p>frdp<br><a href="https://github.com/FreeRDP/FreeRDP/issues/11036">https://github.com/FreeRDP/FreeRDP/issues/11036</a></p>
 </li>
