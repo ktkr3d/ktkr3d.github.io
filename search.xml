@@ -19892,19 +19892,21 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <p>Arch LinuxやUbuntuのPCへリモートデスクトップ接続した際にパイプ文字「|」が入力できない事象があります。gnome-remote-desktopのプロジェクトページではIssueが登録されていました。キーボードが正しく認識されないようです。<br>私の環境ではデスクトップPCが日本語キーボード、ノートPCが英語キーボードです。キーボードの設定はどちらでも構わないので当面英語キーボードの設定にしようと思います。<br>xrdpに戻すべきなのだろうか。</p>
 <span id="more"></span>
 
-<h3 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h3><p>ｰ 事象<br>  日本語キーボードを接続したOS(WindowsやLinux)からGNOME Remote Desktopでリモート接続可能なLinux(Arch LinuxやUbuntu)にRDP接続した際にキーボードが正しく認識されない。<br>  パイプ文字が入力できない。半角&#x2F;全角キー押下でIMEが過度に切り替わる。テンキーの入力を受け付けない。</p>
-<ul>
+<h3 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h3><h4 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h4><p>  日本語キーボードを接続したOS(WindowsやLinux)からGNOME Remote Desktopでリモート接続可能なLinux(Arch LinuxやUbuntu)にRDP接続した際にキーボードが正しく認識されない。<br>  パイプ文字が入力できない。半角&#x2F;全角キー押下でIMEが過度に切り替わる。テンキーの入力を受け付けない。</p>
+<h4 id="対応状況"><a href="#対応状況" class="headerlink" title="対応状況"></a>対応状況</h4><ul>
 <li><p>gnome-remote-desktop<br><a href="https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/issues/234">https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/issues/234</a></p>
 </li>
 <li><p>frdp<br><a href="https://github.com/FreeRDP/FreeRDP/issues/11036">https://github.com/FreeRDP/FreeRDP/issues/11036</a></p>
 </li>
 <li><p>マージされているパッチ<br><a href="https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/merge_requests/296/diffs?commit_id=c9b138c9d101562d7a8a93791dee4147c2973394">https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/merge_requests/296/diffs?commit_id=c9b138c9d101562d7a8a93791dee4147c2973394</a></p>
 </li>
+</ul>
+<h4 id="最新版のコードの確認、ビルド"><a href="#最新版のコードの確認、ビルド" class="headerlink" title="最新版のコードの確認、ビルド"></a>最新版のコードの確認、ビルド</h4><ul>
 <li><p>PKGBUILD<br><a href="https://gitlab.archlinux.org/archlinux/packaging/packages/gnome-remote-desktop/-/blob/48.1-1/PKGBUILD?ref_type=tags">https://gitlab.archlinux.org/archlinux/packaging/packages/gnome-remote-desktop/-/blob/48.1-1/PKGBUILD?ref_type=tags</a></p>
 </li>
-<li><p>local build</p>
+<li><p>ローカルでビルド</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> gnome-remote-desktop</span><br><span class="line"><span class="built_in">cd</span> gnome-remote-desktop</span><br><span class="line">curl https://gitlab.archlinux.org/archlinux/packaging/packages/gnome-remote-desktop/-/raw/48.1-1/PKGBUILD?ref_type=tags &gt; PKGBUILD</span><br><span class="line"><span class="built_in">sudo</span> pacman -S asciidoc ffnvcodec-headers vulkan-headers</span><br><span class="line">gpg --keyserver keys.gnupg.net --recv-key A6EEEC9E0136164A</span><br><span class="line">makepkg -o</span><br><span class="line">makepkg -f -e</span><br><span class="line"><span class="built_in">sudo</span> pacman -U gnome-remote-desktop-48.1-1-x86_64.pkg.tar.zst</span><br></pre></td></tr></table></figure>
-<p>パッチは取り込まれていた。インストールして再起動したが改善されない。</p>
+<p>パッチは既に取り込まれていた。インストールして再起動したが改善されない。</p>
 </li>
 </ul>
 ]]></content>
