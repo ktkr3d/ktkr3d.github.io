@@ -19888,7 +19888,11 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
   <entry>
     <title>GNOME Remote Desktop + jp109 keyboard</title>
     <url>/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/</url>
-    <content><![CDATA[<h4 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h4><ul>
+    <content><![CDATA[<p><img src="/images/grd_keyboard.png"></p>
+<p>Arch LinuxやUbuntuのPCへリモートデスクトップ接続した際にパイプ文字「|」が入力できない事象があります。gnome-remote-desktopのプロジェクトページではIssueが登録されていました。キーボードが正しく認識されないようです。<br>私の環境ではデスクトップPCが日本語キーボード、ノートPCが英語キーボードです。キーボードの設定はどちらでも構わないので当面英語キーボードの設定にしようと思います。</p>
+<span id="more"></span>
+
+<h3 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h3><ul>
 <li><p>gnome-remote-desktop<br><a href="https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/issues/234">https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/issues/234</a></p>
 <ul>
 <li>パイプ文字が入力できない</li>
@@ -19906,11 +19910,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <p>パッチは取り込まれていた。インストールして再起動したが改善されない。</p>
 </li>
 </ul>
-<span id="more"></span>
-
-<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><p>- </p>
-<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><p>1. </p>
-<h3 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h3><h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3>]]></content>
+]]></content>
       <tags>
         <tag>gnome-remote-desktop</tag>
       </tags>

@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 30 Jun 2025 22:12:54 GMT</pubDate>
+    <pubDate>Tue, 01 Jul 2025 16:58:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,24 +24,8 @@
       <guid>https://ktkr3d.github.io/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/</guid>
       <pubDate>Mon, 30 Jun 2025 21:38:39 GMT</pubDate>
       
-      <description>&lt;h4 id=&quot;問題&quot;&gt;&lt;a href=&quot;#問題&quot; class=&quot;headerlink&quot; title=&quot;問題&quot;&gt;&lt;/a&gt;問題&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;gnome-remote-desktop&lt;br&gt;&lt;a href=&quot;https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/issues/234&quot;&gt;https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/issues/234&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;パイプ文字が入力できない&lt;/li&gt;
-&lt;li&gt;テンキーで入力できない&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;frdp&lt;br&gt;&lt;a href=&quot;https://github.com/FreeRDP/FreeRDP/issues/11036&quot;&gt;https://github.com/FreeRDP/FreeRDP/issues/11036&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;マージされているパッチ&lt;br&gt;&lt;a href=&quot;https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/merge_requests/296/diffs?commit_id=c9b138c9d101562d7a8a93791dee4147c2973394&quot;&gt;https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/merge_requests/296/diffs?commit_id=c9b138c9d101562d7a8a93791dee4147c2973394&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;PKGBUILD&lt;br&gt;&lt;a href=&quot;https://gitlab.archlinux.org/archlinux/packaging/packages/gnome-remote-desktop/-/blob/48.1-1/PKGBUILD?ref_type=tags&quot;&gt;https://gitlab.archlinux.org/archlinux/packaging/packages/gnome-remote-desktop/-/blob/48.1-1/PKGBUILD?ref_type=tags&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;local build&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;mkdir&lt;/span&gt; gnome-remote-desktop&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; gnome-remote-desktop&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;curl https://gitlab.archlinux.org/archlinux/packaging/packages/gnome-remote-desktop/-/raw/48.1-1/PKGBUILD?ref_type=tags &amp;gt; PKGBUILD&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; pacman -S asciidoc ffnvcodec-headers vulkan-headers&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;gpg --keyserver keys.gnupg.net --recv-key A6EEEC9E0136164A&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;makepkg -o&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;makepkg -f -e&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; pacman -U gnome-remote-desktop-48.1-1-x86_64.pkg.tar.zst&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;パッチは取り込まれていた。インストールして再起動したが改善されない。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&quot;/images/grd_keyboard.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Arch LinuxやUbuntuのPCへリモートデスクトップ接続した際にパイプ文字「|」が入力できない事象があります。gnome-remote-desktopのプロジェクトページではIssueが登録されていました。キーボードが正しく認識されないようです。&lt;br&gt;私の環境ではデスクトップPCが日本語キーボード、ノートPCが英語キーボードです。キーボードの設定はどちらでも構わないので当面英語キーボードの設定にしようと思います。&lt;/p&gt;</description>
       
       
       
