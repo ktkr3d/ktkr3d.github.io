@@ -19964,7 +19964,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <ul>
 <li>Windows<br><a href="https://github.com/jellyfin/jellyfin-media-player/releases">https://github.com/jellyfin/jellyfin-media-player/releases</a></li>
 <li>Arch Linux<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S jellyfin-media-player</span><br></pre></td></tr></table></figure></li>
-<li>Android<br>Jellyfin</li>
+<li>Android<br><a href="https://jellyfin.org/downloads/clients?platform=Android,Android%20TV">https://jellyfin.org/downloads/clients?platform=Android,Android%20TV</a></li>
 <li>Kodi<ul>
 <li>UPnP&#x2F;DLNA</li>
 <li>Addon<br><a href="https://github.com/jellyfin/jellycon#installation">https://github.com/jellyfin/jellycon#installation</a><br><a href="https://jellyfin.org/docs/general/clients/kodi/">https://jellyfin.org/docs/general/clients/kodi/</a></li>
@@ -19981,6 +19981,12 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>動画を格納しているフォルダを登録</li>
 <li>各動画のメタデータを編集</li>
 </ol>
+<h3 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h3><ul>
+<li>複数の機器のクライアントで同時にメディアを再生するには：<br>別のアカウントを利用すべきかもしれない</li>
+<li>クライアント起動時に表示するサーバと画面をの指定するには：</li>
+<li>アルバムアートを表示するには：</li>
+<li>録画したTV番組と各エピソードのメタデータ設定：</li>
+</ul>
 ]]></content>
       <tags>
         <tag>jellyfin</tag>
