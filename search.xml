@@ -19972,7 +19972,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </li>
 <li>VLC</li>
 </ul>
-<h3 id="Jellyfinサーバの設定設定"><a href="#Jellyfinサーバの設定設定" class="headerlink" title="Jellyfinサーバの設定設定"></a>Jellyfinサーバの設定設定</h3><ul>
+<h3 id="Jellyfinサーバの設定"><a href="#Jellyfinサーバの設定" class="headerlink" title="Jellyfinサーバの設定"></a>Jellyfinサーバの設定</h3><ul>
 <li>Jellyfin のログイン<br><code>http://&lt;SERVER_IP&gt;:8096</code></li>
 <li>メディアを格納しているフォルダを追加</li>
 <li>DLNA サーバにする場合<br>カタログ &gt; DLNA を有効にする</li>
