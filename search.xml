@@ -19957,8 +19957,8 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="サーバ"><a href="#サーバ" class="headerlink" title="サーバ"></a>サーバ</h4><p><a href="https://repo.jellyfin.org/?path=/server">https://repo.jellyfin.org/?path=/server</a></p>
 <ul>
-<li>Arch Linux<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S jellyfin-server jellyfin-web</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> --now jellyfin </span><br></pre></td></tr></table></figure></li>
 <li>Windows<br><a href="https://repo.jellyfin.org/?path=/server/windows">https://repo.jellyfin.org/?path=/server/windows</a></li>
+<li>Arch Linux<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S jellyfin-server jellyfin-web</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> --now jellyfin </span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="クライアント"><a href="#クライアント" class="headerlink" title="クライアント"></a>クライアント</h4><p><a href="https://jellyfin.org/downloads/">https://jellyfin.org/downloads/</a></p>
 <ul>
@@ -19973,7 +19973,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>VLC</li>
 </ul>
 <h3 id="Jellyfinサーバの設定設定"><a href="#Jellyfinサーバの設定設定" class="headerlink" title="Jellyfinサーバの設定設定"></a>Jellyfinサーバの設定設定</h3><ul>
-<li>Jellyfin のログイン<br>http:&#x2F;&#x2F;<server ip>:8096</li>
+<li>Jellyfin のログイン<br><code>http://&lt;SERVER_IP&gt;:8096</code></li>
 <li>メディアを格納しているフォルダを追加</li>
 <li>DLNA サーバにする場合<br>カタログ &gt; DLNA を有効にする</li>
 </ul>
