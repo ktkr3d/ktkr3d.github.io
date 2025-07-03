@@ -15,8 +15,33 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 02 Jul 2025 05:33:55 GMT</pubDate>
+    <pubDate>Thu, 03 Jul 2025 14:24:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Jellyfin</title>
+      <link>https://ktkr3d.github.io/2025/07/03/Jellyfin/</link>
+      <guid>https://ktkr3d.github.io/2025/07/03/Jellyfin/</guid>
+      <pubDate>Thu, 03 Jul 2025 11:14:43 GMT</pubDate>
+      
+      <description>&lt;p&gt;メディアサーバJellyfinを使ってみました。&lt;/p&gt;
+&lt;a href=&quot;https://jellyfin.org/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/41/Jellyfin_-_icon-transparent.svg&quot; alt=&quot;Jellyfin&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;Jellyfin&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;The Free Software Media System&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/jellyfin/">jellyfin</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/07/03/Jellyfin/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>GNOME Remote Desktop + jp109 keyboard</title>
@@ -250,7 +275,7 @@
                     &lt;div class=&quot;gr-footer&quot;&gt;
                         &lt;div class=&quot;gr-language-star&quot;&gt;
                             &lt;span class=&quot;gr-language&quot;&gt;C++&lt;/span&gt;&lt;br&gt;
-                            &lt;span class=&quot;gr-stargazers_count&quot;&gt;&lt;i class=&quot;far fa-star&quot; aria-hidden=&quot;true&quot; id=&#39;gr-star-icon&#39;&gt;&lt;/i&gt; 88&lt;/span&gt;
+                            &lt;span class=&quot;gr-stargazers_count&quot;&gt;&lt;i class=&quot;far fa-star&quot; aria-hidden=&quot;true&quot; id=&#39;gr-star-icon&#39;&gt;&lt;/i&gt; 90&lt;/span&gt;
                         &lt;/div&gt;
                         &lt;div class=&quot;gr-card-toolbar&quot;&gt;
                             &lt;div class=&quot;gr-repo-link&quot;&gt;
@@ -661,43 +686,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/03/05/File-Sync/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Script Launcher</title>
-      <link>https://ktkr3d.github.io/2025/02/25/Script-Launcher/</link>
-      <guid>https://ktkr3d.github.io/2025/02/25/Script-Launcher/</guid>
-      <pubDate>Tue, 25 Feb 2025 10:14:46 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/script-launcher.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;タスクバーからスクリプトを起動するランチャーです。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/script-launcher&quot;&gt;https://github.com/ktkr3d/script-launcher&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;以下を参考にしました。ありがとうございます。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiita.com/sumikko_tester/items/b3c8440fd182cdabe31b&quot;&gt;【powershell】アプリ起動ランチャー作ってみた&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/Jayich-Lab/tray-launcher&quot;&gt;tray-launcher&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zozonteq/task-tray-launcher&quot;&gt;task-tray-launcher&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2025-06-27-追記&quot;&gt;&lt;a href=&quot;#2025-06-27-追記&quot; class=&quot;headerlink&quot; title=&quot;2025-06-27 追記&quot;&gt;&lt;/a&gt;2025-06-27 追記&lt;/h4&gt;&lt;p&gt;起動用のvbsをショートカットファイルで代替できます。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;script-launcher.ps1のショートカットを作成&lt;/li&gt;
-&lt;li&gt;リンク先を変更  &lt;figure class=&quot;highlight text&quot;&gt;&lt;figcaption&gt;&lt;span&gt;リンク先(変更前)&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;C:&#92;repos&#92;script-launcher&#92;script-launcher.ps1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-  &lt;figure class=&quot;highlight text&quot;&gt;&lt;figcaption&gt;&lt;span&gt;リンク先(変更後)&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;powershell.exe -WindowStyle Hidden -ExecutionPolicy RemoteSigned -File C:&#92;repos&#92;script-launcher&#92;script-launcher.ps1 -arg1 C:&#92;repos&#92;script-launcher&#92;scripts&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;実行時の大きさを「最小化」に変更&lt;/li&gt;
-&lt;li&gt;Windows Terminalをインストールしている場合はWindows 11の 設定 &amp;gt; システム &amp;gt; 開発者向け &amp;gt; ターミナル で「Windows コンソールホスト」を選択&lt;/li&gt;
-&lt;/ol&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/script-launcher/">script-launcher</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/02/25/Script-Launcher/#disqus_thread</comments>
       
     </item>
     

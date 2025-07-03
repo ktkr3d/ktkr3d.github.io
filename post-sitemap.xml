@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://ktkr3d.github.io/2025/07/03/Jellyfin/</loc>
+        <lastmod>2025-07-03T14:24:29.154Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://ktkr3d.github.io/2025/06/26/kdenlive/</loc>
+        <lastmod>2025-07-03T07:34:01.727Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://ktkr3d.github.io/2024/10/17/fish_starship/</loc>
         <lastmod>2025-07-02T10:56:57.563Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,14 +35,6 @@
     <url>
         <loc>https://ktkr3d.github.io/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/</loc>
         <lastmod>2025-07-02T05:33:55.609Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://ktkr3d.github.io/2025/06/26/kdenlive/</loc>
-        <lastmod>2025-06-30T15:57:52.456Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
