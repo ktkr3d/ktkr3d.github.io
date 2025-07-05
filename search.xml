@@ -19960,11 +19960,32 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>Android<br><a href="https://jellyfin.org/downloads/clients?platform=Android,Android%20TV">https://jellyfin.org/downloads/clients?platform=Android,Android%20TV</a></li>
 </ul>
 <h3 id="メディアファイルの配置"><a href="#メディアファイルの配置" class="headerlink" title="メディアファイルの配置"></a>メディアファイルの配置</h3><p>既存のメディアファイルが複数のフォルダに分散しています。Jellyfinで管理しやすいフォルダ構造上にシンボリックリンクを配置することにしました。</p>
+<h4 id="メディアフォルダの作成"><a href="#メディアフォルダの作成" class="headerlink" title="メディアフォルダの作成"></a>メディアフォルダの作成</h4><ul>
+<li>メディアのカテゴリのルートを作成<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /media/Movies /media/Shows /media/Music /media/links</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 777 /media</span><br></pre></td></tr></table></figure></li>
+<li>Jellyfinのメディアに割り当て<table>
+<thead>
+<tr>
+<th align="left">フォルダ</th>
+<th align="left">メディアの種類</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#x2F;media&#x2F;Movies</td>
+<td align="left">映画</td>
+</tr>
+<tr>
+<td align="left">&#x2F;media&#x2F;Shows</td>
+<td align="left">番組</td>
+</tr>
+<tr>
+<td align="left">&#x2F;media&#x2F;Music</td>
+<td align="left">音楽</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
 <h4 id="構造"><a href="#構造" class="headerlink" title="構造"></a>構造</h4><ul>
 <li>各カテゴリ毎に以下の構造にします<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">/media/</span><br><span class="line">  Movies/</span><br><span class="line">    「タイトル_(YYYY).xxx」動画ファイルのシンボリックリンク</span><br><span class="line">  Music/</span><br><span class="line">    アーティスト名/</span><br><span class="line">      アルバム名/</span><br><span class="line">        「タイトル.xxx」音楽ファイルのシンボリックリンク</span><br><span class="line">  Shows/</span><br><span class="line">    番組名/</span><br><span class="line">      Season_1/</span><br><span class="line">        「タイトル_S01E01.xxx」動画ファイルのシンボリックリンク</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="メディアフォルダの作成"><a href="#メディアフォルダの作成" class="headerlink" title="メディアフォルダの作成"></a>メディアフォルダの作成</h4><ul>
-<li>メディアのカテゴリのルートを作成<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /media/Movies /media/Shows /media/Music</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 777 /media</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="メディアファイル実体"><a href="#メディアファイル実体" class="headerlink" title="メディアファイル実体"></a>メディアファイル実体</h4><ul>
 <li>動画ファイルの実体フォルダ群<br>&#x2F;mnt&#x2F;f&#x2F;home&#x2F;chinachu&#x2F;<br>&#x2F;mnt&#x2F;f&#x2F;home&#x2F;epgstation&#x2F;<br>&#x2F;mnt&#x2F;f&#x2F;home&#x2F;epgstation.old&#x2F;</li>
@@ -19972,9 +19993,10 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </ul>
 <h4 id="シンボリックリンクの作成"><a href="#シンボリックリンクの作成" class="headerlink" title="シンボリックリンクの作成"></a>シンボリックリンクの作成</h4><ul>
 <li>Music<br>AIにbashスクリプトを作ってもらいます。<br>「オーディオファイルのタグ情報からARTIST&#x2F;ALBUM&#x2F;TITLEの構造でオーディオファイルのシンボリックリンクを作成するbashスクリプトを作って」のような感じで指示すると素晴らしい精度でスクリプトを生成してくれます。</li>
-<li>Movies<br>検討中。</li>
-<li>Shows<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /mnt/f/home/epgstation.old</span><br><span class="line"><span class="built_in">mkdir</span> links</span><br><span class="line">find * -<span class="built_in">type</span> f -<span class="built_in">print</span> | xargs -I&#123;&#125; <span class="built_in">ln</span> -s /mnt/f/home/epgstation.old/&#123;&#125; ./links/&#123;&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /media/Shows/世界の車窓から/Season_1</span><br><span class="line"><span class="built_in">cd</span> /mnt/f/home/epgstation.old/links</span><br><span class="line"><span class="built_in">mv</span> *世界の車窓から* /media/Shows/世界の車窓から/Season_1/</span><br></pre></td></tr></table></figure></li>
+<li>Movies<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /mnt/f/home/epgstation.old</span><br><span class="line">find * -<span class="built_in">type</span> f -<span class="built_in">print</span> | xargs -I&#123;&#125; <span class="built_in">ln</span> -s <span class="variable">$CWD</span>/&#123;&#125; /media/links/&#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /media/links</span><br><span class="line"><span class="built_in">mv</span> *ハリー・ポッター* /media/Movies/</span><br></pre></td></tr></table></figure></li>
+<li>Shows<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /mnt/f/home/epgstation.old</span><br><span class="line">find * -<span class="built_in">type</span> f -<span class="built_in">print</span> | xargs -I&#123;&#125; <span class="built_in">ln</span> -s <span class="variable">$CWD</span>/&#123;&#125; /media/links/&#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /media/links</span><br><span class="line"><span class="built_in">mkdir</span> -p /media/Shows/世界の車窓から/Season_1</span><br><span class="line"><span class="built_in">mv</span> *世界の車窓から* /media/Shows/世界の車窓から/Season_1/</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h3><ul>
 <li>プラグイン、テーマ等<br><a href="https://github.com/awesome-jellyfin/awesome-jellyfin/">https://github.com/awesome-jellyfin/awesome-jellyfin/</a></li>
