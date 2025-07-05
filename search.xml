@@ -19932,7 +19932,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
   <entry>
     <title>Jellyfin</title>
     <url>/2025/07/03/Jellyfin/</url>
-    <content><![CDATA[<p>メディアサーバJellyfinを使ってみました。</p>
+    <content><![CDATA[<p>メディアサーバJellyfinを使ってみました。散らばっていたメディアファイルが整理されました。</p>
 <a href="https://jellyfin.org/" target="_blank" rel="external nofollow noopener noreferrer" class="link-preview">
     <div class="og-image">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Jellyfin_-_icon-transparent.svg" alt="Jellyfin" class="not-gallery-item" loading="lazy"></div>
@@ -19949,9 +19949,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </li>
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="サーバ"><a href="#サーバ" class="headerlink" title="サーバ"></a>サーバ</h4><ul>
-<li>Jellyfin インストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl https://repo.jellyfin.org/install-debuntu.sh | <span class="built_in">sudo</span> bash</span><br></pre></td></tr></table></figure>
-<div class="note info flat"><p>プロンプトが出ないけれどパスワードを入力すれば処理が進む。</p>
-</div></li>
+<li>Jellyfin インストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl https://repo.jellyfin.org/install-debuntu.sh | <span class="built_in">sudo</span> bash</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="クライアント"><a href="#クライアント" class="headerlink" title="クライアント"></a>クライアント</h4><p><a href="https://github.com/awesome-jellyfin/awesome-jellyfin/blob/main/CLIENTS.md">https://github.com/awesome-jellyfin/awesome-jellyfin/blob/main/CLIENTS.md</a><br>「Jellyfin Media Player」を入れておけば問題なさそうです。</p>
 <ul>
@@ -19959,9 +19957,11 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>Arch Linux<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S jellyfin-media-player</span><br></pre></td></tr></table></figure></li>
 <li>Android<br><a href="https://jellyfin.org/downloads/clients?platform=Android,Android%20TV">https://jellyfin.org/downloads/clients?platform=Android,Android%20TV</a></li>
 </ul>
-<h3 id="メディアファイルの配置"><a href="#メディアファイルの配置" class="headerlink" title="メディアファイルの配置"></a>メディアファイルの配置</h3><p>既存のメディアファイルが複数のフォルダに分散しています。Jellyfinで管理しやすいフォルダ構造上にシンボリックリンクを配置することにしました。</p>
+<h3 id="メディアファイルの配置"><a href="#メディアファイルの配置" class="headerlink" title="メディアファイルの配置"></a>メディアファイルの配置</h3><p>既存のメディアファイルが複数のフォルダに分散しています。<br>元のファイルはそのままにして、Jellyfinで管理しやすいフォルダ構造上にシンボリックリンクを配置することにしました。</p>
 <h4 id="メディアフォルダの作成"><a href="#メディアフォルダの作成" class="headerlink" title="メディアフォルダの作成"></a>メディアフォルダの作成</h4><ul>
-<li>メディアのカテゴリのルートを作成<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /media/Movies /media/Shows /media/Music /media/links</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 777 /media</span><br></pre></td></tr></table></figure></li>
+<li>メディアのカテゴリのルートを作成<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /media/Movies /media/Shows /media/Music /media/links</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 777 /media</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>&#x2F;media&#x2F;links は整理前の映画や番組のシンボリックリンクを仮配置するフォルダ</p>
+</div></li>
 <li>Jellyfinのメディアに割り当て<table>
 <thead>
 <tr>
@@ -19994,17 +19994,17 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <h4 id="シンボリックリンクの作成"><a href="#シンボリックリンクの作成" class="headerlink" title="シンボリックリンクの作成"></a>シンボリックリンクの作成</h4><ul>
 <li>Music<br>AIにbashスクリプトを作ってもらいます。<br>「オーディオファイルのタグ情報からARTIST&#x2F;ALBUM&#x2F;TITLEの構造でオーディオファイルのシンボリックリンクを作成するbashスクリプトを作って」のような感じで指示すると素晴らしい精度でスクリプトを生成してくれます。</li>
 <li>Movies<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /mnt/f/home/epgstation.old</span><br><span class="line">find * -<span class="built_in">type</span> f -<span class="built_in">print</span> | xargs -I&#123;&#125; <span class="built_in">ln</span> -s <span class="variable">$CWD</span>/&#123;&#125; /media/links/&#123;&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /media/links</span><br><span class="line"><span class="built_in">mv</span> *ハリー・ポッター* /media/Movies/</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /media/links</span><br></pre></td></tr></table></figure>
+ファイル名を「タイトル_(YYYY).xxx」の形式に変更する。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> *ハリー・ポッター* /media/Movies/</span><br></pre></td></tr></table></figure></li>
 <li>Shows<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /mnt/f/home/epgstation.old</span><br><span class="line">find * -<span class="built_in">type</span> f -<span class="built_in">print</span> | xargs -I&#123;&#125; <span class="built_in">ln</span> -s <span class="variable">$CWD</span>/&#123;&#125; /media/links/&#123;&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /media/links</span><br><span class="line"><span class="built_in">mkdir</span> -p /media/Shows/世界の車窓から/Season_1</span><br><span class="line"><span class="built_in">mv</span> *世界の車窓から* /media/Shows/世界の車窓から/Season_1/</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /media/links</span><br><span class="line"><span class="built_in">mkdir</span> -p /media/Shows/世界の車窓から/Season_1</span><br></pre></td></tr></table></figure>
+ファイル名を「タイトル_S01E01.xxx」の形式に変更する。<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">mv *世界の車窓から* <span class="regexp">/media/</span>Shows<span class="regexp">/世界の車窓から/</span>Season_1/</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h3><ul>
 <li>プラグイン、テーマ等<br><a href="https://github.com/awesome-jellyfin/awesome-jellyfin/">https://github.com/awesome-jellyfin/awesome-jellyfin/</a></li>
-<li>メディアライブラリの種類<br>「映画」、「音楽」、「番組」、「ブック」、「ホームビデオと写真」、「ミュージックビデオ」、「TV番組と映画を混ぜる」</li>
-<li>複数の機器のクライアントで同時にメディアを再生するには：<br>別のアカウントを利用すべきかもしれない</li>
-<li>クライアント起動時に表示するサーバと画面をの指定するには：</li>
+<li>Jellyfinのメディアライブラリの種類<br>「映画」、「音楽」、「番組」、「ブック」、「ホームビデオと写真」、「ミュージックビデオ」、「TV番組と映画を混ぜる」</li>
 <li>Jellyfinはシンボリックリンクを認識する</li>
-<li>設定Video Deinterlace選択すべきか。個別の動画ファイルの問題か？</li>
+<li>複数の機器のクライアントで同時にメディアを再生するには：<br>別のアカウントを利用すべきかもしれない</li>
 </ul>
 ]]></content>
       <tags>
