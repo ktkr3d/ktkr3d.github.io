@@ -20013,7 +20013,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>Jellyfinはシンボリックリンクを認識する</li>
 <li>複数の機器のクライアントで同時にメディアを再生するには：<br>別のアカウントを利用すべきかもしれない</li>
 <li>インターネットから自宅サーバへVPN接続してメディアにアクセス可能</li>
-<li>Android版アプリで動画が強制ランドスケープモードになる<br><a href="https://github.com/jellyfin/jellyfin-android/issues/1654">https://github.com/jellyfin/jellyfin-android/issues/1654</a></li>
+<li>Android版Jellyfinアプリでは動画再生時に強制的にランドスケープモードになる。Androidを自動回転モードに設定している場合、画面を傾け直すことでポートレートモードでの再生が可能。<br><a href="https://github.com/jellyfin/jellyfin-android/issues/1654">https://github.com/jellyfin/jellyfin-android/issues/1654</a></li>
 </ul>
 ]]></content>
       <tags>
