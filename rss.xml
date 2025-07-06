@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 06 Jul 2025 14:22:56 GMT</pubDate>
+    <pubDate>Sun, 06 Jul 2025 14:49:18 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,7 +24,7 @@
       <guid>https://ktkr3d.github.io/2025/07/03/Jellyfin/</guid>
       <pubDate>Thu, 03 Jul 2025 11:14:43 GMT</pubDate>
       
-      <description>&lt;p&gt;メディアサーバJellyfinを使ってみました。今まで散らばっていた大量のメディアファイルを整理することができました。&lt;br&gt;また、インターネットラジオの視聴やMirakurunと連携したテレビ番組の視聴もできるようになりました。&lt;/p&gt;
+      <description>&lt;p&gt;メディアサーバJellyfinを使ってみました。今まで散らばっていた大量のメディアファイルを整理することができました。&lt;/p&gt;
 &lt;a href=&quot;https://jellyfin.org/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
     &lt;div class=&quot;og-image&quot;&gt;
         &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/41/Jellyfin_-_icon-transparent.svg&quot; alt=&quot;Jellyfin&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
@@ -35,6 +35,8 @@
       
       
       
+      
+      <category domain="https://ktkr3d.github.io/tags/mirakurun/">mirakurun</category>
       
       <category domain="https://ktkr3d.github.io/tags/jellyfin/">jellyfin</category>
       
