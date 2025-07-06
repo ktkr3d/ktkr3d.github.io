@@ -19937,7 +19937,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
   <entry>
     <title>Jellyfin</title>
     <url>/2025/07/03/Jellyfin/</url>
-    <content><![CDATA[<p>メディアサーバJellyfinを使ってみました。今まで散らばっていた大量のメディアファイルを整理することができました。</p>
+    <content><![CDATA[<p>メディアサーバJellyfinを使ってみました。今まで散らばっていた大量のメディアファイルを整理することができました。<br>また、インターネットラジオの視聴やMirakurunと連携したテレビ番組の視聴もできるようになりました。</p>
 <a href="https://jellyfin.org/" target="_blank" rel="external nofollow noopener noreferrer" class="link-preview">
     <div class="og-image">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Jellyfin_-_icon-transparent.svg" alt="Jellyfin" class="not-gallery-item" loading="lazy"></div>
@@ -20012,11 +20012,14 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </li>
 </ul>
 <h4 id="インターネットラジオの追加"><a href="#インターネットラジオの追加" class="headerlink" title="インターネットラジオの追加"></a>インターネットラジオの追加</h4><ul>
-<li>ラジオ<br>.m3uファイルをライブTVのチューナーデバイスとして追加します。<br><a href="https://jellyfin.org/docs/general/server/live-tv/internet-radio/">https://jellyfin.org/docs/general/server/live-tv/internet-radio/</a><br>ダッシュボード &gt; ライブTV &gt; チューナーデバイス<kbd>+</kbd><br>チューナータイプ: M3U Tuner<br>ファイル又はURL: &#x2F;media&#x2F;Radios&#x2F;Radio Freccia.m3u<figure class="highlight plaintext"><figcaption><span>/media/Radios/Radio Freccia.m3u</span></figcaption><table><tr><td class="code"><pre><span class="line">#EXTINF:0,Radio Freccia</span><br><span class="line">https://streamingv2.shoutcast.com/radiofreccia</span><br></pre></td></tr></table></figure>
-<div class="note info flat"><p><a href="https://directory.shoutcast.com/">https://directory.shoutcast.com/</a> からm3uをダウンロード</p>
-</div>
-<div class="note info flat"><p>ライブTV &gt; チャンネル からラジオステーションを選択して再生</p>
-</div></li>
+<li>インターネットラジオの追加手順<br>.m3uファイルをライブTVのチューナーデバイスとして追加します。<br><a href="https://jellyfin.org/docs/general/server/live-tv/internet-radio/">https://jellyfin.org/docs/general/server/live-tv/internet-radio/</a><br>ダッシュボード &gt; ライブTV &gt; チューナーデバイス<kbd>+</kbd><br>チューナータイプ: M3U Tuner<br>ファイル又はURL: &#x2F;media&#x2F;Radios&#x2F;Radio Freccia.m3u<figure class="highlight plaintext"><figcaption><span>/media/Radios/Radio Freccia.m3u</span></figcaption><table><tr><td class="code"><pre><span class="line">#EXTINF:0,Radio Freccia</span><br><span class="line">https://streamingv2.shoutcast.com/radiofreccia</span><br></pre></td></tr></table></figure></li>
+<li>m3uファイルの入手<br><a href="https://directory.shoutcast.com/">https://directory.shoutcast.com/</a> からm3uをダウンロード</li>
+<li>インターネットラジオの再生<br>マイメディア &gt; ライブTV &gt; チャンネル からラジオステーションを選択</li>
+</ul>
+<h4 id="テレビ番組の設定"><a href="#テレビ番組の設定" class="headerlink" title="テレビ番組の設定"></a>テレビ番組の設定</h4><ul>
+<li>チューナーデバイスの追加<br>ダッシュボード &gt; ライブTV &gt; チューナーデバイス<kbd>+</kbd><br>チューナータイプ: M3U Tuner<br>URL: <a href="http://192.168.11.2:40772/api/iptv/playlist">http://192.168.11.2:40772/api/iptv/playlist</a></li>
+<li>TV番組情報のプロバイダの追加<br>ダッシュボード &gt; ライブTV &gt; TV番組情報のプロバイダ<kbd>+</kbd><br>「XMLTV」を選択<br>ファイル又はURL: <a href="http://192.168.11.2:40772/api/iptv/xmltv">http://192.168.11.2:40772/api/iptv/xmltv</a></li>
+<li>ガイドデータの更新</li>
 </ul>
 <h3 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h3><ul>
 <li>プラグイン、テーマ等<br><a href="https://github.com/awesome-jellyfin/awesome-jellyfin/">https://github.com/awesome-jellyfin/awesome-jellyfin/</a></li>
