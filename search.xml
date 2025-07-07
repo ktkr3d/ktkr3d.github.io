@@ -19937,7 +19937,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
   <entry>
     <title>Jellyfin</title>
     <url>/2025/07/03/Jellyfin/</url>
-    <content><![CDATA[<p>メディアサーバJellyfinを使ってみました。今まで散らばっていた大量のメディアファイルを整理することができました。</p>
+    <content><![CDATA[<p>メディアサーバJellyfinを使ってみました。今まで散らばっていた大量のメディアファイルを整理することができました。<br>また、インターネットラジオやMirakurunと連携したテレビ番組の視聴ができました。</p>
 <a href="https://jellyfin.org/" target="_blank" rel="external nofollow noopener noreferrer" class="link-preview">
     <div class="og-image">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Jellyfin_-_icon-transparent.svg" alt="Jellyfin" class="not-gallery-item" loading="lazy"></div>
@@ -20007,7 +20007,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>音楽フォルダの実体フォルダ（WindowsのEドライブ）<br>&#x2F;mnt&#x2F;e&#x2F;home&#x2F;Music&#x2F;</li>
 </ul>
 <h4 id="シンボリックリンクの作成"><a href="#シンボリックリンクの作成" class="headerlink" title="シンボリックリンクの作成"></a>シンボリックリンクの作成</h4><ul>
-<li>音楽<br>&#x2F;media&#x2F;Music&#x2F;に配置します。<br>AIにbashスクリプトを作ってもらいます。<br>「ファイルの ARTIST、ALBUM、TITLE タグを使って、ファイルをディレクトリ階層 “ARTIST&#x2F;ALBUM&#x2F;TITLE.拡張子” に移動する Bash スクリプトを作成」のような感じで指示すると素晴らしい精度でスクリプトを生成してくれます。</li>
+<li>音楽<br><code>/media/Music/</code>配下にディレクトリとシンボリックリンクを配置するbashスクリプトをAIに作ってもらいます。<br>利用環境に合わせて「ファイルの ARTIST、ALBUM、TITLE タグを使って、ファイルをディレクトリ階層 “ARTIST&#x2F;ALBUM&#x2F;TITLE.拡張子” に移動する Bash スクリプトを作成」のような感じで指示すると素晴らしい精度でスクリプトを生成してくれます。</li>
 <li>映画と番組<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /mnt/f/home/epgstation.old</span><br><span class="line">find * -<span class="built_in">type</span> f -<span class="built_in">print</span> | xargs -I&#123;&#125; <span class="built_in">ln</span> -s <span class="variable">$PWD</span>/&#123;&#125; /media/links/&#123;&#125;</span><br><span class="line"><span class="built_in">cd</span> /media/links</span><br></pre></td></tr></table></figure>
 <ul>
 <li>映画の場合<br>ファイル名を「タイトル_(YYYY).xxx」の形式に変更する。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> *ハリー・ポッター* /media/Movies/</span><br></pre></td></tr></table></figure></li>
@@ -20016,14 +20016,40 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </li>
 </ul>
 <h4 id="インターネットラジオの追加"><a href="#インターネットラジオの追加" class="headerlink" title="インターネットラジオの追加"></a>インターネットラジオの追加</h4><ul>
-<li>インターネットラジオの追加手順<br>.m3uファイルをライブTVのチューナーデバイスとして追加します。<br><a href="https://jellyfin.org/docs/general/server/live-tv/internet-radio/">https://jellyfin.org/docs/general/server/live-tv/internet-radio/</a><br>ダッシュボード &gt; ライブTV &gt; チューナーデバイス<kbd>+</kbd><br>チューナータイプ: M3U Tuner<br>ファイル又はURL: &#x2F;media&#x2F;Radios&#x2F;Radio Freccia.m3u<figure class="highlight plaintext"><figcaption><span>/media/Radios/Radio Freccia.m3u</span></figcaption><table><tr><td class="code"><pre><span class="line">#EXTINF:0,Radio Freccia</span><br><span class="line">https://streamingv2.shoutcast.com/radiofreccia</span><br></pre></td></tr></table></figure></li>
-<li>m3uファイルの入手<br><a href="https://directory.shoutcast.com/">https://directory.shoutcast.com/</a> からm3uをダウンロード</li>
-<li>インターネットラジオの再生<br>マイメディア &gt; ライブTV &gt; チャンネル からラジオステーションを選択</li>
+<li><p>m3uファイルの入手<br><a href="https://directory.shoutcast.com/">https://directory.shoutcast.com/</a> からラジオステーションのm3uをダウンロードして<code>/media/Radios/</code>に配置</p>
+</li>
+<li><p>インターネットラジオの追加<br>ダッシュボード &gt; ライブTV &gt; チューナーデバイス<kbd>+</kbd></p>
+<table>
+<tr><td style="background: #f5f6f8"><b>チューナータイプ<td>M3U Tuner
+<tr><td style="background: #f5f6f8"><b>ファイル又はURL<td><tt>/media/Radios/ラジオステーション名.m3u
+</table>
+</li>
+<li><p>インターネットラジオの再生<br>マイメディア &gt; ライブTV &gt; チャンネル からラジオステーションを選択</p>
+</li>
 </ul>
 <h4 id="テレビ番組の設定"><a href="#テレビ番組の設定" class="headerlink" title="テレビ番組の設定"></a>テレビ番組の設定</h4><ul>
-<li>チューナーデバイスの追加<br>ダッシュボード &gt; ライブTV &gt; チューナーデバイス<kbd>+</kbd><br>チューナータイプ: M3U Tuner<br>URL: <a href="http://192.168.11.2:40772/api/iptv/playlist">http://192.168.11.2:40772/api/iptv/playlist</a></li>
-<li>TV番組情報のプロバイダの追加<br>ダッシュボード &gt; ライブTV &gt; TV番組情報のプロバイダ<kbd>+</kbd><br>「XMLTV」を選択<br>ファイル又はURL: <a href="http://192.168.11.2:40772/api/iptv/xmltv">http://192.168.11.2:40772/api/iptv/xmltv</a></li>
-<li>ガイドデータの更新</li>
+<li><p>MirakurunのIPTV設定確認<br><a href="http://192.168.11.2:40772/">http://192.168.11.2:40772</a> を参照し、右上のConnection Guideを押下</p>
+<table>
+<tr><td style="background: #f5f6f8"><b>M3U Playlist<td><tt>http://192.168.11.2:40772/api/iptv/playlist
+<tr><td style="background: #f5f6f8"><b>XMLTV<td><tt>http://192.168.11.2:40772/api/iptv/xmltv
+<tr><td style="background: #f5f6f8"><b>HDHomeRun Device Address<td><tt>http://192.168.11.2:40772/api/iptv
+</table>
+</li>
+<li><p>チューナーデバイスの追加<br>ダッシュボード &gt; ライブTV &gt; チューナーデバイス<kbd>+</kbd></p>
+<table>
+<tr><td style="background: #f5f6f8"><b>チューナータイプ<td>M3U Tuner
+<tr><td style="background: #f5f6f8"><b>URL<td><tt>http://192.168.11.2:40772/api/iptv/playlist
+</table>
+</li>
+<li><p>TV番組情報のプロバイダの追加<br>ダッシュボード &gt; ライブTV &gt; TV番組情報のプロバイダ<kbd>+</kbd><br>「XMLTV」を選択</p>
+<table>
+<tr><td style="background: #f5f6f8"><b>ファイル又はURL<td><tt>http://192.168.11.2:40772/api/iptv/xmltv
+</table>
+</li>
+<li><p>「ガイドデータの更新」を押下</p>
+</li>
+<li><p>テレビ番組の再生<br>ホーム画面やライブTVからチャンネルを選択</p>
+</li>
 </ul>
 <h3 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h3><ul>
 <li>プラグイン、テーマ等<br><a href="https://github.com/awesome-jellyfin/awesome-jellyfin/">https://github.com/awesome-jellyfin/awesome-jellyfin/</a></li>
@@ -20033,7 +20059,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>インターネットから自宅サーバへVPN接続してメディアにアクセス可能</li>
 <li>Android版Jellyfinアプリでは動画再生時に強制的にランドスケープモードになる。Androidを自動回転モードに設定している場合、画面を傾け直すことでポートレートモードでの再生が可能。<br><a href="https://github.com/jellyfin/jellyfin-android/issues/1654">https://github.com/jellyfin/jellyfin-android/issues/1654</a></li>
 <li>プレイリストへの追加が失敗する場合はダッシュボードからサーバを再起動</li>
-<li>ホームのマイメディアカードの日本語ライブラリ名が文字化け：<br>カスタムCSSでフォントを指定できないか調査要</li>
+<li>ホームのマイメディアカードの日本語ライブラリ名が文字化け：<br>カスタムCSSでフォントを指定できないか調査要だが、暫定的にライブラリ本体を英語名、プライヤー側メタデータを日本語名とすることで回避</li>
 </ul>
 ]]></content>
       <tags>
