@@ -20035,10 +20035,16 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <tr><td style="background: #f5f6f8"><b>HDHomeRun Device Address<td><tt>http://192.168.11.2:40772/api/iptv
 </table>
 </li>
-<li><p>チューナーデバイスの追加<br>ダッシュボード &gt; ライブTV &gt; チューナーデバイス<kbd>+</kbd></p>
+<li><p>チューナーデバイスの追加(1)<br>ダッシュボード &gt; ライブTV &gt; チューナーデバイス<kbd>+</kbd></p>
 <table>
 <tr><td style="background: #f5f6f8"><b>チューナータイプ<td>M3U Tuner
 <tr><td style="background: #f5f6f8"><b>URL<td><tt>http://192.168.11.2:40772/api/iptv/playlist
+</table>
+</li>
+<li><p>チューナーデバイスの追加(2)<br>ダッシュボード &gt; ライブTV &gt; チューナーデバイス<kbd>+</kbd></p>
+<table>
+<tr><td style="background: #f5f6f8"><b>チューナータイプ<td>HDHomeRun
+<tr><td style="background: #f5f6f8"><b>URL<td><tt>http://192.168.11.2:40772/api/iptv
 </table>
 </li>
 <li><p>TV番組情報のプロバイダの追加<br>ダッシュボード &gt; ライブTV &gt; TV番組情報のプロバイダ<kbd>+</kbd><br>「XMLTV」を選択</p>
