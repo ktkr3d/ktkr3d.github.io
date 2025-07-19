@@ -20093,7 +20093,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
       </tags>
   </entry>
   <entry>
-    <title>qwen3</title>
+    <title>Qwen3</title>
     <url>/2025/07/19/qwen3/</url>
     <content><![CDATA[<p><img src="/images/qwen3_4b.png"></p>
 <p>Qwen3を使ってみました。<br>Qwen3はAlibabaが開発したオープンソースの大規模言語モデル(LLM)の最新バージョンです。</p>
@@ -20164,7 +20164,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </tbody></table>
 </li>
 </ul>
-<h3 id="動作確認"><a href="#動作確認" class="headerlink" title="動作確認"></a>動作確認</h3><ul>
+<h4 id="動作確認"><a href="#動作確認" class="headerlink" title="動作確認"></a>動作確認</h4><ul>
 <li>起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ollama run qwen3:0.6b</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ollama run qwen3:1.7b</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ollama run qwen3:4b</span><br></pre></td></tr></table></figure></li>
