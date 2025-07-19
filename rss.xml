@@ -15,8 +15,27 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 10 Jul 2025 07:06:04 GMT</pubDate>
+    <pubDate>Sat, 19 Jul 2025 16:43:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>qwen3</title>
+      <link>https://ktkr3d.github.io/2025/07/19/qwen3/</link>
+      <guid>https://ktkr3d.github.io/2025/07/19/qwen3/</guid>
+      <pubDate>Fri, 18 Jul 2025 20:58:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/qwen3_4b.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Qwen3を使ってみました。&lt;br&gt;Qwen3はAlibabaが開発したオープンソースの大規模言語モデル(LLM)の最新バージョンです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/QwenLM/Qwen3&quot;&gt;https://github.com/QwenLM/Qwen3&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/open-webui/open-webui&quot;&gt;https://github.com/open-webui/open-webui&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      
+      <comments>https://ktkr3d.github.io/2025/07/19/qwen3/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Jellyfin</title>
@@ -670,24 +689,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/03/06/Wayland-VSCode-text-input-v3/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>File Sync</title>
-      <link>https://ktkr3d.github.io/2025/03/05/File-Sync/</link>
-      <guid>https://ktkr3d.github.io/2025/03/05/File-Sync/</guid>
-      <pubDate>Tue, 04 Mar 2025 21:39:21 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/file_sync.drawio.svg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;共有フォルダのテキストファイルをWindows クライアントとLinuxクライアントでマウントせずに同期してみました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      
-      <comments>https://ktkr3d.github.io/2025/03/05/File-Sync/#disqus_thread</comments>
       
     </item>
     
