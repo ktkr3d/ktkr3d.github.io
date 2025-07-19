@@ -20176,6 +20176,8 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>以下のURLにアクセスする。<br><a href="http://localhost:8080/">http://localhost:8080</a></li>
+<li>PWAとしてインストールできます。</li>
+<li>他のマシンからアクセスできます。</li>
 </ul>
 ]]></content>
   </entry>
