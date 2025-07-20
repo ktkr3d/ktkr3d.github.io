@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 20 Jul 2025 00:26:39 GMT</pubDate>
+    <pubDate>Sun, 20 Jul 2025 01:07:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,7 +24,7 @@
       <guid>https://ktkr3d.github.io/2025/07/19/qwen3/</guid>
       <pubDate>Fri, 18 Jul 2025 20:58:00 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/qwen3_4b.png&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/open-webui_qwen3.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Qwen3を使ってみました。&lt;br&gt;Qwen3はAlibabaが開発したオープンソースの大規模言語モデル(LLM)の最新バージョンです。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/QwenLM/Qwen3&quot;&gt;https://github.com/QwenLM/Qwen3&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/open-webui/open-webui&quot;&gt;https://github.com/open-webui/open-webui&lt;/a&gt;&lt;/p&gt;</description>
       
@@ -34,7 +34,7 @@
       
       <category domain="https://ktkr3d.github.io/tags/qwen3/">qwen3</category>
       
-      <category domain="https://ktkr3d.github.io/tags/ai/">ai</category>
+      <category domain="https://ktkr3d.github.io/tags/open-webui/">open-webui</category>
       
       
       <comments>https://ktkr3d.github.io/2025/07/19/qwen3/#disqus_thread</comments>
