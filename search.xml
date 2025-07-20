@@ -20178,6 +20178,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <div class="note info flat"><p>batファイルから起動する場合は<br>  <code>%LOCALAPPDATA%\Programs\Python\Python311\Scripts\open-webui.exe serve</code></p>
 </div></li>
 <li>終了<br><kbd>Ctrl</kbd>+<kbd>C</kbd></li>
+<li>アップデート<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -U open-webui</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
 <li>Open WebUIを起動して以下のURLにアクセスする。<br><a href="http://localhost:8080/">http://localhost:8080</a></li>
