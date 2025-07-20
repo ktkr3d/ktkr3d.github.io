@@ -20161,7 +20161,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 </tbody></table>
 </li>
 </ul>
-<h4 id="動作確認"><a href="#動作確認" class="headerlink" title="動作確認"></a>動作確認</h4><ul>
+<h4 id="Qwen3のダウンロードと起動"><a href="#Qwen3のダウンロードと起動" class="headerlink" title="Qwen3のダウンロードと起動"></a>Qwen3のダウンロードと起動</h4><ul>
 <li>ダウンロードと起動確認<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ollama run qwen3:0.6b</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ollama run qwen3:1.7b</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ollama run qwen3:4b</span><br></pre></td></tr></table></figure>
@@ -20170,7 +20170,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>ダウンロードしたモデルの確認<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; ollama list</span><br><span class="line">NAME          ID              SIZE      MODIFIED</span><br><span class="line">qwen3:4b      2bfd38a7daaf    2.6 GB    11 hours ago</span><br><span class="line">qwen3:1.7b    8f68893c685c    1.4 GB    11 hours ago</span><br><span class="line">qwen3:0.6b    7df6b6e09427    522 MB    29 hours ago</span><br></pre></td></tr></table></figure></li>
 <li>モデルの削除<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; ollama <span class="built_in">rm</span> qwen3:0.6b</span><br><span class="line">deleted <span class="string">&#x27;qwen3:0.6b&#x27;</span></span><br><span class="line"></span><br><span class="line">&gt; ollama list</span><br><span class="line">NAME          ID              SIZE      MODIFIED</span><br><span class="line">qwen3:4b      2bfd38a7daaf    2.6 GB    11 hours ago</span><br><span class="line">qwen3:1.7b    8f68893c685c    1.4 GB    12 hours ago</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h4 id="open-web-ui"><a href="#open-web-ui" class="headerlink" title="open-web-ui"></a>open-web-ui</h4><ul>
+<h4 id="Open-WebUIのインストール"><a href="#Open-WebUIのインストール" class="headerlink" title="Open WebUIのインストール"></a>Open WebUIのインストール</h4><ul>
 <li>インストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install open-webui</span><br></pre></td></tr></table></figure>
 <div class="note info flat"><p>インストール先<br>  <code>%LOCALAPPDATA%\Programs\Python\Python311\Scripts\open-webui.exe</code></p>
 </div></li>
@@ -20180,7 +20180,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>終了<br><kbd>Ctrl</kbd>+<kbd>C</kbd></li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
-<li>以下のURLにアクセスする。<br><a href="http://localhost:8080/">http://localhost:8080</a></li>
+<li>Open WebUIを起動して以下のURLにアクセスする。<br><a href="http://localhost:8080/">http://localhost:8080</a></li>
 <li>PWAとしてインストールできます。アドレスバーのインストールアイコンからインストールします。</li>
 <li>他のマシンからアクセスできます。</li>
 </ul>
