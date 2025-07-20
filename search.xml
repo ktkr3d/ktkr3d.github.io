@@ -20181,9 +20181,18 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <li>アップデート<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -U open-webui</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
-<li>Open WebUIを起動して以下のURLにアクセスする。<br><a href="http://localhost:8080/">http://localhost:8080</a></li>
+<li>Open WebUIを起動して以下のURLにアクセスします。<br><a href="http://localhost:8080/">http://localhost:8080</a></li>
 <li>PWAとしてインストールできます。アドレスバーのインストールアイコンからインストールします。</li>
 <li>他のマシンからアクセスできます。</li>
+</ul>
+<h3 id="SSL化"><a href="#SSL化" class="headerlink" title="SSL化"></a>SSL化</h3><p>リモートマシンからアクセスした際にPWA化できなかったのでSSL化しました。</p>
+<ul>
+<li>SSL証明書の準備<br>mkcertで作成したcode-server用のSSL証明書を流用します。<br><a href="https://ktkr3d.github.io/Visual-Studio-Code/#%E3%82%B5%E3%83%BC%E3%83%90%E5%81%B4%E3%81%AE%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A">https://ktkr3d.github.io/Visual-Studio-Code/#サーバ側の環境設定</a><br>DESKTOP-2P2LUE8.local-key.pem<br>DESKTOP-2P2LUE8.local.pem<br>rootCA.pem</li>
+<li><code>__init__.py</code> 修正前<figure class="highlight python"><figcaption><span>%LOCALAPPDATA%\Programs\Python\Python311\Lib\site-packages\open_webui\__init__.py</span></figcaption><table><tr><td class="code"><pre><span class="line">uvicorn.run(</span><br><span class="line">    <span class="string">&quot;open_webui.main:app&quot;</span>,</span><br><span class="line">    host=host,</span><br><span class="line">    port=port,</span><br><span class="line">    forwarded_allow_ips=<span class="string">&quot;*&quot;</span>,</span><br><span class="line">    workers=UVICORN_WORKERS,</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+<li><code>__init__.py</code> 修正後<figure class="highlight python"><figcaption><span>%LOCALAPPDATA%\Programs\Python\Python311\Lib\site-packages\open_webui\__init__.py</span></figcaption><table><tr><td class="code"><pre><span class="line">uvicorn.run(</span><br><span class="line">    <span class="string">&quot;open_webui.main:app&quot;</span>,</span><br><span class="line">    host=host,</span><br><span class="line">    port=port,</span><br><span class="line">    forwarded_allow_ips=<span class="string">&quot;*&quot;</span>,</span><br><span class="line">    workers=UVICORN_WORKERS,</span><br><span class="line">    ssl_certfile=<span class="string">&quot;C:\\tools\\mkcert\\DESKTOP-2P2LUE8.local.pem&quot;</span>,</span><br><span class="line">    ssl_keyfile=<span class="string">&quot;C:\\tools\\mkcert\\DESKTOP-2P2LUE8.local-key.pem&quot;</span>,</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+<li>クライアントのブラウザにルートCA証明書(<code>rootCA.pem</code>)を登録しておきます。</li>
+<li>以下のURLにアクセスします。<br><a href="https://desktop-2p2lue8.local:8080/">https://DESKTOP-2P2LUE8.local:8080</a></li>
+<li>リモートマシンでもPWA化したアプリケーションをインストールできます。</li>
 </ul>
 ]]></content>
       <tags>
