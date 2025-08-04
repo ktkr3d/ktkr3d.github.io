@@ -10,6 +10,15 @@
     
     
     <url>
+        <loc>https://ktkr3d.github.io/World-of-Warcraft/</loc>
+        <lastmod>2025-08-04T04:29:12.315Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://ktkr3d.github.io/To-Do/</loc>
         <lastmod>2025-07-13T02:47:10.320Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -48,15 +57,6 @@
     <url>
         <loc>https://ktkr3d.github.io/archlinux/</loc>
         <lastmod>2025-05-19T04:58:44.257Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://ktkr3d.github.io/World-of-Warcraft/</loc>
-        <lastmod>2025-04-14T03:07:43.461Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -280,7 +280,7 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/android/</loc>
+        <loc>https://ktkr3d.github.io/about/</loc>
         <lastmod>2020-08-02T17:44:33.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -289,7 +289,7 @@
     
     
     <url>
-        <loc>https://ktkr3d.github.io/about/</loc>
+        <loc>https://ktkr3d.github.io/android/</loc>
         <lastmod>2020-08-02T17:44:33.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

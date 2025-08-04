@@ -944,6 +944,21 @@
       </categories>
   </entry>
   <entry>
+    <title>Ubuntu 11.04 でGNOME Shell</title>
+    <url>/2011/04/07/ubuntu-11-04-e381a7gnome-shell/</url>
+    <content><![CDATA[<p><img src="/images/ubuntu-natty-gnome-shell.png" alt="ubuntu 11.04 natty gnome shell"></p>
+<p><a href="http://www.ubuntuupdates.org/ppa/gnome_3?dist=natty">http://www.ubuntuupdates.org/ppa/gnome_3?dist=natty</a></p>
+<p>Ubuntu 11.04 用のGNOME Shell を含むppa を見つけたので、早速インストールしてみた。ちゃんとローカライズもされている。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> add-apt-repository ppa:gnome3-team/gnome3 </span><br><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install gnome-shell</span><br></pre></td></tr></table></figure>
+
+<p>GDM でログインする際に「Ubuntu GNOME Shell Desktop」を選択する。</p>
+<p>上部パネルの日付、時刻の書式はスクリプトをカスタマイズ。シャットダウン系のメニューもスクリプトなので後で改造しよう。</p>
+]]></content>
+      <categories>
+        <category>gnome</category>
+      </categories>
+  </entry>
+  <entry>
     <title>GNOME Shell を拡張してみた</title>
     <url>/2011/04/09/gnome-3-e38292e8aabfe381b9e381a6e381bfe3819f/</url>
     <content><![CDATA[<p><a href="https://wiki.archlinux.org/index.php/GNOME_3">https://wiki.archlinux.org/index.php/GNOME_3</a><br><a href="https://live.gnome.org/GnomeShell/CheatSheet">https://live.gnome.org/GnomeShell/CheatSheet</a><br><a href="http://www.webupd8.org/2011/04/gnome-shell-extensions-additional.html">http://www.webupd8.org/2011/04/gnome-shell-extensions-additional.html</a><br><a href="http://git.gnome.org/browse/gnome-shell-extensions/">http://git.gnome.org/browse/gnome-shell-extensions/</a></p>
@@ -970,21 +985,6 @@
 <li><p>キー操作でoverview へ切り替える<br>システム(Windows)キーまたはAlt+F1</p>
 </li>
 </ul>
-]]></content>
-      <categories>
-        <category>gnome</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Ubuntu 11.04 でGNOME Shell</title>
-    <url>/2011/04/07/ubuntu-11-04-e381a7gnome-shell/</url>
-    <content><![CDATA[<p><img src="/images/ubuntu-natty-gnome-shell.png" alt="ubuntu 11.04 natty gnome shell"></p>
-<p><a href="http://www.ubuntuupdates.org/ppa/gnome_3?dist=natty">http://www.ubuntuupdates.org/ppa/gnome_3?dist=natty</a></p>
-<p>Ubuntu 11.04 用のGNOME Shell を含むppa を見つけたので、早速インストールしてみた。ちゃんとローカライズもされている。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> add-apt-repository ppa:gnome3-team/gnome3 </span><br><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install gnome-shell</span><br></pre></td></tr></table></figure>
-
-<p>GDM でログインする際に「Ubuntu GNOME Shell Desktop」を選択する。</p>
-<p>上部パネルの日付、時刻の書式はスクリプトをカスタマイズ。シャットダウン系のメニューもスクリプトなので後で改造しよう。</p>
 ]]></content>
       <categories>
         <category>gnome</category>
@@ -1163,7 +1163,7 @@
 
 
 <blockquote>
-<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#114;&#111;&#111;&#x74;&#64;&#x62;&#x75;&#105;&#x6c;&#100;&#56;&#120;&#51;&#50;&#x2e;&#112;&#x63;&#x62;&#115;&#x64;&#x2e;&#x6f;&#x72;&#x67;">&#114;&#111;&#111;&#x74;&#64;&#x62;&#x75;&#105;&#x6c;&#100;&#56;&#120;&#51;&#50;&#x2e;&#112;&#x63;&#x62;&#115;&#x64;&#x2e;&#x6f;&#x72;&#x67;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
+<p>FreeBSD **** 8.2-RELEASE FreeBSD 8.2-RELEASE #7: Wed Feb 16 12:19:08 PST 2011     <a href="mailto:&#114;&#111;&#x6f;&#x74;&#x40;&#x62;&#117;&#x69;&#108;&#100;&#x38;&#120;&#x33;&#x32;&#x2e;&#112;&#99;&#x62;&#x73;&#x64;&#46;&#x6f;&#114;&#103;">&#114;&#111;&#x6f;&#x74;&#x40;&#x62;&#117;&#x69;&#108;&#100;&#x38;&#120;&#x33;&#x32;&#x2e;&#112;&#99;&#x62;&#x73;&#x64;&#46;&#x6f;&#114;&#103;</a>:&#x2F;usr&#x2F;obj&#x2F;usr&#x2F;local_storage&#x2F;pcbsd-build82&#x2F;fbsd-source&#x2F;8.2&#x2F;sys&#x2F;PCBSD  i386</p>
 </blockquote>
 <p>デスクトップ環境はKDE で、Firefox, Thunderbird, VLC 等をインストール時に追加できる。特に設定しなくても日本語も使えるし、mp3 も再生できる。GRUB からのチェインロードも問題無し。すごく頑張ってると思う。<br>Inspiron duo の1366x768 の解像度に設定すると、ディスプレイが表示されなくなってしまうので、とりあえずVESA で凌ごう。Linux と比べてドライバ(ディスプレイ、ファイルシステム)の情報は少ないかも。<br>ps コマンドやdf コマンドがBSD っぽくて少し懐かしい感じがした。</p>
 ]]></content>
@@ -1177,7 +1177,7 @@
     <content><![CDATA[<p><img src="/images/my_gnome_shell_extension.png" alt="gnome shell extension"></p>
 <p><a href="http://live.gnome.org/GnomeShell/Extensions">http://live.gnome.org/GnomeShell/Extensions</a><br><a href="http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html">http://blog.fpmurphy.com/2011/04/gnome-3-shell-extensions.html</a></p>
 <p>まずは、上部のパネルをクリックすると一定時間メッセージを表示するHello World 的な物から！！とりあえず日本語はunescape() してみた。</p>
-<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#104;&#x65;&#108;&#x6c;&#x6f;&#x2d;&#119;&#111;&#114;&#x6c;&#x64;&#64;&#107;&#x74;&#x6b;&#x72;&#x33;&#100;&#46;&#115;&#105;&#x74;&#x65;&#x31;&#49;&#46;&#99;&#x6f;&#x6d;">&#104;&#x65;&#108;&#x6c;&#x6f;&#x2d;&#119;&#111;&#114;&#x6c;&#x64;&#64;&#107;&#x74;&#x6b;&#x72;&#x33;&#100;&#46;&#115;&#105;&#x74;&#x65;&#x31;&#49;&#46;&#99;&#x6f;&#x6d;</a>&#x2F;</p>
+<h3 id="拡張を格納するディレクトリ"><a href="#拡張を格納するディレクトリ" class="headerlink" title="拡張を格納するディレクトリ"></a>拡張を格納するディレクトリ</h3><p>~&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#104;&#x65;&#x6c;&#108;&#111;&#x2d;&#x77;&#111;&#x72;&#108;&#100;&#x40;&#107;&#x74;&#107;&#114;&#51;&#100;&#46;&#115;&#105;&#116;&#101;&#x31;&#x31;&#46;&#x63;&#x6f;&#109;">&#104;&#x65;&#x6c;&#108;&#111;&#x2d;&#x77;&#111;&#x72;&#108;&#100;&#x40;&#107;&#x74;&#107;&#114;&#51;&#100;&#46;&#115;&#105;&#116;&#101;&#x31;&#x31;&#46;&#x63;&#x6f;&#109;</a>&#x2F;</p>
 <h3 id="extension-js-ファイル"><a href="#extension-js-ファイル" class="headerlink" title="extension.js ファイル"></a>extension.js ファイル</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">// Sample extension code, makes clicking on the panel show a message</span><br><span class="line">const St = imports.gi.St;</span><br><span class="line">const Mainloop = imports.mainloop;</span><br><span class="line"></span><br><span class="line">const Gettext = imports.gettext.domain(&#x27;gnome-shell-extensions&#x27;);</span><br><span class="line">const _ = Gettext.gettext;</span><br><span class="line"></span><br><span class="line">const Main = imports.ui.main;</span><br><span class="line"></span><br><span class="line">function _showHello() &#123;</span><br><span class="line">    let text = new St.Label(&#123; style_class: &#x27;helloworld-label&#x27;, text: _(unescape(&quot;%uFF0F%u4EBA%u25D5%u203F%u203F%u25D5%u4EBA%uFF3C%u300C%u50D5%u3068%u5951%u7D04%u3057%u3066%u9B54%u6CD5%u5C11%u5973%u306B%u306A%u3063%u3066%u3088%uFF01%uFF01%u300D&quot;)) &#125;);</span><br><span class="line">    let monitor = global.get_primary_monitor();</span><br><span class="line">    global.stage.add_actor(text);</span><br><span class="line">    text.set_position(Math.floor (monitor.width / 2 - text.width / 2), Math.floor(monitor.height / 2 - text.height / 2));</span><br><span class="line">    Mainloop.timeout_add(3000, function () &#123; text.destroy(); &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Put your extension initialization code here</span><br><span class="line">function main(metadata) &#123;</span><br><span class="line">    imports.gettext.bindtextdomain(&#x27;gnome-shell-extensions&#x27;, metadata.localedir);</span><br><span class="line"></span><br><span class="line">    Main.panel.actor.reactive = true;</span><br><span class="line">    Main.panel.actor.connect(&#x27;button-release-event&#x27;, _showHello);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -1217,7 +1217,7 @@
 <ol start="3">
 <li><p>$HOME&#x2F;.themes&#x2F; ディレクトリを作成して、アーカイブの中のテーマを展開する。</p>
 </li>
-<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#116;&#104;&#x65;&#x6d;&#101;&#115;&#x65;&#x6c;&#101;&#99;&#x74;&#x6f;&#114;&#x40;&#102;&#x70;&#x6d;&#x75;&#114;&#x70;&#104;&#121;&#46;&#x63;&#111;&#x6d;">&#116;&#104;&#x65;&#x6d;&#101;&#115;&#x65;&#x6c;&#101;&#99;&#x74;&#x6f;&#114;&#x40;&#102;&#x70;&#x6d;&#x75;&#114;&#x70;&#104;&#121;&#46;&#x63;&#111;&#x6d;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
+<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#116;&#x68;&#x65;&#x6d;&#101;&#x73;&#x65;&#x6c;&#x65;&#99;&#116;&#111;&#x72;&#x40;&#102;&#112;&#x6d;&#x75;&#114;&#x70;&#x68;&#x79;&#x2e;&#99;&#111;&#109;">&#116;&#x68;&#x65;&#x6d;&#101;&#x73;&#x65;&#x6c;&#x65;&#99;&#116;&#111;&#x72;&#x40;&#102;&#112;&#x6d;&#x75;&#114;&#x70;&#x68;&#x79;&#x2e;&#99;&#111;&#109;</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
 </li>
 <li><p>[Alt]+[F2]を押して、r を入力して、[Enter] を押す。</p>
 </li>
@@ -1390,9 +1390,9 @@
     <url>/2011/05/30/gnome-shell-extension-e38292e5bea9e6b4bbe38195e3819be381a6e381bfe3819f/</url>
     <content><![CDATA[<p>GNOME Shell を3.0.2 にしたらdock が消えたので復活させてみた。</p>
 <ul>
-<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#x6f;&#x63;&#x6b;&#64;&#103;&#x6e;&#x6f;&#109;&#x65;&#45;&#115;&#x68;&#101;&#x6c;&#108;&#45;&#x65;&#120;&#x74;&#x65;&#x6e;&#115;&#x69;&#111;&#110;&#115;&#x2e;&#103;&#x6e;&#x6f;&#x6d;&#x65;&#x2e;&#111;&#114;&#103;">&#x64;&#x6f;&#x63;&#x6b;&#64;&#103;&#x6e;&#x6f;&#109;&#x65;&#45;&#115;&#x68;&#101;&#x6c;&#108;&#45;&#x65;&#120;&#x74;&#x65;&#x6e;&#115;&#x69;&#111;&#110;&#115;&#x2e;&#103;&#x6e;&#x6f;&#x6d;&#x65;&#x2e;&#111;&#114;&#103;</a>&#x2F;metadata.json</p>
+<li><p>Ubuntu 11.04 の場合<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#100;&#x6f;&#x63;&#x6b;&#x40;&#103;&#x6e;&#111;&#x6d;&#101;&#x2d;&#115;&#104;&#x65;&#x6c;&#108;&#x2d;&#x65;&#120;&#116;&#101;&#110;&#115;&#105;&#111;&#110;&#x73;&#46;&#x67;&#x6e;&#111;&#x6d;&#101;&#46;&#x6f;&#114;&#103;">&#100;&#x6f;&#x63;&#x6b;&#x40;&#103;&#x6e;&#111;&#x6d;&#101;&#x2d;&#115;&#104;&#x65;&#x6c;&#108;&#x2d;&#x65;&#120;&#116;&#101;&#110;&#115;&#105;&#111;&#110;&#x73;&#46;&#x67;&#x6e;&#111;&#x6d;&#101;&#46;&#x6f;&#114;&#103;</a>&#x2F;metadata.json</p>
 </li>
-<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#111;&#x63;&#x6b;&#64;&#x67;&#x6e;&#x6f;&#x6d;&#101;&#x2d;&#115;&#x68;&#x65;&#x6c;&#108;&#45;&#101;&#120;&#x74;&#x65;&#110;&#x73;&#105;&#111;&#110;&#x73;&#46;&#x67;&#110;&#111;&#109;&#x65;&#x2e;&#x6f;&#x72;&#x67;">&#x64;&#111;&#x63;&#x6b;&#64;&#x67;&#x6e;&#x6f;&#x6d;&#101;&#x2d;&#115;&#x68;&#x65;&#x6c;&#108;&#45;&#101;&#120;&#x74;&#x65;&#110;&#x73;&#105;&#111;&#110;&#x73;&#46;&#x67;&#110;&#111;&#109;&#x65;&#x2e;&#x6f;&#x72;&#x67;</a>&#x2F;metadata.json</p>
+<li><p>Fedora 15, openSUSE 11.4 の場合<br>&#x2F;usr&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x64;&#111;&#x63;&#107;&#x40;&#103;&#x6e;&#111;&#109;&#101;&#x2d;&#115;&#x68;&#x65;&#x6c;&#x6c;&#x2d;&#101;&#x78;&#116;&#x65;&#x6e;&#x73;&#x69;&#x6f;&#110;&#115;&#46;&#x67;&#110;&#111;&#x6d;&#x65;&#46;&#x6f;&#x72;&#x67;">&#x64;&#111;&#x63;&#107;&#x40;&#103;&#x6e;&#111;&#109;&#101;&#x2d;&#115;&#x68;&#x65;&#x6c;&#x6c;&#x2d;&#101;&#x78;&#116;&#x65;&#x6e;&#x73;&#x69;&#x6f;&#110;&#115;&#46;&#x67;&#110;&#111;&#x6d;&#x65;&#46;&#x6f;&#x72;&#x67;</a>&#x2F;metadata.json</p>
 </li>
 </ul>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;uuid&quot;: &quot;dock@gnome-shell-extensions.gnome.org&quot;,</span><br><span class="line">&quot;name&quot;: &quot;Dock&quot;,</span><br><span class="line">&quot;description&quot;: &quot;A dock for the GNOME Shell -- displays favorite and running applications&quot;,</span><br><span class="line">&quot;original-author&quot;: &quot;tclaesson@gmail.com&quot;,</span><br><span class="line">&quot;shell-version&quot;: [ &quot;3.0.1&quot; ],</span><br><span class="line">&quot;localedir&quot;: &quot;/usr/local/share/locale&quot;,</span><br><span class="line">&quot;url&quot;: &quot;http://git.gnome.org/gnome-shell-extensions&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2504,6 +2504,44 @@
       </categories>
   </entry>
   <entry>
+    <title>Android NDK + Android-x86 4.0.3</title>
+    <url>/2012/06/17/android-ndk-android-x86-4-0-3/</url>
+    <content><![CDATA[<p><img src="/images/android_ndk_android-x86.png" alt="android ndk android-x86 irrlicht"></p>
+<p>Android 2.3 用のアプリをAndroid-x86 4.0.3 用にリビルドして、Inspiron duo 実機で動かしてみた。さすがにスマートフォンより動作が非常に軽快だけど、画面がiPod の広告みたいになってしまった。画像やフォントが表示されてないのは、なんでだろう。パスがずれているのかな。パスが違っていたらエラーになるはずなんだけど。ボタンイベントはタッチスクリーン上を指で押したら正しく動作した。</p>
+<ol>
+<li>Android 4.0.3 のターゲット情報は以下のとおり。ID は10。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android list target</span><br><span class="line"><span class="built_in">id</span>: 10 or <span class="string">&quot;android-15&quot;</span></span><br><span class="line">     Name: Android 4.0.3</span><br><span class="line">     Type: Platform</span><br><span class="line">     API level: 15</span><br><span class="line">     Revision: 3</span><br><span class="line">     Skins: WXGA720, QVGA, WSVGA, WQVGA400, WQVGA432, HVGA, WVGA854, WXGA800, WVGA800 (default)</span><br><span class="line">     ABIs : armeabi-v7a, x86</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li>Application.mk でx86 を指定</li>
+</ol>
+<figure class="highlight text"><figcaption><span>Application.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">#APP_ABI := armeabi armeabi-v7a</span><br><span class="line">APP_ABI := armeabi-v7a x86</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li>プロジェクトをアップデート</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android update project --path . --target 10</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="4">
+<li>ビルド</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ndk-build clean</span><br><span class="line">$ ndk-build -j 4</span><br><span class="line">$ ant clean</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>android</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Android-x86 4.0.3 + Firefox(Fennec) 16.0a1</title>
     <url>/2012/06/23/android-x86-4-0-3-firefoxfennec-16-0a1/</url>
     <content><![CDATA[<p><img src="/images/android-x86_4.0.3_firefox_16.0a1.png" alt="android-x86 4.0.3 firefox fennec 16.0a1"></p>
@@ -2574,44 +2612,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Android NDK + Android-x86 4.0.3</title>
-    <url>/2012/06/17/android-ndk-android-x86-4-0-3/</url>
-    <content><![CDATA[<p><img src="/images/android_ndk_android-x86.png" alt="android ndk android-x86 irrlicht"></p>
-<p>Android 2.3 用のアプリをAndroid-x86 4.0.3 用にリビルドして、Inspiron duo 実機で動かしてみた。さすがにスマートフォンより動作が非常に軽快だけど、画面がiPod の広告みたいになってしまった。画像やフォントが表示されてないのは、なんでだろう。パスがずれているのかな。パスが違っていたらエラーになるはずなんだけど。ボタンイベントはタッチスクリーン上を指で押したら正しく動作した。</p>
-<ol>
-<li>Android 4.0.3 のターゲット情報は以下のとおり。ID は10。</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android list target</span><br><span class="line"><span class="built_in">id</span>: 10 or <span class="string">&quot;android-15&quot;</span></span><br><span class="line">     Name: Android 4.0.3</span><br><span class="line">     Type: Platform</span><br><span class="line">     API level: 15</span><br><span class="line">     Revision: 3</span><br><span class="line">     Skins: WXGA720, QVGA, WSVGA, WQVGA400, WQVGA432, HVGA, WVGA854, WXGA800, WVGA800 (default)</span><br><span class="line">     ABIs : armeabi-v7a, x86</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>Application.mk でx86 を指定</li>
-</ol>
-<figure class="highlight text"><figcaption><span>Application.mk</span></figcaption><table><tr><td class="code"><pre><span class="line">#APP_ABI := armeabi armeabi-v7a</span><br><span class="line">APP_ABI := armeabi-v7a x86</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="3">
-<li>プロジェクトをアップデート</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ android update project --path . --target 10</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="4">
-<li>ビルド</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ ndk-build clean</span><br><span class="line">$ ndk-build -j 4</span><br><span class="line">$ ant clean</span><br><span class="line">$ ant debug</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>android</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Irrlicht 1.8 trunk + XEffects</title>
     <url>/2012/06/30/irrlicht-1-8-trunk-xeffects/</url>
     <content><![CDATA[<p><img src="/images/irrlicht_1.8_xeffects.png" alt="irrlicht 1.8 xeffects"></p>
@@ -2672,6 +2672,48 @@
 ]]></content>
       <categories>
         <category>linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Building Android 4.1 for x86 on Ubuntu 12.04</title>
+    <url>/2012/07/11/building-android-4-1-for-x86-on-ubuntu-12-04/</url>
+    <content><![CDATA[<p><img src="/images/android_4.1.1.png" alt="android 4.1.1 x86"></p>
+<p><a href="http://source.android.com/source/download.html">http://source.android.com/source/download.html</a><br><a href="https://android.googlesource.com/platform/manifest">https://android.googlesource.com/platform/manifest</a></p>
+<p>Android 4.1 Jelly Bean のソースが公開されたのでビルドしてみた。<del>.&#x2F;build&#x2F;target&#x2F;product&#x2F;generic_x86.mk があるので、使わせていただこう。</del>ビルド環境はUbuntu 12.04 x86_64。<del>インストール先はInspiron duo (Dual Core Atom N550, 1366x768, Touch Screen + Keyboard)。</del></p>
+<ol>
+<li>前提パッケージをインストール</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev libc6-dev lib32ncurses5-dev ia32-libs x11proto-core-dev libx11-dev lib32readline-gplv2-dev lib32z1-dev</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install gcc-multilib g++-multilib libc6-i386 libc6-dev-i386</span><br></pre></td></tr></table></figure>
+
+
+<ol start="2">
+<li><p>JDK をインストール<br>Oracle のサイトからjdk-6u33-linux-x64.bin を拾ってきて展開、.&#x2F;bin にパスを通しておく。</p>
+</li>
+<li><p>repo をインストール</p>
+</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> ~/bin</span><br><span class="line">$ PATH=~/bin:<span class="variable">$PATH</span></span><br><span class="line">$ curl http://android.git.kernel.org/repo &gt; ~/bin/repo</span><br><span class="line">$ <span class="built_in">chmod</span> a+x ~/bin/repo</span><br></pre></td></tr></table></figure>
+
+
+<ol start="4">
+<li>ソースを取得(Android 4.1(Jelly Bean) の場合)</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> jellybean-x86</span><br><span class="line">$ <span class="built_in">cd</span> jellybean-x86</span><br><span class="line">$ repo init -u https://android.googlesource.com/platform/manifest -b android-4.1.1_r1</span><br><span class="line">$ repo <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="5">
+<li>ビルド</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch generic_x86-eng</span><br><span class="line">$ make -j8</span><br></pre></td></tr></table></figure>
+
+<p>.&#x2F;out&#x2F;target&#x2F;product&#x2F;generic_x86&#x2F; にバイナリが作成されるので、GRUB から起動してあげればOK!、と思うけど、時間が掛かりそうなので、明日の朝確認しようzzz。</p>
+<p>generic_x86-eng で失敗したので、lunch の選択肢に従って、full_x86-eng でやり直してみよう。make の実行は、C&#x2F;C++ の部分は多重度を8 にして、Java の部分は多重度を1 にできるとCPU とメモリが有効活用できて効率的なんだけど、できないのかな。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch vbox_x86-eng</span><br><span class="line">$ make android_disk_vdi -j1</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+
+<p>VirtualBox イメージ(android_data_disk.vdi, android_system_disk.vdi)の生成と起動はできた。</p>
+]]></content>
+      <categories>
+        <category>android</category>
       </categories>
   </entry>
   <entry>
@@ -2741,48 +2783,6 @@
 ]]></content>
       <categories>
         <category>linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Building Android 4.1 for x86 on Ubuntu 12.04</title>
-    <url>/2012/07/11/building-android-4-1-for-x86-on-ubuntu-12-04/</url>
-    <content><![CDATA[<p><img src="/images/android_4.1.1.png" alt="android 4.1.1 x86"></p>
-<p><a href="http://source.android.com/source/download.html">http://source.android.com/source/download.html</a><br><a href="https://android.googlesource.com/platform/manifest">https://android.googlesource.com/platform/manifest</a></p>
-<p>Android 4.1 Jelly Bean のソースが公開されたのでビルドしてみた。<del>.&#x2F;build&#x2F;target&#x2F;product&#x2F;generic_x86.mk があるので、使わせていただこう。</del>ビルド環境はUbuntu 12.04 x86_64。<del>インストール先はInspiron duo (Dual Core Atom N550, 1366x768, Touch Screen + Keyboard)。</del></p>
-<ol>
-<li>前提パッケージをインストール</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev libc6-dev lib32ncurses5-dev ia32-libs x11proto-core-dev libx11-dev lib32readline-gplv2-dev lib32z1-dev</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install gcc-multilib g++-multilib libc6-i386 libc6-dev-i386</span><br></pre></td></tr></table></figure>
-
-
-<ol start="2">
-<li><p>JDK をインストール<br>Oracle のサイトからjdk-6u33-linux-x64.bin を拾ってきて展開、.&#x2F;bin にパスを通しておく。</p>
-</li>
-<li><p>repo をインストール</p>
-</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> ~/bin</span><br><span class="line">$ PATH=~/bin:<span class="variable">$PATH</span></span><br><span class="line">$ curl http://android.git.kernel.org/repo &gt; ~/bin/repo</span><br><span class="line">$ <span class="built_in">chmod</span> a+x ~/bin/repo</span><br></pre></td></tr></table></figure>
-
-
-<ol start="4">
-<li>ソースを取得(Android 4.1(Jelly Bean) の場合)</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> jellybean-x86</span><br><span class="line">$ <span class="built_in">cd</span> jellybean-x86</span><br><span class="line">$ repo init -u https://android.googlesource.com/platform/manifest -b android-4.1.1_r1</span><br><span class="line">$ repo <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
-
-
-<ol start="5">
-<li>ビルド</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch generic_x86-eng</span><br><span class="line">$ make -j8</span><br></pre></td></tr></table></figure>
-
-<p>.&#x2F;out&#x2F;target&#x2F;product&#x2F;generic_x86&#x2F; にバイナリが作成されるので、GRUB から起動してあげればOK!、と思うけど、時間が掛かりそうなので、明日の朝確認しようzzz。</p>
-<p>generic_x86-eng で失敗したので、lunch の選択肢に従って、full_x86-eng でやり直してみよう。make の実行は、C&#x2F;C++ の部分は多重度を8 にして、Java の部分は多重度を1 にできるとCPU とメモリが有効活用できて効率的なんだけど、できないのかな。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch vbox_x86-eng</span><br><span class="line">$ make android_disk_vdi -j1</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
-
-<p>VirtualBox イメージ(android_data_disk.vdi, android_system_disk.vdi)の生成と起動はできた。</p>
-]]></content>
-      <categories>
-        <category>android</category>
       </categories>
   </entry>
   <entry>
@@ -3042,6 +3042,76 @@
       </categories>
   </entry>
   <entry>
+    <title>Android-x86 4.0.4 + Firefox (Fennec) 19.0a1 / 16.0.1</title>
+    <url>/2012/10/13/android-x86-4-0-4-firefox-fennec-19-0a1-16-0-1/</url>
+    <content><![CDATA[<p><img src="/images/android-x86_firefox_19.0a1.png" alt="android-x86 firefoex fennec 19.0a1 16.0.1"></p>
+<p><a href="https://wiki.mozilla.org/Mobile/Fennec/Android">https://wiki.mozilla.org/Mobile/Fennec/Android</a></p>
+<p>Android-x86 4.0.4 (i386-linux-android) 向けにFirefox の開発バージョン19.0a1 と最新リリース版16.0.1 をビルドしてみました。ビルド環境はUbuntu 12.10 x86_64 です。手順は、<a href="/2012/06/23/android-x86-4-0-3-firefoxfennec-16-0a1/">前回</a>とほとんど同じです。</p>
+<h3 id="ビルド用SDK-の配置"><a href="#ビルド用SDK-の配置" class="headerlink" title="ビルド用SDK の配置"></a>ビルド用SDK の配置</h3><ul>
+<li><p>&#x2F;tools&#x2F;android-sdk-linux</p>
+</li>
+<li><p>&#x2F;tools&#x2F;android-ndk-r7c</p>
+</li>
+<li><p>&#x2F;tools&#x2F;jdk1.6.0_35</p>
+</li>
+</ul>
+<h3 id="ビルド用依存パッケージの取得"><a href="#ビルド用依存パッケージの取得" class="headerlink" title="ビルド用依存パッケージの取得"></a>ビルド用依存パッケージの取得</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get install mercurial ccache</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get build-dep firefox</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="開発版-19-0a1-をビルドする場合"><a href="#開発版-19-0a1-をビルドする場合" class="headerlink" title="開発版(19.0a1)をビルドする場合"></a>開発版(19.0a1)をビルドする場合</h3><ol>
+<li>開発版ソースコードの取得</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /tools/apps/firefox/</span><br><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/mozilla-central/ src-central</span><br><span class="line">$ <span class="built_in">cd</span> src-central</span><br></pre></td></tr></table></figure>
+
+
+
+
+<ol start="2">
+<li>mozconfig のカスタマイズ</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> ./mobile/android/config/mozconfigs/android-x86/nightly .mozconfig</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><figcaption><span>/tools/apps/firefox/src-central/.mozconfig</span></figcaption><table><tr><td class="code"><pre><span class="line">. &quot;$topsrcdir/mobile/android/config/mozconfigs/common&quot;</span><br><span class="line"></span><br><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-android-ndk=&quot;/tools/android-ndk-r7c&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;/tools/android-sdk-linux/platforms/android-14&quot;</span><br><span class="line">ac_add_options --with-android-version=14</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line">#ac_add_options --enable-update-channel=$&#123;MOZ_UPDATE_CHANNEL&#125;</span><br><span class="line"></span><br><span class="line"># IonMonkey disabled in bug 789373</span><br><span class="line">ac_add_options --disable-ion</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/tools/jdk1.6.0_35</span><br><span class="line">#export MOZILLA_OFFICIAL=1</span><br><span class="line">#export MOZ_TELEMETRY_REPORTING=1</span><br><span class="line"></span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/nightly</span><br><span class="line"></span><br><span class="line"># Treat warnings as errors in directories with FAIL_ON_WARNINGS.</span><br><span class="line">ac_add_options --enable-warnings-as-errors</span><br><span class="line"></span><br><span class="line"># Use ccache</span><br><span class="line">ac_add_options --with-ccache=/usr/bin/ccache</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h3 id="リリース版-16-0-1-をビルドする場合"><a href="#リリース版-16-0-1-をビルドする場合" class="headerlink" title="リリース版(16.0.1)をビルドする場合"></a>リリース版(16.0.1)をビルドする場合</h3><ol>
+<li>リリース版ソースコードの取得</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /tools/apps/firefox/</span><br><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/releases/mozilla-release src-release</span><br><span class="line">$ <span class="built_in">cd</span> src-release</span><br></pre></td></tr></table></figure>
+
+
+
+
+<ol start="2">
+<li>mozconfig のカスタマイズ</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> ./mobile/android/config/mozconfigs/android-x86/release .mozconfig</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><figcaption><span>/tools/apps/firefox/src-release/.mozconfig</span></figcaption><table><tr><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-android-ndk=&quot;/tools/android-ndk-r7c&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;/tools/android-sdk-linux/platforms/android-14&quot;</span><br><span class="line">ac_add_options --with-android-version=14</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line">#ac_add_options --enable-updater</span><br><span class="line">#ac_add_options --enable-update-channel=$&#123;MOZ_UPDATE_CHANNEL&#125;</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/tools/jdk1.6.0_35</span><br><span class="line">#export MOZILLA_OFFICIAL=1</span><br><span class="line">#export MOZ_TELEMETRY_REPORTING=1</span><br><span class="line"></span><br><span class="line">#ac_add_options --enable-official-branding</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/unofficial</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h3 id="firefox-のビルド"><a href="#firefox-のビルド" class="headerlink" title="firefox のビルド"></a>firefox のビルド</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make -f client.mk build_and_deploy</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><p>以下のフォルダに生成された.apk ファイルをAndroid-x86 でインストールします。</p>
+<figure class="highlight text"><figcaption><span>出力先</span></figcaption><table><tr><td class="code"><pre><span class="line">./obj-x86_64-unknown-linux-gnu/dist/</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>firefox</category>
+      </categories>
+  </entry>
+  <entry>
     <title>OpenELEC 2.0 + MediaTomb</title>
     <url>/2012/10/24/openelec-2-0-mediatomb/</url>
     <content><![CDATA[<p><img src="/images/openelec_2.png" alt="OpenELEC 2.0 XBMC"></p>
@@ -3208,76 +3278,6 @@
 ]]></content>
       <categories>
         <category>linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Android-x86 4.0.4 + Firefox (Fennec) 19.0a1 / 16.0.1</title>
-    <url>/2012/10/13/android-x86-4-0-4-firefox-fennec-19-0a1-16-0-1/</url>
-    <content><![CDATA[<p><img src="/images/android-x86_firefox_19.0a1.png" alt="android-x86 firefoex fennec 19.0a1 16.0.1"></p>
-<p><a href="https://wiki.mozilla.org/Mobile/Fennec/Android">https://wiki.mozilla.org/Mobile/Fennec/Android</a></p>
-<p>Android-x86 4.0.4 (i386-linux-android) 向けにFirefox の開発バージョン19.0a1 と最新リリース版16.0.1 をビルドしてみました。ビルド環境はUbuntu 12.10 x86_64 です。手順は、<a href="/2012/06/23/android-x86-4-0-3-firefoxfennec-16-0a1/">前回</a>とほとんど同じです。</p>
-<h3 id="ビルド用SDK-の配置"><a href="#ビルド用SDK-の配置" class="headerlink" title="ビルド用SDK の配置"></a>ビルド用SDK の配置</h3><ul>
-<li><p>&#x2F;tools&#x2F;android-sdk-linux</p>
-</li>
-<li><p>&#x2F;tools&#x2F;android-ndk-r7c</p>
-</li>
-<li><p>&#x2F;tools&#x2F;jdk1.6.0_35</p>
-</li>
-</ul>
-<h3 id="ビルド用依存パッケージの取得"><a href="#ビルド用依存パッケージの取得" class="headerlink" title="ビルド用依存パッケージの取得"></a>ビルド用依存パッケージの取得</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get install mercurial ccache</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get build-dep firefox</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="開発版-19-0a1-をビルドする場合"><a href="#開発版-19-0a1-をビルドする場合" class="headerlink" title="開発版(19.0a1)をビルドする場合"></a>開発版(19.0a1)をビルドする場合</h3><ol>
-<li>開発版ソースコードの取得</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /tools/apps/firefox/</span><br><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/mozilla-central/ src-central</span><br><span class="line">$ <span class="built_in">cd</span> src-central</span><br></pre></td></tr></table></figure>
-
-
-
-
-<ol start="2">
-<li>mozconfig のカスタマイズ</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> ./mobile/android/config/mozconfigs/android-x86/nightly .mozconfig</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight text"><figcaption><span>/tools/apps/firefox/src-central/.mozconfig</span></figcaption><table><tr><td class="code"><pre><span class="line">. &quot;$topsrcdir/mobile/android/config/mozconfigs/common&quot;</span><br><span class="line"></span><br><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-android-ndk=&quot;/tools/android-ndk-r7c&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;/tools/android-sdk-linux/platforms/android-14&quot;</span><br><span class="line">ac_add_options --with-android-version=14</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line">#ac_add_options --enable-update-channel=$&#123;MOZ_UPDATE_CHANNEL&#125;</span><br><span class="line"></span><br><span class="line"># IonMonkey disabled in bug 789373</span><br><span class="line">ac_add_options --disable-ion</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/tools/jdk1.6.0_35</span><br><span class="line">#export MOZILLA_OFFICIAL=1</span><br><span class="line">#export MOZ_TELEMETRY_REPORTING=1</span><br><span class="line"></span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/nightly</span><br><span class="line"></span><br><span class="line"># Treat warnings as errors in directories with FAIL_ON_WARNINGS.</span><br><span class="line">ac_add_options --enable-warnings-as-errors</span><br><span class="line"></span><br><span class="line"># Use ccache</span><br><span class="line">ac_add_options --with-ccache=/usr/bin/ccache</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-<h3 id="リリース版-16-0-1-をビルドする場合"><a href="#リリース版-16-0-1-をビルドする場合" class="headerlink" title="リリース版(16.0.1)をビルドする場合"></a>リリース版(16.0.1)をビルドする場合</h3><ol>
-<li>リリース版ソースコードの取得</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /tools/apps/firefox/</span><br><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/releases/mozilla-release src-release</span><br><span class="line">$ <span class="built_in">cd</span> src-release</span><br></pre></td></tr></table></figure>
-
-
-
-
-<ol start="2">
-<li>mozconfig のカスタマイズ</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> ./mobile/android/config/mozconfigs/android-x86/release .mozconfig</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight text"><figcaption><span>/tools/apps/firefox/src-release/.mozconfig</span></figcaption><table><tr><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-android-ndk=&quot;/tools/android-ndk-r7c&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;/tools/android-sdk-linux/platforms/android-14&quot;</span><br><span class="line">ac_add_options --with-android-version=14</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line">#ac_add_options --enable-updater</span><br><span class="line">#ac_add_options --enable-update-channel=$&#123;MOZ_UPDATE_CHANNEL&#125;</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/tools/jdk1.6.0_35</span><br><span class="line">#export MOZILLA_OFFICIAL=1</span><br><span class="line">#export MOZ_TELEMETRY_REPORTING=1</span><br><span class="line"></span><br><span class="line">#ac_add_options --enable-official-branding</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/unofficial</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-<h3 id="firefox-のビルド"><a href="#firefox-のビルド" class="headerlink" title="firefox のビルド"></a>firefox のビルド</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make -f client.mk build_and_deploy</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h3><p>以下のフォルダに生成された.apk ファイルをAndroid-x86 でインストールします。</p>
-<figure class="highlight text"><figcaption><span>出力先</span></figcaption><table><tr><td class="code"><pre><span class="line">./obj-x86_64-unknown-linux-gnu/dist/</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>firefox</category>
       </categories>
   </entry>
   <entry>
@@ -4026,7 +4026,7 @@ $ sudo apt-get install gnome-shell
 <h4 id="ドックの設定"><a href="#ドックの設定" class="headerlink" title="ドックの設定"></a>ドックの設定</h4><p>前回のAWN に続き、このバージョンではCairo-Dock も動かなくなりました。Dash to Dock GNOME Shell 拡張も正常に動かないようです。Docky を使うことにしました。</p>
 <pre><code>$ sudo apt-get install docky
 </code></pre>
-<h4 id="トップバーの非表示"><a href="#トップバーの非表示" class="headerlink" title="トップバーの非表示"></a>トップバーの非表示</h4><p>Hide Top Bar GNOME Shell 拡張が正常に動かなかったので、以前使用していた<a href="mailto:&#97;&#117;&#x74;&#111;&#x68;&#105;&#x64;&#101;&#116;&#111;&#112;&#98;&#x61;&#x72;&#x32;&#64;&#119;&#101;&#x72;&#x65;&#x77;&#111;&#108;&#x76;&#x65;&#x73;&#46;&#117;&#115;">&#97;&#117;&#x74;&#111;&#x68;&#105;&#x64;&#101;&#116;&#111;&#112;&#98;&#x61;&#x72;&#x32;&#64;&#119;&#101;&#x72;&#x65;&#x77;&#111;&#108;&#x76;&#x65;&#x73;&#46;&#117;&#115;</a> の方のGNOME Shell 拡張を使用してみました。<br>shell-version は3.9.4 を指定しました。</p>
+<h4 id="トップバーの非表示"><a href="#トップバーの非表示" class="headerlink" title="トップバーの非表示"></a>トップバーの非表示</h4><p>Hide Top Bar GNOME Shell 拡張が正常に動かなかったので、以前使用していた<a href="mailto:&#97;&#x75;&#x74;&#111;&#x68;&#105;&#x64;&#x65;&#116;&#111;&#112;&#98;&#97;&#x72;&#x32;&#64;&#119;&#x65;&#x72;&#x65;&#119;&#111;&#x6c;&#x76;&#x65;&#115;&#46;&#x75;&#115;">&#97;&#x75;&#x74;&#111;&#x68;&#105;&#x64;&#x65;&#116;&#111;&#112;&#98;&#97;&#x72;&#x32;&#64;&#119;&#x65;&#x72;&#x65;&#119;&#111;&#x6c;&#x76;&#x65;&#115;&#46;&#x75;&#115;</a> の方のGNOME Shell 拡張を使用してみました。<br>shell-version は3.9.4 を指定しました。</p>
 <figure class="highlight js"><figcaption><span>metadata.json</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;Auto hide the top panel&quot;</span>,</span><br><span class="line">  <span class="string">&quot;extension-id&quot;</span>: <span class="string">&quot;auto-hide-top-panel&quot;</span>, </span><br><span class="line">  <span class="string">&quot;gettext-domain&quot;</span>: <span class="string">&quot;gnome-shell-extensions&quot;</span>, </span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Auto Hide Top Panel&quot;</span>,</span><br><span class="line">  <span class="string">&quot;settings-schema&quot;</span>: <span class="string">&quot;org.gnome.shell.extensions.auto-hide-top-panel&quot;</span>, </span><br><span class="line">  <span class="string">&quot;shell-version&quot;</span>: [</span><br><span class="line">	<span class="string">&quot;3.5.92&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.6&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.6.1&quot;</span>,</span><br><span class="line">	<span class="string">&quot;3.9.4&quot;</span></span><br><span class="line">  ], </span><br><span class="line">  <span class="string">&quot;url&quot;</span>: <span class="string">&quot;http://fpmurphy.com/gnome-shell-extensions&quot;</span>,</span><br><span class="line">  <span class="string">&quot;uuid&quot;</span>: <span class="string">&quot;autohidetopbar2@werewolves.us&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
@@ -7982,44 +7982,6 @@ $ sudo apt-get install cardapio
       </tags>
   </entry>
   <entry>
-    <title>Blender 2.77a on Ubuntu 16.04</title>
-    <url>/2016/04/17/Blender/</url>
-    <content><![CDATA[<p><img src="/images/blender_as_video_editor.png" alt="Blender"></p>
-<p>Blender 2.77a をUbuntu 16.04 にインストールしてビデオエディタとして使ってみました。<br>言語に日本語を選択した際に、フォントを明示的に設定しなくても日本語が化けないようになったみたいです。</p>
-<span id="more"></span>
-
-<h2 id="Blender-のインストール"><a href="#Blender-のインストール" class="headerlink" title="Blender のインストール"></a>Blender のインストール</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> add-apt-repository ppa:thomas-schiex/blender</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install Blender</span><br></pre></td></tr></table></figure>
-
-<h2 id="言語を日本語に設定"><a href="#言語を日本語に設定" class="headerlink" title="言語を日本語に設定"></a>言語を日本語に設定</h2><ol>
-<li>[File]-[User Perferences…]</li>
-<li>[System]</li>
-<li></li>
-<li>Language: <code>Japanese(日本語)</code></li>
-<li>Translate: <code>Interface</code>, <code>Tooltips</code> <code>New Data</code> を押下</li>
-<li><code>Save UserSetteings</code> または <code>ユーザ設定の保存</code> を押下</li>
-<li>[ファイル]-[スタートアップファイルの保存]</li>
-</ol>
-<h2 id="ビデオエディタの表示設定"><a href="#ビデオエディタの表示設定" class="headerlink" title="ビデオエディタの表示設定"></a>ビデオエディタの表示設定</h2><ol>
-<li>[スクリーンレイアウトを選択] <code>Video Editting</code></li>
-<li>右上の<code>ビデオシーケンスエディタ</code>領域の右上隅の三角形を左にドラッグして右側に新しい領域を作成し、エディタタイプを<code>プロパティ</code>に変更</li>
-<li>下の<code>タイムライン</code>領域で、[再生]で以下を選択<ul>
-<li>オーディオスクライピング</li>
-<li>AV 同期</li>
-<li>コマ落とし</li>
-</ul>
-</li>
-<li>[ウィンドウ]-[ウィンドウの全画面切り替え]</li>
-<li>[ファイル]-[スタートアップファイルの保存]</li>
-</ol>
-]]></content>
-      <categories>
-        <category>application</category>
-      </categories>
-      <tags>
-        <tag>blender</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Lollypop Japanese Translation</title>
     <url>/2016/04/17/Lollypop-Japanese-Translation/</url>
     <content><![CDATA[<p><img src="/images/lollypop_japanese.png" alt="Lollypop Japanese Translation"><br><a href="https://github.com/gnumdk/lollypop">https://github.com/gnumdk/lollypop</a><br>Lollypop はモダンなインタフェースの GNOME 向け音楽プレイヤーです。気に入ったので日本語訳を追加してみました。</p>
@@ -8059,6 +8021,44 @@ $ sudo apt-get install cardapio
       </categories>
       <tags>
         <tag>lollypop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender 2.77a on Ubuntu 16.04</title>
+    <url>/2016/04/17/Blender/</url>
+    <content><![CDATA[<p><img src="/images/blender_as_video_editor.png" alt="Blender"></p>
+<p>Blender 2.77a をUbuntu 16.04 にインストールしてビデオエディタとして使ってみました。<br>言語に日本語を選択した際に、フォントを明示的に設定しなくても日本語が化けないようになったみたいです。</p>
+<span id="more"></span>
+
+<h2 id="Blender-のインストール"><a href="#Blender-のインストール" class="headerlink" title="Blender のインストール"></a>Blender のインストール</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> add-apt-repository ppa:thomas-schiex/blender</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install Blender</span><br></pre></td></tr></table></figure>
+
+<h2 id="言語を日本語に設定"><a href="#言語を日本語に設定" class="headerlink" title="言語を日本語に設定"></a>言語を日本語に設定</h2><ol>
+<li>[File]-[User Perferences…]</li>
+<li>[System]</li>
+<li></li>
+<li>Language: <code>Japanese(日本語)</code></li>
+<li>Translate: <code>Interface</code>, <code>Tooltips</code> <code>New Data</code> を押下</li>
+<li><code>Save UserSetteings</code> または <code>ユーザ設定の保存</code> を押下</li>
+<li>[ファイル]-[スタートアップファイルの保存]</li>
+</ol>
+<h2 id="ビデオエディタの表示設定"><a href="#ビデオエディタの表示設定" class="headerlink" title="ビデオエディタの表示設定"></a>ビデオエディタの表示設定</h2><ol>
+<li>[スクリーンレイアウトを選択] <code>Video Editting</code></li>
+<li>右上の<code>ビデオシーケンスエディタ</code>領域の右上隅の三角形を左にドラッグして右側に新しい領域を作成し、エディタタイプを<code>プロパティ</code>に変更</li>
+<li>下の<code>タイムライン</code>領域で、[再生]で以下を選択<ul>
+<li>オーディオスクライピング</li>
+<li>AV 同期</li>
+<li>コマ落とし</li>
+</ul>
+</li>
+<li>[ウィンドウ]-[ウィンドウの全画面切り替え]</li>
+<li>[ファイル]-[スタートアップファイルの保存]</li>
+</ol>
+]]></content>
+      <categories>
+        <category>application</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
       </tags>
   </entry>
   <entry>
@@ -8170,6 +8170,39 @@ $ sudo apt-get install cardapio
       </tags>
   </entry>
   <entry>
+    <title>GtkTreeModelFilter</title>
+    <url>/2016/05/29/GtkTreeModelFilter/</url>
+    <content><![CDATA[<p><img src="/images/gnome-peercast-player-20160529-01.png" alt="GNOME Peercast Player"></p>
+<ul>
+<li><a href="http://python-gtk-3-tutorial.readthedocs.io/en/latest/treeview.html#filtering">http://python-gtk-3-tutorial.readthedocs.io/en/latest/treeview.html#filtering</a></li>
+<li><a href="https://developer.gnome.org/gtk3/stable/GtkTreeModelFilter.html">https://developer.gnome.org/gtk3/stable/GtkTreeModelFilter.html</a></li>
+<li><a href="https://github.com/ktkr3d/gnome-peercast-player">https://github.com/ktkr3d/gnome-peercast-player</a></li>
+</ul>
+<p>GtkTreeModelFilter を使ってインクリメンタルサーチ的なフィルタを実装してみました。<br>Glade でGtkTreeModelFilter を定義していますが、サンプル等が見つけられなかったので、我流になっているかもしれません。</p>
+<span id="more"></span>
+
+<h2 id="Glade-での準備"><a href="#Glade-での準備" class="headerlink" title="Glade での準備"></a>Glade での準備</h2><ul>
+<li>GtkTreeView のモデルにGtkTreeModelFilter を指定</li>
+<li>GtkTreeModelFilter の子モデルにGtkListStore を指定</li>
+<li>GtkSearchEntry の<code>changed</code>シグナルをハンドラとして登録</li>
+</ul>
+<h2 id="フィルタの準備"><a href="#フィルタの準備" class="headerlink" title="フィルタの準備"></a>フィルタの準備</h2><ul>
+<li>GtkTreeModelFilter を取得し、フィルタ関数<code>filter_func</code>を登録します。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">liststore_filter = builder.get_object(<span class="string">&quot;liststore1_filter&quot;</span>)</span><br><span class="line">liststore_filter.set_visible_func(<span class="variable language_">self</span>.filter_func)</span><br></pre></td></tr></table></figure></li>
+<li>検索文字列がモデルの0列、6列の内容に含まれる場合に表示対象とするフィルタ関数を定義します。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">filter_func</span>(<span class="params">self, model, <span class="built_in">iter</span>, keyword</span>):</span><br><span class="line">    <span class="variable language_">self</span>.keyword = <span class="variable language_">self</span>.searchentry.get_text()</span><br><span class="line">    <span class="keyword">if</span> <span class="variable language_">self</span>.keyword == <span class="string">&quot;&quot;</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.keyword.lower() <span class="keyword">in</span> model[<span class="built_in">iter</span>][<span class="number">0</span>].lower() <span class="keyword">or</span> <span class="variable language_">self</span>.keyword.lower() <span class="keyword">in</span> model[<span class="built_in">iter</span>][<span class="number">6</span>].lower()</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="シグナルハンドラの処理"><a href="#シグナルハンドラの処理" class="headerlink" title="シグナルハンドラの処理"></a>シグナルハンドラの処理</h2><ul>
+<li>検索文字列が更新されたら<code>refilter()</code>を実行します。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">on_searchentry_changed</span>(<span class="params">self, liststore</span>):</span><br><span class="line">  <span class="variable language_">self</span>.<span class="built_in">filter</span>.refilter()</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>develop</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>gtk+3</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ajenti on Raspberry Pi 2</title>
     <url>/2016/07/09/Ajenti-on-Raspberry-Pi-2/</url>
     <content><![CDATA[<p><img src="/images/ajenti.png" alt="Ajenti on Raspberry Pi 2" title="Ajenti on Raspberry Pi 2"></p>
@@ -8206,39 +8239,6 @@ $ sudo apt-get install cardapio
         <tag>ubuntu</tag>
         <tag>raspberrypi</tag>
         <tag>ajenti</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GtkTreeModelFilter</title>
-    <url>/2016/05/29/GtkTreeModelFilter/</url>
-    <content><![CDATA[<p><img src="/images/gnome-peercast-player-20160529-01.png" alt="GNOME Peercast Player"></p>
-<ul>
-<li><a href="http://python-gtk-3-tutorial.readthedocs.io/en/latest/treeview.html#filtering">http://python-gtk-3-tutorial.readthedocs.io/en/latest/treeview.html#filtering</a></li>
-<li><a href="https://developer.gnome.org/gtk3/stable/GtkTreeModelFilter.html">https://developer.gnome.org/gtk3/stable/GtkTreeModelFilter.html</a></li>
-<li><a href="https://github.com/ktkr3d/gnome-peercast-player">https://github.com/ktkr3d/gnome-peercast-player</a></li>
-</ul>
-<p>GtkTreeModelFilter を使ってインクリメンタルサーチ的なフィルタを実装してみました。<br>Glade でGtkTreeModelFilter を定義していますが、サンプル等が見つけられなかったので、我流になっているかもしれません。</p>
-<span id="more"></span>
-
-<h2 id="Glade-での準備"><a href="#Glade-での準備" class="headerlink" title="Glade での準備"></a>Glade での準備</h2><ul>
-<li>GtkTreeView のモデルにGtkTreeModelFilter を指定</li>
-<li>GtkTreeModelFilter の子モデルにGtkListStore を指定</li>
-<li>GtkSearchEntry の<code>changed</code>シグナルをハンドラとして登録</li>
-</ul>
-<h2 id="フィルタの準備"><a href="#フィルタの準備" class="headerlink" title="フィルタの準備"></a>フィルタの準備</h2><ul>
-<li>GtkTreeModelFilter を取得し、フィルタ関数<code>filter_func</code>を登録します。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">liststore_filter = builder.get_object(<span class="string">&quot;liststore1_filter&quot;</span>)</span><br><span class="line">liststore_filter.set_visible_func(<span class="variable language_">self</span>.filter_func)</span><br></pre></td></tr></table></figure></li>
-<li>検索文字列がモデルの0列、6列の内容に含まれる場合に表示対象とするフィルタ関数を定義します。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">filter_func</span>(<span class="params">self, model, <span class="built_in">iter</span>, keyword</span>):</span><br><span class="line">    <span class="variable language_">self</span>.keyword = <span class="variable language_">self</span>.searchentry.get_text()</span><br><span class="line">    <span class="keyword">if</span> <span class="variable language_">self</span>.keyword == <span class="string">&quot;&quot;</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.keyword.lower() <span class="keyword">in</span> model[<span class="built_in">iter</span>][<span class="number">0</span>].lower() <span class="keyword">or</span> <span class="variable language_">self</span>.keyword.lower() <span class="keyword">in</span> model[<span class="built_in">iter</span>][<span class="number">6</span>].lower()</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="シグナルハンドラの処理"><a href="#シグナルハンドラの処理" class="headerlink" title="シグナルハンドラの処理"></a>シグナルハンドラの処理</h2><ul>
-<li>検索文字列が更新されたら<code>refilter()</code>を実行します。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">on_searchentry_changed</span>(<span class="params">self, liststore</span>):</span><br><span class="line">  <span class="variable language_">self</span>.<span class="built_in">filter</span>.refilter()</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>develop</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>gtk+3</tag>
       </tags>
   </entry>
   <entry>
@@ -10887,7 +10887,7 @@ merge newbranch
     <url>/2019/06/26/Hexo-Tag-Google-Charts/</url>
     <content><![CDATA[<p><a href="https://github.com/juampi92/hexo-tag-googlecharts">https://github.com/juampi92/hexo-tag-googlecharts</a><br><a href="https://developers.google.com/chart/interactive/docs/gallery">https://developers.google.com/chart/interactive/docs/gallery</a><br>hexo-tag-googlecharts を使ってチャートを表示してみました。</p>
 <p>Google Charts を直接Javascript から使うよりも簡単に利用できて便利です。<br>カスタマイズに少しコツが必要なのでよく使う構成をテンプレートとして作っておくとよさそうです。</p>
-<div id="googleChart7505"></div>
+<div id="googleChart997"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10896,7 +10896,7 @@ merge newbranch
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.LineChart(document.getElementById("googleChart7505"))).draw(google.visualization.arrayToDataTable([['Date', 'Druid', 'Death Knight', 'Monk', 'Demon Hunter', 'Mage', 'Warlock', 'Shaman'],[new Date('2019/03/21'), 376, 378, 371, 373, 376, 377, 372],[new Date('2019/03/25'), 377, 378, 374, 374, 376, 378, 374],[new Date('2019/03/31'), 377, 380, 376, 375, 376, 378, 375],[new Date('2019/04/05'), 378, 382, 378, 376, 377, 380, 376],[new Date('2019/04/07'), 380, 383, 379, 376, 378, 381, 378],[new Date('2019/04/20'), 382, 384, 382, 377, 379, 383, 379],[new Date('2019/04/27'), 383, 385, 383, 379, 379, 384, 380],[new Date('2019/04/28'), 384, 385, 383, 379, 379, 387, 381],[new Date('2019/04/29'), 385, 385, 383, 380, 380, 388, 381],[new Date('2019/05/06'), 388, 388, 387, 383, 383, 389, 386],[new Date('2019/05/13'), 392, 391, 388, 386, 386, 391, 390],[new Date('2019/05/19'), 394, 392, 390, 388, 387, 392, 391],[new Date('2019/06/09'), 398, 394, 392, 391, 389, 395, 393],[new Date('2019/06/22'), 399, 397, 395, 394, 394, 398, 396]]),{"hAxis":{"title":"Date","format":"M/d"},"vAxis":{"title":"iLevel","format":"#"},"pointSize":"10","series":[{"color":"#FF7D0A"},{"color":"#C41F3B"},{"color":"#00FF96"},{"color":"#A330C9"},{"color":"#40C7EB"},{"color":"#8787ED"},{"color":"#0070DE"}],"title":" ","width":"100%","height":"600"});
+        (new google.visualization.LineChart(document.getElementById("googleChart997"))).draw(google.visualization.arrayToDataTable([['Date', 'Druid', 'Death Knight', 'Monk', 'Demon Hunter', 'Mage', 'Warlock', 'Shaman'],[new Date('2019/03/21'), 376, 378, 371, 373, 376, 377, 372],[new Date('2019/03/25'), 377, 378, 374, 374, 376, 378, 374],[new Date('2019/03/31'), 377, 380, 376, 375, 376, 378, 375],[new Date('2019/04/05'), 378, 382, 378, 376, 377, 380, 376],[new Date('2019/04/07'), 380, 383, 379, 376, 378, 381, 378],[new Date('2019/04/20'), 382, 384, 382, 377, 379, 383, 379],[new Date('2019/04/27'), 383, 385, 383, 379, 379, 384, 380],[new Date('2019/04/28'), 384, 385, 383, 379, 379, 387, 381],[new Date('2019/04/29'), 385, 385, 383, 380, 380, 388, 381],[new Date('2019/05/06'), 388, 388, 387, 383, 383, 389, 386],[new Date('2019/05/13'), 392, 391, 388, 386, 386, 391, 390],[new Date('2019/05/19'), 394, 392, 390, 388, 387, 392, 391],[new Date('2019/06/09'), 398, 394, 392, 391, 389, 395, 393],[new Date('2019/06/22'), 399, 397, 395, 394, 394, 398, 396]]),{"hAxis":{"title":"Date","format":"M/d"},"vAxis":{"title":"iLevel","format":"#"},"pointSize":"10","series":[{"color":"#FF7D0A"},{"color":"#C41F3B"},{"color":"#00FF96"},{"color":"#A330C9"},{"color":"#40C7EB"},{"color":"#8787ED"},{"color":"#0070DE"}],"title":" ","width":"100%","height":"600"});
       });
     })();
   }
@@ -10947,7 +10947,7 @@ merge newbranch
 
 <h3 id="Hexo-Tag-Google-Charts-の利用例"><a href="#Hexo-Tag-Google-Charts-の利用例" class="headerlink" title="Hexo Tag Google Charts の利用例"></a>Hexo Tag Google Charts の利用例</h3><p><a href="https://developers.google.com/chart/interactive/docs/gallery">https://developers.google.com/chart/interactive/docs/gallery</a><br>Chart Gallery の中でよく使いそうな例を移植してみました。</p>
 <h4 id="表-Table"><a href="#表-Table" class="headerlink" title="表(Table)"></a>表(Table)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/table">https://developers.google.com/chart/interactive/docs/gallery/table</a></p>
-<div id="googleChart6558"></div>
+<div id="googleChart9488"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10956,7 +10956,7 @@ merge newbranch
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart6558"))).draw(google.visualization.arrayToDataTable([['Name', 'Salary', 'Full Time Employee'],['Mike',  {v: 10000, f: '$10,000'}, true],['Jim',   {v:8000,   f: '$8,000'},  false],['Alice', {v: 12500, f: '$12,500'}, true],['Bob',   {v: 7000,  f: '$7,000'},  true]]),{"showRowNumber":true,"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart9488"))).draw(google.visualization.arrayToDataTable([['Name', 'Salary', 'Full Time Employee'],['Mike',  {v: 10000, f: '$10,000'}, true],['Jim',   {v:8000,   f: '$8,000'},  false],['Alice', {v: 12500, f: '$12,500'}, true],['Bob',   {v: 7000,  f: '$7,000'},  true]]),{"showRowNumber":true,"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -10964,7 +10964,7 @@ merge newbranch
 
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts Table 100% 100% %&#125;</span><br><span class="line"> </span><br><span class="line">&#123;&quot;showRowNumber&quot;: true&#125;</span><br><span class="line">&#x27;Name&#x27;, &#x27;Salary&#x27;, &#x27;Full Time Employee&#x27;</span><br><span class="line">&#x27;Mike&#x27;,  &#123;v: 10000, f: &#x27;$10,000&#x27;&#125;, true</span><br><span class="line">&#x27;Jim&#x27;,   &#123;v:8000,   f: &#x27;$8,000&#x27;&#125;,  false</span><br><span class="line">&#x27;Alice&#x27;, &#123;v: 12500, f: &#x27;$12,500&#x27;&#125;, true</span><br><span class="line">&#x27;Bob&#x27;,   &#123;v: 7000,  f: &#x27;$7,000&#x27;&#125;,  true</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="複合グラフ-ComboChart"><a href="#複合グラフ-ComboChart" class="headerlink" title="複合グラフ(ComboChart)"></a>複合グラフ(ComboChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/combochart">https://developers.google.com/chart/interactive/docs/gallery/combochart</a></p>
-<div id="googleChart7478"></div>
+<div id="googleChart216"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10973,7 +10973,7 @@ merge newbranch
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.ComboChart(document.getElementById("googleChart7478"))).draw(google.visualization.arrayToDataTable([['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],['2004/05',  165,      938,         522,             998,           450,      614.6],['2005/06',  135,      1120,        599,             1268,          288,      682],['2006/07',  157,      1167,        587,             807,           397,      623],['2007/08',  139,      1110,        615,             968,           215,      609.4],['2008/09',  136,      691,         629,             1026,          366,      569.6]]),{"vAxis":{"title":"Cups"},"hAxis":{"title":"Month"},"seriesType":"bars","series":[{},{},{},{},{"type":"line"}],"title":"Monthly Coffee Production by Country","width":"900","height":"500"});
+        (new google.visualization.ComboChart(document.getElementById("googleChart216"))).draw(google.visualization.arrayToDataTable([['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],['2004/05',  165,      938,         522,             998,           450,      614.6],['2005/06',  135,      1120,        599,             1268,          288,      682],['2006/07',  157,      1167,        587,             807,           397,      623],['2007/08',  139,      1110,        615,             968,           215,      609.4],['2008/09',  136,      691,         629,             1026,          366,      569.6]]),{"vAxis":{"title":"Cups"},"hAxis":{"title":"Month"},"seriesType":"bars","series":[{},{},{},{},{"type":"line"}],"title":"Monthly Coffee Production by Country","width":"900","height":"500"});
       });
     })();
   }
@@ -10982,7 +10982,7 @@ merge newbranch
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts ComboChart 900 500 %&#125;</span><br><span class="line">Monthly Coffee Production by Country</span><br><span class="line">&#123;&quot;vAxis&quot;: &#123;&quot;title&quot;: &quot;Cups&quot;&#125;, &quot;hAxis&quot;: &#123;&quot;title&quot;: &quot;Month&quot;&#125;, &quot;seriesType&quot;: &quot;bars&quot;, &quot;series&quot;: [&#123;&#125;, &#123;&#125;, &#123;&#125;, &#123;&#125;, &#123;&quot;type&quot;: &quot;line&quot;&#125;]&#125;</span><br><span class="line">&#x27;Month&#x27;, &#x27;Bolivia&#x27;, &#x27;Ecuador&#x27;, &#x27;Madagascar&#x27;, &#x27;Papua New Guinea&#x27;, &#x27;Rwanda&#x27;, &#x27;Average&#x27;</span><br><span class="line">&#x27;2004/05&#x27;,  165,      938,         522,             998,           450,      614.6</span><br><span class="line">&#x27;2005/06&#x27;,  135,      1120,        599,             1268,          288,      682</span><br><span class="line">&#x27;2006/07&#x27;,  157,      1167,        587,             807,           397,      623</span><br><span class="line">&#x27;2007/08&#x27;,  139,      1110,        615,             968,           215,      609.4</span><br><span class="line">&#x27;2008/09&#x27;,  136,      691,         629,             1026,          366,      569.6</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/piechart">https://developers.google.com/chart/interactive/docs/gallery/piechart</a></p>
-<div id="googleChart3948"></div>
+<div id="googleChart5590"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -10991,7 +10991,7 @@ merge newbranch
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.PieChart(document.getElementById("googleChart3948"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"title":"My Daily Activities","width":"100%","height":400});
+        (new google.visualization.PieChart(document.getElementById("googleChart5590"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"title":"My Daily Activities","width":"100%","height":400});
       });
     })();
   }
@@ -11000,7 +11000,7 @@ merge newbranch
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts PieChart 100% %&#125;</span><br><span class="line">My Daily Activities</span><br><span class="line">&#123;&quot;is3D&quot;: true&#125;</span><br><span class="line">&#x27;Task&#x27;, &#x27;Hours per Day&#x27;</span><br><span class="line">&#x27;Work&#x27;,     11</span><br><span class="line">&#x27;Eat&#x27;,      2</span><br><span class="line">&#x27;Commute&#x27;,  2</span><br><span class="line">&#x27;Watch TV&#x27;, 2</span><br><span class="line">&#x27;Sleep&#x27;,    7</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="地図-GeoChart"><a href="#地図-GeoChart" class="headerlink" title="地図(GeoChart)"></a>地図(GeoChart)</h4><p><a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">https://developers.google.com/chart/interactive/docs/gallery/geochart</a></p>
-<div id="googleChart3155"></div>
+<div id="googleChart7142"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -11009,7 +11009,7 @@ merge newbranch
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.GeoChart(document.getElementById("googleChart3155"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":" ","width":"900","height":"500"});
+        (new google.visualization.GeoChart(document.getElementById("googleChart7142"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":" ","width":"900","height":"500"});
       });
     })();
   }
@@ -11438,7 +11438,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li><code>Add Environment</code></li>
 </ol>
 <ul>
-<li>GIT_USER_EMAIL<br><a href="mailto:&#104;&#111;&#x67;&#101;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#104;&#111;&#x67;&#101;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a></li>
+<li>GIT_USER_EMAIL<br><a href="mailto:&#x68;&#111;&#x67;&#x65;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">&#x68;&#111;&#x67;&#x65;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a></li>
 </ul>
 <ol start="5">
 <li><code>Create the template</code></li>
@@ -12106,7 +12106,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 </ul>
 </li>
 </ul>
-<h4 id="ネットワーク"><a href="#ネットワーク" class="headerlink" title="ネットワーク"></a>ネットワーク</h4><div id="googleChart1345"></div>
+<h4 id="ネットワーク"><a href="#ネットワーク" class="headerlink" title="ネットワーク"></a>ネットワーク</h4><div id="googleChart1304"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12115,7 +12115,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.OrgChart(document.getElementById("googleChart1345"))).draw(google.visualization.arrayToDataTable([['Name', 'Manager', 'ToolTip'],['Router#1', '', ''],['<b  style="white-space: nowrap"><i class="fas fa-tv"></i>Client</b>', 'Router#1', ''],['<u style="white-space: nowrap">Windows 10</u>', 'Router#1', ''],['VirtualBox', '<u style="white-space: nowrap">Windows 10</u>', ''],['<u>UbuntuDDE</u>', 'VirtualBox', ''],['<u>Deepin</u>', 'VirtualBox', ''],['<u>WSL2</u>', '<u style="white-space: nowrap">Windows 10</u>', ''],['Router#2', 'Router#1', ''],['<u style="white-space: nowrap">Raspberry Pi 2</u>', 'Router#2', ''],['<u style="white-space: nowrap">Raspberry Pi 4</u>', 'Router#2', '']]),{"allowHtml":true,"title":" ","width":400,"height":400});
+        (new google.visualization.OrgChart(document.getElementById("googleChart1304"))).draw(google.visualization.arrayToDataTable([['Name', 'Manager', 'ToolTip'],['Router#1', '', ''],['<b  style="white-space: nowrap"><i class="fas fa-tv"></i>Client</b>', 'Router#1', ''],['<u style="white-space: nowrap">Windows 10</u>', 'Router#1', ''],['VirtualBox', '<u style="white-space: nowrap">Windows 10</u>', ''],['<u>UbuntuDDE</u>', 'VirtualBox', ''],['<u>Deepin</u>', 'VirtualBox', ''],['<u>WSL2</u>', '<u style="white-space: nowrap">Windows 10</u>', ''],['Router#2', 'Router#1', ''],['<u style="white-space: nowrap">Raspberry Pi 2</u>', 'Router#2', ''],['<u style="white-space: nowrap">Raspberry Pi 4</u>', 'Router#2', '']]),{"allowHtml":true,"title":" ","width":400,"height":400});
       });
     })();
   }
@@ -12262,7 +12262,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     <title>Sharing Folders for VMs</title>
     <url>/2020/05/08/Sharing-Folders-for-VMs/</url>
     <content><![CDATA[<p>ホストOS(Windows 10) のフォルダをゲストOS(Linux)と共有してみました。</p>
-<div id="googleChart4248"></div>
+<div id="googleChart1441"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12271,7 +12271,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart4248"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart1441"))).draw(google.visualization.arrayToDataTable([['Host / Guest', 'Hypervisor', 'OS', 'Type', 'Path'],['Host', '-', 'Windows 10', 'ntfs', 'D:\\share'],['Guest', 'VirtualBox', 'Ubuntu 20.04', 'vboxsf', '/mnt/share'],['Guest', 'Hyper-V', 'Ubuntu 20.04', 'cifs', '/mnt/share']]),{"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12430,7 +12430,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>node_attr</li>
 <li>edge_attr</li>
 </ul>
-<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart1025"></div>
+<h4 id="円グラフ-PieChart"><a href="#円グラフ-PieChart" class="headerlink" title="円グラフ(PieChart)"></a>円グラフ(PieChart)</h4><div id="googleChart1328"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12439,7 +12439,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.PieChart(document.getElementById("googleChart1025"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
+        (new google.visualization.PieChart(document.getElementById("googleChart1328"))).draw(google.visualization.arrayToDataTable([['Task', 'Hours per Day'],['Work',     11],['Eat',      2],['Commute',  2],['Watch TV', 2],['Sleep',    7]]),{"is3D":true,"legend":"none","title":" ","width":400,"height":400});
       });
     })();
   }
@@ -12830,7 +12830,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>新しいスプレッドシートを作成「空白」を選択</li>
 <li>データの登録</li>
 </ol>
-  <div id="googleChart2664"></div>
+  <div id="googleChart2642"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12839,7 +12839,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart2664"))).draw(google.visualization.arrayToDataTable([['カラム', '1行目', '2行目以降の内容例'],['A', 'region',  'us'],['B', 'id1', '111 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['C', 'id2', '222222 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['D', 'realm', 'Blackrock'],['E', 'faction', 'Horde'],['F', 'name', 'Name01'],['G', 'race', 'vulpera'],['H', 'gender', 'male'],['I', 'class', 'Priest'],['J', 'title', 'the Explorer'],['K', 'spec', 'Shadow'],['L', 'guild', 'guild01'],['M', 'level', '120'],['N', 'achievement', '10000'],['O', 'ilevel', '433'],['P', 'url_profile', '="https://worldofwarcraft.com/en-us/character/"&A2&"/"&D2&"/"&F2'],['Q', 'url_avator', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-avatar.jpg"'],['R', 'url_inset', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-inset.jpg"'],['S', 'url_main', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-main.jpg"'],['T', 'url_wowhead', '="https://www.wowhead.com/"&SUBSTITUTE(K2, " ", "-")&"-"&SUBSTITUTE(I2, " ", "-")&"-guide"']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart2642"))).draw(google.visualization.arrayToDataTable([['カラム', '1行目', '2行目以降の内容例'],['A', 'region',  'us'],['B', 'id1', '111 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['C', 'id2', '222222 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['D', 'realm', 'Blackrock'],['E', 'faction', 'Horde'],['F', 'name', 'Name01'],['G', 'race', 'vulpera'],['H', 'gender', 'male'],['I', 'class', 'Priest'],['J', 'title', 'the Explorer'],['K', 'spec', 'Shadow'],['L', 'guild', 'guild01'],['M', 'level', '120'],['N', 'achievement', '10000'],['O', 'ilevel', '433'],['P', 'url_profile', '="https://worldofwarcraft.com/en-us/character/"&A2&"/"&D2&"/"&F2'],['Q', 'url_avator', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-avatar.jpg"'],['R', 'url_inset', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-inset.jpg"'],['S', 'url_main', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-main.jpg"'],['T', 'url_wowhead', '="https://www.wowhead.com/"&SUBSTITUTE(K2, " ", "-")&"-"&SUBSTITUTE(I2, " ", "-")&"-guide"']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12856,7 +12856,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>Google スプレッドシートのURL を貼り付け</li>
 <li>Customize UI の設定</li>
 </ol>
-  <div id="googleChart2068"></div>
+  <div id="googleChart3215"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12865,7 +12865,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart2068"))).draw(google.visualization.arrayToDataTable([['項目', '値'],['Page Title',  'Champions'],['Page Description', 'from World of Warcraft Armory'],['Select Container', 'Responsive Grid を選択'],['Select Item', 'Media Card を選択']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart3215"))).draw(google.visualization.arrayToDataTable([['項目', '値'],['Page Title',  'Champions'],['Page Description', 'from World of Warcraft Armory'],['Select Container', 'Responsive Grid を選択'],['Select Item', 'Media Card を選択']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12874,7 +12874,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <ol start="5">
 <li>Configure Content の設定</li>
 </ol>
-  <div id="googleChart1306"></div>
+  <div id="googleChart8431"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12883,7 +12883,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart1306"))).draw(google.visualization.arrayToDataTable([['カテゴリ', '項目', '値'],['Image', 'Source', '\{\{url_inset}}'],['', 'Title', ''],['', 'Image Height', '250'],['Title',  'Title',  '\{\{name}}'],['Description', 'Description', '\{\{level}} \{\{race}} \{\{spec}} \{\{class}} <\{\{guild}}> \{\{realm}}'],['Primary Button', 'Caption', 'ARMORY'],['', 'Link', '\{\{url_profile}}'],['Secondary Button', 'Caption', 'GUIDE'],['', 'Link', '\{\{url_wowhead}}']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart8431"))).draw(google.visualization.arrayToDataTable([['カテゴリ', '項目', '値'],['Image', 'Source', '\{\{url_inset}}'],['', 'Title', ''],['', 'Image Height', '250'],['Title',  'Title',  '\{\{name}}'],['Description', 'Description', '\{\{level}} \{\{race}} \{\{spec}} \{\{class}} <\{\{guild}}> \{\{realm}}'],['Primary Button', 'Caption', 'ARMORY'],['', 'Link', '\{\{url_profile}}'],['Secondary Button', 'Caption', 'GUIDE'],['', 'Link', '\{\{url_wowhead}}']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -12931,7 +12931,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 </ul>
 </li>
 <li><p>ディレクトリ配置</p>
-<div id="googleChart6340"></div>
+<div id="googleChart2924"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -12940,7 +12940,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart6340"))).draw(google.visualization.arrayToDataTable([['環境', '項目', 'パス'],['WSL (Ubuntu)', 'mirakurun コマンド', '/usr/loca/bin/mirakurun'],['', 'mirakurun 設定', '/usr/local/etc/mirakurun/'],['', 'mirakurun ログ', '/usr/local/var/log/'],['', 'mirakurun データ', '/usr/local/var/db/mirakurun/'],['', 'mirakurun プロセス', '/usr/local/var/run/'],['', 'EPGStation 環境', '$HOME/EPGStation/'],['', 'EPGStation の設定', '$HOME/EPGStation/config/'],['', 'EPGStation の録画保存先', '/mnt/j/home/epgstation/'],['', 'シェルスクリプト', '$HOME/bin/'],['Windows 10', 'BonRecTest', 'C:\\tools\\PT3\\']]),{"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart2924"))).draw(google.visualization.arrayToDataTable([['環境', '項目', 'パス'],['WSL (Ubuntu)', 'mirakurun コマンド', '/usr/loca/bin/mirakurun'],['', 'mirakurun 設定', '/usr/local/etc/mirakurun/'],['', 'mirakurun ログ', '/usr/local/var/log/'],['', 'mirakurun データ', '/usr/local/var/db/mirakurun/'],['', 'mirakurun プロセス', '/usr/local/var/run/'],['', 'EPGStation 環境', '$HOME/EPGStation/'],['', 'EPGStation の設定', '$HOME/EPGStation/config/'],['', 'EPGStation の録画保存先', '/mnt/j/home/epgstation/'],['', 'シェルスクリプト', '$HOME/bin/'],['Windows 10', 'BonRecTest', 'C:\\tools\\PT3\\']]),{"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -14060,6 +14060,53 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
       </tags>
   </entry>
   <entry>
+    <title>Neutralinojs</title>
+    <url>/2021/10/05/Neutralinojs/</url>
+    <content><![CDATA[<p><img src="/images/neutralinojs.png" alt="Neutralinojs"></p>
+<p><a href="https://github.com/neutralinojs/neutralinojs">https://github.com/neutralinojs/neutralinojs</a><br><a href="https://neutralino.js.org/docs/getting-started/your-first-neutralinojs-app">https://neutralino.js.org/docs/getting-started/your-first-neutralinojs-app</a></p>
+<p>Neutralinojs(ニュートラリーノ JS)は Electron の代替となるクロスプラットフォームアプリケーションフレームワークです。Neutralinojs は Chromium をバンドルせず、オペレーティングシステムの既存の Web ブラウザライブラリを使用しているため実行モジュールのサイズが小さいです。hello-world のリリース用のアーカイブファイル hello-world-release.zip のサイズは 1.87 MB (1,961,616 バイト)でした。</p>
+<span id="more"></span>
+
+<h3 id="Windows-環境での準備"><a href="#Windows-環境での準備" class="headerlink" title="Windows 環境での準備"></a>Windows 環境での準備</h3><p>管理者モードのコマンドプロンプトで以下を実行<br><a href="https://github.com/neutralinojs/v2-specification/blob/main/webview.md">https://github.com/neutralinojs/v2-specification/blob/main/webview.md</a></p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation<span class="selector-class">.exe</span> LoopbackExempt -<span class="selector-tag">a</span> -n=<span class="string">&quot;Microsoft.Win32WebViewHost_cw5n1h2txyewy&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Ubuntu-環境での準備"><a href="#Ubuntu-環境での準備" class="headerlink" title="Ubuntu 環境での準備"></a>Ubuntu 環境での準備</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get install libgtk-3-dev libwebkit2gtk-4.0-37 libwebkit2gtk-4.0-dev libappindicator3-dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="サンプルアプリの作成"><a href="#サンプルアプリの作成" class="headerlink" title="サンプルアプリの作成"></a>サンプルアプリの作成</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">npm <span class="selector-tag">i</span> -<span class="selector-tag">g</span> <span class="keyword">@neutralinojs</span>/neu</span><br><span class="line">neu create hello-world</span><br><span class="line">cd hello-world</span><br></pre></td></tr></table></figure>
+
+<p>以下のファイルが生成されます。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">$ tree -f</span><br><span class="line">.</span><br><span class="line">├── <span class="string">./LICENSE</span></span><br><span class="line">├── <span class="string">./README.md</span></span><br><span class="line">├── <span class="string">./bin</span></span><br><span class="line">│   ├── <span class="string">./bin/WebView2Loader.dll</span></span><br><span class="line">│   ├── <span class="string">./bin/neutralino-linux_armhf</span></span><br><span class="line">│   ├── <span class="string">./bin/neutralino-linux_ia32</span></span><br><span class="line">│   ├── <span class="string">./bin/neutralino-linux_x64</span></span><br><span class="line">│   ├── <span class="string">./bin/neutralino-mac_x64</span></span><br><span class="line">│   └── <span class="string">./bin/neutralino-win_x64.exe</span></span><br><span class="line">├── <span class="string">./neutralino.config.json</span></span><br><span class="line">└── <span class="string">./resources</span></span><br><span class="line">    ├── <span class="string">./resources/icons</span></span><br><span class="line">    │   ├── <span class="string">./resources/icons/appIcon.png</span></span><br><span class="line">    │   └── <span class="string">./resources/icons/trayIcon.png</span></span><br><span class="line">    ├── <span class="string">./resources/index.html</span></span><br><span class="line">    ├── <span class="string">./resources/js</span></span><br><span class="line">    │   ├── <span class="string">./resources/js/main.js</span></span><br><span class="line">    │   └── <span class="string">./resources/js/neutralino.js</span></span><br><span class="line">    └── <span class="string">./resources/styles.css</span></span><br></pre></td></tr></table></figure>
+
+<p>index.html, main.js, styles.css あたりを編集していけばよさそうです。</p>
+<h3 id="サンプルアプリの実行"><a href="#サンプルアプリの実行" class="headerlink" title="サンプルアプリの実行"></a>サンプルアプリの実行</h3><figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">neu <span class="built_in">run</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="サンプルアプリのビルド"><a href="#サンプルアプリのビルド" class="headerlink" title="サンプルアプリのビルド"></a>サンプルアプリのビルド</h3><figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">neu build <span class="comment">--release</span></span><br></pre></td></tr></table></figure>
+
+<p>以下のファイルが生成されます。</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">$ tree -f -s dist/</span><br><span class="line">dist</span><br><span class="line">├── <span class="selector-attr">[        512]</span>  dist/hello-world</span><br><span class="line">│   ├── <span class="selector-attr">[     427928]</span>  dist/hello-world/WebView2Loader<span class="selector-class">.dll</span></span><br><span class="line">│   ├── <span class="selector-attr">[     813008]</span>  dist/hello-world/hello-world-linux_armhf</span><br><span class="line">│   ├── <span class="selector-attr">[     894848]</span>  dist/hello-world/hello-world-linux_ia32</span><br><span class="line">│   ├── <span class="selector-attr">[     857480]</span>  dist/hello-world/hello-world-linux_x64</span><br><span class="line">│   ├── <span class="selector-attr">[    1071672]</span>  dist/hello-world/hello-world-mac_x64</span><br><span class="line">│   ├── <span class="selector-attr">[    1741312]</span>  dist/hello-world/hello-world-win_x64<span class="selector-class">.exe</span></span><br><span class="line">│   └── <span class="selector-attr">[      34845]</span>  dist/hello-world/res<span class="selector-class">.neu</span></span><br><span class="line">└── <span class="selector-attr">[    1961616]</span>  dist/hello-world-release.zip</span><br></pre></td></tr></table></figure>
+
+<h3 id="Linux-で実行"><a href="#Linux-で実行" class="headerlink" title="Linux で実行"></a>Linux で実行</h3><p><img src="/images/neutralinojs_linux.png" alt="Neutralinojs"></p>
+<h3 id="SPA-Single-Page-Application-をデスクトップアプリにする"><a href="#SPA-Single-Page-Application-をデスクトップアプリにする" class="headerlink" title="SPA(Single Page Application) をデスクトップアプリにする"></a>SPA(Single Page Application) をデスクトップアプリにする</h3><ul>
+<li><p>Appify プラグインを利用する方法<br><a href="https://github.com/neutralinojs/neutralinojs-cli-appify">https://github.com/neutralinojs/neutralinojs-cli-appify</a></p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">npm install -<span class="selector-tag">g</span> @neutralinojs/neu</span><br><span class="line">neu plugins <span class="attr">--add</span> @neutralinojs/appify</span><br><span class="line">neu appify <span class="attr">--title</span> <span class="string">&quot;ktkr3d&quot;</span> https:<span class="comment">//ktkr3d.github.io</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2021&#x2F;10&#x2F;5 時点でアプリケーションが正しく終了しない問題があります。<br><a href="https://github.com/neutralinojs/neutralinojs/issues/618">https://github.com/neutralinojs/neutralinojs/issues/618</a></p>
+<p>修正版が公開されており、次のバージョンで取り込まれる予定のようです。<br><a href="https://github.com/neutralinojs/neutralinojs/commit/7e2113a838f29714e48f1b5fa30e3d8dc8741cdd">https://github.com/neutralinojs/neutralinojs/commit/7e2113a838f29714e48f1b5fa30e3d8dc8741cdd</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/neutralinojs/neutralinojs.git</span><br><span class="line"><span class="built_in">cd</span> neutralinojs</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bash </span><span class="keyword">build_linux.sh</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">build_windows.bat</span><br></pre></td></tr></table></figure>
+
+<p>生成された<code>./bin/neutralino-linux_x64</code>、<code>bin\neutralino-win_x64.exe</code>を利用します。</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>neutralinojs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu 21.10 on RPi4B</title>
     <url>/2021/10/17/Ubuntu-21-10-on-RPi4B/</url>
     <content><![CDATA[<p><img src="/images/ubuntu_2110_rpi4b.png"></p>
@@ -14312,53 +14359,6 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
       <tags>
         <tag>ubuntu</tag>
         <tag>raspberry-pi</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Neutralinojs</title>
-    <url>/2021/10/05/Neutralinojs/</url>
-    <content><![CDATA[<p><img src="/images/neutralinojs.png" alt="Neutralinojs"></p>
-<p><a href="https://github.com/neutralinojs/neutralinojs">https://github.com/neutralinojs/neutralinojs</a><br><a href="https://neutralino.js.org/docs/getting-started/your-first-neutralinojs-app">https://neutralino.js.org/docs/getting-started/your-first-neutralinojs-app</a></p>
-<p>Neutralinojs(ニュートラリーノ JS)は Electron の代替となるクロスプラットフォームアプリケーションフレームワークです。Neutralinojs は Chromium をバンドルせず、オペレーティングシステムの既存の Web ブラウザライブラリを使用しているため実行モジュールのサイズが小さいです。hello-world のリリース用のアーカイブファイル hello-world-release.zip のサイズは 1.87 MB (1,961,616 バイト)でした。</p>
-<span id="more"></span>
-
-<h3 id="Windows-環境での準備"><a href="#Windows-環境での準備" class="headerlink" title="Windows 環境での準備"></a>Windows 環境での準備</h3><p>管理者モードのコマンドプロンプトで以下を実行<br><a href="https://github.com/neutralinojs/v2-specification/blob/main/webview.md">https://github.com/neutralinojs/v2-specification/blob/main/webview.md</a></p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation<span class="selector-class">.exe</span> LoopbackExempt -<span class="selector-tag">a</span> -n=<span class="string">&quot;Microsoft.Win32WebViewHost_cw5n1h2txyewy&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Ubuntu-環境での準備"><a href="#Ubuntu-環境での準備" class="headerlink" title="Ubuntu 環境での準備"></a>Ubuntu 環境での準備</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get install libgtk-3-dev libwebkit2gtk-4.0-37 libwebkit2gtk-4.0-dev libappindicator3-dev</span><br></pre></td></tr></table></figure>
-
-<h3 id="サンプルアプリの作成"><a href="#サンプルアプリの作成" class="headerlink" title="サンプルアプリの作成"></a>サンプルアプリの作成</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">npm <span class="selector-tag">i</span> -<span class="selector-tag">g</span> <span class="keyword">@neutralinojs</span>/neu</span><br><span class="line">neu create hello-world</span><br><span class="line">cd hello-world</span><br></pre></td></tr></table></figure>
-
-<p>以下のファイルが生成されます。</p>
-<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">$ tree -f</span><br><span class="line">.</span><br><span class="line">├── <span class="string">./LICENSE</span></span><br><span class="line">├── <span class="string">./README.md</span></span><br><span class="line">├── <span class="string">./bin</span></span><br><span class="line">│   ├── <span class="string">./bin/WebView2Loader.dll</span></span><br><span class="line">│   ├── <span class="string">./bin/neutralino-linux_armhf</span></span><br><span class="line">│   ├── <span class="string">./bin/neutralino-linux_ia32</span></span><br><span class="line">│   ├── <span class="string">./bin/neutralino-linux_x64</span></span><br><span class="line">│   ├── <span class="string">./bin/neutralino-mac_x64</span></span><br><span class="line">│   └── <span class="string">./bin/neutralino-win_x64.exe</span></span><br><span class="line">├── <span class="string">./neutralino.config.json</span></span><br><span class="line">└── <span class="string">./resources</span></span><br><span class="line">    ├── <span class="string">./resources/icons</span></span><br><span class="line">    │   ├── <span class="string">./resources/icons/appIcon.png</span></span><br><span class="line">    │   └── <span class="string">./resources/icons/trayIcon.png</span></span><br><span class="line">    ├── <span class="string">./resources/index.html</span></span><br><span class="line">    ├── <span class="string">./resources/js</span></span><br><span class="line">    │   ├── <span class="string">./resources/js/main.js</span></span><br><span class="line">    │   └── <span class="string">./resources/js/neutralino.js</span></span><br><span class="line">    └── <span class="string">./resources/styles.css</span></span><br></pre></td></tr></table></figure>
-
-<p>index.html, main.js, styles.css あたりを編集していけばよさそうです。</p>
-<h3 id="サンプルアプリの実行"><a href="#サンプルアプリの実行" class="headerlink" title="サンプルアプリの実行"></a>サンプルアプリの実行</h3><figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">neu <span class="built_in">run</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="サンプルアプリのビルド"><a href="#サンプルアプリのビルド" class="headerlink" title="サンプルアプリのビルド"></a>サンプルアプリのビルド</h3><figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">neu build <span class="comment">--release</span></span><br></pre></td></tr></table></figure>
-
-<p>以下のファイルが生成されます。</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">$ tree -f -s dist/</span><br><span class="line">dist</span><br><span class="line">├── <span class="selector-attr">[        512]</span>  dist/hello-world</span><br><span class="line">│   ├── <span class="selector-attr">[     427928]</span>  dist/hello-world/WebView2Loader<span class="selector-class">.dll</span></span><br><span class="line">│   ├── <span class="selector-attr">[     813008]</span>  dist/hello-world/hello-world-linux_armhf</span><br><span class="line">│   ├── <span class="selector-attr">[     894848]</span>  dist/hello-world/hello-world-linux_ia32</span><br><span class="line">│   ├── <span class="selector-attr">[     857480]</span>  dist/hello-world/hello-world-linux_x64</span><br><span class="line">│   ├── <span class="selector-attr">[    1071672]</span>  dist/hello-world/hello-world-mac_x64</span><br><span class="line">│   ├── <span class="selector-attr">[    1741312]</span>  dist/hello-world/hello-world-win_x64<span class="selector-class">.exe</span></span><br><span class="line">│   └── <span class="selector-attr">[      34845]</span>  dist/hello-world/res<span class="selector-class">.neu</span></span><br><span class="line">└── <span class="selector-attr">[    1961616]</span>  dist/hello-world-release.zip</span><br></pre></td></tr></table></figure>
-
-<h3 id="Linux-で実行"><a href="#Linux-で実行" class="headerlink" title="Linux で実行"></a>Linux で実行</h3><p><img src="/images/neutralinojs_linux.png" alt="Neutralinojs"></p>
-<h3 id="SPA-Single-Page-Application-をデスクトップアプリにする"><a href="#SPA-Single-Page-Application-をデスクトップアプリにする" class="headerlink" title="SPA(Single Page Application) をデスクトップアプリにする"></a>SPA(Single Page Application) をデスクトップアプリにする</h3><ul>
-<li><p>Appify プラグインを利用する方法<br><a href="https://github.com/neutralinojs/neutralinojs-cli-appify">https://github.com/neutralinojs/neutralinojs-cli-appify</a></p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">npm install -<span class="selector-tag">g</span> @neutralinojs/neu</span><br><span class="line">neu plugins <span class="attr">--add</span> @neutralinojs/appify</span><br><span class="line">neu appify <span class="attr">--title</span> <span class="string">&quot;ktkr3d&quot;</span> https:<span class="comment">//ktkr3d.github.io</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2021&#x2F;10&#x2F;5 時点でアプリケーションが正しく終了しない問題があります。<br><a href="https://github.com/neutralinojs/neutralinojs/issues/618">https://github.com/neutralinojs/neutralinojs/issues/618</a></p>
-<p>修正版が公開されており、次のバージョンで取り込まれる予定のようです。<br><a href="https://github.com/neutralinojs/neutralinojs/commit/7e2113a838f29714e48f1b5fa30e3d8dc8741cdd">https://github.com/neutralinojs/neutralinojs/commit/7e2113a838f29714e48f1b5fa30e3d8dc8741cdd</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/neutralinojs/neutralinojs.git</span><br><span class="line"><span class="built_in">cd</span> neutralinojs</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bash </span><span class="keyword">build_linux.sh</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">build_windows.bat</span><br></pre></td></tr></table></figure>
-
-<p>生成された<code>./bin/neutralino-linux_x64</code>、<code>bin\neutralino-win_x64.exe</code>を利用します。</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>neutralinojs</tag>
       </tags>
   </entry>
   <entry>
@@ -15545,6 +15545,32 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
       </tags>
   </entry>
   <entry>
+    <title>Flatpak</title>
+    <url>/2023/07/18/Flatpak/</url>
+    <content><![CDATA[<p><img src="/images/flatpak_flatseal.png"><br><a href="https://flatpak.org/">https://flatpak.org/</a><br><a href="https://flathub.org/">https://flathub.org/</a></p>
+<p>FlatpakでGUIアプリケーションをインストールしてみました。</p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Ubuntu 22.04</li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ul>
+<li>Flatpak の準備<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> add-apt-repository -y ppa:alexlarsson/flatpak</span><br><span class="line"><span class="built_in">sudo</span> apt install flatpak gnome-software-plugin-flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br></pre></td></tr></table></figure></li>
+<li>Update<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak update</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
+<li>Audacious<br><a href="https://flathub.org/apps/org.atheme.audacious">https://flathub.org/apps/org.atheme.audacious</a></li>
+<li>Gimp<br><a href="https://flathub.org/apps/org.gimp.GIMP">https://flathub.org/apps/org.gimp.GIMP</a></li>
+<li>Google Chrome<br><a href="https://flathub.org/apps/com.google.Chrome">https://flathub.org/apps/com.google.Chrome</a><br>PWA には<code>$HOME/.local/share/applications/</code>, <code>$HOME/.local/share/icons/</code> にアクセス権が必要<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak override --user --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.google.Chrome</span><br></pre></td></tr></table></figure></li>
+<li>Kodi<br><a href="https://flathub.org/apps/tv.kodi.Kodi">https://flathub.org/apps/tv.kodi.Kodi</a></li>
+<li>Visual Studio Code<br><a href="https://flathub.org/apps/com.visualstudio.code">https://flathub.org/apps/com.visualstudio.code</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>flatpak</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ventoy</title>
     <url>/2023/07/18/Ventoy/</url>
     <content><![CDATA[<p><img src="/images/ventoy.png"><br><a href="https://www.ventoy.net/">https://www.ventoy.net/</a><br><a href="https://github.com/ventoy/Ventoy/releases">https://github.com/ventoy/Ventoy/releases</a></p>
@@ -15576,32 +15602,6 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 ]]></content>
       <tags>
         <tag>ventoy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flatpak</title>
-    <url>/2023/07/18/Flatpak/</url>
-    <content><![CDATA[<p><img src="/images/flatpak_flatseal.png"><br><a href="https://flatpak.org/">https://flatpak.org/</a><br><a href="https://flathub.org/">https://flathub.org/</a></p>
-<p>FlatpakでGUIアプリケーションをインストールしてみました。</p>
-<span id="more"></span>
-
-<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
-<li>Ubuntu 22.04</li>
-</ul>
-<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ul>
-<li>Flatpak の準備<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> add-apt-repository -y ppa:alexlarsson/flatpak</span><br><span class="line"><span class="built_in">sudo</span> apt install flatpak gnome-software-plugin-flatpak</span><br><span class="line">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</span><br></pre></td></tr></table></figure></li>
-<li>Update<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak update</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
-<li>Audacious<br><a href="https://flathub.org/apps/org.atheme.audacious">https://flathub.org/apps/org.atheme.audacious</a></li>
-<li>Gimp<br><a href="https://flathub.org/apps/org.gimp.GIMP">https://flathub.org/apps/org.gimp.GIMP</a></li>
-<li>Google Chrome<br><a href="https://flathub.org/apps/com.google.Chrome">https://flathub.org/apps/com.google.Chrome</a><br>PWA には<code>$HOME/.local/share/applications/</code>, <code>$HOME/.local/share/icons/</code> にアクセス権が必要<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak override --user --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.google.Chrome</span><br></pre></td></tr></table></figure></li>
-<li>Kodi<br><a href="https://flathub.org/apps/tv.kodi.Kodi">https://flathub.org/apps/tv.kodi.Kodi</a></li>
-<li>Visual Studio Code<br><a href="https://flathub.org/apps/com.visualstudio.code">https://flathub.org/apps/com.visualstudio.code</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>flatpak</tag>
       </tags>
   </entry>
   <entry>
@@ -15693,7 +15693,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>A: Windows 11 Home</li>
 <li>B: Ubuntu 23.04</li>
 </ul>
-<h4 id="💻本体確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#💻本体確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart7372"></div>
+<h4 id="💻本体確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#💻本体確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>💻本体確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart7724"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15702,13 +15702,13 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart7372"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['CPU', 'Intel Alder Lake-N100', "✔", "✔"],['メモリ', '12GB (LPDDR5)', "✔", "✔"],['ストレージ', '512GB (NVMe SSD)', "✔", "✔"],['内蔵ディスプレイ', 'IPS 10.51 inch 1920×1200', "✔", "✔"],['タッチスクリーン', '', "✔", "✔"],['タッチパッド', '', "✔", "✔"],['キーボード/バックライト', '', "✔", "✔"],['Wi-Fi', 'Wi-Fi 6', "✔", "✔"],['Bluetooth', 'Bluetooth 5.2', "✔", "✔"],['Audio Jack', '3.5mm (ステレオ)', "✔", "✔"],['内蔵スピーカ', '', "✔", "✔"],['内蔵マイク', '', "✔", "✔"],['内蔵カメラ', '', "✔", "✔"],['USB Port #1 (奥)', 'Type-C USB 3.0', "✔", "✔"],['USB Port #2 (手前)', 'Type-C USB 3.0', "✔", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart7724"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['CPU', 'Intel Alder Lake-N100', "✔", "✔"],['メモリ', '12GB (LPDDR5)', "✔", "✔"],['ストレージ', '512GB (NVMe SSD)', "✔", "✔"],['内蔵ディスプレイ', 'IPS 10.51 inch 1920×1200', "✔", "✔"],['タッチスクリーン', '', "✔", "✔"],['タッチパッド', '', "✔", "✔"],['キーボード/バックライト', '', "✔", "✔"],['Wi-Fi', 'Wi-Fi 6', "✔", "✔"],['Bluetooth', 'Bluetooth 5.2', "✔", "✔"],['Audio Jack', '3.5mm (ステレオ)', "✔", "✔"],['内蔵スピーカ', '', "✔", "✔"],['内蔵マイク', '', "✔", "✔"],['内蔵カメラ', '', "✔", "✔"],['USB Port #1 (奥)', 'Type-C USB 3.0', "✔", "✔"],['USB Port #2 (手前)', 'Type-C USB 3.0', "✔", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
 </script>
 
-<h4 id="🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart1596"></div>
+<h4 id="🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認"><a href="#🎮外部機器接続確認結果-動作OK-✔-動作せず-✗-未確認" class="headerlink" title="🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認:  )"></a>🎮外部機器接続確認結果 (動作OK: ✔ &#x2F; 動作せず: ✗ &#x2F; 未確認: <code> </code>)</h4><div id="googleChart5629"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15717,7 +15717,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart1596"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['外部ディスプレイ接続', '4K Dell', "✔", "✔"],['外部タッチスクリーンディスプレイ', 'FHD Touch Screen(USB Type-C)', "✔", ""],['ゲームパッド', 'Microsoft', "", ""],['Bluetooth ヘッドセット #1', 'Sony', "✔", "✔"],['Bluetooth ヘッドセット #2', '', "", ""],['USB Camera', 'Logi', "", ""],['USB Mouse', 'Logi', "", ""],['Bluetooth Mouse', 'Logi', "", ""],['タッチペン', '', "", ""],['USB-LAN', '', "", ""],['Video Capture', '別PC のHDMI出力 → MiniBook X のUSB-Cポート', "", ""]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart5629"))).draw(google.visualization.arrayToDataTable([['項目', '仕様', 'A', 'B'],['外部ディスプレイ接続', '4K Dell', "✔", "✔"],['外部タッチスクリーンディスプレイ', 'FHD Touch Screen(USB Type-C)', "✔", ""],['ゲームパッド', 'Microsoft', "", ""],['Bluetooth ヘッドセット #1', 'Sony', "✔", "✔"],['Bluetooth ヘッドセット #2', '', "", ""],['USB Camera', 'Logi', "", ""],['USB Mouse', 'Logi', "", ""],['Bluetooth Mouse', 'Logi', "", ""],['タッチペン', '', "", ""],['USB-LAN', '', "", ""],['Video Capture', '別PC のHDMI出力 → MiniBook X のUSB-Cポート', "", ""]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15746,7 +15746,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
 <li>Ubunutu ISO<br><a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a><br>Ventoy USBメモリにISO をコピー、USB Type-C ⇔ Type-A 変換経由でブート</li>
 <li>gparted で512GB(477GiB)ストレージのパーティションを再構成</li>
 </ul>
-<div id="googleChart8730"></div>
+<div id="googleChart5449"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15755,7 +15755,7 @@ Update: 2019&#x2F;8&#x2F;15 版で3GB の制限はなくなりました。</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart8730"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart5449"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15827,7 +15827,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>Boss<br><a href="https://www.wowhead.com/guide/raids/aberrus-the-shadowed-crucible/overview#bosses">https://www.wowhead.com/guide/raids/aberrus-the-shadowed-crucible/overview#bosses</a><br>のボス9体</li>
 <li>難易度<br>LFR: Looking for Raid</li>
 </ul>
-<h3 id="耐久実績"><a href="#耐久実績" class="headerlink" title="耐久実績"></a>耐久実績</h3><div id="googleChart1779"></div>
+<h3 id="耐久実績"><a href="#耐久実績" class="headerlink" title="耐久実績"></a>耐久実績</h3><div id="googleChart7502"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15836,7 +15836,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart1779"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類', '実績'],['Death Knight', 'Frost', "Melee", "✔"],['Demon Hunter', 'Havoc', "Melee", "✔"],['Druid', 'Balance', "Ranged", "✔"],['Evoker', 'Devastation', "Ranged", "✔"],['Hunter', 'Beast Mastery', "Ranged", "✔"],['Monk', 'Windwalker', "Melee", "✔"],['Mage', 'Frost', "Ranged", "✔"],['Warlock', 'Demonology', "Ranged", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart7502"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類', '実績'],['Death Knight', 'Frost', "Melee", "✔"],['Demon Hunter', 'Havoc', "Melee", "✔"],['Druid', 'Balance', "Ranged", "✔"],['Evoker', 'Devastation', "Ranged", "✔"],['Hunter', 'Beast Mastery', "Ranged", "✔"],['Monk', 'Windwalker', "Melee", "✔"],['Mage', 'Frost', "Ranged", "✔"],['Warlock', 'Demonology', "Ranged", "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15855,7 +15855,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>TipTac<br>情報を追加するオプション機能がとても便利だけど無くても困らない</li>
 <li>Dugi<br>ギアを入手したタイミングで装着を提案してくれる機能は残しておきたい<br>使っていない機能があるので設定を見直そう<br>AutoRepair は他のアドオンでも代替可能</li>
 </ul>
-<h3 id="育成枠"><a href="#育成枠" class="headerlink" title="育成枠"></a>育成枠</h3><div id="googleChart3049"></div>
+<h3 id="育成枠"><a href="#育成枠" class="headerlink" title="育成枠"></a>育成枠</h3><div id="googleChart6408"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15864,7 +15864,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart3049"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類'],['Paladin', 'Retribution', "Melee"],['Priest', 'Shadow', "Ranged"],['Rogue', 'Subtlety', "Melle"],['Shaman', 'Elemental', "Ranged"],['Warrior', 'Arms', "Melee"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart6408"))).draw(google.visualization.arrayToDataTable([['クラス', 'スペック', '分類'],['Paladin', 'Retribution', "Melee"],['Priest', 'Shadow', "Ranged"],['Rogue', 'Subtlety', "Melle"],['Shaman', 'Elemental', "Ranged"],['Warrior', 'Arms', "Melee"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -15988,7 +15988,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <li>Calam Arch Installer 2023-08</li>
 <li>gparted で512GB(477GiB)ストレージにArch Linux 用パーティションとして50GiBを準備</li>
 </ul>
-<div id="googleChart7127"></div>
+<div id="googleChart2147"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -15997,7 +15997,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart7127"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart2147"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (350GiB)', 'Arch (50GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 0, 10],['再構成', 10, 10, 330, 50, 67, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -16081,7 +16081,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><p><a href="https://wiki.hyprland.org/">https://wiki.hyprland.org/</a><br><a href="https://github.com/hyprland-community/awesome-hyprland">https://github.com/hyprland-community/awesome-hyprland</a></p>
-<div id="googleChart7466"></div>
+<div id="googleChart3368"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -16090,7 +16090,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.Table(document.getElementById("googleChart7466"))).draw(google.visualization.arrayToDataTable([['項目', '選択肢', '2023-08-25'],['Distribution', 'Arch Linux', "✔"],['Display Manager', 'GDM', "✔"],['WM / Wayland Compositor', 'Hyprland', "✔"],['', 'Sway', ""],['Terminal Emulator', 'kitty', "✔"],['Status Bar', 'Waybar', "✔"],['', 'Eww', ""],['', 'Ags', ""],['Wallpaper', 'hyprpaper', "✔"],['App Launcher', 'Wofi', "✔"],['', 'Rofi', ""],['Screenshot', 'hyprshot', "✔"],['Idle Daemon', 'swayidle', ""],['Locker', "swaylock", ""],['Color Picker', 'hyprpicker', "✔"],['Power Menu', 'Wofi (Script)', "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+        (new google.visualization.Table(document.getElementById("googleChart3368"))).draw(google.visualization.arrayToDataTable([['項目', '選択肢', '2023-08-25'],['Distribution', 'Arch Linux', "✔"],['Display Manager', 'GDM', "✔"],['WM / Wayland Compositor', 'Hyprland', "✔"],['', 'Sway', ""],['Terminal Emulator', 'kitty', "✔"],['Status Bar', 'Waybar', "✔"],['', 'Eww', ""],['', 'Ags', ""],['Wallpaper', 'hyprpaper', "✔"],['App Launcher', 'Wofi', "✔"],['', 'Rofi', ""],['Screenshot', 'hyprshot', "✔"],['Idle Daemon', 'swayidle', ""],['Locker', "swaylock", ""],['Color Picker', 'hyprpicker', "✔"],['Power Menu', 'Wofi (Script)', "✔"]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
       });
     })();
   }
@@ -17149,7 +17149,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
 <ol start="2">
 <li>USBメモリで起動し、gpartedでMiniBook X のストレージにUbuntu用のパーティションを作成する。画面が傾いているのでディスプレイの設定を変更する。</li>
 </ol>
-<div id="googleChart58"></div>
+<div id="googleChart7021"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -17158,7 +17158,7 @@ Mainline Kernels アプリからカーネル6.4をインストール</li>
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.BarChart(document.getElementById("googleChart58"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
+        (new google.visualization.BarChart(document.getElementById("googleChart7021"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI (100MiB)', 'Reserved (128MiB)', 'Win (400GiB)', 'Ubuntu (74.85GiB)', 'Recovery (1.87GiB)'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":" ","width":"100%","height":"100%"});
       });
     })();
   }
@@ -19765,7 +19765,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
                     <div class="gr-footer">
                         <div class="gr-language-star">
                             <span class="gr-language">C++</span><br>
-                            <span class="gr-stargazers_count"><i class="far fa-star" aria-hidden="true" id='gr-star-icon'></i> 91</span>
+                            <span class="gr-stargazers_count"><i class="far fa-star" aria-hidden="true" id='gr-star-icon'></i> 99</span>
                         </div>
                         <div class="gr-card-toolbar">
                             <div class="gr-repo-link">
@@ -20098,6 +20098,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
     <content><![CDATA[<p><img src="/images/open-webui_qwen3.png"></p>
 <p>Qwen3を使ってみました。<br>Qwen3はAlibabaが開発したオープンソースの大規模言語モデル(LLM)の最新バージョンです。<br>UIにはOpen WebUIを利用しました。</p>
 <p><a href="https://github.com/QwenLM/Qwen3">https://github.com/QwenLM/Qwen3</a><br><a href="https://github.com/open-webui/open-webui">https://github.com/open-webui/open-webui</a></p>
+<h4 id="2025-08-04"><a href="#2025-08-04" class="headerlink" title="2025-08-04"></a>2025-08-04</h4><p><a href="https://ollama.com/download">https://ollama.com/download</a><br>Ollama GUIアプリ<br><img src="/images/ollama_ap.png"></p>
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
@@ -20189,7 +20190,7 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <ul>
 <li>SSL証明書の準備<br>mkcertで作成したcode-server用のSSL証明書を流用します。<br><a href="https://ktkr3d.github.io/Visual-Studio-Code/#%E3%82%B5%E3%83%BC%E3%83%90%E5%81%B4%E3%81%AE%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A">https://ktkr3d.github.io/Visual-Studio-Code/#サーバ側の環境設定</a><br>DESKTOP-2P2LUE8.local-key.pem<br>DESKTOP-2P2LUE8.local.pem<br>rootCA.pem</li>
 <li><code>__init__.py</code> 修正前<figure class="highlight python"><figcaption><span>%LOCALAPPDATA%\Programs\Python\Python311\Lib\site-packages\open_webui\__init__.py</span></figcaption><table><tr><td class="code"><pre><span class="line">uvicorn.run(</span><br><span class="line">    <span class="string">&quot;open_webui.main:app&quot;</span>,</span><br><span class="line">    host=host,</span><br><span class="line">    port=port,</span><br><span class="line">    forwarded_allow_ips=<span class="string">&quot;*&quot;</span>,</span><br><span class="line">    workers=UVICORN_WORKERS,</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
-<li><code>__init__.py</code> 修正後<figure class="highlight python"><figcaption><span>%LOCALAPPDATA%\Programs\Python\Python311\Lib\site-packages\open_webui\__init__.py</span></figcaption><table><tr><td class="code"><pre><span class="line">uvicorn.run(</span><br><span class="line">    <span class="string">&quot;open_webui.main:app&quot;</span>,</span><br><span class="line">    host=host,</span><br><span class="line">    port=port,</span><br><span class="line">    forwarded_allow_ips=<span class="string">&quot;*&quot;</span>,</span><br><span class="line">    workers=UVICORN_WORKERS,</span><br><span class="line">    ssl_certfile=<span class="string">&quot;C:\\tools\\mkcert\\DESKTOP-2P2LUE8.local.pem&quot;</span>,</span><br><span class="line">    ssl_keyfile=<span class="string">&quot;C:\\tools\\mkcert\\DESKTOP-2P2LUE8.local-key.pem&quot;</span>,</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+<li><code>__init__.py</code> 修正後<figure class="highlight python"><figcaption><span>%LOCALAPPDATA%\Programs\Python\Python311\Lib\site-packages\open_webui\__init__.py hightlight:84-85</span></figcaption><table><tr><td class="code"><pre><span class="line">uvicorn.run(</span><br><span class="line">    <span class="string">&quot;open_webui.main:app&quot;</span>,</span><br><span class="line">    host=host,</span><br><span class="line">    port=port,</span><br><span class="line">    forwarded_allow_ips=<span class="string">&quot;*&quot;</span>,</span><br><span class="line">    workers=UVICORN_WORKERS,</span><br><span class="line">    ssl_certfile=<span class="string">&quot;C:\\tools\\mkcert\\DESKTOP-2P2LUE8.local.pem&quot;</span>,</span><br><span class="line">    ssl_keyfile=<span class="string">&quot;C:\\tools\\mkcert\\DESKTOP-2P2LUE8.local-key.pem&quot;</span>,</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
 <li>クライアントのブラウザにルートCA証明書(<code>rootCA.pem</code>)を登録しておきます。</li>
 <li>以下のURLにアクセスします。<br><a href="https://desktop-2p2lue8.local:8080/">https://DESKTOP-2P2LUE8.local:8080</a></li>
 <li>リモートマシンでもPWA化したアプリケーションをインストールできます。</li>
