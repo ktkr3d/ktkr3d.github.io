@@ -20209,7 +20209,24 @@ nはディスク番号(例: 0)、mはEFIパーティション番号</li>
 <span id="more"></span>
 
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
-<li>Widows 11 Pro</li>
+<li>Widows 11 Pro<ul>
+<li>wsl2<ul>
+<li>arch linux<ul>
+<li>fish 4.1.2</li>
+<li>starship v1.24.0</li>
+<li>code-server v4.105.1</li>
+<li>hexo 8.1.0<ul>
+<li>hexo-theme-butterfly 5.5.1</li>
+</ul>
+</li>
+<li>openvpn 2.6.15</li>
+<li>jellyfin 10.11.0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
 <li><p>Arch Linuxをインストール</p>
