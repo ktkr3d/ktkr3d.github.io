@@ -15,8 +15,27 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 04 Aug 2025 04:08:00 GMT</pubDate>
+    <pubDate>Wed, 29 Oct 2025 16:28:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Install Arch Linux on WSL</title>
+      <link>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/</link>
+      <guid>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/</guid>
+      <pubDate>Wed, 29 Oct 2025 15:57:13 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;WSLにArch Linuxをインストールします。&lt;br&gt;Ubuntu上のfish, ssh, code server, hexo, openvpn, jellyfinをArch Linuxに移行します。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL&quot;&gt;https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      
+      <comments>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Qwen3</title>
@@ -671,29 +690,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/03/11/ALG-Arka-Linux-GUI/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Wayland + VSCode + text-input-v3</title>
-      <link>https://ktkr3d.github.io/2025/03/06/Wayland-VSCode-text-input-v3/</link>
-      <guid>https://ktkr3d.github.io/2025/03/06/Wayland-VSCode-text-input-v3/</guid>
-      <pubDate>Thu, 06 Mar 2025 11:01:38 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/wayland-vscode-textinputv3.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Visual Studio Code 1.98.0 でWaylandモードで日本語入力できるようになりました。Chromium 130以上が採用されていますのでtext-input-v3が動作します。&lt;br&gt;以前はmutter-text-input-v1を導入して実現しましたが、もうMutterを入れ替える必要はなくなりました。&lt;/p&gt;
-&lt;figure class=&quot;highlight makefile&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;バージョン: 1.98.0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;コミット: 6609ac3d66f4eade5cf376d1cb76f13985724bcb&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;日付: 2025-03-04T21:06:18.612Z&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;Electron: 34.2.0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;ElectronBuildId: 11044223&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;Chromium: 132.0.6834.196&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;Node.js: 20.18.2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;V8: 13.2.152.36-electron.0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;OS: Linux x64 6.13.5-arch1-1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/wayland/">wayland</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/textinput/">textinput</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/03/06/Wayland-VSCode-text-input-v3/#disqus_thread</comments>
       
     </item>
     
