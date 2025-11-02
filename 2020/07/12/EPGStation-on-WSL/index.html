@@ -1,0 +1,411 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>EPGStation/Mirakurun on WSL | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="https:&#x2F;&#x2F;github.com&#x2F;l3tnun&#x2F;EPGStationhttps:&#x2F;&#x2F;github.com&#x2F;Chinachu&#x2F;MirakurunChianchu の調子が悪くなったのでEPGStation に乗り換えてみました。EPGStation とMirakurun をWSL 上に構築しました。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EPGStation&#x2F;Mirakurun on WSL">
+<meta property="og:url" content="https://ktkr3d.github.io/2020/07/12/EPGStation-on-WSL/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="https:&#x2F;&#x2F;github.com&#x2F;l3tnun&#x2F;EPGStationhttps:&#x2F;&#x2F;github.com&#x2F;Chinachu&#x2F;MirakurunChianchu の調子が悪くなったのでEPGStation に乗り換えてみました。EPGStation とMirakurun をWSL 上に構築しました。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ktkr3d.github.io/images/epgstation.drawio.svg">
+<meta property="article:published_time" content="2020-07-11T22:04:17.000Z">
+<meta property="article:modified_time" content="2020-07-11T22:04:17.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="epgstation">
+<meta property="article:tag" content="mirakurun">
+<meta property="article:tag" content="wsl">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/epgstation.drawio.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "EPGStation/Mirakurun on WSL",
+  "url": "https://ktkr3d.github.io/2020/07/12/EPGStation-on-WSL/",
+  "image": "https://ktkr3d.github.io/images/epgstation.drawio.svg",
+  "datePublished": "2020-07-11T22:04:17.000Z",
+  "dateModified": "2020-07-11T22:04:17.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2020/07/12/EPGStation-on-WSL/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'EPGStation/Mirakurun on WSL',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.0"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">481</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">190</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/rss.xml"><i class="fa-fw fas fa-rss"></i><span> Subscrive</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">EPGStation/Mirakurun on WSL</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/rss.xml"><i class="fa-fw fas fa-rss"></i><span> Subscrive</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">EPGStation/Mirakurun on WSL</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-07-11T22:04:17.000Z" title="Created 2020-07-12 07:04:17">2020-07-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-07-11T22:04:17.000Z" title="Updated 2020-07-12 07:04:17">2020-07-12</time></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p><img src="/images/epgstation.drawio.svg" alt="epgstation とりあえず版"><br><a target="_blank" rel="noopener" href="https://github.com/l3tnun/EPGStation">https://github.com/l3tnun/EPGStation</a><br><a target="_blank" rel="noopener" href="https://github.com/Chinachu/Mirakurun">https://github.com/Chinachu/Mirakurun</a><br>Chianchu の調子が悪くなったのでEPGStation に乗り換えてみました。<br>EPGStation とMirakurun をWSL 上に構築しました。</p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li><p>ソフトウェア構成</p>
+<ul>
+<li>Windows 10 Insider Preview build 20161<ul>
+<li>WSL (Ubuntu 20.04 LTS)<ul>
+<li>node v14.4.0<ul>
+<li>EPGStation 1.7.0</li>
+<li>Mirakurun 3.2.0</li>
+</ul>
+</li>
+<li>npm 6.14.5</li>
+<li>pm2 4.4.0</li>
+<li>ffmpeg 4.2.2</li>
+<li>python 2.7.18rc1</li>
+<li>gcc 9.3.0</li>
+</ul>
+</li>
+<li>BonRecTest 1.0.0</li>
+<li>Kodi 18.6<ul>
+<li>PVR IPTV Simple Client 3.9.8</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ディレクトリ配置</p>
+<div id="googleChart8528"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.Table(document.getElementById("googleChart8528"))).draw(google.visualization.arrayToDataTable([['環境', '項目', 'パス'],['WSL (Ubuntu)', 'mirakurun コマンド', '/usr/loca/bin/mirakurun'],['', 'mirakurun 設定', '/usr/local/etc/mirakurun/'],['', 'mirakurun ログ', '/usr/local/var/log/'],['', 'mirakurun データ', '/usr/local/var/db/mirakurun/'],['', 'mirakurun プロセス', '/usr/local/var/run/'],['', 'EPGStation 環境', '$HOME/EPGStation/'],['', 'EPGStation の設定', '$HOME/EPGStation/config/'],['', 'EPGStation の録画保存先', '/mnt/j/home/epgstation/'],['', 'シェルスクリプト', '$HOME/bin/'],['Windows 10', 'BonRecTest', 'C:\\tools\\PT3\\']]),{"title":"No title","width":"100%","height":"100%"});
+      });
+    })();
+  }
+</script></li>
+</ul>
+<h3 id="Mirakurun-の構築-WSL"><a href="#Mirakurun-の構築-WSL" class="headerlink" title="Mirakurun の構築 (WSL)"></a>Mirakurun の構築 (WSL)</h3><ol>
+<li>Mirakurun のインストール</li>
+</ol>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> npm install mirakurun@latest -g  --unsafe --production</span><br><span class="line">$ <span class="built_in">sudo</span> mirakurun init</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>チューナの設定</li>
+</ol>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> mirakurun config tuners</span><br></pre></td></tr></table></figure>
+  <figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">- <span class="params">name:</span> PT3-T1</span><br><span class="line">  <span class="params">types:</span></span><br><span class="line">    <span class="operator">-</span> GR</span><br><span class="line">  <span class="params">command:</span> <span class="symbol">/mnt/c/Windows/System32/lxss/tools/init</span> <span class="symbol">/mnt/c/tools/PT3/BonRecTest.exe</span> <span class="operator">-</span>-decoder B25Decoder.dll <span class="operator">-</span>-driver BonDriver_PT3-T0.dll <span class="operator">-</span>-output <span class="operator">-</span> <span class="operator">-</span>-channel <span class="symbol">&lt;channel&gt;</span></span><br><span class="line">  <span class="params">decoder:</span> ~</span><br><span class="line">  <span class="params">isDisabled:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="operator">-</span> <span class="params">name:</span> PT3-T2</span><br><span class="line">  <span class="params">types:</span></span><br><span class="line">    <span class="operator">-</span> GR</span><br><span class="line">  <span class="params">command:</span> <span class="symbol">/mnt/c/Windows/System32/lxss/tools/init</span> <span class="symbol">/mnt/c/tools/PT3/BonRecTest.exe</span> <span class="operator">-</span>-decoder B25Decoder.dll <span class="operator">-</span>-driver BonDriver_PT3-T1.dll <span class="operator">-</span>-output <span class="operator">-</span> <span class="operator">-</span>-channel <span class="symbol">&lt;channel&gt;</span></span><br><span class="line">  <span class="params">decoder:</span> ~</span><br><span class="line">  <span class="params">isDisabled:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>  💡 WSL からWindows のコマンドを<code>/mnt/c/Windows/System32/lxss/tools/init</code>で起動<br>3. チャンネルの設定<br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> mirakurun config channels</span><br></pre></td></tr></table></figure><br>  <figure class="highlight nestedtext"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">name: ＴＯＫＹＯ　ＭＸ</span></span><br><span class="line">  <span class="attribute">type</span><span class="punctuation">:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attribute">channel</span><span class="punctuation">:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">name: フジテレビ</span></span><br><span class="line">  <span class="attribute">type</span><span class="punctuation">:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attribute">channel</span><span class="punctuation">:</span> <span class="string">&#x27;8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">name: ＴＢＳ</span></span><br><span class="line">  <span class="attribute">type</span><span class="punctuation">:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attribute">channel</span><span class="punctuation">:</span> <span class="string">&#x27;9</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">name: テレビ東京</span></span><br><span class="line">  <span class="attribute">type</span><span class="punctuation">:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attribute">channel</span><span class="punctuation">:</span> <span class="string">&#x27;10&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">name: テレビ朝日</span></span><br><span class="line">  <span class="attribute">type</span><span class="punctuation">:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attribute">channel</span><span class="punctuation">:</span> <span class="string">&#x27;11&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">name: 日テレ</span></span><br><span class="line">  <span class="attribute">type</span><span class="punctuation">:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attribute">channel</span><span class="punctuation">:</span> <span class="string">&#x27;12&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">name: ＮＨＫＥテレ・東京</span></span><br><span class="line">  <span class="attribute">type</span><span class="punctuation">:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attribute">channel</span><span class="punctuation">:</span> <span class="string">&#x27;13&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">name: ＮＨＫ総合・東京</span></span><br><span class="line">  <span class="attribute">type</span><span class="punctuation">:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attribute">channel</span><span class="punctuation">:</span> <span class="string">&#x27;14&#x27;</span></span><br></pre></td></tr></table></figure><br>4. ログローテーションの設定<br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> pm2 install pm2-logrotate</span><br></pre></td></tr></table></figure><br>  <figure class="highlight bash"><figcaption><span>/etc/logrotate.d/mirakurun</span></figcaption><table><tr><td class="code"><pre><span class="line">/usr/local/var/log/mirakurun.stdout.log</span><br><span class="line">/usr/local/var/log/mirakurun.stderr.log</span><br><span class="line">/&#123;</span><br><span class="line">  daily</span><br><span class="line">  compress</span><br><span class="line">  rotate 7</span><br><span class="line">  missingok</span><br><span class="line">  notifempty</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="EPGStation-の構築-WSL"><a href="#EPGStation-の構築-WSL" class="headerlink" title="EPGStation の構築 (WSL)"></a>EPGStation の構築 (WSL)</h3><ol>
+<li>前提パッケージの確認</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ node --version</span><br><span class="line">$ ffmpeg -version</span><br><span class="line">$ <span class="built_in">which</span> ffmpeg</span><br><span class="line">$ python --version</span><br><span class="line">$ gcc --version</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>EPGStation のインストール</li>
+</ol>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/l3tnun/EPGStation.git</span><br><span class="line">$ <span class="built_in">cd</span> EPGStation</span><br><span class="line">$ npm install --no-save</span><br><span class="line">$ npm run build</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>EPGStation の設定ファイルの作成</li>
+</ol>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> config/config.sample.json config/config.json</span><br><span class="line">$ <span class="built_in">cp</span> config/operatorLogConfig.sample.json config/operatorLogConfig.json</span><br><span class="line">$ <span class="built_in">cp</span> config/serviceLogConfig.sample.json config/serviceLogConfig.json</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>EPGStation の設定<br>  💡 <a target="_blank" rel="noopener" href="https://github.com/l3tnun/EPGStation/blob/master/doc/conf-manual.md">https://github.com/l3tnun/EPGStation/blob/master/doc/conf-manual.md</a></li>
+</ol>
+  <figure class="highlight json"><figcaption><span>$HOME/EPGStation/config/config.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;ffmpeg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/bin/ffmpeg&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;ffprobe&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/bin/ffprobe&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight json"><figcaption><span>$HOME/EPGStation/config/config.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;recorded&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/mnt/j/home/epgstation&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;recordedTemp&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/mnt/j/home/epgstation/temp&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>PM2 ecosystem.config.js ファイルの作成</li>
+</ol>
+<figure class="highlight js"><figcaption><span>$HOME/EPGStation/ecosystem.config.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  apps : [&#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;epgstation&quot;</span>,</span><br><span class="line">    <span class="attr">script</span>: <span class="string">&#x27;dist/server/index.js&#x27;</span>,</span><br><span class="line">    <span class="attr">cwd</span>: <span class="string">&quot;/home/ubuntu/EPGStation&quot;</span></span><br><span class="line">  &#125;]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ポートフォワード設定の追加-WSL"><a href="#ポートフォワード設定の追加-WSL" class="headerlink" title="ポートフォワード設定の追加 (WSL)"></a>ポートフォワード設定の追加 (WSL)</h3><ol>
+<li>8888 (EPGStation), 40772 (Mirakurun) をWSL に転送</li>
+</ol>
+  <figure class="highlight bash"><figcaption><span>$HOME/bin/wsl-portforward.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">IP=$(ip -f inet -o addr show eth0 | <span class="built_in">cut</span> -d\  -f 7 | <span class="built_in">cut</span> -d/ -f 1)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> PORT <span class="keyword">in</span> 22 4000 8000 8888 9000 40772; <span class="keyword">do</span></span><br><span class="line">  /mnt/c/Windows/system32/netsh.exe interface portproxy delete v4tov4 listenport=<span class="variable">$PORT</span></span><br><span class="line">  /mnt/c/Windows/system32/netsh.exe interface portproxy add    v4tov4 listenport=<span class="variable">$PORT</span> connectaddress=<span class="variable">$IP</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="起動処理-Windows-10"><a href="#起動処理-Windows-10" class="headerlink" title="起動処理 (Windows 10)"></a>起動処理 (Windows 10)</h3><ol>
+<li>非表示で実行するためのランチャの作成</li>
+</ol>
+  <figure class="highlight vbscript"><figcaption><span>C:\tools\launcher\silentLauncher.vbs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">ReDim</span> arr(WScript.Arguments.Count<span class="number">-1</span>) </span><br><span class="line"><span class="keyword">For</span> i = <span class="number">0</span> <span class="keyword">To</span> WScript.Arguments.Count<span class="number">-1</span> </span><br><span class="line">    arr(i) = WScript.Arguments(i) </span><br><span class="line"><span class="keyword">Next</span> </span><br><span class="line"></span><br><span class="line"><span class="built_in">CreateObject</span>(<span class="string">&quot;WScript.Shell&quot;</span>).Run <span class="built_in">Join</span>(arr) , <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>タスクスケジューラ(taskschd.msc)で自動起動するように設定</li>
+</ol>
+  <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cscript C:\tools\launcher\silentLauncher.vbs wsl -u root bash <span class="regexp">/home/u</span>buntu<span class="regexp">/bin/</span>wsl-portforward.sh</span><br></pre></td></tr></table></figure>
+  <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">cscript C:\tools\launcher\silentLauncher.vbs wsl -u root mirakurun <span class="keyword">init</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">cscript C:\tools\launcher\silentLauncher.vbs wsl -u ubuntu pm2 start /home/ubuntu/EPGStation/ecosystem.config.js</span><br></pre></td></tr></table></figure>
+
+<h3 id="Windows-ファイアウォールの設定-Windows-10"><a href="#Windows-ファイアウォールの設定-Windows-10" class="headerlink" title="Windows ファイアウォールの設定 (Windows 10)"></a>Windows ファイアウォールの設定 (Windows 10)</h3><ol>
+<li>ポート開放</li>
+</ol>
+<ul>
+<li>8888 (EPGStation)</li>
+<li>40772 (Mirakurun) オプション</li>
+</ul>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ol>
+<li>Mirakurun の動作確認<br>  <code>http://192.168.11.2:40772</code></li>
+<li>EPGStation にアクセス<br>  <code>http://192.168.11.2:8888</code></li>
+<li>ライブ視聴は「GR」→ 局名 →「視聴」を選択して、VLC やMX Player MX Player 等で開く</li>
+</ol>
+<h3 id="Kodi-でライブ視聴"><a href="#Kodi-でライブ視聴" class="headerlink" title="Kodi でライブ視聴"></a>Kodi でライブ視聴</h3><p><a target="_blank" rel="noopener" href="https://github.com/l3tnun/EPGStation/blob/master/doc/kodi.md">https://github.com/l3tnun/EPGStation/blob/master/doc/kodi.md</a></p>
+<ol>
+<li>アドオンをインストール<br>  「アドオン」→「ダウンロード」→「PVRクライアント」→「PVR IPTV Simple Client」</li>
+<li>インストールが完了したら「C」キーを押下して、コンテキストメニューから「設定」を選択</li>
+<li>一般 &#x2F; M3U プレイリストのURL<br>  <code>http://host:port/api/iptv/channel.m3u8?mode=2</code></li>
+<li>EPG 設定 &#x2F; M3U プレイリストのURL<br>  <code>http://host:port/api/iptv/epg.xml?days=3</code></li>
+<li>Kodi を再起動</li>
+<li>「TV」メニューから視聴</li>
+</ol>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/mirakurun/">mirakurun</a><a class="post-meta__tags" href="/tags/wsl/">wsl</a><a class="post-meta__tags" href="/tags/epgstation/">epgstation</a></div><div class="post-share"><div class="social-share" data-image="/images/epgstation.drawio.svg" data-sites="facebook,twitter,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2020/08/01/Enabling-sound-in-WSL/" title="Enabling sound in WSL"><img class="cover" src="/images/moc-on-wsl2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Enabling sound in WSL</div></div><div class="info-2"><div class="info-item-1">https://x410.dev/cookbook/wsl/enabling-sound-in-wsl-ubuntu-let-it-sing/https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/ PulseAudio を使ってWSL2 上でサウンドを再生できるようにしてみました。Extraterm 上でMOC(Music on Console) を利用してみました。Visual Studio Code のターミナルでも実行できます。   環境 Windows 10 Insider Preview Build 20180 [IP: 192.168.11.2] PulseAudio for Windows 1.1 WSL2 (Ubuntu) pulseaudio 13.99.1 moc 2.6-alpha3 (Theme: transparent-background)   Extraterm 0.52.0 (Theme: Extraterm Default)    構築 (Window...</div></div></div></a><a class="pagination-related" href="/2020/07/10/SheetUI/" title="SheetUI"><img class="cover" src="/images/sheetui.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">SheetUI</div></div><div class="info-2"><div class="info-item-1">https://sheetui.com/SheetUI でGoogle スプレッドシートのデータをWeb ページで可視化してみました。ARMORY ボタンでBlizzard の各キャラクタのページに遷移します。GUIDE ボタンで各キャラクタのクラス&#x2F;スペックに応じたWowHead ガイドに遷移します。   Google スプレッドシートの準備 Chrome のツールバーの「アプリ」を選択 「スプレッドシート」を開く 新しいスプレッドシートを作成「空白」を選択 データの登録        if (!window.google) {     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';     throw 'Google JS API is needed';   } else {     (function() {       google.load('visualization', '1.0', {'packages': ["...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2017/01/24/Docker-Mirakurun-Chinachu/" title="Docker Mirakurun Chinachu"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-01-24</div><div class="info-item-2">Docker Mirakurun Chinachu</div></div><div class="info-2"><div class="info-item-1">https://github.com/Chinachu/docker-mirakurun-chinachuUbuntu 16.10 の環境でDocker Mirakurun Chinachu を使ってみました。    Docker のインストール    $ sudo apt install curl$ curl -fsSL https://get.docker.com/ | sh   Docker Engine がインストールされない&#x2F;バージョンが古い場合は以下とすると良いかもしれない。  /etc/apt/sources.list.d/docker.listdeb [arch=amd64] https://apt.dockerproject.org/repo ubuntu-xenial maindeb [arch=amd64] https://apt.dockerproject.org/repo ubuntu-xenial testing2. Docker Compose のインストール  $ sudo curl -L &quot;https://github.com...</div></div></div></a><a class="pagination-related" href="/2025/07/03/Jellyfin/" title="Jellyfin"><img class="cover" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Jellyfin_-_icon-transparent.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-03</div><div class="info-item-2">Jellyfin</div></div><div class="info-2"><div class="info-item-1">メディアサーバJellyfinを使ってみました。今まで散らばっていた大量のメディアファイルを整理することができました。また、インターネットラジオやMirakurunと連携したテレビ番組の視聴ができました。                                     Jellyfin             The Free Software Media System    環境WSLのUbuntuにJellyfinを導入します。  Windows 11 Mirakurun 3.9.0 rc4 WSL (Ubuntu 24.04.2 LTS) Jellyfin 10.10.7      構築サーバ（WSL&#x2F;Ubuntu） Jellyfin インストールcurl https://repo.jellyfin.org/install-debuntu.sh | sudo bash sudo systemctl enable --now jellyfin 別のマシンからアクセスできるようにWSLへのポートフォワード設定一覧に8096&#x2F;tcpを追加します。PC起...</div></div></div></a><a class="pagination-related" href="/2019/06/04/Chinachu-on-WSL/" title="WSL でChinachu"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-04</div><div class="info-item-2">WSL でChinachu</div></div><div class="info-2"><div class="info-item-1">https://github.com/Chinachu/Chinachu/wiki/Gamma-Installation-V2 Chinachu がWSL (Ubuntu 18.04)で普通に動きました。   現在の環境 Windows 10 Windows 10 でMirakurun を導入済 WSL (Ubuntu 18.04 が導入済でデフォルト)を導入済 WSL でnode.js を導入済  WSL でChinachu のインストール$ sudo apt-get install build-essential curl git-core vainfo$ sudo npm install pm2 -g$ sudo pm2 startup$ git clone git://github.com/kanreisa/Chinachu.git ~/chinachu$ cd ~/chinachu/$ ./chinachu installer$ cp config.sample.json config.json  ~&#x2F;chinachu&#x2F;config.json の設定...</div></div></div></a><a class="pagination-related" href="/2019/06/14/WSL2/" title="WSL 2"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-14</div><div class="info-item-2">WSL 2</div></div><div class="info-2"><div class="info-item-1">Windows Insider Program でWSL 2 が利用できるようになりましたので試してみました。 既存のWSL 環境をWSL 2 に変換しました。WSL 2 ではHyper-V を利用するようになったようですね。   1. Windows Insider Program へ登録https://insider.windows.com/ja-jp/上記のURL からWindows Insider Program に参加登録します。 2. Windows Update を実行Windows Update を実行すると以下の状態になりました。 エディション: Windows 10 Pro Insider Previewバージョン: 1903OSビルド: 18917.1000 3. VirtualMachinePlatform の有効化Windows PowerShell(管理者)モードから設定します。 PS C:\WINDOWS\system32&gt; Enable-WindowsOptionalFeature -Online -FeatureName VirtualMa...</div></div></div></a><a class="pagination-related" href="/2019/06/21/Puppeteer/" title="Puppeteer"><img class="cover" src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-21</div><div class="info-item-2">Puppeteer</div></div><div class="info-2"><div class="info-item-1">https://github.com/GoogleChrome/puppeteer Puppeteer はGoogle Chrome を自動で操作するツールです。WSL2(Ubuntu 18.04)でPuppeteer をヘッドレスで動かしてみました。これは便利かもしれない！   環境設定利用環境 Windows 10 Pro Insider Preview (1903, 18917.1000) WSL2 (Ubuntu 18.04) node v10.16.0  Puppeteer のインストール$ npm i puppeteer  実行時依存ライブラリのインストール(Ubuntu 18.04 の場合)https://github.com/GoogleChrome/puppeteer/issues/290#issuecomment-451471338 $ sudo apt-get install -y libx11-xcb1 libxrandr2 libasound2 libpangocairo-1.0-0 libatk1.0-0 libatk-bridge2.0-0 libg...</div></div></div></a><a class="pagination-related" href="/2020/01/27/Puppeteer-on-WSL/" title="Puppeteer on WSL"><img class="cover" src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-27</div><div class="info-item-2">Puppeteer on WSL</div></div><div class="info-2"><div class="info-item-1">https://github.com/puppeteer/puppeteer/issues/1837 WSL のPuppeteer からWindows にインストールされたChrome(chrome.exe) を起動します。WSL 側にインストールするパッケージが少なくてすみそうです。   環境 WSL1(Ubuntu 18.04) on Windows 10 node v13.6.0 npm 6.13.4 puppeteer  構築node のインストール$ sudo apt update &amp;&amp; sudo apt upgrade$ sudo apt install nodejs npm$ sudo npm clean all$ sudo npm install n$ sudo n latest$ sudo ln -sf /usr/local/bin/node /usr/bin/node$ sudo apt purge nodejs npm$ sudo apt clean all$ sudo apt autoremove  puppeteer のインストール$ n...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">481</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">190</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a><a class="social-icon" href="/rss.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #f78c31;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%92%B0%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mirakurun-%E3%81%AE%E6%A7%8B%E7%AF%89-WSL"><span class="toc-number">2.</span> <span class="toc-text">Mirakurun の構築 (WSL)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EPGStation-%E3%81%AE%E6%A7%8B%E7%AF%89-WSL"><span class="toc-number">3.</span> <span class="toc-text">EPGStation の構築 (WSL)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AF%E3%83%BC%E3%83%89%E8%A8%AD%E5%AE%9A%E3%81%AE%E8%BF%BD%E5%8A%A0-WSL"><span class="toc-number">4.</span> <span class="toc-text">ポートフォワード設定の追加 (WSL)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%B7%E5%8B%95%E5%87%A6%E7%90%86-Windows-10"><span class="toc-number">5.</span> <span class="toc-text">起動処理 (Windows 10)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB%E3%81%AE%E8%A8%AD%E5%AE%9A-Windows-10"><span class="toc-number">6.</span> <span class="toc-text">Windows ファイアウォールの設定 (Windows 10)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%94%A8"><span class="toc-number">7.</span> <span class="toc-text">利用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kodi-%E3%81%A7%E3%83%A9%E3%82%A4%E3%83%96%E8%A6%96%E8%81%B4"><span class="toc-number">8.</span> <span class="toc-text">Kodi でライブ視聴</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/30/Install-Arch-Linux-on-WSL/" title="Install Arch Linux on WSL">Install Arch Linux on WSL</a><time datetime="2025-10-29T15:57:13.000Z" title="Created 2025-10-30 00:57:13">2025-10-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/19/qwen3/" title="Qwen3">Qwen3</a><time datetime="2025-07-18T20:58:00.000Z" title="Created 2025-07-19 05:58:00">2025-07-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/03/Jellyfin/" title="Jellyfin">Jellyfin</a><time datetime="2025-07-03T11:14:43.000Z" title="Created 2025-07-03 20:14:43">2025-07-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/" title="GNOME Remote Desktop + jp109 keyboard">GNOME Remote Desktop + jp109 keyboard</a><time datetime="2025-06-30T21:38:39.000Z" title="Created 2025-07-01 06:38:39">2025-07-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/26/kdenlive/" title="Kdenlive">Kdenlive</a><time datetime="2025-06-26T06:28:25.000Z" title="Created 2025-06-26 15:28:25">2025-06-26</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = `%%{init:{ 'theme':'${theme}'}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+
+  const disqusReset = conf => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: conf
+    })
+  }
+
+  const loadDisqus = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyDisqus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    window.disqus_identifier = isShuoshuo ? path : '/2020/07/12/EPGStation-on-WSL/'
+    window.disqus_url = isShuoshuo ? location.origin + path : 'https://ktkr3d.github.io/2020/07/12/EPGStation-on-WSL/'
+
+    const disqus_config = function () {
+      this.page.url = disqus_url
+      this.page.identifier = disqus_identifier
+      this.page.title = 'EPGStation/Mirakurun on WSL'
+    }
+
+    if (window.DISQUS) disqusReset(disqus_config)
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://ktkr3d.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+
+    btf.addGlobalFn('themeChange', () => disqusReset(disqus_config), 'disqus')
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=ktkr3d&api_key=4h1TCaPWN75Lml9gI5JyCkXscJQooOOqbRQowMohQYOfvHYxa4tatYNMmQnGPJEV&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Disqus' === 'Disqus'
+      ? window.shuoshuoComment = { loadComment: loadDisqus }
+      : window.loadOtherComment = loadDisqus
+    return
+  }
+
+  if ('Disqus' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
