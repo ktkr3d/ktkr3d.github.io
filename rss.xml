@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 07 Nov 2025 10:24:05 GMT</pubDate>
+    <pubDate>Fri, 07 Nov 2025 19:41:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,7 +24,8 @@
       <guid>https://ktkr3d.github.io/2025/11/07/OpenVPN-Access-Server/</guid>
       <pubDate>Fri, 07 Nov 2025 06:03:02 GMT</pubDate>
       
-      <description>&lt;p&gt;OpenVPN Access ServerをRaspberry Pi 4Bに構築してみました。&lt;br&gt;今回はPortainerのGUI画面からOpenVPN Access ServerのDockerコンテナを生成しました。2コネクションまでは無償利用可能なようです。&lt;/p&gt;</description>
+      <description>&lt;p&gt;OpenVPN Access ServerをRaspberry Pi 4Bに構築してみました。&lt;br&gt;今回はPortainerのGUI画面からOpenVPN Access ServerのDockerコンテナを生成しました。&lt;br&gt;2コネクションまでは無償利用可能なようです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://openvpn.net/access-server/&quot;&gt;https://openvpn.net/access-server/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://hub.docker.com/r/openvpn/openvpn-as&quot;&gt;https://hub.docker.com/r/openvpn/openvpn-as&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
