@@ -15,8 +15,27 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 04 Nov 2025 11:52:44 GMT</pubDate>
+    <pubDate>Fri, 07 Nov 2025 09:33:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>OpenVPN Access Server</title>
+      <link>https://ktkr3d.github.io/2025/11/07/OpenVPN-Access-Server/</link>
+      <guid>https://ktkr3d.github.io/2025/11/07/OpenVPN-Access-Server/</guid>
+      <pubDate>Fri, 07 Nov 2025 06:03:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;OpenVPN Access ServerをRaspberry Pi 4Bに構築してみました。&lt;br&gt;今回はPortainerのGUI画面からOpenVPN Access ServerのDockerコンテナを生成しました。2コネクションまでは無償利用可能なようです。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/openvpn/">openvpn</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/11/07/OpenVPN-Access-Server/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Install Arch Linux on WSL</title>
@@ -669,29 +688,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/03/12/Ghostty/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>ALG - Arka Linux GUI</title>
-      <link>https://ktkr3d.github.io/2025/03/11/ALG-Arka-Linux-GUI/</link>
-      <guid>https://ktkr3d.github.io/2025/03/11/ALG-Arka-Linux-GUI/</guid>
-      <pubDate>Mon, 10 Mar 2025 23:20:02 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/alg-welcome.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Arch LinuxのGUIインストーラであるALG(Arka Linux GUI)を試してみました。&lt;br&gt;&lt;a href=&quot;https://github.com/arch-linux-gui/alg-releases&quot;&gt;https://github.com/arch-linux-gui/alg-releases&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Welcomeアプリ(alg-welcome)とOSインストーラ(calamares)で構成されているようです。&lt;br&gt;Calam-Arch-Installerのようにインストール中にデスクトップ環境を選択することはできないようですが、インストール時やインストール後に日本語が表示されるのは便利ですね。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/alg/">alg</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/03/11/ALG-Arka-Linux-GUI/#disqus_thread</comments>
       
     </item>
     
