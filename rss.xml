@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 12 Nov 2025 14:26:40 GMT</pubDate>
+    <pubDate>Sat, 15 Nov 2025 08:13:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -32,7 +32,11 @@
             &lt;div class=&quot;og-title&quot;&gt;Self-Hosted VPN: Access Server | OpenVPN&lt;/div&gt;
             &lt;div class=&quot;og-description&quot;&gt;Secure your private business network with a self-hosted VPN, Access Server, ideal for cloud or on-premise setups. Free with 2 simultaneous VPN connections.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://openvpn.net/access-server/&quot;&gt;https://openvpn.net/access-server/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://hub.docker.com/r/openvpn/openvpn-as&quot;&gt;https://hub.docker.com/r/openvpn/openvpn-as&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&quot;https://openvpn.net/access-server/&quot;&gt;https://openvpn.net/access-server/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://hub.docker.com/r/openvpn/openvpn-as&quot;&gt;https://hub.docker.com/r/openvpn/openvpn-as&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2025-11-15&quot;&gt;&lt;a href=&quot;#2025-11-15&quot; class=&quot;headerlink&quot; title=&quot;2025-11-15&quot;&gt;&lt;/a&gt;2025-11-15&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://docs.portainer.io/faqs/known-issues/known-compatibility-issues-with-docker-engine-29.0.0&quot;&gt;https://docs.portainer.io/faqs/known-issues/known-compatibility-issues-with-docker-engine-29.0.0&lt;/a&gt;&lt;br&gt;PortainerはDocker 29と互換性がないという情報があったので試してみました。確かにDocker 29にバージョンアップしたところ動作しなくなりましたが以下のワークアラウンドで動作するようになりました。&lt;br&gt;&lt;a href=&quot;https://github.com/portainer/portainer/issues/12925#issuecomment-3516549977&quot;&gt;https://github.com/portainer/portainer/issues/12925#issuecomment-3516549977&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;systemctl edit docker.service&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight ini&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;[Service]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;Environment&lt;/span&gt;=DOCKER_MIN_API_VERSION=&lt;span class=&quot;number&quot;&gt;1.24&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; systemctl restart docker&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
       
       
       
