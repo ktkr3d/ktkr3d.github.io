@@ -15,8 +15,34 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 17 Nov 2025 06:12:55 GMT</pubDate>
+    <pubDate>Mon, 17 Nov 2025 16:24:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Caelestia</title>
+      <link>https://ktkr3d.github.io/2025/11/17/Caelestia/</link>
+      <guid>https://ktkr3d.github.io/2025/11/17/Caelestia/</guid>
+      <pubDate>Mon, 17 Nov 2025 13:18:22 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/hyprland_caelestia.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Hyprland用のCaelestia dotsを試してみました。これは良いかもしれない。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/caelestia-dots/caelestia&quot;&gt;https://github.com/caelestia-dots/caelestia&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/caelestia-dots/shell&quot;&gt;https://github.com/caelestia-dots/shell&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;video-container&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/TggHDm0_vBw&quot; frameborder=&quot;0&quot; loading=&quot;lazy&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=TggHDm0_vBw&quot;&gt;https://www.youtube.com/watch?v=TggHDm0_vBw&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/caelestia/">caelestia</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/11/17/Caelestia/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>OpenVPN Access Server</title>
@@ -676,30 +702,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/03/14/Ghostty-Shaders/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Ghostty</title>
-      <link>https://ktkr3d.github.io/2025/03/12/Ghostty/</link>
-      <guid>https://ktkr3d.github.io/2025/03/12/Ghostty/</guid>
-      <pubDate>Wed, 12 Mar 2025 14:03:26 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/ghostty-shaders.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;ターミナルエミュレータGhostty 1.1.2を使ってみました。&lt;br&gt;&lt;a href=&quot;https://github.com/ghostty-org/ghostty&quot;&gt;https://github.com/ghostty-org/ghostty&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;今後の気になる情報&quot;&gt;&lt;a href=&quot;#今後の気になる情報&quot; class=&quot;headerlink&quot; title=&quot;今後の気になる情報&quot;&gt;&lt;/a&gt;今後の気になる情報&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;マイルストーン1.2&lt;br&gt;&lt;a href=&quot;https://github.com/ghostty-org/ghostty/milestone/5&quot;&gt;https://github.com/ghostty-org/ghostty/milestone/5&lt;/a&gt;&lt;br&gt;ローカライズはマージされてた&lt;/li&gt;
-&lt;li&gt;Windows対応&lt;br&gt;&lt;a href=&quot;https://github.com/ghostty-org/ghostty/discussions/2563&quot;&gt;https://github.com/ghostty-org/ghostty/discussions/2563&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/ghostty/">ghostty</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/03/12/Ghostty/#disqus_thread</comments>
       
     </item>
     
