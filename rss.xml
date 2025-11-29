@@ -15,8 +15,35 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Fri, 28 Nov 2025 14:16:13 GMT</pubDate>
+    <pubDate>Sat, 29 Nov 2025 03:18:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>CachyOS</title>
+      <link>https://ktkr3d.github.io/2025/11/29/CachyOS/</link>
+      <guid>https://ktkr3d.github.io/2025/11/29/CachyOS/</guid>
+      <pubDate>Fri, 28 Nov 2025 23:05:23 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;a href=&quot;https://cachyos.org&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/cahyos/">cahyos</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/11/29/CachyOS/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Caelestia</title>
@@ -135,6 +162,9 @@
             &lt;div class=&quot;og-title&quot;&gt;Jellyfin&lt;/div&gt;
             &lt;div class=&quot;og-description&quot;&gt;The Free Software Media System&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
 
+&lt;h4 id=&quot;2025-11-29&quot;&gt;&lt;a href=&quot;#2025-11-29&quot; class=&quot;headerlink&quot; title=&quot;2025-11-29&quot;&gt;&lt;/a&gt;2025-11-29&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;JellyfinでライブTV視聴の是正&lt;br&gt;&lt;a href=&quot;https://www.hitoha.moe/fix-jellyfin-live-tv/&quot;&gt;https://www.hitoha.moe/fix-jellyfin-live-tv/&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;figcaption&gt;&lt;span&gt;/etc/jellyfin/jellyfin.env&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;JELLYFIN_FFmpeg__probesize=8M&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h4 id=&quot;2025-11-26&quot;&gt;&lt;a href=&quot;#2025-11-26&quot; class=&quot;headerlink&quot; title=&quot;2025-11-26&quot;&gt;&lt;/a&gt;2025-11-26&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;MPRIS supported!&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-media-player/pull/989&quot;&gt;https://github.com/jellyfin/jellyfin-media-player/pull/989&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S jellyfin-media-player-git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -688,31 +718,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/03/20/GNOME-48/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Ghostty Shaders</title>
-      <link>https://ktkr3d.github.io/2025/03/14/Ghostty-Shaders/</link>
-      <guid>https://ktkr3d.github.io/2025/03/14/Ghostty-Shaders/</guid>
-      <pubDate>Fri, 14 Mar 2025 14:18:16 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/ghostty_shaders.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;ターミナルエミュレータGhosttyのシェーダ機能を試してみました。&lt;/p&gt;
-&lt;p&gt;以下のサイトのコードがほぼそのまま利用できました。&lt;br&gt;残念ながらテクスチャを利用するコードは使えませんでした。&lt;br&gt;&lt;a href=&quot;https://www.shadertoy.com/&quot;&gt;https://www.shadertoy.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;コードを改造することによりターミナルエミュレータとして利用可能になります。&lt;/p&gt;
-&lt;div class=&quot;video-container&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/h02c9RyyfPQ&quot; frameborder=&quot;0&quot; loading=&quot;lazy&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;p&gt;iChannel0にはターミナルエミュレータの出力が割り当てられていて変更はできないようです。&lt;br&gt;&lt;code&gt;custom-shader-ichannel1 = ./texture.png&lt;/code&gt; みたいなテクスチャのローダが実装されないかなぁ。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/ghostty/">ghostty</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/03/14/Ghostty-Shaders/#disqus_thread</comments>
       
     </item>
     
