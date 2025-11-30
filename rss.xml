@@ -15,8 +15,29 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 29 Nov 2025 23:04:21 GMT</pubDate>
+    <pubDate>Sun, 30 Nov 2025 15:09:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Walker</title>
+      <link>https://ktkr3d.github.io/2025/11/30/Walker/</link>
+      <guid>https://ktkr3d.github.io/2025/11/30/Walker/</guid>
+      <pubDate>Sun, 30 Nov 2025 13:18:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/abenz1267/walker/refs/heads/master/resources/screenshot.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Walkerランチャを使ってみました。いろいろとカスタマイズできて面白いです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/abenz1267/walker&quot;&gt;https://github.com/abenz1267/walker&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/abenz1267/elephant&quot;&gt;https://github.com/abenz1267/elephant&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/walker/">walker</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/11/30/Walker/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>CachyOS</title>
@@ -678,46 +699,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/03/27/RPi4B-Arch-Linux/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>GNOME 48</title>
-      <link>https://ktkr3d.github.io/2025/03/20/GNOME-48/</link>
-      <guid>https://ktkr3d.github.io/2025/03/20/GNOME-48/</guid>
-      <pubDate>Wed, 19 Mar 2025 20:17:56 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/arch_gnome48_gnome-unstable.png&quot;&gt;&lt;br&gt;GNOME 48がリリースされたのでArch LinuxにGNOME 48.0 (gnome-unstableリポジトリ)を導入してみました。&lt;br&gt;&lt;a href=&quot;https://release.gnome.org/48/&quot;&gt;https://release.gnome.org/48/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://archlinux.org/groups/x86_64/gnome/&quot;&gt;https://archlinux.org/groups/x86_64/gnome/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;GNOME関連アプリが起動しません。extraリポジトリに反映されるのをまちましょう。&lt;/p&gt;
-&lt;h4 id=&quot;2025-03-23-追記&quot;&gt;&lt;a href=&quot;#2025-03-23-追記&quot; class=&quot;headerlink&quot; title=&quot;2025-03-23 追記&quot;&gt;&lt;/a&gt;2025-03-23 追記&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://archlinux.org/groups/x86_64/gnome/&quot;&gt;https://archlinux.org/groups/x86_64/gnome/&lt;/a&gt;&lt;br&gt;GNOME 48がextraリポジトリに来ました。&lt;/p&gt;
-&lt;p&gt;Chrome起動時のグローバルショートカットのポップアップ抑止&lt;br&gt;&lt;a href=&quot;https://www.reddit.com/r/gnome/comments/1jfejor/psa_chromechromiumbased_browsers_and_gnome_48/&quot;&gt;https://www.reddit.com/r/gnome/comments/1jfejor/psa_chromechromiumbased_browsers_and_gnome_48/&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight text&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/chrome-flags.conf&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;--disable-features=GlobalShortcutsPortal&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;2025-03-20-追記&quot;&gt;&lt;a href=&quot;#2025-03-20-追記&quot; class=&quot;headerlink&quot; title=&quot;2025-03-20 追記&quot;&gt;&lt;/a&gt;2025-03-20 追記&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/images/arch_gnome48_extra-testing.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://archlinux.org/groups/x86_64/gnome/&quot;&gt;https://archlinux.org/groups/x86_64/gnome/&lt;/a&gt;&lt;br&gt;GNOME 48.0 (extra-testing リポジトリ) に入りました。&lt;br&gt;gnome-control-center, gnome-terminal, gnome-text-editor, nautilus, argos が動くようになりました。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;リポジトリの追加&lt;br&gt;  &lt;a href=&quot;https://wiki.archlinux.jp/index.php/%E5%85%AC%E5%BC%8F%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA#extra-testing&quot;&gt;https://wiki.archlinux.jp/index.php/公式リポジトリ#extra-testing&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-  &lt;figure class=&quot;highlight ini&quot;&gt;&lt;figcaption&gt;&lt;span&gt;/etc/pacman.conf&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;[extra-testing]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;Include&lt;/span&gt; = /etc/pacman.d/mirrorlist&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-  &lt;div class=&quot;note info flat&quot;&gt;&lt;p&gt;&lt;code&gt;[extra]&lt;/code&gt;の前に&lt;code&gt;[extra-testing]&lt;/code&gt;を挿入する。&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;パッケージの更新&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; pacman -Syyu&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;reboot&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;hr&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/gnome/">gnome</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/03/20/GNOME-48/#disqus_thread</comments>
       
     </item>
     
