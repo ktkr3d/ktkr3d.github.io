@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 30 Nov 2025 23:45:55 GMT</pubDate>
+    <pubDate>Mon, 01 Dec 2025 00:21:52 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,7 +24,7 @@
       <guid>https://ktkr3d.github.io/2025/11/30/Walker/</guid>
       <pubDate>Sun, 30 Nov 2025 13:18:02 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/abenz1267/walker/refs/heads/master/resources/screenshot.png&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/walker.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Walkerランチャを使ってみました。いろいろとカスタマイズできて面白いです。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/abenz1267/walker&quot;&gt;https://github.com/abenz1267/walker&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/abenz1267/elephant&quot;&gt;https://github.com/abenz1267/elephant&lt;/a&gt;&lt;/p&gt;</description>
       
