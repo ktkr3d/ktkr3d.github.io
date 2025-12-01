@@ -15,8 +15,31 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Mon, 01 Dec 2025 08:05:12 GMT</pubDate>
+    <pubDate>Mon, 01 Dec 2025 09:13:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>SDDM</title>
+      <link>https://ktkr3d.github.io/2025/12/01/SDDM/</link>
+      <guid>https://ktkr3d.github.io/2025/12/01/SDDM/</guid>
+      <pubDate>Mon, 01 Dec 2025 08:35:57 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/sddm_sel-shaders.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;SDDMにSerial experiments lainのテーマを適用してみました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/leonardochappuis/sddmsel&quot;&gt;https://github.com/leonardochappuis/sddmsel&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/sddm/">sddm</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/lain/">lain</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/12/01/SDDM/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Walker</title>
@@ -675,29 +698,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/03/30/GNOME-Remote-Desktop/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>RPi4B - Arch Linux</title>
-      <link>https://ktkr3d.github.io/2025/03/27/RPi4B-Arch-Linux/</link>
-      <guid>https://ktkr3d.github.io/2025/03/27/RPi4B-Arch-Linux/</guid>
-      <pubDate>Thu, 27 Mar 2025 07:54:54 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/rpi4b_arch_gnome.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Raspberry Pi 4BにArch Linux (64it)をインストールしてみました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4&quot;&gt;https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/raspberrypi/">raspberrypi</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/03/27/RPi4B-Arch-Linux/#disqus_thread</comments>
       
     </item>
     
