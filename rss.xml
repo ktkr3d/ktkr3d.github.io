@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Mon, 01 Dec 2025 06:08:00 GMT</pubDate>
+    <pubDate>Mon, 01 Dec 2025 07:59:38 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -49,9 +49,8 @@
         
           
           
-      <description>&lt;a href=&quot;https://cachyos.org&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
-    &lt;div class=&quot;og-image&quot;&gt;
-</description>
+      <description>&lt;p&gt;CachyOSを使ってみました。GUIインストーラなので導入がしやすいですね。&lt;/p&gt;
+&lt;a href=&quot;https://cachyos.org&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;</description>
           
         
       
