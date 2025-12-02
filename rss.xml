@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Tue, 02 Dec 2025 16:53:49 GMT</pubDate>
+    <pubDate>Tue, 02 Dec 2025 16:57:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,7 +24,7 @@
       <guid>https://ktkr3d.github.io/2025/12/01/SDDM/</guid>
       <pubDate>Mon, 01 Dec 2025 08:35:57 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/sddm_sel-shaders.png&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;video src=&quot;/images/sddmsel_sel-shaders.mp4&quot; width=&quot;100%&quot; controls&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;p&gt;SDDMにSerial experiments lainのテーマを適用してみました。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/leonardochappuis/sddmsel&quot;&gt;https://github.com/leonardochappuis/sddmsel&lt;/a&gt;&lt;/p&gt;</description>
       
