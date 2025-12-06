@@ -15,8 +15,32 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Thu, 04 Dec 2025 01:32:56 GMT</pubDate>
+    <pubDate>Sat, 06 Dec 2025 08:32:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Faugus Launcher</title>
+      <link>https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/</link>
+      <guid>https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/</guid>
+      <pubDate>Sat, 06 Dec 2025 06:14:20 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/faugus_launcher.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;LinuxでWindowsアプリケーションを実行するフロントエンドFaugus Launcherを使ってみました。&lt;br&gt;&lt;a href=&quot;https://github.com/Faugus/faugus-launcher&quot;&gt;https://github.com/Faugus/faugus-launcher&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/proun/">proun</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/faugus-launcher/">faugus-launcher</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/battlenet/">battlenet</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>SDDM</title>
@@ -675,29 +699,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/04/03/wireguard-ui/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>GNOME Remote Desktop</title>
-      <link>https://ktkr3d.github.io/2025/03/30/GNOME-Remote-Desktop/</link>
-      <guid>https://ktkr3d.github.io/2025/03/30/GNOME-Remote-Desktop/</guid>
-      <pubDate>Sun, 30 Mar 2025 06:49:51 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/gnome-remote-desktop.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;LinuxにGNOME Remote Desktopサービスを導入してクライアントからRDP接続してみました。接続するとGDM画面からログインできます。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://gitlab.gnome.org/GNOME/gnome-remote-desktop&quot;&gt;https://gitlab.gnome.org/GNOME/gnome-remote-desktop&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/gnome/">gnome</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/rdp/">rdp</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/03/30/GNOME-Remote-Desktop/#disqus_thread</comments>
       
     </item>
     
