@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ktkr3d.github.io/hexo/index.html</loc>
+    <loc>https://ktkr3d.github.io/2025/12/01/SDDM/</loc>
     
     <lastmod>2025-12-15</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://ktkr3d.github.io/2025/11/29/CachyOS/</loc>
+    
+    <lastmod>2025-12-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/hexo/index.html</loc>
     
     <lastmod>2025-12-15</lastmod>
     
@@ -41,15 +50,6 @@
     <loc>https://ktkr3d.github.io/2025/11/30/Walker/</loc>
     
     <lastmod>2025-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2025/12/01/SDDM/</loc>
-    
-    <lastmod>2025-12-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
