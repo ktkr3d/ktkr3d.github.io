@@ -54,7 +54,7 @@ h4 {
 }
 
 .link-preview > .og-image > img {
-  max-width: 125px;
+  width: 125px;
   margin: 0px;
 }
 
