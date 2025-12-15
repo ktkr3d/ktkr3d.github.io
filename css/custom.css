@@ -38,3 +38,37 @@ h4 {
 #pagination {
   width: 100%;
 }
+
+.link-preview {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin: 1em 0 1em 0;
+  padding: 10px;
+  border: 1px #ccc solid;
+}
+
+.link-preview > .og-image {
+  float: left;
+  margin-right: 10px;
+}
+
+.link-preview > .og-image > img {
+  max-width: 125px;
+  margin: 0px;
+}
+
+.link-preview > .descriptions {
+  overflow: hidden;
+}
+
+.link-preview > .descriptions > .og-title {
+  overflow: hidden;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.link-preview > .descriptions > .og-description {
+  font-size: 0.86em;
+  margin-top: 0.2em;
+}
