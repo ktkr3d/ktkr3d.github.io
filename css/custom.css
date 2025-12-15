@@ -46,6 +46,7 @@ h4 {
   margin: 1em 0 1em 0;
   padding: 10px;
   border: 1px #ccc solid;
+  border-radius: 10px;
 }
 
 .link-preview > .og-image {
