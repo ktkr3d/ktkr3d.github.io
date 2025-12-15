@@ -1,0 +1,423 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>World of Warcraft | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="アドオンアドオンを利用すると、より快適にプレイできます。 アドオンを管理するアプリ CurseForge ⭐⭐⭐対応するゲームバージョンが表示されていて使いやすいと思います。アカウント登録が必要です。  利用中のアドオン Addon Control Panel ⭐⭐⭐アドオンの有効&#x2F;無効のプリセットを管理できます。ゲームを起動したままでAddonのリロードができます。 AdiBags">
+<meta property="og:type" content="website">
+<meta property="og:title" content="World of Warcraft">
+<meta property="og:url" content="https://ktkr3d.github.io/World-of-Warcraft/index_20221205.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="アドオンアドオンを利用すると、より快適にプレイできます。 アドオンを管理するアプリ CurseForge ⭐⭐⭐対応するゲームバージョンが表示されていて使いやすいと思います。アカウント登録が必要です。  利用中のアドオン Addon Control Panel ⭐⭐⭐アドオンの有効&#x2F;無効のプリセットを管理できます。ゲームを起動したままでAddonのリロードができます。 AdiBags">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
+<meta property="article:published_time" content="2022-12-05T00:45:10.000Z">
+<meta property="article:modified_time" content="2024-08-18T06:51:04.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/World-of-Warcraft/index_20221205.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'World of Warcraft',
+  isHighlightShrink: undefined,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">World of Warcraft</h1></header><main class="layout" id="content-inner"><div id="page"><div class="page-title">World of Warcraft</div><div class="container" id="article-container"><!--
+### スクリーンショット
+
+Dragonflight エクスパンションのスクリーンショットです。
+
+#### 通常画面
+
+![](/images/wow_loggingchat.jpg)
+
+#### パーティ画面
+
+#### Raid 画面
+
+-->
+
+<h3 id="アドオン"><a href="#アドオン" class="headerlink" title="アドオン"></a>アドオン</h3><p>アドオンを利用すると、より快適にプレイできます。</p>
+<h4 id="アドオンを管理するアプリ"><a href="#アドオンを管理するアプリ" class="headerlink" title="アドオンを管理するアプリ"></a>アドオンを管理するアプリ</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://download.curseforge.com/">CurseForge</a> ⭐⭐⭐<br>対応するゲームバージョンが表示されていて使いやすいと思います。アカウント登録が必要です。</li>
+</ul>
+<h4 id="利用中のアドオン"><a href="#利用中のアドオン" class="headerlink" title="利用中のアドオン"></a>利用中のアドオン</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/acp">Addon Control Panel</a> ⭐⭐⭐<br>アドオンの有効&#x2F;無効のプリセットを管理できます。ゲームを起動したままでAddonのリロードができます。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/adibags">AdiBags</a> ⭐⭐⭐<br>バッグの中身を自動的にカテゴリ分けします。EOL後はBetterBags が後継らしい。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/auctionator">Auctionator</a> ⭐</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/better-bags">BetterBags</a> ⭐⭐<br>AdiBagsの後継。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/bug-grabber">BugGrabber</a> ⭐⭐</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/bugsack">BugSuck</a> ⭐⭐</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/deadly-boss-mods">Deadly Boss Mods(DBM)</a> ⭐⭐⭐</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/demodal">DeModal</a> ⭐⭐<br>ウインドウをモードレスにします。移動もできます。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/details">Details! Damage Meter</a> ⭐⭐<br>Damage Done、Healing Done やIntrrupt 等をランキング表示します。また、誰がPullしたかを確認しています。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/dugi-questing-essential">Dugi Questing Essential</a> ⭐⭐<br>いろいろな機能が含まれています。最適な装備の提案をしてくれて便利ですが、Icy Veins やPawn の加重と少し違う気がします。タクシーシステムのフライトの時間表示、ジャンク品の自動売却、装備の自動修復もできます。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/edit-mode-expanded">Edit Mode Expanded</a> ⭐<br>標準でカスタマイズできないGUI部品の設定を変更できます。標準のバッグ、マイクロメニュー、フレームマネージャを非表示にできます。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/gtfo">GTFO</a> ⭐⭐<br>ダメージを受ける領域にいた場合、警告音で知らせます。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/hekili">Hekili Priority Helper</a> ⭐<br>ローテーションの候補が表示されます。使用頻度の低いクラスのローテーション、インタラプト&#x2F;ディスペルのタイミングについて参考になります。スペルの有効な距離であるかもわかります。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/ice-hud">IceHUD</a> ⭐⭐⭐<br>Player やTarget のHPや詠唱の状況をプレイヤーの左右に表示してくれます。とても便利です。Interrupt のタイミングの参考になります。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/icy-veins-stat-priority">Icy Veins Stat Priority</a> ⭐⭐⭐<br>スペックに対するStatの優先順位をキャラクタウインドウの上に表示します。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/items-expansions-in-tooltip">Items expansions in tooltip</a> ⭐⭐🐜<br>アイテムがどのエクスパンションで実装されたかを表示してくれます。捨てる際の参考になります。Blizzardの情報を元に表示しているらしいですが、一部の情報は適切でないらしいです。最新バージョンに対応したものは以下です。<br><a target="_blank" rel="noopener" href="https://github.com/martin-brajer/wow-item-expansion">https://github.com/martin-brajer/wow-item-expansion</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/itemrack">ItemRack</a> ⭐⭐<br>装備しているアイテムを独自のアクションバーに登録。装備しているトリンケット等をALT+左クリックで追加。SHIFT+ドラッグで移動。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/leatrix-plus">Leatrix Plus (Dragonflight)</a> ⭐</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/LoggingChat">LoggingChat</a> ⭐<br>チャット内容をファイルに出力します。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/lui">LUI Core</a> ⭐⭐🐜<br>UIを統合的に変更できます。Dragonflightエクスパンション対応の際に一部が再実装されているようです。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/minimapbuttonbag-reborn-mmb-reborn">MinimapButtonBag Reborn (MBB Reborn)</a> ⭐⭐<br>ミニマップのアイコンを集約してくれて便利です。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/narcissus">Narcissus</a> ⭐<br>キャラクタをArmory のように表示してくれてかっこいいです。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/pawn">Pawn</a> ⭐</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/prat-3-0">Prat</a> ⭐</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/rarescanner">RareScanner</a> ⭐⭐</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/talent-tree-tweaks">Talent Tree Tweaks | Dragonflight</a> ⭐</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/talenttree-viewer">Talent Tree Viewer (calculator) | Dragonflight</a> ⭐</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/tiptac-reborn">TipTac Reborn</a> ⭐⭐<br>ツールチップにスペックを表示するために使っています。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/trinket-menu">TrinketMenu</a> 🐜<br>装備中のトリンケットを表示します。メンテナンスされていないのでItemRackで代替。</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/weakauras-2">WeakAuras</a> ⭐⭐⭐</li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/wow/addons/wim-3">WIM</a> ⭐⭐<br>ウィスパーを別ウィンドウで表示します。</li>
+</ul>
+<h4 id="使用中のWeakAuras-スクリプト"><a href="#使用中のWeakAuras-スクリプト" class="headerlink" title="使用中のWeakAuras スクリプト"></a>使用中のWeakAuras スクリプト</h4><ul>
+<li><p><a target="_blank" rel="noopener" href="https://wago.io/jNjrKl3US/50">Funki’s Clickable Raid Buffs (Dragonflight)</a> ⭐⭐⭐<br>Party&#x2F;RaidのBuff のリマインダです。これ一個であらゆるクラスがサポートされているようです。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://wago.io/sl3JkGN7T">Iskaar Community Feast Tracker</a> ⭐⭐<br>3時間30分毎に開催されるCommunity Feast イベントの待ち時間や終了までの時間を表示します。</p>
+</li>
+</ul>
+<h3 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h3><h4 id="LUI-のイシュー-暫定対策あり"><a href="#LUI-のイシュー-暫定対策あり" class="headerlink" title="LUI のイシュー(暫定対策あり)"></a>LUI のイシュー(暫定対策あり)</h4><ul>
+<li>player ユニットフレームのEvoker のClassPower の数が誤っている<figure class="highlight lua"><figcaption><span>LUI&#x2F;modules&#x2F;unitframes&#x2F;layout&#x2F;layout.lua</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1720</span><br><span class="line">1721</span><br><span class="line">1722</span><br><span class="line">1723</span><br><span class="line">1724</span><br><span class="line">1725</span><br><span class="line">1726</span><br><span class="line">1727</span><br><span class="line">1728</span><br><span class="line">1729</span><br><span class="line">1730</span><br><span class="line">1731</span><br></pre></td><td class="code"><pre><span class="line">ClassPower = <span class="function"><span class="keyword">function</span><span class="params">(self, unit, oufdb)</span></span></span><br><span class="line">    <span class="keyword">local</span> BASE_COUNT = &#123;</span><br><span class="line">        MAGE = <span class="number">4</span>,</span><br><span class="line">        MONK = <span class="number">5</span>,</span><br><span class="line">        PALADIN = <span class="number">5</span>,</span><br><span class="line">        ROGUE = <span class="number">5</span>,</span><br><span class="line">        WARLOCK = <span class="number">5</span>,</span><br><span class="line">        DRUID = <span class="number">5</span>,</span><br><span class="line marked">        <span class="comment">-- EVOKER = 5,</span></span><br><span class="line marked">        EVOKER = <span class="number">6</span>,</span><br><span class="line">        DEFAULT = <span class="number">5</span>,</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<li>maintank ユニットフレームが表示されない<br><code>LUI/modules/unitframes/options/toggle.js</code>で”Maintank”を”maintank”に置換する(7か所)</li>
+<li>boss ユニットフレームのヘルスバーの色が保存されない<br>ログイン後にヘルスバーの色の設定を手動で別の値に変更する</li>
+</ul>
+<h4 id="LUI-のイシュー-調査中"><a href="#LUI-のイシュー-調査中" class="headerlink" title="LUI のイシュー(調査中)"></a>LUI のイシュー(調査中)</h4><ul>
+<li>target ユニットフレームのデバフ表示がおかしい？無効にしても別の一式の表示が残る？</li>
+<li>Guild MOTD (Message of the Day) の文字数が多い場合にギルドメンバ名と重なる場合がある</li>
+</ul>
+<h4 id="LUI-Unitframe-Saved-Variable-2023-01-04"><a href="#LUI-Unitframe-Saved-Variable-2023-01-04" class="headerlink" title="LUI Unitframe Saved Variable (2023-01-04)"></a>LUI Unitframe Saved Variable (2023-01-04)</h4><figure class="highlight lua"><figcaption><span>C:\Program Files (x86)\World of Warcraft\_retail_\WTF\Account\Account Name\SavedVariables\LUI.lua</span></figcaption><table><tr><td class="code"><pre><span class="line">[<span class="string">&quot;player&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;HealthText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Y&quot;</span>] = <span class="number">0</span>,</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;Point&quot;</span>] = <span class="string">&quot;TOPRIGHT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;RelativePoint&quot;</span>] = <span class="string">&quot;TOPRIGHT&quot;</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;Portrait&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;Alpha&quot;</span>] = <span class="number">1</span>,</span><br><span class="line">		[<span class="string">&quot;Width&quot;</span>] = <span class="number">150</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;PowerText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Y&quot;</span>] = <span class="number">0</span>,</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;target&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;Portrait&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;Alpha&quot;</span>] = <span class="number">1</span>,</span><br><span class="line">		[<span class="string">&quot;Width&quot;</span>] = <span class="number">150</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;Aura&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Buffs&quot;</span>] = &#123;</span><br><span class="line">			[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">false</span>,</span><br><span class="line">		&#125;,</span><br><span class="line">		[<span class="string">&quot;Debuffs&quot;</span>] = &#123;</span><br><span class="line">			[<span class="string">&quot;PlayerOnly&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;NameText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;X&quot;</span>] = <span class="number">0</span>,</span><br><span class="line">		[<span class="string">&quot;Point&quot;</span>] = <span class="string">&quot;TOPLEFT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;RelativePoint&quot;</span>] = <span class="string">&quot;BOTTOMLEFT&quot;</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;HealthText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Y&quot;</span>] = <span class="number">0</span>,</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;Point&quot;</span>] = <span class="string">&quot;TOPRIGHT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;RelativePoint&quot;</span>] = <span class="string">&quot;TOPRIGHT&quot;</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;PowerText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Y&quot;</span>] = <span class="number">0</span>,</span><br><span class="line">		[<span class="string">&quot;Format&quot;</span>] = <span class="string">&quot;Standard Short&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;Point&quot;</span>] = <span class="string">&quot;BOTTOMRIGHT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;RelativePoint&quot;</span>] = <span class="string">&quot;BOTTOMRIGHT&quot;</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;focus&quot;</span>] = &#123;</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;targettargettarget&quot;</span>] = &#123;</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;boss&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;X&quot;</span>] = <span class="number">-30</span>,</span><br><span class="line">	[<span class="string">&quot;Y&quot;</span>] = <span class="number">-300</span>,</span><br><span class="line">	[<span class="string">&quot;HealthBar&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;IndividualColor&quot;</span>] = &#123;</span><br><span class="line">			[<span class="string">&quot;r&quot;</span>] = <span class="number">1</span>,</span><br><span class="line">			[<span class="string">&quot;g&quot;</span>] = <span class="number">0</span>,</span><br><span class="line">			[<span class="string">&quot;b&quot;</span>] = <span class="number">0</span>,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;RaidMarkerIndicator&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">36</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;HealthPercentText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;RelativePoint&quot;</span>] = <span class="string">&quot;RIGHT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;Point&quot;</span>] = <span class="string">&quot;RIGHT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">14</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;NameText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Point&quot;</span>] = <span class="string">&quot;LEFT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;RelativePoint&quot;</span>] = <span class="string">&quot;LEFT&quot;</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;party&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;GroupRoleIndicator&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">36</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;LeaderIndicator&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">36</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;NameText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;ColorByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;maintank&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">	[<span class="string">&quot;X&quot;</span>] = <span class="number">-30</span>,</span><br><span class="line">	[<span class="string">&quot;Y&quot;</span>] = <span class="number">250</span>,</span><br><span class="line">	[<span class="string">&quot;Padding&quot;</span>] = <span class="number">16</span>,</span><br><span class="line">	[<span class="string">&quot;RaidMarkerIndicator&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">36</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;HealthPercentText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;RelativePoint&quot;</span>] = <span class="string">&quot;RIGHT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;Point&quot;</span>] = <span class="string">&quot;RIGHT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">14</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;NameText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;X&quot;</span>] = <span class="number">10</span>,</span><br><span class="line">		[<span class="string">&quot;Point&quot;</span>] = <span class="string">&quot;LEFT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;RelativePoint&quot;</span>] = <span class="string">&quot;LEFT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;ColorClassByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;ColorNameByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;ColorByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;maintanktarget&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;NameText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;X&quot;</span>] = <span class="number">10</span>,</span><br><span class="line">		[<span class="string">&quot;Point&quot;</span>] = <span class="string">&quot;LEFT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;RelativePoint&quot;</span>] = <span class="string">&quot;LEFT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;ColorClassByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;ColorNameByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;ColorByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;RaidMarkerIndicator&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">36</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;HealthPercentText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;RelativePoint&quot;</span>] = <span class="string">&quot;RIGHT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;Point&quot;</span>] = <span class="string">&quot;RIGHT&quot;</span>,</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">14</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;arenapet&quot;</span>] = &#123;</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;arenatarget&quot;</span>] = &#123;</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;raid&quot;</span>] = &#123;</span><br><span class="line">	[<span class="string">&quot;LeaderIndicator&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">20</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;RaidMarkerIndicator&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">20</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;GroupRoleIndicator&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;Enable&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">		[<span class="string">&quot;Size&quot;</span>] = <span class="number">20</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	[<span class="string">&quot;NameText&quot;</span>] = &#123;</span><br><span class="line">		[<span class="string">&quot;ColorByClass&quot;</span>] = <span class="literal">true</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;,</span><br><span class="line">[<span class="string">&quot;Settings&quot;</span>] = &#123;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/3d/"><span class="card-category-list-name">3d</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/"><span class="card-category-list-name">android</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/application/"><span class="card-category-list-name">application</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cms/"><span class="card-category-list-name">cms</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/conky/"><span class="card-category-list-name">conky</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/develop/"><span class="card-category-list-name">develop</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/dtv/"><span class="card-category-list-name">dtv</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/editor/"><span class="card-category-list-name">editor</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/mermaid/" style="font-size: 1.1em; color: #999">mermaid</a> <a href="/tags/openproject-ce/" style="font-size: 1.1em; color: #999">openproject-ce</a> <a href="/tags/remixos/" style="font-size: 1.1em; color: #999">remixos</a> <a href="/tags/freemind/" style="font-size: 1.15em; color: #999b9e">freemind</a> <a href="/tags/threejs/" style="font-size: 1.15em; color: #999b9e">threejs</a> <a href="/tags/irrlicht/" style="font-size: 1.3em; color: #99a1ac">irrlicht</a> <a href="/tags/qwen3/" style="font-size: 1.1em; color: #999">qwen3</a> <a href="/tags/raytrace/" style="font-size: 1.1em; color: #999">raytrace</a> <a href="/tags/android/" style="font-size: 1.25em; color: #999fa7">android</a> <a href="/tags/android-studio/" style="font-size: 1.1em; color: #999">android-studio</a> <a href="/tags/mutter/" style="font-size: 1.1em; color: #999">mutter</a> <a href="/tags/utterances/" style="font-size: 1.1em; color: #999">utterances</a> <a href="/tags/neutralinojs/" style="font-size: 1.35em; color: #99a3b1">neutralinojs</a> <a href="/tags/mern/" style="font-size: 1.1em; color: #999">mern</a> <a href="/tags/openvpn/" style="font-size: 1.25em; color: #999fa7">openvpn</a> <a href="/tags/windows/" style="font-size: 1.45em; color: #99a7ba">windows</a> <a href="/tags/hi10go/" style="font-size: 1.1em; color: #999">hi10go</a> <a href="/tags/chinachu/" style="font-size: 1.2em; color: #999da3">chinachu</a> <a href="/tags/vue/" style="font-size: 1.1em; color: #999">vue</a> <a href="/tags/minecraft/" style="font-size: 1.25em; color: #999fa7">minecraft</a> <a href="/tags/ags/" style="font-size: 1.1em; color: #999">ags</a> <a href="/tags/handbrake/" style="font-size: 1.1em; color: #999">handbrake</a> <a href="/tags/hyprland/" style="font-size: 1.2em; color: #999da3">hyprland</a> <a href="/tags/qwmu/" style="font-size: 1.1em; color: #999">qwmu</a> <a href="/tags/lutris/" style="font-size: 1.15em; color: #999b9e">lutris</a> <a href="/tags/manjaro/" style="font-size: 1.1em; color: #999">manjaro</a> <a href="/tags/calamares/" style="font-size: 1.1em; color: #999">calamares</a> <a href="/tags/gtk-3/" style="font-size: 1.2em; color: #999da3">gtk+3</a> <a href="/tags/wine/" style="font-size: 1.1em; color: #999">wine</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/virt-manager/" style="font-size: 1.15em; color: #999b9e">virt-manager</a> <a href="/tags/unity3d/" style="font-size: 1.4em; color: #99a5b6">unity3d</a> <a href="/tags/utc/" style="font-size: 1.1em; color: #999">utc</a> <a href="/tags/feedbro/" style="font-size: 1.1em; color: #999">feedbro</a> <a href="/tags/alg/" style="font-size: 1.1em; color: #999">alg</a> <a href="/tags/vscode-reveal/" style="font-size: 1.1em; color: #999">vscode-reveal</a> <a href="/tags/wsl/" style="font-size: 1.5em; color: #99a9bf">wsl</a> <a href="/tags/windows-terminal/" style="font-size: 1.15em; color: #999b9e">windows-terminal</a> <a href="/tags/lain/" style="font-size: 1.1em; color: #999">lain</a> <a href="/tags/fedora/" style="font-size: 1.25em; color: #999fa7">fedora</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              December 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              November 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              October 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/07/">
+            <span class="card-archive-list-date">
+              July 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              June 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              May 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              April 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              March 2025
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

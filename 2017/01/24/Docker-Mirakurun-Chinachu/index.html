@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Docker Mirakurun Chinachu | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="https:&#x2F;&#x2F;github.com&#x2F;Chinachu&#x2F;docker-mirakurun-chinachuUbuntu 16.10 の環境でDocker Mirakurun Chinachu を使ってみました。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker Mirakurun Chinachu">
+<meta property="og:url" content="https://ktkr3d.github.io/2017/01/24/Docker-Mirakurun-Chinachu/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="https:&#x2F;&#x2F;github.com&#x2F;Chinachu&#x2F;docker-mirakurun-chinachuUbuntu 16.10 の環境でDocker Mirakurun Chinachu を使ってみました。">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
+<meta property="article:published_time" content="2017-01-24T13:14:00.000Z">
+<meta property="article:modified_time" content="2017-01-24T13:14:00.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="chinachu">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="mirakurun">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/avatar.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Docker Mirakurun Chinachu",
+  "url": "https://ktkr3d.github.io/2017/01/24/Docker-Mirakurun-Chinachu/",
+  "image": "https://ktkr3d.github.io/images/avatar.png",
+  "datePublished": "2017-01-24T13:14:00.000Z",
+  "dateModified": "2017-01-24T13:14:00.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2017/01/24/Docker-Mirakurun-Chinachu/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Docker Mirakurun Chinachu',
+  isHighlightShrink: undefined,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">Docker Mirakurun Chinachu</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Docker Mirakurun Chinachu</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2017-01-24T13:14:00.000Z" title="Created 2017-01-24 22:14:00">2017-01-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2017-01-24T13:14:00.000Z" title="Updated 2017-01-24 22:14:00">2017-01-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/dtv/">dtv</a></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p><a target="_blank" rel="noopener" href="https://github.com/Chinachu/docker-mirakurun-chinachu">https://github.com/Chinachu/docker-mirakurun-chinachu</a><br>Ubuntu 16.10 の環境でDocker Mirakurun Chinachu を使ってみました。</p>
+<span id="more"></span>
+
+<ol>
+<li>Docker のインストール</li>
+</ol>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install curl</span><br><span class="line">$ curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
+<p>  Docker Engine がインストールされない&#x2F;バージョンが古い場合は以下とすると良いかもしれない。<br>  <figure class="highlight ini"><figcaption><span>/etc/apt/sources.list.d/docker.list</span></figcaption><table><tr><td class="code"><pre><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial main</span><br><span class="line">deb <span class="section">[arch=amd64]</span> https://apt.dockerproject.org/repo ubuntu-xenial testing</span><br></pre></td></tr></table></figure><br>2. Docker Compose のインストール<br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.9.0/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure><br>3. PT3 Driver のインストール<br>  ホストOS(Ubuntu)にPT3ドライバをインストールする。最近のUbuntu は標準PT3 ドライバが入っているので無効にしてからインストールする。<br>	<figure class="highlight tap"><table><tr><td class="code"><pre><span class="line">$ lsmod | grep pt3</span><br><span class="line">earth_pt3             <span class="number"> 22846 </span> 0</span><br><span class="line">dvb_core             <span class="number"> 125865 </span><span class="number"> 2 </span>tc90522,earth_pt3</span><br></pre></td></tr></table></figure><br>	<figure class="highlight ini"><figcaption><span>/etc/modprobe.d/blacklist-earth_pt3.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">blacklist earth_pt3</span><br></pre></td></tr></table></figure><br>	<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/m-tsudo/pt3.git</span><br><span class="line">$ <span class="built_in">cd</span> pt3/</span><br><span class="line">$ make clean &amp;&amp; make</span><br><span class="line">$ <span class="built_in">sudo</span> make install</span><br><span class="line">$ <span class="built_in">sudo</span> <span class="variable">$&#123;SHELL&#125;</span> ./dkms.install</span><br><span class="line">$ <span class="built_in">sudo</span> reboot</span><br></pre></td></tr></table></figure><br>	<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">ls</span> -l /dev/pt*video*</span><br><span class="line">crw-rw-rw- 1 root video 246, 0 Jun 26 16:07 /dev/pt3video0</span><br><span class="line">crw-rw-rw- 1 root video 246, 1 Jun 26 16:07 /dev/pt3video1</span><br><span class="line">crw-rw-rw- 1 root video 246, 2 Jun 26 16:07 /dev/pt3video2</span><br><span class="line">crw-rw-rw- 1 root video 246, 3 Jun 26 16:07 /dev/pt3video3</span><br></pre></td></tr></table></figure><br>4. pcscd の無効化<br>  pcscd はDocker コンテナ内で動作するので、ホストOS では無効にする。<br>	<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> systemctl stop pcscd.socket</span><br><span class="line">$ <span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> pcscd.socket</span><br></pre></td></tr></table></figure><br>5. docker-mirakurun-chinachu の取得<br>	<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/h-mineta/docker-mirakurun-chinachu.git</span><br><span class="line">$ <span class="built_in">cd</span> docker-mirakurun-chinachu</span><br></pre></td></tr></table></figure><br>6. docker-compose.yml の設定<br>  Ubuntu ではマルチキャストDNS(5353&#x2F;tcp)が競合するので、とりあえず別のポート番号に変更する。無効にしてもよいかもしれない。<br>  <figure class="highlight yaml"><figcaption><span>./docker-compose.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">chinachu:</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;15353:5353/udp&quot;</span></span><br></pre></td></tr></table></figure><br>  録画フォルダを指定<br>  <figure class="highlight yaml"><figcaption><span>./docker-compose.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">chinachu:</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/PATH/TO/RECORDED:/usr/local/chinachu/recorded</span></span><br></pre></td></tr></table></figure><br>  録画フォルダのパーミッションを変更<br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">chmod</span> 777 /PATH/TO/RECORDED</span><br></pre></td></tr></table></figure><br>7. chinachu の設定<br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> ./chinachu/config.sample.json ./chinachu/conf/config.json</span><br></pre></td></tr></table></figure><br>  サーバをIPアドレス指定にしてみる。<br>  <figure class="highlight json"><figcaption><span>./chinachu/conf/config.json</span></figcaption><table><tr><td class="code"><pre><span class="line"># <span class="attr">&quot;mirakurunPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://container-mirakurun:40772/&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;mirakurunPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://192.168.11.2:40772/&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure><br>8. 一旦起動<br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker-compose up -d</span><br></pre></td></tr></table></figure><br>9. <strong>mirakurun コンテナで</strong> チャンネルをスキャン<br>	mirakurun コンテナ上でチャンネルをスキャンする。Kitematic 等のフロントエンドからシェルを起動してもよいです。<br>	<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it mirakurun sh</span><br><span class="line"><span class="comment"># which recpt1</span></span><br><span class="line"><span class="comment"># for var in `seq 13 62` ; do recpt1 $var 5 /tmp/$var.ts;done</span></span><br><span class="line"><span class="comment"># ls /tmp/*.ts</span></span><br><span class="line"><span class="comment"># rm /tmp/*.ts</span></span><br></pre></td></tr></table></figure><br>10. チャンネル設定<br>	スキャンした結果をmirakurun の設定に反映する。見つかったチャンネル数分繰り返す。<br>	<figure class="highlight yaml"><figcaption><span>./mirakurun/conf/channels.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CH13</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">GR</span></span><br><span class="line">  <span class="attr">channel:</span> <span class="string">&#x27;13&#x27;</span></span><br></pre></td></tr></table></figure><br>11. docker-mirakurun-chinachu の再起動<br>	<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker-compose down</span><br><span class="line">$ docker-compose up -d</span><br></pre></td></tr></table></figure><br>12. docker-mirakurun-chinachu の自動起動化<br>  安定して動作するようになったら、自動起動してもよいかもしれない。<br>  <figure class="highlight yaml"><figcaption><span>./docker-compose.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mirakurun:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">chinachu:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br></pre></td></tr></table></figure><br>13. KODI アドオンの導入<br>  <a target="_blank" rel="noopener" href="https://github.com/Harekaze/pvr.chinachu">https://github.com/Harekaze/pvr.chinachu</a></p>
+<ul>
+<li>ダウンロードとビルド<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/Harekaze/pvr.chinachu.git</span><br><span class="line">$ <span class="built_in">cd</span> pvr.chinachu</span><br><span class="line">$ ./bootstrap</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ <span class="built_in">ls</span> pvr.chinachu.*.zip</span><br></pre></td></tr></table></figure></li>
+<li>インストール<br>KODI を起動して、[システム]-[設定]-[アドオン]-[zipファイルからインストール]メニューでzipファイルを指定してインストール</li>
+<li>設定<br>[システム]-[設定]-[アドオン]-[My Add-ons]-[PVRクライアント]-[Harekaze(Chinachu PVR Client)]-[設定]<ul>
+<li>Chinachu WUI のURL<br><a target="_blank" rel="noopener" href="http://192.168.11.2:10772/">http://192.168.11.2:10772/</a></li>
+<li>MirakurunのURL(あれば)<br><a target="_blank" rel="noopener" href="http://192.168.11.2:40772/">http://192.168.11.2:40772/</a></li>
+</ul>
+</li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/chinachu/">chinachu</a><a class="post-meta__tags" href="/tags/docker/">docker</a><a class="post-meta__tags" href="/tags/mirakurun/">mirakurun</a></div><div class="post-share"><div class="social-share" data-image="/images/avatar.png" data-sites="facebook,twitter,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2017/02/04/Docker-Mist-io/" title=" Docker Mist.io"><img class="cover" src="/images/docker-mistio.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2"> Docker Mist.io</div></div><div class="info-2"><div class="info-item-1"> https://github.com/mistio/mist.iohttps://hub.docker.com/r/mist/mistio/ Mist.io は様々な環境を統合的に管理できるWebアプリのようです。Docker 版があったので試してみました。   Docker 環境の準備http://ktkr3d.github.io/Docker/ Docker Compose 設定ファイルの作成扱いやすいようにDocker Compose で起動できるようにします。 docker-compose.ymlversion: &#x27;2&#x27;services:  mistio:    restart: always    image: mist/mistio    container_name: mistio    ports:      - &quot;8000:8000&quot; $ docker-compose up -d  管理対象の追加Docker、KVM、Linuxサーバを追加してみました。  各方式のマシンが並列に表示されます。  Android からのア...</div></div></div></a><a class="pagination-related" href="/2016/12/30/My-Docker-Hexo/" title="My Docker Hexo"><img class="cover" src="/images/docker-hexo.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">My Docker Hexo</div></div><div class="info-2"><div class="info-item-1">  https://github.com/ktkr3d/docker-hexo  Hexo をDocker Compose を使って動かしてみました。   Dockerfile の準備node:alpine をベースにテーマで使用するモジュール群と、Web から更新するためのhexo-adminを追加しています。 ./DockerfileFROM node:alpineMAINTAINER ktkr3d &lt;ktkr3d@gmail.com&gt;WORKDIR /hexoRUN \  apk add --no-cache git openssh-client \  &amp;&amp; npm install hexo-cli -g \  &amp;&amp; hexo init . \  &amp;&amp; npm install \  &amp;&amp; npm install hexo-generator-sitemap --save \  &amp;&amp; npm install hexo-generator-feed --save \  &amp;&amp...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/07/03/Jellyfin/" title="Jellyfin"><img class="cover" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Jellyfin_-_icon-transparent.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-03</div><div class="info-item-2">Jellyfin</div></div><div class="info-2"><div class="info-item-1">メディアサーバJellyfinを使ってみました。今まで散らばっていた大量のメディアファイルを整理することができました。また、インターネットラジオやMirakurunと連携したテレビ番組の視聴ができました。                                     Jellyfin             The Free Software Media System  2025-12-07https://github.com/jellyfin/jellyfin/issues/15419https://github.com/jellyfin/jellyfin/pull/15557インターネットラジオが再生されなくなったバグが10.11.4で修正されたようです。アップデートして動作することを確認しました。 2025-11-29 JellyfinでライブTV視聴の是正https://www.hitoha.moe/fix-jellyfin-live-tv//etc/jellyfin/jellyfin.envJELLYFIN_FFmpeg__probesize=8M  2025...</div></div></div></a><a class="pagination-related" href="/2019/08/21/RPi4-Redmine/" title="RPi4 - Docker Redmine"><img class="cover" src="/images/rpi4-docker-redmine.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-08-21</div><div class="info-item-2">RPi4 - Docker Redmine</div></div><div class="info-2"><div class="info-item-1">RPi4 のDocker 上にRedmine の環境を構築しました。Portainer のApp Templates を利用しました。   Redmine コンテナの構築Portainer でRedmine コンテナを作成 Portainer を開く  http://192.168.11.19:9000 App Templates からRedmine を選択 Name redmine を指定 + show advanced options ボタンを押下 Port mapping 10080 を指定 Deploy the container ボタンを押下  コンテナへのログイン方法 Containers redmine コンテナの&gt;_(exec console) Command /bin/bash User redmine Connect  コンテナの再起動方法 Containers redmine コンテナをチェック Restart  Redmine の環境設定Redmine へのログイン Redmine を開くhttp://192.168.11.19:10080 admi...</div></div></div></a><a class="pagination-related" href="/2019/07/13/Raspberry-Pi-4B-Ubuntu-18-04-2-64bit/" title="Raspberry Pi 4B + Ubuntu 18.04.2 64bit"><img class="cover" src="/images/rpi4_docker_portainer.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-07-13</div><div class="info-item-2">Raspberry Pi 4B + Ubuntu 18.04.2 64bit</div></div><div class="info-2"><div class="info-item-1">https://blog.cloudkernels.net/posts/rpi4-64bit-virt/https://news.ycombinator.com/item?id=20410169Raspberry Pi 4B 用のUbuntu Server 18.04.2 64bit のイメージが公開されていたので試してみました。Docker 環境も構築されています。 UPDATE: 2019&#x2F;7&#x2F;14 軽量なイメージが公開されました。     https://cloudkernels.net/ubuntu-18.04.2-preinstalled-server-arm64+raspi4+kvm.img.xz   環境構築準備 Raspberry Pi 4B SDカード 32GB https://cloudkernels.net/rpi4-64-bit-kvm-docker.img.xz etcher で書き込み(2.5GB が8.07GB に展開される) 初回ブートに時間がかかる or reboot しないといけないかも root のパスワードは無し pi,...</div></div></div></a><a class="pagination-related" href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation&#x2F;Mirakurun on WSL"><img class="cover" src="/images/epgstation.drawio.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-12</div><div class="info-item-2">EPGStation&#x2F;Mirakurun on WSL</div></div><div class="info-2"><div class="info-item-1">https://github.com/l3tnun/EPGStationhttps://github.com/Chinachu/MirakurunChianchu の調子が悪くなったのでEPGStation に乗り換えてみました。EPGStation とMirakurun をWSL 上に構築しました。   環境 ソフトウェア構成  Windows 10 Insider Preview build 20161 WSL (Ubuntu 20.04 LTS) node v14.4.0 EPGStation 1.7.0 Mirakurun 3.2.0   npm 6.14.5 pm2 4.4.0 ffmpeg 4.2.2 python 2.7.18rc1 gcc 9.3.0   BonRecTest 1.0.0 Kodi 18.6 PVR IPTV Simple Client 3.9.8       ディレクトリ配置     if (!window.google) {     document.body.innerHTML = 'You need to include the scrip...</div></div></div></a><a class="pagination-related" href="/2025/04/06/WireGuard-Easy-wg-easy/" title="WireGuard Easy (wg-easy)"><img class="cover" src="https://www.logo.wine/a/logo/WireGuard/WireGuard-Icon-Logo.wine.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-04-06</div><div class="info-item-2">WireGuard Easy (wg-easy)</div></div><div class="info-2"><div class="info-item-1">WireGuard Easy(wg-easy)でVPN環境を構築してみました。Dockerであることと設定に必要な項目が少ないことから構築で迷うことはありません。細かな制御をしたい場合は設定ファイルを直接編集するようなことが必要かもしれません。      環境  Raspberry Pi 4B Ubuntu 24.10 (arm64) docker 2.0.4 Portainer Community Edition 2.27.3 LTS WireGuard Easy (wg-easy) v14.0.0 v6プラス回線  構築v6プラス回線の調査 公開IPv4アドレスと公開IPv6アドレスを確認  https://test-ipv6.com/ 公開IPv6アドレスから公開可能なポート番号を確認  http://ipv4.web.fc2.com/map-e.html 公開ポート番号を決定  例えば60000&#x2F;udp    wireguardの使用プロトコルはudpです。   wireguardを構築するサーバのローカルIPアドレスを確認    ip a   例えば192.1...</div></div></div></a><a class="pagination-related" href="/2018/12/05/Ghost-on-Docker/" title="Ghost on Docker"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2018-12-05</div><div class="info-item-2">Ghost on Docker</div></div><div class="info-2"><div class="info-item-1">Web ベースでDocker の管理ができるPortainer でブログシステムGhost のDocker コンテナを利用してみました。GUI だけで構築するなんてお手軽ですね。しかも、Ghost は高速らしいですね。   Ghost Docker コンテナの起動 Portainer 画面http://192.168.11.6:9000 Add Templateメニュー Ghostをクリック しばらく待つ コンテナが起動したらポート番号を確認32768  設定http://192.168.11.6:32768/admin 記事投稿http://192.168.11.6:32768/ghost Todo リンクのurlの補正 github へのデプロイ  </div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

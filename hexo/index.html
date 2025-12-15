@@ -1,0 +1,706 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="HexoとButterflyテーマを利用しています。 HexoHexoはNode.js製の高速でシンプルかつ強力なブログフレームワークです。  ButterflyA Simple and Card UI Design theme for Hexo    構築 n(nodejs, npm) https:&#x2F;&#x2F;github.com&#x2F;tj&#x2F;n  curl -L https:&#x2F;&#x2F;bit.ly&#x2F;n-insta">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://ktkr3d.github.io/hexo/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="HexoとButterflyテーマを利用しています。 HexoHexoはNode.js製の高速でシンプルかつ強力なブログフレームワークです。  ButterflyA Simple and Card UI Design theme for Hexo    構築 n(nodejs, npm) https:&#x2F;&#x2F;github.com&#x2F;tj&#x2F;n  curl -L https:&#x2F;&#x2F;bit.ly&#x2F;n-insta">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
+<meta property="article:published_time" content="2025-03-17T00:01:39.000Z">
+<meta property="article:modified_time" content="2025-07-02T23:44:20.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/hexo/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Hexo</h1></header><main class="layout" id="content-inner"><div id="page"><div class="page-title">Hexo</div><div class="container" id="article-container"><p><a target="_blank" rel="noopener" href="https://hexo.io/ja/">Hexo</a>と<a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a>テーマを利用しています。</p>
+<a href="https://hexo.io/ja/" target="_blank" rel="nofollow" class="link-preview"><div class="og-image"><img src="https://hexo.io/icon/og-image-wide.png" alt="" class="not-gallery-item" loading="lazy"></div><div class="descriptions"><div class="og-title">Hexo</div><div class="og-description">HexoはNode.js製の高速でシンプルかつ強力なブログフレームワークです。</div></div></a>
+
+<a href="https://butterfly.js.org/en/" target="_blank" rel="nofollow" class="link-preview"><div class="og-image"><img src="https://butterfly.js.org/en/img/butterfly-icon.png" alt="" class="not-gallery-item" loading="lazy"></div><div class="descriptions"><div class="og-title">Butterfly</div><div class="og-description">A Simple and Card UI Design theme for Hexo</div></div></a>
+
+<!--
+### 環境 (2025-03-18 時点)
+
+ モジュール|利用バージョン|最新バージョン|
+ :-|:-|:-
+ [Hexo](https://github.com/hexojs/hexo/releases)|6.3.0 (2022-09-08)|7.3.0 (2024-07-01)
+ [Butterfly](https://github.com/jerryc127/hexo-theme-butterfly/releases)|4.12.0 (2023-12-30)|5.3.5 (2025-03-04)
+-->
+
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><ol>
+<li><p>n(nodejs, npm)<br> <a target="_blank" rel="noopener" href="https://github.com/tj/n">https://github.com/tj/n</a></p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -L https://bit.ly/n-install | bash</span><br></pre></td></tr></table></figure>
+ <div class="note info flat"><p>~&#x2F;.bashrc の末尾に一行追加されます</p>
+</div>
+</li>
+<li><p>hexo</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>hexo-theme-butterfly (+ hexo-renderer-pug hexo-renderer-stylus)</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly hexo-renderer-pug hexo-renderer-stylus</span><br><span class="line"><span class="built_in">cp</span> ./node_modules/hexo-theme-butterfly/_config.yml _config.butterfly.yml</span><br></pre></td></tr></table></figure>
+ <figure class="highlight yml"><figcaption><span>./_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">butterfly</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>hexoサーバを起動</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ブラウザで表示<br> <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></p>
+</li>
+<li><p>カスタマイズ<br> <a href="https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/">https://ktkr3d.github.io/2023/12/09/Hexo-Theme-Butterfly/</a></p>
+</li>
+</ol>
+<h3 id="タグプラグイン"><a href="#タグプラグイン" class="headerlink" title="タグプラグイン"></a>タグプラグイン</h3><a href="https://hexo.io/plugins/" target="_blank" rel="nofollow" class="link-preview"><div class="og-image"><img src="https://hexo.io/icon/og-image-wide.png" alt="" class="not-gallery-item" loading="lazy"></div><div class="descriptions"><div class="og-title">Plugins</div><div class="og-description">Hexo is a fast, simple &amp; powerful blog framework powered by Node.js.</div></div></a>
+
+
+<h4 id="Hexo-tag-plugins"><a href="#Hexo-tag-plugins" class="headerlink" title="Hexo tag plugins"></a>Hexo tag plugins</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/ja/docs/tag-plugins">hexo</a><br>  blockquote(quote) code(codeblock) iframe img(image) include_code(include-code) link(a, anchor) post_path post_link asset_path asset_link asset_img(asset_image) pullquote url_for full_url_for</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-tag-embed">hexo-tag-embed</a><br>  gist jsfiddle vimeo youtube</li>
+</ul>
+<h4 id="Theme-tag-plugins"><a href="#Theme-tag-plugins" class="headerlink" title="Theme tag plugins"></a>Theme tag plugins</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://butterfly.js.org/en/posts/butterfly-docs-en-tag-plugins/">hexo-theme-butterfly</a><br>  button chartjs flink gallery hide inlineImg label mermaid note score series tabs timeline</li>
+</ul>
+<h4 id="Custom-tag-plugins"><a href="#Custom-tag-plugins" class="headerlink" title="Custom tag plugins"></a>Custom tag plugins</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/Akilarlxh/hexo-butterfly-tag-plugins-plus">hexo-butterfly-tag-plugins-plus</a><br>  btns bubble carousel checkbox folding ghcard image inline-labels link media notation poem progress reference site-card span tip</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/JoJoJotarou/hexo-github-repo-tag">hexo-github-repo-tag</a><br>  githubrepo</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/superalsrk/hexo-pdf">hexo-pdf</a><br>  pdf</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-tag-bootstrap">hexo-tag-bootstrap</a><br>  alert badge btn card carddeck cardgroup carousel col container input jumbo label modalbtn modal pill row textcolor</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/nkmk/hexo-tag-github-code">hexo-tag-github-code</a><br>  ghcode</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/juampi92/hexo-tag-googlecharts">hexo-tag-google-charts</a><br>  google-charts</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/h-sugawara/hexo-tag-ogp-link-preview">hexo-tag-ogp-link-preview</a><br>  link-preview</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/jorgeabad/hexo-tag-table-bootstrap">hexo-tag-table-bootstrap</a><br>  table</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/tea3/hexo-tag-twitter">hexo-tag-twitter</a><br>  twitter  <div class="note info flat"><p>URLの<code>x.com</code>を<code>twitter.com</code>に置換すれば利用可能</p>
+</div></li>
+</ul>
+<h4 id="Custom-filter"><a href="#Custom-filter" class="headerlink" title="Custom filter"></a>Custom filter</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams">hexo-filter-mermaid-diagrams</a><br>  バックティックコードブロックで言語に<code>mermaid</code>を指定する</li>
+</ul>
+<h3 id="コードブロック"><a href="#コードブロック" class="headerlink" title="コードブロック"></a>コードブロック</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/ja/docs/tag-plugins#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF">https://hexo.io/ja/docs/tag-plugins#コードブロック</a></p>
+<ul>
+<li><p>構文</p>
+  <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">```<span class="selector-attr">[language]</span> <span class="selector-attr">[title]</span> <span class="selector-attr">[url]</span> <span class="selector-attr">[link text]</span></span><br><span class="line"><span class="selector-tag">code</span> snippet</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>Markdownの囲みコードブロック(バックティックコードブロック)構文の場合は追加オプションがない</p>
+</div>
+  <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock <span class="selector-attr">[title]</span> <span class="selector-attr">[lang:language]</span> <span class="selector-attr">[url]</span> <span class="selector-attr">[link text]</span> <span class="selector-attr">[additional options]</span> %&#125;</span><br><span class="line"><span class="selector-tag">code</span> snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;% <span class="selector-tag">code</span> <span class="selector-attr">[title]</span> <span class="selector-attr">[lang:language]</span> <span class="selector-attr">[url]</span> <span class="selector-attr">[link text]</span> <span class="selector-attr">[additional options]</span> %&#125;</span><br><span class="line"><span class="selector-tag">code</span> snippet</span><br><span class="line">&#123;% endcode %&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>highlight.js でサポートされている言語<br>  <a target="_blank" rel="noopener" href="https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md">https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">主な言語</th>
+<th align="left">エイリアス</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Bash</td>
+<td align="left">bash, sh, zsh</td>
+</tr>
+<tr>
+<td align="left">DOS</td>
+<td align="left">dos, bat, cmd</td>
+</tr>
+<tr>
+<td align="left">Fish</td>
+<td align="left">無いのでshで代替</td>
+</tr>
+<tr>
+<td align="left">HTML, XML</td>
+<td align="left">xml, html, xhtml, rss, atom, xjb, xsd, xsl, plist, svg</td>
+</tr>
+<tr>
+<td align="left">Ini, TOML</td>
+<td align="left">ini, toml</td>
+</tr>
+<tr>
+<td align="left">JavaScript</td>
+<td align="left">javascript, js, jsx</td>
+</tr>
+<tr>
+<td align="left">Lua</td>
+<td align="left">lua, pluto</td>
+</tr>
+<tr>
+<td align="left">Markdown</td>
+<td align="left">markdown, md, mkdown, mkd</td>
+</tr>
+<tr>
+<td align="left">OpenGL Shading Language</td>
+<td align="left">glsl</td>
+</tr>
+<tr>
+<td align="left">Plaintext</td>
+<td align="left">plaintext, txt, text</td>
+</tr>
+<tr>
+<td align="left">PowerShell</td>
+<td align="left">powershell, ps, ps1</td>
+</tr>
+<tr>
+<td align="left">Stylus</td>
+<td align="left">stylus, styl</td>
+</tr>
+<tr>
+<td align="left">TypeScript</td>
+<td align="left">typescript, ts, tsx, mts, cts</td>
+</tr>
+<tr>
+<td align="left">YAML</td>
+<td align="left">yml, yaml</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>追加オプション</p>
+<table>
+<thead>
+<tr>
+<th align="left">オプション</th>
+<th align="left">説明</th>
+<th align="left">デフォルト</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">line_number</td>
+<td align="left">行番号を表示</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">line_threshold</td>
+<td align="left">コードブロックの行数がこの閾値を超える場合にのみ行番号を表示</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">highlight</td>
+<td align="left">コードのハイライトを有効にする</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">first_line</td>
+<td align="left">最初の行番号を指定</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">mark</td>
+<td align="left">コンマ区切りで指定された行をハイライト。 範囲指定にはハイフンを使用<br />例: <code>mark:1,4-7,10</code>は行1、4から7、10をマークします。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">wrap</td>
+<td align="left">コードブロックを<code>&lt;table&gt;</code>でラップ</td>
+<td align="left">true</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="ヘッダなし表"><a href="#ヘッダなし表" class="headerlink" title="ヘッダなし表"></a>ヘッダなし表</h3><p>HTMLでタグのオミットを駆使する</p>
+<ul>
+<li>構文  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">style</span>=<span class="string">&quot;background: #f5f6f8&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>URL<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">tt</span>&gt;</span>https://www.shadertoy.com/view/XtlSD7</span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">style</span>=<span class="string">&quot;background: #f5f6f8&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>FILE<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">tt</span>&gt;</span>$HOME/.config/ghostty/shaders/mario.glsl</span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>固定幅フォントにしたい場合は<code>&lt;tt&gt;</code>タグを使う</p>
+</div></li>
+<li>表示例  <table>
+  <tr><td style="background: #f5f6f8"><b>URL<td><tt>https://www.shadertoy.com/view/XtlSD7
+  <tr><td style="background: #f5f6f8"><b>FILE<td><tt>$HOME/.config/ghostty/shaders/mario.glsl
+  </table></li>
+</ul>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><ul>
+<li><p>構文</p>
+  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;&gt; 引用の引用</span><br><span class="line"><span class="quote">&gt; 引用</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>表示例</p>
+<blockquote>
+<p>引用</p>
+</blockquote>
+<blockquote>
+<p>引用</p>
+<blockquote>
+<p>引用</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<h3 id="注記"><a href="#注記" class="headerlink" title="注記"></a>注記</h3><ul>
+<li><p>構文</p>
+  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] [style] %&#125;</span><br><span class="line">Any content (support inline tags too.io).</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+  <div class="note no-icon flat"><ul>
+<li>class<br>  default &#x2F; primary &#x2F; success &#x2F; info &#x2F; warning &#x2F; danger</li>
+<li>no-icon<br>  no-icon</li>
+<li>style<br>  simple &#x2F; modern &#x2F; flat &#x2F; disabled</li>
+</ul>
+</div>
+  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note [color] [icon] [style] %&#125;</span><br><span class="line">Any content (support inline tags too.io).</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+  <div class="note no-icon flat"><ul>
+<li>color<br>  default &#x2F; blue &#x2F; pink &#x2F; red &#x2F; purple &#x2F; orange &#x2F; green</li>
+<li>icon<br>  FontAwesome icons &#x2F; no-icon</li>
+<li>style<br>  simple &#x2F; modern &#x2F; flat &#x2F; disabled</li>
+</ul>
+</div></li>
+<li><p>表示例 (class)</p>
+  <div class="note default flat"><p>注記メッセージ (default)</p>
+</div>
+
+  <div class="note primary flat"><p>注記メッセージ (primary)</p>
+</div>
+
+  <div class="note info flat"><p>注記メッセージ (info)</p>
+</div>
+
+  <div class="note success flat"><p>注記メッセージ (success)</p>
+</div>
+
+  <div class="note warning flat"><p>注記メッセージ (warning)</p>
+</div>
+
+  <div class="note danger flat"><p>注記メッセージ (danger)</p>
+</div></li>
+<li><p>表示例 (color、no-icon)</p>
+  <div class="note blue no-icon flat"><p>注記メッセージ (blue)</p>
+</div>
+
+  <div class="note pink no-icon flat"><p>注記メッセージ (pink)</p>
+</div>
+
+  <div class="note red no-icon flat"><p>注記メッセージ (red)</p>
+</div>
+
+  <div class="note purple no-icon flat"><p>注記メッセージ (purple)</p>
+</div>
+
+  <div class="note orange no-icon flat"><p>注記メッセージ (orange)</p>
+</div>
+
+  <div class="note green no-icon flat"><p>注記メッセージ (green)</p>
+</div>
+</li>
+<li><p>表示例 (icon: no-icon)</p>
+  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note no-icon %&#125;</span><br><span class="line">#### 見出し</span><br><span class="line">注記メッセージ (指定なし)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+  <div class="note no-icon flat"><h4 id="見出し"><a href="#見出し" class="headerlink" title="見出し"></a>見出し</h4><p>注記メッセージ (指定なし)</p>
+</div></li>
+<li><p>表示例 (color: blue, icon: ‘fas fa-bullhorn’, style: simple)</p>
+  <div class="note blue icon-padding simple"><i class="note-icon fas fa-bullhorn"></i><p>2021 is coming soon….</p>
+</div></li>
+</ul>
+<h3 id="キーボード"><a href="#キーボード" class="headerlink" title="キーボード"></a>キーボード</h3><ul>
+<li>構文  <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span>F12<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>表示例<br>  <kbd>F12</kbd></li>
+</ul>
+<h3 id="Google-Charts"><a href="#Google-Charts" class="headerlink" title="Google Charts"></a>Google Charts</h3><p><a href="https://ktkr3d.github.io/2019/06/26/Hexo-Tag-Google-Charts/">https://ktkr3d.github.io/2019/06/26/Hexo-Tag-Google-Charts/</a></p>
+<h4 id="ソート可能な表"><a href="#ソート可能な表" class="headerlink" title="ソート可能な表"></a>ソート可能な表</h4><ul>
+<li>構文  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts Table 100% 100% %&#125;</span><br><span class="line">テーブル名</span><br><span class="line">&#123;&quot;showRowNumber&quot;: true&#125;</span><br><span class="line">&#x27;Name&#x27;, &#x27;Salary&#x27;, &#x27;Full Time Employee&#x27;</span><br><span class="line">&#x27;Mike&#x27;,  &#123;v: 10000, f: &#x27;$10,000&#x27;&#125;, true</span><br><span class="line">&#x27;Jim&#x27;,   &#123;v:8000,   f: &#x27;$8,000&#x27;&#125;,  false</span><br><span class="line">&#x27;Alice&#x27;, &#123;v: 12500, f: &#x27;$12,500&#x27;&#125;, true</span><br><span class="line">&#x27;Bob&#x27;,   &#123;v: 7000,  f: &#x27;$7,000&#x27;&#125;,  true</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>テーブル名は表示されない。</p>
+</div></li>
+<li>表示例  <div id="googleChart4559"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.Table(document.getElementById("googleChart4559"))).draw(google.visualization.arrayToDataTable([['Name', 'Salary', 'Full Time Employee'],['Mike',  {v: 10000, f: '$10,000'}, true],['Jim',   {v:8000,   f: '$8,000'},  false],['Alice', {v: 12500, f: '$12,500'}, true],['Bob',   {v: 7000,  f: '$7,000'},  true]]),{"showRowNumber":true,"title":"No title","width":"100%","height":"100%"});
+      });
+    })();
+  }
+</script></li>
+</ul>
+<h4 id="バーチャート"><a href="#バーチャート" class="headerlink" title="バーチャート"></a>バーチャート</h4><ul>
+<li>構文  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts BarChart 100% 100% %&#125;</span><br><span class="line">チャート名</span><br><span class="line">&#123; &quot;isStacked&quot;: true, &quot;legend&quot;: &#123;&quot;position&quot;: &quot;top&quot; &#125;&#125;</span><br><span class="line">&#x27;Name&#x27;, &#x27;EFI&#x27;, &#x27;Reserve&#x27;, &#x27;Win&#x27;, &#x27;Ubuntu&#x27;, &#x27;Recovery&#x27;</span><br><span class="line">&#x27;出荷時&#x27;, 10, 10, 447, 0, 10</span><br><span class="line">&#x27;再構成&#x27;, 10, 10, 365, 82, 10</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>チャート名を設定しないと<code>No title</code>と表示される。不要な場合は半角空白を設定する。</p>
+</div></li>
+<li>表示例  <div id="googleChart1098"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.BarChart(document.getElementById("googleChart1098"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI', 'Reserve', 'Win', 'Ubuntu', 'Recovery'],['出荷時', 10, 10, 447, 0, 10],['再構成', 10, 10, 365, 82, 10]]),{"isStacked":true,"legend":{"position":"top"},"title":"チャート名","width":"100%","height":"100%"});
+      });
+    })();
+  }
+</script></li>
+</ul>
+<h3 id="Youtube動画の引用"><a href="#Youtube動画の引用" class="headerlink" title="Youtube動画の引用"></a>Youtube動画の引用</h3><ul>
+<li>構文  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% youtube nGdBKGPp-OE %&#125;</span><br></pre></td></tr></table></figure></li>
+<li>表示例</li>
+</ul>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/nGdBKGPp-OE" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<h3 id="Gistの引用"><a href="#Gistの引用" class="headerlink" title="Gistの引用"></a>Gistの引用</h3><ul>
+<li>構文  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% gist 9add6d3f7a0ef4e4c488 timesync.sh %&#125;</span><br></pre></td></tr></table></figure></li>
+<li>表示例  <script src="//gist.github.com/9add6d3f7a0ef4e4c488.js?file=timesync.sh"></script></li>
+</ul>
+<h3 id="レンダリング抑止"><a href="#レンダリング抑止" class="headerlink" title="レンダリング抑止"></a>レンダリング抑止</h3><ul>
+<li>構文  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p><a target="_blank" rel="noopener" href="https://hexo.io/ja/docs/tag-plugins#Raw">https://hexo.io/ja/docs/tag-plugins#Raw</a><br>記事の一部のコンテンツが処理中に問題を起こす場合、rawタグでラップしてレンダリングエラーを回避します。</p>
+</div></li>
+</ul>
+<h3 id="emoji"><a href="#emoji" class="headerlink" title="emoji"></a>emoji</h3><p><a target="_blank" rel="noopener" href="https://www.webfx.com/tools/emoji-cheat-sheet/">https://www.webfx.com/tools/emoji-cheat-sheet/</a></p>
+<ul>
+<li>使いそうなemoji  <div style="font-size: 2em">
+  🙂⭐☂❤️🔥⚡⚽🎲🔔🔖✉✏️📝📋🔒💣🧰🔧💡🔍✅✔❌🚧❓
+  </div></li>
+<li>使うかもしれないemoji  <div style="font-size: 2em">
+  😲💦👏🎉⚠⚙🏁🚩🍄🐟🍎🍓🍞🥚🍙🍦🎂🌏🏠🚂🚗🚚🚲✈⏰☀🌙☁🌈💧🏆🎵🎤🎧📞☎🛠❗🔴⚫⚪🔓🔎
+  </div></li>
+</ul>
+<h3 id="サイトリンクカード"><a href="#サイトリンクカード" class="headerlink" title="サイトリンクカード"></a>サイトリンクカード</h3><ul>
+<li>Open Graph プロトコル対応の場合  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% link_perview ★URL★ %&#125;</span><br><span class="line">★URL★</span><br><span class="line">&#123;% endlink_perview %&#125;</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p><a target="_blank" rel="noopener" href="https://toolsaday.com/seo/open-graph">https://toolsaday.com/seo/open-graph</a><br>URLがOpen Grapfプロトコルに対応しているかチェックできます</p>
+</div></li>
+<li>Open Graph プロトコル非対応の場合  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;★URL★&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;external nofollow noopener noreferrer&quot;</span> <span class="attr">class</span>=<span class="string">&quot;link-preview&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;og-image&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;★IMAGE URL★&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;★TITLE★&quot;</span> <span class="attr">class</span>=<span class="string">&quot;not-gallery-item&quot;</span> <span class="attr">loading</span>=<span class="string">&quot;lazy&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;descriptions&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;og-title&quot;</span>&gt;</span>★TITLE★<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;og-description&quot;</span>&gt;</span>★DESCRIPTION★<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="GitHub-Card"><a href="#GitHub-Card" class="headerlink" title="GitHub Card"></a>GitHub Card</h3><ul>
+<li>リポジトリ  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;github-card&quot;</span> <span class="attr">data-github</span>=<span class="string">&quot;lepture/github-cards&quot;</span> <span class="attr">data-width</span>=<span class="string">&quot;100%&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  <div class="github-card" data-github="lepture/github-cards" data-width="100%"></div>
+  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script></li>
+<li>ユーザ  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;github-card&quot;</span> <span class="attr">data-github</span>=<span class="string">&quot;lepture&quot;</span> <span class="attr">data-width</span>=<span class="string">&quot;100%&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  <div class="github-card" data-github="lepture" data-width="100%"></div>
+  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script></li>
+</ul>
+<h3 id="コメント"><a href="#コメント" class="headerlink" title="コメント"></a>コメント</h3><ul>
+<li>HTMLを生成しない  <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">[<span class="symbol">これはコメントです。</span>]:<span class="link">#</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line"><span class="code">    これは</span></span><br><span class="line"><span class="code">    複数行の</span></span><br><span class="line"><span class="code">    コメントです。</span></span><br><span class="line"><span class="code">]:#</span></span><br></pre></td></tr></table></figure></li>
+<li>HTMLを生成する  <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&lt;!--</span><br><span class="line"><span class="code">    コメント</span></span><br><span class="line"><span class="code">--&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A7%8B%E7%AF%89"><span class="toc-number">1.</span> <span class="toc-text">構築</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%BF%E3%82%B0%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3"><span class="toc-number">2.</span> <span class="toc-text">タグプラグイン</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Hexo-tag-plugins"><span class="toc-number">2.1.</span> <span class="toc-text">Hexo tag plugins</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Theme-tag-plugins"><span class="toc-number">2.2.</span> <span class="toc-text">Theme tag plugins</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Custom-tag-plugins"><span class="toc-number">2.3.</span> <span class="toc-text">Custom tag plugins</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Custom-filter"><span class="toc-number">2.4.</span> <span class="toc-text">Custom filter</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF"><span class="toc-number">3.</span> <span class="toc-text">コードブロック</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%98%E3%83%83%E3%83%80%E3%81%AA%E3%81%97%E8%A1%A8"><span class="toc-number">4.</span> <span class="toc-text">ヘッダなし表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E8%A8%98"><span class="toc-number">6.</span> <span class="toc-text">注記</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%8B%E5%87%BA%E3%81%97"><span class="toc-number">6.1.</span> <span class="toc-text">見出し</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89"><span class="toc-number">7.</span> <span class="toc-text">キーボード</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-Charts"><span class="toc-number">8.</span> <span class="toc-text">Google Charts</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%BD%E3%83%BC%E3%83%88%E5%8F%AF%E8%83%BD%E3%81%AA%E8%A1%A8"><span class="toc-number">8.1.</span> <span class="toc-text">ソート可能な表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88"><span class="toc-number">8.2.</span> <span class="toc-text">バーチャート</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Youtube%E5%8B%95%E7%94%BB%E3%81%AE%E5%BC%95%E7%94%A8"><span class="toc-number">9.</span> <span class="toc-text">Youtube動画の引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gist%E3%81%AE%E5%BC%95%E7%94%A8"><span class="toc-number">10.</span> <span class="toc-text">Gistの引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%AC%E3%83%B3%E3%83%80%E3%83%AA%E3%83%B3%E3%82%B0%E6%8A%91%E6%AD%A2"><span class="toc-number">11.</span> <span class="toc-text">レンダリング抑止</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#emoji"><span class="toc-number">12.</span> <span class="toc-text">emoji</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%B5%E3%82%A4%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%AB%E3%83%BC%E3%83%89"><span class="toc-number">13.</span> <span class="toc-text">サイトリンクカード</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GitHub-Card"><span class="toc-number">14.</span> <span class="toc-text">GitHub Card</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88"><span class="toc-number">15.</span> <span class="toc-text">コメント</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/3d/"><span class="card-category-list-name">3d</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/"><span class="card-category-list-name">android</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/application/"><span class="card-category-list-name">application</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cms/"><span class="card-category-list-name">cms</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/conky/"><span class="card-category-list-name">conky</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/develop/"><span class="card-category-list-name">develop</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/dtv/"><span class="card-category-list-name">dtv</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/editor/"><span class="card-category-list-name">editor</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/mermaid/" style="font-size: 1.1em; color: #999">mermaid</a> <a href="/tags/openproject-ce/" style="font-size: 1.1em; color: #999">openproject-ce</a> <a href="/tags/remixos/" style="font-size: 1.1em; color: #999">remixos</a> <a href="/tags/freemind/" style="font-size: 1.15em; color: #999b9e">freemind</a> <a href="/tags/threejs/" style="font-size: 1.15em; color: #999b9e">threejs</a> <a href="/tags/irrlicht/" style="font-size: 1.3em; color: #99a1ac">irrlicht</a> <a href="/tags/qwen3/" style="font-size: 1.1em; color: #999">qwen3</a> <a href="/tags/raytrace/" style="font-size: 1.1em; color: #999">raytrace</a> <a href="/tags/android/" style="font-size: 1.25em; color: #999fa7">android</a> <a href="/tags/android-studio/" style="font-size: 1.1em; color: #999">android-studio</a> <a href="/tags/mutter/" style="font-size: 1.1em; color: #999">mutter</a> <a href="/tags/utterances/" style="font-size: 1.1em; color: #999">utterances</a> <a href="/tags/neutralinojs/" style="font-size: 1.35em; color: #99a3b1">neutralinojs</a> <a href="/tags/mern/" style="font-size: 1.1em; color: #999">mern</a> <a href="/tags/openvpn/" style="font-size: 1.25em; color: #999fa7">openvpn</a> <a href="/tags/windows/" style="font-size: 1.45em; color: #99a7ba">windows</a> <a href="/tags/hi10go/" style="font-size: 1.1em; color: #999">hi10go</a> <a href="/tags/chinachu/" style="font-size: 1.2em; color: #999da3">chinachu</a> <a href="/tags/vue/" style="font-size: 1.1em; color: #999">vue</a> <a href="/tags/minecraft/" style="font-size: 1.25em; color: #999fa7">minecraft</a> <a href="/tags/ags/" style="font-size: 1.1em; color: #999">ags</a> <a href="/tags/handbrake/" style="font-size: 1.1em; color: #999">handbrake</a> <a href="/tags/hyprland/" style="font-size: 1.2em; color: #999da3">hyprland</a> <a href="/tags/qwmu/" style="font-size: 1.1em; color: #999">qwmu</a> <a href="/tags/lutris/" style="font-size: 1.15em; color: #999b9e">lutris</a> <a href="/tags/manjaro/" style="font-size: 1.1em; color: #999">manjaro</a> <a href="/tags/calamares/" style="font-size: 1.1em; color: #999">calamares</a> <a href="/tags/gtk-3/" style="font-size: 1.2em; color: #999da3">gtk+3</a> <a href="/tags/wine/" style="font-size: 1.1em; color: #999">wine</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/virt-manager/" style="font-size: 1.15em; color: #999b9e">virt-manager</a> <a href="/tags/unity3d/" style="font-size: 1.4em; color: #99a5b6">unity3d</a> <a href="/tags/utc/" style="font-size: 1.1em; color: #999">utc</a> <a href="/tags/feedbro/" style="font-size: 1.1em; color: #999">feedbro</a> <a href="/tags/alg/" style="font-size: 1.1em; color: #999">alg</a> <a href="/tags/vscode-reveal/" style="font-size: 1.1em; color: #999">vscode-reveal</a> <a href="/tags/wsl/" style="font-size: 1.5em; color: #99a9bf">wsl</a> <a href="/tags/windows-terminal/" style="font-size: 1.15em; color: #999b9e">windows-terminal</a> <a href="/tags/lain/" style="font-size: 1.1em; color: #999">lain</a> <a href="/tags/fedora/" style="font-size: 1.25em; color: #999fa7">fedora</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              December 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              November 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              October 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/07/">
+            <span class="card-archive-list-date">
+              July 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              June 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              May 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              April 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              March 2025
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

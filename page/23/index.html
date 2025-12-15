@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Memorandum">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Memorandum!">
+<meta property="og:url" content="https://ktkr3d.github.io/page/23/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="Memorandum">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
+<meta property="article:author" content="ktkr3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/page/23/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Memorandum!',
+  isHighlightShrink: undefined,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Memorandum!</h1></header><main class="layout" id="content-inner"><div class="recent-posts nc masonry" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover"><a href="/2016/01/23/Ubuntu-16-04-LTS-Daily-Build-on-Inspiron-3158/" title="Ubuntu 16.04 LTS Daily Build on Inspiron 3158"><img class="post-bg" src="/images/ubuntu-gnome-16.04-screen-rotation-lock.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ubuntu 16.04 LTS Daily Build on Inspiron 3158"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/23/Ubuntu-16-04-LTS-Daily-Build-on-Inspiron-3158/" title="Ubuntu 16.04 LTS Daily Build on Inspiron 3158">Ubuntu 16.04 LTS Daily Build on Inspiron 3158</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2016-01-23T11:17:08.000Z" title="Created 2016-01-23 20:17:08">2016-01-23</time></span></div><div class="content"> Ubuntu 16.04 LTS Daily Build をDELL Inspiron 11 3158 にインストールしてみました。 GNOME Shell 3.20(3.19.x)では、画面回転のロックボタン(右から3番目)が付きました。ロックを解除した状態でPC本体を傾けると画面が回転します。ロックを有効にした状態では、画面は回転しません。 https://ossnews.net/s/dtuuxr/mutter_3_19_4 - Support screen rotation when supported by the driver [Carlos; #745079]    Ubuntu GNOME 16.04 のインストールhttp://cdimage.ubuntu.com/ubuntu-gnome/daily-live/current/  corebird が標準リポジトリに追加されたらしい  GNOME 3.20(3.19.x) への更新$ sudo add-apt-repository ppa:gnome3-team/gnome3$ sudo add-apt-rep...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2016/01/16/resize-kvm-virtual-disk/" title="Resize KVM Virtual Disk"><img class="post-bg" src="/images/resize-kvm-disk.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Resize KVM Virtual Disk"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/16/resize-kvm-virtual-disk/" title="Resize KVM Virtual Disk">Resize KVM Virtual Disk</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2016-01-16T13:53:16.000Z" title="Created 2016-01-16 22:53:16">2016-01-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/vm/">vm</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/kvm/">kvm</a></span></div><div class="content">KVM の仮想マシンのディスク空き容量が少なくなってきたので、ディスク容量を8GBから10GBに拡張しました。  スナップショットの削除仮想マシンを停止した後に、仮想マシンマネージャーでスナップショットを削除します。スナップショットがあるとディスク容量を拡張できないようです。 仮想イメージファイルの拡張$ sudo qemu-img resize ubuntu-gnome-16.04.img 10GImage resized. 絶対値の場合は10GBのように指定し、相対値の場合は+2GBのように偏差を指定します。 Live ISO 起動に設定変更仮想マシンマネージャーで、gparted を含むLive ISO で起動するように設定変更します。  デバイスIDE CDROM 1で、ソースパスにISO イメージを接続します。私はUbuntu GNOME 16.04 のISO を使用しました。 Boot Optionsで、起動デバイスをIDE CDROM 1にします。  パーティションを変更仮想マシンをLive ISO で起動し、gparted でパーティションを変更して、仮想マシンを...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2016/01/16/GNOME-Software-on-Ubuntu-GNOME-16-04/" title="GNOME Software on Ubuntu GNOME 16.04"><img class="post-bg" src="/images/gnome-software.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GNOME Software on Ubuntu GNOME 16.04"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/16/GNOME-Software-on-Ubuntu-GNOME-16-04/" title="GNOME Software on Ubuntu GNOME 16.04">GNOME Software on Ubuntu GNOME 16.04</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2016-01-16T12:53:01.000Z" title="Created 2016-01-16 21:53:01">2016-01-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/os/">os</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/gnome/">gnome</a></span></div><div class="content">https://launchpad.net/~ubuntu-desktop/+archive/ubuntu/gnome-software Ubuntu 16.04 ではUbuntu ソフトウェアセンター(software-center)に代わってGNOME ソフトウェア(gnome-software)がデフォルトになるようですね。試してみました。   GNOME ソフトウェアのインストール$ sudo add-apt-repository ppa:ubuntu-desktop/gnome-software$ sudo apt-get update$ sudo apt-get install gnome-software </div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2016/01/15/Antergos-GNOME-3-19/" title="Antergos + GNOME 3.19"><img class="post-bg" src="/images/antergos_gnome_3.19.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Antergos + GNOME 3.19"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/15/Antergos-GNOME-3-19/" title="Antergos + GNOME 3.19">Antergos + GNOME 3.19</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2016-01-14T17:44:42.000Z" title="Created 2016-01-15 02:44:42">2016-01-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/os/">os</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/antergos/">antergos</a></span></div><div class="content">http://softwareperonista.com.ar/repo/archlinux/gnome-devel/ Arch Linux の派生ディストリビューションAntergos Linux のGNOME を3.18 から3.19 にアップグレードしてみました。   gnome-devel リポジトリの追加/etc/pacman.conf[gnome-devel]SigLevel = Optional TrustAllServer = http://softwareperonista.com.ar/repo/archlinux/gnome-devel/x86_64 [gnome-devel]行は、既存の[core]行より上に追加すると優先されるようです。 gnome-devel キーの取り込み$ wget http://softwareperonista.com.ar/repo/archlinux/gnome-devel/gnome-devel.key$ sudo pacman-key --add gnome-devel.key  パッケージのアップグレード$ sudo ...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2016/01/11/Ubuntu-GNOME-16-04-GNOME-3-19-3/" title="Ubuntu GNOME 16.04 + GNOME 3.19.3"><img class="post-bg" src="/images/ubuntu_gnome_16.04_gnome_3.19.3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ubuntu GNOME 16.04 + GNOME 3.19.3"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/11/Ubuntu-GNOME-16-04-GNOME-3-19-3/" title="Ubuntu GNOME 16.04 + GNOME 3.19.3">Ubuntu GNOME 16.04 + GNOME 3.19.3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2016-01-10T18:46:04.000Z" title="Created 2016-01-11 03:46:04">2016-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/os/">os</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ubuntu-gnome/">ubuntu-gnome</a></span></div><div class="content">http://cdimage.ubuntu.com/ubuntu-gnome/daily-live/https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3?field.series_filter=xenialhttps://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging?field.series_filter=xenialUbuntu GNOME 16.04 のデイリービルドにppa:gnome3-team&#x2F;gnome3-staging を適用してGNOME Shell 3.19.3 の環境を構築してみました。gdm3 の更新版が公開されていないので、ディスプレイマネージャをlightdm に切り替えました。 EDIT:gdm3 はppa:ricotz&#x2F;testing で提供されていました。 $ sudo add-apt-repository ppa:ricotz/testing$ sudo apt-get update$ sudo ...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2016/01/04/Fedora-rawhide/" title="Fedora Rawhide"><img class="post-bg" src="/images/fedora_rawhide.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Fedora Rawhide"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/04/Fedora-rawhide/" title="Fedora Rawhide">Fedora Rawhide</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2016-01-04T11:40:31.000Z" title="Created 2016-01-04 20:40:31">2016-01-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/os/">os</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/fedora/">fedora</a></span></div><div class="content">https://fedoraproject.org/wiki/Releases/Rawhidehttps://fedoraproject.org/wiki/DNF_system_upgrade 新しいGNOME 3.20(3.19)を試すために、Fedora Rawhide の仮想環境を構築してみました。私がダウンロードした日のFedora Rawhide のライブISO ではインストーラが途中で止まってしまったので、Fedora 23 の環境からアップグレードしました。   Fedora 23 のインストールhttps://getfedora.org/ja/workstation/download/ Fedora Rawhide へのアップグレード$ sudo dnf update --refresh$ sudo dnf install dnf-plugin-system-upgrade$ sudo dnf system-upgrade download --releasever=rawhide --nogpgcheck$ sudo dnf system-upgrade reb...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2015/12/31/Connect-to-remote-virtual-machines/" title="Connect to remote virtual machines"><img class="post-bg" src="/images/virt-manager.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Connect to remote virtual machines"></a></div><div class="recent-post-info"><a class="article-title" href="/2015/12/31/Connect-to-remote-virtual-machines/" title="Connect to remote virtual machines">Connect to remote virtual machines</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2015-12-31T09:05:18.000Z" title="Created 2015-12-31 18:05:18">2015-12-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/vm/">vm</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/vm/">vm</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/virt-manager/">virt-manager</a></span></div><div class="content">https://virt-manager.org/ KVM で仮想環境を構築して、リモートPC からアクセスしてみました。 ゲストOS の作成と環境設定には仮想マシンマネージャー(virt-manager)を使いました。リモートPC からアクセスしてもサウンドは有効です。 GNOME Boxes からもアクセスできます。    目次  システム構成 サーバPC: Ubuntu GNOME 15.10 リモートPC: Ubuntu GNOME 15.10  サーバPC の設定 パッケージのインストール  $ sudo apt-get install openssh-server kvm libvirt-bin bridge-utils virt-manager  仮想環境の作成仮想マシンマネージャー(virt-manager)でサーバPC 上にゲストOS をインストールします。リモートPC の環境が構築済みであれば、リモートPC からでも作業できます。  [システムツール]-[仮想マシンマネージャー]を選択 [ファイル]-[新しい仮想マシン]を選択 画面の指示に従ってOS をインス...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2015/12/14/atom-toolbar/" title="Atom Toolbar"><img class="post-bg" src="/images/atom-toolbar.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Atom Toolbar"></a></div><div class="recent-post-info"><a class="article-title" href="/2015/12/14/atom-toolbar/" title="Atom Toolbar">Atom Toolbar</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2015-12-13T21:54:00.000Z" title="Created 2015-12-14 06:54:00">2015-12-14</time></span></div><div class="content">https://atom.io/packages/flex-tool-bar Atom のツールバーを設定してみました。   パッケージのインストール$ apm install tool-bar flex-tool-bar  ツールバーの内容   コマンド 機能    application:new-file 新規ファイル   application:open-file ファイルを開く   core:save 保存   window:reload 再読み込み   command-palette:toggle コマンドパレットの開閉   ktkr3d:datetime 日付時刻の挿入   settings-view:open 設定   window:toggle-dev-tools デべロッパーツール   pane:split-right 横に分割   pane:split-down 縦に分割   tree-view:toggle ツリービューの開閉   minimap:toggle ミニマップの開閉   git-control:toggle Git Control の開閉   m...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2015/11/01/UEFI-Multiboot-Windows10-Ubuntu-15-10-Android-x86-5-1/" title="UEFI Multiboot Windows10, Ubuntu 15.10, Android-x86 5.1"><img class="post-bg" src="/images/dell-inspiron-11-3000-modes.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="UEFI Multiboot Windows10, Ubuntu 15.10, Android-x86 5.1"></a></div><div class="recent-post-info"><a class="article-title" href="/2015/11/01/UEFI-Multiboot-Windows10-Ubuntu-15-10-Android-x86-5-1/" title="UEFI Multiboot Windows10, Ubuntu 15.10, Android-x86 5.1">UEFI Multiboot Windows10, Ubuntu 15.10, Android-x86 5.1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2015-11-01T00:42:12.000Z" title="Created 2015-11-01 09:42:12">2015-11-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/os/">os</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/inspiron/">inspiron</a></span></div><div class="content">Inspiron 11 3158 (skylake Core i3-6100U, SSD 128GB)を入手したので、マルチブート環境を構築してみました。   Fast Boot を抑止 Windows ボタンを右クリックして、[電源オプション]押下 [電源ボタンの動作を選択する]押下 [現在利用可能ではない設定を変更します]押下 [高速スタートアップを有効にする(推奨)]のチェックを外し、[変更の保存]押下 Windows 10 をシャットダウンします。  Ubuntu のインストール 以下の64bit 版Ubuntu のISO をUnetbootin でUSB メモリに書き込み、USB スロットに挿入します。http://cdimage.ubuntu.com/ubuntu-gnome/releases/15.10/release/ubuntu-gnome-15.10-desktop-amd64.iso  USB からUbuntu をライブモードで起動します。PC のボリュームマイナスボタンを押しながら、電源ボタンを押下し、ロゴが出たタイミングでマイナスボタンを離します。  g...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2015/10/19/Proxy-Authentication-Settings-in-bash/" title="Proxy Authentication Settings in bash">Proxy Authentication Settings in bash</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2015-10-19T13:42:13.000Z" title="Created 2015-10-19 22:42:13">2015-10-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/util/">util</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/bash/">bash</a></span></div><div class="content">bash で認証プロキシを使うためのエイリアスを作ってみました。 認証プロキシサーバがproxy.example.com で、ポート番号が8080 の場合、以下のように設定します。なお、~/.bash_aliases は~/.bashrc から読み込まれるようになっています。 ~/.bash_aliasesalias proxy=&#x27;read -p &quot;user: &quot; proxy_user &amp;&amp; read -sp &quot;pass: &quot; proxy_pass &amp;&amp; echo &amp;&amp; export &#123;http,https,ftp&#125;_proxy=&quot;http://$proxy_user:$proxy_pass@proxy.example.com:8080&quot;&#x27;    使用$ proxyuser: hogepass:$ env | grep proxyhttp_proxy=http://hoge:fuga@proxy.example.com:8080ftp...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/22/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/#content-inner">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/#content-inner">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/#content-inner">49</a><a class="extend next" rel="next" href="/page/24/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/3d/"><span class="card-category-list-name">3d</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/"><span class="card-category-list-name">android</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/application/"><span class="card-category-list-name">application</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cms/"><span class="card-category-list-name">cms</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/conky/"><span class="card-category-list-name">conky</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/develop/"><span class="card-category-list-name">develop</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/dtv/"><span class="card-category-list-name">dtv</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/editor/"><span class="card-category-list-name">editor</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/mermaid/" style="font-size: 1.1em; color: #999">mermaid</a> <a href="/tags/openproject-ce/" style="font-size: 1.1em; color: #999">openproject-ce</a> <a href="/tags/remixos/" style="font-size: 1.1em; color: #999">remixos</a> <a href="/tags/freemind/" style="font-size: 1.15em; color: #999b9e">freemind</a> <a href="/tags/threejs/" style="font-size: 1.15em; color: #999b9e">threejs</a> <a href="/tags/irrlicht/" style="font-size: 1.3em; color: #99a1ac">irrlicht</a> <a href="/tags/qwen3/" style="font-size: 1.1em; color: #999">qwen3</a> <a href="/tags/raytrace/" style="font-size: 1.1em; color: #999">raytrace</a> <a href="/tags/android/" style="font-size: 1.25em; color: #999fa7">android</a> <a href="/tags/android-studio/" style="font-size: 1.1em; color: #999">android-studio</a> <a href="/tags/mutter/" style="font-size: 1.1em; color: #999">mutter</a> <a href="/tags/utterances/" style="font-size: 1.1em; color: #999">utterances</a> <a href="/tags/neutralinojs/" style="font-size: 1.35em; color: #99a3b1">neutralinojs</a> <a href="/tags/mern/" style="font-size: 1.1em; color: #999">mern</a> <a href="/tags/openvpn/" style="font-size: 1.25em; color: #999fa7">openvpn</a> <a href="/tags/windows/" style="font-size: 1.45em; color: #99a7ba">windows</a> <a href="/tags/hi10go/" style="font-size: 1.1em; color: #999">hi10go</a> <a href="/tags/chinachu/" style="font-size: 1.2em; color: #999da3">chinachu</a> <a href="/tags/vue/" style="font-size: 1.1em; color: #999">vue</a> <a href="/tags/minecraft/" style="font-size: 1.25em; color: #999fa7">minecraft</a> <a href="/tags/ags/" style="font-size: 1.1em; color: #999">ags</a> <a href="/tags/handbrake/" style="font-size: 1.1em; color: #999">handbrake</a> <a href="/tags/hyprland/" style="font-size: 1.2em; color: #999da3">hyprland</a> <a href="/tags/qwmu/" style="font-size: 1.1em; color: #999">qwmu</a> <a href="/tags/lutris/" style="font-size: 1.15em; color: #999b9e">lutris</a> <a href="/tags/manjaro/" style="font-size: 1.1em; color: #999">manjaro</a> <a href="/tags/calamares/" style="font-size: 1.1em; color: #999">calamares</a> <a href="/tags/gtk-3/" style="font-size: 1.2em; color: #999da3">gtk+3</a> <a href="/tags/wine/" style="font-size: 1.1em; color: #999">wine</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/virt-manager/" style="font-size: 1.15em; color: #999b9e">virt-manager</a> <a href="/tags/unity3d/" style="font-size: 1.4em; color: #99a5b6">unity3d</a> <a href="/tags/utc/" style="font-size: 1.1em; color: #999">utc</a> <a href="/tags/feedbro/" style="font-size: 1.1em; color: #999">feedbro</a> <a href="/tags/alg/" style="font-size: 1.1em; color: #999">alg</a> <a href="/tags/vscode-reveal/" style="font-size: 1.1em; color: #999">vscode-reveal</a> <a href="/tags/wsl/" style="font-size: 1.5em; color: #99a9bf">wsl</a> <a href="/tags/windows-terminal/" style="font-size: 1.15em; color: #999b9e">windows-terminal</a> <a href="/tags/lain/" style="font-size: 1.1em; color: #999">lain</a> <a href="/tags/fedora/" style="font-size: 1.25em; color: #999fa7">fedora</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              December 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              November 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              October 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/07/">
+            <span class="card-archive-list-date">
+              July 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              June 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              May 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              April 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              March 2025
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

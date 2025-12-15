@@ -1,0 +1,487 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>calamares | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="GUIインストーラCalamaresをカスタマイズしてみました。                                     Calamares             Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic  カスタマイズしたCalama">
+<meta property="og:type" content="article">
+<meta property="og:title" content="calamares">
+<meta property="og:url" content="https://ktkr3d.github.io/2025/06/01/calamares/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="GUIインストーラCalamaresをカスタマイズしてみました。                                     Calamares             Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic  カスタマイズしたCalama">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/calamares.png">
+<meta property="article:published_time" content="2025-05-31T20:36:07.000Z">
+<meta property="article:modified_time" content="2025-06-24T13:32:58.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="archiso">
+<meta property="article:tag" content="calamares">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/calamares.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "calamares",
+  "url": "https://ktkr3d.github.io/2025/06/01/calamares/",
+  "image": "https://ktkr3d.github.io/images/calamares.png",
+  "datePublished": "2025-05-31T20:36:07.000Z",
+  "dateModified": "2025-06-24T13:32:58.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2025/06/01/calamares/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'calamares',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">calamares</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">calamares</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-05-31T20:36:07.000Z" title="Created 2025-06-01 05:36:07">2025-06-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-06-24T13:32:58.000Z" title="Updated 2025-06-24 22:32:58">2025-06-24</time></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p><img src="/images/calamares.png"></p>
+<p>GUIインストーラCalamaresをカスタマイズしてみました。</p>
+<a href="https://calamares.io/" target="_blank" rel="external nofollow noopener noreferrer" class="link-preview">
+    <div class="og-image">
+        <img src="https://raw.githubusercontent.com/calamares/calamares/calamares/src/branding/default/squid.png" alt="Calamares" class="not-gallery-item" loading="lazy"></div>
+        <div class="descriptions">
+            <div class="og-title">Calamares</div>
+            <div class="og-description">Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic</div></div></a>
+
+<p>カスタマイズしたCalamaresを組み込んだライブISOイメージで起動し、Arch Linuxをインストールして、Arch Linuxが起動しました。</p>
+<p><img src="/images/calamares_restarted.png"></p>
+<span id="more"></span>
+
+<h3 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h3><h4 id="ライブISO起動直後"><a href="#ライブISO起動直後" class="headerlink" title="ライブISO起動直後"></a>ライブISO起動直後</h4><p>時刻と天気を自動調整。起動時にミラーリストも更新。<br><img src="/images/aic_01.png"></p>
+<h4 id="メニュー"><a href="#メニュー" class="headerlink" title="メニュー"></a>メニュー</h4><p>ArcMenuの11テーマ<br><img src="/images/aic_02.png"></p>
+<h4 id="スクリプト"><a href="#スクリプト" class="headerlink" title="スクリプト"></a>スクリプト</h4><p>Argosでスクリプト実行（追加&#x2F;編集可能）<br><img src="/images/aic_03.png"></p>
+<h4 id="ライブISOで日本語入力"><a href="#ライブISOで日本語入力" class="headerlink" title="ライブISOで日本語入力"></a>ライブISOで日本語入力</h4><p><img src="/images/aic_04.png"></p>
+<h4 id="インストーラ"><a href="#インストーラ" class="headerlink" title="インストーラ"></a>インストーラ</h4><p><img src="/images/aic_05.png"><br><img src="/images/aic_06.png"></p>
+<h4 id="システム情報"><a href="#システム情報" class="headerlink" title="システム情報"></a>システム情報</h4><p><img src="/images/aic_07.png"></p>
+<h4 id="ライブISOでの日本語化"><a href="#ライブISOでの日本語化" class="headerlink" title="ライブISOでの日本語化"></a>ライブISOでの日本語化</h4><p>ライブISO作成時に初期言語を日本語にすることもできますが、英語版のISOでも日本語に切り替えることができます。<br>Settings(gnome-control-center) &gt; System &gt; Region &amp; Language &gt; Language で<kbd>日本語</kbd>を選択して<kbd>Select</kbd>して、<kbd>Log Out...</kbd><br><img src="/images/aic_10.png"><br>ログインすると日本語環境に切り替わっています。標準フォルダーの名前を日本語化するか確認(<code>xdg-user-dirs-gtk-update</code>)されますが、英語名称のままにすることもできます。<br><img src="/images/aic_11.png"></p>
+<h4 id="起動画面Plymouth"><a href="#起動画面Plymouth" class="headerlink" title="起動画面Plymouth"></a>起動画面Plymouth</h4><p><img src="/images/aic_12.png"></p>
+<h4 id="インストール後"><a href="#インストール後" class="headerlink" title="インストール後"></a>インストール後</h4><p><img src="/images/aic_08.png"></p>
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Arch Linux</li>
+<li>calamares 3.3.14<br><a target="_blank" rel="noopener" href="https://github.com/calamares/calamares">https://github.com/calamares/calamares</a></li>
+</ul>
+<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><p>AURには<a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/calamares">calamares</a> 3.3.8と<a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/calamares-git">calamares-git</a> 3.3.14が存在します。最新バージョンであるcalamares-gitの方を利用します。<br>calamares-gitではAURにある<a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/ckbcomp">ckbcomp</a>が前提パッケージになっています。なお、ckbcompのPKGBUILDに記載されているソースアーカイブのURLがリンク切れの状態なので自動でインストールできません。URLを修正してビルドしてインストールします。</p>
+<ol>
+<li>ckbcomp</li>
+</ol>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -G ckbcomp</span><br><span class="line"><span class="built_in">cd</span> ckbcomp</span><br></pre></td></tr></table></figure>
+  <figure class="highlight txt"><figcaption><span>PKGBUILD</span></figcaption><table><tr><td class="code"><pre><span class="line"># source=(&quot;http://ftp.debian.org/debian/pool/main/c/console-setup/console-setup_$&#123;pkgver&#125;.tar.xz&quot;)</span><br><span class="line">source=(&quot;https://salsa.debian.org/installer-team/console-setup/-/archive/$pkgver/console-setup-$pkgver.tar.gz&quot;)  </span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">makepkg -o --skipchecksums</span><br><span class="line">makepkg -f -e</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -U ckbcomp-1.234-1-any.pkg.tar.zst</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> ckbcomp-1.234-1-any.pkg.tar.zst /opt/custom-repo/x86_64/</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>calamares-git</li>
+</ol>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S calamares-git</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> ~/.cache/paru/clone/calamares-git/calamares-git-3.3.14.r25.g95aa33f-1-x86_64.pkg.tar.zst /opt/custom-repo/x86_64/</span><br></pre></td></tr></table></figure>
+
+<h3 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h3><h4 id="設定ディレクトリ"><a href="#設定ディレクトリ" class="headerlink" title="設定ディレクトリ"></a>設定ディレクトリ</h4><p>以下の優先度で設定ファイルが参照されるようです。</p>
+<ul>
+<li>&#x2F;etc&#x2F;calamares&#x2F;</li>
+<li>&#x2F;usr&#x2F;share&#x2F;calamares&#x2F;</li>
+</ul>
+<h4 id="カスタマイズ"><a href="#カスタマイズ" class="headerlink" title="カスタマイズ"></a>カスタマイズ</h4><ul>
+<li><p>設定ファイルのひな型をarchisoのプロジェクトにコピー</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> -r /usr/share/calamares ./airootfs/etc/</span><br></pre></td></tr></table></figure></li>
+<li><p>calamaresの設定</p>
+<figure class="highlight yaml"><figcaption><span>.&#x2F;airootfs&#x2F;etc&#x2F;calamares&#x2F;settings.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">sequence:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">show:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">welcome</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">locale</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">keyboard</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">partition</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">users</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">summary</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">exec:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">partition</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">mount</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">unpackfs</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">machineid</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">locale</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">keyboard</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">localecfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">fstab</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">initcpiocfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">initcpio</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">removeuser</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">users</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">displaymanager</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">networkcfg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hwclock</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">services-systemd</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">packages</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">bootloader</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">umount</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">show:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">finished</span></span><br><span class="line"></span><br><span class="line"><span class="attr">branding:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">prompt-install:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">dont-chroot:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">oem-setup:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">quit-at-end:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ようこそ画面</p>
+<figure class="highlight yaml"><figcaption><span>.&#x2F;airootfs&#x2F;etc&#x2F;calamares&#x2F;module&#x2F;welcome.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">showSupportUrl:</span>         <span class="literal">false</span></span><br><span class="line"><span class="attr">showKnownIssuesUrl:</span>     <span class="literal">false</span></span><br><span class="line"><span class="attr">showReleaseNotesUrl:</span>    <span class="literal">false</span></span><br><span class="line"><span class="attr">showDonateUrl:</span>          <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">requirements:</span></span><br><span class="line">    <span class="attr">requiredStorage:</span>    <span class="number">5.5</span></span><br><span class="line">    <span class="attr">requiredRam:</span>        <span class="number">1.0</span></span><br><span class="line">    <span class="attr">internetCheckUrl:</span>   <span class="string">http://example.com</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">check:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">storage</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">ram</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">power</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">internet</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">root</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">screen</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">required:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">ram</span></span><br><span class="line"></span><br><span class="line"><span class="attr">geoip:</span></span><br><span class="line">    <span class="attr">style:</span>    <span class="string">&quot;none&quot;</span></span><br><span class="line">    <span class="attr">url:</span>      <span class="string">&quot;https://geoip.kde.org/v1/ubiquity&quot;</span>  <span class="comment"># extended XML format</span></span><br><span class="line">    <span class="attr">selector:</span> <span class="string">&quot;CountryCode&quot;</span>  <span class="comment"># blank uses default, which is wrong</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>usersモジュール</p>
+<figure class="highlight yaml"><figcaption><span>.&#x2F;airootfs&#x2F;etc&#x2F;calamares&#x2F;modules&#x2F;users.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">allowWeakPasswords:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">allowWeakPasswordsDefault:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>弱いパスワードを許容</p>
+</div>
+</li>
+<li><p>unpackfsモジュール</p>
+<figure class="highlight yaml"><figcaption><span>.&#x2F;airootfs&#x2F;etc&#x2F;calamares&#x2F;modules&#x2F;unpackfs.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">unpack:</span></span><br><span class="line">    <span class="bullet">-</span>   <span class="attr">source:</span> <span class="string">&quot;/run/archiso/bootmnt/arch/x86_64/airootfs.sfs&quot;</span></span><br><span class="line">        <span class="attr">sourcefs:</span> <span class="string">&quot;squashfs&quot;</span></span><br><span class="line">        <span class="attr">destination:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="bullet">-</span>   <span class="attr">source:</span> <span class="string">&quot;/run/archiso/bootmnt/arch/boot/x86_64/vmlinuz-linux&quot;</span></span><br><span class="line">        <span class="attr">sourcefs:</span> <span class="string">&quot;file&quot;</span></span><br><span class="line">        <span class="attr">destination:</span> <span class="string">&quot;/boot/vmlinuz-linux&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ブランディング</p>
+<figure class="highlight yaml"><figcaption><span>.&#x2F;airootfs&#x2F;etc&#x2F;calamares&#x2F;branding&#x2F;branding.desc</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">componentName:</span>  <span class="string">default</span></span><br><span class="line"><span class="attr">welcomeStyleCalamares:</span>   <span class="literal">false</span></span><br><span class="line"><span class="attr">welcomeExpandingLogo:</span>   <span class="literal">true</span></span><br><span class="line"><span class="attr">windowExpanding:</span>    <span class="string">normal</span></span><br><span class="line"><span class="attr">windowSize:</span> <span class="string">800px,520px</span></span><br><span class="line"><span class="attr">windowPlacement:</span> <span class="string">center</span></span><br><span class="line"><span class="attr">sidebar:</span> <span class="string">widget</span></span><br><span class="line"><span class="attr">navigation:</span> <span class="string">widget</span></span><br><span class="line"></span><br><span class="line"><span class="attr">strings:</span></span><br><span class="line">    <span class="attr">productName:</span>         <span class="string">&quot;$&#123;NAME&#125;&quot;</span></span><br><span class="line">    <span class="attr">shortProductName:</span>    <span class="string">Arch</span></span><br><span class="line">    <span class="attr">version:</span>             <span class="string">Rolling</span></span><br><span class="line">    <span class="attr">shortVersion:</span>        <span class="string">Rolling</span></span><br><span class="line">    <span class="attr">versionedName:</span>       <span class="string">Arch</span> <span class="string">Linux</span> <span class="string">Rolling</span></span><br><span class="line">    <span class="attr">shortVersionedName:</span>  <span class="string">Arch</span> <span class="string">rolling</span></span><br><span class="line">    <span class="attr">bootloaderEntryName:</span> <span class="string">Arch</span></span><br><span class="line"></span><br><span class="line"><span class="attr">images:</span></span><br><span class="line">    <span class="attr">productIcon:</span>         <span class="string">&quot;squid.png&quot;</span></span><br><span class="line">    <span class="attr">productLogo:</span>         <span class="string">&quot;squid.png&quot;</span></span><br><span class="line">    <span class="attr">productWelcome:</span>      <span class="string">&quot;languages.png&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">style:</span></span><br><span class="line">  <span class="attr">SidebarBackground:</span>        <span class="string">&quot;#292F34&quot;</span></span><br><span class="line">  <span class="attr">SidebarText:</span>              <span class="string">&quot;#FFFFFF&quot;</span></span><br><span class="line">  <span class="attr">SidebarTextCurrent:</span>       <span class="string">&quot;#292F34&quot;</span></span><br><span class="line">  <span class="attr">SidebarBackgroundCurrent:</span> <span class="string">&quot;#D35400&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">slideshow:</span>               <span class="string">&quot;show.qml&quot;</span></span><br><span class="line"><span class="attr">slideshowAPI:</span> <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="attr">uploadServer :</span></span><br><span class="line">    <span class="attr">type :</span>    <span class="string">&quot;none&quot;</span></span><br><span class="line">    <span class="attr">url :</span>     <span class="string">&quot;http://termbin.com:9999&quot;</span></span><br><span class="line">    <span class="attr">sizeLimit :</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="TODO-対応済"><a href="#TODO-対応済" class="headerlink" title="TODO (対応済)"></a>TODO (対応済)</h3><h4 id="インストーラ-1"><a href="#インストーラ-1" class="headerlink" title="インストーラ"></a>インストーラ</h4><ul>
+<li>インストール後にライブイメージのユーザliveuserを削除<figure class="highlight yaml"><figcaption><span>./airootfs/etc/calamares/settings.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">sequence:</span></span><br><span class="line"><span class="string">-exec:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">removeuser</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>./airootfs/etc/calamares/modules/removeuser.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">username:</span> <span class="string">liveuser</span></span><br></pre></td></tr></table></figure></li>
+<li>インストール後にインストーラを削除<figure class="highlight yaml"><figcaption><span>./airootfs/etc/calamares/settings.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">sequence:</span></span><br><span class="line"><span class="string">-exec:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">packages</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>./airootfs/etc/calamares/modules/packages.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">operations:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">try_remove:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">calamares-git</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">boostlibs</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">ckbcomp</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hwinfo</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">kcolorscheme</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">kconfig</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">kcoreaddons</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">ki18n</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">kiconthemes</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">kpmcore</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">polkit-qt6</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">python-jsonschema</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">python-yaml</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">solid</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">squashfs-tools</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">yaml-cpp</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">archiso-calamares-config</span></span><br></pre></td></tr></table></figure></li>
+<li>インストール後に不要となるパッケージの整理<ol>
+<li><code>pactree calamares -d 1</code>で依存パッケージを確認</li>
+<li>calamares削除後に依存パッケージの削除を試行し、依存関係破壊の有無を確認</li>
+<li><code>pactree -r &lt;package name&gt;</code>で各パッケージに依存しているパッケージを確認</li>
+<li>calamaresや削除可能なパッケージにのみ依存関係があるのなら削除可能と判断</li>
+</ol>
+  <figure class="highlight mel"><table><tr><td class="code"><pre><span class="line">boostlibs ckbcomp hwinfo kcolorscheme kconfig kcoreaddons ki18n kiconthemes kpmcore polkit-qt6 <span class="keyword">python</span>-jsonschema <span class="keyword">python</span>-yaml solid squashfs-tools yaml-cpp</span><br></pre></td></tr></table></figure></li>
+<li>ブランディングとスライドショー<br><a target="_blank" rel="noopener" href="https://github.com/calamares/calamares-extensions/tree/calamares/branding/image-slideshow">https://github.com/calamares/calamares-extensions/tree/calamares/branding/image-slideshow</a><figure class="highlight yaml"><figcaption><span>./airootfs/etc/calamares/settings.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">branding:</span> <span class="string">fivearch</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>./airootfs/etc/calamares/branding/fivearch/branding.desc</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">componentName:</span>  <span class="string">fivearch</span></span><br><span class="line"><span class="attr">windowExpanding:</span>    <span class="string">fullscreen</span></span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>Calamaresを最大化して起動</p>
+</div>
+<figure class="highlight qml"><figcaption><span>./airootfs/etc/calamares/branding/fivearch/ImageSlide.qml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="title">Item</span> &#123;</span><br><span class="line">    <span class="title">Image</span> &#123;</span><br><span class="line">      <span class="attribute">id:</span><span class="string"> image</span></span><br><span class="line">      <span class="attribute">source</span>: src</span><br><span class="line">      <span class="attribute">width</span>: <span class="built_in">parent</span>.width</span><br><span class="line">      <span class="attribute">height</span>: <span class="built_in">parent</span>.height</span><br><span class="line">      <span class="attribute">fillMode</span>: Image.PreserveAspectFit</span><br><span class="line">      <span class="attribute">anchors.centerIn</span>: <span class="built_in">parent</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>スライドショーの画像をはみ出さない最大のサイズで表示</p>
+</div></li>
+<li>calamares起動時のパスワード入力抑止<figure class="highlight ini"><figcaption><span>./airootfs/usr/local/share/applications/calamares.desktop</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">exec</span> = sudo -E calamares</span><br></pre></td></tr></table></figure></li>
+<li>aboutボタンの背景色の固定<figure class="highlight css"><figcaption><span>./airootfs/etc/calamares/brandings/fivearch/stylesheet.qss</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#aboutButton</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#292f34</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#aboutButton</span>:pressed &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#292f34</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#aboutButton</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#292f34</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>calamares設定ファイルのパッケージ化とアンインストール<br><a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/archiso-calamares-config">https://aur.archlinux.org/packages/archiso-calamares-config</a><br>&#x2F;etc&#x2F;calamares&#x2F;*<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;applications&#x2F;calamares.desktop<br>をパッケージ化してカスタムローカルリポジトリに配置</li>
+<li>plymouth<br><a target="_blank" rel="noopener" href="https://wiki.archlinux.jp/index.php/Plymouth">https://wiki.archlinux.jp/index.php/Plymouth</a><ul>
+<li>packages<figure class="highlight ini"><figcaption><span>./packages_x86_64</span></figcaption><table><tr><td class="code"><pre><span class="line">plymouth</span><br></pre></td></tr></table></figure></li>
+<li>mkinitcpio<figure class="highlight ini"><figcaption><span>./airootfs/etc/mkinitcpio.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">HOOKS</span>=(... udev plymouth ...)</span><br></pre></td></tr></table></figure></li>
+<li>grub<figure class="highlight ini"><figcaption><span>./airootfs/etc/default/grub</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">GRUB_CMDLINE_LINUX_DEFAULT</span>=<span class="string">&quot;loglevel=3 quiet audit=0 splash&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>dracut<figure class="highlight ini"><figcaption><span>./airootfs/etc/dracut.conf.d/myflags.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">add_dracutmodules+=&quot; plymouth &quot;</span><br></pre></td></tr></table></figure></li>
+<li>theme: bgrt<figure class="highlight ini"><figcaption><span>./airootfs/etc/plymouth/plymouthd.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[Daemon]</span></span><br><span class="line"><span class="attr">Theme</span>=bgrt</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h4 id="GNOMEデスクトップ環境"><a href="#GNOMEデスクトップ環境" class="headerlink" title="GNOMEデスクトップ環境"></a>GNOMEデスクトップ環境</h4><ul>
+<li>Wayland対応<figure class="highlight ini"><figcaption><span>./airootfs/etc/gdm/custom.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#WaylandEnable=false</span></span><br><span class="line"><span class="attr">WaylandEnable</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">WaylandOnByDefault</span>=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<img src="/images/calamares_800_600_wayland.png"></li>
+<li>時刻表示を24時間表示に変更<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/desktop/interface]</span></span><br><span class="line"><span class="attr">clock-format</span> = <span class="string">&#x27;24h&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>タイムゾーンの自動設定<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/desktop/datetime]</span></span><br><span class="line"><span class="attr">automatic-timezone</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+<li>位置情報の自動収集<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/system/location]</span></span><br><span class="line"><span class="attr">enabled</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>動作したけれどプライバシー関連なので要注意</p>
+</div></li>
+<li>インタフェースをライト系に設定<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/desktop/interface]</span></span><br><span class="line"><span class="attr">color-scheme</span> = <span class="string">&#x27;default&#x27;</span></span><br><span class="line"><span class="attr">cursor-theme</span> = <span class="string">&#x27;Fluent-dark-cursors&#x27;</span></span><br><span class="line"><span class="attr">gtk-theme</span> = <span class="string">&#x27;Fluent-round-Light&#x27;</span></span><br><span class="line"><span class="attr">icon-theme</span> = <span class="string">&#x27;Fluent-light&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>GDMログイン画面のカスタマイズ<br>画面解像度が低いと標準のArch Linuxのロゴ画像とGUI部品が重なるので横長のロゴ画像に差し替え<figure class="highlight ini"><figcaption><span>/etc/dconf/db/gdm.d/01-logo</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/login-screen]</span></span><br><span class="line"><span class="comment">#logo=&#x27;/usr/share/pixmaps/archlinux-logo.png&#x27;</span></span><br><span class="line"><span class="attr">logo</span>=<span class="string">&#x27;/usr/share/pixmaps/archlinux-logo-text.svg&#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="GNOME-Shell拡張機能"><a href="#GNOME-Shell拡張機能" class="headerlink" title="GNOME Shell拡張機能"></a>GNOME Shell拡張機能</h4><ul>
+<li>導入手段<table>
+<thead>
+<tr>
+<th align="left">手段</th>
+<th align="left">概要</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ローカル</td>
+<td align="left">ホームディレクトリ配下にファイルでインストールする。自動でバージョンアップされて再ログインの際に反映される？</td>
+</tr>
+<tr>
+<td align="left">AURパッケージ</td>
+<td align="left">AUR版は最新版よりバージョンが古い場合がある。</td>
+</tr>
+<tr>
+<td align="left">AUR-gitパッケージ</td>
+<td align="left">ソースからビルドするのでバージョンは最新になる。AURパッケージとしてのバージョンが更新されない場合、パッケージ最新化では本体がアップデートされない？</td>
+</tr>
+</tbody></table>
+</li>
+<li>導入状況<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gnome-extensions list --enabled | <span class="built_in">sort</span></span><br><span class="line">arcmenu@arcmenu.com</span><br><span class="line">argos@pew.worldwidemann.com</span><br><span class="line">blur-my-shell@aunetx</span><br><span class="line">caffeine@patapon.info</span><br><span class="line">dash-to-panel@jderose9.github.com</span><br><span class="line">ding@rastersoft.com</span><br><span class="line">forge@jmmaranan.com</span><br><span class="line">kimpanel@kde.org</span><br><span class="line">openweather-extension@penguin-teal.github.io</span><br><span class="line">user-theme@gnome-shell-extensions.gcampax.github.com</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>ライブISOではblur-my-shell、forgeを初期無効化</p>
+</div></li>
+<li>Arc Menu<br><a target="_blank" rel="noopener" href="https://archlinux.org/packages/extra/any/gnome-shell-extension-arc-menu-git/">https://archlinux.org/packages/extra/any/gnome-shell-extension-arc-menu-git/</a><div class="note info flat"><p>gnome-shell-extension-arc-menuが古いのでgnome-shell-extension-arc-menu-gitをビルド</p>
+</div></li>
+<li>Argos<br><a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/gnome-shell-extension-argos-git">https://aur.archlinux.org/packages/gnome-shell-extension-argos-git</a><br>paru btop fastfetch reflector journalctlのランチャーを追加<figure class="highlight js"><figcaption><span>extension.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> scriptContents =</span><br><span class="line">  <span class="string">&#x27;#!/usr/bin/env bash\n\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;URL=&quot;github.com/p-e-w/argos&quot;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;DIR=$(dirname &quot;$0&quot;)\n\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot; | iconName=dialog-information-symbolic&quot;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot;---&quot;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot;$URL | iconName=help-faq-symbolic href=\&#x27;https://$URL\&#x27;&quot;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot;$DIR | iconName=folder-symbolic href=\&#x27;file://$DIR\&#x27;&quot;\n\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot;Update Packages (&lt;span color=\&#x27;yellow\&#x27;&gt;&lt;tt&gt;paru&lt;/tt&gt;&lt;/span&gt;) | iconName=software-update-available-symbolic bash=\&#x27;paru; pacman -Qdtq | sudo pacman -Rs -; exit\&#x27;&quot;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot;Resource Monitor (&lt;span color=\&#x27;yellow\&#x27;&gt;&lt;tt&gt;btop&lt;/tt&gt;&lt;/span&gt;) | iconName=utilities-system-monitor bash=\&#x27;btop; exit\&#x27;&quot;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot;System Information (&lt;span color=\&#x27;yellow\&#x27;&gt;&lt;tt&gt;fastfetch&lt;/tt&gt;&lt;/span&gt;) | iconName=dialog-information bash=\&#x27;fastfetch; read; exit\&#x27;&quot;\n&#x27;</span> + </span><br><span class="line">  <span class="string">&#x27;echo &quot;Update Millorlist (&lt;span color=\&#x27;yellow\&#x27;&gt;&lt;tt&gt;reflector&lt;/tt&gt;&lt;/span&gt;) | iconName=system-component-input-sources bash=\&#x27;sudo systemctl start reflector.service; cat /etc/pacman.d/mirrorlist\&#x27;&quot;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot;System Log (&lt;span color=\&#x27;yellow\&#x27;&gt;&lt;tt&gt;journalctl&lt;/tt&gt;&lt;/span&gt;) | iconName=text-x-log bash=\&#x27;journalctl -rp err -b; exit\&#x27;&quot;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot;Fish Shell | iconName=utilities-terminal-symbolic&quot;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot;--Enable | iconName=media-playback-start-symbolic bash=\&#x27;sed -i s/FISH_ENABLED=0/FISH_ENABLED=1/ ~/.bashrc\&#x27; terminal=\&#x27;false\&#x27;&quot;\n&#x27;</span> +</span><br><span class="line">  <span class="string">&#x27;echo &quot;--Disable | iconName=media-playback-stop-symbolic bash=\&#x27;sed -i s/FISH_ENABLED=1/FISH_ENABLED=0/ ~/.bashrc\&#x27; terminal=\&#x27;false\&#x27;&quot;&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
+<li>Blur My Shell<br><a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/gnome-shell-extension-blur-my-shell">https://aur.archlinux.org/packages/gnome-shell-extension-blur-my-shell</a></li>
+<li>Caffeine<br><a target="_blank" rel="noopener" href="https://archlinux.org/packages/extra/any/gnome-shell-extension-caffeine/">https://archlinux.org/packages/extra/any/gnome-shell-extension-caffeine/</a></li>
+<li>Dash to Panel<br><a target="_blank" rel="noopener" href="https://archlinux.org/packages/extra/any/gnome-shell-extension-dash-to-panel/">https://archlinux.org/packages/extra/any/gnome-shell-extension-dash-to-panel/</a><figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/shell/extensions/dash-to-panel]</span></span><br><span class="line"><span class="attr">panel-element-positions</span>=<span class="string">&#x27;&#123;&quot;0&quot;:[&#123;&quot;element&quot;:&quot;showAppsButton&quot;,&quot;visible&quot;:false,&quot;position&quot;:&quot;stackedTL&quot;&#125;,&#123;&quot;element&quot;:&quot;activitiesButton&quot;,&quot;visible&quot;:false,&quot;position&quot;:&quot;stackedTL&quot;&#125;,&#123;&quot;element&quot;:&quot;leftBox&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedTL&quot;&#125;,&#123;&quot;element&quot;:&quot;centerBox&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedBR&quot;&#125;,&#123;&quot;element&quot;:&quot;taskbar&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;centerMonitor&quot;&#125;,&#123;&quot;element&quot;:&quot;rightBox&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedBR&quot;&#125;,&#123;&quot;element&quot;:&quot;systemMenu&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedBR&quot;&#125;,&#123;&quot;element&quot;:&quot;dateMenu&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedBR&quot;&#125;,&#123;&quot;element&quot;:&quot;desktopButton&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedBR&quot;&#125;],&quot;DEL-402HR7B310VL&quot;:[&#123;&quot;element&quot;:&quot;showAppsButton&quot;,&quot;visible&quot;:false,&quot;position&quot;:&quot;stackedTL&quot;&#125;,&#123;&quot;element&quot;:&quot;activitiesButton&quot;,&quot;visible&quot;:false,&quot;position&quot;:&quot;stackedTL&quot;&#125;,&#123;&quot;element&quot;:&quot;leftBox&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedTL&quot;&#125;,&#123;&quot;element&quot;:&quot;centerBox&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedBR&quot;&#125;,&#123;&quot;element&quot;:&quot;taskbar&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;centerMonitor&quot;&#125;,&#123;&quot;element&quot;:&quot;rightBox&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedBR&quot;&#125;,&#123;&quot;element&quot;:&quot;systemMenu&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedBR&quot;&#125;,&#123;&quot;element&quot;:&quot;dateMenu&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedBR&quot;&#125;,&#123;&quot;element&quot;:&quot;desktopButton&quot;,&quot;visible&quot;:true,&quot;position&quot;:&quot;stackedBR&quot;&#125;]&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>初期設定はモニタ”0”を指定</p>
+</div></li>
+<li>Desktop Icons NG<br><a target="_blank" rel="noopener" href="https://archlinux.org/packages/extra/any/gnome-shell-extension-desktop-icons-ng/">https://archlinux.org/packages/extra/any/gnome-shell-extension-desktop-icons-ng/</a></li>
+<li>Forge<br><a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/gnome-shell-extension-forge">https://aur.archlinux.org/packages/gnome-shell-extension-forge</a></li>
+<li>Input Method Panel<br><a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/gnome-shell-extension-kimpanel-git">https://aur.archlinux.org/packages/gnome-shell-extension-kimpanel-git</a></li>
+<li>OpenWeatherRefind<br><a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/gnome-shell-extension-openweatherrefined">https://aur.archlinux.org/packages/gnome-shell-extension-openweatherrefined</a><div class="note info flat"><p>GNOME Shell <code>48</code>を追加</p>
+</div></li>
+<li>User Theme<br>GNOME Shellテーマをダーク系に設定<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/shell/extensions/user-theme]</span></span><br><span class="line"><span class="attr">name</span>=<span class="string">&#x27;Fluent-round-Dark&#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="パッケージ"><a href="#パッケージ" class="headerlink" title="パッケージ"></a>パッケージ</h4><ul>
+<li>btop</li>
+<li>chromium<figure class="highlight text"><figcaption><span>~/.config/chromium-flags.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">--password-store=basic</span><br><span class="line">--enable-features=UseOzonePlatform</span><br><span class="line">--ozone-platform=wayland</span><br><span class="line">--enable-wayland-ime</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>GNOMEのデフォルトのパスワードストアはgnome-libsecret。初回起動時にパスワードを聞かれてしまう。basicで回避</p>
+</div></li>
+<li>fastfetch<br>カスタムテーマ<br><code>~/.config/fastfetch/config.jsonc</code></li>
+<li>fcitx5 fcitx5-im fcitx5-mozc<br>かな漢字変換</li>
+<li>fish<br>fishの設定、aliasの追加<br><code>~/.config/fish/config.fish</code><figure class="highlight bash"><figcaption><span>./airootfs/etc/skel/.bashrc</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> FISH_ENABLED=0</span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$FISH_ENABLED</span> == 1 &amp;&amp; $(ps --no-header --pid=<span class="variable">$PPID</span> --format=<span class="built_in">comm</span>) != <span class="string">&quot;fish&quot;</span> &amp;&amp; -z <span class="variable">$&#123;BASH_EXECUTION_STRING&#125;</span> ]]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">  <span class="built_in">shopt</span> -q login_shell &amp;&amp; LOGIN_OPTION=<span class="string">&#x27;--login&#x27;</span> || LOGIN_OPTION=<span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="built_in">exec</span> fish <span class="variable">$LOGIN_OPTION</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></li>
+<li>gnome-terminal<br>ダーク系に設定<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/terminal/legacy]</span></span><br><span class="line"><span class="attr">theme-variant</span> = <span class="string">&#x27;dark&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>nautilusのアイコンサイズ変更<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/nautilus/icon-view]</span></span><br><span class="line"><span class="attr">default-zoom-level</span> = <span class="string">&#x27;small-plus&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>nvidia nvidia-utils nvidia-settings</li>
+<li>reflector<br>サービスによる定期自動ミラーリスト更新設定を有効化</li>
+<li>starship<br>カスタムテーマ<br><code>~/.config/starship.toml</code>    </li>
+<li>spice-vdagent<br>GNOME Boxes(QEMU)でクリップボード共有<br><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/QEMU#Enabling_SPICE_support_on_the_guest">https://wiki.archlinux.org/title/QEMU#Enabling_SPICE_support_on_the_guest</a></li>
+<li>paru<figure class="highlight ini"><figcaption><span>./airootfs/etc/skel/.config/paru/paru.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[options]</span></span><br><span class="line">SudoLoop</span><br><span class="line">SkipReview</span><br></pre></td></tr></table></figure></li>
+<li>makepkg<figure class="highlight ini"><figcaption><span>./airootfs/etc/skel/.makepkg.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">MAKEFLAGS</span>=<span class="string">&quot;-j $(nproc)&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>vi<figure class="highlight ini"><figcaption><span>./airootfs/etc/skel/.exrc</span></figcaption><table><tr><td class="code"><pre><span class="line">set showmode</span><br><span class="line">set number</span><br><span class="line">set ruler</span><br><span class="line">set title</span><br><span class="line">set showcmd</span><br></pre></td></tr></table></figure></li>
+<li>archinstall<br>日本語ターミナル環境で実行できて便利かもしれない。<br><img src="/images/archinstall_japanese.png"></li>
+</ul>
+<h4 id="日本語環境"><a href="#日本語環境" class="headerlink" title="日本語環境"></a>日本語環境</h4><ul>
+<li>ライブイメージ起動時の言語を指定する場合<figure class="highlight ini"><figcaption><span>./airootfs/etc/locale.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#LANG=en_US.UTF-8</span></span><br><span class="line"><span class="attr">LANG</span>=ja_JP.UTF-<span class="number">8</span></span><br></pre></td></tr></table></figure></li>
+<li>日本語ロケール追加<figure class="highlight ini"><figcaption><span>./airootfs/etc/locale.gen</span></figcaption><table><tr><td class="code"><pre><span class="line">en_US.UTF-8 UTF-8</span><br><span class="line">ja_JP.UTF-8 UTF-8</span><br></pre></td></tr></table></figure></li>
+<li>日本語入力を追加、有効化<br>ライブイメージ起動直後からかな漢字変換が利用できるようになった</li>
+<li>GNOME&#x2F;Wayland 上での Fcitx の利用<figure class="highlight ini"><figcaption><span>/etc/environment</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">XMODIFIERS</span>=@im=fcitx</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="ハードウェア"><a href="#ハードウェア" class="headerlink" title="ハードウェア"></a>ハードウェア</h4><ul>
+<li>Wi-Fi接続 : OK</li>
+<li>Bluetooth接続 : OK</li>
+</ul>
+<h3 id="TODO-これから"><a href="#TODO-これから" class="headerlink" title="TODO (これから)"></a>TODO (これから)</h3><h4 id="動作確認"><a href="#動作確認" class="headerlink" title="動作確認"></a>動作確認</h4><ul>
+<li>VirtualBox : OK</li>
+<li>Gnome Boxes (qemu&#x2F;KVM&#x2F;livirt) : OK</li>
+<li>VMWare : 未テスト</li>
+<li>Hyper-V (第一世代&#x2F;第二世代) : 未テスト</li>
+<li>物理環境 : 未テスト</li>
+<li>Secure boot環境での挙動把握</li>
+</ul>
+<h4 id="チューニング"><a href="#チューニング" class="headerlink" title="チューニング"></a>チューニング</h4><ul>
+<li>ISOイメージサイズと展開時間のチューニング<br>squashfs : xz &#x2F; gzip &#x2F; lzo</li>
+<li>インストール済のパッケージのサイズ確認  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -Qqe &gt; installed_packages.txt</span><br><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> -r package; <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">du</span> -sh <span class="string">&quot;/var/cache/pacman/pkg/<span class="variable">$package</span>-&quot;</span>*<span class="string">&quot;.pkg.tar.zst&quot;</span></span><br><span class="line"><span class="keyword">done</span> &lt; installed_packages.txt &gt; package_sizes.txt</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="追加設定、施策"><a href="#追加設定、施策" class="headerlink" title="追加設定、施策"></a>追加設定、施策</h4><ul>
+<li>githubに登録<br><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/archiso-gnome">https://github.com/ktkr3d/archiso-gnome</a><br><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/archiso-calamares-config">https://github.com/ktkr3d/archiso-calamares-config</a></li>
+<li>デフォルトターミナルエミュレータの設定<br>gnome-terminalが依存され過ぎて削除できない</li>
+<li>フォント指定  <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[org/gnome/desktop/interface]</span></span><br><span class="line">font-name &#x27;Noto Sans CJK JP 11&#x27;</span><br><span class="line">document-font-name &#x27;Noto Sans CJK JP 11&#x27;</span><br><span class="line"><span class="attr">monospace-font-name</span> = <span class="string">&#x27;HackGen Console NF 11&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>paruキャッシュとカスタムローカルリポジトリの連動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru</span><br><span class="line">find ~/.cache/paru/clone/ -name <span class="string">&quot;*.pkg.tar.zst&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>xorgの削除<br>xorg-serverを削除しても特に依存関係は崩れなかった</li>
+<li>colord<br>起動時にcolordがcore dumpする。その後正常にcolordサービスは実行されている。<br><a target="_blank" rel="noopener" href="https://archlinux.org/packages/extra/x86_64/colord/">https://archlinux.org/packages/extra/x86_64/colord/</a></li>
+<li>カーネルパラメタ</li>
+<li>CalamaresのWelcome画面の言語一覧に日本語が2つ存在するのはなぜ？</li>
+</ul>
+<h3 id="TODO-多分やらない"><a href="#TODO-多分やらない" class="headerlink" title="TODO (多分やらない)"></a>TODO (多分やらない)</h3><ul>
+<li>chromium → Google Chrome<br>なんとなくデフォルトはOSSで揃えておきたいので保留。</li>
+<li>nautilusのブックマークに<code>/</code>を追加<br><code>~/.config/gtk-3.0/bookmarks</code><br>スクリプト等での追加が必要そうなので保留。</li>
+<li>pamac追加<br>基本的にパッケージはコマンドで入れるので保留。</li>
+<li>日本語ロケールでもホームフォルダの各ディレクトリ名を英語のままに<br>.config&#x2F;user-dirs.dirs<br>.config&#x2F;user-dirs.locale<br>&#x2F;etc&#x2F;xdg&#x2F;user-dirs.defaults<br>従来通り<code>LANG=C xdg-user-dirs-gtk-update</code>で実現できるので保留。</li>
+<li>fcitx5-diagnose対策(ログイン時のポップアップ抑止)<br><a target="_blank" rel="noopener" href="https://github.com/fcitx/fcitx5/issues/1088#issuecomment-2261538744">https://github.com/fcitx/fcitx5/issues/1088#issuecomment-2261538744</a><br>ログイン後<code>fcitx5 -r</code>でポップアップが表示されないことから、fcitx開始から7秒以内にKimpanelのプロセスが生成されていないんだろうなぁ。<figure class="highlight oxygene"><table><tr><td class="code"><pre><span class="line">$ fcitx5-diagnose</span><br><span class="line"><span class="number">4</span>.  User <span class="keyword">Interface</span>:</span><br><span class="line"></span><br><span class="line">    Found <span class="number">3</span> enabled user <span class="keyword">interface</span> addons:</span><br><span class="line"></span><br><span class="line">        Classic User <span class="keyword">Interface</span></span><br><span class="line">        KDE Input <span class="keyword">Method</span> <span class="title function_">Panel</span></span><br><span class="line">        <span class="title function_">DBus</span> <span class="title function_">Virtual</span> <span class="title function_">Keyboard</span></span><br><span class="line"></span><br><span class="line">    <span class="title function_">Kimpanel</span> <span class="title function_">process</span>:</span><br><span class="line"></span><br><span class="line">          <span class="number">6097</span> /usr/bin/gnome-shell</span><br></pre></td></tr></table></figure>
+メンテナが対応してくれるかもしれないので保留。</li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/archiso/">archiso</a><a class="post-meta__tags" href="/tags/calamares/">calamares</a></div><div class="post-share"><div class="social-share" data-image="/images/calamares.png" data-sites="facebook,twitter,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/06/19/mpd/" title="mpd"><img class="cover" src="https://www.musicpd.org/logo.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">mpd</div></div><div class="info-2"><div class="info-item-1">Music Player Daemon (MPD)を使ってみました。                                     Music Player Daemon (MPD)             Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music.  MPDクライアントにはcantataを利用しました。                  /* css part */                 .gr-card {                      --gr-header-width-proportion: 10%;                     --gr-footer-width-proportion: 10%;                     --gr-content-width-proportion: 80%;                      --gr-header-min-wid...</div></div></div></a><a class="pagination-related" href="/2025/05/28/archiso-gnome/" title="archiso-gnome"><img class="cover" src="/images/archiso-gnome-desktop.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">archiso-gnome</div></div><div class="info-2"><div class="info-item-1"> archisoでGNOMEデスクトップ環境のライブISOイメージを作成してみました。Fluentテーマを利用していてすっきりした見た目になっています。   環境 Arch Linux archiso 83-1  構築一旦、カスタマイズ前の状態でISOを作成してみます。  archisoをインストール    sudo pacman -S archiso  プロジェクトディレクトリを作成    cp -r /usr/share/archiso/configs/releng/ archiso-gnomecd archiso-gnome  ISOをビルド    sudo rm -rf worktime sudo mkarchiso -v -o ./ ./   N100 CPUで7分30秒で生成し、サイズは1.2GB   VirtualBox等で生成されたISOが起動するか確認する  カスタマイズカスタマイズ方針 ブートローダはGRUB デスクトップ環境はGNOME GNOME Shell拡張機能を有効化 テーマはFluent できるだけパッケージを利用する(後でアップデートできるように...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/05/28/archiso-gnome/" title="archiso-gnome"><img class="cover" src="/images/archiso-gnome-desktop.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-28</div><div class="info-item-2">archiso-gnome</div></div><div class="info-2"><div class="info-item-1"> archisoでGNOMEデスクトップ環境のライブISOイメージを作成してみました。Fluentテーマを利用していてすっきりした見た目になっています。   環境 Arch Linux archiso 83-1  構築一旦、カスタマイズ前の状態でISOを作成してみます。  archisoをインストール    sudo pacman -S archiso  プロジェクトディレクトリを作成    cp -r /usr/share/archiso/configs/releng/ archiso-gnomecd archiso-gnome  ISOをビルド    sudo rm -rf worktime sudo mkarchiso -v -o ./ ./   N100 CPUで7分30秒で生成し、サイズは1.2GB   VirtualBox等で生成されたISOが起動するか確認する  カスタマイズカスタマイズ方針 ブートローダはGRUB デスクトップ環境はGNOME GNOME Shell拡張機能を有効化 テーマはFluent できるだけパッケージを利用する(後でアップデートできるように...</div></div></div></a><a class="pagination-related" href="/2025/05/26/archiso/" title="archiso"><img class="cover" src="/images/archiso-gnome.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-26</div><div class="info-item-2">archiso</div></div><div class="info-2"><div class="info-item-1"> archisoでGNOMEデスクトップ環境のArch LinuxライブISOを作成します。 https://wiki.archlinux.jp/index.php/Archiso   環境 Arch Linux archiso 83-1 Arch Linux Live USB with Gnomehttps://github.com/jorisdrenth/archiso-liveusb-gnome  archiso archisoのインストール    sudo pacman -S archiso  Arch Linux Live USB with Gnomeの場合GUIインストーラは含まれません。 構築 リポジトリをクローン    git clone https://github.com/jorisdrenth/archiso-liveusb-gnome.gitcd archiso-liveusb-gnome  パッケージを編集   削除./packages.x86_64# virtualbox-guest-utils #-nox# xorg # VMSVGA support...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88"><span class="toc-number">1.</span> <span class="toc-text">スクリーンショット</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%A9%E3%82%A4%E3%83%96ISO%E8%B5%B7%E5%8B%95%E7%9B%B4%E5%BE%8C"><span class="toc-number">1.1.</span> <span class="toc-text">ライブISO起動直後</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC"><span class="toc-number">1.2.</span> <span class="toc-text">メニュー</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88"><span class="toc-number">1.3.</span> <span class="toc-text">スクリプト</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%A9%E3%82%A4%E3%83%96ISO%E3%81%A7%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B"><span class="toc-number">1.4.</span> <span class="toc-text">ライブISOで日本語入力</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9"><span class="toc-number">1.5.</span> <span class="toc-text">インストーラ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E6%83%85%E5%A0%B1"><span class="toc-number">1.6.</span> <span class="toc-text">システム情報</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%A9%E3%82%A4%E3%83%96ISO%E3%81%A7%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96"><span class="toc-number">1.7.</span> <span class="toc-text">ライブISOでの日本語化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B5%B7%E5%8B%95%E7%94%BB%E9%9D%A2Plymouth"><span class="toc-number">1.8.</span> <span class="toc-text">起動画面Plymouth</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%BE%8C"><span class="toc-number">1.9.</span> <span class="toc-text">インストール後</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%92%B0%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A7%8B%E7%AF%89"><span class="toc-number">3.</span> <span class="toc-text">構築</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A8%AD%E5%AE%9A"><span class="toc-number">4.</span> <span class="toc-text">設定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A8%AD%E5%AE%9A%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA"><span class="toc-number">4.1.</span> <span class="toc-text">設定ディレクトリ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA"><span class="toc-number">4.2.</span> <span class="toc-text">カスタマイズ</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TODO-%E5%AF%BE%E5%BF%9C%E6%B8%88"><span class="toc-number">5.</span> <span class="toc-text">TODO (対応済)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9-1"><span class="toc-number">5.1.</span> <span class="toc-text">インストーラ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GNOME%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E7%92%B0%E5%A2%83"><span class="toc-number">5.2.</span> <span class="toc-text">GNOMEデスクトップ環境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GNOME-Shell%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD"><span class="toc-number">5.3.</span> <span class="toc-text">GNOME Shell拡張機能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8"><span class="toc-number">5.4.</span> <span class="toc-text">パッケージ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%92%B0%E5%A2%83"><span class="toc-number">5.5.</span> <span class="toc-text">日本語環境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2"><span class="toc-number">5.6.</span> <span class="toc-text">ハードウェア</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TODO-%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89"><span class="toc-number">6.</span> <span class="toc-text">TODO (これから)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D"><span class="toc-number">6.1.</span> <span class="toc-text">動作確認</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%81%E3%83%A5%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0"><span class="toc-number">6.2.</span> <span class="toc-text">チューニング</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%BD%E5%8A%A0%E8%A8%AD%E5%AE%9A%E3%80%81%E6%96%BD%E7%AD%96"><span class="toc-number">6.3.</span> <span class="toc-text">追加設定、施策</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TODO-%E5%A4%9A%E5%88%86%E3%82%84%E3%82%89%E3%81%AA%E3%81%84"><span class="toc-number">7.</span> <span class="toc-text">TODO (多分やらない)</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

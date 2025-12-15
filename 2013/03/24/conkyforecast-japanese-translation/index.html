@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>ConkyForecast Japanese Translation | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="https:&#x2F;&#x2F;github.com&#x2F;ktkr3d&#x2F;conkyforecast-ja ConkyForecast 用の日本語PO ファイルを作成して、Conky-HTC を日本語化してみました。また、Conky-HTC の表示用スクリプトを整理してみました。 パッケージのインストールhttp:&#x2F;&#x2F;ktkr3d.site11.com&#x2F;2011&#x2F;10&#x2F;09&#x2F;conky-htc&#x2F;conky, conk">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ConkyForecast Japanese Translation">
+<meta property="og:url" content="https://ktkr3d.github.io/2013/03/24/conkyforecast-japanese-translation/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="https:&#x2F;&#x2F;github.com&#x2F;ktkr3d&#x2F;conkyforecast-ja ConkyForecast 用の日本語PO ファイルを作成して、Conky-HTC を日本語化してみました。また、Conky-HTC の表示用スクリプトを整理してみました。 パッケージのインストールhttp:&#x2F;&#x2F;ktkr3d.site11.com&#x2F;2011&#x2F;10&#x2F;09&#x2F;conky-htc&#x2F;conky, conk">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
+<meta property="article:published_time" content="2013-03-23T15:36:01.000Z">
+<meta property="article:modified_time" content="2020-08-02T17:44:33.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="Conky-HTC">
+<meta property="article:tag" content="Translation">
+<meta property="article:tag" content="conky">
+<meta property="article:tag" content="conkyForecast">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/avatar.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ConkyForecast Japanese Translation",
+  "url": "https://ktkr3d.github.io/2013/03/24/conkyforecast-japanese-translation/",
+  "image": "https://ktkr3d.github.io/images/avatar.png",
+  "datePublished": "2013-03-23T15:36:01.000Z",
+  "dateModified": "2020-08-02T17:44:33.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2013/03/24/conkyforecast-japanese-translation/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ConkyForecast Japanese Translation',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">ConkyForecast Japanese Translation</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">ConkyForecast Japanese Translation</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2013-03-23T15:36:01.000Z" title="Created 2013-03-24 00:36:01">2013-03-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-08-02T17:44:33.000Z" title="Updated 2020-08-03 02:44:33">2020-08-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/linux/">linux</a></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p><img src="/images/conkyforecast_japanese.png" alt="conkyforecast japanese"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/conkyforecast-ja">https://github.com/ktkr3d/conkyforecast-ja</a></p>
+<p>ConkyForecast 用の日本語PO ファイルを作成して、Conky-HTC を日本語化してみました。また、Conky-HTC の表示用スクリプトを整理してみました。</p>
+<h4 id="パッケージのインストール"><a href="#パッケージのインストール" class="headerlink" title="パッケージのインストール"></a>パッケージのインストール</h4><p><a target="_blank" rel="noopener" href="http://ktkr3d.site11.com/2011/10/09/conky-htc/">http://ktkr3d.site11.com/2011/10/09/conky-htc/</a><br>conky, conkyForecast, Conky-HTC パッケージをインストールして以下の構成にしておきます。</p>
+<figure class="highlight text"><figcaption><span>フォルダ/ファイル構成</span></figcaption><table><tr><td class="code"><pre><span class="line">~/</span><br><span class="line">├── .fonts/</span><br><span class="line">├── .images/</span><br><span class="line">├── .conkyForecast.config</span><br><span class="line">├── .conkyrc</span><br><span class="line">├── .conky_start</span><br><span class="line">└── .vreme.template</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="conkyForecast-の日本語化"><a href="#conkyForecast-の日本語化" class="headerlink" title="conkyForecast の日本語化"></a>conkyForecast の日本語化</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ wget https://github.com/ktkr3d/conkyforecast-ja/raw/master/locale/ja/LC_MESSAGES/conkyForecast.po</span><br><span class="line">$ wget https://github.com/ktkr3d/conkyforecast-ja/raw/master/locale/ja/LC_MESSAGES/conkyForecastWU.po</span><br><span class="line">$ msgfmt -o conkyForecast.mo conkyForecast.po</span><br><span class="line">$ msgfmt -o conkyForecastWU.mo conkyForecastWU.po</span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">mkdir</span> -p /usr/share/conkyforecast/locale/ja/LC_MESSAGES/</span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">cp</span> *.mo /usr/share/conkyforecast/locale/ja/LC_MESSAGES/</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h4 id="conkyForecast-config-の編集"><a href="#conkyForecast-config-の編集" class="headerlink" title="~&#x2F;.conkyForecast.config の編集"></a>~&#x2F;.conkyForecast.config の編集</h4><figure class="highlight text"><figcaption><span>~/.conkyForecast.config</span></figcaption><table><tr><td class="code"><pre><span class="line">#=============================================#</span><br><span class="line"># EXPERT SETTINGS, NOT REQUIRED TO BE ALTERED #</span><br><span class="line">#=============================================#</span><br><span class="line">#BASE_XOAP_URL = http://xoap.weather.com/weather/local/&lt;LOCATION&gt;?cc=*&amp;dayf=5&amp;link=xoap&amp;prod=xoap&amp;par=&lt;XOAP_PARTNER_ID&gt;&amp;key=&lt;XOAP_LICENCE_KEY&gt;&amp;unit=m</span><br><span class="line">BASE_XOAP_URL = http://xml.weather.com/weather/local/&lt;LOCATION&gt;?cc=*&amp;dayf=10&amp;link=xoap&amp;prod=xoap&amp;par=&lt;XOAP_PARTNER_ID&gt;&amp;key=&lt;XOAP_LICENCE_KEY&gt;&amp;unit=m</span><br><span class="line">MAXIMUM_DAYS_FORECAST = 10</span><br><span class="line"></span><br><span class="line">#===============================================#</span><br><span class="line"># USER SETTINGS, EDIT BASED ON DOCUMENTED SETUP #</span><br><span class="line">#===============================================#</span><br><span class="line">CACHE_FOLDERPATH = /tmp/</span><br><span class="line">CONNECTION_TIMEOUT = 5</span><br><span class="line">EXPIRY_MINUTES = 30</span><br><span class="line">TIME_FORMAT = %H:%M</span><br><span class="line">DATE_FORMAT = %Y-%m-%d</span><br><span class="line">LOCALE = ja</span><br><span class="line">XOAP_PARTNER_ID =</span><br><span class="line">XOAP_LICENCE_KEY =</span><br><span class="line">DEFAULT_LOCATION = JAXX0085</span><br><span class="line">AUTO_NIGHT = False</span><br><span class="line">PROXY_HOST = </span><br><span class="line">PROXY_PORT = 8080</span><br><span class="line">PROXY_USERNAME = </span><br><span class="line">PROXY_PASSWORD = </span><br></pre></td></tr></table></figure>
+
+
+
+
+<h4 id="conkyrc-の編集"><a href="#conkyrc-の編集" class="headerlink" title="~&#x2F;.conkyrc の編集"></a>~&#x2F;.conkyrc の編集</h4><figure class="highlight text"><figcaption><span>~/.conkyrc</span></figcaption><table><tr><td class="code"><pre><span class="line"> # Time</span><br><span class="line">$&#123;voffset 35&#125;$&#123;goto 39&#125;$&#123;font Helvetica LT Std:style=Condensed:size=60&#125;$&#123;color 434343&#125;$&#123;time %H&#125;$&#123;goto 140&#125;$&#123;color 434343&#125;$&#123;time %M&#125;$&#123;font Helvetica LT Std:style=Condensed:size=18&#125;$&#123;color ffffff&#125;$&#123;goto 225&#125;$&#123;time %S&#125;</span><br><span class="line"> # Date</span><br><span class="line">$&#123;voffset 47&#125;$&#123;font TakaoPGothic:size=8&#125;$&#123;alignr 80&#125;$&#123;time %G&#125;/$&#123;time %m&#125;/$&#123;time %d&#125; ($&#123;time %a&#125;)</span><br><span class="line"> # City Name</span><br><span class="line">$&#123;voffset -40&#125;$&#123;goto 22&#125;$&#123;exec conkyForecast --datatype=CN&#125;</span><br><span class="line"> # Conditions Text, Current Temp</span><br><span class="line">$&#123;goto 22&#125;$&#123;execi 1800 conkyForecast --datatype=CT&#125;$&#123;voffset -20&#125;$&#123;goto 200&#125;$&#123;font Helvetica LT Std:size=24&#125;$&#123;execi 1800 conkyForecast -u --datatype=HT&#125;</span><br><span class="line"> # High Temp, Low Temp of Today</span><br><span class="line">$&#123;voffset -15&#125;$&#123;font Helvetica LT Std:style=Condensed:size=10&#125;#</span><br><span class="line">$&#123;goto 200&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=0&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=0&#125;</span><br><span class="line"> # High Temp, Low Temp of Next 5 Days</span><br><span class="line">$&#123;voffset 53&#125;$&#123;font Helvetica LT Std:style=Condensed:size=8&#125;#</span><br><span class="line">$&#123;goto  25&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=1&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=1&#125;#</span><br><span class="line">$&#123;goto  70&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=2&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=2&#125;#</span><br><span class="line">$&#123;goto 115&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=3&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=3&#125;#</span><br><span class="line">$&#123;goto 160&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=4&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=4&#125;#</span><br><span class="line">$&#123;goto 205&#125;$&#123;color ffaaaa&#125;$&#123;execi 1800 conkyForecast --datatype=HT -u --startday=5&#125;$&#123;color ffffff&#125; / $&#123;color aaaaff&#125;$&#123;execi 1800 conkyForecast --datatype=LT -u --startday=5&#125;</span><br><span class="line"> # Day of Week</span><br><span class="line">$&#123;font TakaoPGothic:size=8&#125;$&#123;color ffffff&#125;#</span><br><span class="line">$&#123;goto  37&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=1&#125;#</span><br><span class="line">$&#123;goto  82&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=2&#125;#</span><br><span class="line">$&#123;goto 127&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=3&#125;#</span><br><span class="line">$&#123;goto 172&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=4&#125;#</span><br><span class="line">$&#123;goto 217&#125;$&#123;execi 1800 conkyForecast --datatype=DW --shortweekday --startday=5&#125; </span><br><span class="line">$&#123;image ~/.images/base.png -p 12,30 -s 238x140&#125;</span><br><span class="line">$&#123;image ~/.images/base.png -p 12,190 -s 238x55&#125;</span><br><span class="line">$&#123;image ~/.images/flip_bg.png -p 30,10 -s 100x110&#125;</span><br><span class="line">$&#123;image ~/.images/flip_bg.png -p 130,10 -s 100x110&#125;</span><br><span class="line">$&#123;execpi 1800 conkyForecast --template=~/.vreme.template&#125;</span><br></pre></td></tr></table></figure>
+
+<p>行中&#x2F;行末に# を挿入すると次の行と連結(改行をエスケープ)できます。<br>今日の最高&#x2F;最低気温を取得するために「–startday&#x3D;0」を指定してみましたが、値は無効かもしれません。</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/conky/">conky</a><a class="post-meta__tags" href="/tags/Conky-HTC/">Conky-HTC</a><a class="post-meta__tags" href="/tags/conkyForecast/">conkyForecast</a><a class="post-meta__tags" href="/tags/Translation/">Translation</a></div><div class="post-share"><div class="social-share" data-image="/images/avatar.png" data-sites="facebook,twitter,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2013/06/01/android-studio/" title="Android Studio"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Android Studio</div></div><div class="info-2"><div class="info-item-1">http://developer.android.com/sdk/installing/studio.html Android Studio でサンプルアプリを作って動かしてみました。Linux 版のアーカイブをダウンロードして展開し、android-studio&#x2F;bin&#x2F;studio.sh を実行します。ウィザードに従っていくと、サンプルアプリのapk ファイルが生成されます。  インストールして実行すると、こんな感じになりました。実行環境はAndroid 4.1.2 です。  </div></div></div></a><a class="pagination-related" href="/2013/03/17/bittorrent-live-beta/" title="BitTorrent Live Beta"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">BitTorrent Live Beta</div></div><div class="info-2"><div class="info-item-1"> http://live.bittorrent.com/P2P 技術を使ったWeb 型ライブストリーミングサービス「BitTorrent Live」のオープンベータテストが開始されたので、試してみました。Windows&#x2F;Mac&#x2F;Ubuntu 用のクライアントプログラムBTLive が配布されており、私はUbuntu 64bit 用をダウンロードしてインストールしました。インストールから視聴までの手順は以下のとおりです。  http://live.bittorrent.com/ の一番下のリンクから各OS 用のクライアントプログラムをダウンロードして、インストールします。  [アプリケーション]-[インターネット]-[BTLive]を起動します。  http://live.bittorrent.com/ で公開されているチャンネルを視聴します。アカウントを登録すれば、配信もできます。配信はWebCam かエンコーダ等のアプリが利用できます。   P2P なので、視聴者が増えた時に有利なようです。Peercast と同じような原理でしょうか。ポートを開ける手間がな...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><span class="toc-number">1.</span> <span class="toc-text">パッケージのインストール</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#conkyForecast-%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text">conkyForecast の日本語化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#conkyForecast-config-%E3%81%AE%E7%B7%A8%E9%9B%86"><span class="toc-number">3.</span> <span class="toc-text">~&#x2F;.conkyForecast.config の編集</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#conkyrc-%E3%81%AE%E7%B7%A8%E9%9B%86"><span class="toc-number">4.</span> <span class="toc-text">~&#x2F;.conkyrc の編集</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

@@ -1,0 +1,14 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="69px" height="69px" viewBox="-0.5 -0.5 69 69" content="&lt;mxfile&gt;&lt;diagram id=&quot;Pthk64uWDEeQJn1fpvz8&quot; name=&quot;ページ1&quot;&gt;7Vhdj6MgFP01vm5UqrWPM935eJlkkz7sM6tUyaIYpNXur19UUBBn6jZOMsmWhwYO9wL3nHsx1AH7vHlhsMzeaIKI47tJ44Dvju+HoS9+W+DSA5utBFKGkx7yRuCA/yAJuhI94QRVhiGnlHBcmmBMiwLF3MAgY7Q2zY6UmLuWMEUWcIghsdGfOOFZj0b+dsRfEU4ztbMX7vqZHCpjGUmVwYTWGgSeHLBnlPK+lzd7RFruFC+93/M7s8PBGCr4Ioeg9zhDcpLByYPxi4pWeAhixeCxzjBHhxLG7UwtpBVYxnMiRp7owqrs2T7iBokNHivO6G+0p4Sybingdm2YUeTtBHLEhGiWAHgPnaUdkQzyjBhHjQbJCF8QzRFnF2EiZyNJtso2OaxH6UIJZZpqCoMyWdJh3ZFP0ZGUztML/Ov0poyeyuVRDlkNf6kV3A+j35nRB3b0m5noNytE728WJFeRPLQVKUYFLZCZUFb+PHfNyp/tbJ4o8lFiVLNNlEZFMEOFwhgikOOzeQfM8SN3+EGxOMqgg2JDeVT0xGIkjfQSnfhNleCQpYhbfp0YQ1DL9FlS/P+NPhuzTrzwy8kV3uXSLnVDLXW4f1VrWpQrqrW9q2V/c79QNUV3fUae1W13q1yXTy+n3V2utS+/K1+89cQD7nXxbntb6KpNXhATfedm3td5+eNCpbwmvCJSF35K7k2vCe86jZxhWKRkwWttOYGMcpGstGgdQfDpjJrJHVn0+sE3L4zcsYFV6BbD8d3dJ/n45wV4+gs=&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <ellipse cx="34" cy="34" rx="30" ry="30" fill="#331a00" stroke="#000000" stroke-width="9" pointer-events="all"/>
+        <path d="M 38 14 L 54 14" fill="none" stroke="#ffffff" stroke-width="7" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 54 30 L 54 14" fill="none" stroke="#ffffff" stroke-width="7" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 22 46 L 38 14" fill="none" stroke="#ffffff" stroke-width="7" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 14 54 L 54 14" fill="none" stroke="#ffffff" stroke-width="7" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 30 54 L 14 38" fill="none" stroke="#ffffff" stroke-width="7" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 22 46 L 54 30" fill="none" stroke="#ffffff" stroke-width="7" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="38" y="14" width="16" height="16" fill="#ffffff" stroke="#ffffff" stroke-width="7" pointer-events="none"/>
+        <path d="M 22 22 L 47.17 30 L 22 38 Z" fill="#ffffff" stroke="#ffffff" stroke-width="7" stroke-miterlimit="10" transform="rotate(135,34.58,30)" pointer-events="none"/>
+    </g>
+</svg>

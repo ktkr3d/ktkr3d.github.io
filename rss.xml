@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Memorandum!</title>
+    <link>https://ktkr3d.github.io/</link>
+    
+    <image>
+      <url>https://ktkr3d.github.io/icon.png</url>
+      <title>Memorandum!</title>
+      <link>https://ktkr3d.github.io/</link>
+    </image>
+    
+    <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>Memorandum</description>
+    <pubDate>Sun, 14 Dec 2025 12:57:46 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Faugus Launcher</title>
+      <link>https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/</link>
+      <guid>https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/</guid>
+      <pubDate>Sat, 06 Dec 2025 06:14:20 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/faugus_launcher.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;LinuxでWindowsアプリケーションを実行するフロントエンドFaugus Launcherを使ってみました。&lt;br&gt;&lt;a href=&quot;https://github.com/Faugus/faugus-launcher&quot;&gt;https://github.com/Faugus/faugus-launcher&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/proun/">proun</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/faugus-launcher/">faugus-launcher</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/battlenet/">battlenet</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>SDDM</title>
+      <link>https://ktkr3d.github.io/2025/12/01/SDDM/</link>
+      <guid>https://ktkr3d.github.io/2025/12/01/SDDM/</guid>
+      <pubDate>Mon, 01 Dec 2025 08:35:57 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;video src=&quot;/images/sddmsel_sel-shaders.mp4&quot; width=&quot;100%&quot; controls&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;SDDMにSerial experiments lainのテーマを適用してみました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/leonardochappuis/sddmsel&quot;&gt;https://github.com/leonardochappuis/sddmsel&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/sddm/">sddm</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/lain/">lain</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/12/01/SDDM/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Walker</title>
+      <link>https://ktkr3d.github.io/2025/11/30/Walker/</link>
+      <guid>https://ktkr3d.github.io/2025/11/30/Walker/</guid>
+      <pubDate>Sun, 30 Nov 2025 13:18:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/walker.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Walkerランチャを使ってみました。いろいろとカスタマイズできて面白いです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/abenz1267/walker&quot;&gt;https://github.com/abenz1267/walker&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/abenz1267/elephant&quot;&gt;https://github.com/abenz1267/elephant&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://benz.gitbook.io/walker/walker-and-elephant&quot;&gt;https://benz.gitbook.io/walker/walker-and-elephant&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/walker/">walker</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/11/30/Walker/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>CachyOS</title>
+      <link>https://ktkr3d.github.io/2025/11/29/CachyOS/</link>
+      <guid>https://ktkr3d.github.io/2025/11/29/CachyOS/</guid>
+      <pubDate>Fri, 28 Nov 2025 23:05:23 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;CachyOSを使ってみました。GUIインストーラなので導入がしやすいですね。&lt;/p&gt;
+&lt;a href=&quot;https://cachyos.org&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/cahyos/">cahyos</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/11/29/CachyOS/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Caelestia</title>
+      <link>https://ktkr3d.github.io/2025/11/17/Caelestia/</link>
+      <guid>https://ktkr3d.github.io/2025/11/17/Caelestia/</guid>
+      <pubDate>Mon, 17 Nov 2025 13:18:22 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/caelestia.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Hyprland用のCaelestia dotsを試してみました。これは良いかもしれない。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/caelestia-dots/caelestia&quot;&gt;https://github.com/caelestia-dots/caelestia&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/caelestia-dots/cli&quot;&gt;https://github.com/caelestia-dots/cli&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/caelestia-dots/shell&quot;&gt;https://github.com/caelestia-dots/shell&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;video-container&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/TggHDm0_vBw&quot; frameborder=&quot;0&quot; loading=&quot;lazy&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=TggHDm0_vBw&quot;&gt;https://www.youtube.com/watch?v=TggHDm0_vBw&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/caelestia/">caelestia</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/11/17/Caelestia/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>OpenVPN Access Server</title>
+      <link>https://ktkr3d.github.io/2025/11/07/OpenVPN-Access-Server/</link>
+      <guid>https://ktkr3d.github.io/2025/11/07/OpenVPN-Access-Server/</guid>
+      <pubDate>Fri, 07 Nov 2025 06:03:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;OpenVPN Access ServerをRaspberry Pi 4Bに構築してみました。&lt;br&gt;今回はPortainerのGUI画面を使ってOpenVPN Access ServerのDockerコンテナを生成しました。&lt;br&gt;2コネクションまでは無償利用可能なようです。&lt;/p&gt;
+&lt;a href=&quot;https://openvpn.net/access-server/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://openvpn.net/_assets/logo_dark_98a890727a.svg&quot; alt=&quot;Self-Hosted VPN: Access Server | OpenVPN&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;Self-Hosted VPN: Access Server | OpenVPN&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;Secure your private business network with a self-hosted VPN, Access Server, ideal for cloud or on-premise setups. Free with 2 simultaneous VPN connections.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://openvpn.net/access-server/&quot;&gt;https://openvpn.net/access-server/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://hub.docker.com/r/openvpn/openvpn-as&quot;&gt;https://hub.docker.com/r/openvpn/openvpn-as&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2025-11-15&quot;&gt;&lt;a href=&quot;#2025-11-15&quot; class=&quot;headerlink&quot; title=&quot;2025-11-15&quot;&gt;&lt;/a&gt;2025-11-15&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://docs.portainer.io/faqs/known-issues/known-compatibility-issues-with-docker-engine-29.0.0&quot;&gt;https://docs.portainer.io/faqs/known-issues/known-compatibility-issues-with-docker-engine-29.0.0&lt;/a&gt;&lt;br&gt;PortainerはDocker 29と互換性がないという情報があったので試してみました。確かにDocker 29にバージョンアップしたところ動作しなくなりましたが以下のワークアラウンドで動作するようになりました。&lt;br&gt;&lt;a href=&quot;https://github.com/portainer/portainer/issues/12925#issuecomment-3516549977&quot;&gt;https://github.com/portainer/portainer/issues/12925#issuecomment-3516549977&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; systemctl edit docker.service&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# sudo EDITOR=vim systemctl edit docker.service&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight ini&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;[Service]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;Environment&lt;/span&gt;=DOCKER_MIN_API_VERSION=&lt;span class=&quot;number&quot;&gt;1.24&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; systemctl restart docker.service&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/openvpn/">openvpn</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/11/07/OpenVPN-Access-Server/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Install Arch Linux on WSL</title>
+      <link>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/</link>
+      <guid>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/</guid>
+      <pubDate>Wed, 29 Oct 2025 15:57:13 GMT</pubDate>
+      
+      <description>&lt;p&gt;WSLにArch Linuxをインストールします。&lt;br&gt;Ubuntu上のfish, ssh, code server, hexo, jellyfinをArch Linuxに移行します。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL&quot;&gt;https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/wsl/">wsl</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Qwen3</title>
+      <link>https://ktkr3d.github.io/2025/07/19/qwen3/</link>
+      <guid>https://ktkr3d.github.io/2025/07/19/qwen3/</guid>
+      <pubDate>Fri, 18 Jul 2025 20:58:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/open-webui_qwen3.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Qwen3を使ってみました。&lt;br&gt;Qwen3はAlibabaが開発したオープンソースの大規模言語モデル(LLM)の最新バージョンです。&lt;br&gt;UIにはOpen WebUIを利用しました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/QwenLM/Qwen3&quot;&gt;https://github.com/QwenLM/Qwen3&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/open-webui/open-webui&quot;&gt;https://github.com/open-webui/open-webui&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2025-08-04&quot;&gt;&lt;a href=&quot;#2025-08-04&quot; class=&quot;headerlink&quot; title=&quot;2025-08-04&quot;&gt;&lt;/a&gt;2025-08-04&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://ollama.com/download&quot;&gt;https://ollama.com/download&lt;/a&gt;&lt;br&gt;Ollama GUIアプリ&lt;br&gt;&lt;img src=&quot;/images/ollama_ap.png&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/qwen3/">qwen3</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/open-webui/">open-webui</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/07/19/qwen3/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Jellyfin</title>
+      <link>https://ktkr3d.github.io/2025/07/03/Jellyfin/</link>
+      <guid>https://ktkr3d.github.io/2025/07/03/Jellyfin/</guid>
+      <pubDate>Thu, 03 Jul 2025 11:14:43 GMT</pubDate>
+      
+      <description>&lt;p&gt;メディアサーバJellyfinを使ってみました。今まで散らばっていた大量のメディアファイルを整理することができました。&lt;br&gt;また、インターネットラジオやMirakurunと連携したテレビ番組の視聴ができました。&lt;/p&gt;
+&lt;a href=&quot;https://jellyfin.org/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/41/Jellyfin_-_icon-transparent.svg&quot; alt=&quot;Jellyfin&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;Jellyfin&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;The Free Software Media System&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
+
+&lt;h4 id=&quot;2025-12-07&quot;&gt;&lt;a href=&quot;#2025-12-07&quot; class=&quot;headerlink&quot; title=&quot;2025-12-07&quot;&gt;&lt;/a&gt;2025-12-07&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin/issues/15419&quot;&gt;https://github.com/jellyfin/jellyfin/issues/15419&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin/pull/15557&quot;&gt;https://github.com/jellyfin/jellyfin/pull/15557&lt;/a&gt;&lt;br&gt;インターネットラジオが再生されなくなったバグが10.11.4で修正されたようです。&lt;br&gt;アップデートして動作することを確認しました。&lt;/p&gt;
+&lt;h4 id=&quot;2025-11-29&quot;&gt;&lt;a href=&quot;#2025-11-29&quot; class=&quot;headerlink&quot; title=&quot;2025-11-29&quot;&gt;&lt;/a&gt;2025-11-29&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;JellyfinでライブTV視聴の是正&lt;br&gt;&lt;a href=&quot;https://www.hitoha.moe/fix-jellyfin-live-tv/&quot;&gt;https://www.hitoha.moe/fix-jellyfin-live-tv/&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;figcaption&gt;&lt;span&gt;/etc/jellyfin/jellyfin.env&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;JELLYFIN_FFmpeg__probesize=8M&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2025-11-26&quot;&gt;&lt;a href=&quot;#2025-11-26&quot; class=&quot;headerlink&quot; title=&quot;2025-11-26&quot;&gt;&lt;/a&gt;2025-11-26&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;MPRIS supported!&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-media-player/pull/989&quot;&gt;https://github.com/jellyfin/jellyfin-media-player/pull/989&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S jellyfin-media-player-git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2025-11-24&quot;&gt;&lt;a href=&quot;#2025-11-24&quot; class=&quot;headerlink&quot; title=&quot;2025-11-24&quot;&gt;&lt;/a&gt;2025-11-24&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;qt6 version&lt;br&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/jellyfin-media-player-git&quot;&gt;https://aur.archlinux.org/packages/jellyfin-media-player-git&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S jellyfin-media-player-git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+現時点でmpv-mprisと組み合わせて使えていない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2025-11-22&quot;&gt;&lt;a href=&quot;#2025-11-22&quot; class=&quot;headerlink&quot; title=&quot;2025-11-22&quot;&gt;&lt;/a&gt;2025-11-22&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Media keys (mpris) support&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-media-player/issues/3&quot;&gt;https://github.com/jellyfin/jellyfin-media-player/issues/3&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -L https://github.com/hoyon/mpv-mpris/releases/latest/download/mpris.so -o ~/.local/share/jellyfinmediaplayer/scripts/mpris.so&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/mirakurun/">mirakurun</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/jellyfin/">jellyfin</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/07/03/Jellyfin/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>GNOME Remote Desktop + jp109 keyboard</title>
+      <link>https://ktkr3d.github.io/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/</link>
+      <guid>https://ktkr3d.github.io/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/</guid>
+      <pubDate>Mon, 30 Jun 2025 21:38:39 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/grd_keyboard.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Arch LinuxやUbuntuへリモートデスクトップ接続した際にパイプ文字「|」が入力できない事象があります。gnome-remote-desktopのプロジェクトページではIssueが登録されていました。キーボードが正しく認識されないようです。&lt;br&gt;私の環境ではデスクトップPCが日本語キーボード、ノートPCが英語キーボードです。キーボードの設定はどちらでも構わないので当面英語キーボードの設定にしようと思います。&lt;br&gt;xrdpに戻すべきなのだろうか。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome-remote-desktop/">gnome-remote-desktop</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Kdenlive</title>
+      <link>https://ktkr3d.github.io/2025/06/26/kdenlive/</link>
+      <guid>https://ktkr3d.github.io/2025/06/26/kdenlive/</guid>
+      <pubDate>Thu, 26 Jun 2025 06:28:25 GMT</pubDate>
+      
+      <description>&lt;p&gt;ビデオエディタKdenliveを使ってみました。&lt;/p&gt;
+&lt;a href=&quot;https://kdenlive.org/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/c/c6/Kdenlive-logo.svg&quot; alt=&quot;Kdenlive&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;Kdenlive&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;Kdenlive is the acronym for KDE Non-Linear Video Editor. It works on Linux, Windows, macOS, and BSD.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/kdenlive/">kdenlive</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/06/26/kdenlive/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>mpd</title>
+      <link>https://ktkr3d.github.io/2025/06/19/mpd/</link>
+      <guid>https://ktkr3d.github.io/2025/06/19/mpd/</guid>
+      <pubDate>Wed, 18 Jun 2025 17:46:30 GMT</pubDate>
+      
+      <description>&lt;p&gt;Music Player Daemon (MPD)を使ってみました。&lt;/p&gt;
+&lt;a href=&quot;https://www.musicpd.org/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://www.musicpd.org/logo.png&quot; alt=&quot;Music Player Daemon (MPD)&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;Music Player Daemon (MPD)&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
+
+&lt;p&gt;MPDクライアントにはcantataを利用しました。&lt;/p&gt;
+&lt;style&gt;
+                /* css part */
+                .gr-card {
+
+                    --gr-header-width-proportion: 10%;
+                    --gr-footer-width-proportion: 10%;
+                    --gr-content-width-proportion: 80%;
+
+                    --gr-header-min-width: 80px;
+                    --gr-footer-min-width: 80px;
+
+                    --gr-card-element-margin: 6px 10px 6px 10px; /* header content footer*/
+
+                    display: flex;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, .12);
+                    margin-bottom: 20px;
+                    vertical-align: middle;
+                    position: relative;
+                }
+
+                .gr-header {
+                    width: var(--gr-header-width-proportion);
+                    min-width: var(--gr-header-min-width);
+                    margin: var(--gr-card-element-margin);
+                    background-color: #fff;
+                    /* background-color: blueviolet; */
+                }
+
+                .gr-header img {
+                    width: 80px;
+                    height: 80px;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin: 0px;
+                }
+
+                .gr-content {
+                    width: var(--gr-content-width-proportion);
+                    margin: var(--gr-card-element-margin);
+                    background-color: #fff;
+                    text-align: left;
+                }
+
+                #gr-github-icon {
+                    font-size: 1.3rem;
+                }
+                .gr-fullname {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .gr-fullname p {
+                    line-height: 2rem;
+                    margin: 10px 0px 0px 0px;
+                    padding: 0;
+                    font-size: .83rem;
+                    font-weight: bolder;
+                }
+
+                .gr-description {
+                    font-size: .8rem;
+                    line-height: 1.6rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .gr-footer {
+                    width: var(--gr-footer-width-proportion);
+                    min-width: var(--gr-footer-min-width);
+                    margin: var(--gr-card-element-margin);
+                    display: flex;
+                    /* background-color: aqua; */
+                    background-color: #fff;
+                    position: relative;
+                    padding: 0px;
+                }
+
+                .gr-language-star {
+                    margin: auto auto 22px auto;
+                    text-align: center;
+                    opacity: 1;
+                }
+
+                .gr-language {
+                    font-size: .8rem;
+                    font-weight: 600;
+                    line-height: 2.2rem;
+                    color: #2070d3;
+                }
+
+                #gr-star-icon {
+                    font-size: .8rem;
+                    display: inherit;
+                }
+
+                .gr-card-toolbar{
+                    display:flex;
+                    width: 100%;
+                    height: 100%;
+
+                    position: absolute;
+
+                    opacity: 0;
+                    animation: fade-out;
+                    animation-duration: .4s;
+                    z-index: -1;
+                    /* background-color: #2070d3; */
+                }
+
+                .gr-repo-link {
+                    margin: auto;
+                }
+
+                #gr-repo-link-icon {
+                    font-size: 16px;
+                }
+                /* animation part */
+
+                @keyframes fade-in {
+                    0% {opacity: 0;}/*初始状态 透明度为0*/
+                    100% {opacity: 1;}/*结束状态 透明度为1*/
+                }
+
+                @keyframes fade-out {
+                    0% {opacity: 1;}/*初始状态 透明度为0*/
+                    100% {opacity: 0;}/*结束状态 透明度为1*/
+                }
+
+                .gr-card:hover .gr-language-star{
+                    opacity: 0;
+                    animation: fade-out;
+                    animation-duration: .3s;
+                }
+
+                .gr-card:hover .gr-card-toolbar{
+                    opacity: 1;
+                    animation: fade-in;
+                    animation-duration: .6s;
+                    z-index: 1;
+                }
+                &lt;/style&gt;
+
+                &lt;div class=&quot;gr-card&quot;&gt;
+                    &lt;div class=&quot;gr-header&quot;&gt;
+                        &lt;img src=&quot;https://avatars.githubusercontent.com/u/22283693?v=4&quot; alt=&quot;&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;gr-content&quot;&gt;
+                        &lt;div class=&quot;gr-fullname&quot;&gt;
+                            &lt;p&gt;&lt;i class=&quot;fab fa-github fa-lg&quot; aria-hidden=&quot;true&quot; id=&quot;gr-github-icon&quot;&gt;&lt;/i&gt; nullobsi/cantata&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;gr-description&quot;&gt;
+                            Qt Graphical MPD Client
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;gr-footer&quot;&gt;
+                        &lt;div class=&quot;gr-language-star&quot;&gt;
+                            &lt;span class=&quot;gr-language&quot;&gt;C++&lt;/span&gt;
+                            &lt;i class=&quot;far fa-star&quot; aria-hidden=&quot;true&quot; id=&#39;gr-star-icon&#39;&gt; 140&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;gr-card-toolbar&quot;&gt;
+                            &lt;div class=&quot;gr-repo-link&quot;&gt;
+                                &lt;a href=&quot;https://github.com/nullobsi/cantata&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;
+                                    title=&quot;Open in a new TAB&quot;&gt;
+                                    &lt;i class=&quot;fas fa-external-link-square-alt fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color: black;&quot; id=&quot;gr-repo-link-icon&quot;&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/mpd/">mpd</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/06/19/mpd/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>calamares</title>
+      <link>https://ktkr3d.github.io/2025/06/01/calamares/</link>
+      <guid>https://ktkr3d.github.io/2025/06/01/calamares/</guid>
+      <pubDate>Sat, 31 May 2025 20:36:07 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/calamares.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;GUIインストーラCalamaresをカスタマイズしてみました。&lt;/p&gt;
+&lt;a href=&quot;https://calamares.io/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://raw.githubusercontent.com/calamares/calamares/calamares/src/branding/default/squid.png&quot; alt=&quot;Calamares&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;Calamares&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
+
+&lt;p&gt;カスタマイズしたCalamaresを組み込んだライブISOイメージで起動し、Arch Linuxをインストールして、Arch Linuxが起動しました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/calamares_restarted.png&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/archiso/">archiso</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/calamares/">calamares</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/06/01/calamares/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>archiso-gnome</title>
+      <link>https://ktkr3d.github.io/2025/05/28/archiso-gnome/</link>
+      <guid>https://ktkr3d.github.io/2025/05/28/archiso-gnome/</guid>
+      <pubDate>Tue, 27 May 2025 21:16:46 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/archiso-gnome-desktop.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;archisoでGNOMEデスクトップ環境のライブISOイメージを作成してみました。&lt;br&gt;Fluentテーマを利用していてすっきりした見た目になっています。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/gnome/">gnome</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/archiso/">archiso</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/05/28/archiso-gnome/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>archiso</title>
+      <link>https://ktkr3d.github.io/2025/05/26/archiso/</link>
+      <guid>https://ktkr3d.github.io/2025/05/26/archiso/</guid>
+      <pubDate>Sun, 25 May 2025 15:23:53 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/archiso-gnome.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;archisoでGNOMEデスクトップ環境のArch LinuxライブISOを作成します。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.jp/index.php/Archiso&quot;&gt;https://wiki.archlinux.jp/index.php/Archiso&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/archiso/">archiso</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/05/26/archiso/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>AnduinOS</title>
+      <link>https://ktkr3d.github.io/2025/05/21/AnduinOS/</link>
+      <guid>https://ktkr3d.github.io/2025/05/21/AnduinOS/</guid>
+      <pubDate>Wed, 21 May 2025 13:33:48 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/anduinos.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;AnduinOSを試してみました。インタフェースに癖がないのですぐに使えそうですね。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.anduinos.com/&quot;&gt;https://www.anduinos.com/&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;https://www.anduinos.com/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://docs.anduinos.com/Assets/logo.svg&quot; alt=&quot;AnduinOS&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;AnduinOS&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;AnduinOS is a custom Ubuntu-based Linux distribution that aims to facilitate developers transitioning from Windows to Linux by maintaining familiar operational habits and workflows.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/anduinos/">anduinos</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/05/21/AnduinOS/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Reflector</title>
+      <link>https://ktkr3d.github.io/2025/05/19/Reflector/</link>
+      <guid>https://ktkr3d.github.io/2025/05/19/Reflector/</guid>
+      <pubDate>Mon, 19 May 2025 09:05:23 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/reflector.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Reflectorを利用してArch Linuxのミラーリストを週次で自動更新するように設定します。タイマー&lt;code&gt;reflector.timer&lt;/code&gt;が週次で&lt;code&gt;reflector.service&lt;/code&gt;をキックします。即時実行したい場合は&lt;code&gt;reflector.service&lt;/code&gt;を開始(start)します。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://man.archlinux.org/man/reflector.1&quot;&gt;https://man.archlinux.org/man/reflector.1&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://wiki.archlinux.jp/index.php/Reflector&quot;&gt;https://wiki.archlinux.jp/index.php/Reflector&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/reflector/">reflector</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/05/19/Reflector/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Windows 11 NAS</title>
+      <link>https://ktkr3d.github.io/2025/05/04/Windows-11-NAS/</link>
+      <guid>https://ktkr3d.github.io/2025/05/04/Windows-11-NAS/</guid>
+      <pubDate>Sun, 04 May 2025 05:15:49 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;https://www.logitec.co.jp/products/hd/lhrbnu3/images/img_05.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;古いWindows 10 ProマシンをWindows 11 ProにアップグレードしてNASとして利用します。Windows 10のHDDはMBRフォーマットでしたのでGPTフォーマットのSSDに移行しました。&lt;br&gt;しばらく利用しない時はリモートからスリープさせます。利用する際にはリモートからWake on LANで起動します。&lt;br&gt;私の持っている外付けディスクケースは電源連動のさせ方が少し複雑でしたが設定することにより安定して動作するようになりました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/nas/">nas</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/05/04/Windows-11-NAS/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>WireGuard Easy (wg-easy)</title>
+      <link>https://ktkr3d.github.io/2025/04/06/WireGuard-Easy-wg-easy/</link>
+      <guid>https://ktkr3d.github.io/2025/04/06/WireGuard-Easy-wg-easy/</guid>
+      <pubDate>Sat, 05 Apr 2025 20:38:15 GMT</pubDate>
+      
+      <description>&lt;p&gt;WireGuard Easy(wg-easy)でVPN環境を構築してみました。&lt;br&gt;Dockerであることと設定に必要な項目が少ないことから構築で迷うことはありません。&lt;br&gt;細かな制御をしたい場合は設定ファイルを直接編集するようなことが必要かもしれません。&lt;/p&gt;
+&lt;div class=&quot;github-card&quot; data-github=&quot;wg-easy/wg-easy&quot; data-width=&quot;100%&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;&gt;&lt;/script&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/docker/">docker</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/vpn/">vpn</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/wireguard/">wireguard</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/04/06/WireGuard-Easy-wg-easy/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Wireguard-ui</title>
+      <link>https://ktkr3d.github.io/2025/04/03/wireguard-ui/</link>
+      <guid>https://ktkr3d.github.io/2025/04/03/wireguard-ui/</guid>
+      <pubDate>Thu, 03 Apr 2025 00:31:08 GMT</pubDate>
+      
+      <description>&lt;p&gt;Wireguard-uiを使ってRaspberry Pi 4BにVPNサーバ環境を構築しました。&lt;br&gt;Wireguard-uiはGUI操作でWireguardのサーバ用設定ファイル(wg0.conf)やクライアント用の設定ファイル&amp;#x2F;QRコードを生成できます。&lt;br&gt;また、Wake on LANの機能もあります。&lt;br&gt;MTUとPost Up&amp;#x2F;Downスクリプトの指定方法について試行錯誤しました。&lt;/p&gt;
+&lt;div class=&quot;github-card&quot; data-github=&quot;ngoduykhanh/wireguard-ui&quot; data-width=&quot;100%&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;&gt;&lt;/script&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/vpn/">vpn</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/wireguard/">wireguard</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/04/03/wireguard-ui/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>

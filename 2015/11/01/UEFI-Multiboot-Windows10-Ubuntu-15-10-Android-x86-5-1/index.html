@@ -1,0 +1,350 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>UEFI Multiboot Windows10, Ubuntu 15.10, Android-x86 5.1 | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Inspiron 11 3158 (skylake Core i3-6100U, SSD 128GB)を入手したので、マルチブート環境を構築してみました。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UEFI Multiboot Windows10, Ubuntu 15.10, Android-x86 5.1">
+<meta property="og:url" content="https://ktkr3d.github.io/2015/11/01/UEFI-Multiboot-Windows10-Ubuntu-15-10-Android-x86-5-1/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="Inspiron 11 3158 (skylake Core i3-6100U, SSD 128GB)を入手したので、マルチブート環境を構築してみました。">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/dell-inspiron-11-3000-modes.jpg">
+<meta property="article:published_time" content="2015-11-01T00:42:12.000Z">
+<meta property="article:modified_time" content="2015-11-01T00:42:12.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="inspiron">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/dell-inspiron-11-3000-modes.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "UEFI Multiboot Windows10, Ubuntu 15.10, Android-x86 5.1",
+  "url": "https://ktkr3d.github.io/2015/11/01/UEFI-Multiboot-Windows10-Ubuntu-15-10-Android-x86-5-1/",
+  "image": "https://ktkr3d.github.io/images/dell-inspiron-11-3000-modes.jpg",
+  "datePublished": "2015-11-01T00:42:12.000Z",
+  "dateModified": "2015-11-01T00:42:12.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2015/11/01/UEFI-Multiboot-Windows10-Ubuntu-15-10-Android-x86-5-1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'UEFI Multiboot Windows10, Ubuntu 15.10, Android-x86 5.1',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">UEFI Multiboot Windows10, Ubuntu 15.10, Android-x86 5.1</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">UEFI Multiboot Windows10, Ubuntu 15.10, Android-x86 5.1</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2015-11-01T00:42:12.000Z" title="Created 2015-11-01 09:42:12">2015-11-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2015-11-01T00:42:12.000Z" title="Updated 2015-11-01 09:42:12">2015-11-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/os/">os</a></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p>Inspiron 11 3158 (skylake Core i3-6100U, SSD 128GB)を入手したので、マルチブート環境を構築してみました。<br><img src="/images/dell-inspiron-11-3000-modes.jpg" alt="dell-inspiron-11-3000-modes.jpg" title="dell-inspiron-11-3000-modes.jpg"></p>
+<span id="more"></span>
+
+<h2 id="Fast-Boot-を抑止"><a href="#Fast-Boot-を抑止" class="headerlink" title="Fast Boot を抑止"></a>Fast Boot を抑止</h2><ol>
+<li>Windows ボタンを右クリックして、[電源オプション]押下</li>
+<li>[電源ボタンの動作を選択する]押下</li>
+<li>[現在利用可能ではない設定を変更します]押下</li>
+<li>[高速スタートアップを有効にする(推奨)]のチェックを外し、[変更の保存]押下</li>
+<li>Windows 10 をシャットダウンします。</li>
+</ol>
+<h2 id="Ubuntu-のインストール"><a href="#Ubuntu-のインストール" class="headerlink" title="Ubuntu のインストール"></a>Ubuntu のインストール</h2><ol>
+<li><p>以下の64bit 版Ubuntu のISO をUnetbootin でUSB メモリに書き込み、USB スロットに挿入します。<br><a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/ubuntu-gnome/releases/15.10/release/ubuntu-gnome-15.10-desktop-amd64.iso">http://cdimage.ubuntu.com/ubuntu-gnome/releases/15.10/release/ubuntu-gnome-15.10-desktop-amd64.iso</a></p>
+</li>
+<li><p>USB からUbuntu をライブモードで起動します。<br>PC のボリュームマイナスボタンを押しながら、電源ボタンを押下し、ロゴが出たタイミングでマイナスボタンを離します。</p>
+</li>
+<li><p>gparted でパーティションのレイアウトを変更します。<br>Ubuntu のインストール用に35GB 程度を確保するために、Windows の領域を縮小して、全体を前方に移動します。<img src="/images/partitions_before.png" alt="partitions_before.png" title="partitions_before.png"></p>
+</li>
+<li><p>Ubuntu のインストールでは、2つのパーティションを作成します。<br><img src="/images/partitions_after.png" alt="partitions_after.png" title="ppartitions_after.png"></p>
+<ul>
+<li>ルートパーティション(&#x2F;dev&#x2F;sda6, ext4, 30GB)</li>
+<li>swap パーティション(&#x2F;dev&#x2F;sda7, swap, 5GB)</li>
+</ul>
+</li>
+<li><p>ブートローダは、&#x2F;dev&#x2F;sda を指定します。<br>&#x2F;dev&#x2F;sda 配下のEFI パーティション(&#x2F;dev&#x2F;sda1)にブートローダがインストールされます。</p>
+</li>
+<li><p>再起動します。GRUB に以下が表示されるようになります。</p>
+<ul>
+<li>Ubuntu</li>
+<li>Advanced options for Ubuntu</li>
+<li>*Windows Boot Manager (on &#x2F;dev&#x2F;sda1)</li>
+<li>System Setup</li>
+</ul>
+</li>
+</ol>
+<h2 id="Secureboot-の無効化"><a href="#Secureboot-の無効化" class="headerlink" title="Secureboot の無効化"></a>Secureboot の無効化</h2><ol>
+<li>PC を起動し、GRUB 上のSystem Setup を選択します。</li>
+<li>Secureboot を無効にします。</li>
+</ol>
+<h2 id="Android-x86-のインストール"><a href="#Android-x86-のインストール" class="headerlink" title="Android-x86 のインストール"></a>Android-x86 のインストール</h2><ol>
+<li>以下の64bit 版Android-x86 のイメージをdd でUSB メモリに書き込み、スロットに挿入します。<br><a target="_blank" rel="noopener" href="http://sourceforge.net/projects/android-x86/files/Release%205.1/android-x86_64-5.1-rc1.img/download">http://sourceforge.net/projects/android-x86/files/Release%205.1/android-x86_64-5.1-rc1.img/download</a></li>
+<li>PC のボリュームマイナスボタンを押しながら、電源ボタンを押下し、ロゴが出たタイミングでマイナスボタンを離します。</li>
+<li>Android-x86 のインストーラが起動されるので、&#x2F;dev&#x2F;sda6 にインストールします。ブートローダはインストールしません。</li>
+<li>再起動します。</li>
+</ol>
+<h2 id="Secureboot-の有効化"><a href="#Secureboot-の有効化" class="headerlink" title="Secureboot の有効化"></a>Secureboot の有効化</h2><ol>
+<li>PC を起動し、GRUB 上のSystem Setup を選択します。</li>
+<li>Secureboot を有効にします。</li>
+</ol>
+<h2 id="Android-x86-の起動メニュー追加"><a href="#Android-x86-の起動メニュー追加" class="headerlink" title="Android-x86 の起動メニュー追加"></a>Android-x86 の起動メニュー追加</h2><ol>
+<li>Ubuntu で起動し、以下のファイルを編集します。 <figure class="highlight bash"><figcaption><span>/etc/grub.d/40_custom</span></figcaption><table><tr><td class="code"><pre><span class="line">menuentry <span class="string">&quot;Android-x86 5.1&quot;</span> --class android --class os &#123;</span><br><span class="line">    insmod ext2</span><br><span class="line">    <span class="built_in">set</span> root=<span class="string">&#x27;(hd0,6)&#x27;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&#x27;Loading Android-x86 5.1 ...&#x27;</span></span><br><span class="line">    linux /android-5.1-rc1/kernel quiet root=/dev/ram0 androidboot.hardware=android_x86_64 acpi_sleep=s3_bios,s3_mode SRC=/android-5.1-rc1</span><br><span class="line">    initrd /android-5.1-rc1/initrd.img</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>設定を反映します。 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> update-grub</span><br></pre></td></tr></table></figure></li>
+<li>再起動するとGRUB に以下が表示されるようになります。<ul>
+<li>Ubuntu</li>
+<li>Advanced options for Ubuntu</li>
+<li>*Windows Boot Manager (on &#x2F;dev&#x2F;sda1)</li>
+<li>System Setup</li>
+<li>Android-x86 5.1</li>
+</ul>
+</li>
+</ol>
+<h2 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h2><ul>
+<li>Inspiron 11 3158 にUbuntu を入れたところ、タッチパッドが有効にならなかったので、以下を参考に設定しました。<br><a target="_blank" rel="noopener" href="http://askubuntu.com/questions/592925/dell-inspiron-3551-unresponsive-touchpad">http://askubuntu.com/questions/592925/dell-inspiron-3551-unresponsive-touchpad</a>  <figure class="highlight text"><figcaption><span>/etc/default/grub</span></figcaption><table><tr><td class="code"><pre><span class="line">GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash i8042.nopnp&quot;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> update-grub</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><figcaption><span>/etc/modprobe.d/blacklist-i2c_hid.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">blacklist i2c_hid</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> depmod -a</span><br><span class="line">$ <span class="built_in">sudo</span> update-initramfs -u</span><br></pre></td></tr></table></figure>
+  <figure class="highlight text"><figcaption><span>/etc/modules</span></figcaption><table><tr><td class="code"><pre><span class="line">synaptics_i2c</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> reboot</span><br></pre></td></tr></table></figure></li>
+<li>Windows の時刻がずれるので、Ubuntu 上で以下を実行します。  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> hwclock --hctosys --<span class="built_in">local</span></span><br></pre></td></tr></table></figure></li>
+<li>カーネルをアップグレードすると(?)、Ubuntu 上でタッチパッドが動作しなくなる  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> update-initramfs -u</span><br><span class="line">$ <span class="built_in">sudo</span> reboot</span><br></pre></td></tr></table></figure></li>
+<li>Android 上で無線LAN(RTL8723BE)が有効にならない<br>  有線LAN を使う</li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/inspiron/">inspiron</a></div><div class="post-share"><div class="social-share" data-image="/images/dell-inspiron-11-3000-modes.jpg" data-sites="facebook,twitter,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2015/12/14/atom-toolbar/" title="Atom Toolbar"><img class="cover" src="/images/atom-toolbar.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Atom Toolbar</div></div><div class="info-2"><div class="info-item-1">https://atom.io/packages/flex-tool-bar Atom のツールバーを設定してみました。   パッケージのインストール$ apm install tool-bar flex-tool-bar  ツールバーの内容   コマンド 機能    application:new-file 新規ファイル   application:open-file ファイルを開く   core:save 保存   window:reload 再読み込み   command-palette:toggle コマンドパレットの開閉   ktkr3d:datetime 日付時刻の挿入   settings-view:open 設定   window:toggle-dev-tools デべロッパーツール   pane:split-right 横に分割   pane:split-down 縦に分割   tree-view:toggle ツリービューの開閉   minimap:toggle ミニマップの開閉   git-control:toggle Git Control の開閉   m...</div></div></div></a><a class="pagination-related" href="/2015/10/19/Proxy-Authentication-Settings-in-bash/" title="Proxy Authentication Settings in bash"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Proxy Authentication Settings in bash</div></div><div class="info-2"><div class="info-item-1">bash で認証プロキシを使うためのエイリアスを作ってみました。 認証プロキシサーバがproxy.example.com で、ポート番号が8080 の場合、以下のように設定します。なお、~/.bash_aliases は~/.bashrc から読み込まれるようになっています。 ~/.bash_aliasesalias proxy=&#x27;read -p &quot;user: &quot; proxy_user &amp;&amp; read -sp &quot;pass: &quot; proxy_pass &amp;&amp; echo &amp;&amp; export &#123;http,https,ftp&#125;_proxy=&quot;http://$proxy_user:$proxy_pass@proxy.example.com:8080&quot;&#x27;    使用$ proxyuser: hogepass:$ env | grep proxyhttp_proxy=http://hoge:fuga@proxy.example.com:8080ftp...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Fast-Boot-%E3%82%92%E6%8A%91%E6%AD%A2"><span class="toc-number">1.</span> <span class="toc-text">Fast Boot を抑止</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><span class="toc-number">2.</span> <span class="toc-text">Ubuntu のインストール</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Secureboot-%E3%81%AE%E7%84%A1%E5%8A%B9%E5%8C%96"><span class="toc-number">3.</span> <span class="toc-text">Secureboot の無効化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android-x86-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><span class="toc-number">4.</span> <span class="toc-text">Android-x86 のインストール</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Secureboot-%E3%81%AE%E6%9C%89%E5%8A%B9%E5%8C%96"><span class="toc-number">5.</span> <span class="toc-text">Secureboot の有効化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android-x86-%E3%81%AE%E8%B5%B7%E5%8B%95%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E8%BF%BD%E5%8A%A0"><span class="toc-number">6.</span> <span class="toc-text">Android-x86 の起動メニュー追加</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Workaround"><span class="toc-number">7.</span> <span class="toc-text">Workaround</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

@@ -1,0 +1,40 @@
+
+html {
+  --global-font-size: 16px !important;
+}
+
+.post_cover .post-bg {
+  object-fit: contain !important;
+}
+
+.layout {
+  max-width: 1700px;
+}
+
+figcaption {
+  background-color: #456789;
+  padding: 10px !important;
+  color: white;
+  border-radius: 5px 5px 0 0 !important;
+}
+
+.highlight {
+  border-radius: 5px !important;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 40px 0 20px;
+  padding: 0 0 0 15px;
+  border-left: 6px solid #5ca3c5;
+  border-bottom: 1px solid #5ca3c5;
+}
+
+h4 {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+#pagination {
+  width: 100%;
+}

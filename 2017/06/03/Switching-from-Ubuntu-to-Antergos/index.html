@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Antergos に乗り換えてみました | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="https:&#x2F;&#x2F;antergos.com&#x2F;http:&#x2F;&#x2F;ktkr3d.github.io&#x2F;antergos&#x2F;AntergosはArch Linux系ディストリビューションです。今回、普段使いのデスクトップ環境をUbuntuからAntergosに移行してみました。Antergos(≒Arch Linux)は初期設定さえしてしまえばとても使い勝手のよいディストリビューションと思います。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Antergos に乗り換えてみました">
+<meta property="og:url" content="https://ktkr3d.github.io/2017/06/03/Switching-from-Ubuntu-to-Antergos/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="https:&#x2F;&#x2F;antergos.com&#x2F;http:&#x2F;&#x2F;ktkr3d.github.io&#x2F;antergos&#x2F;AntergosはArch Linux系ディストリビューションです。今回、普段使いのデスクトップ環境をUbuntuからAntergosに移行してみました。Antergos(≒Arch Linux)は初期設定さえしてしまえばとても使い勝手のよいディストリビューションと思います。">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
+<meta property="article:published_time" content="2017-06-02T22:36:10.000Z">
+<meta property="article:modified_time" content="2017-06-02T22:36:10.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="antergos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/avatar.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Antergos に乗り換えてみました",
+  "url": "https://ktkr3d.github.io/2017/06/03/Switching-from-Ubuntu-to-Antergos/",
+  "image": "https://ktkr3d.github.io/images/avatar.png",
+  "datePublished": "2017-06-02T22:36:10.000Z",
+  "dateModified": "2017-06-02T22:36:10.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2017/06/03/Switching-from-Ubuntu-to-Antergos/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Antergos に乗り換えてみました',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">Antergos に乗り換えてみました</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Antergos に乗り換えてみました</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2017-06-02T22:36:10.000Z" title="Created 2017-06-03 07:36:10">2017-06-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2017-06-02T22:36:10.000Z" title="Updated 2017-06-03 07:36:10">2017-06-03</time></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p><img src="https://antergos.com/wp-content/uploads/2014/09/antergos-clean.png" alt="antergos"><br><img src="/images/antergos-arc-dark-theme.png" alt="antergos arc dark theme"><br><a target="_blank" rel="noopener" href="https://antergos.com/">https://antergos.com/</a><br><a href="http://ktkr3d.github.io/antergos/">http://ktkr3d.github.io/antergos/</a><br>AntergosはArch Linux系ディストリビューションです。<br>今回、普段使いのデスクトップ環境をUbuntuからAntergosに移行してみました。<br>Antergos(≒Arch Linux)は初期設定さえしてしまえばとても使い勝手のよいディストリビューションと思います。</p>
+<span id="more"></span>
+
+<h2 id="Antergos-Arch-Linux-の良いところ"><a href="#Antergos-Arch-Linux-の良いところ" class="headerlink" title="Antergos(Arch Linux)の良いところ"></a>Antergos(Arch Linux)の良いところ</h2><ul>
+<li>公式リポジトリやAUR(Arch User Repository)のパッケージが充実している。<br>パッケージ個別のリポジトリを追加しなくてもほとんど揃ってしまいそう。<br>誰が管理してくれているんだろう。</li>
+<li>パッケージのバージョンが新しいものが多い。<br>GNOME3の最新のパッケージを導入できる。<br>プロプライエタリな最新のディスプレイドライバも難なく導入できた。</li>
+<li>ローリングリリースなので環境が一つで済む。<br>今までは複数世代の環境をパーティションを分けて維持してきました。移行も面倒でした。</li>
+<li>パッケージマネージャpamac がシンプルでわかりやすくて使いやすい。<br><code>-git</code>パッケージも自動でビルドしてくれる。<br>自分でビルドしなくてよいのは少し残念な気もします。</li>
+<li>ArchWikiのナレッジが豊富。<br>誰が保守してくれているんだろう。</li>
+</ul>
+<h2 id="移行して気づいたこと"><a href="#移行して気づいたこと" class="headerlink" title="移行して気づいたこと"></a>移行して気づいたこと</h2><ul>
+<li>日本語で利用するには少し設定が必要です。<br>これは設定してしまえば解決しそうです。</li>
+<li>サービス系パッケージは有効化が必要<br>Ubutu&#x2F;Debian と違ってサービス系パッケージをインストールしてもそのままでは有効にならない場合が多いので、忘れずに有効化(<code>sudo systemctl enable</code>)と開始(<code>sudo systemctl start</code>)をしてあげる。</li>
+<li>ユーザアカウントはusersグループに所属しています。</li>
+</ul>
+<h2 id="日本語環境向けの設定"><a href="#日本語環境向けの設定" class="headerlink" title="日本語環境向けの設定"></a>日本語環境向けの設定</h2><h3 id="文字フォントの設定"><a href="#文字フォントの設定" class="headerlink" title="文字フォントの設定"></a>文字フォントの設定</h3><p>インストール直後は日本語がうまく表示されないのでフォントを追加します。</p>
+<ul>
+<li>noto-fonts-cjk<br>日中韓のsans-serif体&#x2F;serif体フォントが入っています。</li>
+<li>otf-source-han-code-jp<br>端末やエディタで使いやすい固定幅フォントが入っています。</li>
+</ul>
+<h3 id="かな漢字変換の設定"><a href="#かな漢字変換の設定" class="headerlink" title="かな漢字変換の設定"></a>かな漢字変換の設定</h3><ul>
+<li>fcitx-mozc</li>
+<li>fcitx-configtool</li>
+<li>設定<figure class="highlight bash"><figcaption><span>~/.xprofile</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=@im=fcitx</span><br><span class="line"><span class="built_in">export</span> DefaultIMModule=fcitx</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="ディスプレイマネージャの設定"><a href="#ディスプレイマネージャの設定" class="headerlink" title="ディスプレイマネージャの設定"></a>ディスプレイマネージャの設定</h3><p>デフォルトのLightDMのwebkit-greeterのテーマは日本語が考慮されていないので、LightDMの言語をenに変えるか、時刻の文字のサイズを変更しないといけません。特にこだわりがなければGDMに乗り換えてしまってよいと思います。</p>
+<ul>
+<li>gdm</li>
+<li>切り替え<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> lightdm &amp;&amp; <span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> gdm</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="ホームディレクトリ下のディレクトリの英語化"><a href="#ホームディレクトリ下のディレクトリの英語化" class="headerlink" title="ホームディレクトリ下のディレクトリの英語化"></a>ホームディレクトリ下のディレクトリの英語化</h3><p>英語名の方が端末で使いやすいので変更します。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
+
+<h3 id="時刻の設定"><a href="#時刻の設定" class="headerlink" title="時刻の設定"></a>時刻の設定</h3><p>日付と時刻の設定(<code>gnome-control-center datetime</code>)で自動タイムゾーン設定をオンにします。</p>
+<h3 id="GTKテーマ、GNOME-Shellテーマ、アイコンの設定"><a href="#GTKテーマ、GNOME-Shellテーマ、アイコンの設定" class="headerlink" title="GTKテーマ、GNOME Shellテーマ、アイコンの設定"></a>GTKテーマ、GNOME Shellテーマ、アイコンの設定</h3><p>日本語に関してではないですが、<code>gnome-tweak-tool</code>でカスタマイズします。Numixも悪くないです。</p>
+<ul>
+<li>アイコン<br><a target="_blank" rel="noopener" href="https://www.gnome-look.org/p/1178976/">https://www.gnome-look.org/p/1178976/</a></li>
+<li>GTK3&#x2F;GTK2&#x2F;GNOME Shell テーマ<br><code>arc-gtk-theme</code>パッケージ<br><a target="_blank" rel="noopener" href="https://github.com/horst3180/arc-theme">https://github.com/horst3180/arc-theme</a></li>
+<li>壁紙<br><a target="_blank" rel="noopener" href="http://charlie-henson.deviantart.com/art/Arc-Dark-Elemental-4K-Material-Wallpaper-039-624875950">http://charlie-henson.deviantart.com/art/Arc-Dark-Elemental-4K-Material-Wallpaper-039-624875950</a></li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/antergos/">antergos</a></div><div class="post-share"><div class="social-share" data-image="/images/avatar.png" data-sites="facebook,twitter,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2017/10/30/Ubuntu-17-10/" title="Ubuntu 17.10 をインストールしてみました"><img class="cover" src="https://www.ubuntufree.com/wp-content/uploads/2017/10/Ubuntu-17-10-Official-Mascot-1024x683.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Ubuntu 17.10 をインストールしてみました</div></div><div class="info-2"><div class="info-item-1">Ubuntu 17.10 がリリースされたので、DELL Inspiron 11 3158 にインストールしてみました。    ISO イメージのダウンロード https://www.ubuntu.com/desktop/1710 ISO をUSB メモリに書き込み、ブートしてインストール GNOME セッションのインストール  $ sudo apt install gnome-session  ログアウトして、デスクトップ環境に’GNOME on Xorg’を選択してログイン ヘッドフォンジャックの検出に不具合がありそうなので、設定を追加 https://bugs.launchpad.net/ubuntu/+source/alsa-driver/+bug/1575078/comments/30  /etc/modprobe.d/alsa.confoptions snd-hda-intel single_cmd=1 probe_mask=1 model=dell-headset-multi  後は普通に環境設定  久しぶりにUbuntu をクリーンインストールしてみましたが、個別...</div></div></div></a><a class="pagination-related" href="/2017/05/31/Etcher-USB-Image-Writer/" title="Etcher USB イメージライタ"><img class="cover" src="/images/etcher.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Etcher USB イメージライタ</div></div><div class="info-2"><div class="info-item-1">https://etcher.io/Electron製のUSB イメージライタEtcher を使ってみました。シンプルな画面ながら、既存データの消去と書き込みは確実な気がします。特に消去が。UnetBootin の代わりに使えそうです。   インストール$ sudo add-apt-repository &quot;deb https://dl.bintray.com/resin-io/debian stable etcher&quot;$ sudo apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 379CE192D401AB61$ sudo apt update &amp;&amp; sudo apt install etcher-electron </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2016/01/15/Antergos-GNOME-3-19/" title="Antergos + GNOME 3.19"><img class="cover" src="/images/antergos_gnome_3.19.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2016-01-15</div><div class="info-item-2">Antergos + GNOME 3.19</div></div><div class="info-2"><div class="info-item-1">http://softwareperonista.com.ar/repo/archlinux/gnome-devel/ Arch Linux の派生ディストリビューションAntergos Linux のGNOME を3.18 から3.19 にアップグレードしてみました。   gnome-devel リポジトリの追加/etc/pacman.conf[gnome-devel]SigLevel = Optional TrustAllServer = http://softwareperonista.com.ar/repo/archlinux/gnome-devel/x86_64 [gnome-devel]行は、既存の[core]行より上に追加すると優先されるようです。 gnome-devel キーの取り込み$ wget http://softwareperonista.com.ar/repo/archlinux/gnome-devel/gnome-devel.key$ sudo pacman-key --add gnome-devel.key  パッケージのアップグレード$ sudo ...</div></div></div></a><a class="pagination-related" href="/2016/03/12/LightDM-theme-Antergos/" title="LightDM theme Antergos"><img class="cover" src="/images/lightdm-antergos3.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2016-03-12</div><div class="info-item-2">LightDM theme Antergos</div></div><div class="info-2"><div class="info-item-1">http://swlx.cubava.cu/colocar-una-pantalla-de-inicio-de-sesion-con-estilo-twitter-bootstrap-en-lightdm/https://github.com/Antergos/lightdm-webkit-theme-antergosArch Linux 系のディストリビューションであるAntergos のLightDM WebKit テーマをUbuntu GNOME 16.04 で使ってみました。   パッケージのインストール$ sudo apt-get install lightdm lightdm-webkit-greeter  LightDM WebKit Greeter の有効化/etc/lightdm/lightdm.confgreeter-session=lightdm-webkit-greeter  テーマのインストールhttp://gutl.jovenclub.cu/wp-content/ftp/ftp-gutl/soft/Artwork/lightdm-webkit-them...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Antergos-Arch-Linux-%E3%81%AE%E8%89%AF%E3%81%84%E3%81%A8%E3%81%93%E3%82%8D"><span class="toc-number">1.</span> <span class="toc-text">Antergos(Arch Linux)の良いところ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%BB%E8%A1%8C%E3%81%97%E3%81%A6%E6%B0%97%E3%81%A5%E3%81%84%E3%81%9F%E3%81%93%E3%81%A8"><span class="toc-number">2.</span> <span class="toc-text">移行して気づいたこと</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%92%B0%E5%A2%83%E5%90%91%E3%81%91%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">3.</span> <span class="toc-text">日本語環境向けの設定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">3.1.</span> <span class="toc-text">文字フォントの設定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%81%8B%E3%81%AA%E6%BC%A2%E5%AD%97%E5%A4%89%E6%8F%9B%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">3.2.</span> <span class="toc-text">かな漢字変換の設定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">3.3.</span> <span class="toc-text">ディスプレイマネージャの設定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E4%B8%8B%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E8%8B%B1%E8%AA%9E%E5%8C%96"><span class="toc-number">3.4.</span> <span class="toc-text">ホームディレクトリ下のディレクトリの英語化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%82%E5%88%BB%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">3.5.</span> <span class="toc-text">時刻の設定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GTK%E3%83%86%E3%83%BC%E3%83%9E%E3%80%81GNOME-Shell%E3%83%86%E3%83%BC%E3%83%9E%E3%80%81%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">3.6.</span> <span class="toc-text">GTKテーマ、GNOME Shellテーマ、アイコンの設定</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

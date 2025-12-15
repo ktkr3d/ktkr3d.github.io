@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Memorandum">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Memorandum!">
+<meta property="og:url" content="https://ktkr3d.github.io/page/6/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="Memorandum">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
+<meta property="article:author" content="ktkr3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/page/6/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Memorandum!',
+  isHighlightShrink: undefined,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Memorandum!</h1></header><main class="layout" id="content-inner"><div class="recent-posts nc masonry" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover"><a href="/2023/12/03/Fractional-Scaling-on-Wayland/" title="Fractional Scaling on Wayland"><img class="post-bg" src="/images/fractional_scaling.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Fractional Scaling on Wayland"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/12/03/Fractional-Scaling-on-Wayland/" title="Fractional Scaling on Wayland">Fractional Scaling on Wayland</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-03T04:49:27.000Z" title="Created 2023-12-03 13:49:27">2023-12-03</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/wayland/">wayland</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ubuntu/">ubuntu</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/minibook-x/">minibook-x</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/arch-linux/">arch-linux</a></span></div><div class="content">CHUWI MiniBook X(10.51 inch, 1200*1920px)のように画素密度の高い画面ではスケーリング値を125%にすると見やすくなるとともにタッチスクリーン操作がしやすくなります。出荷時のWindows 11は150%になっています。これをLinux でもやってみましょう。   環境 Ubuntu 23.10 &#x2F; GNOME Shell 45.1 Arch Linux &#x2F; GNOME Shell 45.1 CHUWI MiniBook X N100画素密度： 215ppi画素ピッチ： 0.118mm総画素数： 2,304,000ピクセルスペック： 10.51インチ(1920×1200)  構築Waylandで分数スケーリング(Fractional Scaling)の有効化 Ubuntuではデフォルトで有効になっています。 Arch Linuxで分数スケーリングを有効にするには以下を実行します。gsettings set org.gnome.mutter experimental-features &quot;[&#x27;scale-m...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/12/02/Hexo-7-0-freemind/" title="Hexo 7.0 + Freemind + Travel"><img class="post-bg" src="/images/hexo-freemind-travel.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo 7.0 + Freemind + Travel"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/12/02/Hexo-7-0-freemind/" title="Hexo 7.0 + Freemind + Travel">Hexo 7.0 + Freemind + Travel</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-02T03:00:00.000Z" title="Created 2023-12-02 12:00:00">2023-12-02</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">https://hexo.io/news/2023/11/03/hexo-7-0-0-released/https://github.com/wzpan/hexo-theme-freemind/https://github.com/ktkr3d/hexo-theme-freemind-travel Hexo 7.0 がリリースされたので新規に環境を構築してみよう。FreemindテーマとTravelカラーテーマを設定します。   環境 WSL(Ubuntu 22.04) on Windows 11 nodejs v20.10.0 npm 10.2.3 hexo 7.0.0  構築 Hexo 7.0のインストールhttps://hexo.io/  npm install hexo-cli -ghexo init blogcd blognpm install   Freemind テーマのインストールhttps://github.com/wzpan/hexo-theme-freemind  git clone https://github.com/wzpan/hexo-theme-f...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/11/25/GNOME-Shell-Extensions/" title="GNOME Shell Extensions"><img class="post-bg" src="/images/gse.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GNOME Shell Extensions"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/11/25/GNOME-Shell-Extensions/" title="GNOME Shell Extensions">GNOME Shell Extensions</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-11-25T03:35:33.000Z" title="Created 2023-11-25 12:35:33">2023-11-25</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/gnome-shell-extension/">gnome-shell-extension</a></span></div><div class="content">https://extensions.gnome.org/ 久しぶりにGNOME Shell Extension を整理してみよう。環境は以下のとおり。  Ubuntu 22.04(GNOME Shell 42.9, X11) &#x2F; デスクトップPC Ubuntu 23.10(GNOME Shell 45.1, Wayland) &#x2F; タッチスクリーンのノートPC Ubuntu 24.04 Daily Build(GNOME Shell 45.1, Wayland) &#x2F; VMWare Player Arch Linux(GNOME Shell 45.1, Wayland) &#x2F; タッチスクリーンのノートPC    🚀タスクバー、ランチャーDash to Panel ⭐⭐⭐https://extensions.gnome.org/extension/1160/dash-to-panel/お気に入りのアプリケーション、タスクトレイをパネルで表示する私はタッチスクリーンを利用するので右側にパネルを配置して親指で操作している⚠️Wayland+タッチス...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/11/23/Lutris/" title="Lutris"><img class="post-bg" src="/images/ubuntu2204lts.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Lutris"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/11/23/Lutris/" title="Lutris">Lutris</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-11-23T08:08:22.000Z" title="Created 2023-11-23 17:08:22">2023-11-23</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/lutris/">lutris</a></span></div><div class="content">https://lutris.net/ Lutris でWorld of Warcraft を実行してみました。  OS はUbuntu 22.04.3 LTS, GNOME Shell 42.9, X11(X.org), Pulseaudio wine-ge-8-24, DirectX 11モード, 64bit, dxvk, vkd3d  結果としては、  FPS が90超えることもあります。Windows 11(同じPC)と同等の性能です。 Shaderのコンパイルが発生すると左下にCompiling Shaders...と表示されます。若干もたつく感じがします。キャッシュ方法があるのかよくわかりません。 キーボードの反応が遅れることがあります。 極まれに音飛びします。 DungeonやRaidには若干不安があるがファーミングには使えそう。  2024-10-10 lutris repository has been disabledhttps://github.com/lutris/lutris/releases    環境 Ubuntu 22.04.3 LTS, kern...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/10/15/Forge-GNOME-Shell-extension/" title="Forge - GNOME Shell Extension"><img class="post-bg" src="/images/forge_gnome_shell_extension_3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Forge - GNOME Shell Extension"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/10/15/Forge-GNOME-Shell-extension/" title="Forge - GNOME Shell Extension">Forge - GNOME Shell Extension</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-14T23:43:37.000Z" title="Created 2023-10-15 08:43:37">2023-10-15</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/gnome-shell-extension/">gnome-shell-extension</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/forge/">forge</a></span></div><div class="content">https://extensions.gnome.org/extension/4481/forge/https://github.com/forge-ext/forge    Forge はタイリングウィンドウ制御をしてくれるGNOME Shell 拡張機能です。GNOME Shell のままウィンドウマネージャを切り替えることなくタイリングを利用できるので環境構築がとても簡単です。   環境 Ubuntu GNOME Shell Dash to Panel (GNOME Shell Extension) ArcMenu (GNOME Shell Extension) Forge (GNOME Shell Extension)  キーボードショートカット(GNOME Shell)https://help.gnome.org/users/gnome-help/stable/shell-keyboard-shortcuts.html.jahttps://gist.github.com/rothgar/7079722    Shortcut Action    &lt;Super&gt...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/08/27/Hyprland-Ags/" title="Hyprland + Ags"><img class="post-bg" src="/images/hyprland-ags.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hyprland + Ags"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/27/Hyprland-Ags/" title="Hyprland + Ags">Hyprland + Ags</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-26T19:23:26.000Z" title="Created 2023-08-27 04:23:26">2023-08-27</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/minibook-x/">minibook-x</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/arch-linux/">arch-linux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hyprland/">hyprland</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ags/">ags</a></span></div><div class="content">https://github.com/Aylur/agsMiniBook X のArch Linux &#x2F; Hyprland 環境にAgs を導入してみました。Ags はJavaScript でGTK ウィジェットを定義できます。 2023-09-18 更新 Arch Linux, Hyprland, ags, VSCode, Google Chrome, Cava, fastfetch, bashtop, nginx, Three.js, ammo.js MiniBook X N100 -&gt; Type-C to HDMI -&gt; HDMI Capture -&gt; Hi10 Go N5100 -&gt; OBS Studio 音無しMP4 16MB 1分35秒     環境 MiniBook X N100 Arch Linux Hyprland Ags  構築📖手順 https://github.com/Aylur/ags/wiki https://github.com/Aylur/dotfiles  💿インストール Ags のインストール  https...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/08/25/Hyprland/" title="Hyprland"><img class="post-bg" src="/images/hyprland-minibookx.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hyprland"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/25/Hyprland/" title="Hyprland">Hyprland</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-25T08:33:56.000Z" title="Created 2023-08-25 17:33:56">2023-08-25</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/minibook-x/">minibook-x</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/arch-linux/">arch-linux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hyprland/">hyprland</a></span></div><div class="content">https://hyprland.org/MiniBook X のArch Linux にHyprland を導入してみました。かなりイケていますが、私に使いこなせるのだろうか。   環境https://wiki.hyprland.org/https://github.com/hyprland-community/awesome-hyprland     if (!window.google) {     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';     throw 'Google JS API is needed';   } else {     (function() {       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});       google.setOnLoadCallback(function...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/08/20/Arch-Linux/" title="Arch Linux"><img class="post-bg" src="/images/archlinux-minibookx.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Arch Linux"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/20/Arch-Linux/" title="Arch Linux">Arch Linux</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-20T05:16:53.000Z" title="Created 2023-08-20 14:16:53">2023-08-20</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/minibook-x/">minibook-x</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/arch-linux/">arch-linux</a></span></div><div class="content">MiniBook X N100 にArch Linux を導入してみました。   環境 MiniBook X N100 Calam Arch Installer 2023-08 gparted で512GB(477GiB)ストレージにArch Linux 用パーティションとして50GiBを準備      if (!window.google) {     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';     throw 'Google JS API is needed';   } else {     (function() {       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});       google.setOnLoadCallback(function() {         (new google.v...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/08/14/Minecraft-on-MiniBook-X-N100/" title="Minecraft on MiniBook X N100"><img class="post-bg" src="/images/minecraft-minibokx-01.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Minecraft on MiniBook X N100"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/14/Minecraft-on-MiniBook-X-N100/" title="Minecraft on MiniBook X N100">Minecraft on MiniBook X N100</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-14T09:44:28.000Z" title="Created 2023-08-14 18:44:28">2023-08-14</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/minecraft/">minecraft</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/minibook-x/">minibook-x</a></span></div><div class="content"> MiniBook X N100 でMinecraft Java Edition を実行してみました。   実行画面 Minecraft と Fabric Loaderインストーラをダウンロードして実行します。  Minecraft Java Edition Fabric Loader  Fabric 系Mods とショートカット操作%APPDATA%\.minecraft\mods\ フォルダに格納します。    Mod ショートカット操作    Fabric API    Iris Shaders O シェーダーパックの選択K シェーダーのオン&#x2F;オフ   Xaero’s Minimap Y Xaero’s Minimap の設定   Xaero’s World Map M WorldMap の表示[ Xaero’s World Map の設定   MaLiLib    MiniHUD H MiniHUD のオン&#x2F;オフH+C MiniHUDの設定   Simple Armor Hud    Sodium    WI Zoom V　ズーム(マウススクロール可)...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/" title="MiniBook X N100 - WoW Raid Try"><img class="post-bg" src="/images/wow-minibookx-raid-try.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MiniBook X N100 - WoW Raid Try"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/11/MiniBook-X-N100-WoW-Raid-try/" title="MiniBook X N100 - WoW Raid Try">MiniBook X N100 - WoW Raid Try</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-11T05:33:02.000Z" title="Created 2023-08-11 14:33:02">2023-08-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/minibook-x/">minibook-x</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/world-of-warcraft/">world-of-warcraft</a></span></div><div class="content">CHUWI MiniBook X N100 でWorld of Warcraft のRaid耐久をやってみよう。LFRで。   環境ハード CHUWI MiniBook X N100 外部ディスプレイ 外部キーボード 外部マウス  Windows 11 電源モード：最適なパフォーマンス (任意) ゲームモード：オン Game Bar：オフ 不要なアプリケーションをすべて終了  World of Warcraft 解像度: 1280 x 720 (Fullscreen): ✔ 1600 x 900 (Fullscreen): ✔ 1920 x 1080 (Fullscreen):   Vertical Sync: Off Anti-Aliasing: None UI Scale: 75%  Addons DBM Details GTFO IceHUD LUI Weakauras etc  Raid Bosshttps://www.wowhead.com/guide/raids/aberrus-the-shadowed-crucible/overview#bossesのボス9体 難易...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/5/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#content-inner">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/#content-inner">49</a><a class="extend next" rel="next" href="/page/7/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/3d/"><span class="card-category-list-name">3d</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/"><span class="card-category-list-name">android</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/application/"><span class="card-category-list-name">application</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cms/"><span class="card-category-list-name">cms</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/conky/"><span class="card-category-list-name">conky</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/develop/"><span class="card-category-list-name">develop</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/dtv/"><span class="card-category-list-name">dtv</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/editor/"><span class="card-category-list-name">editor</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/mermaid/" style="font-size: 1.1em; color: #999">mermaid</a> <a href="/tags/openproject-ce/" style="font-size: 1.1em; color: #999">openproject-ce</a> <a href="/tags/remixos/" style="font-size: 1.1em; color: #999">remixos</a> <a href="/tags/freemind/" style="font-size: 1.15em; color: #999b9e">freemind</a> <a href="/tags/threejs/" style="font-size: 1.15em; color: #999b9e">threejs</a> <a href="/tags/irrlicht/" style="font-size: 1.3em; color: #99a1ac">irrlicht</a> <a href="/tags/qwen3/" style="font-size: 1.1em; color: #999">qwen3</a> <a href="/tags/raytrace/" style="font-size: 1.1em; color: #999">raytrace</a> <a href="/tags/android/" style="font-size: 1.25em; color: #999fa7">android</a> <a href="/tags/android-studio/" style="font-size: 1.1em; color: #999">android-studio</a> <a href="/tags/mutter/" style="font-size: 1.1em; color: #999">mutter</a> <a href="/tags/utterances/" style="font-size: 1.1em; color: #999">utterances</a> <a href="/tags/neutralinojs/" style="font-size: 1.35em; color: #99a3b1">neutralinojs</a> <a href="/tags/mern/" style="font-size: 1.1em; color: #999">mern</a> <a href="/tags/openvpn/" style="font-size: 1.25em; color: #999fa7">openvpn</a> <a href="/tags/windows/" style="font-size: 1.45em; color: #99a7ba">windows</a> <a href="/tags/hi10go/" style="font-size: 1.1em; color: #999">hi10go</a> <a href="/tags/chinachu/" style="font-size: 1.2em; color: #999da3">chinachu</a> <a href="/tags/vue/" style="font-size: 1.1em; color: #999">vue</a> <a href="/tags/minecraft/" style="font-size: 1.25em; color: #999fa7">minecraft</a> <a href="/tags/ags/" style="font-size: 1.1em; color: #999">ags</a> <a href="/tags/handbrake/" style="font-size: 1.1em; color: #999">handbrake</a> <a href="/tags/hyprland/" style="font-size: 1.2em; color: #999da3">hyprland</a> <a href="/tags/qwmu/" style="font-size: 1.1em; color: #999">qwmu</a> <a href="/tags/lutris/" style="font-size: 1.15em; color: #999b9e">lutris</a> <a href="/tags/manjaro/" style="font-size: 1.1em; color: #999">manjaro</a> <a href="/tags/calamares/" style="font-size: 1.1em; color: #999">calamares</a> <a href="/tags/gtk-3/" style="font-size: 1.2em; color: #999da3">gtk+3</a> <a href="/tags/wine/" style="font-size: 1.1em; color: #999">wine</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/virt-manager/" style="font-size: 1.15em; color: #999b9e">virt-manager</a> <a href="/tags/unity3d/" style="font-size: 1.4em; color: #99a5b6">unity3d</a> <a href="/tags/utc/" style="font-size: 1.1em; color: #999">utc</a> <a href="/tags/feedbro/" style="font-size: 1.1em; color: #999">feedbro</a> <a href="/tags/alg/" style="font-size: 1.1em; color: #999">alg</a> <a href="/tags/vscode-reveal/" style="font-size: 1.1em; color: #999">vscode-reveal</a> <a href="/tags/wsl/" style="font-size: 1.5em; color: #99a9bf">wsl</a> <a href="/tags/windows-terminal/" style="font-size: 1.15em; color: #999b9e">windows-terminal</a> <a href="/tags/lain/" style="font-size: 1.1em; color: #999">lain</a> <a href="/tags/fedora/" style="font-size: 1.25em; color: #999fa7">fedora</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              December 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              November 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              October 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/07/">
+            <span class="card-archive-list-date">
+              July 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              June 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              May 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              April 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              March 2025
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

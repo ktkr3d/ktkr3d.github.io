@@ -1,0 +1,484 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Android-x86 | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="プロジェクトホームページhttp:&#x2F;&#x2F;www.android-x86.org&#x2F; ISO ライブイメージダウンロードhttp:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;android-x86&#x2F;downloads&#x2F;list   ハードウェア動作報告一覧http:&#x2F;&#x2F;www.android-x86.org&#x2F;hardware-list Windows + Ubuntu + Android-x86 マルチブ">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Android-x86">
+<meta property="og:url" content="https://ktkr3d.github.io/android-x86/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="プロジェクトホームページhttp:&#x2F;&#x2F;www.android-x86.org&#x2F; ISO ライブイメージダウンロードhttp:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;android-x86&#x2F;downloads&#x2F;list   ハードウェア動作報告一覧http:&#x2F;&#x2F;www.android-x86.org&#x2F;hardware-list Windows + Ubuntu + Android-x86 マルチブ">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
+<meta property="article:published_time" content="2015-02-21T14:25:34.000Z">
+<meta property="article:modified_time" content="2020-08-02T17:44:33.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/android-x86/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Android-x86',
+  isHighlightShrink: undefined,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Android-x86</h1></header><main class="layout" id="content-inner"><div id="page"><div class="page-title">Android-x86</div><div class="container" id="article-container"><p><a href="/images/android-x86_4.0_RC1.png"><img src="/images/android-x86_4.0_RC1.png" alt="android-x86 rc1"></a></p>
+<h4 id="プロジェクトホームページ"><a href="#プロジェクトホームページ" class="headerlink" title="プロジェクトホームページ"></a>プロジェクトホームページ</h4><p><a target="_blank" rel="noopener" href="http://www.android-x86.org/">http://www.android-x86.org/</a></p>
+<h4 id="ISO-ライブイメージダウンロード"><a href="#ISO-ライブイメージダウンロード" class="headerlink" title="ISO ライブイメージダウンロード"></a>ISO ライブイメージダウンロード</h4><p><a target="_blank" rel="noopener" href="http://code.google.com/p/android-x86/downloads/list">http://code.google.com/p/android-x86/downloads/list</a>  </p>
+<h4 id="ハードウェア動作報告一覧"><a href="#ハードウェア動作報告一覧" class="headerlink" title="ハードウェア動作報告一覧"></a>ハードウェア動作報告一覧</h4><p><a target="_blank" rel="noopener" href="http://www.android-x86.org/hardware-list">http://www.android-x86.org/hardware-list</a></p>
+<h4 id="Windows-Ubuntu-Android-x86-マルチブート環境構築手順"><a href="#Windows-Ubuntu-Android-x86-マルチブート環境構築手順" class="headerlink" title="Windows + Ubuntu + Android-x86 マルチブート環境構築手順"></a>Windows + Ubuntu + Android-x86 マルチブート環境構築手順</h4><ol>
+<li><p>Windows 8 をインストール</p>
+</li>
+<li><p>Ubuntu を&#x2F;dev&#x2F;sda3 にインストール</p>
+<ul>
+<li>ファイルシステムはext4。</li>
+<li>ブートローダ(GRUB)を&#x2F;dev&#x2F;sda にインストール。</li>
+</ul>
+</li>
+<li><p>Android-x86 を&#x2F;dev&#x2F;sda3 にインストール</p>
+<ul>
+<li>&#x2F;android-******&#x2F; にインストールされる。</li>
+<li>ブートローダはインストールしない</li>
+<li>書き込み可能にする</li>
+</ul>
+</li>
+<li><p>Android-x86 用のブートエントリを追加</p>
+</li>
+</ol>
+<figure class="highlight text"><figcaption><span>/etc/grub.d/40_custom</span></figcaption><table><tr><td class="code"><pre><span class="line">menuentry &quot;Android-x86 4.0&quot; --class android --class os &#123;</span><br><span class="line">    insmod ext2</span><br><span class="line">    set root=&#x27;(hd0,3)&#x27;</span><br><span class="line">    echo &#x27;Loading Android-x86 4.0 ...&#x27;</span><br><span class="line">    linux /android-4.0-RC1/kernel root=/dev/ram0 androidboot.hardware=tegav2 acpi_sleep=s3_bios,s3_mode SRC=/android-4.0-RC1 DATA=</span><br><span class="line">    initrd /android-4.0-RC1/initrd.img</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> update-grub</span><br></pre></td></tr></table></figure>
+
+<h4 id="パーティションレイアウト"><a href="#パーティションレイアウト" class="headerlink" title="パーティションレイアウト"></a>パーティションレイアウト</h4><table>
+<thead>
+<tr>
+<th align="left">Device</th>
+<th align="left">FS</th>
+<th align="right">Size</th>
+<th align="left">Use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#x2F;dev&#x2F;sda1</td>
+<td align="left">ntfs</td>
+<td align="right">0.35 GiB</td>
+<td align="left">EFI</td>
+</tr>
+<tr>
+<td align="left">&#x2F;dev&#x2F;sda2</td>
+<td align="left">ntfs</td>
+<td align="right">150.00 GiB</td>
+<td align="left">Windows 8</td>
+</tr>
+<tr>
+<td align="left">&#x2F;dev&#x2F;sda3</td>
+<td align="left">ext4</td>
+<td align="right">145.00 GiB</td>
+<td align="left">Ubuntu 12.04,<br/> Andorid-x86 4.0</td>
+</tr>
+<tr>
+<td align="left">&#x2F;dev&#x2F;sda4</td>
+<td align="left">swap</td>
+<td align="right">2.75 GiB</td>
+<td align="left">Linux swap</td>
+</tr>
+</tbody></table>
+<h3 id="仮想キーボードと物理キーボードを同時に使うための設定"><a href="#仮想キーボードと物理キーボードを同時に使うための設定" class="headerlink" title="仮想キーボードと物理キーボードを同時に使うための設定"></a>仮想キーボードと物理キーボードを同時に使うための設定</h3><p>&#x2F;android-4.0-RC1&#x2F;system&#x2F;usr&#x2F;keylayout&#x2F;AT_translated_set_2_keyboard.kl を差し替える。<br>Inspiron duo 用のサンプル（一部誤っている）</p>
+<figure class="highlight text"><figcaption><span>/android-4.0-RC1/system/usr/keylayout/AT_translated_set_2_keyboard.kl</span></figcaption><table><tr><td class="code"><pre><span class="line"># Copyright (C) 2012 The Android-x86 Open Source Project</span><br><span class="line">#</span><br><span class="line"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span><br><span class="line"># you may not use this file except in compliance with the License.</span><br><span class="line"># You may obtain a copy of the License at</span><br><span class="line">#</span><br><span class="line">#      http://www.apache.org/licenses/LICENSE-2.0</span><br><span class="line">#</span><br><span class="line"></span><br><span class="line">key 1     HOME          WAKE_DROPPED</span><br><span class="line">key 114   VOLUME_DOWN</span><br><span class="line">key 115   VOLUME_UP</span><br><span class="line">key 125   APP_SWITCH</span><br><span class="line">key 127   ESCAPE        WAKE_DROPPED</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line"></span><br><span class="line">#key 1     BACK              WAKE_DROPPED</span><br><span class="line">key 2     1</span><br><span class="line">key 3     2</span><br><span class="line">key 4     3</span><br><span class="line">key 5     4</span><br><span class="line">key 6     5</span><br><span class="line">key 7     6</span><br><span class="line">key 8     7</span><br><span class="line">key 9     8</span><br><span class="line">key 10    9</span><br><span class="line">key 11    0</span><br><span class="line">key 12    MINUS</span><br><span class="line">key 13    EQUALS</span><br><span class="line">key 14    DEL</span><br><span class="line">key 15    TAB</span><br><span class="line">key 16    Q</span><br><span class="line">key 17    W</span><br><span class="line">key 18    E</span><br><span class="line">key 19    R</span><br><span class="line">key 20    T</span><br><span class="line">key 21    Y</span><br><span class="line">key 22    U</span><br><span class="line">key 23    I</span><br><span class="line">key 24    O</span><br><span class="line">key 25    P</span><br><span class="line">key 26    LEFT_BRACKET</span><br><span class="line">key 27    RIGHT_BRACKET</span><br><span class="line">key 28    ENTER</span><br><span class="line">key 30    A</span><br><span class="line">key 31    S</span><br><span class="line">key 32    D</span><br><span class="line">key 33    F</span><br><span class="line">key 34    G</span><br><span class="line">key 35    H</span><br><span class="line">key 36    J</span><br><span class="line">key 37    K</span><br><span class="line">key 38    L</span><br><span class="line">key 39    SEMICOLON</span><br><span class="line">key 40    APOSTROPHE</span><br><span class="line">key 42    SHIFT_LEFT</span><br><span class="line">key 43    BACKSLASH</span><br><span class="line">key 44    Z</span><br><span class="line">key 45    X</span><br><span class="line">key 46    C</span><br><span class="line">key 47    V</span><br><span class="line">key 48    B</span><br><span class="line">key 49    N</span><br><span class="line">key 50    M</span><br><span class="line">key 51    COMMA</span><br><span class="line">key 52    PERIOD</span><br><span class="line">key 53    SLASH</span><br><span class="line">key 56    ALT_LEFT</span><br><span class="line">key 57    SPACE</span><br><span class="line">key 60    SOFT_RIGHT        WAKE</span><br><span class="line">key 61    CALL              WAKE_DROPPED</span><br><span class="line">key 62    ENDCALL           WAKE_DROPPED</span><br><span class="line">key 64    ENDCALL           WAKE_DROPPED</span><br><span class="line">key 103   DPAD_UP           WAKE_DROPPED</span><br><span class="line">key 105   DPAD_LEFT         WAKE_DROPPED</span><br><span class="line">key 106   DPAD_RIGHT        WAKE_DROPPED</span><br><span class="line">key 107   ENDCALL           WAKE_DROPPED</span><br><span class="line">key 108   DPAD_DOWN         WAKE_DROPPED</span><br><span class="line">key 113   VOLUME_MUTE</span><br><span class="line">#key 114   VOLUME_DOWN</span><br><span class="line">#key 115   VOLUME_UP</span><br><span class="line">key 116   POWER             WAKE</span><br><span class="line">#key 125   HOME              WAKE</span><br><span class="line">#key 127   MENU         WAKE_DROPPED</span><br><span class="line">key 139   MENU         WAKE_DROPPED</span><br><span class="line">key 150   EXPLORER</span><br><span class="line">key 155   ENVELOPE        </span><br><span class="line">key 211   FOCUS</span><br><span class="line">key 212   CAMERA</span><br><span class="line">key 215   AT</span><br><span class="line">key 221   DPAD_CENTER       WAKE_DROPPED</span><br><span class="line">key 227   STAR</span><br><span class="line">key 228   POUND</span><br><span class="line">key 230   SOFT_RIGHT        WAKE</span><br><span class="line">key 231   CALL              WAKE_DROPPED</span><br><span class="line">key 399   GRAVE</span><br></pre></td></tr></table></figure>
+
+<h3 id="Android-x86-で動作するFirefox-Fennec-開発版-リリース版のビルド手順"><a href="#Android-x86-で動作するFirefox-Fennec-開発版-リリース版のビルド手順" class="headerlink" title="Android-x86 で動作するFirefox (Fennec) 開発版&#x2F;リリース版のビルド手順"></a>Android-x86 で動作するFirefox (Fennec) 開発版&#x2F;リリース版のビルド手順</h3><ol>
+<li><p>ビルド用SDK の配置</p>
+<ul>
+<li>&#x2F;tools&#x2F;android-sdk-linux</li>
+<li>&#x2F;tools&#x2F;android-ndk-r7c</li>
+<li>&#x2F;tools&#x2F;jdk1.6.0_35</li>
+</ul>
+</li>
+<li><p>ビルド用依存パッケージの取得</p>
+</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get install mercurial ccache</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get build-dep firefox</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>開発版ソースコードの取得</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /tools/apps/firefox/</span><br><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/mozilla-central/ src-central</span><br><span class="line">$ <span class="built_in">cd</span> src-central</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>開発版ソースコード用のmozconfig のカスタマイズ</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> ./mobile/android/config/mozconfigs/android-x86/nightly .mozconfig</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><figcaption><span>/tools/apps/firefox/src-central/.mozconfig</span></figcaption><table><tr><td class="code"><pre><span class="line">. &quot;$topsrcdir/mobile/android/config/mozconfigs/common&quot;</span><br><span class="line"></span><br><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-android-ndk=&quot;/tools/android-ndk-r7c&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;/tools/android-sdk-linux/platforms/android-14&quot;</span><br><span class="line">ac_add_options --with-android-version=14</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line">#ac_add_options --enable-update-channel=$&#123;MOZ_UPDATE_CHANNEL&#125;</span><br><span class="line"></span><br><span class="line"># IonMonkey disabled in bug 789373</span><br><span class="line">ac_add_options --disable-ion</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/tools/jdk1.6.0_35</span><br><span class="line">#export MOZILLA_OFFICIAL=1</span><br><span class="line">#export MOZ_TELEMETRY_REPORTING=1</span><br><span class="line"></span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/nightly</span><br><span class="line"></span><br><span class="line"># Treat warnings as errors in directories with FAIL_ON_WARNINGS.</span><br><span class="line">ac_add_options --enable-warnings-as-errors</span><br><span class="line"></span><br><span class="line"># Use ccache</span><br><span class="line">ac_add_options --with-ccache=/usr/bin/ccache</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>リリース版ソースコードの取得</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /tools/apps/firefox/</span><br><span class="line">$ hg <span class="built_in">clone</span> http://hg.mozilla.org/releases/mozilla-release src-release</span><br><span class="line">$ <span class="built_in">cd</span> src-release</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>リリース版ソースコード用のmozconfig のカスタマイズ</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> ./mobile/android/config/mozconfigs/android-x86/release .mozconfig</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><figcaption><span>/tools/apps/firefox/src-release/.mozconfig</span></figcaption><table><tr><td class="code"><pre><span class="line"># Global options</span><br><span class="line">mk_add_options MOZ_MAKE_FLAGS=&quot;-j4&quot;</span><br><span class="line"></span><br><span class="line"># Build Fennec</span><br><span class="line">ac_add_options --enable-application=mobile/android</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">ac_add_options --target=i386-linux-android</span><br><span class="line">ac_add_options --with-android-ndk=&quot;/tools/android-ndk-r7c&quot;</span><br><span class="line">ac_add_options --with-android-sdk=&quot;/tools/android-sdk-linux/platforms/android-14&quot;</span><br><span class="line">ac_add_options --with-android-version=14</span><br><span class="line">ac_add_options --with-system-zlib</span><br><span class="line">#ac_add_options --enable-updater</span><br><span class="line">#ac_add_options --enable-update-channel=$&#123;MOZ_UPDATE_CHANNEL&#125;</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/tools/jdk1.6.0_35</span><br><span class="line">#export MOZILLA_OFFICIAL=1</span><br><span class="line">#export MOZ_TELEMETRY_REPORTING=1</span><br><span class="line"></span><br><span class="line">#ac_add_options --enable-official-branding</span><br><span class="line">ac_add_options --with-branding=mobile/android/branding/unofficial</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>firefox のビルド<br>各フォルダで以下のコマンドを実行します。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ make -f client.mk build_and_deploy</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>インストール<br>以下のフォルダに生成された.apk ファイルをAndroid-x86 でインストールします。</li>
+</ol>
+<figure class="highlight text"><figcaption><span>出力先</span></figcaption><table><tr><td class="code"><pre><span class="line">./obj-x86_64-unknown-linux-gnu/dist/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Android-のビルド手順-Ubuntu-12-04-x86-64"><a href="#Android-のビルド手順-Ubuntu-12-04-x86-64" class="headerlink" title="Android のビルド手順(Ubuntu 12.04 x86_64)"></a>Android のビルド手順(Ubuntu 12.04 x86_64)</h3><p><a target="_blank" rel="noopener" href="http://www.android-x86.org/getsourcecode">http://www.android-x86.org/getsourcecode</a><br><a target="_blank" rel="noopener" href="http://source.android.com/source/download.html">http://source.android.com/source/download.html</a>
+	</p>
+<h4 id="前提パッケージをインストール"><a href="#前提パッケージをインストール" class="headerlink" title="前提パッケージをインストール"></a>前提パッケージをインストール</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev libc6-dev lib32ncurses5-dev x11proto-core-dev libx11-dev lib32readline-gplv2-dev lib32z1-dev lib32z1 lib32ncurses5 lib32bz2-1.0</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install gcc-multilib g++-multilib libc6-i386 libc6-dev-i386</span><br></pre></td></tr></table></figure>
+<h4 id="JDK-をインストール"><a href="#JDK-をインストール" class="headerlink" title="JDK をインストール"></a>JDK をインストール</h4><p>Oracle のサイトからjdk-6u33-linux-x64.bin を拾ってきて展開、.&#x2F;bin にパスを通しておく。念の為、JAVA_HOME も.&#x2F; を設定しておこう。
+	</p>
+<h4 id="repo-をインストール"><a href="#repo-をインストール" class="headerlink" title="repo をインストール"></a>repo をインストール</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> ~/bin</span><br><span class="line">$ PATH=~/bin:<span class="variable">$PATH</span></span><br><span class="line">$ curl http://android.git.kernel.org/repo &gt; ~/bin/repo</span><br><span class="line">$ <span class="built_in">chmod</span> a+x ~/bin/repo</span><br></pre></td></tr></table></figure>
+<h4 id="ソースを取得"><a href="#ソースを取得" class="headerlink" title="ソースを取得"></a>ソースを取得</h4><ul>
+<li>Android 4.1 (Jelly Bean) の場合</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> jellybean</span><br><span class="line">$ <span class="built_in">cd</span> jellybean</span><br><span class="line">$ repo init -u https://android.googlesource.com/platform/manifest -b android-4.1.1_r1</span><br><span class="line">$ repo <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Android-x86 4.0 (Ice Cream Sandwich) の場合</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> ics-x86</span><br><span class="line">$ <span class="built_in">cd</span> ics-x86</span><br><span class="line">$ repo init -u http://git.android-x86.org/manifest -b ics-x86</span><br><span class="line">$ repo <span class="built_in">sync</span></span><br></pre></td></tr></table></figure>
+<h4 id="ビルド"><a href="#ビルド" class="headerlink" title="ビルド"></a>ビルド</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">$ lunch <span class="comment"># 選択肢が表示されるので、選択</span></span><br><span class="line">$ make -j4</span><br></pre></td></tr></table></figure>
+
+<p>.&#x2F;out&#x2F;target&#x2F;product&#x2F; にバイナリが作成される。</p>
+</div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/3d/"><span class="card-category-list-name">3d</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/"><span class="card-category-list-name">android</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/application/"><span class="card-category-list-name">application</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cms/"><span class="card-category-list-name">cms</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/conky/"><span class="card-category-list-name">conky</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/develop/"><span class="card-category-list-name">develop</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/dtv/"><span class="card-category-list-name">dtv</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/editor/"><span class="card-category-list-name">editor</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/mermaid/" style="font-size: 1.1em; color: #999">mermaid</a> <a href="/tags/openproject-ce/" style="font-size: 1.1em; color: #999">openproject-ce</a> <a href="/tags/remixos/" style="font-size: 1.1em; color: #999">remixos</a> <a href="/tags/freemind/" style="font-size: 1.15em; color: #999b9e">freemind</a> <a href="/tags/threejs/" style="font-size: 1.15em; color: #999b9e">threejs</a> <a href="/tags/irrlicht/" style="font-size: 1.3em; color: #99a1ac">irrlicht</a> <a href="/tags/qwen3/" style="font-size: 1.1em; color: #999">qwen3</a> <a href="/tags/raytrace/" style="font-size: 1.1em; color: #999">raytrace</a> <a href="/tags/android/" style="font-size: 1.25em; color: #999fa7">android</a> <a href="/tags/android-studio/" style="font-size: 1.1em; color: #999">android-studio</a> <a href="/tags/mutter/" style="font-size: 1.1em; color: #999">mutter</a> <a href="/tags/utterances/" style="font-size: 1.1em; color: #999">utterances</a> <a href="/tags/neutralinojs/" style="font-size: 1.35em; color: #99a3b1">neutralinojs</a> <a href="/tags/mern/" style="font-size: 1.1em; color: #999">mern</a> <a href="/tags/openvpn/" style="font-size: 1.25em; color: #999fa7">openvpn</a> <a href="/tags/windows/" style="font-size: 1.45em; color: #99a7ba">windows</a> <a href="/tags/hi10go/" style="font-size: 1.1em; color: #999">hi10go</a> <a href="/tags/chinachu/" style="font-size: 1.2em; color: #999da3">chinachu</a> <a href="/tags/vue/" style="font-size: 1.1em; color: #999">vue</a> <a href="/tags/minecraft/" style="font-size: 1.25em; color: #999fa7">minecraft</a> <a href="/tags/ags/" style="font-size: 1.1em; color: #999">ags</a> <a href="/tags/handbrake/" style="font-size: 1.1em; color: #999">handbrake</a> <a href="/tags/hyprland/" style="font-size: 1.2em; color: #999da3">hyprland</a> <a href="/tags/qwmu/" style="font-size: 1.1em; color: #999">qwmu</a> <a href="/tags/lutris/" style="font-size: 1.15em; color: #999b9e">lutris</a> <a href="/tags/manjaro/" style="font-size: 1.1em; color: #999">manjaro</a> <a href="/tags/calamares/" style="font-size: 1.1em; color: #999">calamares</a> <a href="/tags/gtk-3/" style="font-size: 1.2em; color: #999da3">gtk+3</a> <a href="/tags/wine/" style="font-size: 1.1em; color: #999">wine</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/virt-manager/" style="font-size: 1.15em; color: #999b9e">virt-manager</a> <a href="/tags/unity3d/" style="font-size: 1.4em; color: #99a5b6">unity3d</a> <a href="/tags/utc/" style="font-size: 1.1em; color: #999">utc</a> <a href="/tags/feedbro/" style="font-size: 1.1em; color: #999">feedbro</a> <a href="/tags/alg/" style="font-size: 1.1em; color: #999">alg</a> <a href="/tags/vscode-reveal/" style="font-size: 1.1em; color: #999">vscode-reveal</a> <a href="/tags/wsl/" style="font-size: 1.5em; color: #99a9bf">wsl</a> <a href="/tags/windows-terminal/" style="font-size: 1.15em; color: #999b9e">windows-terminal</a> <a href="/tags/lain/" style="font-size: 1.1em; color: #999">lain</a> <a href="/tags/fedora/" style="font-size: 1.25em; color: #999fa7">fedora</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              December 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              November 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              October 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/07/">
+            <span class="card-archive-list-date">
+              July 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              June 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              May 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              April 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              March 2025
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

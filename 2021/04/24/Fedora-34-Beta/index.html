@@ -1,0 +1,297 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Fedora 34 Beta | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="https:&#x2F;&#x2F;getfedora.org&#x2F;ja&#x2F;workstation&#x2F;download&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fedora 34 Beta">
+<meta property="og:url" content="https://ktkr3d.github.io/2021/04/24/Fedora-34-Beta/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="https:&#x2F;&#x2F;getfedora.org&#x2F;ja&#x2F;workstation&#x2F;download&#x2F;">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/fedora34_gnome40.png">
+<meta property="article:published_time" content="2021-04-24T12:11:45.000Z">
+<meta property="article:modified_time" content="2021-04-24T12:11:45.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="fedora">
+<meta property="article:tag" content="gnome">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/fedora34_gnome40.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fedora 34 Beta",
+  "url": "https://ktkr3d.github.io/2021/04/24/Fedora-34-Beta/",
+  "image": "https://ktkr3d.github.io/images/fedora34_gnome40.png",
+  "datePublished": "2021-04-24T12:11:45.000Z",
+  "dateModified": "2021-04-24T12:11:45.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2021/04/24/Fedora-34-Beta/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Fedora 34 Beta',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">Fedora 34 Beta</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Fedora 34 Beta</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-04-24T12:11:45.000Z" title="Created 2021-04-24 21:11:45">2021-04-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-04-24T12:11:45.000Z" title="Updated 2021-04-24 21:11:45">2021-04-24</time></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p><img src="/images/fedora34_gnome40.png" alt="fedora34 gnome40"><br><a target="_blank" rel="noopener" href="https://getfedora.org/ja/workstation/download/">https://getfedora.org/ja/workstation/download/</a></p>
+<span id="more"></span>
+
+<h3 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h3><ul>
+<li><p>Dash to Panel (GNOME Shell 拡張)<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1160/dash-to-panel/">https://extensions.gnome.org/extension/1160/dash-to-panel/</a><br><a target="_blank" rel="noopener" href="https://github.com/philippun1/dash-to-panel">https://github.com/philippun1/dash-to-panel</a><br><img src="/images/fedora34_gnome40_00.png" alt="fedora34 gnome40"></p>
+</li>
+<li><p>システムメニュー + Tweaks &amp; Extensions in System Menu (GNOME Shell 拡張)<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1653/tweaks-in-system-menu/">https://extensions.gnome.org/extension/1653/tweaks-in-system-menu/</a><br><img src="/images/fedora34_gnome40_01.png" alt="fedora34 gnome40"></p>
+</li>
+<li><p>時刻<br><img src="/images/fedora34_gnome40_02.png" alt="fedora34 gnome40"></p>
+</li>
+<li><p>Argos (GNOME Shell 拡張)<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1176/argos/">https://extensions.gnome.org/extension/1176/argos/</a><br><a target="_blank" rel="noopener" href="https://github.com/rammie/argos/tree/gnome-3.36">https://github.com/rammie/argos/tree/gnome-3.36</a><br><img src="/images/fedora34_gnome40_03.png" alt="fedora34 gnome40"></p>
+</li>
+<li><p>ArcMenu (GNOME Shell 拡張) + 日本語化<br><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/3628/arcmenu/">https://extensions.gnome.org/extension/3628/arcmenu/</a><br><a target="_blank" rel="noopener" href="https://github.com/ktkr3d/arcmenu-translation-ja">https://github.com/ktkr3d/arcmenu-translation-ja</a><br><img src="/images/fedora34_gnome40_04.png" alt="fedora34 gnome40"></p>
+</li>
+<li><p>Extensions<br><a target="_blank" rel="noopener" href="https://flathub.org/apps/details/org.gnome.Extensions">https://flathub.org/apps/details/org.gnome.Extensions</a><br><img src="/images/fedora34_gnome40_05.png" alt="fedora34 gnome40"></p>
+</li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/fedora/">fedora</a><a class="post-meta__tags" href="/tags/gnome/">gnome</a></div><div class="post-share"><div class="social-share" data-image="/images/fedora34_gnome40.png" data-sites="facebook,twitter,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2021/08/30/Minecraft-Java-Edition/" title="Minecraft Java Edition"><img class="cover" src="/images/mc_title.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Minecraft Java Edition</div></div><div class="info-2"><div class="info-item-1"> Windows 10 環境でMinecraft Java Edition を設定してみました。  Iris Shaders (Sodium 内包による負荷軽減、シェーダーのサポート&#x2F;高速切り替え) ズーム表示 防具の耐久度表示 方位表示 地図 (ミニマップ、ワールドマップ) ミニHUD の表示とカスタマイズ 日本語丸ゴシックTrueType フォント (Rounded M+ 1c bold)     Minecraft と Fabric Loaderインストーラをダウンロードして実行します。  Minecraft Java Edition Fabric Loader  Fabric 系Mods とショートカット操作%APPDATA%\.minecraft\mods\ フォルダに格納します。    Mod ショートカット操作    Fabric API    Iris Shaders O シェーダーパックの選択K シェーダーのオン&#x2F;オフ   Ok Zoomer C ズーム   RPG-Hud ⚠️ V1.17 対策版 Esc で右上のRPG-Hudボタンで設定...</div></div></div></a><a class="pagination-related" href="/2021/03/28/Ubuntu-21-04-Hirsute/" title="Ubuntu 21.04 Hirsute"><div class="cover" style="background: /images/ubuntu_2104_gnome40.mp4"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Ubuntu 21.04 Hirsute</div></div><div class="info-2"><div class="info-item-1">https://launchpad.net/~shemgp/+archive/ubuntu/gnome-40Ubuntu 21.04 にGNOME 40 のPPA を設定してみました。 2021-04-07 追記 GNOME 40.0 でDash to Dock 拡張を導入してみました。https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40https://github.com/micheleg/dash-to-dock/pull/1402  GNOME 40.0 でDash to Panel 拡張を導入してみました。https://github.com/philippun1/dash-to-panel/tree/update-to-gnome40https://github.com/home-sweet-gnome/dash-to-panel/pull/1303   2021-04-08 追記 Auto Hide Top Panel 拡張をGNOME 40 に対応させてみました。http://www.webupd8.or...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2014/09/23/fedora-21-wayland/" title="Fedora 21 wayland"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2014-09-23</div><div class="info-item-2">Fedora 21 wayland</div></div><div class="info-2"><div class="info-item-1"> http://tuxdiary.com/2014/09/01/try-wayland-with-gnome/http://fedoraproject.org/wiki/Workstation Fedora 21 Alpha RC1 で、GNOME 3.14 (3.13.91) をwayland で動かしてみました。    ライブISO イメージでFedora 21 を起動  [Ctrl]+[Alt]+[F2] でコンソール起動  liveuser でログインして、以下のコマンドを実行   $ sudo systemctl stop gdm$ sudo dnf install gnome-session-wayland-session$ gnome-session --session=gnome-wayland  GDM 終了時に画面が乱れたら、再度[Ctrl]+[Alt]+[F2]を押下する。 </div></div></div></a><a class="pagination-related" href="/2014/09/27/ubuntu-gnome-14-dot-10-plus-gnome-3-dot-14-plus-wayland/" title="Ubuntu GNOME 14.10 + GNOME 3.14 + Wayland"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2014-09-27</div><div class="info-item-2">Ubuntu GNOME 14.10 + GNOME 3.14 + Wayland</div></div><div class="info-2"><div class="info-item-1"> Ubuntu GNOME 14.10 Beta + GNOME 3.14 (3.13.92) をWayland で動かしてみました。テキトーにやっているので、本当にWayland が有効になっているのか、怪しいですけれど。 $ ps -ef | grep waylandhoge      1376  1344  0 17:36 ?        00:00:00 gnome-session --session=gnome-waylandhoge      1454  1376  0 17:36 ?        00:00:00 /usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session /usr/bin/im-launch gnome-session --session=gnome-waylandhoge      1457     1  0 17:36 ?        00:00:00 /usr/bin/dbus-launch --exit-with-session /usr/bin/im-launch gnom...</div></div></div></a><a class="pagination-related" href="/2012/08/21/gnome-shell-focus-effect-extension/" title="GNOME Shell Focus Effect Extension"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2012-08-21</div><div class="info-item-2">GNOME Shell Focus Effect Extension</div></div><div class="info-2"><div class="info-item-1"> https://github.com/paradoxxxzero/gnome-shell-focus-effects-extension   http://www.upubuntu.com/2012/08/how-to-install-gnome-shell-focus-effect.html GNOME Shell のFocus Effect 拡張を使ってみた。フォーカスの切り替えでウィンドウがアニメーションする。なんか楽しい。非アクティブなウィンドウは少し傾いて、サイズが小さく、色はグレーになる。スクリプトはとても小さいので、何かに応用できるかもしれない。副作用としては、非アクティブなウィンドウの選択に少しコツがいるようだ。また、何回か切り替えを繰り返した時に、ウィンドウが画面外に移動してしまう。その時は、[Alt]-[Space]で「移動」を選択して、ウィンドウを元の位置に動かすと回復できる。 </div></div></div></a><a class="pagination-related" href="/2016/01/04/Fedora-rawhide/" title="Fedora Rawhide"><img class="cover" src="/images/fedora_rawhide.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2016-01-04</div><div class="info-item-2">Fedora Rawhide</div></div><div class="info-2"><div class="info-item-1">https://fedoraproject.org/wiki/Releases/Rawhidehttps://fedoraproject.org/wiki/DNF_system_upgrade 新しいGNOME 3.20(3.19)を試すために、Fedora Rawhide の仮想環境を構築してみました。私がダウンロードした日のFedora Rawhide のライブISO ではインストーラが途中で止まってしまったので、Fedora 23 の環境からアップグレードしました。   Fedora 23 のインストールhttps://getfedora.org/ja/workstation/download/ Fedora Rawhide へのアップグレード$ sudo dnf update --refresh$ sudo dnf install dnf-plugin-system-upgrade$ sudo dnf system-upgrade download --releasever=rawhide --nogpgcheck$ sudo dnf system-upgrade reb...</div></div></div></a><a class="pagination-related" href="/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f7/" title="GNOME Shell を拡張してみた7"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-06-04</div><div class="info-item-2">GNOME Shell を拡張してみた7</div></div><div class="info-2"><div class="info-item-1"> https://bugzilla.gnome.org/show_bug.cgi?id=643662  https://bugzilla.gnome.org/attachment.cgi?id=186893   GNOME Shell の上部パネルをauto hide にしてみた。将来的には設定を切り替えられるようになるのかな。 dock 拡張もauto hide にしたいなぁ。 </div></div></div></a><a class="pagination-related" href="/2021/02/21/GNOME-40/" title="GNOME 40"><img class="cover" src="/images/fedora_gnome_40.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-21</div><div class="info-item-2">GNOME 40</div></div><div class="info-2"><div class="info-item-1"> https://copr.fedorainfracloud.org/coprs/haeckerfelix/gnome-shell-40/ GNOME 40 アルファ版を起動してみました。   環境 Fedora 33 GNOME Shell 40.beta    構築 Fedora 33 インストールhttps://getfedora.org/ja/workstation/download/  アップデート   $ sudo dnf update -y   リポジトリ追加＆アップデート  $ sudo dnf copr enable haeckerfelix/gnome-shell-40 $ sudo dnf upgrade   Fedora 33 との差分 バージョン確認  $ dnf list --installed | grep haeckerfelixglib2.x86_64                                       2.67.3-1.fc33                       @copr:copr.fedorainfracl...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A"><span class="toc-number">1.</span> <span class="toc-text">環境設定</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

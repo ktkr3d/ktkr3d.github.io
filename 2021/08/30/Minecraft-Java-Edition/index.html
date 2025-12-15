@@ -1,0 +1,457 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Minecraft Java Edition | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Windows 10 環境でMinecraft Java Edition を設定してみました。  Iris Shaders (Sodium 内包による負荷軽減、シェーダーのサポート&#x2F;高速切り替え) ズーム表示 防具の耐久度表示 方位表示 地図 (ミニマップ、ワールドマップ) ミニHUD の表示とカスタマイズ 日本語丸ゴシックTrueType フォント (Rounded M+ 1c bo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Minecraft Java Edition">
+<meta property="og:url" content="https://ktkr3d.github.io/2021/08/30/Minecraft-Java-Edition/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="Windows 10 環境でMinecraft Java Edition を設定してみました。  Iris Shaders (Sodium 内包による負荷軽減、シェーダーのサポート&#x2F;高速切り替え) ズーム表示 防具の耐久度表示 方位表示 地図 (ミニマップ、ワールドマップ) ミニHUD の表示とカスタマイズ 日本語丸ゴシックTrueType フォント (Rounded M+ 1c bo">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/mc_title.png">
+<meta property="article:published_time" content="2021-08-30T03:48:44.000Z">
+<meta property="article:modified_time" content="2021-08-30T03:48:44.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="minecraft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/mc_title.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2021/08/30/Minecraft-Java-Edition/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Minecraft Java Edition',
+  isHighlightShrink: undefined,
+  isToc: false,
+  pageType: 'p'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Minecraft Java Edition</h1></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Minecraft Java Edition</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-08-30T03:48:44.000Z" title="Created 2021-08-30 12:48:44">2021-08-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-08-30T03:48:44.000Z" title="Updated 2021-08-30 12:48:44">2021-08-30</time></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p><img src="/images/mc_title.png" alt="minecraft title"></p>
+<p>Windows 10 環境でMinecraft Java Edition を設定してみました。</p>
+<ul>
+<li>Iris Shaders (Sodium 内包による負荷軽減、シェーダーのサポート&#x2F;高速切り替え)</li>
+<li>ズーム表示</li>
+<li>防具の耐久度表示</li>
+<li>方位表示</li>
+<li>地図 (ミニマップ、ワールドマップ)</li>
+<li>ミニHUD の表示とカスタマイズ</li>
+<li>日本語丸ゴシックTrueType フォント (Rounded M+ 1c bold)</li>
+</ul>
+<span id="more"></span>
+
+<p><img src="/images/mc_customize.png" alt="minecraft customize"></p>
+<h3 id="Minecraft-と-Fabric-Loader"><a href="#Minecraft-と-Fabric-Loader" class="headerlink" title="Minecraft と Fabric Loader"></a>Minecraft と Fabric Loader</h3><p>インストーラをダウンロードして実行します。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.minecraft.net/ja-jp/store/minecraft-java-edition">Minecraft Java Edition</a></li>
+<li><a target="_blank" rel="noopener" href="https://fabricmc.net/use/">Fabric Loader</a></li>
+</ul>
+<h3 id="Fabric-系Mods-とショートカット操作"><a href="#Fabric-系Mods-とショートカット操作" class="headerlink" title="Fabric 系Mods とショートカット操作"></a>Fabric 系Mods とショートカット操作</h3><p><code>%APPDATA%\.minecraft\mods\</code> フォルダに格納します。</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mod</th>
+<th align="left">ショートカット操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/fabric-api">Fabric API</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/irisshaders">Iris Shaders</a></td>
+<td align="left"><code>O</code> シェーダーパックの選択<br><code>K</code> シェーダーのオン&#x2F;オフ</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/ok-zoomer">Ok Zoomer</a></td>
+<td align="left"><code>C</code> ズーム</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/rpg-hud-fabric">RPG-Hud</a> <a target="_blank" rel="noopener" href="https://github.com/KurodaAkira/RPG-Hud/issues/79">⚠️ V1.17 対策版</a></td>
+<td align="left"><code>Esc</code> で右上の<code>RPG-Hud</code>ボタンで設定</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap">Xaero’s Minimap</a></td>
+<td align="left"><code>Y</code> Xaero’s Minimap の設定</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map">Xaero’s World Map</a></td>
+<td align="left"><code>M</code> WorldMap の表示<br><code>[</code> Xaero’s World Map の設定</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/malilib">MaLiLib</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/minihud">MiniHUD</a></td>
+<td align="left"><code>H</code> MiniHUD のオン&#x2F;オフ<br><code>H</code>+<code>C</code> MiniHUDの設定</td>
+</tr>
+</tbody></table>
+<h3 id="シェーダーパック"><a href="#シェーダーパック" class="headerlink" title="シェーダーパック"></a>シェーダーパック</h3><p><code>%APPDATA%\.minecraft\shaderpacks\</code> フォルダに格納します。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://sildurs-shaders.github.io/">Sildur’s Vibrant Shaders</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/customization/complementary-shaders">Complementary Shaders</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bitslablab.com/bslshaders/">BSL Shaders</a></li>
+<li><a target="_blank" rel="noopener" href="https://sildurs-shaders.github.io/">Sildur’s Enhanced Default</a></li>
+<li><a target="_blank" rel="noopener" href="https://sonicether.com/shaders/download/renewed-v1-0-1/">SEUS Renewed</a></li>
+<li><a target="_blank" rel="noopener" href="https://sonicether.com/shaders/download/v11-0/">SEUS v11</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/customization/skylec-shader">Skylec Shader</a></li>
+</ul>
+<h3 id="日本語TrueType-フォント切り替え"><a href="#日本語TrueType-フォント切り替え" class="headerlink" title="日本語TrueType フォント切り替え"></a>日本語TrueType フォント切り替え</h3><p><code>%APPDATA%\.minecraft\resourcepacks\</code> フォルダにリソースパックを作成して有効化します。</p>
+<h4 id="⛏️-リソースパックの作成"><a href="#⛏️-リソースパックの作成" class="headerlink" title="⛏️ リソースパックの作成"></a>⛏️ リソースパックの作成</h4><p>以下の3つのファイルを準備します。</p>
+<ol>
+<li><p>日本語TrueType フォント<br>私はM+ の丸ゴシック体<code>rounded-mplus-1c-bold.ttf</code> を準備しました。以下のフォルダに格納します。<br><code>%APPDATA%\.minecraft\resourcepacks\rounded-mplus-1c-bold\assets\minecraft\font\</code></p>
+</li>
+<li><p>default.json</p>
+</li>
+</ol>
+<figure class="highlight json"><figcaption><span>%APPDATA%\.minecraft\resourcepacks\rounded-mplus-1c-bold\assets\minecraft\font\default.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;providers&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ttf&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;file&quot;</span><span class="punctuation">:</span> <span class="string">&quot;minecraft:rounded-mplus-1c-bold.ttf&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;shift&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">-0.5</span><span class="punctuation">,</span> <span class="number">0.5</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;size&quot;</span><span class="punctuation">:</span> <span class="number">12.0</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;oversample&quot;</span><span class="punctuation">:</span> <span class="number">8.0</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>pack.mcmeta</li>
+</ol>
+<figure class="highlight json"><figcaption><span>%APPDATA%\.minecraft\resourcepacks\rounded-mplus-1c-bold\pack.mcmeta</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;pack&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Rounded M+ 1c bold&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;pack_format&quot;</span><span class="punctuation">:</span> <span class="number">7</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="⛏️-言語設定の変更"><a href="#⛏️-言語設定の変更" class="headerlink" title="⛏️ 言語設定の変更"></a>⛏️ 言語設定の変更</h4><ul>
+<li>[設定…]-[言語設定…]で[Unicode フォントを強制する]をオフにします。</li>
+</ul>
+<h4 id="⛏️-リソースパックの有効化"><a href="#⛏️-リソースパックの有効化" class="headerlink" title="⛏️ リソースパックの有効化"></a>⛏️ リソースパックの有効化</h4><ul>
+<li>[設定…]-[リソースパック…]で[rounded-mplus-1c-bold]を有効にします。</li>
+</ul>
+<h3 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h3><h4 id="⛏️-シェーダーなし"><a href="#⛏️-シェーダーなし" class="headerlink" title="⛏️ シェーダーなし"></a>⛏️ シェーダーなし</h4><p><img src="/images/mc_without_shader.png" alt="minecraft without shader"></p>
+<h4 id="⛏️-シェーダーあり"><a href="#⛏️-シェーダーあり" class="headerlink" title="⛏️ シェーダーあり"></a>⛏️ シェーダーあり</h4><p><img src="/images/mc_with_shader.png" alt="minecraft with shader"></p>
+<h4 id="⛏️-シェーダー選択"><a href="#⛏️-シェーダー選択" class="headerlink" title="⛏️ シェーダー選択"></a>⛏️ シェーダー選択</h4><p><img src="/images/mc_shaders.png" alt="minecraft shaders"></p>
+<h3 id="シェーダー比較"><a href="#シェーダー比較" class="headerlink" title="シェーダー比較"></a>シェーダー比較</h3><h4 id="⛏️-Sildur’s-Vibrant-Shaders"><a href="#⛏️-Sildur’s-Vibrant-Shaders" class="headerlink" title="⛏️ Sildur’s Vibrant Shaders"></a>⛏️ Sildur’s Vibrant Shaders</h4><p><img src="/images/mc_shader_svs.png" alt="minecraft shaders"></p>
+<h4 id="⛏️-Complementary-Shaders"><a href="#⛏️-Complementary-Shaders" class="headerlink" title="⛏️ Complementary Shaders"></a>⛏️ Complementary Shaders</h4><p><img src="/images/mc_shader_cs.png" alt="minecraft shaders"></p>
+<h4 id="⛏️-BSL-Shaders"><a href="#⛏️-BSL-Shaders" class="headerlink" title="⛏️ BSL Shaders"></a>⛏️ BSL Shaders</h4><p><img src="/images/mc_shader_bsl.png" alt="minecraft shaders"></p>
+<h4 id="⛏️-Sildur’s-Enhanced-Default"><a href="#⛏️-Sildur’s-Enhanced-Default" class="headerlink" title="⛏️ Sildur’s Enhanced Default"></a>⛏️ Sildur’s Enhanced Default</h4><p><img src="/images/mc_shader_ed.png" alt="minecraft shaders"></p>
+<h4 id="⛏️-SEUS-Renewed"><a href="#⛏️-SEUS-Renewed" class="headerlink" title="⛏️ SEUS Renewed"></a>⛏️ SEUS Renewed</h4><p><img src="/images/mc_shader_sr.png" alt="minecraft shaders"></p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/minecraft/">minecraft</a></div><div class="post-share"><div class="social-share" data-image="/images/mc_title.png" data-sites="facebook,twitter,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav id="pagination"><div class="pagination"></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2023/08/14/Minecraft-on-MiniBook-X-N100/" title="Minecraft on MiniBook X N100"><img class="cover" src="/images/minecraft-minibokx-01.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-14</div><div class="info-item-2">Minecraft on MiniBook X N100</div></div><div class="info-2"><div class="info-item-1"> MiniBook X N100 でMinecraft Java Edition を実行してみました。   実行画面 Minecraft と Fabric Loaderインストーラをダウンロードして実行します。  Minecraft Java Edition Fabric Loader  Fabric 系Mods とショートカット操作%APPDATA%\.minecraft\mods\ フォルダに格納します。    Mod ショートカット操作    Fabric API    Iris Shaders O シェーダーパックの選択K シェーダーのオン&#x2F;オフ   Xaero’s Minimap Y Xaero’s Minimap の設定   Xaero’s World Map M WorldMap の表示[ Xaero’s World Map の設定   MaLiLib    MiniHUD H MiniHUD のオン&#x2F;オフH+C MiniHUDの設定   Simple Armor Hud    Sodium    WI Zoom V　ズーム(マウススクロール可)...</div></div></div></a><a class="pagination-related" href="/2021/09/25/Electron-Minecraft-Mods-Manager/" title="Electron Minecraft Mod Manager"><img class="cover" src="/images/emcmm_m_list.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-25</div><div class="info-item-2">Electron Minecraft Mod Manager</div></div><div class="info-2"><div class="info-item-1">https://github.com/ktkr3d/electron-mcmm Electron でマインクラフトの Mod 管理アプリケーションを作ってみました。Mods 情報収集のために mc-curseforge-api を使っています。Electron の IPC 通信の仕様を勉強中です。   実装状況   分類 機能    My Mods ☑ インストール済の Mod 一覧 (Fabric)    ☐ インストール済の Mod 一覧 (Forge)    ☐ Mod のダウンロード&#x2F;インストール   My Shaderpacks ☑ インストール済の Shaderpack 一覧    ☐ Shaderpack 情報の取得   My Resourcepacks ☑ インストール済の Resourcepack 一覧    ☑ Resourcepack 情報の取得   Catalog ☑ CourseForge 検索    ☐ Mod のダウンロード&#x2F;インストール    ☐ フィルタ    ☐ ページ処理   Settings ☐ デフォルト以外のインスト...</div></div></div></a><a class="pagination-related" href="/2021/10/24/Minecraft-Java-Edition-on-Raspberry-Pi-4B-Ubuntu-21-10/" title="Minecraft Java Edition on Raspberry Pi 4B &#x2F; Ubuntu 21.10"><img class="cover" src="/images/minecraft_raspi4b_ubuntu2110.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-24</div><div class="info-item-2">Minecraft Java Edition on Raspberry Pi 4B &#x2F; Ubuntu 21.10</div></div><div class="info-2"><div class="info-item-1"> https://github.com/MultiMC/Launcherhttps://forums.raspberrypi.com/viewtopic.php?f=78&amp;t=321888 Raspberry Pi 4B + Ubuntu 21.10 に Minecraft をインストールしてみました。マイクロソフトアカウントでログインできます。   Minecraft Java Edition (Microsoft Account)  Pi-Apps をインストール git clone https://github.com/Botspot/pi-apps.gitcd pi-app./install  Pi-Apps を起動  Games &#x2F; Minecraft Java MultiMC5 をインストールコンパイルが終わるまで気長に待つ。  Minecraft Java MultiMC5 を起動  Add Instance  Edit Instance &gt; Version &gt; Install Fabric  Edit Instance &gt; Ve...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/3d/"><span class="card-category-list-name">3d</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/"><span class="card-category-list-name">android</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/application/"><span class="card-category-list-name">application</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cms/"><span class="card-category-list-name">cms</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/conky/"><span class="card-category-list-name">conky</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/develop/"><span class="card-category-list-name">develop</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/dtv/"><span class="card-category-list-name">dtv</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/editor/"><span class="card-category-list-name">editor</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/mermaid/" style="font-size: 1.1em; color: #999">mermaid</a> <a href="/tags/openproject-ce/" style="font-size: 1.1em; color: #999">openproject-ce</a> <a href="/tags/remixos/" style="font-size: 1.1em; color: #999">remixos</a> <a href="/tags/freemind/" style="font-size: 1.15em; color: #999b9e">freemind</a> <a href="/tags/threejs/" style="font-size: 1.15em; color: #999b9e">threejs</a> <a href="/tags/irrlicht/" style="font-size: 1.3em; color: #99a1ac">irrlicht</a> <a href="/tags/qwen3/" style="font-size: 1.1em; color: #999">qwen3</a> <a href="/tags/raytrace/" style="font-size: 1.1em; color: #999">raytrace</a> <a href="/tags/android/" style="font-size: 1.25em; color: #999fa7">android</a> <a href="/tags/android-studio/" style="font-size: 1.1em; color: #999">android-studio</a> <a href="/tags/mutter/" style="font-size: 1.1em; color: #999">mutter</a> <a href="/tags/utterances/" style="font-size: 1.1em; color: #999">utterances</a> <a href="/tags/neutralinojs/" style="font-size: 1.35em; color: #99a3b1">neutralinojs</a> <a href="/tags/mern/" style="font-size: 1.1em; color: #999">mern</a> <a href="/tags/openvpn/" style="font-size: 1.25em; color: #999fa7">openvpn</a> <a href="/tags/windows/" style="font-size: 1.45em; color: #99a7ba">windows</a> <a href="/tags/hi10go/" style="font-size: 1.1em; color: #999">hi10go</a> <a href="/tags/chinachu/" style="font-size: 1.2em; color: #999da3">chinachu</a> <a href="/tags/vue/" style="font-size: 1.1em; color: #999">vue</a> <a href="/tags/minecraft/" style="font-size: 1.25em; color: #999fa7">minecraft</a> <a href="/tags/ags/" style="font-size: 1.1em; color: #999">ags</a> <a href="/tags/handbrake/" style="font-size: 1.1em; color: #999">handbrake</a> <a href="/tags/hyprland/" style="font-size: 1.2em; color: #999da3">hyprland</a> <a href="/tags/qwmu/" style="font-size: 1.1em; color: #999">qwmu</a> <a href="/tags/lutris/" style="font-size: 1.15em; color: #999b9e">lutris</a> <a href="/tags/manjaro/" style="font-size: 1.1em; color: #999">manjaro</a> <a href="/tags/calamares/" style="font-size: 1.1em; color: #999">calamares</a> <a href="/tags/gtk-3/" style="font-size: 1.2em; color: #999da3">gtk+3</a> <a href="/tags/wine/" style="font-size: 1.1em; color: #999">wine</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/virt-manager/" style="font-size: 1.15em; color: #999b9e">virt-manager</a> <a href="/tags/unity3d/" style="font-size: 1.4em; color: #99a5b6">unity3d</a> <a href="/tags/utc/" style="font-size: 1.1em; color: #999">utc</a> <a href="/tags/feedbro/" style="font-size: 1.1em; color: #999">feedbro</a> <a href="/tags/alg/" style="font-size: 1.1em; color: #999">alg</a> <a href="/tags/vscode-reveal/" style="font-size: 1.1em; color: #999">vscode-reveal</a> <a href="/tags/wsl/" style="font-size: 1.5em; color: #99a9bf">wsl</a> <a href="/tags/windows-terminal/" style="font-size: 1.15em; color: #999b9e">windows-terminal</a> <a href="/tags/lain/" style="font-size: 1.1em; color: #999">lain</a> <a href="/tags/fedora/" style="font-size: 1.25em; color: #999fa7">fedora</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              December 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              November 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              October 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/07/">
+            <span class="card-archive-list-date">
+              July 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              June 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              May 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              April 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              March 2025
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

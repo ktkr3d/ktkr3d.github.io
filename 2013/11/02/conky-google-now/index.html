@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Conky Google Now | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="http:&#x2F;&#x2F;satya164.deviantart.com&#x2F;art&#x2F;Conky-Google-Now-366545753 ConkyForecast のスクリプトがうまく動かなくなったので、Conky Google Now に乗り換えてみました。フォントをOpen Sans Light に統一しようかと思いましたが、行間が空いてしまったので止めておきました。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Conky Google Now">
+<meta property="og:url" content="https://ktkr3d.github.io/2013/11/02/conky-google-now/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="http:&#x2F;&#x2F;satya164.deviantart.com&#x2F;art&#x2F;Conky-Google-Now-366545753 ConkyForecast のスクリプトがうまく動かなくなったので、Conky Google Now に乗り換えてみました。フォントをOpen Sans Light に統一しようかと思いましたが、行間が空いてしまったので止めておきました。">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
+<meta property="article:published_time" content="2013-11-02T03:05:00.000Z">
+<meta property="article:modified_time" content="2020-08-02T17:44:33.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/avatar.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Conky Google Now",
+  "url": "https://ktkr3d.github.io/2013/11/02/conky-google-now/",
+  "image": "https://ktkr3d.github.io/images/avatar.png",
+  "datePublished": "2013-11-02T03:05:00.000Z",
+  "dateModified": "2020-08-02T17:44:33.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2013/11/02/conky-google-now/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Conky Google Now',
+  isHighlightShrink: undefined,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">Conky Google Now</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Conky Google Now</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2013-11-02T03:05:00.000Z" title="Created 2013-11-02 12:05:00">2013-11-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-08-02T17:44:33.000Z" title="Updated 2020-08-03 02:44:33">2020-08-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/conky/">conky</a></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p><a href="/images/conky_google_now.png"><img src="/images/conky_google_now_tn.png" class=""></a></p>
+<p><a target="_blank" rel="noopener" href="http://satya164.deviantart.com/art/Conky-Google-Now-366545753">http://satya164.deviantart.com/art/Conky-Google-Now-366545753</a></p>
+<p>ConkyForecast のスクリプトがうまく動かなくなったので、Conky Google Now に乗り換えてみました。<br>フォントをOpen Sans Light に統一しようかと思いましたが、行間が空いてしまったので止めておきました。</p>
+<span id="more"></span>
+
+<figure class="highlight text"><figcaption><span>.conkyrc</span></figcaption><table><tr><td class="code"><pre><span class="line"># Conky Google Now style #</span><br><span class="line"></span><br><span class="line"># Conky settings #</span><br><span class="line">background no</span><br><span class="line">update_interval 1</span><br><span class="line">double_buffer yes</span><br><span class="line">no_buffers yes</span><br><span class="line"></span><br><span class="line"># Window specifications #</span><br><span class="line">own_window yes</span><br><span class="line">own_window_type normal</span><br><span class="line">own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager</span><br><span class="line">own_window_title </span><br><span class="line">own_window_colour 2D2D2D</span><br><span class="line"></span><br><span class="line">minimum_size 220</span><br><span class="line">maximum_width 220</span><br><span class="line"></span><br><span class="line"># Alignment #</span><br><span class="line">alignment tr</span><br><span class="line">gap_x 10</span><br><span class="line">gap_y 10</span><br><span class="line"></span><br><span class="line">border_inner_margin 15</span><br><span class="line">border_outer_margin 0</span><br><span class="line"></span><br><span class="line"># Graphics settings #</span><br><span class="line">draw_shades no</span><br><span class="line">draw_outline no</span><br><span class="line">draw_borders no</span><br><span class="line">draw_graph_borders no</span><br><span class="line"></span><br><span class="line"># Text settings #</span><br><span class="line">use_xft yes</span><br><span class="line">xftalpha 0</span><br><span class="line">xftfont Open Sans Light:size=10</span><br><span class="line"></span><br><span class="line">override_utf8_locale yes</span><br><span class="line"></span><br><span class="line">imlib_cache_size 0</span><br><span class="line"></span><br><span class="line"># Color scheme #</span><br><span class="line">default_color DCDCDC</span><br><span class="line"></span><br><span class="line">color1 0099CC</span><br><span class="line">color2 9933CC</span><br><span class="line">color3 669900</span><br><span class="line">color4 FF8800</span><br><span class="line">color5 CC0000</span><br><span class="line">color6 AAAAAA</span><br><span class="line">color7 484848</span><br><span class="line"></span><br><span class="line">TEXT</span><br><span class="line">$&#123;font Open Sans Light:size=13&#125;$&#123;time %G&#125;/$&#123;time %m&#125;/$&#123;time %d&#125; ($&#123;font TakaoPGothic:size=13&#125;$&#123;time %a&#125;$&#123;voffset -2&#125;$&#123;font Open Sans Light:size=13&#125;)$&#123;alignr&#125;$&#123;time %H&#125;:$&#123;time %M&#125;:$&#123;time %S&#125;</span><br><span class="line">$&#123;voffset -10&#125;$&#123;hr&#125;$&#123;color&#125;$&#123;voffset -5&#125;</span><br><span class="line"># WEATHER</span><br><span class="line">$&#123;execi 300 curl -s &quot;http://weather.yahooapis.com/forecastrss?w=1118370&amp;u=c&quot; -o ~/.cache/weather.xml&#125;$&#123;font Open Sans Light:size=15&#125;$&#123;execi 300 grep &quot;yweather:location&quot; ~/.cache/weather.xml | grep -o &quot;city=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot;&#125;, $&#123;execi 300 grep &quot;yweather:location&quot; ~/.cache/weather.xml | grep -o &quot;country=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot;&#125;$&#123;font&#125;</span><br><span class="line">$&#123;voffset -20&#125;$&#123;font Open Sans Light:size=48&#125;$&#123;alignr&#125;$&#123;execi 300 grep &quot;yweather:condition&quot; ~/.cache/weather.xml | grep -o &quot;temp=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot;&#125;°$&#123;font&#125;$&#123;voffset -15&#125;</span><br><span class="line">$&#123;execi 300 cp -f ~/.conky-google-now/$(grep &quot;yweather:condition&quot; ~/.cache/weather.xml | grep -o &quot;code=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot;).png ~/.cache/weather.png&#125;$&#123;image ~/.cache/weather.png -p 0,60 -s 60x60&#125;</span><br><span class="line">$&#123;execi 300 grep &quot;yweather:condition&quot; ~/.cache/weather.xml | grep -o &quot;text=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | tr &#x27;[a-z]&#x27; &#x27;[A-Z]&#x27;&#125;</span><br><span class="line">$&#123;image ~/.conky-google-now/wind.png -p 0,140 -s 15x15&#125;$&#123;goto 35&#125;$&#123;execi 300 grep &quot;yweather:wind&quot; ~/.cache/weather.xml | grep -o &quot;speed=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot;&#125;$&#123;execi 300 grep &quot;yweather:units&quot; ~/.cache/weather.xml | grep -o &quot;speed=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot;&#125;</span><br><span class="line">$&#123;image ~/.conky-google-now/humidity.png -p 0,160 -s 15x15&#125;$&#123;goto 35&#125;$&#123;execi 300 grep &quot;yweather:atmosphere&quot; ~/.cache/weather.xml | grep -o &quot;humidity=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot;&#125;%$&#123;voffset 10&#125;</span><br><span class="line">$&#123;goto 18&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;day=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==1&#x27; | tr &#x27;[a-z]&#x27; &#x27;[A-Z]&#x27;&#125;$&#123;goto 60&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;day=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==2&#x27; | tr &#x27;[a-z]&#x27; &#x27;[A-Z]&#x27;&#125;$&#123;goto 105&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;day=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==3&#x27; | tr &#x27;[a-z]&#x27; &#x27;[A-Z]&#x27;&#125;$&#123;goto 150&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;day=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==4&#x27; | tr &#x27;[a-z]&#x27; &#x27;[A-Z]&#x27;&#125;$&#123;goto 195&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;day=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==5&#x27; | tr &#x27;[a-z]&#x27; &#x27;[A-Z]&#x27;&#125;</span><br><span class="line">$&#123;execi 300 cp -f ~/.conky-google-now/$(grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;code=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==1&#x27;).png ~/.cache/weather-1.png&#125;$&#123;image ~/.cache/weather-1.png -p 0,210 -s 30x30&#125;$&#123;execi 300 cp -f ~/.conky-google-now/$(grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;code=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==2&#x27;).png ~/.cache/weather-2.png&#125;$&#123;image ~/.cache/weather-2.png -p 45,210 -s 30x30&#125;$&#123;execi 300 cp -f ~/.conky-google-now/$(grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;code=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==3&#x27;).png ~/.cache/weather-3.png&#125;$&#123;image ~/.cache/weather-3.png -p 90,210 -s 30x30&#125;$&#123;execi 300 cp -f ~/.conky-google-now/$(grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;code=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==4&#x27;).png ~/.cache/weather-4.png&#125;$&#123;image ~/.cache/weather-4.png -p 135,210 -s 30x30&#125;$&#123;execi 300 cp -f ~/.conky-google-now/$(grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;code=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==5&#x27;).png ~/.cache/weather-5.png&#125;$&#123;image ~/.cache/weather-5.png -p 180,210 -s 30x30&#125;$&#123;voffset 20&#125;</span><br><span class="line">$&#123;color ffaaaa&#125;$&#123;goto 20&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;high=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==1&#x27;&#125;°$&#123;goto 65&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;high=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==2&#x27;&#125;°$&#123;goto 110&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;high=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==3&#x27;&#125;°$&#123;goto 155&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;high=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==4&#x27;&#125;°$&#123;goto 200&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;high=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==5&#x27;&#125;°</span><br><span class="line">$&#123;voffset -5&#125;$&#123;color aaaaff&#125;$&#123;goto 20&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;low=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==1&#x27;&#125;°$&#123;goto 65&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;low=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==2&#x27;&#125;°$&#123;goto 110&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;low=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==3&#x27;&#125;°$&#123;goto 155&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;low=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==4&#x27;&#125;°$&#123;goto 200&#125;$&#123;execi 300 grep &quot;yweather:forecast&quot; ~/.cache/weather.xml | grep -o &quot;low=\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;\&quot;[^\&quot;]*\&quot;&quot; | grep -o &quot;[^\&quot;]*&quot; | awk &#x27;NR==5&#x27;&#125;°</span><br><span class="line"># *** SYSTEM ***</span><br><span class="line">$&#123;color AAAAAA&#125;$&#123;voffset 16&#125;$&#123;font DejaVu Sans:size=12&#125;SYSTEM$&#123;font&#125; $&#123;hr&#125;</span><br><span class="line">#$&#123;alignc 17&#125;$&#123;font Arial Black:size=12&#125;$&#123;nodename&#125;$&#123;font&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;i$&#123;font DejaVu Sans:size=10&#125;   Distro:  $&#123;alignr&#125;$&#123;exec lsb_release -d | sed -e &#x27;s/.*: //&#x27; | awk &#x27;&#123;print $2,$3&#125;&#x27;&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;i$&#123;font DejaVu Sans:size=10&#125;   Kernel:  $&#123;alignr&#125;$&#123;kernel&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;i$&#123;font DejaVu Sans:size=10&#125;   Arch:  $&#123;alignr&#125;$&#123;machine&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;A$&#123;font DejaVu Sans:size=10&#125;   CPU1: $&#123;cpu cpu1&#125;% $&#123;alignr&#125;$&#123;cpubar cpu1 8,60&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;A$&#123;font DejaVu Sans:size=10&#125;   CPU2: $&#123;cpu cpu2&#125;% $&#123;alignr&#125;$&#123;cpubar cpu2 8,60&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;A$&#123;font DejaVu Sans:size=10&#125;   CPU3: $&#123;cpu cpu3&#125;% $&#123;alignr&#125;$&#123;cpubar cpu3 8,60&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;A$&#123;font DejaVu Sans:size=10&#125;   CPU4: $&#123;cpu cpu4&#125;% $&#123;alignr&#125;$&#123;cpubar cpu4 8,60&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;A$&#123;font DejaVu Sans:size=10&#125;   CPU5: $&#123;cpu cpu5&#125;% $&#123;alignr&#125;$&#123;cpubar cpu5 8,60&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;A$&#123;font DejaVu Sans:size=10&#125;   CPU6: $&#123;cpu cpu6&#125;% $&#123;alignr&#125;$&#123;cpubar cpu6 8,60&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;A$&#123;font DejaVu Sans:size=10&#125;   CPU7: $&#123;cpu cpu7&#125;% $&#123;alignr&#125;$&#123;cpubar cpu7 8,60&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;A$&#123;font DejaVu Sans:size=10&#125;   CPU8: $&#123;cpu cpu8&#125;% $&#123;alignr&#125;$&#123;cpubar cpu8 8,60&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;g$&#123;font DejaVu Sans:size=10&#125;   RAM: $memperc% $&#123;alignr&#125;$&#123;membar 8,60&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;j$&#123;font DejaVu Sans:size=10&#125;   Swap: $swapperc% $&#123;alignr&#125;$&#123;swapbar 8,60&#125;</span><br><span class="line">#$&#123;font Webdings:size=10&#125;~$&#123;font DejaVu Sans:size=10&#125;  Battery: $&#123;battery_percent BAT0&#125;% $&#123;alignr&#125;$&#123;battery_bar 8,60 BAT0&#125;</span><br><span class="line">$&#123;font StyleBats:size=10&#125;q$&#123;font DejaVu Sans:size=10&#125;   Uptime: $&#123;alignr&#125;$&#123;uptime&#125;</span><br><span class="line"># *** FILESYSTEM ***</span><br><span class="line">$&#123;voffset 16&#125;$&#123;font DejaVu Sans:size=12&#125;FILESYSTEM$&#123;font&#125; $&#123;hr&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;m$&#123;font DejaVu Sans:size=10&#125;   /:$&#123;alignr&#125;$&#123;fs_type /&#125;</span><br><span class="line">        $&#123;fs_used /&#125; / $&#123;fs_size /&#125; $&#123;alignr&#125;$&#123;fs_bar 8,60 /&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;m$&#123;font DejaVu Sans:size=10&#125;   /mnt/common:$&#123;alignr&#125;$&#123;fs_type /mnt/common&#125;</span><br><span class="line">        $&#123;fs_used /mnt/common&#125; / $&#123;fs_size /mnt/common&#125; $&#123;alignr&#125;$&#123;fs_bar 8,60 /mnt/common&#125;</span><br><span class="line"># *** NETWORK ***</span><br><span class="line">$&#123;voffset 16&#125;$&#123;font DejaVu Sans:size=12&#125;NETWORK$&#123;font&#125; $&#123;hr&#125;#</span><br><span class="line">$&#123;if_existing /proc/net/route wlan0&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;O$&#123;font DejaVu Sans:size=10&#125;   Up: $&#123;upspeed wlan0&#125; $&#123;alignr&#125;$&#123;upspeedgraph wlan0 8,60 000000 000000&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;U$&#123;font DejaVu Sans:size=10&#125;   Down: $&#123;downspeed wlan0&#125; $&#123;alignr&#125;$&#123;downspeedgraph wlan0 8,60 000000 000000&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;N$&#123;font DejaVu Sans:size=10&#125;   Upload: $&#123;alignr&#125;$&#123;totalup wlan0&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;T$&#123;font DejaVu Sans:size=10&#125;   Download: $&#123;alignr&#125;$&#123;totaldown wlan0&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;Z$&#123;font DejaVu Sans:size=10&#125;   Signal: $&#123;wireless_link_qual wlan0&#125;% $&#123;alignr&#125;$&#123;wireless_link_bar 8,60 wlan0&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;a$&#123;font DejaVu Sans:size=10&#125;   Local IP: $&#123;alignr&#125;$&#123;addr wlan0&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;b$&#123;font DejaVu Sans:size=10&#125;   Public IP: $&#123;alignr&#125;$&#123;execi 1800 ~/.conky/scripts/ip.sh&#125;#</span><br><span class="line">$&#123;else&#125;$&#123;if_existing /proc/net/route eth0&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;O$&#123;font DejaVu Sans:size=10&#125;   Up: $&#123;upspeed eth0&#125; $&#123;alignr&#125;$&#123;upspeedgraph eth0 8,60 000000 000000&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;U$&#123;font DejaVu Sans:size=10&#125;   Down: $&#123;downspeed eth0&#125; $&#123;alignr&#125;$&#123;downspeedgraph eth0 8,60 000000 000000&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;N$&#123;font DejaVu Sans:size=10&#125;   Upload: $&#123;alignr&#125;$&#123;totalup eth0&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;T$&#123;font DejaVu Sans:size=10&#125;   Download: $&#123;alignr&#125;$&#123;totaldown eth0&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;a$&#123;font DejaVu Sans:size=10&#125;   Local IP: $&#123;alignr&#125;$&#123;addr eth0&#125;</span><br><span class="line">$&#123;font PizzaDude Bullets:size=10&#125;b$&#123;font DejaVu Sans:size=10&#125;   Public IP: $&#123;alignr&#125;$&#123;execi 1800 ~/.conky/scripts/ip.sh&#125;#</span><br><span class="line">$&#123;endif&#125;$&#123;endif&#125;</span><br><span class="line"># *** PROCESS ***</span><br><span class="line">$&#123;voffset 16&#125;$&#123;font DejaVu Sans:size=12&#125;PROCESSES$&#123;font DejaVu Sans:size=10&#125; $&#123;hr&#125;</span><br><span class="line">NAME $alignr CPU%  MEM%</span><br><span class="line">$&#123;top name 1&#125; $alignr $&#123;top cpu 1&#125;   $&#123;top mem 1&#125;</span><br><span class="line">$&#123;top name 2&#125; $alignr $&#123;top cpu 2&#125;   $&#123;top mem 2&#125;</span><br><span class="line">$&#123;top name 3&#125; $alignr $&#123;top cpu 3&#125;   $&#123;top mem 3&#125;</span><br><span class="line">$&#123;top name 4&#125; $alignr $&#123;top cpu 4&#125;   $&#123;top mem 4&#125;</span><br><span class="line">$&#123;top name 5&#125; $alignr $&#123;top cpu 5&#125;   $&#123;top mem 5&#125;</span><br></pre></td></tr></table></figure>
+</article><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/images/avatar.png" data-sites="facebook,twitter,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2013/11/04/minetest/" title="minetest"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">minetest</div></div><div class="info-2"><div class="info-item-1"> http://minetest.net/ minecraft のクローンminetest がUbuntu の標準リポジトリに登録されていたので、遊んでみました。minetest はIrrlicht エンジンを利用して実装されています。動作は軽快ですが、一部文字が表示されない箇所がありました。   サーバへの接続方法初期画面の一部の文字が表示されていなかったので、適当に勘を働かせて操作してみます。  左から二番目のタブ(マルチプレイヤー)を選択 下のテキストボックスに、サーバのIP アドレスとポート番号を入力(http://servers.minetest.net/から適当に選ぶ) 右上から二番目のテキストボックスにパスワードを入力 右下のボタン(接続)を押下  グラフィックがオンボードでATOM なOpenGL 1.4 の環境で動かしてみると、さすがに重かったです。  </div></div></div></a><a class="pagination-related" href="/2013/10/05/fedora-20/" title="Fedora 20"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Fedora 20</div></div><div class="info-2"><div class="info-item-1"> Fedora 20 alpha + GNOME Shell 3.10 をインストールしてみました。 Fedora 20 alphahttps://fedoraproject.org/ja/get-prerelease RPM Fusionhttp://rpmfusion.org/Configuration その他の設定 Autohide Top Bar extension Cairo-Dock Bluetooth Keyboard VNC Server  sudo yum install vino を実行すると、[設定]-[共有]-[画面共有]メニューが有効になる。クライアントからはSSH トンネル経由で接続する。    Android からインターネット経由の通信と接続ツール SSH (Connect Bot)  https://play.google.com/store/apps/details?id=org.connectbot VNC over SSH (bVNC Free)  https://play.google.com/store/apps/details?id=...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

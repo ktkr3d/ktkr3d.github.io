@@ -1,0 +1,520 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Arch Linux | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Arch Linux 			A simple, lightweight distribution  ディストリビューション Arch Linux  https:&#x2F;&#x2F;archlinux.org&#x2F;  スクリーンショット Arch LinuxのインストールインストーラISOファイルのダウンロードArch Linux のGUI インストーラであるCalam Arch Install">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arch Linux">
+<meta property="og:url" content="https://ktkr3d.github.io/archlinux/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="Arch Linux 			A simple, lightweight distribution  ディストリビューション Arch Linux  https:&#x2F;&#x2F;archlinux.org&#x2F;  スクリーンショット Arch LinuxのインストールインストーラISOファイルのダウンロードArch Linux のGUI インストーラであるCalam Arch Install">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
+<meta property="article:published_time" content="2024-07-25T12:53:20.000Z">
+<meta property="article:modified_time" content="2025-12-02T05:20:04.887Z">
+<meta property="article:author" content="ktkr3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/archlinux/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Arch Linux',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Arch Linux</h1></header><main class="layout" id="content-inner"><div id="page"><div class="page-title">Arch Linux</div><div class="container" id="article-container"><a href="https://archlinux.org/" target="_blank" rel="external nofollow noopener noreferrer" class="link-preview">
+	<div class="og-image">
+		<img src="https://www.svgrepo.com/show/349296/arch-linux.svg" alt="Arch Linux" class="not-gallery-item" loading="lazy"></div>
+		<div class="descriptions">
+			<div class="og-title">Arch Linux</div>
+			<div class="og-description">A simple, lightweight distribution</div></div></a>
+
+<h3 id="ディストリビューション"><a href="#ディストリビューション" class="headerlink" title="ディストリビューション"></a>ディストリビューション</h3><ul>
+<li>Arch Linux<br>  <a target="_blank" rel="noopener" href="https://archlinux.org/">https://archlinux.org/</a></li>
+</ul>
+<h3 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h3><p><img src="/images/archlinux_minibookx.png"></p>
+<h3 id="Arch-Linuxのインストール"><a href="#Arch-Linuxのインストール" class="headerlink" title="Arch Linuxのインストール"></a>Arch Linuxのインストール</h3><h4 id="インストーラISOファイルのダウンロード"><a href="#インストーラISOファイルのダウンロード" class="headerlink" title="インストーラISOファイルのダウンロード"></a>インストーラISOファイルのダウンロード</h4><p>Arch Linux のGUI インストーラであるCalam Arch Installerを利用します。<br><a target="_blank" rel="noopener" href="https://sourceforge.net/projects/blue-arch-installer/files/arch-installer/">https://sourceforge.net/projects/blue-arch-installer/files/arch-installer/</a></p>
+<h4 id="USBメモリの作成-物理PCにインストールする場合"><a href="#USBメモリの作成-物理PCにインストールする場合" class="headerlink" title="USBメモリの作成(物理PCにインストールする場合)"></a>USBメモリの作成(物理PCにインストールする場合)</h4><ol>
+<li>USB メモリにVentoyをセットアップ<br>  <a target="_blank" rel="noopener" href="https://ventoy.net/en/index.html">https://ventoy.net/en/index.html</a></li>
+<li>USBメモリにCalam Arch InstallerのISOファイルをコピー</li>
+<li>USB メモリからブートして、Calam Arch Installerを選択</li>
+</ol>
+<h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><ol start="0">
+<li>無効なリポジトリをコメントアウト<br>  おそらく2025&#x2F;3&#x2F;1以前のISO(Calam-Arch-Installer-2025-03.isoは2025&#x2F;2&#x2F;28)を利用する場合の対応<br>  calamaresの実行中にエラーになってしまうので<code>/etc/pacman.conf</code>を編集して<code>[community]</code>の項目をコメントアウト</li>
+</ol>
+  <figure class="highlight text"><figcaption><span>/etc/pacman.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">#[community]</span><br><span class="line">#Include = /etc/pacman.d/mirrorlist</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://archlinux.org/news/cleaning-up-old-repositories/">https://archlinux.org/news/cleaning-up-old-repositories/</a><br>Around two years ago, we’ve merged the [community] repository into [extra] as part of the git migration. In order to not break user setups, we kept these repositories around in an unused and empty state. We’re going to clean up these old repositories on 2025-03-01.</p>
+</blockquote>
+<ol>
+<li>Calam Arch Installer起動後にミラーを選択して保存<ul>
+<li>Japan</li>
+<li>Include https mirrors</li>
+</ul>
+</li>
+<li>タスクバーから<code>Terminal Emulator</code>を選択して日本語フォントをインストール <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S otf-ipafont</span><br></pre></td></tr></table></figure>
+ <code>/usr/share/fonts/OTF/*.ttf</code>にインストールされる</li>
+<li>タスクバーから<code>Install Arch Linux</code>を選択してインストールを実行</li>
+<li>マルチブートする場合はEFIパーティションを&#x2F;boot&#x2F;efiにマウント</li>
+<li>デスクトップ環境に<code>GNOME</code>を選択</li>
+<li>パッケージは特に変更せずに継続<ul>
+<li>Base-devel + Common Packages</li>
+<li>GNOME-Desktop</li>
+</ul>
+</li>
+<li>ユーザ情報では一旦「パスワードを尋ねずに自動的にログインする。」を選択</li>
+<li>インストールが完了したら、インストール先パーティションのユーザ<code>~/.fonts/</code>に日本語フォントをコピーしておくと再起動後に日本語表示が可能</li>
+<li>メディアを取り外して再起動</li>
+<li>pulseaudioの削除<br>  システムアップデート後にpipewireとpulseaudioが干渉してオーディオ再生で問題がある場合</li>
+</ol>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -Rdd pulseaudio</span><br><span class="line"><span class="built_in">sudo</span> pacman -S pipewire-&#123;jack,alsa,pulse&#125;</span><br><span class="line">systemctl --user <span class="built_in">enable</span> --now pipewire pipewire-pulse wireplumber</span><br></pre></td></tr></table></figure>
+
+<h3 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h3><h4 id="ミラーリストを週次で最適化"><a href="#ミラーリストを週次で最適化" class="headerlink" title="ミラーリストを週次で最適化"></a>ミラーリストを週次で最適化</h4><ul>
+<li>reflectorをインストール<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S reflector</span><br></pre></td></tr></table></figure></li>
+<li>設定<figure class="highlight ini"><figcaption><span>&#x2F;etc&#x2F;xdg&#x2F;reflector&#x2F;reflector.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Recommended Options</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Set the output path where the mirrorlist will be saved (--save).</span></span><br><span class="line">--save /etc/pacman.d/mirrorlist</span><br><span class="line"></span><br><span class="line"><span class="comment"># Select the transfer protocol (--protocol).</span></span><br><span class="line">--protocol https</span><br><span class="line"></span><br><span class="line"><span class="comment"># Select the country (--country).</span></span><br><span class="line"><span class="comment"># Consult the list of available countries with &quot;reflector --list-countries&quot; and</span></span><br><span class="line"><span class="comment"># select the countries nearest to you or the ones that you trust. For example:</span></span><br><span class="line"><span class="comment"># --country France,Germany</span></span><br><span class="line marked">--country Japan</span><br><span class="line"></span><br><span class="line"><span class="comment"># Use only the  most recently synchronized mirrors (--latest).</span></span><br><span class="line">--latest 5</span><br><span class="line"></span><br><span class="line"><span class="comment"># Sort the mirrors by synchronization time (--sort).</span></span><br><span class="line marked"><span class="comment"># --sort age</span></span><br><span class="line marked">--sort rate</span><br></pre></td></tr></table></figure></li>
+<li>週次実行設定<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> --now reflector.timer</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>次回実行時刻は<code>systemctl list-timers</code>で確認できる。</p>
+</div></li>
+<li>即時実行したい場合のコマンド<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl start reflector.service</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="VirtualboxのゲストOSの場合"><a href="#VirtualboxのゲストOSの場合" class="headerlink" title="VirtualboxのゲストOSの場合"></a>VirtualboxのゲストOSの場合</h4><p>VirtualBoxの「デバイス」-「Guest Addition CDの挿入」メニューからメディアをマウントして導入する。<br><code>virtualbox-guest-utils</code>は一部の機能が即時有効にならないので使わない。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /run/media/arch/VBox_GAs_*</span><br><span class="line"><span class="built_in">sudo</span> ./VBoxLinuxAdditions.run</span><br></pre></td></tr></table></figure>
+
+<h4 id="ウィンドウに最小化-最大化ボタンを追加"><a href="#ウィンドウに最小化-最大化ボタンを追加" class="headerlink" title="ウィンドウに最小化&#x2F;最大化ボタンを追加"></a>ウィンドウに最小化&#x2F;最大化ボタンを追加</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gsettings <span class="built_in">set</span> org.gnome.desktop.wm.preferences button-layout <span class="string">&quot;:minimize,maximize,close&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="ホームフォルダの設定"><a href="#ホームフォルダの設定" class="headerlink" title="ホームフォルダの設定"></a>ホームフォルダの設定</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
+<p>各種フォルダを英語名に変更する</p>
+<h4 id="テキストテンプレートファイルの作成"><a href="#テキストテンプレートファイルの作成" class="headerlink" title="テキストテンプレートファイルの作成"></a>テキストテンプレートファイルの作成</h4><figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">touch ~<span class="regexp">/Templates/</span><span class="built_in">Text</span></span><br></pre></td></tr></table></figure>
+<p>Nautilus上の右クリックで空のテキストファイルを作成できるようになる</p>
+<h4 id="基本パッケージの導入"><a href="#基本パッケージの導入" class="headerlink" title="基本パッケージの導入"></a>基本パッケージの導入</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -Syu</span><br><span class="line"><span class="built_in">sudo</span> pacman -S fcitx5 fcitx5-im fcitx5-mozc git gnome-browser-connector vi</span><br></pre></td></tr></table></figure>
+
+<h4 id="日本語キーボードの場合の設定"><a href="#日本語キーボードの場合の設定" class="headerlink" title="日本語キーボードの場合の設定"></a>日本語キーボードの場合の設定</h4><ol>
+<li><code>fcitx5設定</code>を起動</li>
+<li><code>キーボード - 英語(US)</code>を削除</li>
+<li><code>Mozc</code>の前に<code>キーボード - 日本語(JP)</code>を追加</li>
+<li><code>適用</code>または<code>OK</code>ボタンを押下！！重要</li>
+</ol>
+<h4 id="paru-AUR-の導入"><a href="#paru-AUR-の導入" class="headerlink" title="paru (AUR) の導入"></a>paru (AUR) の導入</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://aur.archlinux.org/paru-bin.git</span><br><span class="line"><span class="built_in">cd</span> paru-bin</span><br><span class="line">makepkg -si</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><figcaption><span>~/.config/paru/paru.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[options]</span></span><br><span class="line">SudoLoop</span><br><span class="line">SkipReview</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><figcaption><span>~/.makepkg.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">MAKEFLAGS</span>=<span class="string">&quot;-j $(nproc)&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="マルチブート時の時刻ズレ調整-物理PCにインストールする場合"><a href="#マルチブート時の時刻ズレ調整-物理PCにインストールする場合" class="headerlink" title="マルチブート時の時刻ズレ調整(物理PCにインストールする場合)"></a>マルチブート時の時刻ズレ調整(物理PCにインストールする場合)</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> timedatectl set-local-rtc <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="fish-starship"><a href="#fish-starship" class="headerlink" title="fish &amp; starship"></a>fish &amp; starship</h4><p><a href="https://ktkr3d.github.io/2024/10/17/fish_starship/">https://ktkr3d.github.io/2024/10/17/fish_starship/</a></p>
+<h4 id="エイリアスの設定"><a href="#エイリアスの設定" class="headerlink" title="エイリアスの設定"></a>エイリアスの設定</h4><figure class="highlight bash"><figcaption><span>~/.config/fish/config.fish</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> l=<span class="string">&#x27;ls&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo pacman -Syyu; pacman -Qdtq | sudo pacman -Rs -; paru; fisher update&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="man-日本語"><a href="#man-日本語" class="headerlink" title="man (日本語)"></a>man (日本語)</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S man-pages-ja</span><br></pre></td></tr></table></figure>
+
+<h4 id="Yaruアイコン"><a href="#Yaruアイコン" class="headerlink" title="Yaruアイコン"></a>Yaruアイコン</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">paru -S yaru-<span class="attribute">icon</span>-theme</span><br></pre></td></tr></table></figure>
+
+<h4 id="GDMの解像度-向きをユーザセッションの解像度と同じにする"><a href="#GDMの解像度-向きをユーザセッションの解像度と同じにする" class="headerlink" title="GDMの解像度&#x2F;向きをユーザセッションの解像度と同じにする"></a>GDMの解像度&#x2F;向きをユーザセッションの解像度と同じにする</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">cp</span> ~/.config/monitors.xml /var/lib/gdm/.config/monitors.xml</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chown</span> gdm:gdm /var/lib/gdm/.config/monitors.xml</span><br></pre></td></tr></table></figure>
+
+<h4 id="Fastfetch"><a href="#Fastfetch" class="headerlink" title="Fastfetch"></a>Fastfetch</h4><p><a href="https://ktkr3d.github.io/2024/08/01/Fastfetch/?highlight=fast">https://ktkr3d.github.io/2024/08/01/Fastfetch/?highlight=fast</a></p>
+<h4 id="vi"><a href="#vi" class="headerlink" title="vi"></a>vi</h4><figure class="highlight bash"><figcaption><span>~/.exrc</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> showmode</span><br><span class="line"><span class="built_in">set</span> number</span><br><span class="line"><span class="built_in">set</span> ruler</span><br><span class="line"><span class="built_in">set</span> title</span><br><span class="line"><span class="built_in">set</span> showcmd</span><br></pre></td></tr></table></figure>
+
+<h4 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h4><p><a target="_blank" rel="noopener" href="https://github.com/tj/n">https://github.com/tj/n</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -L https://bit.ly/n-install | bash</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>~&#x2F;.bashrc の末尾に一行追加されます</p>
+</div>
+
+
+<h4 id="ディスクの自動マウント"><a href="#ディスクの自動マウント" class="headerlink" title="ディスクの自動マウント"></a>ディスクの自動マウント</h4><ul>
+<li><code>ディスク</code>アプリを開く</li>
+<li>対象のパーティションを選択</li>
+<li>歯車アイコンをクリック</li>
+<li>マウントオプションを編集</li>
+<li>ユーザセッションのデフォルトのチェックを外してOK</li>
+</ul>
+<h4 id="GDM-自動サスペンドの無効化"><a href="#GDM-自動サスペンドの無効化" class="headerlink" title="GDM 自動サスペンドの無効化"></a>GDM 自動サスペンドの無効化</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> -u gdm dbus-launch gsettings <span class="built_in">set</span> org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type <span class="string">&#x27;nothing&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="アプリケーション"><a href="#アプリケーション" class="headerlink" title="アプリケーション"></a>アプリケーション</h3><h4 id="Ghosttyのインストール"><a href="#Ghosttyのインストール" class="headerlink" title="Ghosttyのインストール"></a>Ghosttyのインストール</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S ghostty</span><br></pre></td></tr></table></figure>
+
+<h4 id="Google-Chromeのインストール"><a href="#Google-Chromeのインストール" class="headerlink" title="Google Chromeのインストール"></a>Google Chromeのインストール</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S google-chrome</span><br></pre></td></tr></table></figure>
+
+<h4 id="Visual-Studio-Code-設定"><a href="#Visual-Studio-Code-設定" class="headerlink" title="Visual Studio Code 設定"></a>Visual Studio Code 設定</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S visual-studio-code-bin</span><br></pre></td></tr></table></figure>
+<p><a href="https://ktkr3d.github.io/Visual-Studio-Code/">https://ktkr3d.github.io/Visual-Studio-Code/</a></p>
+<h4 id="code-server-設定"><a href="#code-server-設定" class="headerlink" title="code-server 設定"></a>code-server 設定</h4><ol>
+<li>Google Chrome を起動</li>
+<li>CA証明書をインポート<br> [設定]-[プライバシーとセキュリティ]-[セキュリティ]-[証明書の管理]、[信頼されたルート証明機関]-[インポート]</li>
+<li>対象サーバにHTTPSで接続</li>
+<li>アドレスの右にあるインストールボタンでPWA化</li>
+</ol>
+<h4 id="Kodi-設定"><a href="#Kodi-設定" class="headerlink" title="Kodi 設定"></a>Kodi 設定</h4><ol>
+<li>インストール <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S kodi</span><br></pre></td></tr></table></figure></li>
+<li>キーマップ設定 <figure class="highlight xml"><figcaption><span>~/.kodi/userdata/keymaps/keyboard.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">keymap</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">global</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">keyboard</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">f12</span>&gt;</span>ContextMenu<span class="tag">&lt;/<span class="name">f12</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">f12</span> <span class="attr">mod</span>=<span class="string">&quot;shift&quot;</span>&gt;</span>ActivateWindow(shutdownmenu)<span class="tag">&lt;/<span class="name">f12</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">end</span>&gt;</span>ActivateWindow(shutdownmenu)<span class="tag">&lt;/<span class="name">end</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">keyboard</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">global</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">FullscreenVideo</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">keyboard</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">f12</span>&gt;</span>Playlist<span class="tag">&lt;/<span class="name">f12</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">keyboard</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">FullscreenVideo</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">keymap</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><kbd>F12</kbd>でコンテキストメニューを表示。<kbd>C</kbd>でも同様。</li>
+<li><kbd>Shift</kbd>+<kbd>F12</kbd>で終了メニュー表示。<kbd>S</kbd>でも同様。</li>
+</ul>
+</li>
+</ol>
+<h4 id="Amazon-MusicのPWA化"><a href="#Amazon-MusicのPWA化" class="headerlink" title="Amazon MusicのPWA化"></a>Amazon MusicのPWA化</h4><ol>
+<li>Google Chrome でAmazon Music( <a target="_blank" rel="noopener" href="https://music.amazon.co.jp/">https://music.amazon.co.jp/</a> )を開く</li>
+<li>三点リーダから[保存と共有]-[ページをアプリとしてインストール…]</li>
+</ol>
+<h3 id="Wayland関連の拡張設定"><a href="#Wayland関連の拡張設定" class="headerlink" title="Wayland関連の拡張設定"></a>Wayland関連の拡張設定</h3><h4 id="分数スケーリングの有効化"><a href="#分数スケーリングの有効化" class="headerlink" title="分数スケーリングの有効化"></a>分数スケーリングの有効化</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gsettings <span class="built_in">set</span> org.gnome.mutter experimental-features <span class="string">&quot;[&#x27;scale-monitor-framebuffer&#x27;]&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Wayland-モードのChrome-Electronで日本語入力する設定"><a href="#Wayland-モードのChrome-Electronで日本語入力する設定" class="headerlink" title="Wayland モードのChrome&#x2F;Electronで日本語入力する設定"></a>Wayland モードのChrome&#x2F;Electronで日本語入力する設定</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S mutter-text-input-v1</span><br></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="code"><pre><span class="line">衝突するパッケージがないか確認しています...</span><br><span class="line">:: mutter-text-input-v1<span class="string">-46</span>.3.1<span class="string">-1</span> and mutter<span class="string">-46</span>.3.1<span class="string">-1</span> are in conflict. Remove mutter? [y/N] y</span><br></pre></td></tr></table></figure>
+<p>なお、<code>Program /usr/bin/glib-mkenums found: NO</code>が出力される場合は以下を実行する。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S glib2-devel</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://gitlab.archlinux.org/archlinux/packaging/packages/glib2/-/issues/7">https://gitlab.archlinux.org/archlinux/packaging/packages/glib2/-/issues/7</a></p>
+<h4 id="Google-ChromeのWaylandモード起動設定"><a href="#Google-ChromeのWaylandモード起動設定" class="headerlink" title="Google ChromeのWaylandモード起動設定"></a>Google ChromeのWaylandモード起動設定</h4><figure class="highlight ini"><figcaption><span>~/.config/chrome-flags.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">--ozone-platform-hint</span>=auto</span><br><span class="line"><span class="attr">--wayland-text-input-version</span>=<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Visual-Studio-CodeのWaylandモード起動設定"><a href="#Visual-Studio-CodeのWaylandモード起動設定" class="headerlink" title="Visual Studio CodeのWaylandモード起動設定"></a>Visual Studio CodeのWaylandモード起動設定</h4><figure class="highlight ini"><figcaption><span>~/.config/code-flags.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">--enable-features</span>=WaylandWindowDecorations</span><br><span class="line"><span class="attr">--ozone-platform-hint</span>=auto</span><br><span class="line">--enable-wayland-ime</span><br></pre></td></tr></table></figure>
+<p>Waylandモードの場合、app_idやWMClassが適切に設定されないためタスクバーにピン留めした起動アイコンとは別のアプリケーションと認識されてしまう。<br><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode/issues/154693">https://github.com/microsoft/vscode/issues/154693</a></p>
+<h4 id="Google-Chrome設定"><a href="#Google-Chrome設定" class="headerlink" title="Google Chrome設定"></a>Google Chrome設定</h4><ul>
+<li>read.crx<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">article</span> &#123;</span><br><span class="line"><span class="attribute">border-top</span>: dotted <span class="number">1px</span> <span class="number">#000000</span> <span class="meta">!important</span>;</span><br><span class="line"><span class="attribute">background-color</span>: <span class="number">#FFFFEE</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>Stylus<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* ==UserStyle==</span></span><br><span class="line"><span class="comment">@name       qiita.com - 2024年4月</span></span><br><span class="line"><span class="comment">@version    20240412.21.28</span></span><br><span class="line"><span class="comment">@namespace  ?</span></span><br><span class="line"><span class="comment">==/UserStyle== */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@-moz-document</span> domain(<span class="string">&quot;qiita.com&quot;</span>) &#123;</span><br><span class="line">    <span class="selector-class">.style-1y0vgst</span>  &#123;</span><br><span class="line">        <span class="attribute">display</span>: none;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.style-5h0vi8</span> &#123;</span><br><span class="line">        <span class="attribute">display</span>: none;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h3><h4 id="nVIdiaのグラフィクスカードの場合"><a href="#nVIdiaのグラフィクスカードの場合" class="headerlink" title="nVIdiaのグラフィクスカードの場合"></a>nVIdiaのグラフィクスカードの場合</h4><ul>
+<li>Arch Linux NVIDIA drivers installation guide<br><a target="_blank" rel="noopener" href="https://github.com/korvahannu/arch-nvidia-drivers-installation-guide">https://github.com/korvahannu/arch-nvidia-drivers-installation-guide</a></li>
+</ul>
+<h4 id="Lutiris"><a href="#Lutiris" class="headerlink" title="Lutiris"></a>Lutiris</h4><ul>
+<li>INSTALLING CLASSIC OR RETAIL WOW IN LINUX (Manjaro&#x2F;Arch Edition)<br><a target="_blank" rel="noopener" href="https://www.reddit.com/r/classicwow/comments/colnzr/installing_classic_or_retail_wow_in_linux/">https://www.reddit.com/r/classicwow/comments/colnzr/installing_classic_or_retail_wow_in_linux/</a></li>
+</ul>
+<h4 id="RDP-Server"><a href="#RDP-Server" class="headerlink" title="RDP Server"></a>RDP Server</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S xorg-xinit</span><br><span class="line">paru -S xrdp xorgxrdp-glamor pulseaudio-module-xrdp </span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> xrdp</span><br><span class="line"><span class="built_in">sudo</span> systemctl restart xrdp</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>~/.xinitrc</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#unset DBUS_SESSION_BUS_ADDRESS</span></span><br><span class="line"><span class="built_in">exec</span> gnome-session</span><br></pre></td></tr></table></figure>
+<p>同時接続不可。すでにログインしているとセッションがすぐに切れる。要調査。</p>
+<h4 id="SMB"><a href="#SMB" class="headerlink" title="SMB"></a>SMB</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S samba</span><br><span class="line"><span class="built_in">sudo</span> wget <span class="string">&quot;https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf.default;hb=HEAD&quot;</span> -O /etc/samba/smb.conf</span><br><span class="line"><span class="built_in">sudo</span> pdbedit -a -u <span class="built_in">arch</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><figcaption><span>/etc/samba/smb.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[global]</span></span><br><span class="line"><span class="comment">#   log file = /usr/local/samba/var/log.%m</span></span><br><span class="line">   log <span class="attr">file</span> = /usr/log/samba/%m.%m</span><br><span class="line"></span><br><span class="line"><span class="section">[homes]</span></span><br><span class="line">   valid <span class="attr">users</span> = %S</span><br><span class="line"></span><br><span class="line"><span class="section">[share]</span></span><br><span class="line"><span class="attr">path</span> = /home/arch/Public</span><br><span class="line">read <span class="attr">only</span> = <span class="literal">no</span></span><br><span class="line"><span class="attr">browsable</span> = <span class="literal">yes</span></span><br><span class="line"><span class="attr">writable</span> = <span class="literal">yes</span></span><br><span class="line">guest <span class="attr">ok</span> = <span class="literal">yes</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> smb nmb</span><br><span class="line"><span class="built_in">sudo</span> systemctl start smb nmb</span><br></pre></td></tr></table></figure>
+
+<h4 id="sshd"><a href="#sshd" class="headerlink" title="sshd"></a>sshd</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S openssh</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> sshd</span><br><span class="line"><span class="built_in">sudo</span> systemctl start sshd</span><br></pre></td></tr></table></figure>
+
+<h4 id="NFS-Service-参照用"><a href="#NFS-Service-参照用" class="headerlink" title="NFS Service(参照用)"></a>NFS Service(参照用)</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S nfs-utils</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> --now nfs-server.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><figcaption><span>/etc/exports</span></figcaption><table><tr><td class="code"><pre><span class="line">#echo &quot;/mnt/d/home 192.168.11.0/24(rw,sync,no_subtree_check)&quot;</span><br><span class="line">echo &quot;/mnt/d/home 192.168.11.0/24(rw,sync=disabled,atime=off,no_subtree_check)&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl reload nfs-server.service</span><br></pre></td></tr></table></figure>
+
+</div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3"><span class="toc-number">1.</span> <span class="toc-text">ディストリビューション</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88"><span class="toc-number">2.</span> <span class="toc-text">スクリーンショット</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Arch-Linux%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><span class="toc-number">3.</span> <span class="toc-text">Arch Linuxのインストール</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9ISO%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89"><span class="toc-number">3.1.</span> <span class="toc-text">インストーラISOファイルのダウンロード</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#USB%E3%83%A1%E3%83%A2%E3%83%AA%E3%81%AE%E4%BD%9C%E6%88%90-%E7%89%A9%E7%90%86PC%E3%81%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88"><span class="toc-number">3.2.</span> <span class="toc-text">USBメモリの作成(物理PCにインストールする場合)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><span class="toc-number">3.3.</span> <span class="toc-text">インストール</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A"><span class="toc-number">4.</span> <span class="toc-text">環境設定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E9%80%B1%E6%AC%A1%E3%81%A7%E6%9C%80%E9%81%A9%E5%8C%96"><span class="toc-number">4.1.</span> <span class="toc-text">ミラーリストを週次で最適化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Virtualbox%E3%81%AE%E3%82%B2%E3%82%B9%E3%83%88OS%E3%81%AE%E5%A0%B4%E5%90%88"><span class="toc-number">4.2.</span> <span class="toc-text">VirtualboxのゲストOSの場合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%81%AB%E6%9C%80%E5%B0%8F%E5%8C%96-%E6%9C%80%E5%A4%A7%E5%8C%96%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E8%BF%BD%E5%8A%A0"><span class="toc-number">4.3.</span> <span class="toc-text">ウィンドウに最小化&#x2F;最大化ボタンを追加</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">4.4.</span> <span class="toc-text">ホームフォルダの設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90"><span class="toc-number">4.5.</span> <span class="toc-text">テキストテンプレートファイルの作成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E5%B0%8E%E5%85%A5"><span class="toc-number">4.6.</span> <span class="toc-text">基本パッケージの導入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AE%E5%A0%B4%E5%90%88%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">4.7.</span> <span class="toc-text">日本語キーボードの場合の設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#paru-AUR-%E3%81%AE%E5%B0%8E%E5%85%A5"><span class="toc-number">4.8.</span> <span class="toc-text">paru (AUR) の導入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%9E%E3%83%AB%E3%83%81%E3%83%96%E3%83%BC%E3%83%88%E6%99%82%E3%81%AE%E6%99%82%E5%88%BB%E3%82%BA%E3%83%AC%E8%AA%BF%E6%95%B4-%E7%89%A9%E7%90%86PC%E3%81%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88"><span class="toc-number">4.9.</span> <span class="toc-text">マルチブート時の時刻ズレ調整(物理PCにインストールする場合)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fish-starship"><span class="toc-number">4.10.</span> <span class="toc-text">fish &amp; starship</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%A8%E3%82%A4%E3%83%AA%E3%82%A2%E3%82%B9%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">4.11.</span> <span class="toc-text">エイリアスの設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#man-%E6%97%A5%E6%9C%AC%E8%AA%9E"><span class="toc-number">4.12.</span> <span class="toc-text">man (日本語)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Yaru%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3"><span class="toc-number">4.13.</span> <span class="toc-text">Yaruアイコン</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GDM%E3%81%AE%E8%A7%A3%E5%83%8F%E5%BA%A6-%E5%90%91%E3%81%8D%E3%82%92%E3%83%A6%E3%83%BC%E3%82%B6%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%81%A8%E5%90%8C%E3%81%98%E3%81%AB%E3%81%99%E3%82%8B"><span class="toc-number">4.14.</span> <span class="toc-text">GDMの解像度&#x2F;向きをユーザセッションの解像度と同じにする</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Fastfetch"><span class="toc-number">4.15.</span> <span class="toc-text">Fastfetch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vi"><span class="toc-number">4.16.</span> <span class="toc-text">vi</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nodejs"><span class="toc-number">4.17.</span> <span class="toc-text">nodejs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%81%AE%E8%87%AA%E5%8B%95%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88"><span class="toc-number">4.18.</span> <span class="toc-text">ディスクの自動マウント</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GDM-%E8%87%AA%E5%8B%95%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%83%89%E3%81%AE%E7%84%A1%E5%8A%B9%E5%8C%96"><span class="toc-number">4.19.</span> <span class="toc-text">GDM 自動サスペンドの無効化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3"><span class="toc-number">5.</span> <span class="toc-text">アプリケーション</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Ghostty%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><span class="toc-number">5.1.</span> <span class="toc-text">Ghosttyのインストール</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Google-Chrome%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><span class="toc-number">5.2.</span> <span class="toc-text">Google Chromeのインストール</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Visual-Studio-Code-%E8%A8%AD%E5%AE%9A"><span class="toc-number">5.3.</span> <span class="toc-text">Visual Studio Code 設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#code-server-%E8%A8%AD%E5%AE%9A"><span class="toc-number">5.4.</span> <span class="toc-text">code-server 設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Kodi-%E8%A8%AD%E5%AE%9A"><span class="toc-number">5.5.</span> <span class="toc-text">Kodi 設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Amazon-Music%E3%81%AEPWA%E5%8C%96"><span class="toc-number">5.6.</span> <span class="toc-text">Amazon MusicのPWA化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Wayland%E9%96%A2%E9%80%A3%E3%81%AE%E6%8B%A1%E5%BC%B5%E8%A8%AD%E5%AE%9A"><span class="toc-number">6.</span> <span class="toc-text">Wayland関連の拡張設定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%95%B0%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%AE%E6%9C%89%E5%8A%B9%E5%8C%96"><span class="toc-number">6.1.</span> <span class="toc-text">分数スケーリングの有効化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Wayland-%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AEChrome-Electron%E3%81%A7%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B%E3%81%99%E3%82%8B%E8%A8%AD%E5%AE%9A"><span class="toc-number">6.2.</span> <span class="toc-text">Wayland モードのChrome&#x2F;Electronで日本語入力する設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Google-Chrome%E3%81%AEWayland%E3%83%A2%E3%83%BC%E3%83%89%E8%B5%B7%E5%8B%95%E8%A8%AD%E5%AE%9A"><span class="toc-number">6.3.</span> <span class="toc-text">Google ChromeのWaylandモード起動設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Visual-Studio-Code%E3%81%AEWayland%E3%83%A2%E3%83%BC%E3%83%89%E8%B5%B7%E5%8B%95%E8%A8%AD%E5%AE%9A"><span class="toc-number">6.4.</span> <span class="toc-text">Visual Studio CodeのWaylandモード起動設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Google-Chrome%E8%A8%AD%E5%AE%9A"><span class="toc-number">6.5.</span> <span class="toc-text">Google Chrome設定</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%81%9D%E3%81%AE%E4%BB%96"><span class="toc-number">7.</span> <span class="toc-text">その他</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#nVIdia%E3%81%AE%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%AB%E3%83%BC%E3%83%89%E3%81%AE%E5%A0%B4%E5%90%88"><span class="toc-number">7.1.</span> <span class="toc-text">nVIdiaのグラフィクスカードの場合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Lutiris"><span class="toc-number">7.2.</span> <span class="toc-text">Lutiris</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RDP-Server"><span class="toc-number">7.3.</span> <span class="toc-text">RDP Server</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SMB"><span class="toc-number">7.4.</span> <span class="toc-text">SMB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sshd"><span class="toc-number">7.5.</span> <span class="toc-text">sshd</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NFS-Service-%E5%8F%82%E7%85%A7%E7%94%A8"><span class="toc-number">7.6.</span> <span class="toc-text">NFS Service(参照用)</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/06/Faugus-Launcher/" title="Faugus Launcher">Faugus Launcher</a><time datetime="2025-12-06T06:14:20.000Z" title="Created 2025-12-06 15:14:20">2025-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/01/SDDM/" title="SDDM">SDDM</a><time datetime="2025-12-01T08:35:57.000Z" title="Created 2025-12-01 17:35:57">2025-12-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/30/Walker/" title="Walker">Walker</a><time datetime="2025-11-30T13:18:02.000Z" title="Created 2025-11-30 22:18:02">2025-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/29/CachyOS/" title="CachyOS">CachyOS</a><time datetime="2025-11-28T23:05:23.000Z" title="Created 2025-11-29 08:05:23">2025-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/17/Caelestia/" title="Caelestia">Caelestia</a><time datetime="2025-11-17T13:18:22.000Z" title="Created 2025-11-17 22:18:22">2025-11-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/3d/"><span class="card-category-list-name">3d</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/"><span class="card-category-list-name">android</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/application/"><span class="card-category-list-name">application</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cms/"><span class="card-category-list-name">cms</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/conky/"><span class="card-category-list-name">conky</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/develop/"><span class="card-category-list-name">develop</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/dtv/"><span class="card-category-list-name">dtv</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/editor/"><span class="card-category-list-name">editor</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/mermaid/" style="font-size: 1.1em; color: #999">mermaid</a> <a href="/tags/openproject-ce/" style="font-size: 1.1em; color: #999">openproject-ce</a> <a href="/tags/remixos/" style="font-size: 1.1em; color: #999">remixos</a> <a href="/tags/freemind/" style="font-size: 1.15em; color: #999b9e">freemind</a> <a href="/tags/threejs/" style="font-size: 1.15em; color: #999b9e">threejs</a> <a href="/tags/irrlicht/" style="font-size: 1.3em; color: #99a1ac">irrlicht</a> <a href="/tags/qwen3/" style="font-size: 1.1em; color: #999">qwen3</a> <a href="/tags/raytrace/" style="font-size: 1.1em; color: #999">raytrace</a> <a href="/tags/android/" style="font-size: 1.25em; color: #999fa7">android</a> <a href="/tags/android-studio/" style="font-size: 1.1em; color: #999">android-studio</a> <a href="/tags/mutter/" style="font-size: 1.1em; color: #999">mutter</a> <a href="/tags/utterances/" style="font-size: 1.1em; color: #999">utterances</a> <a href="/tags/neutralinojs/" style="font-size: 1.35em; color: #99a3b1">neutralinojs</a> <a href="/tags/mern/" style="font-size: 1.1em; color: #999">mern</a> <a href="/tags/openvpn/" style="font-size: 1.25em; color: #999fa7">openvpn</a> <a href="/tags/windows/" style="font-size: 1.45em; color: #99a7ba">windows</a> <a href="/tags/hi10go/" style="font-size: 1.1em; color: #999">hi10go</a> <a href="/tags/chinachu/" style="font-size: 1.2em; color: #999da3">chinachu</a> <a href="/tags/vue/" style="font-size: 1.1em; color: #999">vue</a> <a href="/tags/minecraft/" style="font-size: 1.25em; color: #999fa7">minecraft</a> <a href="/tags/ags/" style="font-size: 1.1em; color: #999">ags</a> <a href="/tags/handbrake/" style="font-size: 1.1em; color: #999">handbrake</a> <a href="/tags/hyprland/" style="font-size: 1.2em; color: #999da3">hyprland</a> <a href="/tags/qwmu/" style="font-size: 1.1em; color: #999">qwmu</a> <a href="/tags/lutris/" style="font-size: 1.15em; color: #999b9e">lutris</a> <a href="/tags/manjaro/" style="font-size: 1.1em; color: #999">manjaro</a> <a href="/tags/calamares/" style="font-size: 1.1em; color: #999">calamares</a> <a href="/tags/gtk-3/" style="font-size: 1.2em; color: #999da3">gtk+3</a> <a href="/tags/wine/" style="font-size: 1.1em; color: #999">wine</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/virt-manager/" style="font-size: 1.15em; color: #999b9e">virt-manager</a> <a href="/tags/unity3d/" style="font-size: 1.4em; color: #99a5b6">unity3d</a> <a href="/tags/utc/" style="font-size: 1.1em; color: #999">utc</a> <a href="/tags/feedbro/" style="font-size: 1.1em; color: #999">feedbro</a> <a href="/tags/alg/" style="font-size: 1.1em; color: #999">alg</a> <a href="/tags/vscode-reveal/" style="font-size: 1.1em; color: #999">vscode-reveal</a> <a href="/tags/wsl/" style="font-size: 1.5em; color: #99a9bf">wsl</a> <a href="/tags/windows-terminal/" style="font-size: 1.15em; color: #999b9e">windows-terminal</a> <a href="/tags/lain/" style="font-size: 1.1em; color: #999">lain</a> <a href="/tags/fedora/" style="font-size: 1.25em; color: #999fa7">fedora</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              December 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              November 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              October 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/07/">
+            <span class="card-archive-list-date">
+              July 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              June 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              May 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              April 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              March 2025
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2025 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
