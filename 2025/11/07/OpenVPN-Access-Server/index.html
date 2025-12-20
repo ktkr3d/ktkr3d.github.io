@@ -7,7 +7,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://openvpn.net/_assets/logo_dark_98a890727a.svg">
 <meta property="article:published_time" content="2025-11-07T06:03:02.000Z">
-<meta property="article:modified_time" content="2025-12-20T00:07:50.754Z">
+<meta property="article:modified_time" content="2025-12-20T06:14:27.147Z">
 <meta property="article:author" content="ktkr3d">
 <meta property="article:tag" content="openvpn">
 <meta name="twitter:card" content="summary">
@@ -18,7 +18,7 @@
   "url": "https://ktkr3d.github.io/2025/11/07/OpenVPN-Access-Server/",
   "image": "https://openvpn.net/_assets/logo_dark_98a890727a.svg",
   "datePublished": "2025-11-07T06:03:02.000Z",
-  "dateModified": "2025-12-20T00:07:50.754Z",
+  "dateModified": "2025-12-20T06:14:27.147Z",
   "author": [
     {
       "@type": "Person",
@@ -167,7 +167,7 @@ btf.addGlobalFn('pjaxComplete', () => {
   isToc: true,
   pageType: 'post'
 }</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
-</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">OpenVPN Access Server</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">OpenVPN Access Server</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-11-07T06:03:02.000Z" title="Created 2025-11-07 15:03:02">2025-11-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-12-20T00:07:50.754Z" title="Updated 2025-12-20 09:07:50">2025-12-20</time></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p>OpenVPN Access ServerをRaspberry Pi 4Bに構築してみました。<br>今回はPortainerのGUI画面を使ってOpenVPN Access ServerのDockerコンテナを生成しました。<br>2コネクションまでは無償利用可能なようです。</p>
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">487</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">OpenVPN Access Server</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">OpenVPN Access Server</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-11-07T06:03:02.000Z" title="Created 2025-11-07 15:03:02">2025-11-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-12-20T06:14:27.147Z" title="Updated 2025-12-20 15:14:27">2025-12-20</time></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p>OpenVPN Access ServerをRaspberry Pi 4Bに構築してみました。<br>今回はPortainerのGUI画面を使ってOpenVPN Access ServerのDockerコンテナを生成しました。<br>2コネクションまでは無償利用可能なようです。</p>
 <a href="https://openvpn.net/access-server/" target="_blank" rel="external nofollow noopener noreferrer" class="link-preview">
     <div class="og-image">
         <img src="https://openvpn.net/_assets/logo_dark_98a890727a.svg" alt="Self-Hosted VPN: Access Server | OpenVPN" class="not-gallery-item" loading="lazy"></div>
@@ -230,6 +230,8 @@ btf.addGlobalFn('pjaxComplete', () => {
 <h4 id="PortainerでDockerコンテナを作成"><a href="#PortainerでDockerコンテナを作成" class="headerlink" title="PortainerでDockerコンテナを作成"></a>PortainerでDockerコンテナを作成</h4><ol>
 <li><p>Portainerにログイン<br> <a target="_blank" rel="noopener" href="https://192.168.11.24:9443/">https://192.168.11.24:9443</a></p>
 </li>
+<li><p>VolumeメニューでOpenVPN AS用のボリュームを作成<br> Name: openvpn-as_data</p>
+</li>
 <li><p>Containersメニューで<kbd>Add Container</kbd></p>
 </li>
 <li><p>以下のパラメタを指定して<kbd>Deploy the container</kbd></p>
@@ -263,6 +265,11 @@ btf.addGlobalFn('pjaxComplete', () => {
 </tr>
 <tr>
 <td align="left">Advanced container settings</td>
+<td align="left">Volumes</td>
+<td align="left">&#x2F;openvpn, openvpn-as_data</td>
+</tr>
+<tr>
+<td align="left">&nbsp;</td>
 <td align="left">Restart Policy</td>
 <td align="left">Unless stopped</td>
 </tr>
@@ -303,7 +310,7 @@ btf.addGlobalFn('pjaxComplete', () => {
 </li>
 </ol>
 <h4 id="OpenVPN-Access-Serverの設定"><a href="#OpenVPN-Access-Serverの設定" class="headerlink" title="OpenVPN Access Serverの設定"></a>OpenVPN Access Serverの設定</h4><ol>
-<li><p>OpenVPN Access Serverにユーザ名<code>openvpn</code>でログイン<br> <a target="_blank" rel="noopener" href="https://192.168.11.2:943/admin">https://192.168.11.2:943/admin</a></p>
+<li><p>OpenVPN Access Serverにユーザ名<code>openvpn</code>でログイン<br> <a target="_blank" rel="noopener" href="https://192.168.11.24:943/admin">https://192.168.11.24:943/admin</a></p>
  <div class="note info flat"><p>ログから「Auto-generated pass &#x3D;」で検索したパスワードを指定します。</p>
 </div>
 </li>
@@ -337,7 +344,7 @@ btf.addGlobalFn('pjaxComplete', () => {
 </li>
 <li><p>ユーザのプロファイルを作成<br> Certificate Management &gt; VPN Client Certificates &gt;     New Connection Profile &gt; Username &gt; <code>User01</code><br> <kbd>Download</kbd></p>
 </li>
-<li><p>ファイル名変更<br> <code>profile-userlocked.ovpn</code> → <code>profile-User01.opvn</code></p>
+<li><p>ファイル名変更<br> <code>profile-userlocked.ovpn</code> → <code>profile-User01.ovpn</code></p>
 </li>
 <li><p>LANへの接続を許可<br> Access Controls &gt; Global Access Rules &gt; NAT &gt;         Subnet で<kbd>+ Add new subnet</kbd><br> <code>192.168.11.0/24</code>を追加</p>
 </li>
@@ -398,7 +405,7 @@ btf.addGlobalFn('pjaxComplete', () => {
  <div class="note info flat"><p>デフォルト設定では全てのコンテナを対象とした初回のチェックが24時間後にスケジュールされました。</p>
 </div>
 
- <div class="note info flat"><p>VPNは狙われやすいので最新バージョンを保つようにしよう。</p>
+ <div class="note warning flat"><p>コンテナがアップデートされたタイミングでadminのパスワードが再生成され、追加したユーザが消えていた。</p>
 </div></li>
 </ol>
 <h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><h4 id="Arch-Linuxクライアントからの接続"><a href="#Arch-Linuxクライアントからの接続" class="headerlink" title="Arch Linuxクライアントからの接続"></a>Arch Linuxクライアントからの接続</h4><p>Arch LinuxにOpenVPN接続プロファイルをインポートしてインターネット経由で接続し、LAN内のOpenVPNの管理者画面を表示</p>
