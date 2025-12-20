@@ -15,8 +15,27 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 20 Dec 2025 09:23:14 GMT</pubDate>
+    <pubDate>Sat, 20 Dec 2025 19:56:41 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Systemd user timer</title>
+      <link>https://ktkr3d.github.io/2025/12/21/Systemd-user-timer/</link>
+      <guid>https://ktkr3d.github.io/2025/12/21/Systemd-user-timer/</guid>
+      <pubDate>Sat, 20 Dec 2025 18:59:19 GMT</pubDate>
+      
+      <description>&lt;p&gt;Systemd Timer を使ってBing壁紙を定期的にダウンロードしてみます。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/systemd/">systemd</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/12/21/Systemd-user-timer/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Faugus Launcher</title>
@@ -681,29 +700,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/04/06/WireGuard-Easy-wg-easy/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Wireguard-ui</title>
-      <link>https://ktkr3d.github.io/2025/04/03/wireguard-ui/</link>
-      <guid>https://ktkr3d.github.io/2025/04/03/wireguard-ui/</guid>
-      <pubDate>Thu, 03 Apr 2025 00:31:08 GMT</pubDate>
-      
-      <description>&lt;p&gt;Wireguard-uiを使ってRaspberry Pi 4BにVPNサーバ環境を構築しました。&lt;br&gt;Wireguard-uiはGUI操作でWireguardのサーバ用設定ファイル(wg0.conf)やクライアント用の設定ファイル&amp;#x2F;QRコードを生成できます。&lt;br&gt;また、Wake on LANの機能もあります。&lt;br&gt;MTUとPost Up&amp;#x2F;Downスクリプトの指定方法について試行錯誤しました。&lt;/p&gt;
-&lt;div class=&quot;github-card&quot; data-github=&quot;ngoduykhanh/wireguard-ui&quot; data-width=&quot;100%&quot;&gt;&lt;/div&gt;
-&lt;script src=&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;&gt;&lt;/script&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/vpn/">vpn</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/wireguard/">wireguard</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/04/03/wireguard-ui/#disqus_thread</comments>
       
     </item>
     
