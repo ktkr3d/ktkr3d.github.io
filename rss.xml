@@ -15,8 +15,36 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 21 Dec 2025 00:41:49 GMT</pubDate>
+    <pubDate>Sun, 21 Dec 2025 14:14:20 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Prism Launcher</title>
+      <link>https://ktkr3d.github.io/2025/12/21/Prism-Launcher/</link>
+      <guid>https://ktkr3d.github.io/2025/12/21/Prism-Launcher/</guid>
+      <pubDate>Sun, 21 Dec 2025 12:31:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/cachyos_minecraft.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Prism Launcherを使ってMinecraftをセットアップしました。過去にWindowsで遊んでいたワールドデータをCachyOS上で取り込めました。&lt;/p&gt;
+&lt;a href=&quot;https://prismlauncher.org/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
+    &lt;div class=&quot;og-image&quot;&gt;
+        &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/7/74/Prism_Launcher_logo.svg&quot; alt=&quot;Prism Launcher&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;descriptions&quot;&gt;
+            &lt;div class=&quot;og-title&quot;&gt;Prism Launcher&lt;/div&gt;
+            &lt;div class=&quot;og-description&quot;&gt;An open source Minecraft launcher with the ability to manage multiple instances, accounts and mods. Focused on user freedom and free redistributability.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/minecraft/">minecraft</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/prism-launcher/">prism-launcher</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/12/21/Prism-Launcher/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Systemd user timer</title>
@@ -508,7 +536,7 @@
                     &lt;div class=&quot;gr-footer&quot;&gt;
                         &lt;div class=&quot;gr-language-star&quot;&gt;
                             &lt;span class=&quot;gr-language&quot;&gt;C++&lt;/span&gt;
-                            &lt;i class=&quot;far fa-star&quot; aria-hidden=&quot;true&quot; id=&#39;gr-star-icon&#39;&gt; 140&lt;/i&gt;
+                            &lt;i class=&quot;far fa-star&quot; aria-hidden=&quot;true&quot; id=&#39;gr-star-icon&#39;&gt; 142&lt;/i&gt;
                         &lt;/div&gt;
                         &lt;div class=&quot;gr-card-toolbar&quot;&gt;
                             &lt;div class=&quot;gr-repo-link&quot;&gt;
@@ -675,31 +703,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/05/04/Windows-11-NAS/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>WireGuard Easy (wg-easy)</title>
-      <link>https://ktkr3d.github.io/2025/04/06/WireGuard-Easy-wg-easy/</link>
-      <guid>https://ktkr3d.github.io/2025/04/06/WireGuard-Easy-wg-easy/</guid>
-      <pubDate>Sat, 05 Apr 2025 20:38:15 GMT</pubDate>
-      
-      <description>&lt;p&gt;WireGuard Easy(wg-easy)でVPN環境を構築してみました。&lt;br&gt;Dockerであることと設定に必要な項目が少ないことから構築で迷うことはありません。&lt;br&gt;細かな制御をしたい場合は設定ファイルを直接編集するようなことが必要かもしれません。&lt;/p&gt;
-&lt;div class=&quot;github-card&quot; data-github=&quot;wg-easy/wg-easy&quot; data-width=&quot;100%&quot;&gt;&lt;/div&gt;
-&lt;script src=&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;&gt;&lt;/script&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/docker/">docker</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/vpn/">vpn</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/wireguard/">wireguard</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/04/06/WireGuard-Easy-wg-easy/#disqus_thread</comments>
       
     </item>
     
