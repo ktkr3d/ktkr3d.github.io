@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/</loc>
+    
+    <lastmod>2025-12-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/2025/12/21/Systemd-user-timer/</loc>
     
     <lastmod>2025-12-22</lastmod>
@@ -131,15 +140,6 @@
     <loc>https://ktkr3d.github.io/World-of-Warcraft/index.html</loc>
     
     <lastmod>2025-11-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/</loc>
-    
-    <lastmod>2025-11-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
