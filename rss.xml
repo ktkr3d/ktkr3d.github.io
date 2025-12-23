@@ -52,7 +52,7 @@
       <guid>https://ktkr3d.github.io/2025/12/21/Systemd-user-timer/</guid>
       <pubDate>Sat, 20 Dec 2025 18:59:19 GMT</pubDate>
       
-      <description>&lt;p&gt;Systemd user timerを使ってBing壁紙を定期的にダウンロードして壁紙を変更してみます。&lt;/p&gt;
+      <description>&lt;p&gt;Systemd user timerを使ってBing壁紙を定期的にダウンロードして壁紙を変更してみます。&lt;br&gt;Hyprland&amp;#x2F;CaelestiaのSchemeをdynamicに設定することで、壁紙画像の色合いに連動してGUIのテーマ色が自動で調整されます。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Systemd/Timers&quot;&gt;https://wiki.archlinux.org/title/Systemd/Timers&lt;/a&gt;&lt;/p&gt;</description>
       
       
