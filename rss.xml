@@ -15,8 +15,33 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Mon, 22 Dec 2025 01:22:15 GMT</pubDate>
+    <pubDate>Mon, 29 Dec 2025 14:00:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>oUF MyLayout Addon</title>
+      <link>https://ktkr3d.github.io/2025/12/29/oUF-MyLayout-Addon/</link>
+      <guid>https://ktkr3d.github.io/2025/12/29/oUF-MyLayout-Addon/</guid>
+      <pubDate>Mon, 29 Dec 2025 12:51:56 GMT</pubDate>
+      
+      <description>&lt;p&gt;AIを使ってoUFフレームワークを利用したWorld of Warcraftのユニットフレームアドオンを作ってみました。&lt;br&gt;Visual Studio Code にGemini Code Assist拡張を組み込みました。実装を確かめながら機能を追加できます。Geminiは混雑時にレスポンスが悪いものの、無料であるにも関わらずコンパクトで間違いの無いコードを生成するような気がします。ある程度進んだら設定値とコードの分離、処理の最適化を図りたいと思います。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist&quot;&gt;https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/oUF-wow/oUF&quot;&gt;https://github.com/oUF-wow/oUF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/wow_ouf_mylayout.jpg&quot;&gt;&lt;br&gt;中央左からPlayer、Pet、Targetのユニットフレームです。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/ouf/">ouf</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/gemini/">gemini</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2025/12/29/oUF-MyLayout-Addon/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Prism Launcher</title>
@@ -682,28 +707,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/05/19/Reflector/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Windows 11 NAS</title>
-      <link>https://ktkr3d.github.io/2025/05/04/Windows-11-NAS/</link>
-      <guid>https://ktkr3d.github.io/2025/05/04/Windows-11-NAS/</guid>
-      <pubDate>Sun, 04 May 2025 05:15:49 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;https://www.logitec.co.jp/products/hd/lhrbnu3/images/img_05.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;古いWindows 10 ProマシンをWindows 11 ProにアップグレードしてNASとして利用します。Windows 10のHDDはMBRフォーマットでしたのでGPTフォーマットのSSDに移行しました。&lt;br&gt;しばらく利用しない時はリモートからスリープさせます。利用する際にはリモートからWake on LANで起動します。&lt;br&gt;私の持っている外付けディスクケースは電源連動のさせ方が少し複雑でしたが設定することにより安定して動作するようになりました。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/windows/">windows</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/nas/">nas</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/05/04/Windows-11-NAS/#disqus_thread</comments>
       
     </item>
     
