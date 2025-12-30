@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Tue, 30 Dec 2025 19:26:32 GMT</pubDate>
+    <pubDate>Tue, 30 Dec 2025 20:36:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,12 +26,13 @@
       
       <description>&lt;p&gt;AIを使ってoUFフレームワークを利用したWorld of Warcraftのユニットフレームアドオンを作ってみました。&lt;br&gt;Visual Studio Code にGemini Code Assist拡張を組み込みました。実装を確かめながら機能を追加できます。Geminiは混雑時にレスポンスが悪くなる傾向がありますが、無料であるにも関わらずコンパクトで間違いの無いコードを生成するような気がします。追加機能を提案してくれるので了承するだけで機能が追加されていきます。&lt;br&gt;ある程度進んだら設定値とコードの分離、処理の最適化を図りたいと思います。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;oUF_MyLayout&lt;br&gt;  &lt;a href=&quot;https://github.com/ktkr3d/oUF_MyLayout&quot;&gt;https://github.com/ktkr3d/oUF_MyLayout&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;oUF&lt;br&gt;  &lt;a href=&quot;https://github.com/oUF-wow/oUF&quot;&gt;https://github.com/oUF-wow/oUF&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Gemini Code Assist&lt;br&gt;  &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist&quot;&gt;https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Gemini Code Assistant  &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;link-preview&quot;&gt;&lt;div class=&quot;og-image&quot;&gt;&lt;img src=&quot;https://google.gallerycdn.vsassets.io/extensions/google/geminicodeassist/2.64.0/1765999594207/Microsoft.VisualStudio.Services.Icons.Default&quot; alt=&quot;Gemini Code Assist - Visual Studio Marketplace&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;&lt;div class=&quot;descriptions&quot;&gt;&lt;div class=&quot;og-title&quot;&gt;Gemini Code Assist - Visual Studio Marketplace&lt;/div&gt;&lt;div class=&quot;og-description&quot;&gt;Extension for Visual Studio Code - AI-assisted development powered by Gemini&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;oUF  &lt;div class=&quot;github-card&quot; data-github=&quot;oUF-wow/oUF&quot; data-width=&quot;100%&quot;&gt;
+  &lt;/div&gt;&lt;script src=&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;li&gt;oUF_MyLayout  &lt;div class=&quot;github-card&quot; data-github=&quot;ktkr3d/oUF_MyLayout&quot; data-width=&quot;100%&quot;&gt;&lt;/div&gt;
+  &lt;script src=&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;スクリーンショット&quot;&gt;&lt;a href=&quot;#スクリーンショット&quot; class=&quot;headerlink&quot; title=&quot;スクリーンショット&quot;&gt;&lt;/a&gt;スクリーンショット&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Player、Pet、Target ユニットフレーム&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout.jpg&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Party ユニットフレーム&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_party.jpg&quot;&gt;&lt;/p&gt;
