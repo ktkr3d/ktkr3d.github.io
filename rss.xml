@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Wed, 31 Dec 2025 20:29:32 GMT</pubDate>
+    <pubDate>Thu, 01 Jan 2026 21:31:34 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -42,9 +42,9 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Party ユニットフレーム&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_party.jpg&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Geminiが自ら提案して実装した設定画面&lt;br&gt;  スラッシュコマンド(&lt;code&gt;/mylayout config&lt;/code&gt;)で開きます。&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_config.png&quot;&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;設定画面 (Target Frame)&lt;br&gt;  スラッシュコマンド(&lt;code&gt;/mylayout config&lt;/code&gt;)で開きます。&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_config.png&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Geminiが自ら提案して実装した設定画面 (Profile)&lt;br&gt;  いろいろなアドオンで見かけるインタフェースです。&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_config_profile.png&quot;&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;設定画面 (Profile)&lt;br&gt;  いろいろなアドオンで見かけるインタフェースです。&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_config_profile.png&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>
       
