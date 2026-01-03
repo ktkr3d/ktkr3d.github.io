@@ -13,7 +13,16 @@
   <url>
     <loc>https://ktkr3d.github.io/World-of-Warcraft/index.html</loc>
     
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/World-of-Warcraft/index_2025.html</loc>
+    
+    <lastmod>2026-01-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
