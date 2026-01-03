@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Fri, 02 Jan 2026 23:25:07 GMT</pubDate>
+    <pubDate>Sat, 03 Jan 2026 00:25:55 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -39,6 +39,8 @@
 &lt;/ul&gt;
 &lt;h3 id=&quot;スクリーンショット&quot;&gt;&lt;a href=&quot;#スクリーンショット&quot; class=&quot;headerlink&quot; title=&quot;スクリーンショット&quot;&gt;&lt;/a&gt;スクリーンショット&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Player、Pet、Target ユニットフレーム&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout.jpg&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;左からFocus, Player, Pet, Target, Target-target、右下はRaid&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_unitframes.png&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Party ユニットフレーム&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_party.jpg&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
