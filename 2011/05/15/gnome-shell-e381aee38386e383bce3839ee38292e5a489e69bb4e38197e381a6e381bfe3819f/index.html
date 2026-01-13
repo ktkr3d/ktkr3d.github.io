@@ -115,7 +115,14 @@
     detectApple()
   
     })()
-  </script><script>const GLOBAL_CONFIG = {
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
@@ -179,7 +186,7 @@
 <ol start="3">
 <li><p>$HOME&#x2F;.themes&#x2F; ディレクトリを作成して、アーカイブの中のテーマを展開する。</p>
 </li>
-<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#x74;&#104;&#101;&#x6d;&#101;&#115;&#101;&#x6c;&#101;&#99;&#116;&#x6f;&#114;&#64;&#x66;&#112;&#109;&#117;&#x72;&#x70;&#104;&#x79;&#x2e;&#99;&#x6f;&#109;">themeselector@fpmurphy.com</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
+<li><p>$HOME&#x2F;.local&#x2F;share&#x2F;gnome-shell&#x2F;extensions&#x2F;<a href="mailto:&#116;&#x68;&#101;&#109;&#101;&#115;&#101;&#108;&#x65;&#99;&#x74;&#111;&#114;&#64;&#x66;&#x70;&#x6d;&#x75;&#x72;&#x70;&#104;&#x79;&#x2e;&#x63;&#x6f;&#109;">themeselector@fpmurphy.com</a>&#x2F; ディレクトリを作成して、アーカイブの中のextension.js とmetadata.json を展開する。</p>
 </li>
 <li><p>[Alt]+[F2]を押して、r を入力して、[Enter] を押す。</p>
 </li>
