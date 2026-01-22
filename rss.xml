@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Mon, 19 Jan 2026 06:58:59 GMT</pubDate>
+    <pubDate>Thu, 22 Jan 2026 22:06:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -36,6 +36,9 @@
 &lt;li&gt;&lt;p&gt;oUF_MyLayout&lt;/p&gt;
   &lt;div class=&quot;github-card&quot; data-github=&quot;ktkr3d/oUF_MyLayout&quot; data-width=&quot;100%&quot;&gt;&lt;/div&gt;
   &lt;script src=&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2026-01-23&quot;&gt;&lt;a href=&quot;#2026-01-23&quot; class=&quot;headerlink&quot; title=&quot;2026-01-23&quot;&gt;&lt;/a&gt;2026-01-23&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;WoW APIの仕様変更に対応中&lt;br&gt;  暫定的に一部の機能をドロップ&lt;br&gt;  &lt;a href=&quot;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#AddOn_security_changes&quot;&gt;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#AddOn_security_changes&lt;/a&gt;&lt;br&gt;  &lt;a href=&quot;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#Secret_values&quot;&gt;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#Secret_values&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;2026-01-18&quot;&gt;&lt;a href=&quot;#2026-01-18&quot; class=&quot;headerlink&quot; title=&quot;2026-01-18&quot;&gt;&lt;/a&gt;2026-01-18&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;oUF 13.0.0 リリース&lt;br&gt;  エラーが発生するのでoUF 12.1.0を埋め込み型にしました。&lt;/li&gt;
