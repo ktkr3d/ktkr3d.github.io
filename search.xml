@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Headless Hyprland</title>
+      <link href="/2026/01/21/Headless-Hyprland/"/>
+      <url>/2026/01/21/Headless-Hyprland/</url>
+      
+        <content type="html"><![CDATA[<p>ヘッドレスのHyprlandデスクトップに接続してみます。<br>GDMとGNOME ShellはRDPで接続し、HyprlandはVNCで接続する構成としました。</p><p><img src="/images/headless_hyprland.png"></p><span id="more"></span><h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><h4 id="サーバ"><a href="#サーバ" class="headerlink" title="サーバ"></a>サーバ</h4><ul><li>Arch Linux<ul><li>GDM &#x2F; GNOME Shell<ul><li>RDPサーバ: GRD(GNOME Remote Desktop)</li></ul></li><li>Hyprland<ul><li>VNCサーバ: WayVNC</li></ul></li></ul></li></ul><h4 id="クライアント"><a href="#クライアント" class="headerlink" title="クライアント"></a>クライアント</h4><ul><li>Windows 11<ul><li>RDPクライアント: リモートデスクトップ接続(mstsc.exe)</li><li>VNCクライアント: RealVNC Viewer</li></ul></li><li>CachyOS<ul><li>RDP&#x2F;VNCクライアント: Remmina</li></ul></li></ul><h3 id="構築-サーバ"><a href="#構築-サーバ" class="headerlink" title="構築: サーバ"></a>構築: サーバ</h3><h4 id="RDPサーバ"><a href="#RDPサーバ" class="headerlink" title="RDPサーバ"></a>RDPサーバ</h4><ol><li>GRDの設定<br> <a href="https://ktkr3d.github.io/2025/03/30/GNOME-Remote-Desktop/">https://ktkr3d.github.io/2025/03/30/GNOME-Remote-Desktop/</a></li></ol><h4 id="VNCサーバ"><a href="#VNCサーバ" class="headerlink" title="VNCサーバ"></a>VNCサーバ</h4><ol><li>インストール <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S wayvnc</span><br></pre></td></tr></table></figure></li><li>wayvncの起動設定 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">exec-once = bash -lc &#x27;hyprctl output create headless VNC-1; \</span><br><span class="line">    sleep 0.2; \</span><br><span class="line">    hyprctl keyword monitor &quot;VNC-1,1920x1080@60,auto,1&quot;; \</span><br><span class="line">    wayvnc -o VNC-1 0.0.0.0 5900&#x27;</span><br></pre></td></tr></table></figure></li></ol><h3 id="構築-Windowsクライアント"><a href="#構築-Windowsクライアント" class="headerlink" title="構築: Windowsクライアント"></a>構築: Windowsクライアント</h3><h4 id="RealVNC-Viewer"><a href="#RealVNC-Viewer" class="headerlink" title="RealVNC Viewer"></a>RealVNC Viewer</h4><ol><li>インストール <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">winget install -e --id RealVNC.VNCViewer</span><br></pre></td></tr></table></figure></li><li>ショートカット作成 <figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line">C:<span class="string">\Program</span> Files<span class="string">\RealVNC\VNC</span> Viewer<span class="string">\vncviewer.exe</span></span><br></pre></td></tr></table></figure> 上記ファイルのショートカットを作成して引数に接続先の&lt;サーバ名またはIPアドレス&gt;を設定します。</li></ol><h3 id="構築-ChacyOSクライアント"><a href="#構築-ChacyOSクライアント" class="headerlink" title="構築: ChacyOSクライアント"></a>構築: ChacyOSクライアント</h3><h4 id="Remmina"><a href="#Remmina" class="headerlink" title="Remmina"></a>Remmina</h4><ol><li>インストール <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S remmina</span><br></pre></td></tr></table></figure></li><li>接続コマンド <figure class="highlight basic"><table><tr><td class="code"><pre><span class="line"><span class="comment">remmina -c rdp://&lt;ユーザ名&gt;@&lt;サーバ名またはIPアドレス&gt;</span></span><br></pre></td></tr></table></figure> <figure class="highlight basic"><table><tr><td class="code"><pre><span class="line"><span class="comment">remmina -c vnc://&lt;サーバ名またはIPアドレス&gt;</span></span><br></pre></td></tr></table></figure> <div class="note info flat"><p>VNCで接続した場合、<kbd>Super</kbd>キー等のイベントをサーバに転送するかを<kbd>右Ctrl</kbd>キーで切り替えられる。</p></div></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hyprland </tag>
+            
+            <tag> rdp </tag>
+            
+            <tag> vnc </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>oUF MyLayout Addon</title>
       <link href="/2025/12/29/oUF-MyLayout-Addon/"/>
       <url>/2025/12/29/oUF-MyLayout-Addon/</url>

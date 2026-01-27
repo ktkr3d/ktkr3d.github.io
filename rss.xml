@@ -15,8 +15,32 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Thu, 22 Jan 2026 22:06:43 GMT</pubDate>
+    <pubDate>Tue, 27 Jan 2026 11:55:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Headless Hyprland</title>
+      <link>https://ktkr3d.github.io/2026/01/21/Headless-Hyprland/</link>
+      <guid>https://ktkr3d.github.io/2026/01/21/Headless-Hyprland/</guid>
+      <pubDate>Wed, 21 Jan 2026 01:16:59 GMT</pubDate>
+      
+      <description>&lt;p&gt;ヘッドレスのHyprlandデスクトップに接続してみます。&lt;br&gt;GDMとGNOME ShellはRDPで接続し、HyprlandはVNCで接続する構成としました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/headless_hyprland.png&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/rdp/">rdp</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/vnc/">vnc</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/01/21/Headless-Hyprland/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>oUF MyLayout Addon</title>
@@ -712,29 +736,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/05/21/AnduinOS/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Reflector</title>
-      <link>https://ktkr3d.github.io/2025/05/19/Reflector/</link>
-      <guid>https://ktkr3d.github.io/2025/05/19/Reflector/</guid>
-      <pubDate>Mon, 19 May 2025 09:05:23 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/reflector.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Reflectorを利用してArch Linuxのミラーリストを週次で自動更新するように設定します。タイマー&lt;code&gt;reflector.timer&lt;/code&gt;が週次で&lt;code&gt;reflector.service&lt;/code&gt;をキックします。即時実行したい場合は&lt;code&gt;reflector.service&lt;/code&gt;を開始(start)します。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://man.archlinux.org/man/reflector.1&quot;&gt;https://man.archlinux.org/man/reflector.1&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://wiki.archlinux.jp/index.php/Reflector&quot;&gt;https://wiki.archlinux.jp/index.php/Reflector&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/reflector/">reflector</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/05/19/Reflector/#disqus_thread</comments>
       
     </item>
     
