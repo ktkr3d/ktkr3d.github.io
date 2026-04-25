@@ -15,8 +15,25 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 07 Feb 2026 06:21:54 GMT</pubDate>
+    <pubDate>Sat, 25 Apr 2026 22:19:08 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Wowup App Japanese localization</title>
+      <link>https://ktkr3d.github.io/2026/04/26/Wowup-App-Japanese-localization/</link>
+      <guid>https://ktkr3d.github.io/2026/04/26/Wowup-App-Japanese-localization/</guid>
+      <pubDate>Sat, 25 Apr 2026 21:40:11 GMT</pubDate>
+      
+      <description>&lt;p&gt;World of Warcraft のアドオン管理アプリWowUpを日本語化してみました。&lt;br&gt;&lt;img src=&quot;/images/wowup_ja.png&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      
+      <comments>https://ktkr3d.github.io/2026/04/26/Wowup-App-Japanese-localization/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Headless Hyprland</title>
@@ -51,7 +68,7 @@
       <description>&lt;p&gt;AIを使ってoUFフレームワークを利用したWorld of Warcraftのユニットフレームアドオンを作ってみました。&lt;br&gt;Visual Studio Code にGemini Code Assist拡張を組み込みました。実装を確かめながら機能を追加できます。Geminiは混雑時にレスポンスが悪くなる場合がありますが、無料であるにも関わらずコンパクトで間違いの無いコードを生成するような気がします。追加機能を提案してくれるので了承するだけで機能が追加されていきます。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Gemini Code Assistant&lt;/p&gt;
-  &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; class=&quot;link-preview&quot;&gt;&lt;div class=&quot;og-image&quot;&gt;&lt;img src=&quot;https://google.gallerycdn.vsassets.io/extensions/google/geminicodeassist/2.68.0/1769125138416/Microsoft.VisualStudio.Services.Icons.Default&quot; alt=&quot;Gemini Code Assist - Visual Studio Marketplace&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;&lt;div class=&quot;descriptions&quot;&gt;&lt;div class=&quot;og-title&quot;&gt;Gemini Code Assist - Visual Studio Marketplace&lt;/div&gt;&lt;div class=&quot;og-description&quot;&gt;Extension for Visual Studio Code - AI-assisted development powered by Gemini&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
+  
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;oUF&lt;/p&gt;
   &lt;div class=&quot;github-card&quot; data-github=&quot;oUF-wow/oUF&quot; data-width=&quot;100%&quot;&gt;
@@ -60,6 +77,9 @@
 &lt;li&gt;&lt;p&gt;oUF_MyLayout&lt;/p&gt;
   &lt;div class=&quot;github-card&quot; data-github=&quot;ktkr3d/oUF_MyLayout&quot; data-width=&quot;100%&quot;&gt;&lt;/div&gt;
   &lt;script src=&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2026-04-26&quot;&gt;&lt;a href=&quot;#2026-04-26&quot; class=&quot;headerlink&quot; title=&quot;2026-04-26&quot;&gt;&lt;/a&gt;2026-04-26&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;WowUpアプリからインストールできます。&lt;br&gt;  &lt;a href=&quot;https://wowup.io/guide/get-addons/overview&quot;&gt;https://wowup.io/guide/get-addons/overview&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;2026-01-23&quot;&gt;&lt;a href=&quot;#2026-01-23&quot; class=&quot;headerlink&quot; title=&quot;2026-01-23&quot;&gt;&lt;/a&gt;2026-01-23&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;WoW APIの仕様変更に対応中&lt;br&gt;  暫定的に一部の機能をドロップ&lt;br&gt;  &lt;a href=&quot;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#AddOn_security_changes&quot;&gt;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#AddOn_security_changes&lt;/a&gt;&lt;br&gt;  &lt;a href=&quot;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#Secret_values&quot;&gt;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#Secret_values&lt;/a&gt;&lt;/li&gt;
@@ -709,33 +729,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/05/26/archiso/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>AnduinOS</title>
-      <link>https://ktkr3d.github.io/2025/05/21/AnduinOS/</link>
-      <guid>https://ktkr3d.github.io/2025/05/21/AnduinOS/</guid>
-      <pubDate>Wed, 21 May 2025 13:33:48 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/anduinos.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;AnduinOSを試してみました。インタフェースに癖がないのですぐに使えそうですね。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.anduinos.com/&quot;&gt;https://www.anduinos.com/&lt;/a&gt;&lt;/p&gt;
-&lt;a href=&quot;https://www.anduinos.com/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
-    &lt;div class=&quot;og-image&quot;&gt;
-        &lt;img src=&quot;https://docs.anduinos.com/Assets/logo.svg&quot; alt=&quot;AnduinOS&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;descriptions&quot;&gt;
-            &lt;div class=&quot;og-title&quot;&gt;AnduinOS&lt;/div&gt;
-            &lt;div class=&quot;og-description&quot;&gt;AnduinOS is a custom Ubuntu-based Linux distribution that aims to facilitate developers transitioning from Windows to Linux by maintaining familiar operational habits and workflows.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/anduinos/">anduinos</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/05/21/AnduinOS/#disqus_thread</comments>
       
     </item>
     
