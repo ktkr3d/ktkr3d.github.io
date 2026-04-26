@@ -15,8 +15,28 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 25 Apr 2026 22:37:12 GMT</pubDate>
+    <pubDate>Sun, 26 Apr 2026 00:24:39 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Morse code practice machine</title>
+      <link>https://ktkr3d.github.io/2026/04/26/Morse-code-practice-machine/</link>
+      <guid>https://ktkr3d.github.io/2026/04/26/Morse-code-practice-machine/</guid>
+      <pubDate>Sat, 25 Apr 2026 23:55:37 GMT</pubDate>
+      
+      <description>&lt;p&gt;モールス信号の練習アプリを作ってみました。&lt;br&gt;トン(&lt;kbd&gt;Space&lt;/kbd&gt;短押し)で左に、ツー(&lt;kbd&gt;Space&lt;/kbd&gt;長押し)で右に枝分かれします。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/morse_code.png&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/pygame/">pygame</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/04/26/Morse-code-practice-machine/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>WowUp app Japanese localization</title>
@@ -29,6 +49,8 @@
       
       
       
+      
+      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
       
       
       <comments>https://ktkr3d.github.io/2026/04/26/Wowup-App-Japanese-localization/#disqus_thread</comments>
@@ -708,27 +730,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/05/28/archiso-gnome/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>archiso</title>
-      <link>https://ktkr3d.github.io/2025/05/26/archiso/</link>
-      <guid>https://ktkr3d.github.io/2025/05/26/archiso/</guid>
-      <pubDate>Sun, 25 May 2025 15:23:53 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/archiso-gnome.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;archisoでGNOMEデスクトップ環境のArch LinuxライブISOを作成します。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.jp/index.php/Archiso&quot;&gt;https://wiki.archlinux.jp/index.php/Archiso&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/archiso/">archiso</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/05/26/archiso/#disqus_thread</comments>
       
     </item>
     
