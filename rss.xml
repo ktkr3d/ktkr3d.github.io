@@ -15,8 +15,33 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 26 Apr 2026 02:20:38 GMT</pubDate>
+    <pubDate>Mon, 11 May 2026 08:06:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Systemd User Task Manager</title>
+      <link>https://ktkr3d.github.io/2026/05/11/Systemd-User-Task-Manager/</link>
+      <guid>https://ktkr3d.github.io/2026/05/11/Systemd-User-Task-Manager/</guid>
+      <pubDate>Sun, 10 May 2026 23:39:22 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/systemd-user-task-manager.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;GNOMEとHyprlandで動作するSystemdユーザサービス&amp;#x2F;タイマーの管理アプリを作成してみました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/systemd-user-task-manager&quot;&gt;https://github.com/ktkr3d/systemd-user-task-manager&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/python/">python</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/systemd/">systemd</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/libadwaita/">libadwaita</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/05/11/Systemd-User-Task-Manager/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Morse code practice machine</title>
@@ -396,6 +421,17 @@
             &lt;div class=&quot;og-title&quot;&gt;Jellyfin&lt;/div&gt;
             &lt;div class=&quot;og-description&quot;&gt;The Free Software Media System&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
 
+&lt;ul&gt;
+&lt;li&gt;project&lt;br&gt;&lt;a href=&quot;https://jellyfin.org/&quot;&gt;https://jellyfin.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://jellyfin.org/downloads&quot;&gt;https://jellyfin.org/downloads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;server&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin&quot;&gt;https://github.com/jellyfin/jellyfin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;client cef&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-desktop&quot;&gt;https://github.com/jellyfin/jellyfin-desktop&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-desktop/actions&quot;&gt;https://github.com/jellyfin/jellyfin-desktop/actions&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/jellyfin-desktop&quot;&gt;https://aur.archlinux.org/packages/jellyfin-desktop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;client qt&lt;br&gt;Deprecated &lt;a href=&quot;https://github.com/jellyfin-archive/jellyfin-desktop-qt&quot;&gt;https://github.com/jellyfin-archive/jellyfin-desktop-qt&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/jellyfin-media-player&quot;&gt;https://aur.archlinux.org/packages/jellyfin-media-player&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;client windows&lt;br&gt;&lt;a href=&quot;https://winstall.app/apps/Jellyfin.JellyfinMediaPlayer&quot;&gt;https://winstall.app/apps/Jellyfin.JellyfinMediaPlayer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;client flathub&lt;br&gt;&lt;a href=&quot;https://flathub.org/en/apps/org.jellyfin.JellyfinDesktop&quot;&gt;https://flathub.org/en/apps/org.jellyfin.JellyfinDesktop&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2026-05-08&quot;&gt;&lt;a href=&quot;#2026-05-08&quot; class=&quot;headerlink&quot; title=&quot;2026-05-08&quot;&gt;&lt;/a&gt;2026-05-08&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;ライブラリに対して「すべて再生」や「シャッフル」を実行すると「再生できる有効なメディアソースが見つかりません」が表示される&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin/issues/11667#issuecomment-2189782350&quot;&gt;https://github.com/jellyfin/jellyfin/issues/11667#issuecomment-2189782350&lt;/a&gt;&lt;br&gt;ライブラリ画面ではフィルタで「再生済」を指定しておくと「すべて再生」や「シャッフル」を実行できる&lt;br&gt;ホーム画面でライブラリの三点リーダーから「シャッフル」は失敗する（そのまま）&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h4 id=&quot;2025-12-14&quot;&gt;&lt;a href=&quot;#2025-12-14&quot; class=&quot;headerlink&quot; title=&quot;2025-12-14&quot;&gt;&lt;/a&gt;2025-12-14&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;v2.0.0 - Rename to Jellyfin Desktop &amp;#x2F; Upgrade to Qt 6&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-desktop/releases/tag/v2.0.0&quot;&gt;https://github.com/jellyfin/jellyfin-desktop/releases/tag/v2.0.0&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S jellyfin-desktop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hyprctl clients | grep class&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;class: org.jellyfin.JellyfinDesktop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
@@ -656,7 +692,7 @@
                     &lt;div class=&quot;gr-footer&quot;&gt;
                         &lt;div class=&quot;gr-language-star&quot;&gt;
                             &lt;span class=&quot;gr-language&quot;&gt;C++&lt;/span&gt;
-                            &lt;i class=&quot;far fa-star&quot; aria-hidden=&quot;true&quot; id=&#39;gr-star-icon&#39;&gt; 148&lt;/i&gt;
+                            &lt;i class=&quot;far fa-star&quot; aria-hidden=&quot;true&quot; id=&#39;gr-star-icon&#39;&gt; 171&lt;/i&gt;
                         &lt;/div&gt;
                         &lt;div class=&quot;gr-card-toolbar&quot;&gt;
                             &lt;div class=&quot;gr-repo-link&quot;&gt;
@@ -708,28 +744,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/06/01/calamares/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>archiso-gnome</title>
-      <link>https://ktkr3d.github.io/2025/05/28/archiso-gnome/</link>
-      <guid>https://ktkr3d.github.io/2025/05/28/archiso-gnome/</guid>
-      <pubDate>Tue, 27 May 2025 21:16:46 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/archiso-gnome-desktop.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;archisoでGNOMEデスクトップ環境のライブISOイメージを作成してみました。&lt;br&gt;Fluentテーマを利用していてすっきりした見た目になっています。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/gnome/">gnome</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/archiso/">archiso</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/05/28/archiso-gnome/#disqus_thread</comments>
       
     </item>
     
