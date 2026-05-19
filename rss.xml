@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Mon, 18 May 2026 13:01:01 GMT</pubDate>
+    <pubDate>Tue, 19 May 2026 22:00:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,7 +26,8 @@
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/systemd-user-task-manager.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Systemdユーザサービスとタイマーを使ったタスク管理アプリを作成してみました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/systemd-user-task-manager&quot;&gt;https://github.com/ktkr3d/systemd-user-task-manager&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/systemd-user-task-manager&quot;&gt;https://github.com/ktkr3d/systemd-user-task-manager&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2026-05-20&quot;&gt;&lt;a href=&quot;#2026-05-20&quot; class=&quot;headerlink&quot; title=&quot;2026-05-20&quot;&gt;&lt;/a&gt;2026-05-20&lt;/h4&gt;&lt;p&gt;スケジュール文字列のバリデーション機能を追加しました。&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/systemd-user-task-manager/releases/tag/v0.2.0&quot;&gt;https://github.com/ktkr3d/systemd-user-task-manager/releases/tag/v0.2.0&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
