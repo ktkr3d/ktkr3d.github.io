@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ktkr3d.github.io/2026/05/11/Systemd-User-Task-Manager/</loc>
+    <loc>https://ktkr3d.github.io/hexo/index.html</loc>
     
     <lastmod>2026-05-20</lastmod>
     
@@ -11,9 +11,9 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/hexo/index.html</loc>
+    <loc>https://ktkr3d.github.io/2026/05/11/Systemd-User-Task-Manager/</loc>
     
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
