@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Tue, 02 Jun 2026 13:17:59 GMT</pubDate>
+    <pubDate>Tue, 02 Jun 2026 17:25:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -429,6 +429,10 @@
 &lt;li&gt;client qt&lt;br&gt;Deprecated &lt;a href=&quot;https://github.com/jellyfin-archive/jellyfin-desktop-qt&quot;&gt;https://github.com/jellyfin-archive/jellyfin-desktop-qt&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/jellyfin-media-player&quot;&gt;https://aur.archlinux.org/packages/jellyfin-media-player&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;client windows&lt;br&gt;&lt;a href=&quot;https://winstall.app/apps/Jellyfin.JellyfinMediaPlayer&quot;&gt;https://winstall.app/apps/Jellyfin.JellyfinMediaPlayer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;client flathub&lt;br&gt;&lt;a href=&quot;https://flathub.org/en/apps/org.jellyfin.JellyfinDesktop&quot;&gt;https://flathub.org/en/apps/org.jellyfin.JellyfinDesktop&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2026-06-03&quot;&gt;&lt;a href=&quot;#2026-06-03&quot; class=&quot;headerlink&quot; title=&quot;2026-06-03&quot;&gt;&lt;/a&gt;2026-06-03&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;jellyfin-desktop 起動時にエラー&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;jellyfin-desktop: error &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; loading shared libraries: libMpvQt.so.2: cannot open shared object file: No such file or directory&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+以下を実行&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S --mflags &lt;span class=&quot;string&quot;&gt;&amp;quot;--cleanbuild&amp;quot;&lt;/span&gt; jellyfin-desktop-git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;2026-05-08&quot;&gt;&lt;a href=&quot;#2026-05-08&quot; class=&quot;headerlink&quot; title=&quot;2026-05-08&quot;&gt;&lt;/a&gt;2026-05-08&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;ライブラリに対して「すべて再生」や「シャッフル」を実行すると「再生できる有効なメディアソースが見つかりません」が表示される&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin/issues/11667#issuecomment-2189782350&quot;&gt;https://github.com/jellyfin/jellyfin/issues/11667#issuecomment-2189782350&lt;/a&gt;&lt;br&gt;ライブラリ画面ではフィルタで「再生済」を指定しておくと「すべて再生」や「シャッフル」を実行できる&lt;br&gt;ホーム画面でライブラリの三点リーダーから「シャッフル」は失敗する（そのまま）&lt;/li&gt;
