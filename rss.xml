@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Tue, 09 Jun 2026 21:08:17 GMT</pubDate>
+    <pubDate>Tue, 09 Jun 2026 21:50:21 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,7 +24,7 @@
       <guid>https://ktkr3d.github.io/2026/06/10/Hyprland-0-55-3/</guid>
       <pubDate>Tue, 09 Jun 2026 17:26:11 GMT</pubDate>
       
-      <description>&lt;p&gt;Hyprland 0.55.3をインストールしました。&lt;/p&gt;
+      <description>&lt;p&gt;Hyprland 0.55.3をインストールしました。&lt;br&gt;現在の構成は以下の通り。&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pacman -Q hyprland quickshell caelestia-cli caelestia-shell&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hyprland 0.55.3-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;quickshell-git 0.2.0.r148.g8db8ca1-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;caelestia-cli 1.0.8-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;caelestia-shell 2.0.2-1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
       
       
