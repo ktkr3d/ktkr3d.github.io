@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Hyprland 0.55.3</title>
+      <link href="/2026/06/10/Hyprland-0-55-3/"/>
+      <url>/2026/06/10/Hyprland-0-55-3/</url>
+      
+        <content type="html"><![CDATA[<p>Hyprland 0.55.3をインストールしました。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pacman -Q hyprland quickshell caelestia-cli caelestia-shell</span><br><span class="line">hyprland 0.55.3-1</span><br><span class="line">quickshell-git 0.2.0.r148.g8db8ca1-1</span><br><span class="line">caelestia-cli 1.0.8-1</span><br><span class="line">caelestia-shell 2.0.2-1</span><br></pre></td></tr></table></figure><span id="more"></span><h3 id="変化点"><a href="#変化点" class="headerlink" title="変化点"></a>変化点</h3><h4 id="Hyprland"><a href="#Hyprland" class="headerlink" title="Hyprland"></a>Hyprland</h4><ul><li>Hyprlandの設定ファイルがluaになった。<br>  <a href="https://wiki.hypr.land/Configuring/Start/">https://wiki.hypr.land/Configuring/Start/</a><br>  まだ現在の設定ファイルhyprland.conf(hyprlang)は有効のまま。</li></ul><h4 id="Calestia"><a href="#Calestia" class="headerlink" title="Calestia"></a>Calestia</h4><ul><li><kbd>Super</kbd>キーでCaelestiaのランチャーが起動しなくなった<br>  <a href="https://github.com/caelestia-dots/caelestia/issues/434">https://github.com/caelestia-dots/caelestia/issues/434</a></li></ul><h3 id="調査"><a href="#調査" class="headerlink" title="調査"></a>調査</h3><h4 id="Hyprland-1"><a href="#Hyprland-1" class="headerlink" title="Hyprland"></a>Hyprland</h4><ul><li>luaへの完全移行は0.57くらい？</li><li>設定ファイルは~&#x2F;.config&#x2F;hypr&#x2F;hyprland.lua</li><li>グローバル変数hlで設定する？</li><li>変換ツール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S hyprlang2lua</span><br><span class="line">hyprlang2lua ~/.config/hypr/hyprland.conf &gt; ~/.config/hypr/hyprland.lua</span><br><span class="line"><span class="built_in">mv</span> ~/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf~</span><br></pre></td></tr></table></figure></li></ul><h4 id="Calestia-1"><a href="#Calestia-1" class="headerlink" title="Calestia"></a>Calestia</h4><ul><li>Pull requests &#x2F; Luafication #416<br>  <a href="https://github.com/caelestia-dots/caelestia/pull/416">https://github.com/caelestia-dots/caelestia/pull/416</a></li></ul><h3 id="対策"><a href="#対策" class="headerlink" title="対策"></a>対策</h3><p>TBD</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hyprland </tag>
+            
+            <tag> caelestia </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Systemd User Task Manager</title>
       <link href="/2026/05/11/Systemd-User-Task-Manager/"/>
       <url>/2026/05/11/Systemd-User-Task-Manager/</url>

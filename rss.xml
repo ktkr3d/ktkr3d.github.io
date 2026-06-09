@@ -15,8 +15,30 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Tue, 02 Jun 2026 17:25:14 GMT</pubDate>
+    <pubDate>Tue, 09 Jun 2026 21:08:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Hyprland 0.55.3</title>
+      <link>https://ktkr3d.github.io/2026/06/10/Hyprland-0-55-3/</link>
+      <guid>https://ktkr3d.github.io/2026/06/10/Hyprland-0-55-3/</guid>
+      <pubDate>Tue, 09 Jun 2026 17:26:11 GMT</pubDate>
+      
+      <description>&lt;p&gt;Hyprland 0.55.3をインストールしました。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pacman -Q hyprland quickshell caelestia-cli caelestia-shell&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hyprland 0.55.3-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;quickshell-git 0.2.0.r148.g8db8ca1-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;caelestia-cli 1.0.8-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;caelestia-shell 2.0.2-1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/caelestia/">caelestia</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/06/10/Hyprland-0-55-3/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Systemd User Task Manager</title>
@@ -718,37 +740,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/06/19/mpd/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>calamares</title>
-      <link>https://ktkr3d.github.io/2025/06/01/calamares/</link>
-      <guid>https://ktkr3d.github.io/2025/06/01/calamares/</guid>
-      <pubDate>Sat, 31 May 2025 20:36:07 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/calamares.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;GUIインストーラCalamaresをカスタマイズしてみました。&lt;/p&gt;
-&lt;a href=&quot;https://calamares.io/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
-    &lt;div class=&quot;og-image&quot;&gt;
-        &lt;img src=&quot;https://raw.githubusercontent.com/calamares/calamares/calamares/src/branding/default/squid.png&quot; alt=&quot;Calamares&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;descriptions&quot;&gt;
-            &lt;div class=&quot;og-title&quot;&gt;Calamares&lt;/div&gt;
-            &lt;div class=&quot;og-description&quot;&gt;Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
-
-&lt;p&gt;カスタマイズしたCalamaresを組み込んだライブISOイメージで起動し、Arch Linuxをインストールして、Arch Linuxが起動しました。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/calamares_restarted.png&quot;&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/archiso/">archiso</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/calamares/">calamares</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/06/01/calamares/#disqus_thread</comments>
       
     </item>
     
