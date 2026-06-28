@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>SheetUI | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="https:&#x2F;&#x2F;sheetui.com&#x2F;SheetUI でGoogle スプレッドシートのデータをWeb ページで可視化してみました。ARMORY ボタンでBlizzard の各キャラクタのページに遷移します。GUIDE ボタンで各キャラクタのクラス&#x2F;スペックに応じたWowHead ガイドに遷移します。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SheetUI">
+<meta property="og:url" content="https://ktkr3d.github.io/2020/07/10/SheetUI/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="https:&#x2F;&#x2F;sheetui.com&#x2F;SheetUI でGoogle スプレッドシートのデータをWeb ページで可視化してみました。ARMORY ボタンでBlizzard の各キャラクタのページに遷移します。GUIDE ボタンで各キャラクタのクラス&#x2F;スペックに応じたWowHead ガイドに遷移します。">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/sheetui.png">
+<meta property="article:published_time" content="2020-07-09T22:19:53.000Z">
+<meta property="article:modified_time" content="2020-07-09T22:19:53.000Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="sheetui">
+<meta property="article:tag" content="wow">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/sheetui.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "SheetUI",
+  "url": "https://ktkr3d.github.io/2020/07/10/SheetUI/",
+  "image": "https://ktkr3d.github.io/images/sheetui.png",
+  "datePublished": "2020-07-09T22:19:53.000Z",
+  "dateModified": "2020-07-09T22:19:53.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2020/07/10/SheetUI/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'SheetUI',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">496</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">204</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">SheetUI</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">SheetUI</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-07-09T22:19:53.000Z" title="Created 2020-07-10 07:19:53">2020-07-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-07-09T22:19:53.000Z" title="Updated 2020-07-10 07:19:53">2020-07-10</time></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p><img src="/images/sheetui.png" alt="sheetui"><br><a target="_blank" rel="noopener" href="https://sheetui.com/">https://sheetui.com/</a><br>SheetUI でGoogle スプレッドシートのデータをWeb ページで可視化してみました。<br>ARMORY ボタンでBlizzard の各キャラクタのページに遷移します。<br>GUIDE ボタンで各キャラクタのクラス&#x2F;スペックに応じたWowHead ガイドに遷移します。</p>
+<span id="more"></span>
+
+<h3 id="Google-スプレッドシートの準備"><a href="#Google-スプレッドシートの準備" class="headerlink" title="Google スプレッドシートの準備"></a>Google スプレッドシートの準備</h3><ol>
+<li>Chrome のツールバーの「アプリ」を選択</li>
+<li>「スプレッドシート」を開く</li>
+<li>新しいスプレッドシートを作成「空白」を選択</li>
+<li>データの登録</li>
+</ol>
+  <div id="googleChart9533"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.Table(document.getElementById("googleChart9533"))).draw(google.visualization.arrayToDataTable([['カラム', '1行目', '2行目以降の内容例'],['A', 'region',  'us'],['B', 'id1', '111 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['C', 'id2', '222222 (Armory のページソースから `111/222222-main.jpg` を抽出)'],['D', 'realm', 'Blackrock'],['E', 'faction', 'Horde'],['F', 'name', 'Name01'],['G', 'race', 'vulpera'],['H', 'gender', 'male'],['I', 'class', 'Priest'],['J', 'title', 'the Explorer'],['K', 'spec', 'Shadow'],['L', 'guild', 'guild01'],['M', 'level', '120'],['N', 'achievement', '10000'],['O', 'ilevel', '433'],['P', 'url_profile', '="https://worldofwarcraft.com/en-us/character/"&A2&"/"&D2&"/"&F2'],['Q', 'url_avator', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-avatar.jpg"'],['R', 'url_inset', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-inset.jpg"'],['S', 'url_main', '="https://render-"&A2&".worldofwarcraft.com/character/"&LOWER(D2)&"/"&B2&"/"&C2&"-main.jpg"'],['T', 'url_wowhead', '="https://www.wowhead.com/"&SUBSTITUTE(K2, " ", "-")&"-"&SUBSTITUTE(I2, " ", "-")&"-guide"']]),{"title":"No title","width":"100%","height":"100%"});
+      });
+    })();
+  }
+</script>
+
+<ol start="5">
+<li>[ファイル]-[ウェブに公開] を選択</li>
+<li>[公開] を選択</li>
+<li>ブラウザのアドレスバーからURL をコピー</li>
+</ol>
+<h3 id="SheetUI-の操作"><a href="#SheetUI-の操作" class="headerlink" title="SheetUI の操作"></a>SheetUI の操作</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://sheetui.com/">https://sheetui.com/</a></li>
+<li><code>Try It!</code> を選択</li>
+<li>Google スプレッドシートのURL を貼り付け</li>
+<li>Customize UI の設定</li>
+</ol>
+  <div id="googleChart2839"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.Table(document.getElementById("googleChart2839"))).draw(google.visualization.arrayToDataTable([['項目', '値'],['Page Title',  'Champions'],['Page Description', 'from World of Warcraft Armory'],['Select Container', 'Responsive Grid を選択'],['Select Item', 'Media Card を選択']]),{"title":"No title","width":"100%","height":"100%"});
+      });
+    })();
+  }
+</script>
+
+<ol start="5">
+<li>Configure Content の設定</li>
+</ol>
+  <div id="googleChart156"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.Table(document.getElementById("googleChart156"))).draw(google.visualization.arrayToDataTable([['カテゴリ', '項目', '値'],['Image', 'Source', '\{\{url_inset}}'],['', 'Title', ''],['', 'Image Height', '250'],['Title',  'Title',  '\{\{name}}'],['Description', 'Description', '\{\{level}} \{\{race}} \{\{spec}} \{\{class}} <\{\{guild}}> \{\{realm}}'],['Primary Button', 'Caption', 'ARMORY'],['', 'Link', '\{\{url_profile}}'],['Secondary Button', 'Caption', 'GUIDE'],['', 'Link', '\{\{url_wowhead}}']]),{"title":"No title","width":"100%","height":"100%"});
+      });
+    })();
+  }
+</script>
+
+<ol start="6">
+<li>FINISH 押下後に表示されるURL をクリック</li>
+</ol>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/wow/">wow</a><a class="post-meta__tags" href="/tags/sheetui/">sheetui</a></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2020/07/12/EPGStation-on-WSL/" title="EPGStation/Mirakurun on WSL"><img class="cover" src="/images/epgstation.drawio.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">EPGStation/Mirakurun on WSL</div></div><div class="info-2"><div class="info-item-1">https://github.com/l3tnun/EPGStationhttps://github.com/Chinachu/MirakurunChianchu の調子が悪くなったのでEPGStation に乗り換えてみました。EPGStation とMirakurun をWSL 上に構築しました。   環境 ソフトウェア構成  Windows 10 Insider Preview build 20161 WSL (Ubuntu 20.04 LTS) node v14.4.0 EPGStation 1.7.0 Mirakurun 3.2.0   npm 6.14.5 pm2 4.4.0 ffmpeg 4.2.2 python 2.7.18rc1 gcc 9.3.0   BonRecTest 1.0.0 Kodi 18.6 PVR IPTV Simple Client 3.9.8       ディレクトリ配置     if (!window.google) {     document.body.innerHTML = 'You need to include the scrip...</div></div></div></a><a class="pagination-related" href="/2020/07/06/USB-support-to-WSL2/" title="USB support to WSL2"><img class="cover" src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">USB support to WSL2</div></div><div class="info-2"><div class="info-item-1">https://github.com/rpasek/usbip-wsl2-instructionshttps://github.com/cezanne/usbip-winhttps://snowstar.org/2020/06/14/wsl2-usb-via-usbip/WSL のカーネルをカスタムしてUSB デバイスにアクセスしてみました。 $ uname -r -v4.19.104-microsoft-standard #1 SMP Mon Jul 6 18:00:19 JST 2020$ lsusbBus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hubBus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub    環境 セキュアブート無効 Windows 10 Insider Preview Build 20161 usbip-win 0.3.0 WSL2 (Ubuntu 20.04 LTS)    構築(Windows 10)USBIP...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2019/07/31/WoW-Armory-to-PDF/" title="WoW Armory to PDF"><div class="cover" style="background: /images/404.pdf"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-07-31</div><div class="info-item-2">WoW Armory to PDF</div></div><div class="info-2"><div class="info-item-1">  	      	    Puppeteer を使ってWoW Armory の情報をPDF 形式で保存してみました。実行した日付、レルム、キャラクター名をファイル名にしてPDF 化します。履歴をとるのに便利ですね。 上記はキャラクターが見つからなかった場合のPDF の例です。“Something’s Not Quite Right”ゲーム内で聞いたことがあるセリフですね。   準備$ npm i puppeteer date-utils  コードwowarmory.jsconst puppeteer = require(&#x27;puppeteer&#x27;);require(&#x27;date-utils&#x27;);const chars = [  [&#x27;en-us&#x27;, &#x27;us&#x27;, &#x27;barthilas&#x27;, &#x27;name01&#x27;],  [&#x27;en-us&#x27;, &#x27;us&#x27;, &#x27;barthilas&#x27;, &#x27;name02&#x27;], ...</div></div></div></a><a class="pagination-related" href="/2024/08/10/Trinket-Button-Custom/" title="Trinket Button Custom"><img class="cover" src="/images/trinket_button_custom.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-10</div><div class="info-item-2">Trinket Button Custom</div></div><div class="info-2"><div class="info-item-1"> World of WarcraftのTrinket Button拡張機能をカスタマイズしてみました。https://wago.io/Nn9Hg5PH7 Trinket Buttonは装備しているトリンケットが利用（Use）可能な場合にクリック可能なボタンとして表示します。World of Warcraftではトリンケットの他に利用可能な装備としてメインハンドがあります。Trinket Buttonを改造してメインハンドにも対応させてみました。 2024&#x2F;08&#x2F;14 更新：WoW 11.0.2 対応 deprecatedなAPIを修正https://warcraft.wiki.gg/wiki/Patch_11.0.2/API_changes#Deprecated_API 仕様が変更されたAPIを修正https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCooldown    環境 World of Warcraft 11.0.0 (56008) &#x2F; 11.0.2 (56110) WeakAuras 5.1...</div></div></div></a><a class="pagination-related" href="/2026/04/26/Wowup-App-Japanese-localization/" title="WowUp app Japanese localization"><img class="cover" src="/images/wowup_ja.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-26</div><div class="info-item-2">WowUp app Japanese localization</div></div><div class="info-2"><div class="info-item-1">World of Warcraft のアドオン管理アプリWowUpを日本語化してみました。   環境 Windows 11 VSCode Node Python Microsoft.VisualStudio.Workload.VCTools    構築 Microsoft.VisualStudio.Workload.VCToolsをインストール  winget install --id Microsoft.VisualStudio.2022.BuildTools --override &quot;--wait --quiet --add Microsoft.VisualStudio.Workload.VCTools&quot;  WowUpのビルド環境を構築  git clone https://github.com/WowUp/WowUp.gitcd WowUp/wowup-electronnpm install  日本語言語ファイルの追加 VSCodeで以下のファイルを開いて、Geminiに「日本語言語ファイルを生成できますか？」を依頼する。  ./WowUp/wowup-e...</div></div></div></a><a class="pagination-related" href="/2022/11/25/WoW-Addon-LoggingChat/" title="WoW Addon - LoggingChat"><img class="cover" src="/images/wow_loggingchat.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-25</div><div class="info-item-2">WoW Addon - LoggingChat</div></div><div class="info-2"><div class="info-item-1">https://github.com/ktkr3d/LoggingChat World of Warcraft でチャット表示内容をファイルにロギングするアドオンを作ってみました。処理はログイン時にチャットの保存設定を有効にしているだけです。   環境構築 リポジトリをZIPでダウンロードします。https://github.com/ktkr3d/LoggingChathttps://github.com/ktkr3d/LoggingChat/archive/refs/heads/main.zip  以下の階層になるように配置します。   _retail_    └─Interface        └─AddOns            └─LoggingChat                    LoggingChat.lua                    LoggingChat.toc  ゲーム内でアドオンを有効にします。 以下のファイルにログが追記されます。  _retail_    └─Logs            WoWChatLog.txt ログイン時...</div></div></div></a><a class="pagination-related" href="/2025/12/29/oUF-MyLayout-Addon/" title="oUF MyLayout Addon"><img class="cover" src="https://google.gallerycdn.vsassets.io/extensions/google/geminicodeassist/2.64.0/1765999594207/Microsoft.VisualStudio.Services.Icons.Default" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-12-29</div><div class="info-item-2">oUF MyLayout Addon</div></div><div class="info-2"><div class="info-item-1">AIを使ってoUFフレームワークを利用したWorld of Warcraftのユニットフレームアドオンを作ってみました。Visual Studio Code にGemini Code Assist拡張を組み込みました。実装を確かめながら機能を追加できます。Geminiは混雑時にレスポンスが悪くなる場合がありますが、無料であるにも関わらずコンパクトで間違いの無いコードを生成するような気がします。追加機能を提案してくれるので了承するだけで機能が追加されていきます。  Gemini Code Assistant     oUF        oUF_MyLayout        2026-04-26 WowUpアプリからインストールできます。  https://wowup.io/guide/get-addons/overview  2026-01-23 WoW APIの仕様変更に対応中  暫定的に一部の機能をドロップ  https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#AddOn_security_changes  http...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">496</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">204</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%E3%81%AE%E6%BA%96%E5%82%99"><span class="toc-number">1.</span> <span class="toc-text">Google スプレッドシートの準備</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SheetUI-%E3%81%AE%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">SheetUI の操作</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/20/hyprKCS/" title="hyprKCS">hyprKCS</a><time datetime="2026-06-20T11:43:08.000Z" title="Created 2026-06-20 20:43:08">2026-06-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/10/Hyprland-0-55-3/" title="Hyprland 0.55.3">Hyprland 0.55.3</a><time datetime="2026-06-09T17:26:11.000Z" title="Created 2026-06-10 02:26:11">2026-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/11/Systemd-User-Task-Manager/" title="Systemd User Task Manager">Systemd User Task Manager</a><time datetime="2026-05-10T23:39:22.000Z" title="Created 2026-05-11 08:39:22">2026-05-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/26/Morse-code-practice-machine/" title="Morse code practice machine">Morse code practice machine</a><time datetime="2026-04-25T23:55:37.000Z" title="Created 2026-04-26 08:55:37">2026-04-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/26/Wowup-App-Japanese-localization/" title="WowUp app Japanese localization">WowUp app Japanese localization</a><time datetime="2026-04-25T21:40:11.000Z" title="Created 2026-04-26 06:40:11">2026-04-26</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
