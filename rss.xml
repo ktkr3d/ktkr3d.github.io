@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 20 Jun 2026 12:14:00 GMT</pubDate>
+    <pubDate>Mon, 29 Jun 2026 06:49:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,7 +26,29 @@
       
       <description>&lt;p&gt;&lt;img src=&quot;https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnsckinwi9jksfp0wneap.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Hyprland用キーバインドマネージャhyprKCSを使ってみました。&lt;br&gt;お気に入りフィルタがあるので、便利だけれど忘れてしまいがちなキーバインドを簡単に見つけられます。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/kosa12/hyprKCS&quot;&gt;https://github.com/kosa12/hyprKCS&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&quot;https://github.com/kosa12/hyprKCS&quot;&gt;https://github.com/kosa12/hyprKCS&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2026-06-29&quot;&gt;&lt;a href=&quot;#2026-06-29&quot; class=&quot;headerlink&quot; title=&quot;2026-06-29&quot;&gt;&lt;/a&gt;2026-06-29&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;代替ソフト&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;ソフト&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;hyprland.lua対応状況&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;https://github.com/tidynest/hypr-keybind-manager&quot;&gt;hypr-keybind-manager&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;hyprland.luaに対応していない&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;https://github.com/BlueManCZ/hyprmod&quot;&gt;hyprmod&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;hyprland.luaに対応している。多機能。一部キーバインドの内容が異なる(確認中)。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2026-06-28&quot;&gt;&lt;a href=&quot;#2026-06-28&quot; class=&quot;headerlink&quot; title=&quot;2026-06-28&quot;&gt;&lt;/a&gt;2026-06-28&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;hyprland.lua対応のfeatureリクエスト&lt;br&gt;  &lt;a href=&quot;https://github.com/kosa12/hyprKCS/issues/77&quot;&gt;https://github.com/kosa12/hyprKCS/issues/77&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
       
       
       
@@ -52,8 +74,9 @@
 &lt;ol&gt;
 &lt;li&gt;Caelestiaの強制アップデート &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git -C ~/.local/share/caelestia fetch origin main&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git -C ~/.local/share/caelestia reset --hard origin/main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;li&gt;設定ファイルの変換 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S hyprlang2lua&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.config/caelestia&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hyprlang2lua hypr-user.conf &amp;gt; hypr-user.lua&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;補正&lt;br&gt; ~&amp;#x2F;.config&amp;#x2F;caelestia&amp;#x2F;hypr-user.lua&lt;br&gt; キーバインドの&lt;code&gt;Ctrl+Alt&lt;/code&gt;を&lt;code&gt;CTRL + ALT&lt;/code&gt;に置換&lt;/li&gt;
-&lt;li&gt;変数 &lt;figure class=&quot;highlight lua&quot;&gt;&lt;figcaption&gt;&lt;span&gt;hypr-vars.lua&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    browser = &lt;span class=&quot;string&quot;&gt;&amp;quot;google-chrome-stable&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    editor = &lt;span class=&quot;string&quot;&gt;&amp;quot;code&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fileExplorer = &lt;span class=&quot;string&quot;&gt;&amp;quot;thunar&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    windowGapsOut = &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    workspaceSwipeFingers = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    volumeStep = &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;表記の補正&lt;br&gt; ~&amp;#x2F;.config&amp;#x2F;caelestia&amp;#x2F;hypr-user.lua&lt;br&gt; キーバインドの&lt;code&gt;Ctrl+Alt&lt;/code&gt;を&lt;code&gt;CTRL + ALT&lt;/code&gt;に置換&lt;/li&gt;
+&lt;li&gt;変数設定の移植 &lt;figure class=&quot;highlight lua&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/caelestia/hypr-vars.lua&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    browser = &lt;span class=&quot;string&quot;&gt;&amp;quot;google-chrome-stable&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    editor = &lt;span class=&quot;string&quot;&gt;&amp;quot;code&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fileExplorer = &lt;span class=&quot;string&quot;&gt;&amp;quot;thunar&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    windowGapsOut = &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    workspaceSwipeFingers = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    volumeStep = &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;各種ツールの誤認識を防ぐために設定ファイルをリネーム &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;mv&lt;/span&gt; ~/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf~&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
       
       
