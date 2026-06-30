@@ -15,8 +15,30 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Mon, 29 Jun 2026 06:49:00 GMT</pubDate>
+    <pubDate>Tue, 30 Jun 2026 14:28:04 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>hypr-rdp</title>
+      <link>https://ktkr3d.github.io/2026/06/30/hypr-rdp/</link>
+      <guid>https://ktkr3d.github.io/2026/06/30/hypr-rdp/</guid>
+      <pubDate>Tue, 30 Jun 2026 13:53:48 GMT</pubDate>
+      
+      <description>&lt;p&gt;hypr-rdpを使ってヘッドレスのHyprland環境に接続してみました。&lt;br&gt;&lt;a href=&quot;https://github.com/MuNeNiCK/hypr-rdp&quot;&gt;https://github.com/MuNeNiCK/hypr-rdp&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.munenick.me/blog/hypr-rdp/&quot;&gt;https://www.munenick.me/blog/hypr-rdp/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/hypr-rdp.png&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/rdp/">rdp</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/06/30/hypr-rdp/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>hyprKCS</title>
@@ -560,31 +582,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Kdenlive</title>
-      <link>https://ktkr3d.github.io/2025/06/26/kdenlive/</link>
-      <guid>https://ktkr3d.github.io/2025/06/26/kdenlive/</guid>
-      <pubDate>Thu, 26 Jun 2025 06:28:25 GMT</pubDate>
-      
-      <description>&lt;p&gt;ビデオエディタKdenliveを使ってみました。&lt;/p&gt;
-&lt;a href=&quot;https://kdenlive.org/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
-    &lt;div class=&quot;og-image&quot;&gt;
-        &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/c/c6/Kdenlive-logo.svg&quot; alt=&quot;Kdenlive&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;descriptions&quot;&gt;
-            &lt;div class=&quot;og-title&quot;&gt;Kdenlive&lt;/div&gt;
-            &lt;div class=&quot;og-description&quot;&gt;Kdenlive is the acronym for KDE Non-Linear Video Editor. It works on Linux, Windows, macOS, and BSD.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/kdenlive/">kdenlive</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/06/26/kdenlive/#disqus_thread</comments>
       
     </item>
     
