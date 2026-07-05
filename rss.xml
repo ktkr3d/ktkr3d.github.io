@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 05 Jul 2026 11:47:03 GMT</pubDate>
+    <pubDate>Sun, 05 Jul 2026 12:12:02 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Tue, 30 Jun 2026 13:53:48 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/hypr-rdp.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;hypr-rdpを使ってヘッドレスのHyprland環境にWindowsから接続してみました。&lt;br&gt;&lt;a href=&quot;https://github.com/MuNeNiCK/hypr-rdp&quot;&gt;https://github.com/MuNeNiCK/hypr-rdp&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.munenick.me/blog/hypr-rdp/&quot;&gt;https://www.munenick.me/blog/hypr-rdp/&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;hypr-rdpを使ってヘッドレスのHyprland環境にWindowsとLinuxから接続してみました。&lt;br&gt;&lt;a href=&quot;https://github.com/MuNeNiCK/hypr-rdp&quot;&gt;https://github.com/MuNeNiCK/hypr-rdp&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.munenick.me/blog/hypr-rdp/&quot;&gt;https://www.munenick.me/blog/hypr-rdp/&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
