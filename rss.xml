@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 05 Jul 2026 13:00:49 GMT</pubDate>
+    <pubDate>Mon, 06 Jul 2026 03:53:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -50,7 +50,8 @@
 &lt;p&gt;Hyprland用キーバインドマネージャhyprKCSを使ってみました。&lt;br&gt;お気に入りフィルタがあるので、便利だけれど忘れてしまいがちなキーバインドを簡単に見つけられます。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/kosa12/hyprKCS&quot;&gt;https://github.com/kosa12/hyprKCS&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;2026-06-29&quot;&gt;&lt;a href=&quot;#2026-06-29&quot; class=&quot;headerlink&quot; title=&quot;2026-06-29&quot;&gt;&lt;/a&gt;2026-06-29&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;代替ソフト&lt;table&gt;
+&lt;li&gt;&lt;p&gt;hyprland.luaに対応しているソフト調査&lt;/p&gt;
+&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th align=&quot;left&quot;&gt;ソフト&lt;/th&gt;
@@ -58,12 +59,16 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;https://github.com/kosa12/hyprKCS&quot;&gt;hyprKCS&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;×&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;https://github.com/tidynest/hypr-keybind-manager&quot;&gt;hypr-keybind-manager&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;hyprland.luaに対応していない&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;×&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;https://github.com/BlueManCZ/hyprmod&quot;&gt;hyprmod&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;hyprland.luaに対応している。多機能。一部キーバインドの内容が異なる(確認中)。&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;○ 多機能。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
 &lt;/li&gt;
