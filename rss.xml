@@ -15,8 +15,31 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 11 Jul 2026 09:11:51 GMT</pubDate>
+    <pubDate>Thu, 30 Jul 2026 17:32:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Antigravity IDE</title>
+      <link>https://ktkr3d.github.io/2026/07/31/Antigravity-IDE/</link>
+      <guid>https://ktkr3d.github.io/2026/07/31/Antigravity-IDE/</guid>
+      <pubDate>Thu, 30 Jul 2026 16:54:16 GMT</pubDate>
+      
+      <description>&lt;p&gt;Visual Studio Code拡張機能で利用してきた個人向けのGemini Code Assistは2026年6月18日をもって提供を終了（リクエスト処理を停止）しました。&lt;br&gt;後継であるAntigravity IDEでStarshipのプロンプトシミュレータを作ってみました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/starship/">starship</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/gemini/">gemini</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/antigravity/">antigravity</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/07/31/Antigravity-IDE/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>hypr-rdp</title>
@@ -697,26 +720,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/07/03/Jellyfin/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>GNOME Remote Desktop + jp109 keyboard</title>
-      <link>https://ktkr3d.github.io/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/</link>
-      <guid>https://ktkr3d.github.io/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/</guid>
-      <pubDate>Mon, 30 Jun 2025 21:38:39 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/grd_keyboard.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Arch LinuxやUbuntuへリモートデスクトップ接続した際にパイプ文字「|」が入力できない事象があります。gnome-remote-desktopのプロジェクトページではIssueが登録されていました。キーボードが正しく認識されないようです。&lt;br&gt;私の環境ではデスクトップPCが日本語キーボード、ノートPCが英語キーボードです。キーボードの設定はどちらでも構わないので当面英語キーボードの設定にしようと思います。&lt;br&gt;xrdpに戻すべきなのだろうか。&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/gnome-remote-desktop/">gnome-remote-desktop</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/07/01/GNOME-Remote-Desktop-jp109-keyboard/#disqus_thread</comments>
       
     </item>
     
