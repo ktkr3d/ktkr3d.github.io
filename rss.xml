@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Thu, 30 Jul 2026 17:45:23 GMT</pubDate>
+    <pubDate>Thu, 30 Jul 2026 22:48:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,7 +24,7 @@
       <guid>https://ktkr3d.github.io/2026/07/31/Antigravity-IDE/</guid>
       <pubDate>Thu, 30 Jul 2026 16:54:16 GMT</pubDate>
       
-      <description>&lt;p&gt;Visual Studio Code拡張機能で利用してきた個人向けのGemini Code Assistは2026年6月18日をもって提供を終了（リクエスト処理を停止）しました。&lt;br&gt;後継であるAntigravity IDEでStarshipのプロンプトシミュレータを作ってみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&quot;/images/antigravity_ide.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://antigravity.google/product/antigravity-ide&quot;&gt;https://antigravity.google/product/antigravity-ide&lt;/a&gt;&lt;br&gt;Visual Studio CodeでGemini Code Assistを利用してきましたが、Visual Studio Codeの個人向けGemini Code Assistは2026年6月18日をもって提供を終了（リクエスト処理を停止）しました。&lt;br&gt;Visual Studio CodeからフォークされているAntigravity IDEでGeminiを利用してみました。&lt;br&gt;例として、Starshipのプロンプトシミュレータを作ってみました。&lt;/p&gt;</description>
       
       
       
