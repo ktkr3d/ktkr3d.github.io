@@ -15,8 +15,28 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Fri, 31 Jul 2026 10:05:27 GMT</pubDate>
+    <pubDate>Sat, 08 Aug 2026 12:24:49 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Linux Cluster Monitor</title>
+      <link>https://ktkr3d.github.io/2026/08/08/Linux-Cluster-Monitor/</link>
+      <guid>https://ktkr3d.github.io/2026/08/08/Linux-Cluster-Monitor/</guid>
+      <pubDate>Sat, 08 Aug 2026 08:27:09 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/linux_cluster_monitor.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;自宅のLinux PCのシステム情報をfastfetchを使って収集して表示するダッシュボードを作ってみました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/fastfetch/">fastfetch</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/08/08/Linux-Cluster-Monitor/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Antigravity IDE</title>
@@ -659,67 +679,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/07/19/qwen3/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Jellyfin</title>
-      <link>https://ktkr3d.github.io/2025/07/03/Jellyfin/</link>
-      <guid>https://ktkr3d.github.io/2025/07/03/Jellyfin/</guid>
-      <pubDate>Thu, 03 Jul 2025 11:14:43 GMT</pubDate>
-      
-      <description>&lt;p&gt;メディアサーバJellyfinを使ってみました。今まで散らばっていた大量のメディアファイルを整理することができました。&lt;br&gt;また、インターネットラジオやMirakurunと連携したテレビ番組の視聴ができました。&lt;/p&gt;
-&lt;a href=&quot;https://jellyfin.org/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
-    &lt;div class=&quot;og-image&quot;&gt;
-        &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/41/Jellyfin_-_icon-transparent.svg&quot; alt=&quot;Jellyfin&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;descriptions&quot;&gt;
-            &lt;div class=&quot;og-title&quot;&gt;Jellyfin&lt;/div&gt;
-            &lt;div class=&quot;og-description&quot;&gt;The Free Software Media System&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;project&lt;br&gt;&lt;a href=&quot;https://jellyfin.org/&quot;&gt;https://jellyfin.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://jellyfin.org/downloads&quot;&gt;https://jellyfin.org/downloads&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;server&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin&quot;&gt;https://github.com/jellyfin/jellyfin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;client cef&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-desktop&quot;&gt;https://github.com/jellyfin/jellyfin-desktop&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-desktop/actions&quot;&gt;https://github.com/jellyfin/jellyfin-desktop/actions&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/jellyfin-desktop&quot;&gt;https://aur.archlinux.org/packages/jellyfin-desktop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;client qt&lt;br&gt;Deprecated &lt;a href=&quot;https://github.com/jellyfin-archive/jellyfin-desktop-qt&quot;&gt;https://github.com/jellyfin-archive/jellyfin-desktop-qt&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/jellyfin-media-player&quot;&gt;https://aur.archlinux.org/packages/jellyfin-media-player&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;client windows&lt;br&gt;&lt;a href=&quot;https://winstall.app/apps/Jellyfin.JellyfinMediaPlayer&quot;&gt;https://winstall.app/apps/Jellyfin.JellyfinMediaPlayer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;client flathub&lt;br&gt;&lt;a href=&quot;https://flathub.org/en/apps/org.jellyfin.JellyfinDesktop&quot;&gt;https://flathub.org/en/apps/org.jellyfin.JellyfinDesktop&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2026-06-03&quot;&gt;&lt;a href=&quot;#2026-06-03&quot; class=&quot;headerlink&quot; title=&quot;2026-06-03&quot;&gt;&lt;/a&gt;2026-06-03&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;jellyfin-desktop 起動時にエラー&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;jellyfin-desktop: error &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; loading shared libraries: libMpvQt.so.2: cannot open shared object file: No such file or directory&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-以下を実行&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S --mflags &lt;span class=&quot;string&quot;&gt;&amp;quot;--cleanbuild&amp;quot;&lt;/span&gt; jellyfin-desktop-git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2026-05-08&quot;&gt;&lt;a href=&quot;#2026-05-08&quot; class=&quot;headerlink&quot; title=&quot;2026-05-08&quot;&gt;&lt;/a&gt;2026-05-08&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;ライブラリに対して「すべて再生」や「シャッフル」を実行すると「再生できる有効なメディアソースが見つかりません」が表示される&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin/issues/11667#issuecomment-2189782350&quot;&gt;https://github.com/jellyfin/jellyfin/issues/11667#issuecomment-2189782350&lt;/a&gt;&lt;br&gt;ライブラリ画面ではフィルタで「再生済」を指定しておくと「すべて再生」や「シャッフル」を実行できる&lt;br&gt;ホーム画面でライブラリの三点リーダーから「シャッフル」は失敗する（そのまま）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2025-12-14&quot;&gt;&lt;a href=&quot;#2025-12-14&quot; class=&quot;headerlink&quot; title=&quot;2025-12-14&quot;&gt;&lt;/a&gt;2025-12-14&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;v2.0.0 - Rename to Jellyfin Desktop &amp;#x2F; Upgrade to Qt 6&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-desktop/releases/tag/v2.0.0&quot;&gt;https://github.com/jellyfin/jellyfin-desktop/releases/tag/v2.0.0&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S jellyfin-desktop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hyprctl clients | grep class&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;class: org.jellyfin.JellyfinDesktop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2025-12-07&quot;&gt;&lt;a href=&quot;#2025-12-07&quot; class=&quot;headerlink&quot; title=&quot;2025-12-07&quot;&gt;&lt;/a&gt;2025-12-07&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin/issues/15419&quot;&gt;https://github.com/jellyfin/jellyfin/issues/15419&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin/pull/15557&quot;&gt;https://github.com/jellyfin/jellyfin/pull/15557&lt;/a&gt;&lt;br&gt;インターネットラジオが再生されなくなったバグが10.11.4で修正されたようです。&lt;br&gt;アップデートして動作することを確認しました。&lt;/p&gt;
-&lt;h4 id=&quot;2025-11-29&quot;&gt;&lt;a href=&quot;#2025-11-29&quot; class=&quot;headerlink&quot; title=&quot;2025-11-29&quot;&gt;&lt;/a&gt;2025-11-29&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;JellyfinでライブTV視聴の是正&lt;br&gt;&lt;a href=&quot;https://www.hitoha.moe/fix-jellyfin-live-tv/&quot;&gt;https://www.hitoha.moe/fix-jellyfin-live-tv/&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;figcaption&gt;&lt;span&gt;/etc/jellyfin/jellyfin.env&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;JELLYFIN_FFmpeg__probesize=8M&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2025-11-26&quot;&gt;&lt;a href=&quot;#2025-11-26&quot; class=&quot;headerlink&quot; title=&quot;2025-11-26&quot;&gt;&lt;/a&gt;2025-11-26&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;MPRIS supported!&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-media-player/pull/989&quot;&gt;https://github.com/jellyfin/jellyfin-media-player/pull/989&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S jellyfin-media-player-git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2025-11-24&quot;&gt;&lt;a href=&quot;#2025-11-24&quot; class=&quot;headerlink&quot; title=&quot;2025-11-24&quot;&gt;&lt;/a&gt;2025-11-24&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;qt6 version&lt;br&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/jellyfin-media-player-git&quot;&gt;https://aur.archlinux.org/packages/jellyfin-media-player-git&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S jellyfin-media-player-git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-現時点でmpv-mprisと組み合わせて使えていない。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2025-11-22&quot;&gt;&lt;a href=&quot;#2025-11-22&quot; class=&quot;headerlink&quot; title=&quot;2025-11-22&quot;&gt;&lt;/a&gt;2025-11-22&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;Media keys (mpris) support&lt;br&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-media-player/issues/3&quot;&gt;https://github.com/jellyfin/jellyfin-media-player/issues/3&lt;/a&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -L https://github.com/hoyon/mpv-mpris/releases/latest/download/mpris.so -o ~/.local/share/jellyfinmediaplayer/scripts/mpris.so&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/mirakurun/">mirakurun</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/jellyfin/">jellyfin</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/07/03/Jellyfin/#disqus_thread</comments>
       
     </item>
     
