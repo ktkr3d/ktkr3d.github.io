@@ -15,8 +15,36 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 08 Aug 2026 12:30:20 GMT</pubDate>
+    <pubDate>Sun, 09 Aug 2026 00:14:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>oUF MyLayout Addon v0.3.0</title>
+      <link>https://ktkr3d.github.io/2026/08/09/oUF-MyLayout-Addon-v0-3-0/</link>
+      <guid>https://ktkr3d.github.io/2026/08/09/oUF-MyLayout-Addon-v0-3-0/</guid>
+      <pubDate>Sat, 08 Aug 2026 23:40:19 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;img src=&quot;/images/ouf_mylayout_v0.3.0.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/oUF/">oUF</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/08/09/oUF-MyLayout-Addon-v0-3-0/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Linux Cluster Monitor</title>
@@ -655,30 +683,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Qwen3</title>
-      <link>https://ktkr3d.github.io/2025/07/19/qwen3/</link>
-      <guid>https://ktkr3d.github.io/2025/07/19/qwen3/</guid>
-      <pubDate>Fri, 18 Jul 2025 20:58:00 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/open-webui_qwen3.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Qwen3を使ってみました。&lt;br&gt;Qwen3はAlibabaが開発したオープンソースの大規模言語モデル(LLM)の最新バージョンです。&lt;br&gt;UIにはOpen WebUIを利用しました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/QwenLM/Qwen3&quot;&gt;https://github.com/QwenLM/Qwen3&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/open-webui/open-webui&quot;&gt;https://github.com/open-webui/open-webui&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;2025-08-04&quot;&gt;&lt;a href=&quot;#2025-08-04&quot; class=&quot;headerlink&quot; title=&quot;2025-08-04&quot;&gt;&lt;/a&gt;2025-08-04&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://ollama.com/download&quot;&gt;https://ollama.com/download&lt;/a&gt;&lt;br&gt;Ollama GUIアプリ&lt;br&gt;&lt;img src=&quot;/images/ollama_ap.png&quot;&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/qwen3/">qwen3</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/open-webui/">open-webui</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/07/19/qwen3/#disqus_thread</comments>
       
     </item>
     

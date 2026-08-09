@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>oUF MyLayout Addon v0.3.0</title>
+      <link href="/2026/08/09/oUF-MyLayout-Addon-v0-3-0/"/>
+      <url>/2026/08/09/oUF-MyLayout-Addon-v0-3-0/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/ouf_mylayout_v0.3.0.jpg"></p><p><a href="https://github.com/ktkr3d/oUF_MyLayout">https://github.com/ktkr3d/oUF_MyLayout</a></p><p>oUF MyLayoutアドオンに機能追加しました。</p><ul><li>ミニマップボタン</li><li>テストモード</li></ul><h4 id="設定画面"><a href="#設定画面" class="headerlink" title="設定画面"></a>設定画面</h4><p><img src="/images/ouf_mylayout_v0.3.0_config.png"></p><h4 id="ミニマップボタン"><a href="#ミニマップボタン" class="headerlink" title="ミニマップボタン"></a>ミニマップボタン</h4><p>ミニマップ上のoUF_MyLayoutアドオンのアイコンを表示します。左クリックで設定画面を表示します。右クリックでテストモードをトグルします。</p><h4 id="テストモード"><a href="#テストモード" class="headerlink" title="テストモード"></a>テストモード</h4><p>パーティフレーム、ボスフレーム、メインタンクフレーム、レイドフレームをテスト表示します。<br>ミニマップボタンを右クリックするか、設定画面でテストモードをトグルします。</p><div class="note info flat"><p>テストモード機能をテスト中です。</p></div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> wow </tag>
+            
+            <tag> oUF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux Cluster Monitor</title>
       <link href="/2026/08/08/Linux-Cluster-Monitor/"/>
       <url>/2026/08/08/Linux-Cluster-Monitor/</url>
