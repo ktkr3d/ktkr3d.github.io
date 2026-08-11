@@ -15,8 +15,32 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 09 Aug 2026 03:16:18 GMT</pubDate>
+    <pubDate>Tue, 11 Aug 2026 13:29:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>WoW Keybinding</title>
+      <link>https://ktkr3d.github.io/2026/08/11/WoW-Keybinding/</link>
+      <guid>https://ktkr3d.github.io/2026/08/11/WoW-Keybinding/</guid>
+      <pubDate>Tue, 11 Aug 2026 08:53:47 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/wow_keybinding.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Webツール&lt;br&gt;  &lt;a href=&quot;https://keybinding.bellular.games/&quot;&gt;https://keybinding.bellular.games/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;アドオン&lt;br&gt;  &lt;a href=&quot;https://www.curseforge.com/wow/addons/keybinding&quot;&gt;https://www.curseforge.com/wow/addons/keybinding&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bellularsのキーバインドガイドが新しくなっていたたので適用してみました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/08/11/WoW-Keybinding/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>oUF MyLayout Addon v0.3.0</title>
@@ -661,28 +685,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/11/07/OpenVPN-Access-Server/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Install Arch Linux on WSL</title>
-      <link>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/</link>
-      <guid>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/</guid>
-      <pubDate>Wed, 29 Oct 2025 15:57:13 GMT</pubDate>
-      
-      <description>&lt;p&gt;WSLにArch Linuxをインストールします。&lt;br&gt;Ubuntu上のfish, ssh, code server, hexo, jellyfinをArch Linuxに移行します。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL&quot;&gt;https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/wsl/">wsl</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/archlinux/">archlinux</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/10/30/Install-Arch-Linux-on-WSL/#disqus_thread</comments>
       
     </item>
     
