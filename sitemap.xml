@@ -1289,16 +1289,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/07/12/irrlicht_ctheoraplayer/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2010/07/12/irrwizard/</loc>
+    <loc>https://ktkr3d.github.io/2010/07/12/post/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1316,7 +1307,16 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/07/13/post_2/</loc>
+    <loc>https://ktkr3d.github.io/2010/07/12/irrlicht_ctheoraplayer/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2010/07/12/irrwizard/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1343,16 +1343,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/07/18/post_5/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2010/07/22/flv/</loc>
+    <loc>https://ktkr3d.github.io/2010/07/13/post_2/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1370,7 +1361,16 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/07/12/post/</loc>
+    <loc>https://ktkr3d.github.io/2010/07/18/post_5/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2010/07/22/flv/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1487,7 +1487,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/09/04/irrlamb/</loc>
+    <loc>https://ktkr3d.github.io/2010/08/31/b-momi/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1496,7 +1496,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/08/31/b-momi/</loc>
+    <loc>https://ktkr3d.github.io/2010/09/04/irrlamb/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1514,7 +1514,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/09/08/irrlicht/</loc>
+    <loc>https://ktkr3d.github.io/2010/09/10/irrcg/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1550,15 +1550,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/09/12/terrain_pager/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/2010/09/17/monodevelop/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -1568,7 +1559,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/10/16/billardgl/</loc>
+    <loc>https://ktkr3d.github.io/2010/09/08/irrlicht/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1577,16 +1568,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/10/17/blood_water/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2010/10/23/post_11/</loc>
+    <loc>https://ktkr3d.github.io/2010/09/12/terrain_pager/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1604,34 +1586,25 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/2010/10/16/billardgl/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2010/10/23/post_11/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/2010/11/01/meego/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2010/09/10/irrcg/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2010/11/17/blockout/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2010/11/25/anaglyph/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1649,7 +1622,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/12/23/linux_kinect/</loc>
+    <loc>https://ktkr3d.github.io/2010/11/17/blockout/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1667,7 +1640,16 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/12/25/ogre3d_1/</loc>
+    <loc>https://ktkr3d.github.io/2010/11/25/anaglyph/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2010/12/23/linux_kinect/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1677,6 +1659,15 @@
   
   <url>
     <loc>https://ktkr3d.github.io/2010/12/23/ogre3d/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2010/12/27/faast_wow/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1703,15 +1694,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/02/06/android_30/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/2011/02/05/android-x86/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -1721,7 +1703,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/02/13/gibson_screensaver/</loc>
+    <loc>https://ktkr3d.github.io/2011/02/06/android_30/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1739,7 +1721,16 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/03/13/worpress-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+    <loc>https://ktkr3d.github.io/2010/10/17/blood_water/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2011/02/13/gibson_screensaver/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1757,6 +1748,15 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/2011/03/13/worpress-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/2011/03/17/gnome-shell-e38292e382abe382b9e382bfe3839ee382a4e382ba/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -1766,7 +1766,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/03/21/usb-e784a1e7b79alan-e5ad90e6a99fe38292e981b8e38293e381a7e381bfe3828b/</loc>
+    <loc>https://ktkr3d.github.io/2011/03/21/fedora-15-e381a7e792b0e5a283e8a8ade5ae9a/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1784,7 +1784,16 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/04/03/inspiron-duo-e381a7alsa/</loc>
+    <loc>https://ktkr3d.github.io/2011/03/21/usb-e784a1e7b79alan-e5ad90e6a99fe38292e981b8e38293e381a7e381bfe3828b/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2010/12/25/ogre3d_1/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1802,7 +1811,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2010/12/27/faast_wow/</loc>
+    <loc>https://ktkr3d.github.io/2011/04/03/unity-e381aee383a1e3838be383a5e383bce8a1a8e7a4bae8a8ade5ae9a/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1811,7 +1820,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/04/03/unity-e381aee383a1e3838be383a5e383bce8a1a8e7a4bae8a8ade5ae9a/</loc>
+    <loc>https://ktkr3d.github.io/2011/04/03/inspiron-duo-e381a7alsa/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1856,15 +1865,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/03/21/fedora-15-e381a7e792b0e5a283e8a8ade5ae9a/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/2011/04/14/plasma-active-contour/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -1892,15 +1892,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/05/08/hex-a-hop-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/2011/05/06/burg-e38292e8a9a6e38197e381a6e381bfe3819f/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -1910,7 +1901,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/05/10/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f3/</loc>
+    <loc>https://ktkr3d.github.io/2011/05/08/hex-a-hop-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1920,6 +1911,15 @@
   
   <url>
     <loc>https://ktkr3d.github.io/2011/05/09/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f2/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2011/05/10/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f3/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -1946,15 +1946,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/05/22/proun-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/2011/05/15/gnome-shell-e381aee38386e383bce3839ee38292e5a489e69bb4e38197e381a6e381bfe3819f/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -1965,6 +1956,15 @@
   
   <url>
     <loc>https://ktkr3d.github.io/2011/05/17/0-a-d-e381a7e9818ae38293e381a7e381bfe3828b/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2011/05/22/proun-e381a7e9818ae38293e381a7e381bfe3819f/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2009,7 +2009,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f6/</loc>
+    <loc>https://ktkr3d.github.io/2011/06/02/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f5/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2018,7 +2018,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/06/02/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f5/</loc>
+    <loc>https://ktkr3d.github.io/2011/06/04/gnome-shell-e38292e68ba1e5bcb5e38197e381a6e381bfe3819f6/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2081,15 +2081,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/07/31/android-ndk-pmd/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/2011/07/26/proton-sdk/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -2099,7 +2090,25 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/2011/07/31/android-ndk-pmd/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/2011/08/10/android-ndk/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2011/08/21/ubuntu-11-10-gnome-shell/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2153,7 +2162,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/11/28/android-x86-4-0-ics-2/</loc>
+    <loc>https://ktkr3d.github.io/2011/11/21/android-x86-3-2-honeycomb/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2171,7 +2180,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/11/21/android-x86-3-2-honeycomb/</loc>
+    <loc>https://ktkr3d.github.io/2011/11/28/android-x86-4-0-ics-2/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2189,7 +2198,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/12/11/wordpress-3-3/</loc>
+    <loc>https://ktkr3d.github.io/2011/12/08/android-x86-4-0-ics/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2198,7 +2207,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/12/08/android-x86-4-0-ics/</loc>
+    <loc>https://ktkr3d.github.io/2011/12/11/wordpress-3-3/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2216,16 +2225,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/08/21/ubuntu-11-10-gnome-shell/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2012/02/04/ubuntu-12-04-precise-pangolin-alpha-2-gnome-shell/</loc>
+    <loc>https://ktkr3d.github.io/2012/01/08/irrlicht-1-8-0_llinux/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2243,7 +2243,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2012/01/08/irrlicht-1-8-0_llinux/</loc>
+    <loc>https://ktkr3d.github.io/2012/02/04/ubuntu-12-04-precise-pangolin-alpha-2-gnome-shell/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2297,7 +2297,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2012/03/02/my-android-x86-4-0-rc1-for-inspiron-duo/</loc>
+    <loc>https://ktkr3d.github.io/2012/02/28/inspiron-duo-android-x86-4-0-rc1/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2306,7 +2306,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2012/02/28/inspiron-duo-android-x86-4-0-rc1/</loc>
+    <loc>https://ktkr3d.github.io/2012/03/02/my-android-x86-4-0-rc1-for-inspiron-duo/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2342,7 +2342,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2012/04/19/gnome-shell-3-4-autohide-top-panel-extension/</loc>
+    <loc>https://ktkr3d.github.io/2012/04/03/remmina/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2351,7 +2351,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2012/04/03/remmina/</loc>
+    <loc>https://ktkr3d.github.io/2012/04/19/gnome-shell-3-4-autohide-top-panel-extension/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2450,6 +2450,15 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/2012/06/04/inspiron-duo-windows-8-64bit/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/2012/06/06/burg-ubuntu-12-04-windows-8-android-x86-4-0/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -2496,15 +2505,6 @@
   
   <url>
     <loc>https://ktkr3d.github.io/2012/07/03/playing_diablo_3/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2012/06/04/inspiron-duo-windows-8-64bit/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2594,15 +2594,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2012/09/24/changing-the-date-format-in-nautilus-3-6-list-view/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/2012/09/24/gnome-shell-extension-drop-down-terminal/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -2621,7 +2612,25 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/2012/10/02/vlc-for-android-x86/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/2012/10/11/openshot-video-editor-1-4-3/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2012/09/24/changing-the-date-format-in-nautilus-3-6-list-view/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2648,7 +2657,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2012/10/02/vlc-for-android-x86/</loc>
+    <loc>https://ktkr3d.github.io/2012/11/11/ubuntu-12-10-hibernateresume/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2684,7 +2693,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2012/12/31/move-the-hot-corner-of-the-message-tray/</loc>
+    <loc>https://ktkr3d.github.io/2012/12/26/android-x86-4-2-1/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2693,7 +2702,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2012/11/11/ubuntu-12-10-hibernateresume/</loc>
+    <loc>https://ktkr3d.github.io/2012/12/31/move-the-hot-corner-of-the-message-tray/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2729,15 +2738,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2013/02/07/ubuntu-13-04-gnome-shell-3-7-5/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/2013/01/26/ubuntu-13-04-gnome-shell/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -2747,7 +2747,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2013/02/09/cloud9-ide/</loc>
+    <loc>https://ktkr3d.github.io/2013/02/07/ubuntu-13-04-gnome-shell-3-7-5/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2756,7 +2756,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2012/12/26/android-x86-4-2-1/</loc>
+    <loc>https://ktkr3d.github.io/2013/02/09/cloud9-ide/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2846,6 +2846,15 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/2013/06/01/android-studio/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/2013/06/16/octopress/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -2883,15 +2892,6 @@
   
   <url>
     <loc>https://ktkr3d.github.io/2013/07/14/docky-plus-cardapio/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2013/06/01/android-studio/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2954,7 +2954,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2013/11/09/screenfetch/</loc>
+    <loc>https://ktkr3d.github.io/2013/11/04/minetest/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2963,7 +2963,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2013/11/04/minetest/</loc>
+    <loc>https://ktkr3d.github.io/2013/11/09/screenfetch/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3044,7 +3044,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2014/01/12/gedit-3-dot-11-dot-2/</loc>
+    <loc>https://ktkr3d.github.io/2014/01/10/gitg-0-dot-3-1/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3053,7 +3053,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2014/01/10/gitg-0-dot-3-1/</loc>
+    <loc>https://ktkr3d.github.io/2014/01/12/gedit-3-dot-11-dot-2/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3080,6 +3080,15 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/2014/01/15/file-roller-3-dot-11-dot-4/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/2014/01/19/cairo-dock-session/</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -3089,7 +3098,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2014/01/25/android-x86-4-dot-4-2-local-build/</loc>
+    <loc>https://ktkr3d.github.io/2014/01/22/android-x86-4-dot-4-2/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3098,7 +3107,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2014/01/15/file-roller-3-dot-11-dot-4/</loc>
+    <loc>https://ktkr3d.github.io/2014/01/25/android-x86-4-dot-4-2-local-build/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3117,15 +3126,6 @@
   
   <url>
     <loc>https://ktkr3d.github.io/2014/02/06/girlfriend-prototype/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2014/01/22/android-x86-4-dot-4-2/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3171,6 +3171,15 @@
   
   <url>
     <loc>https://ktkr3d.github.io/2014/04/03/gnome-3-dot-12/</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/2014/04/06/dash-to-dock-on-bottom-gnome-shell-extension/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3225,15 +3234,6 @@
   
   <url>
     <loc>https://ktkr3d.github.io/2014/07/21/change-debian-slash-sh4-software-sources-again/</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/2014/04/06/dash-to-dock-on-bottom-gnome-shell-extension/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3341,7 +3341,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2015/01/19/chinachu/</loc>
+    <loc>https://ktkr3d.github.io/2015/01/01/borderlands-2-japanese-localization/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3350,7 +3350,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2015/01/01/borderlands-2-japanese-localization/</loc>
+    <loc>https://ktkr3d.github.io/2015/01/19/chinachu/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3458,15 +3458,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/peercast-radio/index.html</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/openvpn/index.html</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -3476,7 +3467,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/snippets/index.html</loc>
+    <loc>https://ktkr3d.github.io/peercast-radio/index.html</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3494,7 +3485,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/virtualization/index.html</loc>
+    <loc>https://ktkr3d.github.io/snippets/index.html</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3504,6 +3495,15 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/virtualization/index.html</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -4908,13 +4908,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/kinect/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/tags/ogre3d/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -4923,6 +4916,13 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/fedora/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/tags/kinect/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5167,14 +5167,14 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/inspiron/</loc>
+    <loc>https://ktkr3d.github.io/tags/virt-manager/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/virt-manager/</loc>
+    <loc>https://ktkr3d.github.io/tags/inspiron/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5216,20 +5216,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/debian/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/tags/visual-studio-code/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/tags/git/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -5244,7 +5230,21 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/lollypop/</loc>
+    <loc>https://ktkr3d.github.io/tags/debian/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/tags/visual-studio-code/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/tags/freemind/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5258,7 +5258,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/freemind/</loc>
+    <loc>https://ktkr3d.github.io/tags/lollypop/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5363,6 +5363,13 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/tags/rocketchat/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/tags/budgie/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -5406,13 +5413,6 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/nm-connection-editor/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/tags/rocketchat/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5482,14 +5482,14 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/Flatpak/</loc>
+    <loc>https://ktkr3d.github.io/tags/android-studio/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/android-studio/</loc>
+    <loc>https://ktkr3d.github.io/tags/Flatpak/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5524,13 +5524,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/gitlab-ce/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/tags/argos/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -5539,6 +5532,13 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/gnome-shell-extensions/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/tags/gitlab-ce/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5559,14 +5559,14 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/etcher/</loc>
+    <loc>https://ktkr3d.github.io/tags/qwmu/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/qwmu/</loc>
+    <loc>https://ktkr3d.github.io/tags/etcher/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5601,6 +5601,13 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/tags/puppeteer/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/tags/windows-terminal/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -5609,13 +5616,6 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/vscode/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/tags/puppeteer/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5741,13 +5741,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/sheetui/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/tags/epgstation/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -5756,6 +5749,13 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/pulseaudio/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/tags/sheetui/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5832,14 +5832,14 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/tauri/</loc>
+    <loc>https://ktkr3d.github.io/tags/hi10go/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/hi10go/</loc>
+    <loc>https://ktkr3d.github.io/tags/tauri/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5888,20 +5888,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/reveal-js/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/tags/vscode-reveal/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/tags/WoW/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -5924,6 +5910,20 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/wine/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/tags/reveal-js/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/tags/vscode-reveal/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6035,14 +6035,14 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/blesh/</loc>
+    <loc>https://ktkr3d.github.io/tags/fastfetch/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/fastfetch/</loc>
+    <loc>https://ktkr3d.github.io/tags/blesh/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6063,7 +6063,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/tray-launcher/</loc>
+    <loc>https://ktkr3d.github.io/tags/gtk/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6077,21 +6077,14 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/tags/tray-launcher/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/tags/fancywm/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/tags/glazewm/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/tags/gtk/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6105,6 +6098,13 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/tags/glazewm/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/tags/textinput/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -6112,14 +6112,14 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/alg/</loc>
+    <loc>https://ktkr3d.github.io/tags/ghostty/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/ghostty/</loc>
+    <loc>https://ktkr3d.github.io/tags/alg/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6175,13 +6175,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/tags/kdenlive/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/tags/gnome-remote-desktop/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -6190,6 +6183,13 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/jellyfin/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/tags/kdenlive/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6287,6 +6287,13 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/tags/vnc/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/tags/pygame/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -6295,13 +6302,6 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/libadwaita/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/tags/vnc/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6380,14 +6380,14 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/categories/cms/</loc>
+    <loc>https://ktkr3d.github.io/categories/gnome/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/categories/gnome/</loc>
+    <loc>https://ktkr3d.github.io/categories/cms/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6520,6 +6520,13 @@
   </url>
   
   <url>
+    <loc>https://ktkr3d.github.io/categories/virtualization/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/categories/filesystem/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -6528,13 +6535,6 @@
   
   <url>
     <loc>https://ktkr3d.github.io/categories/system/</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/categories/virtualization/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
