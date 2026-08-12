@@ -1,4 +1,4 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="592" height="175" viewBox="-0.5 -0.5 592 175" content="&lt;mxfile&gt;&lt;diagram id=&quot;K_PSVKGncYWfNqkEAFOZ&quot; name=&quot;ページ1&quot;&gt;1ZZNb4MgGIB/jcl2WCIfpe1x/dh22amHnYkyJUExlFbcrx9MrLV1semarr0YeICXl4fXaIDmmXlVtEjfZcxEAMPYBGgRQAjJ1D4dqGqApx4kisc1Ai1Y8S/mYejphsds3ZmopRSaF10YyTxnke4wqpQsu9M+pejuWtCEHYFVRMUx/eCxTms6geOWvzGepM3OoDlwRpvJ/iTrlMay3IuKlgGaKyl13crMnAnnrvFSr3v5ZXSXmGK5PmUBrBdsqdj4sz1HFZe5ZTOq7NNGDB8mBjz6fHXVSFByk8fMxQkDNCtTrtmqoJEbLe2tW5bqTNgesM3dOV3nOEmf95YpzcyhDVtFTGZMq8pOaUpo4gX6CoKh75ftfQDiWbp3F9gz6ksg2YVuLdmGF9UvDQ1Jg3cijVxRGh6Shu5DGoJXlDYakoadNGzgjUkD+KDSRj3SYI80cgFpZEja6DalYfKP0sZD0sZOGjTkj9KU1FS7uGjxNA0vI46AE8T1vaJniLPd9uv8M7b3i4OW3w==&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="592" height="175" viewBox="-0.5 -0.5 592 175" content="&lt;mxfile&gt;&lt;diagram id=&quot;K_PSVKGncYWfNqkEAFOZ&quot; name=&quot;ページ1&quot;&gt;1ZZNc4IwEIZ/DTN6cAaSGPToV9tLTx56jpAC00BoDIL99U1MEFE6Oq1j9UKSN7ubzbOr4MBZWj0LksevPKTMAW5YOXDuAOAB11WDVrZGQeOxESKRhNaoEZbJF7Wi9YuKJKTrlqHknMkkb4sBzzIayJZGhOBl2+yds/apOYnoibAMCDtV35JQxkYdAb/RX2gSxfXJHrb3S0ltbG+yjknIy4OocOHAmeBcmllazSjT8Gouxu/ph919YoJm8hIHYBw2hBX2bpNAJjxT2pQI9VQR3d6o8vo2X7mtIQheZCHVcVwHTss4kXSZk0DvlqrsSotlytTKU9P9PfXiNEmb94YKSatjGqqNKE+pFFtlYnfByAK0HbRvqbKph4etFh/UAlmN2BaI9qEbSmpiQXVDg+eggQeBhm8IDZ2DBh8DGgQ3hDY8Bw1paKgCdwbNQ0edNuyABjqg4StAw+egDe8TGsL/CM3vgOYAzKS+aE6yFif8WegX1HRFgo9ox2wQcMaFAyfKTkSrHlLBZvpH7ZsR+f0dpNpTzSI9yvoMlZ85xuiH5fJ1uUCF/1guwSXZtQGcD8budUqGvQtK1vXn8IuSqWXzXbDbO/i6gotv&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs>
         <filter id="dropShadow">
             <feGaussianBlur in="SourceAlpha" stdDeviation="1.7" result="blur"/>
@@ -17,13 +17,13 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 20px; margin-left: 141px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Acyion Bar 1 (8x1)
+                                Action Bar 1 (8x1)
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="220" y="24" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Acyion Bar 1 (8x1)
+                    Action Bar 1 (8x1)
                 </text>
             </switch>
         </g>
@@ -35,13 +35,13 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 80px; margin-left: 141px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Acyion Bar 2 (8x1)
+                                Action Bar 2 (8x1)
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="220" y="84" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Acyion Bar 2 (8x1)
+                    Action Bar 2 (8x1)
                 </text>
             </switch>
         </g>
@@ -53,13 +53,13 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 140px; margin-left: 141px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Acyion Bar 3 (8x1)
+                                Action Bar 3 (8x1)
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="220" y="144" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Acyion Bar 3 (8x1)
+                    Action Bar 3 (8x1)
                 </text>
             </switch>
         </g>
@@ -71,13 +71,13 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 80px; margin-left: 1px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Acyion Bar 4 (4x2)
+                                Action Bar 4 (4x2)
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="60" y="84" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Acyion Bar 4 (4x2)
+                    Action Bar 4 (4x2)
                 </text>
             </switch>
         </g>
@@ -89,13 +89,13 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 80px; margin-left: 321px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Acyion Bar 5 (4x2)
+                                Action Bar 5 (4x2)
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="380" y="84" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Acyion Bar 5 (4x2)
+                    Action Bar 5 (4x2)
                 </text>
             </switch>
         </g>
@@ -106,13 +106,17 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 80px; margin-left: 471px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Acyion Bar 7 (2x6)
+                                Ac
+                                <span style="background-color: rgb(42, 37, 47);">
+                                    t
+                                </span>
+                                ion Bar 7 (2x6)
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="550" y="84" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Acyion Bar 7 (2x6)
+                    Action Bar 7 (2x6)
                 </text>
             </switch>
         </g>
