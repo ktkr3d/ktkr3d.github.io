@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ktkr3d.github.io/2026/08/15/WoW-MyUsableItems-Addon/</loc>
-    
-    <lastmod>2026-08-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/2026/08/11/WoW-Keybinding/</loc>
     
     <lastmod>2026-08-14</lastmod>
@@ -6348,13 +6339,6 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/vf2/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ktkr3d.github.io/tags/addon/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
