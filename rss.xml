@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 15 Aug 2026 13:51:32 GMT</pubDate>
+    <pubDate>Sun, 16 Aug 2026 10:33:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Sat, 15 Aug 2026 09:00:28 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/myusableitems.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/MyUsableItems&quot;&gt;https://github.com/ktkr3d/MyUsableItems&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;装備しているアイテムの中で使用(&lt;code&gt;Use&lt;/code&gt;)できるものをアクションボタンで表示するアドオンを作成しました。&lt;br&gt;対象はトリンケットだけではなく、武器や防具で使用できるものを含めて自動的に列挙します。アイテムを使用するとクールダウン時間を表示します。オレンジのハンドルで移動できます。設定画面でロック状態、サイズ、縦&amp;#x2F;横配置、プロファイル(キャラクタ - レルム)を指定できます。&lt;/p&gt;</description>
+&lt;p&gt;装備しているアイテムの中で使用(&lt;code&gt;Use&lt;/code&gt;)できるものをアクションボタンで表示するアドオンを作成しました。&lt;br&gt;対象はトリンケットだけではなく、武器や防具で使用できるものを含めて自動的に列挙します。アイテムを使用するとクールダウン時間を表示します。オレンジのハンドルで移動できます。&lt;br&gt;設定画面でロック状態、サイズ、縦&amp;#x2F;横配置、プロファイル(キャラクタ - レルム)を指定できます。&lt;br&gt;ミニマップボタンを左クリックで設定画面表示、右クリックでロック状態をトグルします。&lt;/p&gt;</description>
       
       
       
