@@ -15,8 +15,29 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Mon, 17 Aug 2026 21:52:20 GMT</pubDate>
+    <pubDate>Thu, 27 Aug 2026 07:51:26 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Quickshell automatic rebuild</title>
+      <link>https://ktkr3d.github.io/2026/08/27/quickshell-automatic-rebuild/</link>
+      <guid>https://ktkr3d.github.io/2026/08/27/quickshell-automatic-rebuild/</guid>
+      <pubDate>Wed, 26 Aug 2026 23:36:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;Qt6を最新化したらquickshellが起動しなくなりました。quickshellとQt6の整合性が崩れたことが原因なのでQt6の更新と連動してquickshellをリビルドするようにしてみました。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/qt6/">qt6</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/quickshell/">quickshell</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/08/27/quickshell-automatic-rebuild/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>WoW OnUseGear Addon</title>
@@ -644,32 +665,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/11/30/Walker/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>CachyOS</title>
-      <link>https://ktkr3d.github.io/2025/11/29/CachyOS/</link>
-      <guid>https://ktkr3d.github.io/2025/11/29/CachyOS/</guid>
-      <pubDate>Fri, 28 Nov 2025 23:05:23 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;CachyOSを使ってみました。GUIインストーラなので導入がしやすいですね。&lt;/p&gt;
-&lt;a href=&quot;https://cachyos.org&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot;</description>
-          
-        
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/cahyos/">cahyos</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/11/29/CachyOS/#disqus_thread</comments>
       
     </item>
     
