@@ -1,0 +1,773 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>GeoChart SVG image | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Google ChartsのGeoChartで作成した地図をSVGファイル化してみます。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GeoChart SVG image">
+<meta property="og:url" content="https://ktkr3d.github.io/2026/08/31/GeoChart-SVG-image/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="Google ChartsのGeoChartで作成した地図をSVGファイル化してみます。">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/geochart.svg">
+<meta property="article:published_time" content="2026-08-31T09:49:43.000Z">
+<meta property="article:modified_time" content="2026-08-31T14:02:26.561Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="google-charts">
+<meta property="article:tag" content="marp">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/geochart.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GeoChart SVG image",
+  "url": "https://ktkr3d.github.io/2026/08/31/GeoChart-SVG-image/",
+  "image": "https://ktkr3d.github.io/images/geochart.svg",
+  "datePublished": "2026-08-31T09:49:43.000Z",
+  "dateModified": "2026-08-31T14:02:26.561Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2026/08/31/GeoChart-SVG-image/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'GeoChart SVG image',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">505</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">212</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">GeoChart SVG image</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">GeoChart SVG image</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-08-31T09:49:43.000Z" title="Created 2026-08-31 18:49:43">2026-08-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-08-31T14:02:26.561Z" title="Updated 2026-08-31 23:02:26">2026-08-31</time></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p><img src="/images/geochart.svg"></p>
+<p>Google ChartsのGeoChartで作成した地図をSVGファイル化してみます。</p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Google Chrome</li>
+<li>Hexo<ul>
+<li>hexo-tag-googlecharts</li>
+</ul>
+</li>
+<li>Visual Studio Code<ul>
+<li>Marp for VS Code</li>
+</ul>
+</li>
+</ul>
+<h3 id="手順"><a href="#手順" class="headerlink" title="手順"></a>手順</h3><ol>
+<li><p>HexoでGoogle Chartsの地図を作成<br> 私はHexoで<a target="_blank" rel="noopener" href="https://github.com/juampi92/hexo-tag-googlecharts">hexo-tag-googlecharts</a>タグプラグインを使っています。日本地図の最低限の記載は以下となります。</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts GeoChart %&#125;</span><br><span class="line">GeoChart</span><br><span class="line">&#123;&quot;region&quot;: &quot;JP&quot;&#125;</span><br><span class="line">&#x27;都道府県&#x27;, &#x27;数値&#x27;</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
+ <div id="googleChart3164"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.GeoChart(document.getElementById("googleChart3164"))).draw(google.visualization.arrayToDataTable([['都道府県', '数値']]),{"region":"JP","title":"GeoChart","width":400,"height":400});
+      });
+    })();
+  }
+</script>
+
+<p> 過去の参考記事<br> <a href="https://ktkr3d.github.io/2019/06/26/Hexo-Tag-Google-Charts">https://ktkr3d.github.io/2019/06/26/Hexo-Tag-Google-Charts</a></p>
+</li>
+<li><p>ブラウザで表示して<kbd>F12</kbd>でデベロッパーツールを起動</p>
+</li>
+<li><p>選択ツールで地図をクリック</p>
+</li>
+<li><p>上位階層の<code>&lt;svg&gt;</code>タグを右クリックして、Copy &gt; Copy elementを選択</p>
+</li>
+<li><p>エディタに貼り付け、ファイル拡張子を.svgにして保存<br> 最上位の<code>&lt;svg&gt;</code>タグは以下のようになっている。</p>
+ <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;A chart.&quot;</span> <span class="attr">style</span>=<span class="string">&quot;overflow: hidden;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>画像として扱えるように<code>&lt;svg&gt;</code>タグにxmlns属性を追加</p>
+ <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">xmlns=&quot;http://www.w3.org/2000/svg&quot; </span><br></pre></td></tr></table></figure>
+<p> VSCode上で画像表示とテキスト表示を切り替えるには、右上のドロップダウンリストボックスでモードを切り替えます。</p>
+</li>
+<li><p>位置の移動、拡大する場合は以下のviewBox属性を追加</p>
+ <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">viewBox=&quot;90 70 200 200&quot; </span><br></pre></td></tr></table></figure>
+<p> 横移動、縦移動、幅、高さ</p>
+<p> <img src="/images/google-charts-geochart.svg"></p>
+</li>
+</ol>
+<h3 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h3><ul>
+<li><p>スライドに貼り付けてみました<br>  ソースコードは <a href="/images/sample-presentation2.md">sample-presentation2.md</a><br>  該当箇所はスライド9</p>
+  
+
+	<div class="row">
+    <embed src="/images/sample-presentation2.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</li>
+<li><p>Marpの過去記事<br>  <a href="https://ktkr3d.github.io/2017/04/14/Marp">https://ktkr3d.github.io/2017/04/14/Marp</a><br>  <a href="https://ktkr3d.github.io/2020/05/27/Marp-for-VS-Code">https://ktkr3d.github.io/2020/05/27/Marp-for-VS-Code</a></p>
+</li>
+</ul>
+<h3 id="その他のGoogle-Charts-GeoChartのサンプル"><a href="#その他のGoogle-Charts-GeoChartのサンプル" class="headerlink" title="その他のGoogle Charts - GeoChartのサンプル"></a>その他のGoogle Charts - GeoChartのサンプル</h3><p><a target="_blank" rel="noopener" href="https://developers.google.com/chart/interactive/docs/gallery/geochart?hl=ja">https://developers.google.com/chart/interactive/docs/gallery/geochart?hl=ja</a></p>
+<ul>
+<li><p>日本地図<br>  私はHexoで<a target="_blank" rel="noopener" href="https://github.com/juampi92/hexo-tag-googlecharts">hexo-tag-googlecharts</a>タグプラグインを使っているので以下となります。</p>
+  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts GeoChart %&#125;</span><br><span class="line">GeoChart</span><br><span class="line">&#123;&quot;region&quot;: &quot;JP&quot;, &quot;displayMode&quot;: &quot;regions&quot;, &quot;backgroundColor&quot;: &quot;#ebf7fe&quot;, &quot;resolution&quot;: &quot;provinces&quot;, &quot;colorAxis&quot;: &#123;&quot;colors&quot;: [&quot;white&quot;, &quot;green&quot;]&#125;, &quot;width&quot;: 800, &quot;height&quot;: 600&#125;</span><br><span class="line">&#x27;都道府県&#x27;, &#x27;回数&#x27;</span><br><span class="line">&#x27;北海道&#x27;,   5</span><br><span class="line">&#x27;東京&#x27;,   5</span><br><span class="line">&#x27;愛知&#x27;,   5</span><br><span class="line">&#x27;大阪&#x27;,   5</span><br><span class="line">&#x27;福岡&#x27;,   5</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
+
+  <div id="googleChart8864"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.GeoChart(document.getElementById("googleChart8864"))).draw(google.visualization.arrayToDataTable([['都道府県', '回数'],['北海道',   5],['東京',   5],['愛知',   5],['大阪',   5],['福岡',   5]]),{"region":"JP","displayMode":"regions","backgroundColor":"#ebf7fe","resolution":"provinces","colorAxis":{"colors":["white","green"]},"width":400,"height":400,"title":"GeoChart"});
+      });
+    })();
+  }
+</script>
+</li>
+<li><p>地域の GeoChart</p>
+  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts GeoChart %&#125;</span><br><span class="line">GeoChart</span><br><span class="line">&#123;&#125;</span><br><span class="line">&#x27;Country&#x27;, &#x27;Popularity&#x27;</span><br><span class="line">&#x27;Germany&#x27;, 200</span><br><span class="line">&#x27;United States&#x27;, 300</span><br><span class="line">&#x27;Brazil&#x27;, 400</span><br><span class="line">&#x27;Canada&#x27;, 500</span><br><span class="line">&#x27;France&#x27;, 600</span><br><span class="line">&#x27;RU&#x27;, 700</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
+
+  <div id="googleChart5411"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.GeoChart(document.getElementById("googleChart5411"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":"GeoChart","width":400,"height":400});
+      });
+    })();
+  }
+</script>
+</li>
+<li><p>マーカー GeoChart</p>
+  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts GeoChart %&#125;</span><br><span class="line">GeoChart</span><br><span class="line">&#123;&quot;region&quot;: &quot;IT&quot;, &quot;displayMode&quot;: &quot;markers&quot;, &quot;colorAxis&quot;: &#123;&quot;colors&quot;: [&quot;green&quot;, &quot;blue&quot;]&#125;&#125;</span><br><span class="line">&#x27;City&#x27;,   &#x27;Population&#x27;, &#x27;Area&#x27;</span><br><span class="line">&#x27;Rome&#x27;,      2761477,    1285.31</span><br><span class="line">&#x27;Milan&#x27;,     1324110,    181.76</span><br><span class="line">&#x27;Naples&#x27;,    959574,     117.27</span><br><span class="line">&#x27;Turin&#x27;,     907563,     130.17</span><br><span class="line">&#x27;Palermo&#x27;,   655875,     158.9</span><br><span class="line">&#x27;Genoa&#x27;,     607906,     243.60</span><br><span class="line">&#x27;Bologna&#x27;,   380181,     140.7</span><br><span class="line">&#x27;Florence&#x27;,  371282,     102.41</span><br><span class="line">&#x27;Fiumicino&#x27;, 67370,      213.44</span><br><span class="line">&#x27;Anzio&#x27;,     52192,      43.43</span><br><span class="line">&#x27;Ciampino&#x27;,  38262,      11</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
+
+  <div id="googleChart4268"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.GeoChart(document.getElementById("googleChart4268"))).draw(google.visualization.arrayToDataTable([['City',   'Population', 'Area'],['Rome',      2761477,    1285.31],['Milan',     1324110,    181.76],['Naples',    959574,     117.27],['Turin',     907563,     130.17],['Palermo',   655875,     158.9],['Genoa',     607906,     243.60],['Bologna',   380181,     140.7],['Florence',  371282,     102.41],['Fiumicino', 67370,      213.44],['Anzio',     52192,      43.43],['Ciampino',  38262,      11]]),{"region":"IT","displayMode":"markers","colorAxis":{"colors":["green","blue"]},"title":"GeoChart","width":400,"height":400});
+      });
+    })();
+  }
+</script>
+</li>
+<li><p>グラフを色分けする(調整中)</p>
+  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts GeoChart %&#125;</span><br><span class="line">GeoChart</span><br><span class="line">&#123;&quot;region&quot;: &quot;002&quot;, &quot;colorAxis&quot;: &#123;&quot;colors&quot;: [&quot;#00853f&quot;, &quot;black&quot;, &quot;#e31b23&quot;]&#125;, &quot;backgroundColor&quot;: &quot;#81d4fa&quot;, &quot;datalessRegionColor&quot;: &quot;#f8bbd0&quot;, &quot;defaultColor&quot;: &quot;#f5f5f5&quot;&#125;</span><br><span class="line">&#x27;Country&#x27;, &#x27;Latitude&#x27;</span><br><span class="line">&#x27;Algeria&#x27;, 36</span><br><span class="line">&#x27;Angola&#x27;, -8</span><br><span class="line">&#x27;Benin&#x27;, 6</span><br><span class="line">&#x27;Botswana&#x27;, -24</span><br><span class="line">&#x27;Burkina Faso&#x27;, 12</span><br><span class="line">&#x27;Burundi&#x27;, -3</span><br><span class="line">&#x27;Cameroon&#x27;, 3</span><br><span class="line">&#x27;Canary Islands&#x27;, 28</span><br><span class="line">&#x27;Cape Verde&#x27;, 15</span><br><span class="line">&#x27;Central African Republic&#x27;, 4</span><br><span class="line">&#x27;Ceuta&#x27;, 35</span><br><span class="line">&#x27;Chad&#x27;, 12</span><br><span class="line">&#x27;Comoros&#x27;, -12</span><br><span class="line">&#x27;Cote d\&#x27;Ivoire&#x27;, 6</span><br><span class="line">&#x27;Democratic Republic of the Congo&#x27;, -3</span><br><span class="line">&#x27;Djibouti&#x27;, 12</span><br><span class="line">&#x27;Egypt&#x27;, 26</span><br><span class="line">&#x27;Equatorial Guinea&#x27;, 3</span><br><span class="line">&#x27;Eritrea&#x27;, 15</span><br><span class="line">&#x27;Ethiopia&#x27;, 9</span><br><span class="line">&#x27;Gabon&#x27;, 0</span><br><span class="line">&#x27;Gambia&#x27;, 13</span><br><span class="line">&#x27;Ghana&#x27;, 5</span><br><span class="line">&#x27;Guinea&#x27;, 10</span><br><span class="line">&#x27;Guinea-Bissau&#x27;, 12</span><br><span class="line">&#x27;Kenya&#x27;, -1</span><br><span class="line">&#x27;Lesotho&#x27;, -29</span><br><span class="line">&#x27;Liberia&#x27;, 6</span><br><span class="line">&#x27;Libya&#x27;, 32</span><br><span class="line">&#x27;Madagascar&#x27;, null</span><br><span class="line">&#x27;Madeira&#x27;, 33</span><br><span class="line">&#x27;Malawi&#x27;, -14</span><br><span class="line">&#x27;Mali&#x27;, 12</span><br><span class="line">&#x27;Mauritania&#x27;, 18</span><br><span class="line">&#x27;Mauritius&#x27;, -20</span><br><span class="line">&#x27;Mayotte&#x27;, -13</span><br><span class="line">&#x27;Melilla&#x27;, 35</span><br><span class="line">&#x27;Morocco&#x27;, 32</span><br><span class="line">&#x27;Mozambique&#x27;, -25</span><br><span class="line">&#x27;Namibia&#x27;, -22</span><br><span class="line">&#x27;Niger&#x27;, 14</span><br><span class="line">&#x27;Nigeria&#x27;, 8</span><br><span class="line">&#x27;Republic of the Congo&#x27;, -1</span><br><span class="line">&#x27;Réunion&#x27;, -21</span><br><span class="line">&#x27;Rwanda&#x27;, -2</span><br><span class="line">&#x27;Saint Helena&#x27;, -16</span><br><span class="line">&#x27;São Tomé and Principe&#x27;, 0</span><br><span class="line">&#x27;Senegal&#x27;, 15</span><br><span class="line">&#x27;Seychelles&#x27;, -5</span><br><span class="line">&#x27;Sierra Leone&#x27;, 8</span><br><span class="line">&#x27;Somalia&#x27;, 2</span><br><span class="line">&#x27;Sudan&#x27;, 15</span><br><span class="line">&#x27;South Africa&#x27;, -30</span><br><span class="line">&#x27;South Sudan&#x27;, 5</span><br><span class="line">&#x27;Swaziland&#x27;, -26</span><br><span class="line">&#x27;Tanzania&#x27;, -6</span><br><span class="line">&#x27;Togo&#x27;, 6</span><br><span class="line">&#x27;Tunisia&#x27;, 34</span><br><span class="line">&#x27;Uganda&#x27;, 1</span><br><span class="line">&#x27;Western Sahara&#x27;, 25</span><br><span class="line">&#x27;Zambia&#x27;, -15</span><br><span class="line">&#x27;Zimbabwe&#x27;, -18</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
+
+
+  <div id="googleChart103"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.GeoChart(document.getElementById("googleChart103"))).draw(google.visualization.arrayToDataTable([[   'Country', 'Latitude'],[   'Algeria', 36],[   'Angola', -8],[   'Benin', 6],[   'Botswana', -24],[   'Burkina Faso', 12],[   'Burundi', -3],[   'Cameroon', 3],[   'Canary Islands', 28],[   'Cape Verde', 15],[   'Central African Republic', 4],[   'Ceuta', 35],[   'Chad', 12],[   'Comoros', -12],[   'Cote dIvoire', 6],[   'Democratic Republic of the Congo', -3],[   'Djibouti', 12],[   'Egypt', 26],[   'Equatorial Guinea', 3],[   'Eritrea', 15],[   'Ethiopia', 9],[   'Gabon', 0],[   'Gambia', 13],[   'Ghana', 5],[   'Guinea', 10],[   'Guinea-Bissau', 12],[   'Kenya', -1],[   'Lesotho', -29],[   'Liberia', 6],[   'Libya', 32],[   'Madagascar', null],[   'Madeira', 33],[   'Malawi', -14],[   'Mali', 12],[   'Mauritania', 18],[   'Mauritius', -20],[   'Mayotte', -13],[   'Melilla', 35],[   'Morocco', 32],[   'Mozambique', -25],[   'Namibia', -22],[   'Niger', 14],[   'Nigeria', 8],[   'Republic of the Congo', -1],[   'Réunion', -21],[   'Rwanda', -2],[   'Saint Helena', -16],[   'São Tomé and Principe', 0],[   'Senegal', 15],[   'Seychelles', -5],[   'Sierra Leone', 8],[   'Somalia', 2],[   'Sudan', 15],[   'South Africa', -30],[   'South Sudan', 5],[   'Swaziland', -26],[   'Tanzania', -6],[   'Togo', 6],[   'Tunisia', 34],[   'Uganda', 1],[   'Western Sahara', 25],[   'Zambia', -15],[   'Zimbabwe', -18],[   ]]),{"region":"002","colorAxis":{"colors":["#00853f","black","#e31b23"]},"backgroundColor":"#81d4fa","datalessRegionColor":"#f8bbd0","defaultColor":"#f5f5f5","title":"   GeoChart","width":400,"height":400});
+      });
+    })();
+  }
+</script></li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/marp/">marp</a><a class="post-meta__tags" href="/tags/google-charts/">google-charts</a></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/08/27/quickshell-automatic-rebuild/" title="Quickshell automatic rebuild"><img class="cover" src="/images/Arch_Linux__Crystal__icon.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Quickshell automatic rebuild</div></div><div class="info-2"><div class="info-item-1">Qt6を最新化したらquickshellが起動しなくなりました。quickshellとQt6の整合性が崩れたことが原因なのでQt6の更新と連動してquickshellをリビルドするようにしてみました。   環境 Arch Linux qt6 quickshell    事象Qt6が更新されるとquickshellが起動しなくなる。 &gt; qsqs: symbol lookup error: qs: undefined symbol: _ZN23QUntypedPropertyBindingC1EP23QPropertyBindingPrivate, version Qt_6_PRIVATE_API  Incompatibility with new Qt versionhttps://github.com/quickshell-mirror/quickshell/issues/208 対策元々、quickshellには標準フック(/usr/share/libalpm/hooks/quickshell-check.hook)が存在しています。 /usr/share/libalp...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2020/05/27/Marp-for-VS-Code/" title="Marp for VS Code"><img class="cover" src="https://marp.app/assets/marp-logo.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-27</div><div class="info-item-2">Marp for VS Code</div></div><div class="info-2"><div class="info-item-1">https://marp.app/https://github.com/marp-team/marp-vscodeMarp はMarkdown でスライドショーを作成できるツールです。Marp for VS Code を使ってみました。Visual Studio Code 上でMarp を使えるようになったんですね。 2020-06-05 追記Visual Studio Code 上でいろいろ書けるようになりました。  スライド本体(Markdown 形式)Marp for VS Codeで記述 図形(Draw.io SVG形式)Draw.io VS Code Integration で描画してSVG 形式で出力 グラフ(Vega SVG形式)Vega Viewer でJSON データをSVG 形式で出力  2020-07-08 追記 目次 無理やり感のある段組み 地図 テーマカスタマイズ ページ番号非表示    	      	       環境 Windows 10 Insider Preview 19631 Visual Studio Code 1.45.1 Marp fo...</div></div></div></a><a class="pagination-related" href="/2017/04/14/Marp/" title="Marp"><img class="cover" src="/images/marp.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-04-14</div><div class="info-item-2">Marp</div></div><div class="info-2"><div class="info-item-1"> https://yhatt.github.io/marp/Markdown でスライドが作れるMarp を使ってみました。   ダウンロードと実行https://github.com/yhatt/marp/releases からアーカイブをダウンロードします。 $ mkdir marp &amp;&amp; cd marp$ tar zxvf ../0.0.10-Marp-linux-x64.tar.gz$ ./Marp  PDF 出力[File]-[Export Slides as PDF…] Hexo でPDF を表示 プラグインのインストールhttps://github.com/superalsrk/hexo-pdf$ npm install --save hexo-pdf ポストでの表記&#123;% pdf /images/ubuntu-gnome-17.04.pdf %&#125; 表示例  	      	     </div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">505</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">212</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%92%B0%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E9%A0%86"><span class="toc-number">2.</span> <span class="toc-text">手順</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">利用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AEGoogle-Charts-GeoChart%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB"><span class="toc-number">4.</span> <span class="toc-text">その他のGoogle Charts - GeoChartのサンプル</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/31/GeoChart-SVG-image/" title="GeoChart SVG image">GeoChart SVG image</a><time datetime="2026-08-31T09:49:43.000Z" title="Created 2026-08-31 18:49:43">2026-08-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/27/quickshell-automatic-rebuild/" title="Quickshell automatic rebuild">Quickshell automatic rebuild</a><time datetime="2026-08-26T23:36:50.000Z" title="Created 2026-08-27 08:36:50">2026-08-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/15/WoW-OnUseGear-Addon/" title="WoW OnUseGear Addon">WoW OnUseGear Addon</a><time datetime="2026-08-15T09:00:28.000Z" title="Created 2026-08-15 18:00:28">2026-08-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/12/SSF/" title="SSF">SSF</a><time datetime="2026-08-11T18:55:12.000Z" title="Created 2026-08-12 03:55:12">2026-08-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/11/WoW-Keybinding/" title="WoW Keybinding">WoW Keybinding</a><time datetime="2026-08-11T08:53:47.000Z" title="Created 2026-08-11 17:53:47">2026-08-11</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const parseViewBox = viewBox => {
+    if (!viewBox) return null
+    const parts = viewBox.trim().split(/[\s,]+/).map(n => Number(n))
+    if (parts.length !== 4 || parts.some(n => Number.isNaN(n))) return null
+    return parts
+  }
+
+  const getSvgViewBox = svg => {
+    const attr = parseViewBox(svg.getAttribute('viewBox'))
+    if (attr) return attr
+
+    // Fallback: use bbox to build a viewBox
+    try {
+      const bbox = svg.getBBox()
+      if (bbox && bbox.width && bbox.height) return [bbox.x, bbox.y, bbox.width, bbox.height]
+    } catch (e) {
+      // getBBox may fail on some edge cases; ignore
+    }
+
+    const w = Number(svg.getAttribute('width')) || 0
+    const h = Number(svg.getAttribute('height')) || 0
+    if (w > 0 && h > 0) return [0, 0, w, h]
+    return [0, 0, 100, 100]
+  }
+
+  const setSvgViewBox = (svg, vb) => {
+    svg.setAttribute('viewBox', `${vb[0]} ${vb[1]} ${vb[2]} ${vb[3]}`)
+  }
+
+  const clamp = (v, min, max) => Math.max(min, Math.min(max, v))
+
+  const openSvgInNewTab = ({ source, initViewBox }) => {
+    const getClonedSvg = () => {
+      if (typeof source === 'string') {
+        const template = document.createElement('template')
+        template.innerHTML = source.trim()
+        const svg = template.content.querySelector('svg')
+        return svg ? svg.cloneNode(true) : null
+      }
+      if (source && typeof source.cloneNode === 'function') {
+        return source.cloneNode(true)
+      }
+      return null
+    }
+
+    const clone = getClonedSvg()
+    if (!clone) return
+    if (initViewBox && initViewBox.length === 4) {
+      clone.setAttribute('viewBox', initViewBox.join(' '))
+    }
+    if (!clone.getAttribute('xmlns')) clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    if (!clone.getAttribute('xmlns:xlink') && clone.innerHTML.includes('xlink:')) {
+      clone.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink')
+    }
+    // inject background to match current theme
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark'
+    const bg = getComputedStyle(document.body).backgroundColor || (isDark ? '#1e1e1e' : '#ffffff')
+    if (!clone.style.background) clone.style.background = bg
+
+    const serializer = new XMLSerializer()
+    const svgSource = serializer.serializeToString(clone)
+    const htmlSource = `<!doctype html><html><head><meta charset="utf-8" />
+      <style>
+        html, body { width: 100%; height: 100%; margin: 0; display: flex; align-items: center; justify-content: center; background: ${bg}; }
+        svg { max-width: 100%; max-height: 100%; height: auto; width: auto; }
+      </style>
+      </head><body>${svgSource}</body></html>`
+    const blob = new Blob([htmlSource], { type: 'text/html;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    window.open(url, '_blank', 'noopener')
+
+    setTimeout(() => URL.revokeObjectURL(url), 5000)
+  }
+
+  const attachMermaidViewerButton = wrap => {
+    let btn = wrap.querySelector('.mermaid-open-btn')
+    if (!btn) {
+      btn = document.createElement('button')
+      btn.type = 'button'
+      btn.className = 'mermaid-open-btn'
+      wrap.appendChild(btn)
+    }
+
+    btn.innerHTML = '<i class="fa fa-search fa-fw" aria-hidden="true"></i>'
+
+    if (!btn.__mermaidViewerBound) {
+      btn.addEventListener('click', e => {
+        e.preventDefault()
+        e.stopPropagation()
+        const svg = wrap.__mermaidOriginalSvg || wrap.querySelector('svg')
+        if (!svg) return
+        const initViewBox = wrap.__mermaidInitViewBox
+        openSvgInNewTab({ source: svg, initViewBox })
+      })
+      btn.__mermaidViewerBound = true
+    }
+  }
+
+  // Zoom around a point (px, py) in the SVG viewport (in viewBox coordinates)
+  const zoomAtPoint = (vb, factor, px, py) => {
+    const w = vb[2] * factor
+    const h = vb[3] * factor
+    const nx = px - (px - vb[0]) * factor
+    const ny = py - (py - vb[1]) * factor
+    return [nx, ny, w, h]
+  }
+
+  const initMermaidGestures = wrap => {
+    // Clean up previous event listeners and pending frames
+    if (wrap.__mermaidAbortController) {
+      wrap.__mermaidAbortController.abort()
+      if (wrap.__mermaidRafId) cancelAnimationFrame(wrap.__mermaidRafId)
+    }
+    const ac = new AbortController()
+    wrap.__mermaidAbortController = ac
+    const svg = wrap.querySelector('svg')
+    if (!svg) return
+
+    // Ensure viewBox exists so gestures always work
+    const initVb = getSvgViewBox(svg)
+    wrap.__mermaidInitViewBox = initVb
+    wrap.__mermaidCurViewBox = initVb.slice()
+    setSvgViewBox(svg, initVb)
+    // Disable default gestures to prevent scroll chaining and pinch-zoom penetration in Chrome
+    svg.style.touchAction = 'none'
+
+    // Cache BoundingClientRect, throttled on scroll to reduce reflow
+    let cachedRect = svg.getBoundingClientRect()
+    let rectDirty = false
+    const markRectDirty = () => { rectDirty = true }
+    window.addEventListener('resize', markRectDirty, { signal: ac.signal })
+    window.addEventListener('scroll', markRectDirty, { signal: ac.signal, capture: true })
+    const getRect = () => {
+      if (rectDirty) {
+        cachedRect = svg.getBoundingClientRect()
+        rectDirty = false
+      }
+      return cachedRect
+    }
+
+    // Precompute clamp bounds from initial viewBox
+    const minW = initVb[2] * 0.1
+    const maxW = initVb[2] * 10
+    const minH = initVb[3] * 0.1
+    const maxH = initVb[3] * 10
+    const clampVb = vb => {
+      const out = vb.slice()
+      out[2] = clamp(out[2], minW, maxW)
+      out[3] = clamp(out[3], minH, maxH)
+      return out
+    }
+
+    // Throttle DOM updates using requestAnimationFrame
+    let pendingVb = null
+    let rafId = null
+    const applyVb = () => {
+      if (pendingVb) {
+        wrap.__mermaidCurViewBox = pendingVb
+        setSvgViewBox(svg, pendingVb)
+        pendingVb = null
+      }
+      rafId = null
+      wrap.__mermaidRafId = null
+    }
+    const setCurVb = vb => {
+      pendingVb = clampVb(vb)
+      if (!rafId) {
+        rafId = requestAnimationFrame(applyVb)
+        wrap.__mermaidRafId = rafId
+      }
+    }
+
+    const state = {
+      pointers: new Map(),
+      startVb: null,
+      startDist: 0,
+      lastPointerX: 0,
+      lastPointerY: 0
+    }
+
+    const onPointerDown = e => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return
+      svg.setPointerCapture(e.pointerId)
+      const curVb = wrap.__mermaidCurViewBox
+      state.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+      if (state.pointers.size === 1) {
+        state.startVb = curVb.slice()
+        state.lastPointerX = e.clientX
+        state.lastPointerY = e.clientY
+      } else if (state.pointers.size === 2) {
+        const pts = [...state.pointers.values()]
+        const dx = pts[0].x - pts[1].x
+        const dy = pts[0].y - pts[1].y
+        state.startDist = Math.hypot(dx, dy)
+        state.startVb = curVb.slice()
+      }
+    }
+
+    const onPointerMove = e => {
+      if (!state.pointers.has(e.pointerId)) return
+      state.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+      const curVb = wrap.__mermaidCurViewBox
+      const rect = getRect()
+      if (state.pointers.size === 1 && state.startVb) {
+        const p = state.pointers.values().next().value
+        const dxClient = p.x - state.lastPointerX
+        const dyClient = p.y - state.lastPointerY
+        state.lastPointerX = p.x
+        state.lastPointerY = p.y
+        const dx = dxClient * (curVb[2] / rect.width)
+        const dy = dyClient * (curVb[3] / rect.height)
+        setCurVb([curVb[0] - dx, curVb[1] - dy, curVb[2], curVb[3]])
+        return
+      }
+      if (state.pointers.size === 2 && state.startVb && state.startDist > 0) {
+        const pts = [...state.pointers.values()]
+        const dx = pts[0].x - pts[1].x
+        const dy = pts[0].y - pts[1].y
+        const dist = Math.hypot(dx, dy)
+        if (!dist) return
+        const factor = state.startDist / dist
+        const cx = (pts[0].x + pts[1].x) / 2
+        const cy = (pts[0].y + pts[1].y) / 2
+        const px = curVb[0] + (cx - rect.left) * (curVb[2] / rect.width)
+        const py = curVb[1] + (cy - rect.top) * (curVb[3] / rect.height)
+        setCurVb(zoomAtPoint(state.startVb, factor, px, py))
+      }
+    }
+
+    const onPointerUpOrCancel = e => {
+      // Release PointerCapture to avoid event capture anomalies
+      if (svg.hasPointerCapture && svg.hasPointerCapture(e.pointerId)) {
+        svg.releasePointerCapture(e.pointerId)
+      }
+      state.pointers.delete(e.pointerId)
+      if (state.pointers.size === 0) {
+        state.startVb = null
+        state.startDist = 0
+      } else if (state.pointers.size === 1) {
+        const p = state.pointers.values().next().value
+        state.lastPointerX = p.x
+        state.lastPointerY = p.y
+      }
+    }
+
+    const onWheel = e => {
+      // Prevent event bubbling from triggering external scroll
+      e.preventDefault()
+      e.stopPropagation()
+      // Normalize deltaY across deltaMode (Chrome uses pixels, Safari uses lines)
+      let delta = e.deltaY
+      if (e.deltaMode === 1) delta *= 16
+      else if (e.deltaMode === 2) delta *= 400
+
+      // Continuous zoom factor: smoother than fixed 1.1/0.9 steps
+      const zoomFactor = Math.pow(1.001, delta)
+
+      const curVb = wrap.__mermaidCurViewBox
+      const rect = getRect()
+      const px = curVb[0] + (e.clientX - rect.left) * (curVb[2] / rect.width)
+      const py = curVb[1] + (e.clientY - rect.top) * (curVb[3] / rect.height)
+      setCurVb(zoomAtPoint(curVb, zoomFactor, px, py))
+    }
+
+    const onDblClick = () => {
+      const init = wrap.__mermaidInitViewBox
+      if (init) setCurVb(init)
+    }
+
+    svg.addEventListener('pointerdown', onPointerDown, { signal: ac.signal })
+    svg.addEventListener('pointermove', onPointerMove, { signal: ac.signal })
+    svg.addEventListener('pointerup', onPointerUpOrCancel, { signal: ac.signal })
+    svg.addEventListener('pointercancel', onPointerUpOrCancel, { signal: ac.signal })
+    svg.addEventListener('wheel', onWheel, { passive: false, signal: ac.signal })
+    svg.addEventListener('dblclick', onDblClick, { signal: ac.signal })
+  }
+
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      // Clean up event listeners before removing old SVG
+      if (item.__mermaidAbortController) {
+        item.__mermaidAbortController.abort()
+      }
+      const oldSvg = item.querySelector('svg')
+      if (oldSvg) oldSvg.remove()
+      let config = {}
+      try {
+        config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      } catch (e) {
+        console.warn('[mermaid] failed to parse dataset.config:', e)
+      }
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+        if (true) initMermaidGestures(item)
+        item.__mermaidOriginalSvg = svg
+        if (true) attachMermaidViewerButton(item)
+      }
+
+      const handleError = err => {
+        console.error(`[mermaid] render failed for block #${index}:`, err)
+        const errorEl = document.createElement('div')
+        errorEl.className = 'mermaid-error'
+        errorEl.textContent = `Mermaid render error: ${err.message || err}`
+        mermaidSrc.insertAdjacentElement('afterend', errorEl)
+      }
+
+      try {
+        const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+        // mermaid v9 and v10 compatibility
+        if (typeof renderFn === 'string') {
+          renderMermaid(renderFn)
+        } else {
+          renderFn.then(({ svg }) => renderMermaid(svg)).catch(handleError)
+        }
+      } catch (err) {
+        handleError(err)
+      }
+    })
+  }
+
+  const codeToMermaid = $article => {
+    const codeMermaidEle = $article.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    const $article = document.getElementById('article-container')
+    if (!$article) return
+
+    if (true) codeToMermaid($article)
+    const $mermaid = $article.querySelectorAll('.mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

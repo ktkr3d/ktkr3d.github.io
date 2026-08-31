@@ -15,8 +15,30 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 29 Aug 2026 21:52:30 GMT</pubDate>
+    <pubDate>Mon, 31 Aug 2026 14:02:26 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>GeoChart SVG image</title>
+      <link>https://ktkr3d.github.io/2026/08/31/GeoChart-SVG-image/</link>
+      <guid>https://ktkr3d.github.io/2026/08/31/GeoChart-SVG-image/</guid>
+      <pubDate>Mon, 31 Aug 2026 09:49:43 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/geochart.svg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Google ChartsのGeoChartで作成した地図をSVGファイル化してみます。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/marp/">marp</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/google-charts/">google-charts</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/08/31/GeoChart-SVG-image/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Quickshell automatic rebuild</title>
@@ -644,27 +666,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/12/01/SDDM/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Walker</title>
-      <link>https://ktkr3d.github.io/2025/11/30/Walker/</link>
-      <guid>https://ktkr3d.github.io/2025/11/30/Walker/</guid>
-      <pubDate>Sun, 30 Nov 2025 13:18:02 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/walker.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Walkerランチャを使ってみました。いろいろとカスタマイズできて面白いです。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/abenz1267/walker&quot;&gt;https://github.com/abenz1267/walker&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/abenz1267/elephant&quot;&gt;https://github.com/abenz1267/elephant&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://benz.gitbook.io/walker/walker-and-elephant&quot;&gt;https://benz.gitbook.io/walker/walker-and-elephant&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/walker/">walker</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/11/30/Walker/#disqus_thread</comments>
       
     </item>
     
