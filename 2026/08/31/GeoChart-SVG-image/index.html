@@ -228,7 +228,7 @@ btf.addGlobalFn('pjaxComplete', () => {
 <h3 id="手順"><a href="#手順" class="headerlink" title="手順"></a>手順</h3><ol>
 <li><p>HexoでGoogle Chartsの地図を作成<br> 私はHexoで<a target="_blank" rel="noopener" href="https://github.com/juampi92/hexo-tag-googlecharts">hexo-tag-googlecharts</a>タグプラグインを使っています。日本地図の最低限の記載は以下。</p>
  <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts GeoChart %&#125;</span><br><span class="line">GeoChart</span><br><span class="line">&#123;&quot;region&quot;: &quot;JP&quot;&#125;</span><br><span class="line">&#x27;都道府県&#x27;, &#x27;数値&#x27;</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
- <div id="googleChart9615"></div>
+ <div id="googleChart3267"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -237,7 +237,7 @@ btf.addGlobalFn('pjaxComplete', () => {
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.GeoChart(document.getElementById("googleChart9615"))).draw(google.visualization.arrayToDataTable([['都道府県', '数値']]),{"region":"JP","title":"GeoChart","width":400,"height":400});
+        (new google.visualization.GeoChart(document.getElementById("googleChart3267"))).draw(google.visualization.arrayToDataTable([['都道府県', '数値']]),{"region":"JP","title":"GeoChart","width":400,"height":400});
       });
     })();
   }
@@ -319,7 +319,7 @@ btf.addGlobalFn('pjaxComplete', () => {
 <td align="left">凡例（カラーバーのレジェンド）を非表示</td>
 </tr>
 </tbody></table>
-  <div id="googleChart1222"></div>
+  <div id="googleChart4315"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -328,7 +328,7 @@ btf.addGlobalFn('pjaxComplete', () => {
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.GeoChart(document.getElementById("googleChart1222"))).draw(google.visualization.arrayToDataTable([['都道府県', '訪問回数'],['北海道',   5],['東京',   10],['愛知',   5],['大阪',   5],['福岡',   0]]),{"region":"JP","displayMode":"regions","backgroundColor":"aliceblue","resolution":"provinces","colorAxis":{"colors":["white","green"]},"legend":"none","title":"GeoChart","width":400,"height":400});
+        (new google.visualization.GeoChart(document.getElementById("googleChart4315"))).draw(google.visualization.arrayToDataTable([['都道府県', '訪問回数'],['北海道',   5],['東京',   10],['愛知',   5],['大阪',   5],['福岡',   0]]),{"region":"JP","displayMode":"regions","backgroundColor":"aliceblue","resolution":"provinces","colorAxis":{"colors":["white","green"]},"legend":"none","title":"GeoChart","width":400,"height":400});
       });
     })();
   }
@@ -339,7 +339,7 @@ btf.addGlobalFn('pjaxComplete', () => {
 <li><p>地域の GeoChart</p>
   <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts GeoChart %&#125;</span><br><span class="line">GeoChart</span><br><span class="line">&#123;&#125;</span><br><span class="line">&#x27;Country&#x27;, &#x27;Popularity&#x27;</span><br><span class="line">&#x27;Germany&#x27;, 200</span><br><span class="line">&#x27;United States&#x27;, 300</span><br><span class="line">&#x27;Brazil&#x27;, 400</span><br><span class="line">&#x27;Canada&#x27;, 500</span><br><span class="line">&#x27;France&#x27;, 600</span><br><span class="line">&#x27;RU&#x27;, 700</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 
-  <div id="googleChart1474"></div>
+  <div id="googleChart4676"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -348,7 +348,7 @@ btf.addGlobalFn('pjaxComplete', () => {
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.GeoChart(document.getElementById("googleChart1474"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":"GeoChart","width":400,"height":400});
+        (new google.visualization.GeoChart(document.getElementById("googleChart4676"))).draw(google.visualization.arrayToDataTable([['Country', 'Popularity'],['Germany', 200],['United States', 300],['Brazil', 400],['Canada', 500],['France', 600],['RU', 700]]),{"title":"GeoChart","width":400,"height":400});
       });
     })();
   }
@@ -357,7 +357,7 @@ btf.addGlobalFn('pjaxComplete', () => {
 <li><p>マーカー GeoChart（Google Chartsのデモページでもうまく動作していないかも）</p>
   <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts GeoChart %&#125;</span><br><span class="line">GeoChart</span><br><span class="line">&#123;&quot;region&quot;: &quot;IT&quot;, &quot;displayMode&quot;: &quot;markers&quot;, &quot;colorAxis&quot;: &#123;&quot;colors&quot;: [&quot;green&quot;, &quot;blue&quot;]&#125;&#125;</span><br><span class="line">&#x27;City&#x27;,   &#x27;Population&#x27;, &#x27;Area&#x27;</span><br><span class="line">&#x27;Rome&#x27;,      2761477,    1285.31</span><br><span class="line">&#x27;Milan&#x27;,     1324110,    181.76</span><br><span class="line">&#x27;Naples&#x27;,    959574,     117.27</span><br><span class="line">&#x27;Turin&#x27;,     907563,     130.17</span><br><span class="line">&#x27;Palermo&#x27;,   655875,     158.9</span><br><span class="line">&#x27;Genoa&#x27;,     607906,     243.60</span><br><span class="line">&#x27;Bologna&#x27;,   380181,     140.7</span><br><span class="line">&#x27;Florence&#x27;,  371282,     102.41</span><br><span class="line">&#x27;Fiumicino&#x27;, 67370,      213.44</span><br><span class="line">&#x27;Anzio&#x27;,     52192,      43.43</span><br><span class="line">&#x27;Ciampino&#x27;,  38262,      11</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
 
-  <div id="googleChart818"></div>
+  <div id="googleChart9237"></div>
 <script>
   if (!window.google) {
     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
@@ -366,7 +366,7 @@ btf.addGlobalFn('pjaxComplete', () => {
     (function() {
       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
       google.setOnLoadCallback(function() {
-        (new google.visualization.GeoChart(document.getElementById("googleChart818"))).draw(google.visualization.arrayToDataTable([['City',   'Population', 'Area'],['Rome',      2761477,    1285.31],['Milan',     1324110,    181.76],['Naples',    959574,     117.27],['Turin',     907563,     130.17],['Palermo',   655875,     158.9],['Genoa',     607906,     243.60],['Bologna',   380181,     140.7],['Florence',  371282,     102.41],['Fiumicino', 67370,      213.44],['Anzio',     52192,      43.43],['Ciampino',  38262,      11]]),{"region":"IT","displayMode":"markers","colorAxis":{"colors":["green","blue"]},"title":"GeoChart","width":400,"height":400});
+        (new google.visualization.GeoChart(document.getElementById("googleChart9237"))).draw(google.visualization.arrayToDataTable([['City',   'Population', 'Area'],['Rome',      2761477,    1285.31],['Milan',     1324110,    181.76],['Naples',    959574,     117.27],['Turin',     907563,     130.17],['Palermo',   655875,     158.9],['Genoa',     607906,     243.60],['Bologna',   380181,     140.7],['Florence',  371282,     102.41],['Fiumicino', 67370,      213.44],['Anzio',     52192,      43.43],['Ciampino',  38262,      11]]),{"region":"IT","displayMode":"markers","colorAxis":{"colors":["green","blue"]},"title":"GeoChart","width":400,"height":400});
       });
     })();
   }
