@@ -151,7 +151,7 @@ foobar
 
 HexoからGoogle ChartsのGeoChartを利用
 
-```markdown
+```
 {% googlecharts GeoChart %}
 GeoChart
 {"region": "JP"}
