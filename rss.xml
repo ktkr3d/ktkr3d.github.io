@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Thu, 03 Sep 2026 21:32:58 GMT</pubDate>
+    <pubDate>Thu, 03 Sep 2026 21:43:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,8 @@
       <pubDate>Thu, 03 Sep 2026 19:56:28 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/slides_googlecharts-export_1.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;SlidevでGoogl Chartsのグラフをスライドにしてみました。&lt;br&gt;&lt;a href=&quot;https://ja.sli.dev/&quot;&gt;https://ja.sli.dev/&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;SlidevでGoogl Chartsのグラフをスライドにしてみました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://sli.dev/&quot;&gt;https://sli.dev/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://developers.google.com/chart&quot;&gt;https://developers.google.com/chart&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
