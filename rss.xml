@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Wed, 02 Sep 2026 14:25:42 GMT</pubDate>
+    <pubDate>Thu, 03 Sep 2026 03:01:34 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,8 @@
       <pubDate>Mon, 31 Aug 2026 09:49:43 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/geochart-world.svg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Google ChartsのGeoChartで作成した地図をSVGファイル化してみます。&lt;/p&gt;</description>
+&lt;p&gt;Google ChartsのGeoChartで作成した地図をSVGファイル化してみます。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/chart/interactive/docs/gallery/geochart&quot;&gt;https://developers.google.com/chart/interactive/docs/gallery/geochart&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
