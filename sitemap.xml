@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ktkr3d.github.io/2026/09/04/Slidev-Google-Charts/</loc>
+    
+    <lastmod>2026-09-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ktkr3d.github.io/2026/08/31/GeoChart-SVG-image/</loc>
     
     <lastmod>2026-09-03</lastmod>
@@ -6403,6 +6412,13 @@
   
   <url>
     <loc>https://ktkr3d.github.io/tags/google-charts/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/tags/googlecharts/</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
