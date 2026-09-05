@@ -15,8 +15,30 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Thu, 03 Sep 2026 21:47:59 GMT</pubDate>
+    <pubDate>Sat, 05 Sep 2026 07:56:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>slidev-addon-google-charts</title>
+      <link>https://ktkr3d.github.io/2026/09/05/slidev-addon-google-charts/</link>
+      <guid>https://ktkr3d.github.io/2026/09/05/slidev-addon-google-charts/</guid>
+      <pubDate>Sat, 05 Sep 2026 02:21:16 GMT</pubDate>
+      
+      <description>&lt;p&gt;Slidev用のGoogle Charts用アドオンを作成してみました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/slidev-addon-google-charts&quot;&gt;https://github.com/ktkr3d/slidev-addon-google-charts&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/slidev/">slidev</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/google-charts/">google-charts</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/09/05/slidev-addon-google-charts/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Slidev - Google Charts</title>
@@ -642,30 +664,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/12/21/Systemd-user-timer/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Faugus Launcher</title>
-      <link>https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/</link>
-      <guid>https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/</guid>
-      <pubDate>Sat, 06 Dec 2025 06:14:20 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/faugus_launcher.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;LinuxでWindowsアプリケーションを実行するフロントエンドFaugus Launcherを使ってみました。&lt;br&gt;&lt;a href=&quot;https://github.com/Faugus/faugus-launcher&quot;&gt;https://github.com/Faugus/faugus-launcher&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/proun/">proun</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/faugus-launcher/">faugus-launcher</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/battlenet/">battlenet</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/#disqus_thread</comments>
       
     </item>
     
