@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 05 Sep 2026 20:29:08 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 06:34:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,7 +26,7 @@
       
       <description>&lt;p&gt;Slidev用のGoogle Charts用アドオンを作成してみました。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://sli.dev/&quot;&gt;https://sli.dev/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/slidev-addon-google-charts&quot;&gt;https://github.com/ktkr3d/slidev-addon-google-charts&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Slidevの(少しイタい、こじらせている感のある)オリジナルテーマを作りながら、アドオンのテストをしながら、紹介スライドを作るのが楽しい。&lt;/p&gt;
+&lt;p&gt;Slidevのオリジナルテーマを作りながら、アドオンのテストをしながら、紹介スライドを作るのが楽しい。スライドソースはプレイグラウンドのフォルダ。後半がスライドテンプレ―ト。&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground&quot;&gt;https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground&lt;/a&gt;&lt;/p&gt;
 
 
 	&lt;div class=&quot;row&quot;&gt;
