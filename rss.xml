@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 06 Sep 2026 20:12:45 GMT</pubDate>
+    <pubDate>Sat, 12 Sep 2026 07:30:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,11 @@
       <pubDate>Sat, 05 Sep 2026 02:21:16 GMT</pubDate>
       
       <description>&lt;p&gt;Slidev用のGoogle Charts用アドオンを作成してみました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/slidev-addon-google-charts&quot;&gt;https://github.com/ktkr3d/slidev-addon-google-charts&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ktkr3d/slidev-addon-google-charts&quot;&gt;https://github.com/ktkr3d/slidev-addon-google-charts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sli.dev/&quot;&gt;https://sli.dev/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.google.com/chart&quot;&gt;https://developers.google.com/chart&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;アドオンのテストをしながら、オリジナルのスライドテーマを作るのが楽しい。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;レイアウト例のスライド&lt;br&gt;  &lt;a href=&quot;https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground&quot;&gt;https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground&lt;/a&gt;&lt;/li&gt;
