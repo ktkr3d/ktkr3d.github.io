@@ -15,8 +15,28 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 13 Sep 2026 03:17:00 GMT</pubDate>
+    <pubDate>Mon, 21 Sep 2026 04:31:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Hyper-Compressed Ocean</title>
+      <link>https://ktkr3d.github.io/2026/09/21/Hyper-Compressed-Ocean/</link>
+      <guid>https://ktkr3d.github.io/2026/09/21/Hyper-Compressed-Ocean/</guid>
+      <pubDate>Mon, 21 Sep 2026 02:07:34 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;https://wow.zamimg.com/uploads/screenshots/normal/852908-hyper-compressed-ocean.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.wowhead.com/item=168016/hyper-compressed-ocean&quot;&gt;Hyper-Compressed Ocean&lt;/a&gt;（ハイパー圧縮オーシャン）は、オンラインゲーム『World of Warcraft（WoW）』に登場する、どこでも釣りができるようになる便利なおもちゃ（Toy）アイテムです。実績「&lt;a href=&quot;https://www.wowhead.com/achievement=13502/secret-fish-and-where-to-find-them&quot;&gt;Secret Fish and Where to Find Them&lt;/a&gt;」を達成する（各地で隠し魚を30種類集める）ことで獲得できます。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/09/21/Hyper-Compressed-Ocean/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>slidev-addon-google-charts</title>
@@ -660,26 +680,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/12/21/Prism-Launcher/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Systemd user timer</title>
-      <link>https://ktkr3d.github.io/2025/12/21/Systemd-user-timer/</link>
-      <guid>https://ktkr3d.github.io/2025/12/21/Systemd-user-timer/</guid>
-      <pubDate>Sat, 20 Dec 2025 18:59:19 GMT</pubDate>
-      
-      <description>&lt;p&gt;Systemd user timerを使ってBing壁紙を定期的にダウンロードして壁紙を変更してみます。&lt;br&gt;Hyprland&amp;#x2F;CaelestiaのSchemeをdynamicに設定することで、壁紙画像の色合いに連動してGUIのテーマ色が自動で調整されます。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Systemd/Timers&quot;&gt;https://wiki.archlinux.org/title/Systemd/Timers&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/systemd/">systemd</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/12/21/Systemd-user-timer/#disqus_thread</comments>
       
     </item>
     
