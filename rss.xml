@@ -15,8 +15,33 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Thu, 24 Sep 2026 12:35:36 GMT</pubDate>
+    <pubDate>Thu, 24 Sep 2026 21:49:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>CachyOS Hyprland Noctalia</title>
+      <link>https://ktkr3d.github.io/2026/09/25/CachyOS-Hyprland-Noctalia/</link>
+      <guid>https://ktkr3d.github.io/2026/09/25/CachyOS-Hyprland-Noctalia/</guid>
+      <pubDate>Thu, 24 Sep 2026 19:51:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;https://assets.noctalia.dev/noctalia-logo.svg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;CachyOS Hyprland Noctaliaをインストールしました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/CachyOS/cachyos-hypr-noctalia&quot;&gt;https://github.com/CachyOS/cachyos-hypr-noctalia&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://cachyos.org/&quot;&gt;https://cachyos.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://noctalia.dev/&quot;&gt;https://noctalia.dev/&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/cachyos/">cachyos</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/noctalia/">noctalia</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/09/25/CachyOS-Hyprland-Noctalia/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Hyper-Compressed Ocean</title>
@@ -652,34 +677,6 @@
       
       
       <comments>https://ktkr3d.github.io/2025/12/29/oUF-MyLayout-Addon/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Prism Launcher</title>
-      <link>https://ktkr3d.github.io/2025/12/21/Prism-Launcher/</link>
-      <guid>https://ktkr3d.github.io/2025/12/21/Prism-Launcher/</guid>
-      <pubDate>Sun, 21 Dec 2025 12:31:02 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;/images/cachyos_minecraft.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Prism Launcherを使ってMinecraftをセットアップしました。過去にWindowsで遊んでいたワールドデータをCachyOS上で取り込めました。&lt;/p&gt;
-&lt;a href=&quot;https://prismlauncher.org/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener noreferrer&quot; class=&quot;link-preview&quot;&gt;
-    &lt;div class=&quot;og-image&quot;&gt;
-        &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/7/74/Prism_Launcher_logo.svg&quot; alt=&quot;Prism Launcher&quot; class=&quot;not-gallery-item&quot; loading=&quot;lazy&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;descriptions&quot;&gt;
-            &lt;div class=&quot;og-title&quot;&gt;Prism Launcher&lt;/div&gt;
-            &lt;div class=&quot;og-description&quot;&gt;An open source Minecraft launcher with the ability to manage multiple instances, accounts and mods. Focused on user freedom and free redistributability.&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/minecraft/">minecraft</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/prism-launcher/">prism-launcher</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/12/21/Prism-Launcher/#disqus_thread</comments>
       
     </item>
     
