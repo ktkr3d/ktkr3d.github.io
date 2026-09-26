@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 26 Sep 2026 10:01:21 GMT</pubDate>
+    <pubDate>Sat, 26 Sep 2026 10:23:52 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -27,8 +27,10 @@
       <description>&lt;p&gt;&lt;img src=&quot;/images/cachyos-hyprland-noctalia.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;CachyOS Hyprland Noctaliaをインストールしました。&lt;br&gt;バーを右側に配置できてよいですね。&lt;br&gt;設定画面が整備されています。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/CachyOS/cachyos-hypr-noctalia&quot;&gt;https://github.com/CachyOS/cachyos-hypr-noctalia&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://cachyos.org/&quot;&gt;https://cachyos.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://noctalia.dev/&quot;&gt;https://noctalia.dev/&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;スクリーンショット&quot;&gt;&lt;a href=&quot;#スクリーンショット&quot; class=&quot;headerlink&quot; title=&quot;スクリーンショット&quot;&gt;&lt;/a&gt;スクリーンショット&lt;/h3&gt;&lt;h4 id=&quot;日本語化&quot;&gt;&lt;a href=&quot;#日本語化&quot; class=&quot;headerlink&quot; title=&quot;日本語化&quot;&gt;&lt;/a&gt;日本語化&lt;/h4&gt;&lt;p&gt;Githubの日本語ファイル（途中版）を組み込んでみました。&lt;br&gt;&lt;img src=&quot;/images/cachyos-hyprland-noctalia_ja.png&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;Dmenu機能&quot;&gt;&lt;a href=&quot;#Dmenu機能&quot; class=&quot;headerlink&quot; title=&quot;Dmenu機能&quot;&gt;&lt;/a&gt;Dmenu機能&lt;/h4&gt;&lt;p&gt;ランチャがdmenuに対応しているのでカスタムできます。&lt;br&gt;&lt;img src=&quot;/images/noctalia-dmenu.png&quot;&gt;&lt;/p&gt;</description>
+&lt;h3 id=&quot;スクリーンショット&quot;&gt;&lt;a href=&quot;#スクリーンショット&quot; class=&quot;headerlink&quot; title=&quot;スクリーンショット&quot;&gt;&lt;/a&gt;スクリーンショット&lt;/h3&gt;&lt;h4 id=&quot;Noctaliaコントロールセンタ-システム&quot;&gt;&lt;a href=&quot;#Noctaliaコントロールセンタ-システム&quot; class=&quot;headerlink&quot; title=&quot;Noctaliaコントロールセンタ &amp;#x2F; システム&quot;&gt;&lt;/a&gt;Noctaliaコントロールセンタ &amp;#x2F; システム&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/images/noctalia-panel.png&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;Noctalia設定画面&quot;&gt;&lt;a href=&quot;#Noctalia設定画面&quot; class=&quot;headerlink&quot; title=&quot;Noctalia設定画面&quot;&gt;&lt;/a&gt;Noctalia設定画面&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/images/cachyos-hyprland-noctalia_ja.png&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;壁紙選択&quot;&gt;&lt;a href=&quot;#壁紙選択&quot; class=&quot;headerlink&quot; title=&quot;壁紙選択&quot;&gt;&lt;/a&gt;壁紙選択&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/images/noctalia-wallpapers.png&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;Dmenu機能&quot;&gt;&lt;a href=&quot;#Dmenu機能&quot; class=&quot;headerlink&quot; title=&quot;Dmenu機能&quot;&gt;&lt;/a&gt;Dmenu機能&lt;/h4&gt;&lt;p&gt;Noctaliaランチャがdmenuに対応しているのでカスタムできます。&lt;br&gt;&lt;img src=&quot;/images/noctalia-dmenu.png&quot;&gt;&lt;/p&gt;</description>
       
       
       
