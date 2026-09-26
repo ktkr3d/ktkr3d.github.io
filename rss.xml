@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Thu, 24 Sep 2026 21:49:58 GMT</pubDate>
+    <pubDate>Sat, 26 Sep 2026 00:03:06 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,9 +24,11 @@
       <guid>https://ktkr3d.github.io/2026/09/25/CachyOS-Hyprland-Noctalia/</guid>
       <pubDate>Thu, 24 Sep 2026 19:51:02 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;https://assets.noctalia.dev/noctalia-logo.svg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;CachyOS Hyprland Noctaliaをインストールしました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/CachyOS/cachyos-hypr-noctalia&quot;&gt;https://github.com/CachyOS/cachyos-hypr-noctalia&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://cachyos.org/&quot;&gt;https://cachyos.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://noctalia.dev/&quot;&gt;https://noctalia.dev/&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&quot;/images/cachyos-hyprland-noctalia.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;CachyOS Hyprland Noctaliaをインストールしました。&lt;br&gt;バーを右側に配置できてよいですね。&lt;br&gt;設定画面が整備されています。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/CachyOS/cachyos-hypr-noctalia&quot;&gt;https://github.com/CachyOS/cachyos-hypr-noctalia&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://cachyos.org/&quot;&gt;https://cachyos.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://noctalia.dev/&quot;&gt;https://noctalia.dev/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/cachyos-hyprland-noctalia_ja.png&quot;&gt;&lt;br&gt;Githubの日本語ファイル（途中版）を組み込んでみました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/noctalia-dmenu.png&quot;&gt;&lt;br&gt;ランチャがdmenuに対応しているのでカスタムできます。&lt;/p&gt;</description>
       
       
       
