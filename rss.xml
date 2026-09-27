@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 27 Sep 2026 05:12:37 GMT</pubDate>
+    <pubDate>Sun, 27 Sep 2026 06:16:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -47,6 +47,8 @@
       <category domain="https://ktkr3d.github.io/tags/cachyos/">cachyos</category>
       
       <category domain="https://ktkr3d.github.io/tags/noctalia/">noctalia</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprmod/">hyprmod</category>
       
       
       <comments>https://ktkr3d.github.io/2026/09/25/CachyOS-Hyprland-Noctalia/#disqus_thread</comments>
