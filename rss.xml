@@ -15,8 +15,32 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 03 Oct 2026 02:30:32 GMT</pubDate>
+    <pubDate>Sun, 04 Oct 2026 12:38:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Arch Linux Hyprland Noctalia</title>
+      <link>https://ktkr3d.github.io/2026/10/04/Arch-Linux-Hyprland-Noctalia/</link>
+      <guid>https://ktkr3d.github.io/2026/10/04/Arch-Linux-Hyprland-Noctalia/</guid>
+      <pubDate>Sun, 04 Oct 2026 06:32:33 GMT</pubDate>
+      
+      <description>&lt;p&gt;Arch Linux &amp;#x2F; Hyprlandの環境にNoctaliaを導入してみました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/arch-hypr-noctalia.png&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/noctalia/">noctalia</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/arch/">arch</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/10/04/Arch-Linux-Hyprland-Noctalia/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>CachyOS Hyprland Noctalia</title>
@@ -634,61 +658,6 @@
       
       
       <comments>https://ktkr3d.github.io/2026/01/21/Headless-Hyprland/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>oUF MyLayout Addon</title>
-      <link>https://ktkr3d.github.io/2025/12/29/oUF-MyLayout-Addon/</link>
-      <guid>https://ktkr3d.github.io/2025/12/29/oUF-MyLayout-Addon/</guid>
-      <pubDate>Mon, 29 Dec 2025 12:51:56 GMT</pubDate>
-      
-      <description>&lt;p&gt;AIを使ってoUFフレームワークを利用したWorld of Warcraftのユニットフレームアドオンを作ってみました。&lt;br&gt;Visual Studio Code にGemini Code Assist拡張を組み込みました。実装を確かめながら機能を追加できます。Geminiは混雑時にレスポンスが悪くなる場合がありますが、無料であるにも関わらずコンパクトで間違いの無いコードを生成するような気がします。追加機能を提案してくれるので了承するだけで機能が追加されていきます。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Gemini Code Assistant&lt;br&gt;  &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist&quot;&gt;https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;oUF&lt;/p&gt;
-  &lt;div class=&quot;github-card&quot; data-github=&quot;oUF-wow/oUF&quot; data-width=&quot;100%&quot;&gt;
-  &lt;/div&gt;&lt;script src=&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;&gt;&lt;/script&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;oUF_MyLayout&lt;/p&gt;
-  &lt;div class=&quot;github-card&quot; data-github=&quot;ktkr3d/oUF_MyLayout&quot; data-width=&quot;100%&quot;&gt;&lt;/div&gt;
-  &lt;script src=&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2026-04-26&quot;&gt;&lt;a href=&quot;#2026-04-26&quot; class=&quot;headerlink&quot; title=&quot;2026-04-26&quot;&gt;&lt;/a&gt;2026-04-26&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;WowUpアプリからインストールできます。&lt;br&gt;  &lt;a href=&quot;https://wowup.io/guide/get-addons/overview&quot;&gt;https://wowup.io/guide/get-addons/overview&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2026-01-23&quot;&gt;&lt;a href=&quot;#2026-01-23&quot; class=&quot;headerlink&quot; title=&quot;2026-01-23&quot;&gt;&lt;/a&gt;2026-01-23&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;WoW APIの仕様変更に対応中&lt;br&gt;  暫定的に一部の機能をドロップ&lt;br&gt;  &lt;a href=&quot;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#AddOn_security_changes&quot;&gt;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#AddOn_security_changes&lt;/a&gt;&lt;br&gt;  &lt;a href=&quot;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#Secret_values&quot;&gt;https://warcraft.wiki.gg/wiki/Patch_12.0.0/API_changes#Secret_values&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2026-01-18&quot;&gt;&lt;a href=&quot;#2026-01-18&quot; class=&quot;headerlink&quot; title=&quot;2026-01-18&quot;&gt;&lt;/a&gt;2026-01-18&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;oUF 13.0.0 リリース&lt;br&gt;  エラーが発生するのでoUF 12.1.0を埋め込み型にしました。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;スクリーンショット&quot;&gt;&lt;a href=&quot;#スクリーンショット&quot; class=&quot;headerlink&quot; title=&quot;スクリーンショット&quot;&gt;&lt;/a&gt;スクリーンショット&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;左からPlayer、Pet、Targetフレーム&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout.jpg&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;左からFocus, Player, Pet, Target, Target-targetフレーム、右下はRaidフレーム&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_unitframes.png&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Partyフレーム&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_party.jpg&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;設定画面&lt;br&gt;  スラッシュコマンド(&lt;code&gt;/mylayout config&lt;/code&gt;)で開きます。&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_config.png&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;設定画面 (Profile)&lt;br&gt;  いろいろなアドオンで見かけるインタフェースです。&lt;br&gt;  &lt;img src=&quot;/images/wow_ouf_mylayout_config_profile.png&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/gemini/">gemini</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/ouf/">ouf</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2025/12/29/oUF-MyLayout-Addon/#disqus_thread</comments>
       
     </item>
     

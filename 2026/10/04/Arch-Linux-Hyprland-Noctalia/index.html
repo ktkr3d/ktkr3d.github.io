@@ -1,0 +1,929 @@
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Arch Linux Hyprland Noctalia | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Arch Linux &#x2F; Hyprlandの環境にNoctaliaを導入してみました。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arch Linux Hyprland Noctalia">
+<meta property="og:url" content="https://ktkr3d.github.io/2026/10/04/Arch-Linux-Hyprland-Noctalia/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="Arch Linux &#x2F; Hyprlandの環境にNoctaliaを導入してみました。">
+<meta property="og:locale">
+<meta property="og:image" content="https://ktkr3d.github.io/images/arch-hypr-noctalia.png">
+<meta property="article:published_time" content="2026-10-04T06:32:33.000Z">
+<meta property="article:modified_time" content="2026-10-04T12:38:48.796Z">
+<meta property="article:author" content="ktkr3d">
+<meta property="article:tag" content="arch">
+<meta property="article:tag" content="hyprland">
+<meta property="article:tag" content="noctalia">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ktkr3d.github.io/images/arch-hypr-noctalia.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Arch Linux Hyprland Noctalia",
+  "url": "https://ktkr3d.github.io/2026/10/04/Arch-Linux-Hyprland-Noctalia/",
+  "image": "https://ktkr3d.github.io/images/arch-hypr-noctalia.png",
+  "datePublished": "2026-10-04T06:32:33.000Z",
+  "dateModified": "2026-10-04T12:38:48.796Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ktkr3d",
+      "url": "https://ktkr3d.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://ktkr3d.github.io/2026/10/04/Arch-Linux-Hyprland-Noctalia/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Arch Linux Hyprland Noctalia',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">510</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">217</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a><a class="nav-page-title" href="/"><span class="site-name">Arch Linux Hyprland Noctalia</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/GNOME/"><i class="fa-fw fa-solid fa-g"></i><span> GNOME</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/ubuntu/"><i class="fa-fw fa-brands fa-ubuntu"></i><span> Ubuntu</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Arch Linux Hyprland Noctalia</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-10-04T06:32:33.000Z" title="Created 2026-10-04 15:32:33">2026-10-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-10-04T12:38:48.796Z" title="Updated 2026-10-04 21:38:48">2026-10-04</time></span></div><div class="meta-secondline"></div></div></div><article class="container post-content" id="article-container"><p>Arch Linux &#x2F; Hyprlandの環境にNoctaliaを導入してみました。</p>
+<p><img src="/images/arch-hypr-noctalia.png"></p>
+<span id="more"></span>
+
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li><p>OS</p>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ブートローダ</td>
+<td align="left">grub</td>
+</tr>
+<tr>
+<td align="left">ルートパーティション</td>
+<td align="left">ext4</td>
+</tr>
+<tr>
+<td align="left">ディストリビューション</td>
+<td align="left">Arch Linux</td>
+</tr>
+<tr>
+<td align="left">ディスプレイマネージャ</td>
+<td align="left">GDM</td>
+</tr>
+<tr>
+<td align="left">ウィンドウマネージャ</td>
+<td align="left">hyprland</td>
+</tr>
+<tr>
+<td align="left">デスクトップシェル</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://noctalia.dev/">noctarlia</a></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>サービス</p>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">RDPサーバ</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/MuNeNICK/hypr-rdp">hypr-rdp</a></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>ツール</p>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">パッケージマネージャ</td>
+<td align="left">paru</td>
+</tr>
+<tr>
+<td align="left">Hyprland設定ツール</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/BlueManCZ/hyprmod">hyprmod</a></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>ソフトウェア</p>
+<table>
+<thead>
+<tr>
+<th align="left">項目</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">シェル</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://fishshell.com/">fish</a></td>
+</tr>
+<tr>
+<td align="left">ファイルマネージャ</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/neilbrown/thunar">thunar</a></td>
+</tr>
+<tr>
+<td align="left">ターミナル</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/kovidgoyal/kitty">kitty</a></td>
+</tr>
+<tr>
+<td align="left">日本語入力</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/fcitx/fcitx5">fcitx5</a></td>
+</tr>
+<tr>
+<td align="left">ブラウザ</td>
+<td align="left">google-chrome</td>
+</tr>
+<tr>
+<td align="left">IDE</td>
+<td align="left">visual-studio-code-bin</td>
+</tr>
+<tr>
+<td align="left">プログラミングフォント</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/yuru7/HackGen">HackGen</a></td>
+</tr>
+<tr>
+<td align="left">メディアプレイヤー</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://kodi.tv/">kodi</a></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="パッケージの設定"><a href="#パッケージの設定" class="headerlink" title="パッケージの設定"></a>パッケージの設定</h3><h4 id="fastfetch"><a href="#fastfetch" class="headerlink" title="fastfetch"></a>fastfetch</h4><ul>
+<li>インストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S fastfetch</span><br></pre></td></tr></table></figure></li>
+<li>シンプルなテーマ  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.config/fastfetch</span><br><span class="line"><span class="built_in">cd</span> ~/.config/fastfetch</span><br><span class="line">curl -O https://gist.githubusercontent.com/ktkr3d/40805f88c7c72e67d9da5e28d5118fa8/raw/5667511376bad868192f54a49b8c4c87050c5d27/config.jsonc</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="fish"><a href="#fish" class="headerlink" title="fish"></a>fish</h4><ul>
+<li>テーマをインストール  <figure class="highlight d"><table><tr><td class="code"><pre><span class="line">paru -S fish-<span class="keyword">pure</span>-prompt eza fastfetch</span><br></pre></td></tr></table></figure></li>
+<li>反映  <figure class="highlight bash"><figcaption><span>~/.config/fish/config.fish</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> status is-interactive</span><br><span class="line">    <span class="comment"># Commands to run in interactive sessions can go here</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> fish_greeting</span><br><span class="line">        fastfetch</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Replace ls with eza</span></span><br><span class="line">    <span class="built_in">alias</span> <span class="built_in">ls</span>=<span class="string">&#x27;eza -al --color=always --group-directories-first --icons=always&#x27;</span> <span class="comment"># preferred listing</span></span><br><span class="line">    <span class="built_in">alias</span> la=<span class="string">&#x27;eza -a --color=always --group-directories-first --icons=always&#x27;</span>  <span class="comment"># all files and dirs</span></span><br><span class="line">    <span class="built_in">alias</span> ll=<span class="string">&#x27;eza -l --color=always --group-directories-first --icons=always&#x27;</span>  <span class="comment"># long format</span></span><br><span class="line">    <span class="built_in">alias</span> lt=<span class="string">&#x27;eza -aT --color=always --group-directories-first --icons=always&#x27;</span> <span class="comment"># tree listing</span></span><br><span class="line">    <span class="built_in">alias</span> l.=<span class="string">&quot;eza -a | grep -e &#x27;^\.&#x27;&quot;</span>                                     <span class="comment"># show only dotfiles</span></span><br><span class="line">    <span class="built_in">alias</span> l=<span class="string">&#x27;ls&#x27;</span></span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="fcitx5"><a href="#fcitx5" class="headerlink" title="fcitx5"></a>fcitx5</h4><ul>
+<li><p>インストール</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S fcitx5-im fcitx5-mozc fcitx5-configtool</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HyprModのAutoStartに追加</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fcitx5 -d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HyprModのEnv Variablesに追加</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">XMODIFIERS</td>
+<td align="left">@im&#x3D;fcitx</td>
+</tr>
+<tr>
+<td align="left">QT_IM_MODULE</td>
+<td align="left">fcitx</td>
+</tr>
+<tr>
+<td align="left">GTK_IM_MODULE</td>
+<td align="left">fcitx</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="hypr-rdp"><a href="#hypr-rdp" class="headerlink" title="hypr-rdp"></a>hypr-rdp</h4><ul>
+<li>インストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S hypr-rdp</span><br></pre></td></tr></table></figure></li>
+<li>HyprModのAutoStartに追加  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hypr-rdp -u user -p pass --<span class="built_in">bind</span> 0.0.0.0:13389</span><br></pre></td></tr></table></figure>
+  <code>3389/tcp</code>はGDM&#x2F;GNOME Shellで使っているので<code>13389/tcp</code>を利用</li>
+</ul>
+<h4 id="kitty"><a href="#kitty" class="headerlink" title="kitty"></a>kitty</h4><ul>
+<li>インストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S kitty ttf-hackgen</span><br></pre></td></tr></table></figure></li>
+<li>フォント<code>Hackgen Console NF</code>を選択  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kitty +list-fonts</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="thunar"><a href="#thunar" class="headerlink" title="thunar"></a>thunar</h4><ul>
+<li>インストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S thunar gvfs-smb thunar-archive-plugin file-roller</span><br></pre></td></tr></table></figure></li>
+<li>設定<br>  編集 &gt; 設定 &gt; カスタムウィンドウ装飾を使用する : オン</li>
+</ul>
+<h3 id="Noctalia"><a href="#Noctalia" class="headerlink" title="Noctalia"></a>Noctalia</h3><ul>
+<li>スクリプトランチャ  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p <span class="variable">$HOME</span>/bin/scripts</span><br></pre></td></tr></table></figure>
+  <figure class="highlight toml"><figcaption><span>~/.config/noctalia/config.toml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[shell.launcher.dmenu.entry.run_scripts]</span></span><br><span class="line"><span class="attr">prefix</span> = <span class="string">&quot;scripts&quot;</span></span><br><span class="line"><span class="attr">glyph</span> = <span class="string">&quot;file-code&quot;</span></span><br><span class="line"><span class="attr">command</span> = <span class="string">&quot;find $HOME/bin/scripts -maxdepth 1 -type f -executable -exec basename &#123;&#125; \\;&quot;</span></span><br><span class="line"><span class="attr">exec</span> = <span class="string">&quot;kitty \&quot;$HOME/bin/scripts/&#123;selection&#125;\&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="HyprMod"><a href="#HyprMod" class="headerlink" title="HyprMod"></a>HyprMod</h3><h4 id="Keybinds"><a href="#Keybinds" class="headerlink" title="Keybinds"></a>Keybinds</h4><ul>
+<li><p>設定（⭐：よく使うもの）</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mod</th>
+<th align="left">+ Key(s)</th>
+<th align="left">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><kbd>Super</kbd></td>
+<td align="left"><kbd>Enter</kbd></td>
+<td align="left">kitty</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>E</kbd>⭐</td>
+<td align="left">thunar</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>T</kbd>⭐</td>
+<td align="left">kitty</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>C</kbd></td>
+<td align="left">code</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>W</kbd>⭐</td>
+<td align="left">google-chrome-stable</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>Z</kbd>⭐</td>
+<td align="left">noctalia settings</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>X</kbd></td>
+<td align="left">noctalia control-center</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>Space</kbd>⭐</td>
+<td align="left">launcher</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>.</kbd></td>
+<td align="left">launcher &#x2F;emo</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>L</kbd></td>
+<td align="left">lock</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>ALT</kbd>+<kbd>C</kbd></td>
+<td align="left">session menu</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>SHIFT</kbd>+<kbd>W</kbd></td>
+<td align="left">wallpaper</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>V</kbd>⭐</td>
+<td align="left">clipboard</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>A</kbd></td>
+<td align="left">notification</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>Q</kbd>⭐</td>
+<td align="left">close window</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>ALT</kbd>+<kbd>Space</kbd></td>
+<td align="left">floating</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>D</kbd>⭐</td>
+<td align="left">fullscreen (mode&#x3D;1)</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>F</kbd></td>
+<td align="left">fullscreen</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>J</kbd></td>
+<td align="left">split</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>SHIFT</kbd> + <kbd>S</kbd>⭐</td>
+<td align="left">special workspace</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>S</kbd>⭐</td>
+<td align="left">scratchpad</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>M</kbd>⭐</td>
+<td align="left">hyprmod</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>K</kbd>⭐</td>
+<td align="left">launcher &#x2F;scripts</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/hyprland/">hyprland</a><a class="post-meta__tags" href="/tags/noctalia/">noctalia</a><a class="post-meta__tags" href="/tags/arch/">arch</a></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/09/25/CachyOS-Hyprland-Noctalia/" title="CachyOS Hyprland Noctalia"><img class="cover" src="https://assets.noctalia.dev/noctalia-logo.svg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">CachyOS Hyprland Noctalia</div></div><div class="info-2"><div class="info-item-1"> CachyOS Hyprland Noctaliaをインストールしました。バーを右側に配置できてよいですね。シェルはfishでした。パッケージ管理はshellyでした。メイン環境にしてもよいかもしれないです。  CachyOS  https://cachyos.org/ Noctalia  https://noctalia.dev/  https://github.com/CachyOS/cachyos-hypr-noctalia HyprMod  https://github.com/BlueManCZ/hyprmod  スクリーンショットNoctaliaコントロールセンタSuper+Xでホーム画面、Super+Aで通知画面 Noctalia設定画面Super+Z 壁紙選択Super+Shift+W タイリング表示 HyprModHyprlandをGUIで設定します。Super+Mにバインドしました。 スクリプトランチャNoctaliaランチャのdmenu機能を利用したスクリプトランチャを作りました。Super+Kにバインドしました。   CachyOSの設定ダウンロードht...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/09/25/CachyOS-Hyprland-Noctalia/" title="CachyOS Hyprland Noctalia"><img class="cover" src="https://assets.noctalia.dev/noctalia-logo.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-25</div><div class="info-item-2">CachyOS Hyprland Noctalia</div></div><div class="info-2"><div class="info-item-1"> CachyOS Hyprland Noctaliaをインストールしました。バーを右側に配置できてよいですね。シェルはfishでした。パッケージ管理はshellyでした。メイン環境にしてもよいかもしれないです。  CachyOS  https://cachyos.org/ Noctalia  https://noctalia.dev/  https://github.com/CachyOS/cachyos-hypr-noctalia HyprMod  https://github.com/BlueManCZ/hyprmod  スクリーンショットNoctaliaコントロールセンタSuper+Xでホーム画面、Super+Aで通知画面 Noctalia設定画面Super+Z 壁紙選択Super+Shift+W タイリング表示 HyprModHyprlandをGUIで設定します。Super+Mにバインドしました。 スクリプトランチャNoctaliaランチャのdmenu機能を利用したスクリプトランチャを作りました。Super+Kにバインドしました。   CachyOSの設定ダウンロードht...</div></div></div></a><a class="pagination-related" href="/2026/06/20/hyprKCS/" title="hyprKCS"><img class="cover" src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnsckinwi9jksfp0wneap.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-20</div><div class="info-item-2">hyprKCS</div></div><div class="info-2"><div class="info-item-1"> Hyprland用キーバインドマネージャhyprKCSを使ってみました。お気に入りフィルタがあるので、便利だけれど忘れてしまいがちなキーバインドを簡単に見つけられます。 https://github.com/kosa12/hyprKCS 2026-06-29 hyprland.luaに対応しているソフト調査    ソフト hyprland.lua対応状況    hyprKCS ×   hypr-keybind-manager ×   hyprmod ○ 多機能。     2026-06-28 hyprland.lua対応のfeatureリクエスト  https://github.com/kosa12/hyprKCS/issues/77    環境 Arch Linux hyprKCS v1.25.6    構築 インストール paru -S hyprkcs-git  設定 起動  hyprkcs サイズ変更  Gear &gt; Window &gt; Dimensions  1000 x 700 等に変更 お気に入り登録  対象のキーバインド左端のスターをクリック hyprK...</div></div></div></a><a class="pagination-related" href="/2026/01/21/Headless-Hyprland/" title="Headless Hyprland"><img class="cover" src="/images/headless_hyprland.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-01-21</div><div class="info-item-2">Headless Hyprland</div></div><div class="info-2"><div class="info-item-1">ヘッドレスのHyprlandデスクトップに接続してみます。GDMとGNOME ShellはRDPで接続し、HyprlandはVNCで接続する構成としました。  2026-06-30 hypr-rdpの場合  https://ktkr3d.github.io/2026/06/30/hypr-rdp/    環境サーバ Arch Linux GDM &#x2F; GNOME Shell RDPサーバ: GRD(GNOME Remote Desktop)   Hyprland VNCサーバ: WayVNC      クライアント Windows 11 RDPクライアント: リモートデスクトップ接続(mstsc.exe) VNCクライアント: RealVNC Viewer   CachyOS RDP&#x2F;VNCクライアント: Remmina    構築: サーバ OS起動時に自動ログインしてHyprlandセッションを開始します。VNCで接続できます。 GNOME Shellを使いたい場合はログオフ後、RDPで接続してGDMでgnomeを選択します。 再度Hyprlandセッション...</div></div></div></a><a class="pagination-related" href="/2025/11/17/Caelestia/" title="Caelestia"><img class="cover" src="/images/caelestia.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-11-17</div><div class="info-item-2">Caelestia</div></div><div class="info-2"><div class="info-item-1"> Hyprland用のCaelestia dotsを試してみました。これは良いかもしれない。 https://github.com/caelestia-dots/caelestiahttps://github.com/caelestia-dots/clihttps://github.com/caelestia-dots/shell   https://www.youtube.com/watch?v=TggHDm0_vBw   2026-08-27 Qt6アップデートの際にQuickshellを自動的にリビルドする設定  https://ktkr3d.github.io/2026/08/27/quickshell-automatic-rebuild/  2026-07-25 libcavaアップデート後にquick-shellが起動しない場合の対策  https://github.com/caelestia-dots/shell/issues/1739  paru -S --rebuild caelestia-shell  2026-06-27設定ファイルのlua言語対応https...</div></div></div></a><a class="pagination-related" href="/2026/06/10/Hyprland-0-55-3/" title="Hyprland 0.55.3"><img class="cover" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Hyprland_Logo_Icon.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-10</div><div class="info-item-2">Hyprland 0.55.3</div></div><div class="info-2"><div class="info-item-1">Hyprland 0.55.3をインストールしました。現在の構成は以下の通り。 $ pacman -Q hyprland quickshell caelestia-cli caelestia-shellhyprland 0.55.3-1quickshell-git 0.2.0.r148.g8db8ca1-1caelestia-cli 1.0.8-1caelestia-shell 2.0.2-1  2026-07-18 My keybinds   Category Keybind App    Launcher Super Caelestia Launcher   Launcher Super+Space Walker   Web Super+W Google Chrome   Explorer Super+E Thunar   To do Super+R Google ToDo list   Termial Super+T foot   Special Workspace Super+S Toggle Special Workspace   Communication Super...</div></div></div></a><a class="pagination-related" href="/2023/08/25/Hyprland/" title="Hyprland"><img class="cover" src="/images/hyprland-minibookx.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-25</div><div class="info-item-2">Hyprland</div></div><div class="info-2"><div class="info-item-1">https://hyprland.org/MiniBook X のArch Linux にHyprland を導入してみました。かなりイケていますが、私に使いこなせるのだろうか。   環境https://wiki.hyprland.org/https://github.com/hyprland-community/awesome-hyprland     if (!window.google) {     document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';     throw 'Google JS API is needed';   } else {     (function() {       google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});       google.setOnLoadCallback(function...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">510</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">217</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%92%B0%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">2.</span> <span class="toc-text">パッケージの設定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#fastfetch"><span class="toc-number">2.1.</span> <span class="toc-text">fastfetch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fish"><span class="toc-number">2.2.</span> <span class="toc-text">fish</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fcitx5"><span class="toc-number">2.3.</span> <span class="toc-text">fcitx5</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hypr-rdp"><span class="toc-number">2.4.</span> <span class="toc-text">hypr-rdp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kitty"><span class="toc-number">2.5.</span> <span class="toc-text">kitty</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#thunar"><span class="toc-number">2.6.</span> <span class="toc-text">thunar</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Noctalia"><span class="toc-number">3.</span> <span class="toc-text">Noctalia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HyprMod"><span class="toc-number">4.</span> <span class="toc-text">HyprMod</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Keybinds"><span class="toc-number">4.1.</span> <span class="toc-text">Keybinds</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/04/Arch-Linux-Hyprland-Noctalia/" title="Arch Linux Hyprland Noctalia">Arch Linux Hyprland Noctalia</a><time datetime="2026-10-04T06:32:33.000Z" title="Created 2026-10-04 15:32:33">2026-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/25/CachyOS-Hyprland-Noctalia/" title="CachyOS Hyprland Noctalia">CachyOS Hyprland Noctalia</a><time datetime="2026-09-24T19:51:02.000Z" title="Created 2026-09-25 04:51:02">2026-09-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/21/Hyper-Compressed-Ocean/" title="Hyper-Compressed Ocean">Hyper-Compressed Ocean</a><time datetime="2026-09-21T02:07:34.000Z" title="Created 2026-09-21 11:07:34">2026-09-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/05/slidev-addon-google-charts/" title="slidev-addon-google-charts">slidev-addon-google-charts</a><time datetime="2026-09-05T02:21:16.000Z" title="Created 2026-09-05 11:21:16">2026-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/04/Slidev-Google-Charts/" title="Slidev - Google Charts">Slidev - Google Charts</a><time datetime="2026-09-03T19:56:28.000Z" title="Created 2026-09-04 04:56:28">2026-09-04</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const parseViewBox = viewBox => {
+    if (!viewBox) return null
+    const parts = viewBox.trim().split(/[\s,]+/).map(n => Number(n))
+    if (parts.length !== 4 || parts.some(n => Number.isNaN(n))) return null
+    return parts
+  }
+
+  const getSvgViewBox = svg => {
+    const attr = parseViewBox(svg.getAttribute('viewBox'))
+    if (attr) return attr
+
+    // Fallback: use bbox to build a viewBox
+    try {
+      const bbox = svg.getBBox()
+      if (bbox && bbox.width && bbox.height) return [bbox.x, bbox.y, bbox.width, bbox.height]
+    } catch (e) {
+      // getBBox may fail on some edge cases; ignore
+    }
+
+    const w = Number(svg.getAttribute('width')) || 0
+    const h = Number(svg.getAttribute('height')) || 0
+    if (w > 0 && h > 0) return [0, 0, w, h]
+    return [0, 0, 100, 100]
+  }
+
+  const setSvgViewBox = (svg, vb) => {
+    svg.setAttribute('viewBox', `${vb[0]} ${vb[1]} ${vb[2]} ${vb[3]}`)
+  }
+
+  const clamp = (v, min, max) => Math.max(min, Math.min(max, v))
+
+  const openSvgInNewTab = ({ source, initViewBox }) => {
+    const getClonedSvg = () => {
+      if (typeof source === 'string') {
+        const template = document.createElement('template')
+        template.innerHTML = source.trim()
+        const svg = template.content.querySelector('svg')
+        return svg ? svg.cloneNode(true) : null
+      }
+      if (source && typeof source.cloneNode === 'function') {
+        return source.cloneNode(true)
+      }
+      return null
+    }
+
+    const clone = getClonedSvg()
+    if (!clone) return
+    if (initViewBox && initViewBox.length === 4) {
+      clone.setAttribute('viewBox', initViewBox.join(' '))
+    }
+    if (!clone.getAttribute('xmlns')) clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    if (!clone.getAttribute('xmlns:xlink') && clone.innerHTML.includes('xlink:')) {
+      clone.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink')
+    }
+    // inject background to match current theme
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark'
+    const bg = getComputedStyle(document.body).backgroundColor || (isDark ? '#1e1e1e' : '#ffffff')
+    if (!clone.style.background) clone.style.background = bg
+
+    const serializer = new XMLSerializer()
+    const svgSource = serializer.serializeToString(clone)
+    const htmlSource = `<!doctype html><html><head><meta charset="utf-8" />
+      <style>
+        html, body { width: 100%; height: 100%; margin: 0; display: flex; align-items: center; justify-content: center; background: ${bg}; }
+        svg { max-width: 100%; max-height: 100%; height: auto; width: auto; }
+      </style>
+      </head><body>${svgSource}</body></html>`
+    const blob = new Blob([htmlSource], { type: 'text/html;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    window.open(url, '_blank', 'noopener')
+
+    setTimeout(() => URL.revokeObjectURL(url), 5000)
+  }
+
+  const attachMermaidViewerButton = wrap => {
+    let btn = wrap.querySelector('.mermaid-open-btn')
+    if (!btn) {
+      btn = document.createElement('button')
+      btn.type = 'button'
+      btn.className = 'mermaid-open-btn'
+      wrap.appendChild(btn)
+    }
+
+    btn.innerHTML = '<i class="fa fa-search fa-fw" aria-hidden="true"></i>'
+
+    if (!btn.__mermaidViewerBound) {
+      btn.addEventListener('click', e => {
+        e.preventDefault()
+        e.stopPropagation()
+        const svg = wrap.__mermaidOriginalSvg || wrap.querySelector('svg')
+        if (!svg) return
+        const initViewBox = wrap.__mermaidInitViewBox
+        openSvgInNewTab({ source: svg, initViewBox })
+      })
+      btn.__mermaidViewerBound = true
+    }
+  }
+
+  // Zoom around a point (px, py) in the SVG viewport (in viewBox coordinates)
+  const zoomAtPoint = (vb, factor, px, py) => {
+    const w = vb[2] * factor
+    const h = vb[3] * factor
+    const nx = px - (px - vb[0]) * factor
+    const ny = py - (py - vb[1]) * factor
+    return [nx, ny, w, h]
+  }
+
+  const initMermaidGestures = wrap => {
+    // Clean up previous event listeners and pending frames
+    if (wrap.__mermaidAbortController) {
+      wrap.__mermaidAbortController.abort()
+      if (wrap.__mermaidRafId) cancelAnimationFrame(wrap.__mermaidRafId)
+    }
+    const ac = new AbortController()
+    wrap.__mermaidAbortController = ac
+    const svg = wrap.querySelector('svg')
+    if (!svg) return
+
+    // Ensure viewBox exists so gestures always work
+    const initVb = getSvgViewBox(svg)
+    wrap.__mermaidInitViewBox = initVb
+    wrap.__mermaidCurViewBox = initVb.slice()
+    setSvgViewBox(svg, initVb)
+    // Disable default gestures to prevent scroll chaining and pinch-zoom penetration in Chrome
+    svg.style.touchAction = 'none'
+
+    // Cache BoundingClientRect, throttled on scroll to reduce reflow
+    let cachedRect = svg.getBoundingClientRect()
+    let rectDirty = false
+    const markRectDirty = () => { rectDirty = true }
+    window.addEventListener('resize', markRectDirty, { signal: ac.signal })
+    window.addEventListener('scroll', markRectDirty, { signal: ac.signal, capture: true })
+    const getRect = () => {
+      if (rectDirty) {
+        cachedRect = svg.getBoundingClientRect()
+        rectDirty = false
+      }
+      return cachedRect
+    }
+
+    // Precompute clamp bounds from initial viewBox
+    const minW = initVb[2] * 0.1
+    const maxW = initVb[2] * 10
+    const minH = initVb[3] * 0.1
+    const maxH = initVb[3] * 10
+    const clampVb = vb => {
+      const out = vb.slice()
+      out[2] = clamp(out[2], minW, maxW)
+      out[3] = clamp(out[3], minH, maxH)
+      return out
+    }
+
+    // Throttle DOM updates using requestAnimationFrame
+    let pendingVb = null
+    let rafId = null
+    const applyVb = () => {
+      if (pendingVb) {
+        wrap.__mermaidCurViewBox = pendingVb
+        setSvgViewBox(svg, pendingVb)
+        pendingVb = null
+      }
+      rafId = null
+      wrap.__mermaidRafId = null
+    }
+    const setCurVb = vb => {
+      pendingVb = clampVb(vb)
+      if (!rafId) {
+        rafId = requestAnimationFrame(applyVb)
+        wrap.__mermaidRafId = rafId
+      }
+    }
+
+    const state = {
+      pointers: new Map(),
+      startVb: null,
+      startDist: 0,
+      lastPointerX: 0,
+      lastPointerY: 0
+    }
+
+    const onPointerDown = e => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return
+      svg.setPointerCapture(e.pointerId)
+      const curVb = wrap.__mermaidCurViewBox
+      state.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+      if (state.pointers.size === 1) {
+        state.startVb = curVb.slice()
+        state.lastPointerX = e.clientX
+        state.lastPointerY = e.clientY
+      } else if (state.pointers.size === 2) {
+        const pts = [...state.pointers.values()]
+        const dx = pts[0].x - pts[1].x
+        const dy = pts[0].y - pts[1].y
+        state.startDist = Math.hypot(dx, dy)
+        state.startVb = curVb.slice()
+      }
+    }
+
+    const onPointerMove = e => {
+      if (!state.pointers.has(e.pointerId)) return
+      state.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+      const curVb = wrap.__mermaidCurViewBox
+      const rect = getRect()
+      if (state.pointers.size === 1 && state.startVb) {
+        const p = state.pointers.values().next().value
+        const dxClient = p.x - state.lastPointerX
+        const dyClient = p.y - state.lastPointerY
+        state.lastPointerX = p.x
+        state.lastPointerY = p.y
+        const dx = dxClient * (curVb[2] / rect.width)
+        const dy = dyClient * (curVb[3] / rect.height)
+        setCurVb([curVb[0] - dx, curVb[1] - dy, curVb[2], curVb[3]])
+        return
+      }
+      if (state.pointers.size === 2 && state.startVb && state.startDist > 0) {
+        const pts = [...state.pointers.values()]
+        const dx = pts[0].x - pts[1].x
+        const dy = pts[0].y - pts[1].y
+        const dist = Math.hypot(dx, dy)
+        if (!dist) return
+        const factor = state.startDist / dist
+        const cx = (pts[0].x + pts[1].x) / 2
+        const cy = (pts[0].y + pts[1].y) / 2
+        const px = curVb[0] + (cx - rect.left) * (curVb[2] / rect.width)
+        const py = curVb[1] + (cy - rect.top) * (curVb[3] / rect.height)
+        setCurVb(zoomAtPoint(state.startVb, factor, px, py))
+      }
+    }
+
+    const onPointerUpOrCancel = e => {
+      // Release PointerCapture to avoid event capture anomalies
+      if (svg.hasPointerCapture && svg.hasPointerCapture(e.pointerId)) {
+        svg.releasePointerCapture(e.pointerId)
+      }
+      state.pointers.delete(e.pointerId)
+      if (state.pointers.size === 0) {
+        state.startVb = null
+        state.startDist = 0
+      } else if (state.pointers.size === 1) {
+        const p = state.pointers.values().next().value
+        state.lastPointerX = p.x
+        state.lastPointerY = p.y
+      }
+    }
+
+    const onWheel = e => {
+      // Prevent event bubbling from triggering external scroll
+      e.preventDefault()
+      e.stopPropagation()
+      // Normalize deltaY across deltaMode (Chrome uses pixels, Safari uses lines)
+      let delta = e.deltaY
+      if (e.deltaMode === 1) delta *= 16
+      else if (e.deltaMode === 2) delta *= 400
+
+      // Continuous zoom factor: smoother than fixed 1.1/0.9 steps
+      const zoomFactor = Math.pow(1.001, delta)
+
+      const curVb = wrap.__mermaidCurViewBox
+      const rect = getRect()
+      const px = curVb[0] + (e.clientX - rect.left) * (curVb[2] / rect.width)
+      const py = curVb[1] + (e.clientY - rect.top) * (curVb[3] / rect.height)
+      setCurVb(zoomAtPoint(curVb, zoomFactor, px, py))
+    }
+
+    const onDblClick = () => {
+      const init = wrap.__mermaidInitViewBox
+      if (init) setCurVb(init)
+    }
+
+    svg.addEventListener('pointerdown', onPointerDown, { signal: ac.signal })
+    svg.addEventListener('pointermove', onPointerMove, { signal: ac.signal })
+    svg.addEventListener('pointerup', onPointerUpOrCancel, { signal: ac.signal })
+    svg.addEventListener('pointercancel', onPointerUpOrCancel, { signal: ac.signal })
+    svg.addEventListener('wheel', onWheel, { passive: false, signal: ac.signal })
+    svg.addEventListener('dblclick', onDblClick, { signal: ac.signal })
+  }
+
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      // Clean up event listeners before removing old SVG
+      if (item.__mermaidAbortController) {
+        item.__mermaidAbortController.abort()
+      }
+      const oldSvg = item.querySelector('svg')
+      if (oldSvg) oldSvg.remove()
+      let config = {}
+      try {
+        config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      } catch (e) {
+        console.warn('[mermaid] failed to parse dataset.config:', e)
+      }
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+        if (true) initMermaidGestures(item)
+        item.__mermaidOriginalSvg = svg
+        if (true) attachMermaidViewerButton(item)
+      }
+
+      const handleError = err => {
+        console.error(`[mermaid] render failed for block #${index}:`, err)
+        const errorEl = document.createElement('div')
+        errorEl.className = 'mermaid-error'
+        errorEl.textContent = `Mermaid render error: ${err.message || err}`
+        mermaidSrc.insertAdjacentElement('afterend', errorEl)
+      }
+
+      try {
+        const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+        // mermaid v9 and v10 compatibility
+        if (typeof renderFn === 'string') {
+          renderMermaid(renderFn)
+        } else {
+          renderFn.then(({ svg }) => renderMermaid(svg)).catch(handleError)
+        }
+      } catch (err) {
+        handleError(err)
+      }
+    })
+  }
+
+  const codeToMermaid = $article => {
+    const codeMermaidEle = $article.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    const $article = document.getElementById('article-container')
+    if (!$article) return
+
+    if (true) codeToMermaid($article)
+    const $mermaid = $article.querySelectorAll('.mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+  const getUtterancesTheme = theme => theme === 'dark' ? 'photon-dark' : 'github-light'
+
+  const loadUtterances = (el = document, key) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyUtterances = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'ktkr3d/ktkr3d.github.io',
+      theme: getUtterancesTheme(document.documentElement.getAttribute('data-theme')),
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      'issue-term': isShuoshuo ? key : (option && option['issue-term']) || 'pathname'
+    }
+
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => ele.setAttribute(key, value))
+    el.querySelector('#utterances-wrap').appendChild(ele)
+  }
+
+  const changeUtterancesTheme = theme => {
+    const iframe = document.querySelector('#utterances-wrap iframe')
+    if (iframe) {
+      const message = {
+        type: 'set-theme',
+        theme: getUtterancesTheme(theme)
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeUtterancesTheme, 'utterances')
+
+  if (isShuoshuo) {
+    'Utterances' === 'Utterances'
+      ? window.shuoshuoComment = { loadComment: loadUtterances }
+      : window.loadOtherComment = loadUtterances
+    return
+  }
+  
+  if ('Utterances' === 'Utterances' || !false) {
+    if (false) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
