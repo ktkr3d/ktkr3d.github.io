@@ -15,8 +15,29 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 04 Oct 2026 17:41:45 GMT</pubDate>
+    <pubDate>Thu, 08 Oct 2026 10:55:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Jellyfin MPV Shim</title>
+      <link>https://ktkr3d.github.io/2026/10/08/Jellyfin-MPV-Shim/</link>
+      <guid>https://ktkr3d.github.io/2026/10/08/Jellyfin-MPV-Shim/</guid>
+      <pubDate>Thu, 08 Oct 2026 05:27:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/jellyfin-mpv-shim.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Jellyfin MPV Shimは、高性能なメディアプレイヤー「MPV」をベースにした軽量な Jellyfin 用クライアントです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-mpv-shim&quot;&gt;https://github.com/jellyfin/jellyfin-mpv-shim&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ruihe774/mpv-lua-mpris&quot;&gt;https://github.com/ruihe774/mpv-lua-mpris&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/jellyfin/">jellyfin</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/10/08/Jellyfin-MPV-Shim/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Arch Linux Hyprland Noctalia</title>
@@ -631,33 +652,6 @@
       
       
       <comments>https://ktkr3d.github.io/2026/04/26/Wowup-App-Japanese-localization/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Headless Hyprland</title>
-      <link>https://ktkr3d.github.io/2026/01/21/Headless-Hyprland/</link>
-      <guid>https://ktkr3d.github.io/2026/01/21/Headless-Hyprland/</guid>
-      <pubDate>Wed, 21 Jan 2026 01:16:59 GMT</pubDate>
-      
-      <description>&lt;p&gt;ヘッドレスのHyprlandデスクトップに接続してみます。&lt;br&gt;GDMとGNOME ShellはRDPで接続し、HyprlandはVNCで接続する構成としました。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/headless_hyprland.png&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;2026-06-30&quot;&gt;&lt;a href=&quot;#2026-06-30&quot; class=&quot;headerlink&quot; title=&quot;2026-06-30&quot;&gt;&lt;/a&gt;2026-06-30&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;hypr-rdpの場合&lt;br&gt;  &lt;a href=&quot;https://ktkr3d.github.io/2026/06/30/hypr-rdp/&quot;&gt;https://ktkr3d.github.io/2026/06/30/hypr-rdp/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/hyprland/">hyprland</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/rdp/">rdp</category>
-      
-      <category domain="https://ktkr3d.github.io/tags/vnc/">vnc</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2026/01/21/Headless-Hyprland/#disqus_thread</comments>
       
     </item>
     
