@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sat, 10 Oct 2026 04:43:16 GMT</pubDate>
+    <pubDate>Sat, 10 Oct 2026 19:00:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,9 +25,10 @@
       <pubDate>Thu, 08 Oct 2026 05:27:02 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;img src=&quot;/images/jellyfin-mpv-shim.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Jellyfin MPV Shimは、高性能なメディアプレイヤー「MPV」をベースにした軽量な Jellyfin 用クライアントです。&lt;br&gt;導入するにあたってMPRISでカバーアートが表示されるようにMPRISスクリプトを配置しました。&lt;/p&gt;
+&lt;p&gt;Jellyfin MPV Shimは、高性能なメディアプレイヤー「MPV」をベースにした軽量な Jellyfin 用クライアントです。&lt;br&gt;最新版をインストールするためのPKGBUILDを作成しました。&lt;br&gt;また、MPRISで動画のカバーアートが表示されるようにMPRISスクリプトを配置しました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-mpv-shim&quot;&gt;https://github.com/jellyfin/jellyfin-mpv-shim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ktkr3d/jellyfin-mpv-shim-git&quot;&gt;https://github.com/ktkr3d/jellyfin-mpv-shim-git&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ktkr3d/mpv-lua-mpris&quot;&gt;https://github.com/ktkr3d/mpv-lua-mpris&lt;/a&gt;&lt;br&gt;forked from &lt;a href=&quot;https://github.com/ruihe774/mpv-lua-mpris&quot;&gt;ruihe774&amp;#x2F;mpv-lua-mpris&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
       
