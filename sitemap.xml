@@ -2225,7 +2225,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/09/28/caribou/</loc>
+    <loc>https://ktkr3d.github.io/2011/09/23/fennec/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2234,7 +2234,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2011/09/23/fennec/</loc>
+    <loc>https://ktkr3d.github.io/2011/09/28/caribou/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2855,7 +2855,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2013/02/09/cloud9-ide/</loc>
+    <loc>https://ktkr3d.github.io/2013/02/07/ubuntu-13-04-gnome-shell-3-7-5/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -2864,7 +2864,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/2013/02/07/ubuntu-13-04-gnome-shell-3-7-5/</loc>
+    <loc>https://ktkr3d.github.io/2013/02/09/cloud9-ide/</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3494,15 +3494,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/android/index.html</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/about/index.html</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -3512,7 +3503,7 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/antergos/index.html</loc>
+    <loc>https://ktkr3d.github.io/android/index.html</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3522,6 +3513,15 @@
   
   <url>
     <loc>https://ktkr3d.github.io/android-x86/index.html</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/antergos/index.html</loc>
     
     <lastmod>2020-08-02</lastmod>
     
@@ -3566,15 +3566,6 @@
   </url>
   
   <url>
-    <loc>https://ktkr3d.github.io/raspberry-pi/index.html</loc>
-    
-    <lastmod>2020-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ktkr3d.github.io/openvpn/index.html</loc>
     
     <lastmod>2020-08-02</lastmod>
@@ -3585,6 +3576,15 @@
   
   <url>
     <loc>https://ktkr3d.github.io/peercast-radio/index.html</loc>
+    
+    <lastmod>2020-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ktkr3d.github.io/raspberry-pi/index.html</loc>
     
     <lastmod>2020-08-02</lastmod>
     
