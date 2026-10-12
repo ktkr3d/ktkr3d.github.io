@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Mon, 12 Oct 2026 11:00:52 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 12:33:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,7 +24,7 @@
       <guid>https://ktkr3d.github.io/2026/10/12/Noctalia-Jellyfin-Browser/</guid>
       <pubDate>Sun, 11 Oct 2026 22:15:03 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/noctalia-jellyfin-browser.jpg&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/jellyfin-browser-thumbnail.webp&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Jellyfinサーバに接続してライブラリをブラウズするNoctaliaプラグインを作成しました。MPVで再生します。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/noctalia-plugins&quot;&gt;https://github.com/ktkr3d/noctalia-plugins&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser&quot;&gt;https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser&lt;/a&gt;&lt;/p&gt;</description>
       
