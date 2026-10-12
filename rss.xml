@@ -15,8 +15,31 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Sun, 11 Oct 2026 09:54:19 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 06:26:08 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Noctalia Jellyfin Browser</title>
+      <link>https://ktkr3d.github.io/2026/10/12/Noctalia-Jellyfin-Browser/</link>
+      <guid>https://ktkr3d.github.io/2026/10/12/Noctalia-Jellyfin-Browser/</guid>
+      <pubDate>Sun, 11 Oct 2026 22:15:03 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;img src=&quot;/images/noctalia-jellyfin-browser.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Jellyfinサーバに接続してライブラリをブラウズするNoctaliaプラグインを作成しました。MPVで再生します。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/noctalia-plugins&quot;&gt;https://github.com/ktkr3d/noctalia-plugins&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser&quot;&gt;https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser&lt;/a&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://ktkr3d.github.io/tags/jellyfin/">jellyfin</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/noctalia/">noctalia</category>
+      
+      
+      <comments>https://ktkr3d.github.io/2026/10/12/Noctalia-Jellyfin-Browser/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Jellyfin MPV Shim</title>
@@ -637,25 +660,6 @@
       
       
       <comments>https://ktkr3d.github.io/2026/04/26/Morse-code-practice-machine/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>WowUp app Japanese localization</title>
-      <link>https://ktkr3d.github.io/2026/04/26/Wowup-App-Japanese-localization/</link>
-      <guid>https://ktkr3d.github.io/2026/04/26/Wowup-App-Japanese-localization/</guid>
-      <pubDate>Sat, 25 Apr 2026 21:40:11 GMT</pubDate>
-      
-      <description>&lt;p&gt;World of Warcraft のアドオン管理アプリWowUpを日本語化してみました。&lt;br&gt;&lt;img src=&quot;/images/wowup_ja.png&quot;&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      
-      <category domain="https://ktkr3d.github.io/tags/wow/">wow</category>
-      
-      
-      <comments>https://ktkr3d.github.io/2026/04/26/Wowup-App-Japanese-localization/#disqus_thread</comments>
       
     </item>
     
