@@ -229,7 +229,7 @@ btf.addGlobalFn('pjaxComplete', () => {
 </ul>
 <h3 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h3><ul>
 <li>Windowsアプリケーションの実行形式を直接指定する場合は大文字の拡張子(.EXE)を小文字(.exe)にしておく</li>
-<li>Vulkanをサポートしていない(古い)オンボードグラフィクスデバイスの場合<br>  ⚙️ &gt; <code>Global Environment Variables</code> に以下を追加してOpenGLで動作させる。  <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">PROTON_USE_WINED3D</span>=<span class="number">1</span></span><br></pre></td></tr></table></figure></li>
+<li>Vulkanをサポートしていない(古い)オンボードグラフィクスデバイスの場合<br>  ⚙️ &gt; <code>Global Environment Variables</code> に以下を追加してOpenGLで動作させる。  <figure class="highlight freedesktop"><table><tr><td class="code"><pre><span class="line"><span class="attr">PROTON_USE_WINED3D</span><span class="operator">=</span>1</span><br></pre></td></tr></table></figure></li>
 </ul>
 <!--
 - 一部のゲームはフルスクリーンの設定が必要
@@ -268,7 +268,7 @@ btf.addGlobalFn('pjaxComplete', () => {
 <li>インストーラを選択</li>
 <li><kbd>▶️</kbd></li>
 <li>インストールが完了したら、アプリケーション名を右クリックして<code>Edit</code></li>
-<li><code>Path</code>にプログラム本体のパスを指定 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">/home/</span>arch<span class="regexp">/Faugus/</span>proun<span class="regexp">/drive_c/</span>Program Files (x86)<span class="regexp">/Proun/</span>Proun.exe</span><br></pre></td></tr></table></figure></li>
+<li><code>Path</code>にプログラム本体のパスを指定 <figure class="highlight dart"><table><tr><td class="code"><pre><span class="line">/home/arch/<span class="title class_">Faugus</span>/proun/drive_c/<span class="title class_">Program</span> <span class="title class_">Files</span> (x86)/<span class="title class_">Proun</span>/<span class="title class_">Proun</span>.exe</span><br></pre></td></tr></table></figure></li>
 <li>Shortcut の<code>App Menu</code>をチェックして<kbd>Ok</kbd></li>
 </ol>
 <!--
