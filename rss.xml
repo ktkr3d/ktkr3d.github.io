@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Mon, 12 Oct 2026 14:56:10 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 21:02:08 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -35,6 +35,8 @@
       <category domain="https://ktkr3d.github.io/tags/jellyfin/">jellyfin</category>
       
       <category domain="https://ktkr3d.github.io/tags/noctalia/">noctalia</category>
+      
+      <category domain="https://ktkr3d.github.io/tags/mpv/">mpv</category>
       
       
       <comments>https://ktkr3d.github.io/2026/10/12/Noctalia-Jellyfin-Browser/#disqus_thread</comments>
