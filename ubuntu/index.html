@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Ubuntu | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Ubuntu 			Ubuntu（ウブントゥ） とは、コミュニティ により開発されているオペレーティングシステムです。   ディストリビューション Ubuntu Desktophttps:&#x2F;&#x2F;ubuntu.com&#x2F;download&#x2F;desktop  スクリーンショットUbuntu 24.04 LTS Ubuntu 基本設定 ホームディレクトリの各フォルダ名を英語名に変更 L">
+<!DOCTYPE html><html lang="jp" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Ubuntu | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Ubuntu 			Ubuntu（ウブントゥ） とは、コミュニティ により開発されているオペレーティングシステムです。 ディストリビューション  Ubuntu Desktop https:&#x2F;&#x2F;ubuntu.com&#x2F;download&#x2F;desktop  スクリーンショット Ubuntu 24.04 LTS  Ubuntu 基本設定   ホームディレクトリの各フォルダ名を英語名に">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ubuntu">
 <meta property="og:url" content="https://ktkr3d.github.io/ubuntu/index.html">
 <meta property="og:site_name" content="Memorandum!">
-<meta property="og:description" content="Ubuntu 			Ubuntu（ウブントゥ） とは、コミュニティ により開発されているオペレーティングシステムです。   ディストリビューション Ubuntu Desktophttps:&#x2F;&#x2F;ubuntu.com&#x2F;download&#x2F;desktop  スクリーンショットUbuntu 24.04 LTS Ubuntu 基本設定 ホームディレクトリの各フォルダ名を英語名に変更 L">
+<meta property="og:description" content="Ubuntu 			Ubuntu（ウブントゥ） とは、コミュニティ により開発されているオペレーティングシステムです。 ディストリビューション  Ubuntu Desktop https:&#x2F;&#x2F;ubuntu.com&#x2F;download&#x2F;desktop  スクリーンショット Ubuntu 24.04 LTS  Ubuntu 基本設定   ホームディレクトリの各フォルダ名を英語名に">
 <meta property="og:locale">
 <meta property="og:image" content="https://ktkr3d.github.io/images/avatar.png">
 <meta property="article:published_time" content="2015-02-01T13:04:09.000Z">
@@ -200,41 +200,54 @@ btf.addGlobalFn('pjaxComplete', () => {
 		<div class="descriptions">
 			<div class="og-title">Ubuntu</div>
 			<div class="og-description">Ubuntu（ウブントゥ） とは、コミュニティ により開発されているオペレーティングシステムです。</div></div></a>
-
-
-<h3 id="ディストリビューション"><a href="#ディストリビューション" class="headerlink" title="ディストリビューション"></a>ディストリビューション</h3><ul>
-<li>Ubuntu Desktop<br><a target="_blank" rel="noopener" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a></li>
+<h3 id="ディストリビューション">ディストリビューション</h3>
+<ul>
+<li>Ubuntu Desktop<br>
+<a target="_blank" rel="noopener" href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a></li>
 </ul>
-<h3 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h3><h4 id="Ubuntu-24-04-LTS"><a href="#Ubuntu-24-04-LTS" class="headerlink" title="Ubuntu 24.04 LTS"></a>Ubuntu 24.04 LTS</h4><p><img src="/images/ubuntu-24-04.png"></p>
-<h3 id="Ubuntu-基本設定"><a href="#Ubuntu-基本設定" class="headerlink" title="Ubuntu 基本設定"></a>Ubuntu 基本設定</h3><ul>
-<li><p>ホームディレクトリの各フォルダ名を英語名に変更</p>
+<h3 id="スクリーンショット">スクリーンショット</h3>
+<h4 id="Ubuntu-24-04-LTS">Ubuntu 24.04 LTS</h4>
+<p><img src="/images/ubuntu-24-04.png" alt=""></p>
+<h3 id="Ubuntu-基本設定">Ubuntu 基本設定</h3>
+<ul>
+<li>
+<p>ホームディレクトリの各フォルダ名を英語名に変更</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LANG=C xdg-user-dirs-gtk-update</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>テキストテンプレートファイルの作成</p>
+<li>
+<p>テキストテンプレートファイルの作成</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">touch</span> ~/Templates/Text</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>alias の設定</p>
+<li>
+<p>alias の設定</p>
 <figure class="highlight bash"><figcaption><span>~/.bash_aliases</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> upd=<span class="string">&#x27;sudo apt update -y &amp;&amp; sudo apt dist-upgrade &amp;&amp; sudo apt autoremove -y&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> en=<span class="string">&#x27;LANG=&quot;en_US.UTF-8&quot;&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> ja=<span class="string">&#x27;LANG=&quot;ja_JP.UTF-8&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>デフォルトブートの設定</p>
+<li>
+<p>デフォルトブートの設定</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grep <span class="string">&quot;^menuentry\|^submenu&quot;</span> /boot/grub/grub.cfg</span><br><span class="line">menuentry <span class="string">&#x27;Ubuntu&#x27;</span> --class ubuntu --class gnu-linux --class gnu --class os <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;gnulinux-simple-62e49b0d-cba3-41df-867d-25c8175582d5&#x27;</span> &#123;</span><br><span class="line">submenu <span class="string">&#x27;Advanced options for Ubuntu&#x27;</span> <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;gnulinux-advanced-62e49b0d-cba3-41df-867d-25c8175582d5&#x27;</span> &#123;</span><br><span class="line">menuentry <span class="string">&#x27;Windows Boot Manager (on /dev/sda1)&#x27;</span> --class windows --class os <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;osprober-efi-32E3-84BC&#x27;</span> &#123;</span><br><span class="line">menuentry <span class="string">&#x27;UEFI Firmware Settings&#x27;</span> <span class="variable">$menuentry_id_option</span> <span class="string">&#x27;uefi-firmware&#x27;</span> &#123;</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight ini"><figcaption><span>/etc/default/grub</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#GRUB_DEFAULT=0</span></span><br><span class="line"><span class="attr">GRUB_DEFAULT</span>=<span class="string">&#x27;Windows Boot Manager (on /dev/sda1)&#x27;</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> update-grub</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>マルチブート時の時刻ズレ調整</p>
+<li>
+<p>マルチブート時の時刻ズレ調整</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> timedatectl set-local-rtc <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>デスクトップのホームフォルダの削除<br><code>設定</code>-<code>Ubuntu Desktop</code>でデスクトップアイコンをオフ</p>
+<li>
+<p>デスクトップのホームフォルダの削除<br>
+<code>設定</code>-<code>Ubuntu Desktop</code>でデスクトップアイコンをオフ</p>
 </li>
-<li><p>GDMの解像度&#x2F;向きをユーザセッションの解像度&#x2F;向きと同じにする</p>
+<li>
+<p>GDMの解像度/向きをユーザセッションの解像度/向きと同じにする</p>
 <ul>
-<li>GDM Settings を使う方法 🆕<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install gdm-settings</span><br></pre></td></tr></table></figure></li>
-<li>GDM Settings を使わない方法<br><code>設定</code>-<code>ディスプレイ</code> で解像度を適用した後で以下を実行する。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">cp</span> ~/.config/monitors.xml /var/lib/gdm3/.config/monitors.xml</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chown</span> gdm:gdm /var/lib/gdm3/.config/monitors.xml</span><br></pre></td></tr></table></figure></li>
+<li>GDM Settings を使う方法 🆕<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install gdm-settings</span><br></pre></td></tr></table></figure>
+</li>
+<li>GDM Settings を使わない方法<br>
+<code>設定</code>-<code>ディスプレイ</code> で解像度を適用した後で以下を実行する。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">cp</span> ~/.config/monitors.xml /var/lib/gdm3/.config/monitors.xml</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chown</span> gdm:gdm /var/lib/gdm3/.config/monitors.xml</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li><p>内蔵ディスクの自動マウント</p>
+<li>
+<p>内蔵ディスクの自動マウント</p>
 <ul>
 <li><code>ディスク</code>アプリを開く</li>
 <li>対象のパーティションを選択</li>
@@ -243,46 +256,75 @@ btf.addGlobalFn('pjaxComplete', () => {
 <li>ユーザセッションのデフォルトのチェックを外してOK</li>
 </ul>
 </li>
-<li><p>Snapの削除<br>Snap版のFirefoxはPWA化できないのでSnapを削除してDeb版のFirefoxを導入します。<br><a target="_blank" rel="noopener" href="https://www.debugpoint.com/remove-snap-ubuntu/">https://www.debugpoint.com/remove-snap-ubuntu/</a></p>
+<li>
+<p>Snapの削除<br>
+Snap版のFirefoxはPWA化できないのでSnapを削除してDeb版のFirefoxを導入します。<br>
+<a target="_blank" rel="noopener" href="https://www.debugpoint.com/remove-snap-ubuntu/">https://www.debugpoint.com/remove-snap-ubuntu/</a></p>
 </li>
-<li><p>コーディング用固定幅フォントのインストール<br><a target="_blank" rel="noopener" href="https://github.com/adobe-fonts/source-han-code-jp/releases">https://github.com/adobe-fonts/source-han-code-jp/releases</a><br><code>$HOME/.fonts/SourceHanCodeJP.ttc</code></p>
+<li>
+<p>コーディング用固定幅フォントのインストール<br>
+<a target="_blank" rel="noopener" href="https://github.com/adobe-fonts/source-han-code-jp/releases">https://github.com/adobe-fonts/source-han-code-jp/releases</a><br>
+<code>$HOME/.fonts/SourceHanCodeJP.ttc</code></p>
 <figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">fc-cache -fv</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>リモートデスクトップサーバ</p>
+<li>
+<p>リモートデスクトップサーバ</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install xrdp</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> xrdp</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><figcaption><span>/etc/xrdp/startwm.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">unset</span> DBUS_SESSION_BUS_ADDRESS</span><br><span class="line"><span class="built_in">exec</span> gnome-session</span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> -x /etc/X11/Xsession &amp;&amp; <span class="built_in">exec</span> /etc/X11/Xsession</span><br><span class="line"><span class="built_in">exec</span> /bin/sh /etc/X11/Xsession</span><br></pre></td></tr></table></figure>
 <figure class="highlight ini"><figcaption><span>/etc/xrdp/xrdp.ini</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#blue=009cb5</span></span><br><span class="line"><span class="attr">blue</span>=<span class="number">282828</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#ls_top_window_bg_color=009cb5</span></span><br><span class="line"><span class="attr">ls_top_window_bg_color</span>=<span class="number">282828</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart xrdp</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart xrdp</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="パッケージ導入"><a href="#パッケージ導入" class="headerlink" title="パッケージ導入"></a>パッケージ導入</h3><h4 id="基本パッケージ"><a href="#基本パッケージ" class="headerlink" title="基本パッケージ"></a>基本パッケージ</h4><ul>
-<li><p>インストール</p>
+<h3 id="パッケージ導入">パッケージ導入</h3>
+<h4 id="基本パッケージ">基本パッケージ</h4>
+<ul>
+<li>
+<p>インストール</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install build-essential curl gettext git gparted make</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>git の設定</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email mail_account_name@mail_domain_name</span><br></pre></td></tr></table></figure></li>
-<li><p>Node.js</p>
+<li>
+<p>git の設定</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email mail_account_name@mail_domain_name</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>Node.js</p>
 </li>
 </ul>
-<h4 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h4><p>  <a target="_blank" rel="noopener" href="https://github.com/tj/n">https://github.com/tj/n</a><br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -L https://bit.ly/n-install | bash</span><br></pre></td></tr></table></figure><br>  <div class="note info flat"><p>~&#x2F;.bashrc の末尾に一行追加されます</p>
-</div></p>
-<h4 id="アプリケーションパッケージ"><a href="#アプリケーションパッケージ" class="headerlink" title="アプリケーションパッケージ"></a>アプリケーションパッケージ</h4><ul>
-<li><p>Visual Studio Code</p>
+<h4 id="nodejs">nodejs</h4>
+<p><a target="_blank" rel="noopener" href="https://github.com/tj/n">https://github.com/tj/n</a></p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -L https://bit.ly/n-install | bash</span><br></pre></td></tr></table></figure>
+  <div class="note info flat"><p>~/.bashrc の末尾に一行追加されます</p>
+</div>
+<h4 id="アプリケーションパッケージ">アプリケーションパッケージ</h4>
+<ul>
+<li>
+<p>Visual Studio Code</p>
 <figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">curl https://packages.microsoft.com/keys/microsoft.<span class="keyword">asc</span> | gpg <span class="comment">--dearmor &gt; microsoft.gpg</span></span><br><span class="line">sudo install -o root -g root -m <span class="number">644</span> microsoft.gpg /etc/apt/<span class="keyword">trusted</span>.gpg.d/</span><br><span class="line">sudo sh -c <span class="string">&#x27;echo &quot;deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main&quot; &gt; /etc/apt/sources.list.d/vscode.list&#x27;</span></span><br><span class="line">sudo apt install apt-transport-https</span><br><span class="line">sudo apt <span class="keyword">update</span></span><br><span class="line">sudo apt install code</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Kodi</p>
+<li>
+<p>Kodi</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install kodi</span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><figcaption><span>~/.kodi/userdata/keymaps/keyboard.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">keymap</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">global</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">keyboard</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">insert</span>&gt;</span>ActivateWindow(favourites)<span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">delete</span>&gt;</span>ActivateWindow(videofiles)<span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">home</span>&gt;</span>ActivateWindow(fullscreenvideo)<span class="tag">&lt;/<span class="name">home</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">end</span>&gt;</span>ActivateWindow(shutdownmenu)<span class="tag">&lt;/<span class="name">end</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">f12</span> <span class="attr">mod</span>=<span class="string">&quot;shift&quot;</span>&gt;</span>ActivateWindow(shutdownmenu)<span class="tag">&lt;/<span class="name">f12</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">del</span> <span class="attr">mod</span>=<span class="string">&quot;shift&quot;</span>&gt;</span>ActivateWindow(shutdownmenu)<span class="tag">&lt;/<span class="name">del</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">keyboard</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">global</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">keymap</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight xml"><figcaption><span>~/.kodi/userdata/keymaps/keyboard.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">keymap</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">global</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">keyboard</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">insert</span>&gt;</span>ActivateWindow(favourites)<span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">delete</span>&gt;</span>ActivateWindow(videofiles)<span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">home</span>&gt;</span>ActivateWindow(fullscreenvideo)<span class="tag">&lt;/<span class="name">home</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">end</span>&gt;</span>ActivateWindow(shutdownmenu)<span class="tag">&lt;/<span class="name">end</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">f12</span> <span class="attr">mod</span>=<span class="string">&quot;shift&quot;</span>&gt;</span>ActivateWindow(shutdownmenu)<span class="tag">&lt;/<span class="name">f12</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">del</span> <span class="attr">mod</span>=<span class="string">&quot;shift&quot;</span>&gt;</span>ActivateWindow(shutdownmenu)<span class="tag">&lt;/<span class="name">del</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">keyboard</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">global</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">keymap</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="日本語入力設定"><a href="#日本語入力設定" class="headerlink" title="日本語入力設定"></a>日本語入力設定</h3><h4 id="基本設定"><a href="#基本設定" class="headerlink" title="基本設定"></a>基本設定</h4><ul>
-<li><p>fcitx5-mozc の導入</p>
+<h3 id="日本語入力設定">日本語入力設定</h3>
+<h4 id="基本設定">基本設定</h4>
+<ul>
+<li>
+<p>fcitx5-mozc の導入</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install fcitx5-mozc</span><br><span class="line">im-config -n fcitx5</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Mozc の設定<br>スペースの入力: 半角</p>
+<li>
+<p>Mozc の設定<br>
+スペースの入力: 半角</p>
 </li>
 </ul>
-<h4 id="英語キーボードの場合の追加設定"><a href="#英語キーボードの場合の追加設定" class="headerlink" title="英語キーボードの場合の追加設定"></a>英語キーボードの場合の追加設定</h4><ul>
-<li><p>キー割当<br>左 Alt を無変換モード、右 Alt をかな漢字変換モード</p>
+<h4 id="英語キーボードの場合の追加設定">英語キーボードの場合の追加設定</h4>
+<ul>
+<li>
+<p>キー割当<br>
+左 Alt を無変換モード、右 Alt をかな漢字変換モード</p>
 <figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">fcitx5-config-qt</span><br></pre></td></tr></table></figure>
 <ul>
 <li>一時的に第一入力メソッドに切り替える: ー</li>
@@ -290,28 +332,34 @@ btf.addGlobalFn('pjaxComplete', () => {
 <li>入力メソッドをオフにする: 左 Alt</li>
 </ul>
 </li>
-<li><p>Firefox のAlt キー対策</p>
+<li>
+<p>Firefox のAlt キー対策</p>
 <ul>
 <li><code>about:config</code>で<code>menuaccess</code>を検索</li>
-<li><code>ui.key.menuAccessKey</code>を<code>18</code>から<code>19</code>に変更<br><code>F10</code>でメニューを表示できます。</li>
+<li><code>ui.key.menuAccessKey</code>を<code>18</code>から<code>19</code>に変更<br>
+<code>F10</code>でメニューを表示できます。</li>
 <li><code>ui.key.menuAccessKeyFocuses</code>を<code>true</code>から<code>false</code>に変更</li>
 </ul>
 </li>
-<li><p>code-server のAlt キー対策<br>PWA化したFirefoxで、</p>
+<li>
+<p>code-server のAlt キー対策<br>
+PWA化したFirefoxで、</p>
 <ul>
 <li><code>about:config</code>で<code>menuaccess</code>を検索</li>
 <li><code>ui.key.menuAccessKey</code>を<code>18</code>から<code>19</code>に変更</li>
 <li><code>ui.key.menuAccessKeyFocuses</code>を<code>true</code>から<code>false</code>に変更</li>
 </ul>
 </li>
-<li><p>Visual Studio Code のAlt キー対策</p>
-<figure class="highlight json"><figcaption><span>settings.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;window.titleBarStyle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;custom&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;window.customMenuBarAltFocus&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;window.enableMenuBarMnemonics&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;window.menuBarVisibility&quot;</span><span class="punctuation">:</span> <span class="string">&quot;visible&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></li>
+<li>
+<p>Visual Studio Code のAlt キー対策</p>
+<figure class="highlight json"><figcaption><span>settings.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;window.titleBarStyle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;custom&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;window.customMenuBarAltFocus&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;window.enableMenuBarMnemonics&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;window.menuBarVisibility&quot;</span><span class="punctuation">:</span> <span class="string">&quot;visible&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">512</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">218</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/12/Noctalia-Jellyfin-Browser/" title="Noctalia Jellyfin Browser">Noctalia Jellyfin Browser</a><time datetime="2026-10-11T22:15:03.000Z" title="Created 2026-10-12 07:15:03">2026-10-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/08/Jellyfin-MPV-Shim/" title="Jellyfin MPV Shim">Jellyfin MPV Shim</a><time datetime="2026-10-08T05:27:02.000Z" title="Created 2026-10-08 14:27:02">2026-10-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/04/Arch-Linux-Hyprland-Noctalia/" title="Arch Linux Hyprland Noctalia">Arch Linux Hyprland Noctalia</a><time datetime="2026-10-04T06:32:33.000Z" title="Created 2026-10-04 15:32:33">2026-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/25/CachyOS-Hyprland-Noctalia/" title="CachyOS Hyprland Noctalia">CachyOS Hyprland Noctalia</a><time datetime="2026-09-24T19:51:02.000Z" title="Created 2026-09-25 04:51:02">2026-09-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/21/Hyper-Compressed-Ocean/" title="Hyper-Compressed Ocean">Hyper-Compressed Ocean</a><time datetime="2026-09-21T02:07:34.000Z" title="Created 2026-09-21 11:07:34">2026-09-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>Categories</span><a class="card-more-btn" href="/categories/" title="View More">
       <i class="fas fa-angle-right"></i></a></div>
           <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/3d/"><span class="card-category-list-name">3d</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/"><span class="card-category-list-name">android</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/application/"><span class="card-category-list-name">application</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cms/"><span class="card-category-list-name">cms</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/conky/"><span class="card-category-list-name">conky</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/develop/"><span class="card-category-list-name">develop</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/dtv/"><span class="card-category-list-name">dtv</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/editor/"><span class="card-category-list-name">editor</span><span class="card-category-list-count">2</span></a></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/extraterm/" style="font-size: 1.1em; color: #999">extraterm</a> <a href="/tags/kde/" style="font-size: 1.1em; color: #999">kde</a> <a href="/tags/gtk-3/" style="font-size: 1.23em; color: #999ea6">gtk+3</a> <a href="/tags/Windows11/" style="font-size: 1.1em; color: #999">Windows11</a> <a href="/tags/calamares/" style="font-size: 1.1em; color: #999">calamares</a> <a href="/tags/terminus/" style="font-size: 1.1em; color: #999">terminus</a> <a href="/tags/python/" style="font-size: 1.37em; color: #99a4b2">python</a> <a href="/tags/kodi/" style="font-size: 1.3em; color: #99a1ac">kodi</a> <a href="/tags/argos/" style="font-size: 1.17em; color: #999c9f">argos</a> <a href="/tags/noctalia/" style="font-size: 1.23em; color: #999ea6">noctalia</a> <a href="/tags/vnc/" style="font-size: 1.1em; color: #999">vnc</a> <a href="/tags/mutter/" style="font-size: 1.1em; color: #999">mutter</a> <a href="/tags/peercast/" style="font-size: 1.23em; color: #999ea6">peercast</a> <a href="/tags/jellyfin/" style="font-size: 1.23em; color: #999ea6">jellyfin</a> <a href="/tags/angular-js/" style="font-size: 1.1em; color: #999">angular.js</a> <a href="/tags/qwen3/" style="font-size: 1.1em; color: #999">qwen3</a> <a href="/tags/wow/" style="font-size: 1.5em; color: #99a9bf">wow</a> <a href="/tags/Antergos/" style="font-size: 1.1em; color: #999">Antergos</a> <a href="/tags/feedbro/" style="font-size: 1.1em; color: #999">feedbro</a> <a href="/tags/webvitrmgr/" style="font-size: 1.1em; color: #999">webvitrmgr</a> <a href="/tags/hyperv/" style="font-size: 1.1em; color: #999">hyperv</a> <a href="/tags/pritunl/" style="font-size: 1.23em; color: #999ea6">pritunl</a> <a href="/tags/chrome/" style="font-size: 1.17em; color: #999c9f">chrome</a> <a href="/tags/gtk/" style="font-size: 1.1em; color: #999">gtk</a> <a href="/tags/chinachu/" style="font-size: 1.23em; color: #999ea6">chinachu</a> <a href="/tags/usb/" style="font-size: 1.1em; color: #999">usb</a> <a href="/tags/mirakurun/" style="font-size: 1.23em; color: #999ea6">mirakurun</a> <a href="/tags/wine/" style="font-size: 1.1em; color: #999">wine</a> <a href="/tags/puppeteer/" style="font-size: 1.23em; color: #999ea6">puppeteer</a> <a href="/tags/fastfetch/" style="font-size: 1.17em; color: #999c9f">fastfetch</a> <a href="/tags/arch-linux/" style="font-size: 1.3em; color: #99a1ac">arch-linux</a> <a href="/tags/markdown/" style="font-size: 1.23em; color: #999ea6">markdown</a> <a href="/tags/atom/" style="font-size: 1.1em; color: #999">atom</a> <a href="/tags/vscode/" style="font-size: 1.43em; color: #99a6b9">vscode</a> <a href="/tags/gnome-shell-extension/" style="font-size: 1.23em; color: #999ea6">gnome-shell-extension</a> <a href="/tags/kdenlive/" style="font-size: 1.1em; color: #999">kdenlive</a> <a href="/tags/ogre3d/" style="font-size: 1.17em; color: #999c9f">ogre3d</a> <a href="/tags/fedora/" style="font-size: 1.3em; color: #99a1ac">fedora</a> <a href="/tags/hyprmod/" style="font-size: 1.1em; color: #999">hyprmod</a> <a href="/tags/flutter/" style="font-size: 1.1em; color: #999">flutter</a></div></div><div class="card-widget card-archives">
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/vm/" style="font-size: 1.3em; color: #99a1ac">vm</a> <a href="/tags/caelestia/" style="font-size: 1.17em; color: #999c9f">caelestia</a> <a href="/tags/kimchi/" style="font-size: 1.1em; color: #999">kimchi</a> <a href="/tags/blender/" style="font-size: 1.1em; color: #999">blender</a> <a href="/tags/moc/" style="font-size: 1.17em; color: #999c9f">moc</a> <a href="/tags/kde/" style="font-size: 1.1em; color: #999">kde</a> <a href="/tags/addon/" style="font-size: 1.1em; color: #999">addon</a> <a href="/tags/fastfetch/" style="font-size: 1.17em; color: #999c9f">fastfetch</a> <a href="/tags/hyperv/" style="font-size: 1.1em; color: #999">hyperv</a> <a href="/tags/argos/" style="font-size: 1.17em; color: #999c9f">argos</a> <a href="/tags/gnome-remote-desktop/" style="font-size: 1.1em; color: #999">gnome-remote-desktop</a> <a href="/tags/usl-5p/" style="font-size: 1.1em; color: #999">usl-5p</a> <a href="/tags/vuejs/" style="font-size: 1.1em; color: #999">vuejs</a> <a href="/tags/hexo/" style="font-size: 1.43em; color: #99a6b9">hexo</a> <a href="/tags/terminus/" style="font-size: 1.1em; color: #999">terminus</a> <a href="/tags/manjaro/" style="font-size: 1.1em; color: #999">manjaro</a> <a href="/tags/hi10go/" style="font-size: 1.1em; color: #999">hi10go</a> <a href="/tags/hyprmod/" style="font-size: 1.1em; color: #999">hyprmod</a> <a href="/tags/sheetui/" style="font-size: 1.1em; color: #999">sheetui</a> <a href="/tags/gnu/" style="font-size: 1.1em; color: #999">gnu</a> <a href="/tags/tray-launcher/" style="font-size: 1.1em; color: #999">tray-launcher</a> <a href="/tags/electron/" style="font-size: 1.23em; color: #999ea6">electron</a> <a href="/tags/starship/" style="font-size: 1.17em; color: #999c9f">starship</a> <a href="/tags/ubuntu/" style="font-size: 1.5em; color: #99a9bf">ubuntu</a> <a href="/tags/angular-js/" style="font-size: 1.1em; color: #999">angular.js</a> <a href="/tags/neutralinojs/" style="font-size: 1.37em; color: #99a4b2">neutralinojs</a> <a href="/tags/android-studio/" style="font-size: 1.1em; color: #999">android-studio</a> <a href="/tags/javascript/" style="font-size: 1.1em; color: #999">javascript</a> <a href="/tags/nim/" style="font-size: 1.1em; color: #999">nim</a> <a href="/tags/archiso/" style="font-size: 1.23em; color: #999ea6">archiso</a> <a href="/tags/ajenti/" style="font-size: 1.1em; color: #999">ajenti</a> <a href="/tags/flatpak/" style="font-size: 1.17em; color: #999c9f">flatpak</a> <a href="/tags/raytrace/" style="font-size: 1.1em; color: #999">raytrace</a> <a href="/tags/nm-connection-editor/" style="font-size: 1.1em; color: #999">nm-connection-editor</a> <a href="/tags/virtualbox/" style="font-size: 1.1em; color: #999">virtualbox</a> <a href="/tags/extraterm/" style="font-size: 1.1em; color: #999">extraterm</a> <a href="/tags/chrome/" style="font-size: 1.17em; color: #999c9f">chrome</a> <a href="/tags/noctalia/" style="font-size: 1.23em; color: #999ea6">noctalia</a> <a href="/tags/slidev/" style="font-size: 1.23em; color: #999ea6">slidev</a> <a href="/tags/mirakurun/" style="font-size: 1.23em; color: #999ea6">mirakurun</a></div></div><div class="card-widget card-archives">
     <div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/"
             title="View More">
             <i class="fas fa-angle-right"></i>

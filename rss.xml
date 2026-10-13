@@ -15,7 +15,7 @@
     <atom:link href="https://ktkr3d.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Memorandum</description>
-    <pubDate>Mon, 12 Oct 2026 21:02:08 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 21:50:05 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,9 +24,10 @@
       <guid>https://ktkr3d.github.io/2026/10/12/Noctalia-Jellyfin-Browser/</guid>
       <pubDate>Sun, 11 Oct 2026 22:15:03 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/jellyfin-browser-thumbnail.webp&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/jellyfin-browser-thumbnail.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Jellyfinサーバに接続してライブラリをブラウズするNoctaliaプラグインを作成しました。MPVで再生します。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/noctalia-plugins&quot;&gt;https://github.com/ktkr3d/noctalia-plugins&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser&quot;&gt;https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/noctalia-plugins&quot;&gt;https://github.com/ktkr3d/noctalia-plugins&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser&quot;&gt;https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
@@ -49,12 +50,15 @@
       <guid>https://ktkr3d.github.io/2026/10/08/Jellyfin-MPV-Shim/</guid>
       <pubDate>Thu, 08 Oct 2026 05:27:02 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/jellyfin-mpv-shim-git.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Jellyfin MPV Shimは、高性能なメディアプレイヤー「MPV」をベースにした軽量な Jellyfin 用クライアントです。高速です。&lt;br&gt;最新版をインストールするためのPKGBUILDを作成しました。&lt;br&gt;また、MPRISで動画のカバーアートが表示されるようにMPRISスクリプトを配置しました。&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/jellyfin-mpv-shim-git.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Jellyfin MPV Shimは、高性能なメディアプレイヤー「MPV」をベースにした軽量な Jellyfin 用クライアントです。高速です。&lt;br&gt;
+最新版をインストールするためのPKGBUILDを作成しました。&lt;br&gt;
+また、MPRISで動画のカバーアートが表示されるようにMPRISスクリプトを配置しました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/jellyfin/jellyfin-mpv-shim&quot;&gt;https://github.com/jellyfin/jellyfin-mpv-shim&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ktkr3d/jellyfin-mpv-shim-git&quot;&gt;https://github.com/ktkr3d/jellyfin-mpv-shim-git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ktkr3d/mpv-lua-mpris&quot;&gt;https://github.com/ktkr3d/mpv-lua-mpris&lt;/a&gt;&lt;br&gt;forked from &lt;a href=&quot;https://github.com/ruihe774/mpv-lua-mpris&quot;&gt;ruihe774&amp;#x2F;mpv-lua-mpris&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ktkr3d/mpv-lua-mpris&quot;&gt;https://github.com/ktkr3d/mpv-lua-mpris&lt;/a&gt;&lt;br&gt;
+forked from &lt;a href=&quot;https://github.com/ruihe774/mpv-lua-mpris&quot;&gt;ruihe774/mpv-lua-mpris&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
       
       
@@ -74,8 +78,8 @@
       <guid>https://ktkr3d.github.io/2026/10/04/Arch-Linux-Hyprland-Noctalia/</guid>
       <pubDate>Sun, 04 Oct 2026 06:32:33 GMT</pubDate>
       
-      <description>&lt;p&gt;Arch Linux &amp;#x2F; Hyprlandの環境にNoctaliaを導入してみました。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/arch-hypr-noctalia.png&quot;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Arch Linux / Hyprlandの環境にNoctaliaを導入してみました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/arch-hypr-noctalia.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</description>
       
       
       
@@ -98,19 +102,40 @@
       <guid>https://ktkr3d.github.io/2026/09/25/CachyOS-Hyprland-Noctalia/</guid>
       <pubDate>Thu, 24 Sep 2026 19:51:02 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/cachyos-hyprland-noctalia.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;CachyOS Hyprland Noctaliaをインストールしました。&lt;br&gt;バーを右側に配置できてよいですね。&lt;br&gt;シェルはfishでした。パッケージ管理はshellyでした。&lt;br&gt;メイン環境にしてもよいかもしれないです。&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/cachyos-hyprland-noctalia.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;CachyOS Hyprland Noctaliaをインストールしました。&lt;br&gt;
+バーを右側に配置できてよいですね。&lt;br&gt;
+シェルはfishでした。パッケージ管理はshellyでした。&lt;br&gt;
+メイン環境にしてもよいかもしれないです。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;CachyOS&lt;br&gt;  &lt;a href=&quot;https://cachyos.org/&quot;&gt;https://cachyos.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Noctalia&lt;br&gt;  &lt;a href=&quot;https://noctalia.dev/&quot;&gt;https://noctalia.dev/&lt;/a&gt;&lt;br&gt;  &lt;a href=&quot;https://github.com/CachyOS/cachyos-hypr-noctalia&quot;&gt;https://github.com/CachyOS/cachyos-hypr-noctalia&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;HyprMod&lt;br&gt;  &lt;a href=&quot;https://github.com/BlueManCZ/hyprmod&quot;&gt;https://github.com/BlueManCZ/hyprmod&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CachyOS&lt;br&gt;
+&lt;a href=&quot;https://cachyos.org/&quot;&gt;https://cachyos.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Noctalia&lt;br&gt;
+&lt;a href=&quot;https://noctalia.dev/&quot;&gt;https://noctalia.dev/&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://github.com/CachyOS/cachyos-hypr-noctalia&quot;&gt;https://github.com/CachyOS/cachyos-hypr-noctalia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;HyprMod&lt;br&gt;
+&lt;a href=&quot;https://github.com/BlueManCZ/hyprmod&quot;&gt;https://github.com/BlueManCZ/hyprmod&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;スクリーンショット&quot;&gt;&lt;a href=&quot;#スクリーンショット&quot; class=&quot;headerlink&quot; title=&quot;スクリーンショット&quot;&gt;&lt;/a&gt;スクリーンショット&lt;/h3&gt;&lt;h4 id=&quot;Noctaliaコントロールセンタ&quot;&gt;&lt;a href=&quot;#Noctaliaコントロールセンタ&quot; class=&quot;headerlink&quot; title=&quot;Noctaliaコントロールセンタ&quot;&gt;&lt;/a&gt;Noctaliaコントロールセンタ&lt;/h4&gt;&lt;p&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;X&lt;/kbd&gt;でホーム画面、&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;A&lt;/kbd&gt;で通知画面&lt;br&gt;&lt;img src=&quot;/images/noctalia-panel.png&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;Noctalia設定画面&quot;&gt;&lt;a href=&quot;#Noctalia設定画面&quot; class=&quot;headerlink&quot; title=&quot;Noctalia設定画面&quot;&gt;&lt;/a&gt;Noctalia設定画面&lt;/h4&gt;&lt;p&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;Z&lt;/kbd&gt;&lt;br&gt;&lt;img src=&quot;/images/cachyos-hyprland-noctalia_ja.png&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;壁紙選択&quot;&gt;&lt;a href=&quot;#壁紙選択&quot; class=&quot;headerlink&quot; title=&quot;壁紙選択&quot;&gt;&lt;/a&gt;壁紙選択&lt;/h4&gt;&lt;p&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;W&lt;/kbd&gt;&lt;br&gt;&lt;img src=&quot;/images/noctalia-wallpapers.png&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;タイリング表示&quot;&gt;&lt;a href=&quot;#タイリング表示&quot; class=&quot;headerlink&quot; title=&quot;タイリング表示&quot;&gt;&lt;/a&gt;タイリング表示&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/images/hyprland-tiling.png&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;HyprMod&quot;&gt;&lt;a href=&quot;#HyprMod&quot; class=&quot;headerlink&quot; title=&quot;HyprMod&quot;&gt;&lt;/a&gt;HyprMod&lt;/h4&gt;&lt;p&gt;HyprlandをGUIで設定します。&lt;br&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;M&lt;/kbd&gt;にバインドしました。&lt;br&gt;&lt;img src=&quot;/images/hyprmod.png&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;スクリプトランチャ&quot;&gt;&lt;a href=&quot;#スクリプトランチャ&quot; class=&quot;headerlink&quot; title=&quot;スクリプトランチャ&quot;&gt;&lt;/a&gt;スクリプトランチャ&lt;/h4&gt;&lt;p&gt;Noctaliaランチャのdmenu機能を利用したスクリプトランチャを作りました。&lt;br&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;K&lt;/kbd&gt;にバインドしました。&lt;br&gt;&lt;img src=&quot;/images/noctalia-dmenu.png&quot;&gt;&lt;/p&gt;</description>
+&lt;h3 id=&quot;スクリーンショット&quot;&gt;スクリーンショット&lt;/h3&gt;
+&lt;h4 id=&quot;Noctaliaコントロールセンタ&quot;&gt;Noctaliaコントロールセンタ&lt;/h4&gt;
+&lt;p&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;X&lt;/kbd&gt;でホーム画面、&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;A&lt;/kbd&gt;で通知画面&lt;br&gt;
+&lt;img src=&quot;/images/noctalia-panel.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;Noctalia設定画面&quot;&gt;Noctalia設定画面&lt;/h4&gt;
+&lt;p&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;Z&lt;/kbd&gt;&lt;br&gt;
+&lt;img src=&quot;/images/cachyos-hyprland-noctalia_ja.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;壁紙選択&quot;&gt;壁紙選択&lt;/h4&gt;
+&lt;p&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;W&lt;/kbd&gt;&lt;br&gt;
+&lt;img src=&quot;/images/noctalia-wallpapers.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;タイリング表示&quot;&gt;タイリング表示&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/hyprland-tiling.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;HyprMod&quot;&gt;HyprMod&lt;/h4&gt;
+&lt;p&gt;HyprlandをGUIで設定します。&lt;br&gt;
+&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;M&lt;/kbd&gt;にバインドしました。&lt;br&gt;
+&lt;img src=&quot;/images/hyprmod.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;スクリプトランチャ&quot;&gt;スクリプトランチャ&lt;/h4&gt;
+&lt;p&gt;Noctaliaランチャのdmenu機能を利用したスクリプトランチャを作りました。&lt;br&gt;
+&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;K&lt;/kbd&gt;にバインドしました。&lt;br&gt;
+&lt;img src=&quot;/images/noctalia-dmenu.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</description>
       
       
       
@@ -135,7 +160,7 @@
       <guid>https://ktkr3d.github.io/2026/09/21/Hyper-Compressed-Ocean/</guid>
       <pubDate>Mon, 21 Sep 2026 02:07:34 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;https://wow.zamimg.com/uploads/screenshots/normal/852908-hyper-compressed-ocean.jpg&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;https://wow.zamimg.com/uploads/screenshots/normal/852908-hyper-compressed-ocean.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.wowhead.com/item=168016/hyper-compressed-ocean&quot;&gt;Hyper-Compressed Ocean&lt;/a&gt;（ハイパー圧縮オーシャン）は、オンラインゲーム『World of Warcraft（WoW）』に登場する、どこでも釣りができるようになる便利なおもちゃ（Toy）アイテムです。実績「&lt;a href=&quot;https://www.wowhead.com/achievement=13502/secret-fish-and-where-to-find-them&quot;&gt;Secret Fish and Where to Find Them&lt;/a&gt;」を達成する（各地で隠し魚を30種類集める）ことで獲得できます。&lt;/p&gt;</description>
       
       
@@ -163,12 +188,14 @@
 &lt;/ul&gt;
 &lt;p&gt;アドオンのテストをしながら、オリジナルのスライドテーマを作るのが楽しい。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;レイアウト例のスライド&lt;br&gt;  &lt;a href=&quot;https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground&quot;&gt;https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;レイアウト例のスライド&lt;br&gt;
+&lt;a href=&quot;https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground&quot;&gt;https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;レイアウト例 （＋スライドテンプレート）  
 
 	&lt;div class=&quot;row&quot;&gt;
     &lt;embed src=&quot;/images/slidev_addon_google_charts.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
 	&lt;/div&gt;
+
 
 
 &lt;/li&gt;
@@ -193,9 +220,10 @@
       <guid>https://ktkr3d.github.io/2026/09/04/Slidev-Google-Charts/</guid>
       <pubDate>Thu, 03 Sep 2026 19:56:28 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/slides_googlecharts-export_1.png&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/slides_googlecharts-export_1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;SlidevでGoogl Chartsのグラフをスライドにしてみました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://sli.dev/&quot;&gt;https://sli.dev/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://developers.google.com/chart&quot;&gt;https://developers.google.com/chart&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&quot;https://sli.dev/&quot;&gt;https://sli.dev/&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://developers.google.com/chart&quot;&gt;https://developers.google.com/chart&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
@@ -216,7 +244,7 @@
       <guid>https://ktkr3d.github.io/2026/08/31/GeoChart-SVG-image/</guid>
       <pubDate>Mon, 31 Aug 2026 09:49:43 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/geochart-world.svg&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/geochart-world.svg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Google ChartsのGeoChartで作成した地図をSVGファイル化してみます。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://developers.google.com/chart/interactive/docs/gallery/geochart&quot;&gt;https://developers.google.com/chart/interactive/docs/gallery/geochart&lt;/a&gt;&lt;/p&gt;</description>
       
@@ -260,8 +288,10 @@
       <guid>https://ktkr3d.github.io/2026/08/15/WoW-OnUseGear-Addon/</guid>
       <pubDate>Sat, 15 Aug 2026 09:00:28 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/onusegear.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/OnUseGear&quot;&gt;https://github.com/ktkr3d/OnUseGear&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;装備しているアイテムの中で使用(&lt;code&gt;Use&lt;/code&gt;)できるものをアクションボタン化するアドオンを作成しました。&lt;br&gt;対象はトリンケットだけではなく、武器や防具で使用できるものを含めて自動的に列挙します。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&quot;/images/onusegear.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+&lt;a href=&quot;https://github.com/ktkr3d/OnUseGear&quot;&gt;https://github.com/ktkr3d/OnUseGear&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;装備しているアイテムの中で使用(&lt;code&gt;Use&lt;/code&gt;)できるものをアクションボタン化するアドオンを作成しました。&lt;br&gt;
+対象はトリンケットだけではなく、武器や防具で使用できるものを含めて自動的に列挙します。&lt;/p&gt;</description>
       
       
       
@@ -282,7 +312,8 @@
       <guid>https://ktkr3d.github.io/2026/08/12/SSF/</guid>
       <pubDate>Tue, 11 Aug 2026 18:55:12 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/vf2_keyassign.png&quot;&gt;&lt;br&gt;SSFでセガサターンのゲームを遊んでみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&quot;/images/vf2_keyassign.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+SSFでセガサターンのゲームを遊んでみました。&lt;/p&gt;</description>
       
       
       
@@ -303,10 +334,14 @@
       <guid>https://ktkr3d.github.io/2026/08/11/WoW-Keybinding/</guid>
       <pubDate>Tue, 11 Aug 2026 08:53:47 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/wow_keybinding.png&quot;&gt;&lt;br&gt;Bellularのキーバインドガイドが新しくなっていたので適用してみました。各クラス&amp;#x2F;スペックのおすすめキーバインドを取り込むことができます。&lt;br&gt;また、各クラス&amp;#x2F;スペック間で統一されたキーバインドを実現できます。例えば、防御強化系は&lt;kbd&gt;Z&lt;/kbd&gt;、移動加速系は&lt;kbd&gt;X&lt;/kbd&gt;、妨害系は&lt;kbd&gt;C&lt;/kbd&gt;、インタラプト系は&lt;kbd&gt;V&lt;/kbd&gt;、ヒール系は&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;1&lt;/kbd&gt;、等。&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/wow_keybinding.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+Bellularのキーバインドガイドが新しくなっていたので適用してみました。各クラス/スペックのおすすめキーバインドを取り込むことができます。&lt;br&gt;
+また、各クラス/スペック間で統一されたキーバインドを実現できます。例えば、防御強化系は&lt;kbd&gt;Z&lt;/kbd&gt;、移動加速系は&lt;kbd&gt;X&lt;/kbd&gt;、妨害系は&lt;kbd&gt;C&lt;/kbd&gt;、インタラプト系は&lt;kbd&gt;V&lt;/kbd&gt;、ヒール系は&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;1&lt;/kbd&gt;、等。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;アドオン&lt;br&gt;  &lt;a href=&quot;https://www.curseforge.com/wow/addons/keybinding&quot;&gt;https://www.curseforge.com/wow/addons/keybinding&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Webツール&lt;br&gt;  &lt;a href=&quot;https://keybinding.bellular.games/&quot;&gt;https://keybinding.bellular.games/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;アドオン&lt;br&gt;
+&lt;a href=&quot;https://www.curseforge.com/wow/addons/keybinding&quot;&gt;https://www.curseforge.com/wow/addons/keybinding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Webツール&lt;br&gt;
+&lt;a href=&quot;https://keybinding.bellular.games/&quot;&gt;https://keybinding.bellular.games/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
       
       
@@ -330,7 +365,7 @@
         
           
           
-      <description>&lt;p&gt;&lt;img src=&quot;/images/ouf_mylayout_v0.3.0.jpg&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/ouf_mylayout_v0.3.0.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a</description>
           
         
@@ -354,7 +389,7 @@
       <guid>https://ktkr3d.github.io/2026/08/08/Linux-Cluster-Monitor/</guid>
       <pubDate>Sat, 08 Aug 2026 08:27:09 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/linux_cluster_monitor.png&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/linux_cluster_monitor.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;自宅のLinux PCのシステム情報をfastfetchを使って収集して表示するダッシュボードを作ってみました。&lt;/p&gt;</description>
       
       
@@ -374,7 +409,11 @@
       <guid>https://ktkr3d.github.io/2026/07/31/Antigravity-IDE/</guid>
       <pubDate>Thu, 30 Jul 2026 16:54:16 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/antigravity_ide.png&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://antigravity.google/product/antigravity-ide&quot;&gt;https://antigravity.google/product/antigravity-ide&lt;/a&gt;&lt;br&gt;Visual Studio CodeでGemini Code Assistを利用してきましたが、Visual Studio Codeの個人向けGemini Code Assistは2026年6月18日をもって提供を終了（リクエスト処理を停止）しました。&lt;br&gt;Visual Studio CodeからフォークされているAntigravity IDEでGeminiを利用してみました。&lt;br&gt;例として、Starshipのプロンプトシミュレータを作ってみました。&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&quot;/images/antigravity_ide.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+&lt;a href=&quot;https://antigravity.google/product/antigravity-ide&quot;&gt;https://antigravity.google/product/antigravity-ide&lt;/a&gt;&lt;br&gt;
+Visual Studio CodeでGemini Code Assistを利用してきましたが、Visual Studio Codeの個人向けGemini Code Assistは2026年6月18日をもって提供を終了（リクエスト処理を停止）しました。&lt;br&gt;
+Visual Studio CodeからフォークされているAntigravity IDEでGeminiを利用してみました。&lt;br&gt;
+例として、Starshipのプロンプトシミュレータを作ってみました。&lt;/p&gt;</description>
       
       
       
@@ -397,8 +436,10 @@
       <guid>https://ktkr3d.github.io/2026/06/30/hypr-rdp/</guid>
       <pubDate>Tue, 30 Jun 2026 13:53:48 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/hypr-rdp.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;hypr-rdpを使ってヘッドレスのHyprland環境にWindowsとLinuxから接続してみました。&lt;br&gt;&lt;a href=&quot;https://github.com/MuNeNiCK/hypr-rdp&quot;&gt;https://github.com/MuNeNiCK/hypr-rdp&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.munenick.me/blog/hypr-rdp/&quot;&gt;https://www.munenick.me/blog/hypr-rdp/&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&quot;/images/hypr-rdp.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;hypr-rdpを使ってヘッドレスのHyprland環境にWindowsとLinuxから接続してみました。&lt;br&gt;
+&lt;a href=&quot;https://github.com/MuNeNiCK/hypr-rdp&quot;&gt;https://github.com/MuNeNiCK/hypr-rdp&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://www.munenick.me/blog/hypr-rdp/&quot;&gt;https://www.munenick.me/blog/hypr-rdp/&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
@@ -419,35 +460,42 @@
       <guid>https://ktkr3d.github.io/2026/06/20/hyprKCS/</guid>
       <pubDate>Sat, 20 Jun 2026 11:43:08 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnsckinwi9jksfp0wneap.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Hyprland用キーバインドマネージャhyprKCSを使ってみました。&lt;br&gt;お気に入りフィルタがあるので、便利だけれど忘れてしまいがちなキーバインドを簡単に見つけられます。&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnsckinwi9jksfp0wneap.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Hyprland用キーバインドマネージャhyprKCSを使ってみました。&lt;br&gt;
+お気に入りフィルタがあるので、便利だけれど忘れてしまいがちなキーバインドを簡単に見つけられます。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/kosa12/hyprKCS&quot;&gt;https://github.com/kosa12/hyprKCS&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;2026-06-29&quot;&gt;&lt;a href=&quot;#2026-06-29&quot; class=&quot;headerlink&quot; title=&quot;2026-06-29&quot;&gt;&lt;/a&gt;2026-06-29&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;hyprland.luaに対応しているソフト調査&lt;/p&gt;
+&lt;h4 id=&quot;2026-06-29&quot;&gt;2026-06-29&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;hyprland.luaに対応しているソフト調査&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;ソフト&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;hyprland.lua対応状況&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;ソフト&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;hyprland.lua対応状況&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;https://github.com/kosa12/hyprKCS&quot;&gt;hyprKCS&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;×&lt;/td&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;a href=&quot;https://github.com/kosa12/hyprKCS&quot;&gt;hyprKCS&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;×&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;https://github.com/tidynest/hypr-keybind-manager&quot;&gt;hypr-keybind-manager&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;×&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;a href=&quot;https://github.com/tidynest/hypr-keybind-manager&quot;&gt;hypr-keybind-manager&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;×&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;a href=&quot;https://github.com/BlueManCZ/hyprmod&quot;&gt;hyprmod&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;○ 多機能。&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;a href=&quot;https://github.com/BlueManCZ/hyprmod&quot;&gt;hyprmod&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;○ 多機能。&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;2026-06-28&quot;&gt;&lt;a href=&quot;#2026-06-28&quot; class=&quot;headerlink&quot; title=&quot;2026-06-28&quot;&gt;&lt;/a&gt;2026-06-28&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;hyprland.lua対応のfeatureリクエスト&lt;br&gt;  &lt;a href=&quot;https://github.com/kosa12/hyprKCS/issues/77&quot;&gt;https://github.com/kosa12/hyprKCS/issues/77&lt;/a&gt;&lt;/li&gt;
+&lt;h4 id=&quot;2026-06-28&quot;&gt;2026-06-28&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;hyprland.lua対応のfeatureリクエスト&lt;br&gt;
+&lt;a href=&quot;https://github.com/kosa12/hyprKCS/issues/77&quot;&gt;https://github.com/kosa12/hyprKCS/issues/77&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
       
       
@@ -467,143 +515,160 @@
       <guid>https://ktkr3d.github.io/2026/06/10/Hyprland-0-55-3/</guid>
       <pubDate>Tue, 09 Jun 2026 17:26:11 GMT</pubDate>
       
-      <description>&lt;p&gt;Hyprland 0.55.3をインストールしました。&lt;br&gt;現在の構成は以下の通り。&lt;/p&gt;
+      <description>&lt;p&gt;Hyprland 0.55.3をインストールしました。&lt;br&gt;
+現在の構成は以下の通り。&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pacman -Q hyprland quickshell caelestia-cli caelestia-shell&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hyprland 0.55.3-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;quickshell-git 0.2.0.r148.g8db8ca1-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;caelestia-cli 1.0.8-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;caelestia-shell 2.0.2-1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;2026-07-18&quot;&gt;&lt;a href=&quot;#2026-07-18&quot; class=&quot;headerlink&quot; title=&quot;2026-07-18&quot;&gt;&lt;/a&gt;2026-07-18&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;My keybinds&lt;table&gt;
+&lt;h4 id=&quot;2026-07-18&quot;&gt;2026-07-18&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;My keybinds
+&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;Category&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;Keybind&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;App&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Category&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Keybind&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;App&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Launcher&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Caelestia Launcher&lt;/td&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Launcher&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Caelestia Launcher&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Launcher&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;Space&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Walker&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Launcher&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;Space&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Walker&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Web&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;W&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Google Chrome&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Web&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;W&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Google Chrome&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Explorer&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;E&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Thunar&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Explorer&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;E&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Thunar&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;To do&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Google ToDo list&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;To do&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;R&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Google ToDo list&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Termial&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;T&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;foot&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Termial&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;T&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;foot&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Special Workspace&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;S&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Toggle Special Workspace&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Special Workspace&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;S&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Toggle Special Workspace&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Communication&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;D&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Discord&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Communication&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;D&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Discord&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Fullscreen&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;F&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Fullscreen&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Fullscreen&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;F&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Fullscreen&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Help&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;H&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Hyprmod&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Help&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;H&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Hyprmod&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Scripts&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;J&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;DMenu(Walker)&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Scripts&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;J&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;DMenu(Walker)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Panels&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;K&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Toggle Caelestia panels&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Panels&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;K&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Toggle Caelestia panels&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Lock screen&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;L&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Lock screen&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;L&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Code&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;VS Code&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Code&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;VS Code&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Clipboard&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;V&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Clipboard&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;V&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Dashboard&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;B&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Toggle Caelestia dashboard&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Dashboard&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;B&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Toggle Caelestia dashboard&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Notifications&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;N&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Toggle Caelestia notifications&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Notifications&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;N&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Toggle Caelestia notifications&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Music&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;M&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Toggle Jellyfin Desktop&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Music&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;M&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Toggle Jellyfin Desktop&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Focus window&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;Arrows&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Focus window&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Focus window&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Super&lt;/kbd&gt;+&lt;kbd&gt;Arrows&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Focus window&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Window stacks&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;↓&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Push window&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Window stacks&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;↓&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Push window&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;Window stacks&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;↑&lt;/kbd&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Pop window&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Window stacks&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;↑&lt;/kbd&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Pop window&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;2026-07-16&quot;&gt;&lt;a href=&quot;#2026-07-16&quot; class=&quot;headerlink&quot; title=&quot;2026-07-16&quot;&gt;&lt;/a&gt;2026-07-16&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;Caelestiaダッシュボードのショートカット  &lt;figure class=&quot;highlight lua&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/caelestia/hypr-user.lua&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hl.bind(&lt;span class=&quot;string&quot;&gt;&amp;quot;SUPER + B&amp;quot;&lt;/span&gt;, hl.dsp.exec_cmd(&lt;span class=&quot;string&quot;&gt;&amp;quot;caelestia shell drawers toggle dashboard&amp;quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;Hyprmodのショートカット  &lt;figure class=&quot;highlight lua&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/caelestia/hypr-user.lua&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hl.bind(&lt;span class=&quot;string&quot;&gt;&amp;quot;SUPER + H&amp;quot;&lt;/span&gt;, hl.dsp.exec_cmd(&lt;span class=&quot;string&quot;&gt;&amp;quot;hyprmod&amp;quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;h4 id=&quot;2026-07-16&quot;&gt;2026-07-16&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Caelestiaダッシュボードのショートカット  &lt;figure class=&quot;highlight lua&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/caelestia/hypr-user.lua&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hl.bind(&lt;span class=&quot;string&quot;&gt;&amp;quot;SUPER + B&amp;quot;&lt;/span&gt;, hl.dsp.exec_cmd(&lt;span class=&quot;string&quot;&gt;&amp;quot;caelestia shell drawers toggle dashboard&amp;quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;Hyprmodのショートカット  &lt;figure class=&quot;highlight lua&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/caelestia/hypr-user.lua&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hl.bind(&lt;span class=&quot;string&quot;&gt;&amp;quot;SUPER + H&amp;quot;&lt;/span&gt;, hl.dsp.exec_cmd(&lt;span class=&quot;string&quot;&gt;&amp;quot;hyprmod&amp;quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;2026-07-14&quot;&gt;&lt;a href=&quot;#2026-07-14&quot; class=&quot;headerlink&quot; title=&quot;2026-07-14&quot;&gt;&lt;/a&gt;2026-07-14&lt;/h4&gt;&lt;p&gt;スペシャルワークスペースmusicでJellyfinDesktopを利用する&lt;/p&gt;
+&lt;h4 id=&quot;2026-07-14&quot;&gt;2026-07-14&lt;/h4&gt;
+&lt;p&gt;スペシャルワークスペースmusicでJellyfinDesktopを利用する&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;インストール &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;flatpak install flathub org.jellyfin.JellyfinDesktop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;インストール &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;flatpak install flathub org.jellyfin.JellyfinDesktop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;li&gt;設定 &lt;figure class=&quot;highlight json&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/caelestia/cli.json&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&amp;quot;toggles&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;&amp;quot;music&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;attr&quot;&gt;&amp;quot;jellyfindesktop&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;attr&quot;&gt;&amp;quot;enable&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;attr&quot;&gt;&amp;quot;match&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;&amp;#123;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;&amp;quot;class&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;org.jellyfin.JellyfinDesktop&amp;quot;&lt;/span&gt; &lt;span class=&quot;punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;attr&quot;&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;flatpak&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;run&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;org.jellyfin.JellyfinDesktop&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;attr&quot;&gt;&amp;quot;move&amp;quot;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
- &lt;figure class=&quot;highlight lua&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/caelestia/hypr-user.lua&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hl.window_rule(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;match&lt;/span&gt; = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        class = &lt;span class=&quot;string&quot;&gt;&amp;quot;org.jellyfin.JellyfinDesktop&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    workspace = &lt;span class=&quot;string&quot;&gt;&amp;quot;special:music&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+ &lt;figure class=&quot;highlight lua&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/caelestia/hypr-user.lua&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hl.window_rule(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;match&lt;/span&gt; = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        class = &lt;span class=&quot;string&quot;&gt;&amp;quot;org.jellyfin.JellyfinDesktop&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    workspace = &lt;span class=&quot;string&quot;&gt;&amp;quot;special:music&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&quot;2026-06-27&quot;&gt;&lt;a href=&quot;#2026-06-27&quot; class=&quot;headerlink&quot; title=&quot;2026-06-27&quot;&gt;&lt;/a&gt;2026-06-27&lt;/h4&gt;&lt;p&gt;設定ファイルのlua言語対応&lt;/p&gt;
+&lt;h4 id=&quot;2026-06-27&quot;&gt;2026-06-27&lt;/h4&gt;
+&lt;p&gt;設定ファイルのlua言語対応&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Caelestiaの強制アップデート &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git -C ~/.local/share/caelestia fetch origin main&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git -C ~/.local/share/caelestia reset --hard origin/main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;設定ファイルの変換 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S hyprlang2lua&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.config/caelestia&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hyprlang2lua hypr-user.conf &amp;gt; hypr-user.lua&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;表記の補正&lt;br&gt; ~&amp;#x2F;.config&amp;#x2F;caelestia&amp;#x2F;hypr-user.lua&lt;br&gt; キーバインドの&lt;code&gt;Ctrl+Alt&lt;/code&gt;を&lt;code&gt;CTRL + ALT&lt;/code&gt;に置換&lt;/li&gt;
-&lt;li&gt;変数設定の移植 &lt;figure class=&quot;highlight lua&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/caelestia/hypr-vars.lua&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    browser = &lt;span class=&quot;string&quot;&gt;&amp;quot;google-chrome-stable&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    editor = &lt;span class=&quot;string&quot;&gt;&amp;quot;code&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fileExplorer = &lt;span class=&quot;string&quot;&gt;&amp;quot;thunar&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    windowGapsOut = &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    workspaceSwipeFingers = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    volumeStep = &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;各種ツールの誤認識を防ぐために設定ファイルをリネーム &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;mv&lt;/span&gt; ~/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf~&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;Caelestiaの強制アップデート &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git -C ~/.local/share/caelestia fetch origin main&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git -C ~/.local/share/caelestia reset --hard origin/main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;設定ファイルの変換 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;paru -S hyprlang2lua&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.config/caelestia&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hyprlang2lua hypr-user.conf &amp;gt; hypr-user.lua&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;表記の補正&lt;br&gt;
+~/.config/caelestia/hypr-user.lua&lt;br&gt;
+キーバインドの&lt;code&gt;Ctrl+Alt&lt;/code&gt;を&lt;code&gt;CTRL + ALT&lt;/code&gt;に置換&lt;/li&gt;
+&lt;li&gt;変数設定の移植 &lt;figure class=&quot;highlight lua&quot;&gt;&lt;figcaption&gt;&lt;span&gt;~/.config/caelestia/hypr-vars.lua&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    browser = &lt;span class=&quot;string&quot;&gt;&amp;quot;google-chrome-stable&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    editor = &lt;span class=&quot;string&quot;&gt;&amp;quot;code&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fileExplorer = &lt;span class=&quot;string&quot;&gt;&amp;quot;thunar&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    windowGapsOut = &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    workspaceSwipeFingers = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    volumeStep = &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;各種ツールの誤認識を防ぐために設定ファイルをリネーム &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;mv&lt;/span&gt; ~/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf~&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ol&gt;</description>
       
       
@@ -625,10 +690,12 @@
       <guid>https://ktkr3d.github.io/2026/05/11/Systemd-User-Task-Manager/</guid>
       <pubDate>Sun, 10 May 2026 23:39:22 GMT</pubDate>
       
-      <description>&lt;p&gt;&lt;img src=&quot;/images/systemd-user-task-manager.png&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/images/systemd-user-task-manager.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Systemdユーザサービスとタイマーを使ったタスク管理アプリを作成してみました。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/ktkr3d/systemd-user-task-manager&quot;&gt;https://github.com/ktkr3d/systemd-user-task-manager&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;2026-05-20&quot;&gt;&lt;a href=&quot;#2026-05-20&quot; class=&quot;headerlink&quot; title=&quot;2026-05-20&quot;&gt;&lt;/a&gt;2026-05-20&lt;/h4&gt;&lt;p&gt;スケジュール文字列のバリデーション機能を追加しました。&lt;br&gt;&lt;a href=&quot;https://github.com/ktkr3d/systemd-user-task-manager/releases/tag/v0.2.0&quot;&gt;https://github.com/ktkr3d/systemd-user-task-manager/releases/tag/v0.2.0&lt;/a&gt;&lt;/p&gt;</description>
+&lt;h4 id=&quot;2026-05-20&quot;&gt;2026-05-20&lt;/h4&gt;
+&lt;p&gt;スケジュール文字列のバリデーション機能を追加しました。&lt;br&gt;
+&lt;a href=&quot;https://github.com/ktkr3d/systemd-user-task-manager/releases/tag/v0.2.0&quot;&gt;https://github.com/ktkr3d/systemd-user-task-manager/releases/tag/v0.2.0&lt;/a&gt;&lt;/p&gt;</description>
       
       
       
@@ -651,8 +718,9 @@
       <guid>https://ktkr3d.github.io/2026/04/26/Morse-code-practice-machine/</guid>
       <pubDate>Sat, 25 Apr 2026 23:55:37 GMT</pubDate>
       
-      <description>&lt;p&gt;モールス信号の練習アプリを作ってみました。&lt;br&gt;トン(&lt;kbd&gt;Space&lt;/kbd&gt;短押し)で左に、ツー(&lt;kbd&gt;Space&lt;/kbd&gt;長押し)で右に枝分かれします。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/morse_code.png&quot;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;モールス信号の練習アプリを作ってみました。&lt;br&gt;
+トン(&lt;kbd&gt;Space&lt;/kbd&gt;短押し)で左に、ツー(&lt;kbd&gt;Space&lt;/kbd&gt;長押し)で右に枝分かれします。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/morse_code.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</description>
       
       
       

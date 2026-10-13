@@ -216,10 +216,12 @@ btf.addGlobalFn('pjaxComplete', () => {
         <div class="descriptions">
             <div class="og-title">CachyOS — Blazingly Fast OS based on Arch Linux</div>
             <div class="og-description">🚀 CachyOS is an Arch Linux-based distribution that offers an easy installation, several customization options to suit every user, and special optimizations for improved performance while remaining simple.</div></div></a>
-
-<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
-<li>CachyOS<ul>
-<li>Hyprland<ul>
+<h3 id="環境">環境</h3>
+<ul>
+<li>CachyOS
+<ul>
+<li>Hyprland
+<ul>
 <li>Caelestia</li>
 </ul>
 </li>
@@ -228,10 +230,15 @@ btf.addGlobalFn('pjaxComplete', () => {
 </ul>
 </li>
 </ul>
-<h3 id="構築"><a href="#構築" class="headerlink" title="構築"></a>構築</h3><h4 id="CachyOS"><a href="#CachyOS" class="headerlink" title="CachyOS"></a>CachyOS</h4><ul>
-<li>ISOをダウンロード<br>  <a target="_blank" rel="noopener" href="https://cachyos.org/download/">https://cachyos.org/download/</a></li>
-<li>Ventoyにコピーして起動<br>  <a target="_blank" rel="noopener" href="https://www.ventoy.net/">https://www.ventoy.net/</a></li>
-<li>インストールオプション<ul>
+<h3 id="構築">構築</h3>
+<h4 id="CachyOS">CachyOS</h4>
+<ul>
+<li>ISOをダウンロード<br>
+<a target="_blank" rel="noopener" href="https://cachyos.org/download/">https://cachyos.org/download/</a></li>
+<li>Ventoyにコピーして起動<br>
+<a target="_blank" rel="noopener" href="https://www.ventoy.net/">https://www.ventoy.net/</a></li>
+<li>インストールオプション
+<ul>
 <li>Grub</li>
 <li>日本語</li>
 <li>Hyprland</li>
@@ -240,93 +247,136 @@ btf.addGlobalFn('pjaxComplete', () => {
 </ul>
 </li>
 </ul>
-<h4 id="追加パッケージ"><a href="#追加パッケージ" class="headerlink" title="追加パッケージ"></a>追加パッケージ</h4><ul>
+<h4 id="追加パッケージ">追加パッケージ</h4>
+<ul>
 <li>Thunar  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S thunar gvfs-smb</span><br></pre></td></tr></table></figure>
 <ul>
 <li>メニューバーを非表示</li>
 <li>ステータスバーを非表示</li>
 <li>日付書式を<code>YYYY/MM/DD hh:mm:ss</code>に変更</li>
-<li>閉じるボタンを追加<br>  <code>カスタムウィンドウ装飾を利用</code>を有効にした後で以下コマンドを実行  <figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">xfconf-query <span class="params">--channel</span> thunar <span class="params">--property</span> <span class="string">/misc-show-close-buttons-in-tabs</span> <span class="params">--create</span> <span class="params">--type</span> bool <span class="params">--set</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
-<li>プラグイン  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S thunar-archive-plugin file-roller</span><br></pre></td></tr></table></figure></li>
-<li>Polkit Agent<br>  <a target="_blank" rel="noopener" href="https://wiki.hypr.land/Hypr-Ecosystem/hyprpolkitagent/">https://wiki.hypr.land/Hypr-Ecosystem/hyprpolkitagent/</a>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S hyprpolkitagent</span><br></pre></td></tr></table></figure>
-  <figure class="highlight bash"><figcaption><span>~/.config/caelestia/hypr-user.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">exec-once = systemctl --user hyprpolkitagent.service</span><br></pre></td></tr></table></figure></li>
-<li>ターミナルを開く設定（caelestiaをインストールした後で実行）  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.config</span><br><span class="line"><span class="built_in">mv</span> Thunar Thunar.bak</span><br><span class="line"><span class="built_in">ln</span> -s /home/arch/.local/share/caelestia/thunar ./Thunar</span><br></pre></td></tr></table></figure></li>
+<li>閉じるボタンを追加<br>
+<code>カスタムウィンドウ装飾を利用</code>を有効にした後で以下コマンドを実行  <figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">xfconf-query <span class="params">--channel</span> thunar <span class="params">--property</span> <span class="string">/misc-show-close-buttons-in-tabs</span> <span class="params">--create</span> <span class="params">--type</span> bool <span class="params">--set</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>プラグイン  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S thunar-archive-plugin file-roller</span><br></pre></td></tr></table></figure>
+</li>
+<li>Polkit Agent<br>
+<a target="_blank" rel="noopener" href="https://wiki.hypr.land/Hypr-Ecosystem/hyprpolkitagent/">https://wiki.hypr.land/Hypr-Ecosystem/hyprpolkitagent/</a>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S hyprpolkitagent</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><figcaption><span>~/.config/caelestia/hypr-user.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">exec-once = systemctl --user hyprpolkitagent.service</span><br></pre></td></tr></table></figure>
+</li>
+<li>ターミナルを開く設定（caelestiaをインストールした後で実行）  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.config</span><br><span class="line"><span class="built_in">mv</span> Thunar Thunar.bak</span><br><span class="line"><span class="built_in">ln</span> -s /home/arch/.local/share/caelestia/thunar ./Thunar</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>Google Chrome  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S google-chrome</span><br></pre></td></tr></table></figure></li>
-<li>fcitx5, mozc  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S fcitx5-im fcitx5-mozc</span><br></pre></td></tr></table></figure></li>
-<li>HackGenフォント  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S ttf-hackgen</span><br></pre></td></tr></table></figure></li>
+<li>Google Chrome  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S google-chrome</span><br></pre></td></tr></table></figure>
+</li>
+<li>fcitx5, mozc  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S fcitx5-im fcitx5-mozc</span><br></pre></td></tr></table></figure>
+</li>
+<li>HackGenフォント  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S ttf-hackgen</span><br></pre></td></tr></table></figure>
+</li>
 <li>Visual Studio Code  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S visual-studio-code-bin</span><br></pre></td></tr></table></figure>
-  <a href="https://ktkr3d.github.io/Visual-Studio-Code/">https://ktkr3d.github.io/Visual-Studio-Code/</a></li>
-<li>Jellyfin Desktop  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S jellyfin-desktop</span><br></pre></td></tr></table></figure></li>
-<li>Kodi  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S kodi</span><br></pre></td></tr></table></figure></li>
-<li>VLC  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S vlc</span><br></pre></td></tr></table></figure></li>
-<li>Remmina  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S remmina freerdp</span><br></pre></td></tr></table></figure></li>
+<a href="https://ktkr3d.github.io/Visual-Studio-Code/">https://ktkr3d.github.io/Visual-Studio-Code/</a></li>
+<li>Jellyfin Desktop  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S jellyfin-desktop</span><br></pre></td></tr></table></figure>
+</li>
+<li>Kodi  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S kodi</span><br></pre></td></tr></table></figure>
+</li>
+<li>VLC  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S vlc</span><br></pre></td></tr></table></figure>
+</li>
+<li>Remmina  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S remmina freerdp</span><br></pre></td></tr></table></figure>
+</li>
 <li>Faugus Launcher  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S faugus-launcher</span><br></pre></td></tr></table></figure>
-  <a href="https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/">https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/</a></li>
+<a href="https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/">https://ktkr3d.github.io/2025/12/06/Faugus-Launcher/</a></li>
 </ul>
-<h4 id="Caelestia"><a href="#Caelestia" class="headerlink" title="Caelestia"></a>Caelestia</h4><ul>
-<li>Caelestiaのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelestia</span><br><span class="line">~/.local/share/caelestia/install.fish</span><br></pre></td></tr></table></figure></li>
-<li>Caelestiaの設定<br>  <a href="https://ktkr3d.github.io/2025/11/17/Caelestia/">https://ktkr3d.github.io/2025/11/17/Caelestia/</a></li>
+<h4 id="Caelestia">Caelestia</h4>
+<ul>
+<li>Caelestiaのインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelestia</span><br><span class="line">~/.local/share/caelestia/install.fish</span><br></pre></td></tr></table></figure>
+</li>
+<li>Caelestiaの設定<br>
+<a href="https://ktkr3d.github.io/2025/11/17/Caelestia/">https://ktkr3d.github.io/2025/11/17/Caelestia/</a></li>
 </ul>
-<h4 id="xdg-user-dirs"><a href="#xdg-user-dirs" class="headerlink" title="xdg-user-dirs"></a>xdg-user-dirs</h4><ul>
-<li>ユーザディレクトリを英語表記に変更  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LC_ALL=C.UTF-8 xdg-user-dirs-update --force</span><br></pre></td></tr></table></figure></li>
+<h4 id="xdg-user-dirs">xdg-user-dirs</h4>
+<ul>
+<li>ユーザディレクトリを英語表記に変更  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LC_ALL=C.UTF-8 xdg-user-dirs-update --force</span><br></pre></td></tr></table></figure>
+</li>
 <li>Thunarを起動して各フォルダを<kbd>Ctrl</kbd>+<kbd>D</kbd>でブックマークに登録</li>
 </ul>
-<h4 id="時刻の設定"><a href="#時刻の設定" class="headerlink" title="時刻の設定"></a>時刻の設定</h4><ul>
-<li>マルチブート時の時刻ズレ調整  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> timedatectl set-local-rtc <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+<h4 id="時刻の設定">時刻の設定</h4>
+<ul>
+<li>マルチブート時の時刻ズレ調整  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> timedatectl set-local-rtc <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="Paru"><a href="#Paru" class="headerlink" title="Paru"></a>Paru</h4><ul>
-<li>レビューをスキップ  <figure class="highlight ini"><figcaption><span>~/.config/paru/paru.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[options]</span></span><br><span class="line">SudoLoop</span><br><span class="line">SkipReview</span><br></pre></td></tr></table></figure></li>
-<li>ビルドの多重度  <figure class="highlight ini"><figcaption><span>~/.makepkg.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">MAKEFLAGS</span>=<span class="string">&quot;-j $(nproc)&quot;</span></span><br></pre></td></tr></table></figure></li>
+<h4 id="Paru">Paru</h4>
+<ul>
+<li>レビューをスキップ  <figure class="highlight ini"><figcaption><span>~/.config/paru/paru.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[options]</span></span><br><span class="line">SudoLoop</span><br><span class="line">SkipReview</span><br></pre></td></tr></table></figure>
+</li>
+<li>ビルドの多重度  <figure class="highlight ini"><figcaption><span>~/.makepkg.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">MAKEFLAGS</span>=<span class="string">&quot;-j $(nproc)&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="Vi"><a href="#Vi" class="headerlink" title="Vi"></a>Vi</h4><ul>
-<li>設定  <figure class="highlight bash"><figcaption><span>~/.exrc</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> showmode</span><br><span class="line"><span class="built_in">set</span> number</span><br><span class="line"><span class="built_in">set</span> ruler</span><br><span class="line"><span class="built_in">set</span> title</span><br><span class="line"><span class="built_in">set</span> showcmd</span><br></pre></td></tr></table></figure></li>
+<h4 id="Vi">Vi</h4>
+<ul>
+<li>設定  <figure class="highlight bash"><figcaption><span>~/.exrc</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> showmode</span><br><span class="line"><span class="built_in">set</span> number</span><br><span class="line"><span class="built_in">set</span> ruler</span><br><span class="line"><span class="built_in">set</span> title</span><br><span class="line"><span class="built_in">set</span> showcmd</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="Walker"><a href="#Walker" class="headerlink" title="Walker"></a>Walker</h4><ul>
-<li>Walkerの設定<br>  <a href="https://ktkr3d.github.io/2025/11/30/Walker/">https://ktkr3d.github.io/2025/11/30/Walker/</a></li>
+<h4 id="Walker">Walker</h4>
+<ul>
+<li>Walkerの設定<br>
+<a href="https://ktkr3d.github.io/2025/11/30/Walker/">https://ktkr3d.github.io/2025/11/30/Walker/</a></li>
 </ul>
-<h4 id="ツール"><a href="#ツール" class="headerlink" title="ツール"></a>ツール</h4><p>Hyprland上で起動に失敗するパッケージのワークアラウンド。他に良い方法を調査中。</p>
+<h4 id="ツール">ツール</h4>
+<p>Hyprland上で起動に失敗するパッケージのワークアラウンド。他に良い方法を調査中。</p>
 <ul>
 <li>gparted  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S gparted</span><br></pre></td></tr></table></figure>
-  <figure class="highlight bash"><figcaption><span>~/.config/fish/config.fish</span></figcaption><table><tr><td class="code"><pre><span class="line">abbr gparted <span class="string">&#x27;pkexec env WAYLAND_DISPLAY=&quot;$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY&quot; XDG_RUNTIME_DIR=/run/user/0 gparted&#x27;</span></span><br></pre></td></tr></table></figure></li>
-<li>btrfs-assistant  <figure class="highlight bash"><figcaption><span>~/.config/fish/config.fish</span></figcaption><table><tr><td class="code"><pre><span class="line">abbr btrfs-assistant <span class="string">&#x27;pkexec env WAYLAND_DISPLAY=&quot;$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY&quot; XDG_RUNTIME_DIR=/run/user/0 btrfs-assistant&#x27;</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight bash"><figcaption><span>~/.config/fish/config.fish</span></figcaption><table><tr><td class="code"><pre><span class="line">abbr gparted <span class="string">&#x27;pkexec env WAYLAND_DISPLAY=&quot;$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY&quot; XDG_RUNTIME_DIR=/run/user/0 gparted&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>btrfs-assistant  <figure class="highlight bash"><figcaption><span>~/.config/fish/config.fish</span></figcaption><table><tr><td class="code"><pre><span class="line">abbr btrfs-assistant <span class="string">&#x27;pkexec env WAYLAND_DISPLAY=&quot;$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY&quot; XDG_RUNTIME_DIR=/run/user/0 btrfs-assistant&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="SDDM"><a href="#SDDM" class="headerlink" title="SDDM"></a>SDDM</h4><ul>
-<li><p>SDDMのテーマをSugar Candyに変更</p>
+<h4 id="SDDM">SDDM</h4>
+<ul>
+<li>
+<p>SDDMのテーマをSugar Candyに変更</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S sddm-sugar-candy-git</span><br></pre></td></tr></table></figure>
   <figure class="highlight text"><figcaption><span>/etc/sddm.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">[Theme]</span><br><span class="line">Current=sugar-candy</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>NumLockを有効、2倍に拡大する場合</p>
+<li>
+<p>NumLockを有効、2倍に拡大する場合</p>
   <figure class="highlight text"><figcaption><span>/etc/sddm.conf</span></figcaption><table><tr><td class="code"><pre><span class="line">[General]</span><br><span class="line">Numlock=on</span><br><span class="line">GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=2,QT_FONT_DPI=192</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>ロケールを<code>en</code>に変更する場合</p>
+<li>
+<p>ロケールを<code>en</code>に変更する場合</p>
   <figure class="highlight ini"><figcaption><span>/usr/share/sddm/themes/sugar-candy/theme.conf</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">Locale</span>=<span class="string">&quot;en&quot;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>画面を右に90°回転する場合</p>
+<li>
+<p>画面を右に90°回転する場合</p>
   <figure class="highlight ini"><figcaption><span>/usr/share/sddm/scripts/Xsetup</span></figcaption><table><tr><td class="code"><pre><span class="line">xrandr --output DSI-1 --rotate right</span><br></pre></td></tr></table></figure>
-<p>  <img src="/images/sddm_sugar-candy.png"></p>
+<p><img src="/images/sddm_sugar-candy.png" alt=""></p>
 </li>
 </ul>
-<h4 id="PWAアプリケーション"><a href="#PWAアプリケーション" class="headerlink" title="PWAアプリケーション"></a>PWAアプリケーション</h4><ul>
-<li>Code Server<ul>
-<li>ルート証明書のインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">certutil -A -n <span class="string">&quot;My Root CA&quot;</span> -t <span class="string">&quot;TCu,Cu,Tu&quot;</span> -i ~/Downloads/rootCA.pem -d sql:&#123;<span class="variable">$HOME</span>&#125;/.pki/nssdb</span><br></pre></td></tr></table></figure></li>
-<li>PWA化<br>  Google Chromeでcode-serverのURLを表示してPWA化</li>
+<h4 id="PWAアプリケーション">PWAアプリケーション</h4>
+<ul>
+<li>Code Server
+<ul>
+<li>ルート証明書のインストール  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">certutil -A -n <span class="string">&quot;My Root CA&quot;</span> -t <span class="string">&quot;TCu,Cu,Tu&quot;</span> -i ~/Downloads/rootCA.pem -d sql:&#123;<span class="variable">$HOME</span>&#125;/.pki/nssdb</span><br></pre></td></tr></table></figure>
+</li>
+<li>PWA化<br>
+Google Chromeでcode-serverのURLを表示してPWA化</li>
 </ul>
 </li>
 <li>Amazon Music</li>
 <li>Google Todoリスト</li>
 </ul>
-<h4 id="不要なパッケージを削除する"><a href="#不要なパッケージを削除する" class="headerlink" title="不要なパッケージを削除する"></a>不要なパッケージを削除する</h4><ul>
+<h4 id="不要なパッケージを削除する">不要なパッケージを削除する</h4>
+<ul>
 <li>kitty</li>
 <li>dolphin</li>
 <li>alacritty</li>
-<li>不要な依存パッケージを削除  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -c</span><br></pre></td></tr></table></figure></li>
+<li>不要な依存パッケージを削除  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -c</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="ディスプレイ設定"><a href="#ディスプレイ設定" class="headerlink" title="ディスプレイ設定"></a>ディスプレイ設定</h4><ul>
+<h4 id="ディスプレイ設定">ディスプレイ設定</h4>
+<ul>
 <li>nwg-displays  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S nwg-displays</span><br></pre></td></tr></table></figure></li>
 </ul>
-</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/cahyos/">cahyos</a></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/11/30/Walker/" title="Walker"><img class="cover" src="/images/walker.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Walker</div></div><div class="info-2"><div class="info-item-1"> Walkerランチャを使ってみました。いろいろとカスタマイズできて面白いです。 https://github.com/abenz1267/walkerhttps://github.com/abenz1267/elephanthttps://benz.gitbook.io/walker/walker-and-elephant   環境 CachyOS Hyprland walker elephant caelestia      構築インストールparu -S netcat walker-bin elephant-all-bin Walker設定ファイルの作成mkdir -p ~/.config/walkercurl -L https://raw.githubusercontent.com/abenz1267/walker/refs/heads/master/resources/config.toml -o ~/.config/walker/config.toml 仕様変更前はwalker --createuserconfigで生成できていたらしい。  デフォルト設定ファイル、デ...</div></div></div></a><a class="pagination-related" href="/2025/11/17/Caelestia/" title="Caelestia"><img class="cover" src="/images/caelestia.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Caelestia</div></div><div class="info-2"><div class="info-item-1"> Hyprland用のCaelestia dotsを試してみました。これは良いかもしれない。 https://github.com/caelestia-dots/caelestiahttps://github.com/caelestia-dots/clihttps://github.com/caelestia-dots/shell   https://www.youtube.com/watch?v=TggHDm0_vBw   2026-08-27 Qt6アップデートの際にQuickshellを自動的にリビルドする設定  https://ktkr3d.github.io/2026/08/27/quickshell-automatic-rebuild/  2026-07-25 libcavaアップデート後にquick-shellが起動しない場合の対策  https://github.com/caelestia-dots/shell/issues/1739  paru -S --rebuild caelestia-shell  2026-06-27設定ファイルのlua言語対応https...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">512</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">218</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%92%B0%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A7%8B%E7%AF%89"><span class="toc-number">2.</span> <span class="toc-text">構築</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CachyOS"><span class="toc-number">2.1.</span> <span class="toc-text">CachyOS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%BD%E5%8A%A0%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8"><span class="toc-number">2.2.</span> <span class="toc-text">追加パッケージ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Caelestia"><span class="toc-number">2.3.</span> <span class="toc-text">Caelestia</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#xdg-user-dirs"><span class="toc-number">2.4.</span> <span class="toc-text">xdg-user-dirs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%99%82%E5%88%BB%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">2.5.</span> <span class="toc-text">時刻の設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Paru"><span class="toc-number">2.6.</span> <span class="toc-text">Paru</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Vi"><span class="toc-number">2.7.</span> <span class="toc-text">Vi</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Walker"><span class="toc-number">2.8.</span> <span class="toc-text">Walker</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%84%E3%83%BC%E3%83%AB"><span class="toc-number">2.9.</span> <span class="toc-text">ツール</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SDDM"><span class="toc-number">2.10.</span> <span class="toc-text">SDDM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PWA%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3"><span class="toc-number">2.11.</span> <span class="toc-text">PWAアプリケーション</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E3%81%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B"><span class="toc-number">2.12.</span> <span class="toc-text">不要なパッケージを削除する</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E8%A8%AD%E5%AE%9A"><span class="toc-number">2.13.</span> <span class="toc-text">ディスプレイ設定</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/12/Noctalia-Jellyfin-Browser/" title="Noctalia Jellyfin Browser">Noctalia Jellyfin Browser</a><time datetime="2026-10-11T22:15:03.000Z" title="Created 2026-10-12 07:15:03">2026-10-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/08/Jellyfin-MPV-Shim/" title="Jellyfin MPV Shim">Jellyfin MPV Shim</a><time datetime="2026-10-08T05:27:02.000Z" title="Created 2026-10-08 14:27:02">2026-10-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/04/Arch-Linux-Hyprland-Noctalia/" title="Arch Linux Hyprland Noctalia">Arch Linux Hyprland Noctalia</a><time datetime="2026-10-04T06:32:33.000Z" title="Created 2026-10-04 15:32:33">2026-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/25/CachyOS-Hyprland-Noctalia/" title="CachyOS Hyprland Noctalia">CachyOS Hyprland Noctalia</a><time datetime="2026-09-24T19:51:02.000Z" title="Created 2026-09-25 04:51:02">2026-09-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/21/Hyper-Compressed-Ocean/" title="Hyper-Compressed Ocean">Hyper-Compressed Ocean</a><time datetime="2026-09-21T02:07:34.000Z" title="Created 2026-09-21 11:07:34">2026-09-21</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/cahyos/">cahyos</a></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/11/30/Walker/" title="Walker"><img class="cover" src="/images/walker.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Walker</div></div><div class="info-2"><div class="info-item-1"> Walkerランチャを使ってみました。いろいろとカスタマイズできて面白いです。 https://github.com/abenz1267/walker https://github.com/abenz1267/elephant https://benz.gitbook.io/walker/walker-and-elephant  環境  CachyOS  Hyprland  walker elephant caelestia      構築 インストール paru -S netcat walker-bin elephant-all-bin Walker設定ファイルの作成 mkdir -p ~/.config/walkercurl -L https://raw.githubusercontent.com/abenz1267/walker/refs/heads/master/resources/config.toml -o ~/.config/walker/config.toml 仕様変更前はwalker --createuserconfigで生成できていたらしい。  デフォルト設...</div></div></div></a><a class="pagination-related" href="/2025/11/17/Caelestia/" title="Caelestia"><img class="cover" src="/images/caelestia.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Caelestia</div></div><div class="info-2"><div class="info-item-1"> Hyprland用のCaelestia dotsを試してみました。これは良いかもしれない。 https://github.com/caelestia-dots/caelestia https://github.com/caelestia-dots/cli https://github.com/caelestia-dots/shell  https://www.youtube.com/watch?v=TggHDm0_vBw  2026-08-27  Qt6アップデートの際にQuickshellを自動的にリビルドする設定 https://ktkr3d.github.io/2026/08/27/quickshell-automatic-rebuild/  2026-07-25  libcavaアップデート後にquick-shellが起動しない場合の対策 https://github.com/caelestia-dots/shell/issues/1739  paru -S --rebuild caelestia-shell   2026-06-27 設定ファイルのlua言語対応 ht...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description">Memorandum</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">512</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">218</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%92%B0%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A7%8B%E7%AF%89"><span class="toc-number">2.</span> <span class="toc-text">構築</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CachyOS"><span class="toc-number">2.1.</span> <span class="toc-text">CachyOS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%BD%E5%8A%A0%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8"><span class="toc-number">2.2.</span> <span class="toc-text">追加パッケージ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Caelestia"><span class="toc-number">2.3.</span> <span class="toc-text">Caelestia</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#xdg-user-dirs"><span class="toc-number">2.4.</span> <span class="toc-text">xdg-user-dirs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%99%82%E5%88%BB%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">2.5.</span> <span class="toc-text">時刻の設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Paru"><span class="toc-number">2.6.</span> <span class="toc-text">Paru</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Vi"><span class="toc-number">2.7.</span> <span class="toc-text">Vi</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Walker"><span class="toc-number">2.8.</span> <span class="toc-text">Walker</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%84%E3%83%BC%E3%83%AB"><span class="toc-number">2.9.</span> <span class="toc-text">ツール</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SDDM"><span class="toc-number">2.10.</span> <span class="toc-text">SDDM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PWA%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3"><span class="toc-number">2.11.</span> <span class="toc-text">PWAアプリケーション</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E3%81%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B"><span class="toc-number">2.12.</span> <span class="toc-text">不要なパッケージを削除する</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E8%A8%AD%E5%AE%9A"><span class="toc-number">2.13.</span> <span class="toc-text">ディスプレイ設定</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/12/Noctalia-Jellyfin-Browser/" title="Noctalia Jellyfin Browser">Noctalia Jellyfin Browser</a><time datetime="2026-10-11T22:15:03.000Z" title="Created 2026-10-12 07:15:03">2026-10-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/08/Jellyfin-MPV-Shim/" title="Jellyfin MPV Shim">Jellyfin MPV Shim</a><time datetime="2026-10-08T05:27:02.000Z" title="Created 2026-10-08 14:27:02">2026-10-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/04/Arch-Linux-Hyprland-Noctalia/" title="Arch Linux Hyprland Noctalia">Arch Linux Hyprland Noctalia</a><time datetime="2026-10-04T06:32:33.000Z" title="Created 2026-10-04 15:32:33">2026-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/25/CachyOS-Hyprland-Noctalia/" title="CachyOS Hyprland Noctalia">CachyOS Hyprland Noctalia</a><time datetime="2026-09-24T19:51:02.000Z" title="Created 2026-09-25 04:51:02">2026-09-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/21/Hyper-Compressed-Ocean/" title="Hyper-Compressed Ocean">Hyper-Compressed Ocean</a><time datetime="2026-09-21T02:07:34.000Z" title="Created 2026-09-21 11:07:34">2026-09-21</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/travel.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
   const parseViewBox = viewBox => {
     if (!viewBox) return null
     const parts = viewBox.trim().split(/[\s,]+/).map(n => Number(n))
