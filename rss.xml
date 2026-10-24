@@ -5,7 +5,7 @@
     <link>http://example.com/</link>
     <language>en</language>
     <copyright>All rights reserved 2026, ktkr3d</copyright>
-    <lastBuildDate>Sat, 24 Oct 2026 02:58:53 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 23:58:25 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>http://example.com/icon.png</url>
@@ -13,6 +13,20 @@
       <link>http://example.com/</link>
     </image>
     <atom:link href="http://example.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Stability Matrix - WebUI reForge</title>
+      <link>http://example.com/2026/10/25/Stability-Matrix-WebUI-reForge/</link>
+      <description>
+        <![CDATA[<p><img src="/images/black_kitten.png"></p>
+<p>生成AIで画像を生成してみました。</p>
+<p><a href="https://github.com/LykosAI/StabilityMatrix">https://github.com/LykosAI/StabilityMatrix</a><br><a href="https://github.com/Panchovix/stable-diffusion-webui-reForge">https://github.com/Panchovix/stable-diffusion-webui-reForge</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/ai/">ai</category>
+      <category domain="http://example.com/tags/stability-matrix/">stability_matrix</category>
+      <category domain="http://example.com/tags/webui-reforge/">webui_reforge</category>
+      <pubDate>Sat, 24 Oct 2026 20:39:29 GMT</pubDate>
+    </item>
     <item>
       <title>Noctalia Ollama Remote Chat Plugin</title>
       <link>http://example.com/2026/10/19/2026-10-19-Noctalia-Ollama-Remote-Chat-Plugin/</link>
@@ -443,21 +457,6 @@
       <category domain="http://example.com/tags/hyprland/">hyprland</category>
       <category domain="http://example.com/tags/caelestia/">caelestia</category>
       <pubDate>Tue, 09 Jun 2026 17:26:11 GMT</pubDate>
-    </item>
-    <item>
-      <title>Systemd User Task Manager</title>
-      <link>http://example.com/2026/05/11/2026-05-11-Systemd-User-Task-Manager/</link>
-      <description>
-        <![CDATA[<p><img src="/images/systemd-user-task-manager.png"></p>
-<p>Systemdユーザサービスとタイマーを使ったタスク管理アプリを作成してみました。</p>
-<p><a href="https://github.com/ktkr3d/systemd-user-task-manager">https://github.com/ktkr3d/systemd-user-task-manager</a></p>
-<h4 id="2026-05-20"><a href="#2026-05-20" class="headerlink" title="2026-05-20"></a>2026-05-20</h4><p>スケジュール文字列のバリデーション機能を追加しました。<br><a href="https://github.com/ktkr3d/systemd-user-task-manager/releases/tag/v0.2.0">https://github.com/ktkr3d/systemd-user-task-manager/releases/tag/v0.2.0</a></p>]]>
-      </description>
-      <author>ktkr3d</author>
-      <category domain="http://example.com/tags/python/">python</category>
-      <category domain="http://example.com/tags/systemd/">systemd</category>
-      <category domain="http://example.com/tags/libadwaita/">libadwaita</category>
-      <pubDate>Sun, 10 May 2026 23:39:22 GMT</pubDate>
     </item>
   </channel>
 </rss>
