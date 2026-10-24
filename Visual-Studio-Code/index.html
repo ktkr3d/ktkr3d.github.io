@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Visual Studio Code | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Codeのインストールvscode Windowswinget install -e --id Microsoft.VisualStudioCode Arch Linuxparu -S visual-studio-code-bin  antigravity ide Windowswinget install --id Google.AntigravityIDE Arch Linuxparu -S">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Visual Studio Code">
+<meta property="og:url" content="http://example.com/Visual-Studio-Code/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="Codeのインストールvscode Windowswinget install -e --id Microsoft.VisualStudioCode Arch Linuxparu -S visual-studio-code-bin  antigravity ide Windowswinget install --id Google.AntigravityIDE Arch Linuxparu -S">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/avatar.png">
+<meta property="article:published_time" content="2021-04-02T08:06:00.000Z">
+<meta property="article:modified_time" content="2026-10-24T04:16:09.530Z">
+<meta property="article:author" content="ktkr3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://example.com/Visual-Studio-Code/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Visual Studio Code',
+  isHighlightShrink: undefined,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">513</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">220</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Visual Studio Code</h1></header><main class="layout" id="content-inner"><div id="page"><div class="page-title">Visual Studio Code</div><div class="container" id="article-container"><h3 id="Codeのインストール"><a href="#Codeのインストール" class="headerlink" title="Codeのインストール"></a>Codeのインストール</h3><h4 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h4><ul>
+<li>Windows<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">winget install -e --id Microsoft.VisualStudioCode</span><br></pre></td></tr></table></figure></li>
+<li>Arch Linux<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S visual-studio-code-bin</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="antigravity-ide"><a href="#antigravity-ide" class="headerlink" title="antigravity ide"></a>antigravity ide</h4><ul>
+<li>Windows<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">winget install --id Google.AntigravityIDE</span><br></pre></td></tr></table></figure></li>
+<li>Arch Linux<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S antigravity-ide</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="code-server"><a href="#code-server" class="headerlink" title="code-server"></a>code-server</h4><ol>
+<li>サーバ側の環境設定</li>
+</ol>
+<ul>
+<li>code-server の導入<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://code-server.dev/install.sh | sh</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> --now code-server@<span class="variable">$USER</span></span><br></pre></td></tr></table></figure></li>
+<li>CA の作成<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install mkcert libnss3-tools</span><br><span class="line">mkcert -install</span><br></pre></td></tr></table></figure>
+以下のファイルが生成される。<ul>
+<li>~&#x2F;.local&#x2F;share&#x2F;mkcert&#x2F;rootCA.pem</li>
+<li>~&#x2F;.local&#x2F;share&#x2F;mkcert&#x2F;rootCA-key.pem</li>
+</ul>
+<div class="note info flat"><p>ルート証明書の有効期限は10年間</p>
+</div></li>
+<li>サーバ証明書の作成<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.local/share/mkcert</span><br><span class="line">mkcert rpi4b.local</span><br></pre></td></tr></table></figure>
+以下のファイルが生成される。<ul>
+<li>~&#x2F;.local&#x2F;share&#x2F;mkcert&#x2F;rpi4b.local.pem</li>
+<li>~&#x2F;.local&#x2F;share&#x2F;mkcert&#x2F;rpi4b.local-key.pem</li>
+</ul>
+<div class="note info flat"><p>サーバ証明書の有効期限は2年間</p>
+</div></li>
+<li>code-server の設定<figure class="highlight ini"><figcaption><span>~/.config/code-server/config.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#bind-addr: 127.0.0.1:8080</span></span><br><span class="line">bind-addr: 0.0.0.0:443</span><br><span class="line"><span class="comment">#auth: password</span></span><br><span class="line">auth: none</span><br><span class="line">cert: /home/ubuntu/.local/share/mkcert/rpi4b.local.pem</span><br><span class="line">cert-key: /home/ubuntu/.local/share/mkcert/rpi4b.local-key.pem</span><br></pre></td></tr></table></figure>
+<code>0.0.0.0:443</code>や<code>127.0.0.1:443</code>が既に利用済で利用できない場合は<code>&lt;ローカルIPアドレス&gt;:443</code>を指定する</li>
+<li>code-server に443&#x2F;tcp (1024以下のポート)へのバインドを許可<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">setcap</span> cap_net_bind_service=+ep /usr/lib/code-server/lib/node</span><br></pre></td></tr></table></figure>
+code-serverをアップデート後に起動に失敗したら上記コマンドを実行するとよいかもしれない</li>
+<li>code-server の再起動<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart code-server@<span class="variable">$USER</span></span><br></pre></td></tr></table></figure></li>
+<li>code-server をアップデートする場合<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://code-server.dev/install.sh | sh</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">setcap</span> cap_net_bind_service=+ep /usr/lib/code-server/lib/node</span><br><span class="line"><span class="built_in">sudo</span> systemctl daemon-reload</span><br><span class="line"><span class="built_in">sudo</span> systemctl restart code-server@<span class="variable">$USER</span></span><br></pre></td></tr></table></figure></li>
+<li>code-serverをアップデート後に自動でsetcapを再適用し、サービスを再起動するフック<figure class="highlight ini"><figcaption><span>/etc/pacman.d/hooks/code-server-setcap.hook</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="section">[Trigger]</span></span><br><span class="line"><span class="attr">Operation</span> = Install</span><br><span class="line"><span class="attr">Operation</span> = Upgrade</span><br><span class="line"><span class="attr">Type</span> = Package</span><br><span class="line"><span class="attr">Target</span> = code-server</span><br><span class="line"></span><br><span class="line"><span class="section">[Action]</span></span><br><span class="line"><span class="attr">Description</span> = Re-applying CAP_NET_BIND_SERVICE to code-server node binary...</span><br><span class="line"><span class="attr">When</span> = PostTransaction</span><br><span class="line"><span class="attr">Exec</span> = /usr/bin/sh -c <span class="string">&quot;/usr/bin/setcap cap_net_bind_service=+ep /usr/lib/code-server/lib/node &amp;&amp; /usr/bin/systemctl restart code-server@arch&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="2">
+<li>クライアント側の環境設定</li>
+</ol>
+<ul>
+<li>ブラウザの「信頼されたルート証明機関」に<code>rootCA.pem</code>を登録</li>
+<li>Linux でChrome を利用している場合は以下コマンドでルート証明書を導入<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install libnss3-tools</span><br><span class="line">certutil -A -n &quot;My Root CA&quot; -t &quot;TCu,Cu,Tu&quot; -i ~/Downloads/rootCA.pem -d sql:$&#123;HOME&#125;/.pki/nssdb</span><br></pre></td></tr></table></figure></li>
+<li>Linux でSnap版Firefoxを利用している場合は設定の証明書画面からルート証明書を導入</li>
+<li>サーバ<code>https://rpi4b.local  </code>にアクセスして、PWAとしてインストール</li>
+</ul>
+<h3 id="拡張機能の導入"><a href="#拡張機能の導入" class="headerlink" title="拡張機能の導入"></a>拡張機能の導入</h3><h4 id="Activitus-Bar"><a href="#Activitus-Bar" class="headerlink" title="Activitus Bar"></a>Activitus Bar</h4><p>  ステータスバーにカスタムアイコンを表示する拡張機能。</p>
+<ul>
+<li>設定<figure class="highlight json"><figcaption><span>settings.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;activitusbar.views&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;command.workbench.action.openSettingsJson&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;codicon&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file-code&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tooltip&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Open settings.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;command.workbench.action.showAboutDialog&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;codicon&quot;</span><span class="punctuation">:</span> <span class="string">&quot;info&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tooltip&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Show Version&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;command.editor.action.formatDocument&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;codicon&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sparkle&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tooltip&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Format Document\nShift + Alt + F&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;workbench.editor.useModal&quot;</span><span class="punctuation">:</span> <span class="string">&quot;off&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;workbench.activityBar.location&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bottom&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure></li>
+<li>コマンドを追加する場合のヒント<br>設定したいコマンド(<code>name</code>)を確認する手順は以下<ol>
+<li>Ctrl+K Ctrl+S でキーボードショートカットの画面を表示</li>
+<li>ショートカット一覧の中からコマンドを検索</li>
+<li>右クリックして「コマンドIDのコピー」</li>
+<li><code>command.&lt;コマンドID&gt;</code>の形式でsettings.jsonの<code>activitusbar.views</code>のエントリに追加</li>
+</ol>
+</li>
+</ul>
+<h4 id="Draw-io-Integration"><a href="#Draw-io-Integration" class="headerlink" title="Draw.io Integration"></a>Draw.io Integration</h4><p>  拡張子 <code>.drawio.svg</code> のファイルを作成<br>  <a href="/2020/05/18/Draw-io-VS-Code-Integration/">Draw.io VS Code Integration</a></p>
+<h4 id="Git-Graph"><a href="#Git-Graph" class="headerlink" title="Git Graph"></a>Git Graph</h4><h4 id="Japanese-Language-Pack"><a href="#Japanese-Language-Pack" class="headerlink" title="Japanese Language Pack"></a>Japanese Language Pack</h4><h4 id="Marp-for-VS-Code"><a href="#Marp-for-VS-Code" class="headerlink" title="Marp for VS Code"></a>Marp for VS Code</h4><p>  <a href="/2020/05/27/Marp-for-VS-Code/">Marp for VS Code</a></p>
+<h4 id="Project-Manager"><a href="#Project-Manager" class="headerlink" title="Project Manager"></a>Project Manager</h4><p>  コマンドパレット(F1)で<code>Project Manager: Save Project</code></p>
+<h3 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h3><h4 id="外観"><a href="#外観" class="headerlink" title="外観"></a>外観</h4><ul>
+<li>タイトルバーのカスタマイズ<br>設定(Ctrl + ,)で<code>window.titleBarStyle</code>を検索して<code>custom</code></li>
+<li>ターミナルのフォント<br>terminal.integrated.fontFamily<br>HackGen Console NF</li>
+</ul>
+<h4 id="WaylandでWMClass補正"><a href="#WaylandでWMClass補正" class="headerlink" title="WaylandでWMClass補正"></a>WaylandでWMClass補正</h4><ul>
+<li>起動するとダッシュに登録したアイコンと別のアイコンとなる事象の回避<br><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/1488890/overriding-vscode-desktop-file-casuses-dock-to-produce-separate-icon">https://askubuntu.com/questions/1488890/overriding-vscode-desktop-file-casuses-dock-to-produce-separate-icon</a><figure class="highlight ini"><figcaption><span>/usr/share/applications/code.desktip</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">#StartupWMClass=code</span></span><br><span class="line"><span class="attr">StartupWMClass</span>=code-url-handler</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="Alt-Keyの制御"><a href="#Alt-Keyの制御" class="headerlink" title="Alt Keyの制御"></a>Alt Keyの制御</h4><ul>
+<li><kbd>Ctrl</kbd>+<kbd>,</kbd><br><code>Window: Custom Menu Bar Alt Focus</code>を検索して、オフ</li>
+</ul>
+<h3 id="その他設定"><a href="#その他設定" class="headerlink" title="その他設定"></a>その他設定</h3><ul>
+<li>Ctrl + ホイールで拡大縮小<br>editor.mouseWheelZoom</li>
+<li>自動保存の無効化<br>files.autoSave</li>
+<li>エンコーディングの自動判定<br>files.autoGuessEncoding</li>
+<li>ファイルクリックで新しいタブに開く<br>workbench.editor.enablePreview をオフ？</li>
+<li>ブックマーク<br><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks">https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks</a><figure class="highlight json"><figcaption><span>settings.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;editor.minimap.enabled&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;activitusbar.views&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;command.workbench.view.extension.bookmarks&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;codicon&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bookmark&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></li>
+<li>codicon<br><a target="_blank" rel="noopener" href="https://microsoft.github.io/vscode-codicons/dist/codicon.html">https://microsoft.github.io/vscode-codicons/dist/codicon.html</a></li>
+<li>フォント<br>editor.fontFamily<br>‘Source Han Code JP’</li>
+</ul>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">513</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">220</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/19/2026-10-19-Noctalia-Ollama-Remote-Chat-Plugin/" title="Noctalia Ollama Remote Chat Plugin">Noctalia Ollama Remote Chat Plugin</a><time datetime="2026-10-18T19:15:43.000Z" title="Created 2026-10-19 04:15:43">2026-10-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/12/2026-10-12-Noctalia-Jellyfin-Browser/" title="Noctalia Jellyfin Browser">Noctalia Jellyfin Browser</a><time datetime="2026-10-11T22:15:03.000Z" title="Created 2026-10-12 07:15:03">2026-10-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/08/2026-10-08-Jellyfin-MPV-Shim/" title="Jellyfin MPV Shim">Jellyfin MPV Shim</a><time datetime="2026-10-08T05:27:02.000Z" title="Created 2026-10-08 14:27:02">2026-10-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/04/2026-10-04-Arch-Linux-Hyprland-Noctalia/" title="Arch Linux Hyprland Noctalia">Arch Linux Hyprland Noctalia</a><time datetime="2026-10-04T06:32:33.000Z" title="Created 2026-10-04 15:32:33">2026-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/25/2026-09-25-CachyOS-Hyprland-Noctalia/" title="CachyOS Hyprland Noctalia">CachyOS Hyprland Noctalia</a><time datetime="2026-09-24T19:51:02.000Z" title="Created 2026-09-25 04:51:02">2026-09-25</time></div></div></div></div><div class="card-widget card-archives">
+    <div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a></div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/10/">
+            <span class="card-archive-list-date">
+              October 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/09/">
+            <span class="card-archive-list-date">
+              September 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/08/">
+            <span class="card-archive-list-date">
+              August 2026
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/07/">
+            <span class="card-archive-list-date">
+              July 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/06/">
+            <span class="card-archive-list-date">
+              June 2026
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              May 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              April 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              January 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>
