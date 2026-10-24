@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memorandum!</title>
+    <link>http://example.com/</link>
+    <language>en</language>
+    <copyright>All rights reserved 2026, ktkr3d</copyright>
+    <lastBuildDate>Sat, 24 Oct 2026 02:58:53 GMT</lastBuildDate>
+    <generator>Hexo</generator>
+    <image>
+      <url>http://example.com/icon.png</url>
+      <title>Memorandum!</title>
+      <link>http://example.com/</link>
+    </image>
+    <atom:link href="http://example.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Noctalia Ollama Remote Chat Plugin</title>
+      <link>http://example.com/2026/10/19/2026-10-19-Noctalia-Ollama-Remote-Chat-Plugin/</link>
+      <description>
+        <![CDATA[<p><img src="/images/ollama-remote-chat-thumbnail.webp"></p>
+<p>リモートのOllama APIに接続してチャットするNoctaliaプラグインを作成しました。</p>
+<p><img src="/images/ollama_remote_chat.png"></p>
+<p><img src="/images/ollama_remote_chat_select_model.png"></p>
+<p>利用可能なモデルを選択できます。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/noctalia/">noctalia</category>
+      <category domain="http://example.com/tags/ai/">ai</category>
+      <category domain="http://example.com/tags/ollama/">ollama</category>
+      <pubDate>Sun, 18 Oct 2026 19:15:43 GMT</pubDate>
+    </item>
+    <item>
+      <title>Noctalia Jellyfin Browser</title>
+      <link>http://example.com/2026/10/12/2026-10-12-Noctalia-Jellyfin-Browser/</link>
+      <description>
+        <![CDATA[<p><img src="/images/jellyfin-browser-thumbnail.webp"></p>
+<p>Jellyfinサーバに接続してライブラリをブラウズするNoctaliaプラグインを作成しました。MPVで再生します。</p>
+<p><a href="https://github.com/ktkr3d/noctalia-plugins">https://github.com/ktkr3d/noctalia-plugins</a><br><a href="https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser">https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/jellyfin/">jellyfin</category>
+      <category domain="http://example.com/tags/noctalia/">noctalia</category>
+      <category domain="http://example.com/tags/mpv/">mpv</category>
+      <pubDate>Sun, 11 Oct 2026 22:15:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>Jellyfin MPV Shim</title>
+      <link>http://example.com/2026/10/08/2026-10-08-Jellyfin-MPV-Shim/</link>
+      <description>
+        <![CDATA[<p><img src="/images/jellyfin-mpv-shim-git.png"></p>
+<p>Jellyfin MPV Shimは、高性能なメディアプレイヤー「MPV」をベースにした軽量な Jellyfin 用クライアントです。高速です。<br>最新版をインストールするためのPKGBUILDを作成しました。<br>また、MPRISで動画のカバーアートが表示されるようにMPRISスクリプトを配置しました。</p>
+<ul>
+<li><a href="https://github.com/jellyfin/jellyfin-mpv-shim">https://github.com/jellyfin/jellyfin-mpv-shim</a></li>
+<li><a href="https://github.com/ktkr3d/jellyfin-mpv-shim-git">https://github.com/ktkr3d/jellyfin-mpv-shim-git</a></li>
+<li><a href="https://github.com/ktkr3d/mpv-lua-mpris">https://github.com/ktkr3d/mpv-lua-mpris</a><br>forked from <a href="https://github.com/ruihe774/mpv-lua-mpris">ruihe774&#x2F;mpv-lua-mpris</a></li>
+</ul>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/jellyfin/">jellyfin</category>
+      <pubDate>Thu, 08 Oct 2026 05:27:02 GMT</pubDate>
+    </item>
+    <item>
+      <title>Arch Linux Hyprland Noctalia</title>
+      <link>http://example.com/2026/10/04/2026-10-04-Arch-Linux-Hyprland-Noctalia/</link>
+      <description>
+        <![CDATA[<p>Arch Linux &#x2F; Hyprlandの環境にNoctaliaを導入してみました。</p>
+<p><img src="/images/arch-hypr-noctalia.png"></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/hyprland/">hyprland</category>
+      <category domain="http://example.com/tags/noctalia/">noctalia</category>
+      <category domain="http://example.com/tags/arch/">arch</category>
+      <pubDate>Sun, 04 Oct 2026 06:32:33 GMT</pubDate>
+    </item>
+    <item>
+      <title>CachyOS Hyprland Noctalia</title>
+      <link>http://example.com/2026/09/25/2026-09-25-CachyOS-Hyprland-Noctalia/</link>
+      <description>
+        <![CDATA[<p><img src="/images/cachyos-hyprland-noctalia.png"></p>
+<p>CachyOS Hyprland Noctaliaをインストールしました。<br>バーを右側に配置できてよいですね。<br>シェルはfishでした。パッケージ管理はshellyでした。<br>メイン環境にしてもよいかもしれないです。</p>
+<ul>
+<li>CachyOS<br>  <a href="https://cachyos.org/">https://cachyos.org/</a></li>
+<li>Noctalia<br>  <a href="https://noctalia.dev/">https://noctalia.dev/</a><br>  <a href="https://github.com/CachyOS/cachyos-hypr-noctalia">https://github.com/CachyOS/cachyos-hypr-noctalia</a></li>
+<li>HyprMod<br>  <a href="https://github.com/BlueManCZ/hyprmod">https://github.com/BlueManCZ/hyprmod</a></li>
+</ul>
+<h3 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h3><h4 id="Noctaliaコントロールセンタ"><a href="#Noctaliaコントロールセンタ" class="headerlink" title="Noctaliaコントロールセンタ"></a>Noctaliaコントロールセンタ</h4><p><kbd>Super</kbd>+<kbd>X</kbd>でホーム画面、<kbd>Super</kbd>+<kbd>A</kbd>で通知画面<br><img src="/images/noctalia-panel.png"></p>
+<h4 id="Noctalia設定画面"><a href="#Noctalia設定画面" class="headerlink" title="Noctalia設定画面"></a>Noctalia設定画面</h4><p><kbd>Super</kbd>+<kbd>Z</kbd><br><img src="/images/cachyos-hyprland-noctalia_ja.png"></p>
+<h4 id="壁紙選択"><a href="#壁紙選択" class="headerlink" title="壁紙選択"></a>壁紙選択</h4><p><kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd><br><img src="/images/noctalia-wallpapers.png"></p>
+<h4 id="タイリング表示"><a href="#タイリング表示" class="headerlink" title="タイリング表示"></a>タイリング表示</h4><p><img src="/images/hyprland-tiling.png"></p>
+<h4 id="HyprMod"><a href="#HyprMod" class="headerlink" title="HyprMod"></a>HyprMod</h4><p>HyprlandをGUIで設定します。<br><kbd>Super</kbd>+<kbd>M</kbd>にバインドしました。<br><img src="/images/hyprmod.png"></p>
+<h4 id="スクリプトランチャ"><a href="#スクリプトランチャ" class="headerlink" title="スクリプトランチャ"></a>スクリプトランチャ</h4><p>Noctaliaランチャのdmenu機能を利用したスクリプトランチャを作りました。<br><kbd>Super</kbd>+<kbd>K</kbd>にバインドしました。<br><img src="/images/noctalia-dmenu.png"></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/hyprland/">hyprland</category>
+      <category domain="http://example.com/tags/cachyos/">cachyos</category>
+      <category domain="http://example.com/tags/noctalia/">noctalia</category>
+      <category domain="http://example.com/tags/hyprmod/">hyprmod</category>
+      <pubDate>Thu, 24 Sep 2026 19:51:02 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hyper-Compressed Ocean</title>
+      <link>http://example.com/2026/09/21/2026-09-21-Hyper-Compressed-Ocean/</link>
+      <description>
+        <![CDATA[<p><img src="https://wow.zamimg.com/uploads/screenshots/normal/852908-hyper-compressed-ocean.jpg"></p>
+<p><a href="https://www.wowhead.com/item=168016/hyper-compressed-ocean">Hyper-Compressed Ocean</a>（ハイパー圧縮オーシャン）は、オンラインゲーム『World of Warcraft（WoW）』に登場する、どこでも釣りができるようになる便利なおもちゃ（Toy）アイテムです。実績「<a href="https://www.wowhead.com/achievement=13502/secret-fish-and-where-to-find-them">Secret Fish and Where to Find Them</a>」を達成する（各地で隠し魚を30種類集める）ことで獲得できます。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <pubDate>Mon, 21 Sep 2026 02:07:34 GMT</pubDate>
+    </item>
+    <item>
+      <title>slidev-addon-google-charts</title>
+      <link>http://example.com/2026/09/05/2026-09-05-slidev-addon-google-charts/</link>
+      <description>
+        <![CDATA[<p>Slidev用のGoogle Charts用アドオンを作成してみました。</p>
+<ul>
+<li><a href="https://github.com/ktkr3d/slidev-addon-google-charts">https://github.com/ktkr3d/slidev-addon-google-charts</a></li>
+<li><a href="https://sli.dev/">https://sli.dev/</a></li>
+<li><a href="https://developers.google.com/chart">https://developers.google.com/chart</a></li>
+</ul>
+<p>アドオンのテストをしながら、オリジナルのスライドテーマを作るのが楽しい。</p>
+<ul>
+<li>レイアウト例のスライド<br>  <a href="https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground">https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground</a></li>
+<li>レイアウト例 （＋スライドテンプレート）  
+
+	<div class="row">
+    <embed src="/images/slidev_addon_google_charts.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+</li>
+</ul>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/slidev/">slidev</category>
+      <category domain="http://example.com/tags/google-charts/">google-charts</category>
+      <pubDate>Sat, 05 Sep 2026 02:21:16 GMT</pubDate>
+    </item>
+    <item>
+      <title>Slidev - Google Charts</title>
+      <link>http://example.com/2026/09/04/2026-09-04-Slidev-Google-Charts/</link>
+      <description>
+        <![CDATA[<p><img src="/images/slides_googlecharts-export_1.png"></p>
+<p>SlidevでGoogl Chartsのグラフをスライドにしてみました。</p>
+<p><a href="https://sli.dev/">https://sli.dev/</a><br><a href="https://developers.google.com/chart">https://developers.google.com/chart</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/slidev/">slidev</category>
+      <category domain="http://example.com/tags/googlecharts/">googlecharts</category>
+      <pubDate>Thu, 03 Sep 2026 19:56:28 GMT</pubDate>
+    </item>
+    <item>
+      <title>GeoChart SVG image</title>
+      <link>http://example.com/2026/08/31/2026-08-31-GeoChart-SVG-image/</link>
+      <description>
+        <![CDATA[<p><img src="/images/geochart-world.svg"></p>
+<p>Google ChartsのGeoChartで作成した地図をSVGファイル化してみます。</p>
+<p><a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">https://developers.google.com/chart/interactive/docs/gallery/geochart</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/marp/">marp</category>
+      <category domain="http://example.com/tags/google-charts/">google-charts</category>
+      <pubDate>Mon, 31 Aug 2026 09:49:43 GMT</pubDate>
+    </item>
+    <item>
+      <title>Quickshell automatic rebuild</title>
+      <link>http://example.com/2026/08/27/2026-08-27-quickshell-automatic-rebuild/</link>
+      <description>
+        <![CDATA[<p>Qt6を最新化したらquickshellが起動しなくなりました。quickshellとQt6の整合性が崩れたことが原因なのでQt6の更新と連動してquickshellをリビルドするようにしてみました。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/qt6/">qt6</category>
+      <category domain="http://example.com/tags/quickshell/">quickshell</category>
+      <pubDate>Wed, 26 Aug 2026 23:36:50 GMT</pubDate>
+    </item>
+    <item>
+      <title>WoW OnUseGear Addon</title>
+      <link>http://example.com/2026/08/15/2026-08-15-WoW-OnUseGear-Addon/</link>
+      <description>
+        <![CDATA[<p><img src="/images/onusegear.png"><br><a href="https://github.com/ktkr3d/OnUseGear">https://github.com/ktkr3d/OnUseGear</a></p>
+<p>装備しているアイテムの中で使用(<code>Use</code>)できるものをアクションボタン化するアドオンを作成しました。<br>対象はトリンケットだけではなく、武器や防具で使用できるものを含めて自動的に列挙します。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <category domain="http://example.com/tags/addon/">addon</category>
+      <pubDate>Sat, 15 Aug 2026 09:00:28 GMT</pubDate>
+    </item>
+    <item>
+      <title>SSF</title>
+      <link>http://example.com/2026/08/12/2026-08-12-SSF/</link>
+      <description>
+        <![CDATA[<p><img src="/images/vf2_keyassign.png"><br>SSFでセガサターンのゲームを遊んでみました。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/ssf/">ssf</category>
+      <category domain="http://example.com/tags/vf2/">vf2</category>
+      <pubDate>Tue, 11 Aug 2026 18:55:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>WoW Keybinding</title>
+      <link>http://example.com/2026/08/11/2026-08-11-WoW-Keybinding/</link>
+      <description>
+        <![CDATA[<p><img src="/images/wow_keybinding.png"><br>Bellularのキーバインドガイドが新しくなっていたので適用してみました。各クラス&#x2F;スペックのおすすめキーバインドを取り込むことができます。<br>また、各クラス&#x2F;スペック間で統一されたキーバインドを実現できます。例えば、防御強化系は<kbd>Z</kbd>、移動加速系は<kbd>X</kbd>、妨害系は<kbd>C</kbd>、インタラプト系は<kbd>V</kbd>、ヒール系は<kbd>Ctrl</kbd>+<kbd>1</kbd>、等。</p>
+<ul>
+<li>アドオン<br>  <a href="https://www.curseforge.com/wow/addons/keybinding">https://www.curseforge.com/wow/addons/keybinding</a></li>
+<li>Webツール<br>  <a href="https://keybinding.bellular.games/">https://keybinding.bellular.games/</a></li>
+</ul>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <pubDate>Tue, 11 Aug 2026 08:53:47 GMT</pubDate>
+    </item>
+    <item>
+      <title>oUF MyLayout Addon v0.3.0</title>
+      <link>http://example.com/2026/08/09/2026-08-09-oUF-MyLayout-Addon-v0-3-0/</link>
+      <description>
+        <![CDATA[<p><img src="/images/ouf_mylayout_v0.3.0.jpg"></p>
+<p><a]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <category domain="http://example.com/tags/oUF/">oUF</category>
+      <pubDate>Sat, 08 Aug 2026 23:40:19 GMT</pubDate>
+    </item>
+    <item>
+      <title>Linux Cluster Monitor</title>
+      <link>http://example.com/2026/08/08/2026-08-08-Linux-Cluster-Monitor/</link>
+      <description>
+        <![CDATA[<p><img src="/images/linux_cluster_monitor.png"></p>
+<p>自宅のLinux PCのシステム情報をfastfetchを使って収集して表示するダッシュボードを作ってみました。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/fastfetch/">fastfetch</category>
+      <pubDate>Sat, 08 Aug 2026 08:27:09 GMT</pubDate>
+    </item>
+    <item>
+      <title>Antigravity IDE</title>
+      <link>http://example.com/2026/07/31/2026-07-31-Antigravity-IDE/</link>
+      <description>
+        <![CDATA[<p><img src="/images/antigravity_ide.png"><br><a href="https://antigravity.google/product/antigravity-ide">https://antigravity.google/product/antigravity-ide</a><br>Visual Studio CodeでGemini Code Assistを利用してきましたが、Visual Studio Codeの個人向けGemini Code Assistは2026年6月18日をもって提供を終了（リクエスト処理を停止）しました。<br>Visual Studio CodeからフォークされているAntigravity IDEでGeminiを利用してみました。<br>例として、Starshipのプロンプトシミュレータを作ってみました。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/starship/">starship</category>
+      <category domain="http://example.com/tags/gemini/">gemini</category>
+      <category domain="http://example.com/tags/antigravity/">antigravity</category>
+      <pubDate>Thu, 30 Jul 2026 16:54:16 GMT</pubDate>
+    </item>
+    <item>
+      <title>hypr-rdp</title>
+      <link>http://example.com/2026/06/30/2026-06-30-hypr-rdp/</link>
+      <description>
+        <![CDATA[<p><img src="/images/hypr-rdp.png"></p>
+<p>hypr-rdpを使ってヘッドレスのHyprland環境にWindowsとLinuxから接続してみました。<br><a href="https://github.com/MuNeNiCK/hypr-rdp">https://github.com/MuNeNiCK/hypr-rdp</a><br><a href="https://www.munenick.me/blog/hypr-rdp/">https://www.munenick.me/blog/hypr-rdp/</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/hyprland/">hyprland</category>
+      <category domain="http://example.com/tags/rdp/">rdp</category>
+      <pubDate>Tue, 30 Jun 2026 13:53:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>hyprKCS</title>
+      <link>http://example.com/2026/06/20/2026-06-20-hyprKCS/</link>
+      <description>
+        <![CDATA[<p><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnsckinwi9jksfp0wneap.png"></p>
+<p>Hyprland用キーバインドマネージャhyprKCSを使ってみました。<br>お気に入りフィルタがあるので、便利だけれど忘れてしまいがちなキーバインドを簡単に見つけられます。</p>
+<p><a href="https://github.com/kosa12/hyprKCS">https://github.com/kosa12/hyprKCS</a></p>
+<h4 id="2026-06-29"><a href="#2026-06-29" class="headerlink" title="2026-06-29"></a>2026-06-29</h4><ul>
+<li><p>hyprland.luaに対応しているソフト調査</p>
+<table>
+<thead>
+<tr>
+<th align="left">ソフト</th>
+<th align="left">hyprland.lua対応状況</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://github.com/kosa12/hyprKCS">hyprKCS</a></td>
+<td align="left">×</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/tidynest/hypr-keybind-manager">hypr-keybind-manager</a></td>
+<td align="left">×</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/BlueManCZ/hyprmod">hyprmod</a></td>
+<td align="left">○ 多機能。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2026-06-28"><a href="#2026-06-28" class="headerlink" title="2026-06-28"></a>2026-06-28</h4><ul>
+<li>hyprland.lua対応のfeatureリクエスト<br>  <a href="https://github.com/kosa12/hyprKCS/issues/77">https://github.com/kosa12/hyprKCS/issues/77</a></li>
+</ul>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/hyprland/">hyprland</category>
+      <pubDate>Sat, 20 Jun 2026 11:43:08 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hyprland 0.55.3</title>
+      <link>http://example.com/2026/06/10/2026-06-10-Hyprland-0-55-3/</link>
+      <description>
+        <![CDATA[<p>Hyprland 0.55.3をインストールしました。<br>現在の構成は以下の通り。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pacman -Q hyprland quickshell caelestia-cli caelestia-shell</span><br><span class="line">hyprland 0.55.3-1</span><br><span class="line">quickshell-git 0.2.0.r148.g8db8ca1-1</span><br><span class="line">caelestia-cli 1.0.8-1</span><br><span class="line">caelestia-shell 2.0.2-1</span><br></pre></td></tr></table></figure>
+
+<h4 id="2026-07-18"><a href="#2026-07-18" class="headerlink" title="2026-07-18"></a>2026-07-18</h4><ul>
+<li>My keybinds<table>
+<thead>
+<tr>
+<th align="left">Category</th>
+<th align="left">Keybind</th>
+<th align="left">App</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Launcher</td>
+<td align="left"><kbd>Super</kbd></td>
+<td align="left">Caelestia Launcher</td>
+</tr>
+<tr>
+<td align="left">Launcher</td>
+<td align="left"><kbd>Super</kbd>+<kbd>Space</kbd></td>
+<td align="left">Walker</td>
+</tr>
+<tr>
+<td align="left">Web</td>
+<td align="left"><kbd>Super</kbd>+<kbd>W</kbd></td>
+<td align="left">Google Chrome</td>
+</tr>
+<tr>
+<td align="left">Explorer</td>
+<td align="left"><kbd>Super</kbd>+<kbd>E</kbd></td>
+<td align="left">Thunar</td>
+</tr>
+<tr>
+<td align="left">To do</td>
+<td align="left"><kbd>Super</kbd>+<kbd>R</kbd></td>
+<td align="left">Google ToDo list</td>
+</tr>
+<tr>
+<td align="left">Termial</td>
+<td align="left"><kbd>Super</kbd>+<kbd>T</kbd></td>
+<td align="left">foot</td>
+</tr>
+<tr>
+<td align="left">Special Workspace</td>
+<td align="left"><kbd>Super</kbd>+<kbd>S</kbd></td>
+<td align="left">Toggle Special Workspace</td>
+</tr>
+<tr>
+<td align="left">Communication</td>
+<td align="left"><kbd>Super</kbd>+<kbd>D</kbd></td>
+<td align="left">Discord</td>
+</tr>
+<tr>
+<td align="left">Fullscreen</td>
+<td align="left"><kbd>Super</kbd>+<kbd>F</kbd></td>
+<td align="left">Fullscreen</td>
+</tr>
+<tr>
+<td align="left">Help</td>
+<td align="left"><kbd>Super</kbd>+<kbd>H</kbd></td>
+<td align="left">Hyprmod</td>
+</tr>
+<tr>
+<td align="left">Scripts</td>
+<td align="left"><kbd>Super</kbd>+<kbd>J</kbd></td>
+<td align="left">DMenu(Walker)</td>
+</tr>
+<tr>
+<td align="left">Panels</td>
+<td align="left"><kbd>Super</kbd>+<kbd>K</kbd></td>
+<td align="left">Toggle Caelestia panels</td>
+</tr>
+<tr>
+<td align="left">Lock screen</td>
+<td align="left"><kbd>Super</kbd>+<kbd>L</kbd></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Code</td>
+<td align="left"><kbd>Super</kbd>+<kbd>C</kbd></td>
+<td align="left">VS Code</td>
+</tr>
+<tr>
+<td align="left">Clipboard</td>
+<td align="left"><kbd>Super</kbd>+<kbd>V</kbd></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Dashboard</td>
+<td align="left"><kbd>Super</kbd>+<kbd>B</kbd></td>
+<td align="left">Toggle Caelestia dashboard</td>
+</tr>
+<tr>
+<td align="left">Notifications</td>
+<td align="left"><kbd>Super</kbd>+<kbd>N</kbd></td>
+<td align="left">Toggle Caelestia notifications</td>
+</tr>
+<tr>
+<td align="left">Music</td>
+<td align="left"><kbd>Super</kbd>+<kbd>M</kbd></td>
+<td align="left">Toggle Jellyfin Desktop</td>
+</tr>
+<tr>
+<td align="left">Focus window</td>
+<td align="left"><kbd>Super</kbd>+<kbd>Arrows</kbd></td>
+<td align="left">Focus window</td>
+</tr>
+<tr>
+<td align="left">Window stacks</td>
+<td align="left"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>↓</kbd></td>
+<td align="left">Push window</td>
+</tr>
+<tr>
+<td align="left">Window stacks</td>
+<td align="left"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>↑</kbd></td>
+<td align="left">Pop window</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2026-07-16"><a href="#2026-07-16" class="headerlink" title="2026-07-16"></a>2026-07-16</h4><ul>
+<li>Caelestiaダッシュボードのショートカット  <figure class="highlight lua"><figcaption><span>~/.config/caelestia/hypr-user.lua</span></figcaption><table><tr><td class="code"><pre><span class="line">hl.bind(<span class="string">&quot;SUPER + B&quot;</span>, hl.dsp.exec_cmd(<span class="string">&quot;caelestia shell drawers toggle dashboard&quot;</span>))</span><br></pre></td></tr></table></figure></li>
+<li>Hyprmodのショートカット  <figure class="highlight lua"><figcaption><span>~/.config/caelestia/hypr-user.lua</span></figcaption><table><tr><td class="code"><pre><span class="line">hl.bind(<span class="string">&quot;SUPER + H&quot;</span>, hl.dsp.exec_cmd(<span class="string">&quot;hyprmod&quot;</span>))</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2026-07-14"><a href="#2026-07-14" class="headerlink" title="2026-07-14"></a>2026-07-14</h4><p>スペシャルワークスペースmusicでJellyfinDesktopを利用する</p>
+<ol>
+<li>インストール <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flatpak install flathub org.jellyfin.JellyfinDesktop</span><br></pre></td></tr></table></figure></li>
+<li>設定 <figure class="highlight json"><figcaption><span>~/.config/caelestia/cli.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;toggles&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;music&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;jellyfindesktop&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;enable&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;match&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span> <span class="attr">&quot;class&quot;</span><span class="punctuation">:</span> <span class="string">&quot;org.jellyfin.JellyfinDesktop&quot;</span> <span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;flatpak&quot;</span><span class="punctuation">,</span> <span class="string">&quot;run&quot;</span><span class="punctuation">,</span> <span class="string">&quot;org.jellyfin.JellyfinDesktop&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;move&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight lua"><figcaption><span>~/.config/caelestia/hypr-user.lua</span></figcaption><table><tr><td class="code"><pre><span class="line">hl.window_rule(&#123;</span><br><span class="line">    <span class="built_in">match</span> = &#123;</span><br><span class="line">        class = <span class="string">&quot;org.jellyfin.JellyfinDesktop&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    workspace = <span class="string">&quot;special:music&quot;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="2026-06-27"><a href="#2026-06-27" class="headerlink" title="2026-06-27"></a>2026-06-27</h4><p>設定ファイルのlua言語対応</p>
+<ol>
+<li>Caelestiaの強制アップデート <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru</span><br><span class="line">git -C ~/.local/share/caelestia fetch origin main</span><br><span class="line">git -C ~/.local/share/caelestia reset --hard origin/main</span><br></pre></td></tr></table></figure></li>
+<li>設定ファイルの変換 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paru -S hyprlang2lua</span><br><span class="line"><span class="built_in">cd</span> ~/.config/caelestia</span><br><span class="line">hyprlang2lua hypr-user.conf &gt; hypr-user.lua</span><br></pre></td></tr></table></figure></li>
+<li>表記の補正<br> ~&#x2F;.config&#x2F;caelestia&#x2F;hypr-user.lua<br> キーバインドの<code>Ctrl+Alt</code>を<code>CTRL + ALT</code>に置換</li>
+<li>変数設定の移植 <figure class="highlight lua"><figcaption><span>~/.config/caelestia/hypr-vars.lua</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> &#123;</span><br><span class="line">    browser = <span class="string">&quot;google-chrome-stable&quot;</span>,</span><br><span class="line">    editor = <span class="string">&quot;code&quot;</span>,</span><br><span class="line">    fileExplorer = <span class="string">&quot;thunar&quot;</span>,</span><br><span class="line">    windowGapsOut = <span class="number">20</span>,</span><br><span class="line">    workspaceSwipeFingers = <span class="number">3</span>,</span><br><span class="line">    volumeStep = <span class="number">5</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>各種ツールの誤認識を防ぐために設定ファイルをリネーム <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> ~/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf~</span><br></pre></td></tr></table></figure></li>
+</ol>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/hyprland/">hyprland</category>
+      <category domain="http://example.com/tags/caelestia/">caelestia</category>
+      <pubDate>Tue, 09 Jun 2026 17:26:11 GMT</pubDate>
+    </item>
+    <item>
+      <title>Systemd User Task Manager</title>
+      <link>http://example.com/2026/05/11/2026-05-11-Systemd-User-Task-Manager/</link>
+      <description>
+        <![CDATA[<p><img src="/images/systemd-user-task-manager.png"></p>
+<p>Systemdユーザサービスとタイマーを使ったタスク管理アプリを作成してみました。</p>
+<p><a href="https://github.com/ktkr3d/systemd-user-task-manager">https://github.com/ktkr3d/systemd-user-task-manager</a></p>
+<h4 id="2026-05-20"><a href="#2026-05-20" class="headerlink" title="2026-05-20"></a>2026-05-20</h4><p>スケジュール文字列のバリデーション機能を追加しました。<br><a href="https://github.com/ktkr3d/systemd-user-task-manager/releases/tag/v0.2.0">https://github.com/ktkr3d/systemd-user-task-manager/releases/tag/v0.2.0</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/python/">python</category>
+      <category domain="http://example.com/tags/systemd/">systemd</category>
+      <category domain="http://example.com/tags/libadwaita/">libadwaita</category>
+      <pubDate>Sun, 10 May 2026 23:39:22 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

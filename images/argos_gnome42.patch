@@ -1,0 +1,89 @@
+diff --git argos@pew.worldwidemann.com/button.js argos@pew.worldwidemann.com/button.js
+index 3565603..8c4164d 100644
+--- argos@pew.worldwidemann.com/button.js
++++ argos@pew.worldwidemann.com/button.js
+@@ -12,6 +12,7 @@
+ const Lang = imports.lang;
+ const GLib = imports.gi.GLib;
+ const Gio = imports.gi.Gio;
++const GObject = imports.gi.GObject;
+ const PanelMenu = imports.ui.panelMenu;
+ const PopupMenu = imports.ui.popupMenu;
+ const Mainloop = imports.mainloop;
+@@ -21,12 +22,10 @@ const ArgosLineView = Extension.imports.lineview.ArgosLineView;
+ const ArgosMenuItem = Extension.imports.menuitem.ArgosMenuItem;
+ const Utilities = Extension.imports.utilities;
+ 
+-var ArgosButton = new Lang.Class({
+-  Name: "ArgosButton",
+-  Extends: PanelMenu.Button,
+-
+-  _init: function(file, settings) {
+-    this.parent(0, "", false);
++var ArgosButton = GObject.registerClass(
++class ArgosButton extends PanelMenu.Button {
++  _init(file, settings) {
++    super._init(0, "", false);
+ 
+     this._file = file;
+     this._updateInterval = settings.updateInterval;
+@@ -52,9 +51,9 @@ var ArgosButton = new Lang.Class({
+           this.update();
+       }));
+     }
+-  },
++  }
+ 
+-  _onDestroy: function() {
++  _onDestroy() {
+     this._isDestroyed = true;
+ 
+     if (this._updateTimeout !== null)
+@@ -63,18 +62,18 @@ var ArgosButton = new Lang.Class({
+       Mainloop.source_remove(this._cycleTimeout);
+ 
+     this.menu.removeAll();
+-  },
++  }
+ 
+-  update: function() {
++  update() {
+     if (this._updateTimeout !== null) {
+       Mainloop.source_remove(this._updateTimeout);
+       this._updateTimeout = null;
+     }
+ 
+     this._update();
+-  },
++  }
+ 
+-  _update: function() {
++  _update() {
+     if (this._updateRunning)
+       return;
+ 
+@@ -106,9 +105,9 @@ var ArgosButton = new Lang.Class({
+       log("Unable to execute file '" + this._file.get_basename() + "': " + error);
+       this._updateRunning = false;
+     }
+-  },
++  }
+ 
+-  _processOutput: function(output) {
++  _processOutput(output) {
+     let buttonLines = [];
+     let dropdownLines = [];
+ 
+diff --git argos@pew.worldwidemann.com/metadata.json argos@pew.worldwidemann.com/metadata.json
+index bafe390..722244c 100644
+--- argos@pew.worldwidemann.com/metadata.json
++++ argos@pew.worldwidemann.com/metadata.json
+@@ -12,6 +12,7 @@
+     "3.36",
+     "3.38",
+     "40",
+-    "41"
++    "41",
++    "42"
+   ]
+ }

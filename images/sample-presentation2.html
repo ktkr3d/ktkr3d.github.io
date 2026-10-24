@@ -1,0 +1,532 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Memorandum! | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="MarpMarkdown Presentation Ecosystem https:&#x2F;&#x2F;marp.app&#x2F;    How to write slidesSplit pages by horizontal ruler (---). It’s very simple! :satisfied: # Slide 1foobar---# Slide 2foobar   目次    見出し 箇条書き 画像">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Memorandum!">
+<meta property="og:url" content="http://example.com/images/sample-presentation2.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="MarpMarkdown Presentation Ecosystem https:&#x2F;&#x2F;marp.app&#x2F;    How to write slidesSplit pages by horizontal ruler (---). It’s very simple! :satisfied: # Slide 1foobar---# Slide 2foobar   目次    見出し 箇条書き 画像">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/avatar.png">
+<meta property="article:published_time" content="2026-10-24T02:57:34.742Z">
+<meta property="article:modified_time" content="2026-10-24T02:57:34.742Z">
+<meta property="article:author" content="ktkr3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://example.com/images/sample-presentation2.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Memorandum!',
+  isHighlightShrink: undefined,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">513</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">220</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Memorandum!</h1></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><p><img src="https://raw.githubusercontent.com/marp-team/marp/master/marp.png" alt="bg left:40% 80%"></p>
+<h1 id="Marp"><a href="#Marp" class="headerlink" title="Marp"></a><strong>Marp</strong></h1><p>Markdown Presentation Ecosystem</p>
+<p><a target="_blank" rel="noopener" href="https://marp.app/">https://marp.app/</a></p>
+<hr>
+<!-- paginate: true -->
+
+<h1 id="How-to-write-slides"><a href="#How-to-write-slides" class="headerlink" title="How to write slides"></a>How to write slides</h1><p>Split pages by horizontal ruler (<code>---</code>). It’s very simple! :satisfied:</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># Slide 1</span></span><br><span class="line"></span><br><span class="line">foobar</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section"># Slide 2</span></span><br><span class="line"></span><br><span class="line">foobar</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h1><p>
+
+<div style="line-height: 1.7em">
+<div style="display: inline-block; vertical-align: top; width: 33%;">
+<a href="#4">見出し</a><br>
+<a href="#5">箇条書き</a><br>
+<a href="#6">画像</a><br>
+<a href="#7">図形画像 (Draw.io)</a><br>
+<a href="#8">グラフ (Vega)</a><br>
+<a href="#9">地図 (Vega)</a><br>
+<a href="#10">画像レイアウト</a><br>
+<a href="#11">表</a><br>
+</div><div style="display: inline-block; vertical-align: top; width: 33%;">
+<a href="#12">文字修飾と引用</a><br>
+<a href="#13">絵文字</a><br>
+<a href="#14">チェックボックス</a><br>
+<a href="#15">数式</a><br>
+<a href="#16">コードブロック</a><br>
+<a href="#17">リンク</a><br>
+<a href="#18">注釈 (≒リンク)</a><br>
+<a href="#19">目次 (≒リンク)</a><br>
+</div><div style="display: inline-block; vertical-align: top; width: 33%;">
+<a href="#20">テーマ</a><br>
+<a href="#21">テーマのカスタマイズ</a><br>
+<a href="#22">ヘッダ、フッタ</a><br>
+<a href="#23">背景画像</a><br>
+<a href="#24">見出し幅の調整</a><br>
+<a href="#25">ページ番号非表示</a><br>
+<a href="#26">段組み(HTML)</a><br>
+</div>
+</div>
+
+
+<hr>
+<h1 id="見出し"><a href="#見出し" class="headerlink" title="見出し"></a>見出し</h1><h2 id="見出し2-見出し2"><a href="#見出し2-見出し2" class="headerlink" title="見出し2 ## 見出し2"></a>見出し2 <code>## 見出し2</code></h2><h3 id="見出し3-見出し3"><a href="#見出し3-見出し3" class="headerlink" title="見出し3 ### 見出し3"></a>見出し3 <code>### 見出し3</code></h3><h4 id="見出し4-見出し4"><a href="#見出し4-見出し4" class="headerlink" title="見出し4 #### 見出し4"></a>見出し4 <code>#### 見出し4</code></h4><h5 id="見出し5-見出し5"><a href="#見出し5-見出し5" class="headerlink" title="見出し5 ##### 見出し5"></a>見出し5 <code>##### 見出し5</code></h5><h6 id="見出し6-見出し6"><a href="#見出し6-見出し6" class="headerlink" title="見出し6 ###### 見出し6"></a>見出し6 <code>###### 見出し6</code></h6><p>####### 見出し7 <code>####### 見出し7</code> :warning: 見出しは6迄です</p>
+<hr>
+<h1 id="箇条書き"><a href="#箇条書き" class="headerlink" title="箇条書き"></a>箇条書き</h1><ul>
+<li>あ <code>- あ</code> <code>* あ</code> <code>+ あ</code></li>
+<li>い <code>- い</code></li>
+</ul>
+<ol>
+<li>か <code>1. か</code></li>
+<li>き <code>1. き</code><br>1.1 く <code>1.1 く</code> :warning: 自動で採番されません<br>1.1 け <code>1.1 け</code> :warning: 自動で採番されません<br>2.3 こ <code>2.3 こ</code> :bulb: 手動で指定できます</li>
+<li>さ <code>1. さ</code></li>
+</ol>
+<hr>
+<h1 id="画像"><a href="#画像" class="headerlink" title="画像"></a>画像</h1><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">ubuntudde.png</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./image/ubuntudde.png" alt="bg right:60% height:10cm drop-shadow:0,5px,10px,rgba(0,0,0,.4)"></p>
+<p>ドロップシャドウ</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[drop-shadow: </span></span><br><span class="line"><span class="section">  0,5px,</span></span><br><span class="line"><span class="section">  10px,</span></span><br><span class="line"><span class="section">  rgba(0,0,0,.4)]</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="図形画像-Draw-46-io"><a href="#図形画像-Draw-46-io" class="headerlink" title="図形画像 (Draw&#46;io)"></a>図形画像 (Draw&#46;io)</h1><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">sample.drawio.svg</span>)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>Visual Studio Code にDraw&#46;io Integration 拡張機能を導入</li>
+<li>拡張子<code>.drawio.svg</code> でファイル作成</li>
+<li>Visual Studio Code 上で描画</li>
+</ol>
+<p><img src="/./figure/sample.drawio.svg" alt="bg right:40% width:11cm drop-shadow:0,5px,10px,rgba(0,0,0,.4)"></p>
+<hr>
+<h1 id="グラフ-Vega"><a href="#グラフ-Vega" class="headerlink" title="グラフ (Vega)"></a>グラフ (Vega)</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](pie.vg.svg)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Visual Studio Code にVega Viewer 拡張機能を導入</li>
+<li>拡張子<code>.vg.json</code> でファイル作成</li>
+<li>Visual Studio Code 上で描画</li>
+<li>SVG 形式で保存</li>
+</ol>
+<p><img src="/./figure/pie.vg.svg" alt="bg right:40% width:10cm drop-shadow:0,5px,10px,rgba(0,0,0,.4)"></p>
+<hr>
+<h1 id="地図-Google-Charts-GeoChart"><a href="#地図-Google-Charts-GeoChart" class="headerlink" title="地図 (Google Charts - GeoChart)"></a>地図 (Google Charts - GeoChart)</h1><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">google-charts-geochart.svg</span>)</span><br></pre></td></tr></table></figure>
+
+<p>HexoからGoogle ChartsのGeoChartを利用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% googlecharts GeoChart %&#125;</span><br><span class="line">GeoChart</span><br><span class="line">&#123;&quot;region&quot;: &quot;JP&quot;&#125;</span><br><span class="line">&#x27;都道府県&#x27;, &#x27;数値&#x27;</span><br><span class="line">&#123;% endgooglecharts %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./figure/google-charts-geochart.svg" alt="bg right:50% width:10cm drop-shadow:0,5px,10px,rgba(0,0,0,.4)"></p>
+<hr>
+<h1 id="画像レイアウト"><a href="#画像レイアウト" class="headerlink" title="画像レイアウト"></a>画像レイアウト</h1><p><img src="/./figure/aws.drawio.svg" alt="bg 
+  right:50% 
+  height:13cm 
+  drop-shadow:0,5px,10px,rgba(0,0,0,.4)
+ "></p>
+<p>右側50%に画像</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">bg right:50%</span>](<span class="link">aws.drawio.svg</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="表"><a href="#表" class="headerlink" title="表"></a>表</h1><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">No.|Name|Value</span><br><span class="line">:-:|:-|-:</span><br><span class="line">1|a|1</span><br><span class="line">2|b|2</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">No.</th>
+<th align="left">Name</th>
+<th align="right">Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">a</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">b</td>
+<td align="right">2</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="文字修飾と引用"><a href="#文字修飾と引用" class="headerlink" title="文字修飾と引用"></a>文字修飾と引用</h1><p>標準 <code>標準</code></p>
+<p><em>強調</em> <code>*強調*</code> または <code>_強調_</code> :warning: 強調修飾されません<br><strong>強調</strong> <code>**強調**</code> または <code>__強調__</code> :bulb: 強調修飾されます</p>
+<p><del>訂正</del> <code>~~訂正~~</code></p>
+<blockquote>
+<p>引用 <code>&gt;引用</code> :warning: ダブルクォートは閉じません</p>
+</blockquote>
+<hr>
+<h1 id="絵文字"><a href="#絵文字" class="headerlink" title="絵文字"></a>絵文字</h1><p><a target="_blank" rel="noopener" href="https://www.webfx.com/tools/emoji-cheat-sheet/">https://www.webfx.com/tools/emoji-cheat-sheet/</a></p>
+<p>:smile: <code>:smile:</code> :bomb: <code>:bomb:</code> :icecream: <code>:icecream:</code> :triangular_flag_on_post: <code>:triangular_flag_on_post:</code></p>
+<p>:thumbsup: <code>:thumbsup:</code> :thumbsdown: <code>:thumbsdown:</code> :star: <code>:star:</code> :heart: <code>:heart:</code></p>
+<p>:o: <code>:o:</code> :x: <code>:x:</code> :heavy_check_mark: <code>:heavy_check_mark:</code></p>
+<p>:warning: <code>:warning:</code> :heavy_exclamation_mark: <code>:heavy_exclamation_mark:</code></p>
+<p>:bell:<code>:bell:  </code>:beetle:<code>:beetle:</code>:bulb:<code>:bulb:</code>:information_source:<code>:information_source:</code></p>
+<hr>
+<h1 id="チェックボックス"><a href="#チェックボックス" class="headerlink" title="チェックボックス"></a>チェックボックス</h1><p>☐ <code>&amp;#x2610;</code> またはコピー&amp;ペースト<br>☑ <code>&amp;#x2611;</code> またはコピー&amp;ペースト<br>☒ <code>&amp;#x2612;</code> またはコピー&amp;ペースト</p>
+<p>:black_square_button: <code>:black_square_button:</code> 絵文字<br>:white_check_mark: <code>:white_check_mark:</code> 絵文字<br>:ballot_box_with_check: <code>:ballot_box_with_check:</code> 絵文字</p>
+<ul>
+<li><input disabled="" type="checkbox"> オフ <code>- [ ] オフ</code> :warning: 画像化されません</li>
+<li><input checked="" disabled="" type="checkbox"> オン <code>- [x] オン</code> :warning: 画像化されません</li>
+</ul>
+<hr>
+<h1 id="数式"><a href="#数式" class="headerlink" title="数式"></a>数式</h1><p><a target="_blank" rel="noopener" href="https://katex.org/">https://katex.org/</a></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">f(x) = \frac&#123;1&#125;&#123;\sqrt&#123;2\pi\sigma^2&#125;&#125;\exp&#123;-\frac&#123;(x-\mu)^2&#125;&#123;2\sigma^2&#125;&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>f(x) &#x3D; \frac{1}{\sqrt{2\pi\sigma^2}}\exp{-\frac{(x-\mu)^2}{2\sigma^2}}<br>$$</p>
+<p><code>$ax^2+bx+c$</code> で $ax^2+bx+c$ のようにインライン表示</p>
+<hr>
+<h1 id="コードブロック"><a href="#コードブロック" class="headerlink" title="コードブロック"></a>コードブロック</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">  printf(&quot;hello, world\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">  printf(&quot;hello, world\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="リンク"><a href="#リンク" class="headerlink" title="リンク"></a>リンク</h1><ul>
+<li><p>外部リンク</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">外部サイトへのリンク</span>](<span class="link">https://ktkr3d.github.io/</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://ktkr3d.github.io/">外部サイトへのリンク</a></p>
+</li>
+<li><p>文書内リンク</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">スライド2へのリンク</span>](<span class="link">#2</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a href="#2">スライド2へのリンク</a></p>
+</li>
+</ul>
+<hr>
+<h1 id="注釈-≒リンク"><a href="#注釈-≒リンク" class="headerlink" title="注釈 (≒リンク)"></a>注釈 (≒リンク)</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">aaa[^1]</span><br><span class="line"></span><br><span class="line">[^1]: #2</span><br></pre></td></tr></table></figure>
+
+<p>aaa<a href="#2">^1</a> :bulb: これはスライド#2にリンク :warning: 間に空行が必要です</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bbb[^2]</span><br><span class="line"></span><br><span class="line">[^2]: https://ktkr3d.github.io/</span><br></pre></td></tr></table></figure>
+<p>bbb<a target="_blank" rel="noopener" href="https://ktkr3d.github.io/">^2</a> :bulb: これはURL にリンク :warning: 間に空行が必要です</p>
+<hr>
+<h1 id="目次-≒リンク"><a href="#目次-≒リンク" class="headerlink" title="目次 (≒リンク)"></a>目次 (≒リンク)</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. [見出し](#3)</span><br><span class="line">2. [箇条書き](#4)</span><br><span class="line">3. [画像](#5)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><a href="#3">見出し</a></li>
+<li><a href="#4">箇条書き</a></li>
+<li><a href="#5">画像</a></li>
+</ol>
+<p>:bulb: スライド番号でリンク</p>
+<hr>
+<h1 id="テーマ"><a href="#テーマ" class="headerlink" title="テーマ"></a>テーマ</h1><ul>
+<li>Marp Core built-in themes<br><a target="_blank" rel="noopener" href="https://github.com/marp-team/marp-core/tree/master/themes">https://github.com/marp-team/marp-core/tree/master/themes</a><ul>
+<li><code>theme: default</code>, <code>theme: gaia</code>, <code>theme: uncover</code></li>
+<li><code>size: 16:9</code>, <code>size: 4:3</code></li>
+</ul>
+</li>
+<li>Marpit - Theme CSS<br><a target="_blank" rel="noopener" href="https://marpit.marp.app/theme-css">https://marpit.marp.app/theme-css</a></li>
+</ul>
+<hr>
+<h1 id="テーマのカスタマイズ"><a href="#テーマのカスタマイズ" class="headerlink" title="テーマのカスタマイズ"></a>テーマのカスタマイズ</h1><ol>
+<li>カスタムテーマファイル<code>./themes/gaia-2.css</code> を作成</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* @theme gaia-2 */</span><br><span class="line">@import &#x27;gaia&#x27;;</span><br><span class="line">h1 &#123; color: #f00;&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>Marp for VS Code の設定画面<br>  Mardown &gt; Marp: Themes <code>./themes/gaia-2.css</code></p>
+</li>
+<li><p>Markdown でテーマを指定</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: gaia-2</span><br></pre></td></tr></table></figure>
+
+<hr>
+<!-- _header: 'Header content' -->
+<!-- _footer: 'Footer content' -->
+
+<h1 id="ヘッダ、フッタ"><a href="#ヘッダ、フッタ" class="headerlink" title="ヘッダ、フッタ"></a>ヘッダ、フッタ</h1><ul>
+<li>全ページ指定<br><code>header: &#39;Header content&#39;</code><br><code>footer: &#39;Footer content&#39;</code></li>
+<li>本ページ以降指定<br><code>&lt;!-- header: &#39;Header content&#39; --&gt;</code><br><code>&lt;!-- footer: &#39;Footer content&#39; --&gt;</code></li>
+<li>本ページのみ指定<br><code>&lt;!-- _header: &#39;Header content&#39; --&gt;</code><br><code>&lt;!-- _footer: &#39;Footer content&#39; --&gt;</code></li>
+</ul>
+<hr>
+<h1 id="背景画像"><a href="#背景画像" class="headerlink" title="背景画像"></a>背景画像</h1><p><img src="https://ktkr3d.github.io/images/travel.png" alt="bg vertical"><br><img src="https://ktkr3d.github.io/images/white.png" alt="bg"><br><img src="https://ktkr3d.github.io/images/white.png" alt="bg"><br><img src="https://ktkr3d.github.io/images/white.png" alt="bg"></p>
+<ul>
+<li>縦に並べる</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![bg vertical](https://ktkr3d.github.io/images/travel.png)</span><br><span class="line">![bg](https://ktkr3d.github.io/images/white.png)</span><br><span class="line">![bg](https://ktkr3d.github.io/images/white.png)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>横に並べる</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![bg](https://ktkr3d.github.io/images/travel.png)</span><br><span class="line">![bg](https://ktkr3d.github.io/images/white.png)</span><br><span class="line">![bg](https://ktkr3d.github.io/images/white.png)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="見出し幅の調整"><a href="#見出し幅の調整" class="headerlink" title="見出し幅の調整"></a>見出し幅の調整</h1><h1 id="短い見出し"><a href="#短い見出し" class="headerlink" title="短い見出し"></a>短い見出し</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 短い見出し</span><br></pre></td></tr></table></figure>
+
+<h1 id="長ーーーーーーーーーーーーーーーーーーーーい見出し"><a href="#長ーーーーーーーーーーーーーーーーーーーーい見出し" class="headerlink" title=" 長ーーーーーーーーーーーーーーーーーーーーい見出し"></a><!-- fit --> 長ーーーーーーーーーーーーーーーーーーーーい見出し</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># &lt;!-- fit --&gt; 長ーーーーーーーーーーーーーーーーーーーーい見出し</span><br></pre></td></tr></table></figure>
+<p>:bulb: スライド幅に合わせて文字サイズが調整されます</p>
+<hr>
+<h1 id="ページ番号非表示"><a href="#ページ番号非表示" class="headerlink" title="ページ番号非表示"></a>ページ番号非表示</h1><ol>
+<li>先頭で全体のページ番号を無効化</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line">paginate: false</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>2ページ目で2ページ目以降のページ番号を有効化</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- paginate: true --&gt;</span><br></pre></td></tr></table></figure>
+<p>:bulb:先頭ページはページ番号非表示 :warning: ページ番号の値は変わりません</p>
+<hr>
+<h1 id="段組み-HTML"><a href="#段組み-HTML" class="headerlink" title="段組み(HTML)"></a>段組み(HTML)</h1><ol>
+<li>Marp for VS Code の設定画面<br>  Mardown &gt; Marp: Enable HTML :white_check_mark: チェックする</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div style=&quot;display: inline-block; vertical-align: top; width: 50%;&quot;&gt;</span><br><span class="line">左の段組み&lt;br&gt;左の段組み</span><br><span class="line">&lt;/div&gt;&lt;div style=&quot;display: inline-block; vertical-align: top; width: 50%;&quot;&gt;</span><br><span class="line">右の段組み</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<div style="display: inline-block; vertical-align: top; width: 50%;">
+左の段組み<br>左の段組み
+</div><div style="display: inline-block; vertical-align: top; width: 50%;">
+右の段組み
+</div>
+
+<p> :warning: HTML タグの中でMarkdown 記法は使えません</p>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">513</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">220</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/19/2026-10-19-Noctalia-Ollama-Remote-Chat-Plugin/" title="Noctalia Ollama Remote Chat Plugin">Noctalia Ollama Remote Chat Plugin</a><time datetime="2026-10-18T19:15:43.000Z" title="Created 2026-10-19 04:15:43">2026-10-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/12/2026-10-12-Noctalia-Jellyfin-Browser/" title="Noctalia Jellyfin Browser">Noctalia Jellyfin Browser</a><time datetime="2026-10-11T22:15:03.000Z" title="Created 2026-10-12 07:15:03">2026-10-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/08/2026-10-08-Jellyfin-MPV-Shim/" title="Jellyfin MPV Shim">Jellyfin MPV Shim</a><time datetime="2026-10-08T05:27:02.000Z" title="Created 2026-10-08 14:27:02">2026-10-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/04/2026-10-04-Arch-Linux-Hyprland-Noctalia/" title="Arch Linux Hyprland Noctalia">Arch Linux Hyprland Noctalia</a><time datetime="2026-10-04T06:32:33.000Z" title="Created 2026-10-04 15:32:33">2026-10-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/25/2026-09-25-CachyOS-Hyprland-Noctalia/" title="CachyOS Hyprland Noctalia">CachyOS Hyprland Noctalia</a><time datetime="2026-09-24T19:51:02.000Z" title="Created 2026-09-25 04:51:02">2026-09-25</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>Categories</span><a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a></div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/3d/"><span class="card-category-list-name">3d</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/android/"><span class="card-category-list-name">android</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/application/"><span class="card-category-list-name">application</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/cms/"><span class="card-category-list-name">cms</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/conky/"><span class="card-category-list-name">conky</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/develop/"><span class="card-category-list-name">develop</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/dtv/"><span class="card-category-list-name">dtv</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/editor/"><span class="card-category-list-name">editor</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/noctalia/" style="font-size: 1.34em; color: #99a3b0">noctalia</a> <a href="/tags/fedora/" style="font-size: 1.34em; color: #99a3b0">fedora</a> <a href="/tags/utc/" style="font-size: 1.1em; color: #999">utc</a> <a href="/tags/raytrace/" style="font-size: 1.1em; color: #999">raytrace</a> <a href="/tags/flatpak/" style="font-size: 1.18em; color: #999ca1">flatpak</a> <a href="/tags/virt-manager/" style="font-size: 1.18em; color: #999ca1">virt-manager</a> <a href="/tags/ogre3d/" style="font-size: 1.18em; color: #999ca1">ogre3d</a> <a href="/tags/linux/" style="font-size: 1.18em; color: #999ca1">linux</a> <a href="/tags/vnc/" style="font-size: 1.1em; color: #999">vnc</a> <a href="/tags/gtk/" style="font-size: 1.1em; color: #999">gtk</a> <a href="/tags/oUF/" style="font-size: 1.1em; color: #999">oUF</a> <a href="/tags/Conky-HTC/" style="font-size: 1.1em; color: #999">Conky-HTC</a> <a href="/tags/gnu/" style="font-size: 1.1em; color: #999">gnu</a> <a href="/tags/conky/" style="font-size: 1.1em; color: #999">conky</a> <a href="/tags/marp/" style="font-size: 1.26em; color: #999fa8">marp</a> <a href="/tags/vscode/" style="font-size: 1.5em; color: #99a9bf">vscode</a> <a href="/tags/googlevr/" style="font-size: 1.1em; color: #999">googlevr</a> <a href="/tags/nagios/" style="font-size: 1.18em; color: #999ca1">nagios</a> <a href="/tags/kvm/" style="font-size: 1.18em; color: #999ca1">kvm</a> <a href="/tags/quickshell/" style="font-size: 1.1em; color: #999">quickshell</a> <a href="/tags/debian/" style="font-size: 1.1em; color: #999">debian</a> <a href="/tags/raspberrypi/" style="font-size: 1.42em; color: #99a6b7">raspberrypi</a> <a href="/tags/keepass/" style="font-size: 1.1em; color: #999">keepass</a> <a href="/tags/world-of-warcraft/" style="font-size: 1.1em; color: #999">world-of-warcraft</a> <a href="/tags/hyperv/" style="font-size: 1.1em; color: #999">hyperv</a> <a href="/tags/starship/" style="font-size: 1.18em; color: #999ca1">starship</a> <a href="/tags/pulseaudio/" style="font-size: 1.1em; color: #999">pulseaudio</a> <a href="/tags/usb/" style="font-size: 1.1em; color: #999">usb</a> <a href="/tags/libadwaita/" style="font-size: 1.1em; color: #999">libadwaita</a> <a href="/tags/fastfetch/" style="font-size: 1.18em; color: #999ca1">fastfetch</a> <a href="/tags/sheetui/" style="font-size: 1.1em; color: #999">sheetui</a> <a href="/tags/archlinux/" style="font-size: 1.42em; color: #99a6b7">archlinux</a> <a href="/tags/ubuntudde/" style="font-size: 1.1em; color: #999">ubuntudde</a> <a href="/tags/thunderbird/" style="font-size: 1.1em; color: #999">thunderbird</a> <a href="/tags/minibook-x/" style="font-size: 1.42em; color: #99a6b7">minibook-x</a> <a href="/tags/moc/" style="font-size: 1.18em; color: #999ca1">moc</a> <a href="/tags/freemind/" style="font-size: 1.18em; color: #999ca1">freemind</a> <a href="/tags/rdp/" style="font-size: 1.26em; color: #999fa8">rdp</a> <a href="/tags/redmine/" style="font-size: 1.18em; color: #999ca1">redmine</a> <a href="/tags/gnome-shell-extension/" style="font-size: 1.26em; color: #999fa8">gnome-shell-extension</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a></div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/10/">
+            <span class="card-archive-list-date">
+              October 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/09/">
+            <span class="card-archive-list-date">
+              September 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/08/">
+            <span class="card-archive-list-date">
+              August 2026
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/07/">
+            <span class="card-archive-list-date">
+              July 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/06/">
+            <span class="card-archive-list-date">
+              June 2026
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              May 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              April 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              January 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>
