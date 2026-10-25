@@ -5,7 +5,7 @@
     <link>http://example.com/</link>
     <language>en</language>
     <copyright>All rights reserved 2026, ktkr3d</copyright>
-    <lastBuildDate>Sat, 24 Oct 2026 23:58:25 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 02:21:53 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>http://example.com/icon.png</url>
@@ -29,7 +29,7 @@
     </item>
     <item>
       <title>Noctalia Ollama Remote Chat Plugin</title>
-      <link>http://example.com/2026/10/19/2026-10-19-Noctalia-Ollama-Remote-Chat-Plugin/</link>
+      <link>http://example.com/2026/10/19/Noctalia-Ollama-Remote-Chat-Plugin/</link>
       <description>
         <![CDATA[<p><img src="/images/ollama-remote-chat-thumbnail.webp"></p>
 <p>リモートのOllama APIに接続してチャットするNoctaliaプラグインを作成しました。</p>
@@ -45,7 +45,7 @@
     </item>
     <item>
       <title>Noctalia Jellyfin Browser</title>
-      <link>http://example.com/2026/10/12/2026-10-12-Noctalia-Jellyfin-Browser/</link>
+      <link>http://example.com/2026/10/12/Noctalia-Jellyfin-Browser/</link>
       <description>
         <![CDATA[<p><img src="/images/jellyfin-browser-thumbnail.webp"></p>
 <p>Jellyfinサーバに接続してライブラリをブラウズするNoctaliaプラグインを作成しました。MPVで再生します。</p>
@@ -59,7 +59,7 @@
     </item>
     <item>
       <title>Jellyfin MPV Shim</title>
-      <link>http://example.com/2026/10/08/2026-10-08-Jellyfin-MPV-Shim/</link>
+      <link>http://example.com/2026/10/08/Jellyfin-MPV-Shim/</link>
       <description>
         <![CDATA[<p><img src="/images/jellyfin-mpv-shim-git.png"></p>
 <p>Jellyfin MPV Shimは、高性能なメディアプレイヤー「MPV」をベースにした軽量な Jellyfin 用クライアントです。高速です。<br>最新版をインストールするためのPKGBUILDを作成しました。<br>また、MPRISで動画のカバーアートが表示されるようにMPRISスクリプトを配置しました。</p>
@@ -75,7 +75,7 @@
     </item>
     <item>
       <title>Arch Linux Hyprland Noctalia</title>
-      <link>http://example.com/2026/10/04/2026-10-04-Arch-Linux-Hyprland-Noctalia/</link>
+      <link>http://example.com/2026/10/04/Arch-Linux-Hyprland-Noctalia/</link>
       <description>
         <![CDATA[<p>Arch Linux &#x2F; Hyprlandの環境にNoctaliaを導入してみました。</p>
 <p><img src="/images/arch-hypr-noctalia.png"></p>]]>
@@ -88,7 +88,7 @@
     </item>
     <item>
       <title>CachyOS Hyprland Noctalia</title>
-      <link>http://example.com/2026/09/25/2026-09-25-CachyOS-Hyprland-Noctalia/</link>
+      <link>http://example.com/2026/09/25/CachyOS-Hyprland-Noctalia/</link>
       <description>
         <![CDATA[<p><img src="/images/cachyos-hyprland-noctalia.png"></p>
 <p>CachyOS Hyprland Noctaliaをインストールしました。<br>バーを右側に配置できてよいですね。<br>シェルはfishでした。パッケージ管理はshellyでした。<br>メイン環境にしてもよいかもしれないです。</p>
@@ -113,7 +113,7 @@
     </item>
     <item>
       <title>Hyper-Compressed Ocean</title>
-      <link>http://example.com/2026/09/21/2026-09-21-Hyper-Compressed-Ocean/</link>
+      <link>http://example.com/2026/09/21/Hyper-Compressed-Ocean/</link>
       <description>
         <![CDATA[<p><img src="https://wow.zamimg.com/uploads/screenshots/normal/852908-hyper-compressed-ocean.jpg"></p>
 <p><a href="https://www.wowhead.com/item=168016/hyper-compressed-ocean">Hyper-Compressed Ocean</a>（ハイパー圧縮オーシャン）は、オンラインゲーム『World of Warcraft（WoW）』に登場する、どこでも釣りができるようになる便利なおもちゃ（Toy）アイテムです。実績「<a href="https://www.wowhead.com/achievement=13502/secret-fish-and-where-to-find-them">Secret Fish and Where to Find Them</a>」を達成する（各地で隠し魚を30種類集める）ことで獲得できます。</p>]]>
@@ -124,7 +124,7 @@
     </item>
     <item>
       <title>slidev-addon-google-charts</title>
-      <link>http://example.com/2026/09/05/2026-09-05-slidev-addon-google-charts/</link>
+      <link>http://example.com/2026/09/05/slidev-addon-google-charts/</link>
       <description>
         <![CDATA[<p>Slidev用のGoogle Charts用アドオンを作成してみました。</p>
 <ul>
@@ -152,7 +152,7 @@
     </item>
     <item>
       <title>Slidev - Google Charts</title>
-      <link>http://example.com/2026/09/04/2026-09-04-Slidev-Google-Charts/</link>
+      <link>http://example.com/2026/09/04/Slidev-Google-Charts/</link>
       <description>
         <![CDATA[<p><img src="/images/slides_googlecharts-export_1.png"></p>
 <p>SlidevでGoogl Chartsのグラフをスライドにしてみました。</p>
@@ -165,7 +165,7 @@
     </item>
     <item>
       <title>GeoChart SVG image</title>
-      <link>http://example.com/2026/08/31/2026-08-31-GeoChart-SVG-image/</link>
+      <link>http://example.com/2026/08/31/GeoChart-SVG-image/</link>
       <description>
         <![CDATA[<p><img src="/images/geochart-world.svg"></p>
 <p>Google ChartsのGeoChartで作成した地図をSVGファイル化してみます。</p>
@@ -178,7 +178,7 @@
     </item>
     <item>
       <title>Quickshell automatic rebuild</title>
-      <link>http://example.com/2026/08/27/2026-08-27-quickshell-automatic-rebuild/</link>
+      <link>http://example.com/2026/08/27/quickshell-automatic-rebuild/</link>
       <description>
         <![CDATA[<p>Qt6を最新化したらquickshellが起動しなくなりました。quickshellとQt6の整合性が崩れたことが原因なのでQt6の更新と連動してquickshellをリビルドするようにしてみました。</p>]]>
       </description>
@@ -189,7 +189,7 @@
     </item>
     <item>
       <title>WoW OnUseGear Addon</title>
-      <link>http://example.com/2026/08/15/2026-08-15-WoW-OnUseGear-Addon/</link>
+      <link>http://example.com/2026/08/15/WoW-OnUseGear-Addon/</link>
       <description>
         <![CDATA[<p><img src="/images/onusegear.png"><br><a href="https://github.com/ktkr3d/OnUseGear">https://github.com/ktkr3d/OnUseGear</a></p>
 <p>装備しているアイテムの中で使用(<code>Use</code>)できるものをアクションボタン化するアドオンを作成しました。<br>対象はトリンケットだけではなく、武器や防具で使用できるものを含めて自動的に列挙します。</p>]]>
@@ -201,7 +201,7 @@
     </item>
     <item>
       <title>SSF</title>
-      <link>http://example.com/2026/08/12/2026-08-12-SSF/</link>
+      <link>http://example.com/2026/08/12/SSF/</link>
       <description>
         <![CDATA[<p><img src="/images/vf2_keyassign.png"><br>SSFでセガサターンのゲームを遊んでみました。</p>]]>
       </description>
@@ -212,7 +212,7 @@
     </item>
     <item>
       <title>WoW Keybinding</title>
-      <link>http://example.com/2026/08/11/2026-08-11-WoW-Keybinding/</link>
+      <link>http://example.com/2026/08/11/WoW-Keybinding/</link>
       <description>
         <![CDATA[<p><img src="/images/wow_keybinding.png"><br>Bellularのキーバインドガイドが新しくなっていたので適用してみました。各クラス&#x2F;スペックのおすすめキーバインドを取り込むことができます。<br>また、各クラス&#x2F;スペック間で統一されたキーバインドを実現できます。例えば、防御強化系は<kbd>Z</kbd>、移動加速系は<kbd>X</kbd>、妨害系は<kbd>C</kbd>、インタラプト系は<kbd>V</kbd>、ヒール系は<kbd>Ctrl</kbd>+<kbd>1</kbd>、等。</p>
 <ul>
@@ -226,7 +226,7 @@
     </item>
     <item>
       <title>oUF MyLayout Addon v0.3.0</title>
-      <link>http://example.com/2026/08/09/2026-08-09-oUF-MyLayout-Addon-v0-3-0/</link>
+      <link>http://example.com/2026/08/09/oUF-MyLayout-Addon-v0-3-0/</link>
       <description>
         <![CDATA[<p><img src="/images/ouf_mylayout_v0.3.0.jpg"></p>
 <p><a]]>
@@ -238,7 +238,7 @@
     </item>
     <item>
       <title>Linux Cluster Monitor</title>
-      <link>http://example.com/2026/08/08/2026-08-08-Linux-Cluster-Monitor/</link>
+      <link>http://example.com/2026/08/08/Linux-Cluster-Monitor/</link>
       <description>
         <![CDATA[<p><img src="/images/linux_cluster_monitor.png"></p>
 <p>自宅のLinux PCのシステム情報をfastfetchを使って収集して表示するダッシュボードを作ってみました。</p>]]>
@@ -249,7 +249,7 @@
     </item>
     <item>
       <title>Antigravity IDE</title>
-      <link>http://example.com/2026/07/31/2026-07-31-Antigravity-IDE/</link>
+      <link>http://example.com/2026/07/31/Antigravity-IDE/</link>
       <description>
         <![CDATA[<p><img src="/images/antigravity_ide.png"><br><a href="https://antigravity.google/product/antigravity-ide">https://antigravity.google/product/antigravity-ide</a><br>Visual Studio CodeでGemini Code Assistを利用してきましたが、Visual Studio Codeの個人向けGemini Code Assistは2026年6月18日をもって提供を終了（リクエスト処理を停止）しました。<br>Visual Studio CodeからフォークされているAntigravity IDEでGeminiを利用してみました。<br>例として、Starshipのプロンプトシミュレータを作ってみました。</p>]]>
       </description>
@@ -261,7 +261,7 @@
     </item>
     <item>
       <title>hypr-rdp</title>
-      <link>http://example.com/2026/06/30/2026-06-30-hypr-rdp/</link>
+      <link>http://example.com/2026/06/30/hypr-rdp/</link>
       <description>
         <![CDATA[<p><img src="/images/hypr-rdp.png"></p>
 <p>hypr-rdpを使ってヘッドレスのHyprland環境にWindowsとLinuxから接続してみました。<br><a href="https://github.com/MuNeNiCK/hypr-rdp">https://github.com/MuNeNiCK/hypr-rdp</a><br><a href="https://www.munenick.me/blog/hypr-rdp/">https://www.munenick.me/blog/hypr-rdp/</a></p>]]>
@@ -273,7 +273,7 @@
     </item>
     <item>
       <title>hyprKCS</title>
-      <link>http://example.com/2026/06/20/2026-06-20-hyprKCS/</link>
+      <link>http://example.com/2026/06/20/hyprKCS/</link>
       <description>
         <![CDATA[<p><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnsckinwi9jksfp0wneap.png"></p>
 <p>Hyprland用キーバインドマネージャhyprKCSを使ってみました。<br>お気に入りフィルタがあるので、便利だけれど忘れてしまいがちなキーバインドを簡単に見つけられます。</p>
@@ -312,7 +312,7 @@
     </item>
     <item>
       <title>Hyprland 0.55.3</title>
-      <link>http://example.com/2026/06/10/2026-06-10-Hyprland-0-55-3/</link>
+      <link>http://example.com/2026/06/10/Hyprland-0-55-3/</link>
       <description>
         <![CDATA[<p>Hyprland 0.55.3をインストールしました。<br>現在の構成は以下の通り。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pacman -Q hyprland quickshell caelestia-cli caelestia-shell</span><br><span class="line">hyprland 0.55.3-1</span><br><span class="line">quickshell-git 0.2.0.r148.g8db8ca1-1</span><br><span class="line">caelestia-cli 1.0.8-1</span><br><span class="line">caelestia-shell 2.0.2-1</span><br></pre></td></tr></table></figure>
