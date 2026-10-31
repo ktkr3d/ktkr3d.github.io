@@ -5,7 +5,7 @@
     <link>http://example.com/</link>
     <language>en</language>
     <copyright>All rights reserved 2026, ktkr3d</copyright>
-    <lastBuildDate>Wed, 28 Oct 2026 14:12:22 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 11:21:55 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>http://example.com/icon.png</url>
@@ -13,6 +13,19 @@
       <link>http://example.com/</link>
     </image>
     <atom:link href="http://example.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>World of Warcraft Forever</title>
+      <link>http://example.com/2026/10/31/World-of-Warcraft-Forever/</link>
+      <description>
+        <![CDATA[<p><img src="/images/camelot-logo-gamepage.png"></p>
+<p>2026&#x2F;11&#x2F;4にWorld of Warcraft Foreverが開始です。<br>ベータに参加していなかったのでこれから準備します。</p>
+<p><a href="https://worldofwarcraft.blizzard.com/ja-jp/forever">https://worldofwarcraft.blizzard.com/ja-jp/forever</a></p>
+<p>Foreverの地図(2D&#x2F;3D)<br><a href="https://atlas.standards.gg/">https://atlas.standards.gg/</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <pubDate>Sat, 31 Oct 2026 10:41:41 GMT</pubDate>
+    </item>
     <item>
       <title>Stability Matrix - ComfyUI</title>
       <link>http://example.com/2026/10/28/Stability-Matrix-ComfyUI/</link>
@@ -284,45 +297,6 @@
       <category domain="http://example.com/tags/hyprland/">hyprland</category>
       <category domain="http://example.com/tags/rdp/">rdp</category>
       <pubDate>Tue, 30 Jun 2026 13:53:48 GMT</pubDate>
-    </item>
-    <item>
-      <title>hyprKCS</title>
-      <link>http://example.com/2026/06/20/hyprKCS/</link>
-      <description>
-        <![CDATA[<p><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnsckinwi9jksfp0wneap.png"></p>
-<p>Hyprland用キーバインドマネージャhyprKCSを使ってみました。<br>お気に入りフィルタがあるので、便利だけれど忘れてしまいがちなキーバインドを簡単に見つけられます。</p>
-<p><a href="https://github.com/kosa12/hyprKCS">https://github.com/kosa12/hyprKCS</a></p>
-<h4 id="2026-06-29"><a href="#2026-06-29" class="headerlink" title="2026-06-29"></a>2026-06-29</h4><ul>
-<li><p>hyprland.luaに対応しているソフト調査</p>
-<table>
-<thead>
-<tr>
-<th align="left">ソフト</th>
-<th align="left">hyprland.lua対応状況</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="https://github.com/kosa12/hyprKCS">hyprKCS</a></td>
-<td align="left">×</td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/tidynest/hypr-keybind-manager">hypr-keybind-manager</a></td>
-<td align="left">×</td>
-</tr>
-<tr>
-<td align="left"><a href="https://github.com/BlueManCZ/hyprmod">hyprmod</a></td>
-<td align="left">○ 多機能。</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="2026-06-28"><a href="#2026-06-28" class="headerlink" title="2026-06-28"></a>2026-06-28</h4><ul>
-<li>hyprland.lua対応のfeatureリクエスト<br>  <a href="https://github.com/kosa12/hyprKCS/issues/77">https://github.com/kosa12/hyprKCS/issues/77</a></li>
-</ul>]]>
-      </description>
-      <author>ktkr3d</author>
-      <category domain="http://example.com/tags/hyprland/">hyprland</category>
-      <pubDate>Sat, 20 Jun 2026 11:43:08 GMT</pubDate>
     </item>
   </channel>
 </rss>
