@@ -5,7 +5,7 @@
     <link>http://example.com/</link>
     <language>en</language>
     <copyright>All rights reserved 2026, ktkr3d</copyright>
-    <lastBuildDate>Sat, 31 Oct 2026 11:21:55 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 03:22:44 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>http://example.com/icon.png</url>
@@ -13,6 +13,16 @@
       <link>http://example.com/</link>
     </image>
     <atom:link href="http://example.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>WoW AutoGroupChat Addon</title>
+      <link>http://example.com/2026/11/03/WoW-AutoGroupChat-Addon/</link>
+      <description>
+        <![CDATA[<p>チャットモードをグループチャットに自動で切り替えるWorld of Warcraftアドオンを作成しました。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <pubDate>Mon, 02 Nov 2026 23:48:03 GMT</pubDate>
+    </item>
     <item>
       <title>World of Warcraft Forever</title>
       <link>http://example.com/2026/10/31/World-of-Warcraft-Forever/</link>
@@ -285,18 +295,6 @@
       <category domain="http://example.com/tags/gemini/">gemini</category>
       <category domain="http://example.com/tags/antigravity/">antigravity</category>
       <pubDate>Thu, 30 Jul 2026 16:54:16 GMT</pubDate>
-    </item>
-    <item>
-      <title>hypr-rdp</title>
-      <link>http://example.com/2026/06/30/hypr-rdp/</link>
-      <description>
-        <![CDATA[<p><img src="/images/hypr-rdp.png"></p>
-<p>hypr-rdpを使ってヘッドレスのHyprland環境にWindowsとLinuxから接続してみました。<br><a href="https://github.com/MuNeNiCK/hypr-rdp">https://github.com/MuNeNiCK/hypr-rdp</a><br><a href="https://www.munenick.me/blog/hypr-rdp/">https://www.munenick.me/blog/hypr-rdp/</a></p>]]>
-      </description>
-      <author>ktkr3d</author>
-      <category domain="http://example.com/tags/hyprland/">hyprland</category>
-      <category domain="http://example.com/tags/rdp/">rdp</category>
-      <pubDate>Tue, 30 Jun 2026 13:53:48 GMT</pubDate>
     </item>
   </channel>
 </rss>
