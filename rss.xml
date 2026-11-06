@@ -5,7 +5,7 @@
     <link>http://example.com/</link>
     <language>en</language>
     <copyright>All rights reserved 2026, ktkr3d</copyright>
-    <lastBuildDate>Tue, 03 Nov 2026 03:22:44 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 04:11:27 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>http://example.com/icon.png</url>
@@ -17,7 +17,8 @@
       <title>WoW AutoGroupChat Addon</title>
       <link>http://example.com/2026/11/03/WoW-AutoGroupChat-Addon/</link>
       <description>
-        <![CDATA[<p>チャットモードをグループチャットに自動で切り替えるWorld of Warcraftアドオンを作成しました。</p>]]>
+        <![CDATA[<p>チャットモードをグループチャットに自動で切り替えるWorld of Warcraftアドオンを作成しました。</p>
+<p><a href="https://github.com/ktkr3d/AutoGroupChat">https://github.com/ktkr3d/AutoGroupChat</a></p>]]>
       </description>
       <author>ktkr3d</author>
       <category domain="http://example.com/tags/wow/">wow</category>
@@ -28,7 +29,7 @@
       <link>http://example.com/2026/10/31/World-of-Warcraft-Forever/</link>
       <description>
         <![CDATA[<p><img src="/images/camelot-logo-gamepage.png"></p>
-<p>2026&#x2F;11&#x2F;4にWorld of Warcraft Foreverが開始です。<br>ベータに参加していなかったのでこれから準備します。</p>
+<p>日本時間2026&#x2F;11&#x2F;5 8:00AMにWorld of Warcraft Foreverが開始です。<br>ベータに参加していなかったのでこれから準備します。</p>
 <p><a href="https://worldofwarcraft.blizzard.com/ja-jp/forever">https://worldofwarcraft.blizzard.com/ja-jp/forever</a></p>
 <p>Foreverの地図(2D&#x2F;3D)<br><a href="https://atlas.standards.gg/">https://atlas.standards.gg/</a></p>]]>
       </description>
