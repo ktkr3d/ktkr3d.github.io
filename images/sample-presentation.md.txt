@@ -1,0 +1,481 @@
+---
+theme: gaia
+_class: lead
+paginate: false
+backgroundColor: #fff
+marp: true
+backgroundImage: url('https://marp.app/assets/hero-background.jpg')
+---
+
+
+
+![bg left:40% 80%](https://raw.githubusercontent.com/marp-team/marp/master/marp.png)
+
+# **Marp**
+
+Markdown Presentation Ecosystem
+
+https://marp.app/
+
+
+---
+
+<!-- paginate: true -->
+
+
+# How to write slides
+
+Split pages by horizontal ruler (`---`). It's very simple! :satisfied:
+
+```markdown
+# Slide 1
+
+foobar
+
+---
+
+# Slide 2
+
+foobar
+```
+
+---
+
+# 目次
+
+<p>
+
+<div style="line-height: 1.7em">
+<div style="display: inline-block; vertical-align: top; width: 33%;">
+<a href="#4">見出し</a><br>
+<a href="#5">箇条書き</a><br>
+<a href="#6">画像</a><br>
+<a href="#7">図形画像 (Draw.io)</a><br>
+<a href="#8">グラフ (Vega)</a><br>
+<a href="#9">地図 (Vega)</a><br>
+<a href="#10">画像レイアウト</a><br>
+<a href="#11">表</a><br>
+</div><div style="display: inline-block; vertical-align: top; width: 33%;">
+<a href="#12">文字修飾と引用</a><br>
+<a href="#13">絵文字</a><br>
+<a href="#14">チェックボックス</a><br>
+<a href="#15">数式</a><br>
+<a href="#16">コードブロック</a><br>
+<a href="#17">リンク</a><br>
+<a href="#18">注釈 (≒リンク)</a><br>
+<a href="#19">目次 (≒リンク)</a><br>
+</div><div style="display: inline-block; vertical-align: top; width: 33%;">
+<a href="#20">テーマ</a><br>
+<a href="#21">テーマのカスタマイズ</a><br>
+<a href="#22">ヘッダ、フッタ</a><br>
+<a href="#23">背景画像</a><br>
+<a href="#24">見出し幅の調整</a><br>
+<a href="#25">ページ番号非表示</a><br>
+<a href="#26">段組み(HTML)</a><br>
+</div>
+</div>
+
+
+---
+
+# 見出し
+
+## 見出し2 `## 見出し2`
+### 見出し3 `### 見出し3`
+#### 見出し4 `#### 見出し4`
+##### 見出し5 `##### 見出し5`
+###### 見出し6 `###### 見出し6` 
+####### 見出し7 `####### 見出し7` :warning: 見出しは6迄です
+
+---
+
+# 箇条書き
+
+- あ `- あ` `* あ` `+ あ`
+- い `- い`
+
+1. か `1. か`
+1. き `1. き`
+1.1 く `1.1 く` :warning: 自動で採番されません
+1.1 け `1.1 け` :warning: 自動で採番されません
+2.3 こ `2.3 こ` :bulb: 手動で指定できます
+1. さ `1. さ`
+
+---
+
+# 画像
+
+```markdown
+![](ubuntudde.png)
+```
+
+![bg right:60% height:10cm drop-shadow:0,5px,10px,rgba(0,0,0,.4)](./image/ubuntudde.png)
+
+- ドロップシャドウ オプション
+  ```
+  [drop-shadow: 
+    0,5px,
+    10px,
+    rgba(0,0,0,.4)]
+  ```
+
+---
+
+# 図形画像 (Draw&#46;io)
+
+```markdown
+![](sample.drawio.svg)
+```
+
+1. Visual Studio Code にDraw&#46;io Integration 拡張機能を導入
+2. 拡張子`.drawio.svg` でファイル作成
+3. Visual Studio Code 上で描画
+
+![bg right:40% width:11cm drop-shadow:0,5px,10px,rgba(0,0,0,.4)](./figure/sample.drawio.svg)
+
+
+---
+
+# グラフ (Vega)
+
+```
+![](pie.vg.svg)
+```
+1. Visual Studio Code にVega Viewer 拡張機能を導入
+2. 拡張子`.vg.json` でファイル作成
+3. Visual Studio Code 上で描画
+4. SVG 形式で保存
+
+![bg right:40% width:10cm drop-shadow:0,5px,10px,rgba(0,0,0,.4)](./figure/pie.vg.svg)
+
+---
+
+# 地図 (Vega)
+
+```
+![](zoomable-world-map.vg.svg)
+```
+- 入力はTopoJSON データ
+- 日本は以下の設定で投影
+  ```
+  "projection": {
+    "type": "mercator",
+    "scale": 1000,
+    "rotate": [-135, 0, 0],
+    "center": [0, 35],
+    "translate": [256, 256]
+  },
+  ```
+![bg right:50% width:10cm drop-shadow:0,5px,10px,rgba(0,0,0,.4)](./figure/zoomable-world-map.vg.svg)
+
+---
+
+# 画像レイアウト
+
+![bg 
+  right:50% 
+  height:13cm 
+  drop-shadow:0,5px,10px,rgba(0,0,0,.4)
+ ](./figure/aws.drawio.svg)
+
+右側50%に画像
+
+```markdown
+![bg right:50%](aws.drawio.svg)
+```
+
+
+---
+
+# 表
+
+```markdown
+No.|Name|Value
+:-:|:-|-:
+1|a|1
+2|b|2
+```
+
+No.|Name|Value
+:-:|:-|-:
+1|a|1
+2|b|2
+
+---
+
+# 文字修飾と引用
+
+標準 `標準`
+
+*強調* `*強調*` または `_強調_` :warning: 強調修飾されません
+**強調** `**強調**` または `__強調__` :bulb: 強調修飾されます
+
+~~訂正~~ `~~訂正~~`
+
+> 引用 `>引用` :warning: ダブルクォートは閉じません
+
+---
+
+# 絵文字
+
+https://www.webfx.com/tools/emoji-cheat-sheet/
+
+:smile: `:smile:` :bomb: `:bomb:` :icecream: `:icecream:` :triangular_flag_on_post: `:triangular_flag_on_post:`
+
+:thumbsup: `:thumbsup:` :thumbsdown: `:thumbsdown:` :star: `:star:` :heart: `:heart:`
+
+:o: `:o:` :x: `:x:` :heavy_check_mark: `:heavy_check_mark:`
+
+:warning: `:warning:` :heavy_exclamation_mark: `:heavy_exclamation_mark:`
+
+
+:bell:`:bell:  `:beetle:`:beetle:`:bulb:`:bulb:`:information_source:`:information_source:`
+
+---
+
+# チェックボックス
+
+☐ `&#x2610;` またはコピー&ペースト
+☑ `&#x2611;` またはコピー&ペースト
+☒ `&#x2612;` またはコピー&ペースト
+
+:black_square_button: `:black_square_button:` 絵文字
+:white_check_mark: `:white_check_mark:` 絵文字
+:ballot_box_with_check: `:ballot_box_with_check:` 絵文字
+
+- [ ] オフ `- [ ] オフ` :warning: 画像化されません
+- [x] オン `- [x] オン` :warning: 画像化されません
+
+
+---
+
+# 数式
+
+https://katex.org/
+
+```markdown
+$$
+f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
+```
+
+$$
+f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
+
+
+`$ax^2+bx+c$` で $ax^2+bx+c$ のようにインライン表示
+
+---
+
+# コードブロック
+
+````
+```
+#include <stdio.h>
+main()
+{
+  printf("hello, world\n");
+}
+```
+````
+
+```
+#include <stdio.h>
+main()
+{
+  printf("hello, world\n");
+}
+```
+
+---
+
+# リンク
+
+- 外部リンク
+
+  ```markdown
+  [外部サイトへのリンク](https://ktkr3d.github.io/)
+  ```
+
+  [外部サイトへのリンク](https://ktkr3d.github.io/)
+
+
+- 文書内リンク
+
+  ```markdown
+  [スライド2へのリンク](#2)
+  ```
+
+  [スライド2へのリンク](#2)
+
+---
+
+# 注釈 (≒リンク)
+
+```
+aaa[^1]
+
+[^1]: #2
+```
+
+aaa[^1] :bulb: これはスライド#2にリンク :warning: 間に空行が必要です
+
+[^1]: #2
+
+```
+bbb[^2]
+
+[^2]: https://ktkr3d.github.io/
+```
+bbb[^2] :bulb: これはURL にリンク :warning: 間に空行が必要です
+
+[^2]: https://ktkr3d.github.io/
+
+---
+
+# 目次 (≒リンク)
+
+```
+1. [見出し](#3)
+2. [箇条書き](#4)
+3. [画像](#5)
+```
+
+1. [見出し](#3)
+2. [箇条書き](#4)
+3. [画像](#5)
+
+:bulb: スライド番号でリンク
+
+---
+
+# テーマ
+
+- Marp Core built-in themes
+  https://github.com/marp-team/marp-core/tree/master/themes
+  - `theme: default`, `theme: gaia`, `theme: uncover`
+  - `size: 16:9`, `size: 4:3`
+- Marpit - Theme CSS
+  https://marpit.marp.app/theme-css
+
+---
+
+# テーマのカスタマイズ
+
+1. カスタムテーマファイル`./themes/gaia-2.css` を作成
+
+```
+/* @theme gaia-2 */
+@import 'gaia';
+h1 { color: #f00;}
+```
+
+2. Marp for VS Code の設定画面
+  Mardown > Marp: Themes `./themes/gaia-2.css`
+
+3. Markdown でテーマを指定
+
+````
+theme: gaia-2
+````
+
+---
+
+<!-- _header: 'Header content' -->
+<!-- _footer: 'Footer content' -->
+
+# ヘッダ、フッタ
+
+- 全ページ指定
+  `header: 'Header content'`
+  `footer: 'Footer content'`
+- 本ページ以降指定
+  `<!-- header: 'Header content' -->`
+  `<!-- footer: 'Footer content' -->`
+- 本ページのみ指定
+  `<!-- _header: 'Header content' -->`
+  `<!-- _footer: 'Footer content' -->`
+
+---
+
+# 背景画像
+
+![bg vertical](https://ktkr3d.github.io/images/travel.png)
+![bg](https://ktkr3d.github.io/images/white.png)
+![bg](https://ktkr3d.github.io/images/white.png)
+![bg](https://ktkr3d.github.io/images/white.png)
+
+- 縦に並べる
+
+```
+![bg vertical](https://ktkr3d.github.io/images/travel.png)
+![bg](https://ktkr3d.github.io/images/white.png)
+![bg](https://ktkr3d.github.io/images/white.png)
+```
+
+- 横に並べる
+
+```
+![bg](https://ktkr3d.github.io/images/travel.png)
+![bg](https://ktkr3d.github.io/images/white.png)
+![bg](https://ktkr3d.github.io/images/white.png)
+```
+
+---
+
+# 見出し幅の調整
+
+# 短い見出し
+
+```
+# 短い見出し
+```
+
+# <!-- fit --> 長ーーーーーーーーーーーーーーーーーーーーい見出し
+
+```
+# <!-- fit --> 長ーーーーーーーーーーーーーーーーーーーーい見出し
+```
+:bulb: スライド幅に合わせて文字サイズが調整されます
+
+---
+
+# ページ番号非表示
+
+1. 先頭で全体のページ番号を無効化
+````
+```
+paginate: false
+```
+````
+
+2. 2ページ目で2ページ目以降のページ番号を有効化
+
+```
+<!-- paginate: true -->
+```
+:bulb:先頭ページはページ番号非表示 :warning: ページ番号の値は変わりません
+
+---
+
+# 段組み(HTML)
+
+1. Marp for VS Code の設定画面
+  Mardown > Marp: Enable HTML :white_check_mark: チェックする
+
+```
+<div style="display: inline-block; vertical-align: top; width: 50%;">
+左の段組み<br>左の段組み
+</div><div style="display: inline-block; vertical-align: top; width: 50%;">
+右の段組み
+</div>
+```
+
+<div style="display: inline-block; vertical-align: top; width: 50%;">
+左の段組み<br>左の段組み
+</div><div style="display: inline-block; vertical-align: top; width: 50%;">
+右の段組み
+</div>
+
+ :warning: HTML タグの中でMarkdown 記法は使えません

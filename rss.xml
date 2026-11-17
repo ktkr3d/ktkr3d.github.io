@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memorandum!</title>
+    <link>http://example.com/</link>
+    <language>en</language>
+    <copyright>All rights reserved 2026, ktkr3d</copyright>
+    <lastBuildDate>Tue, 17 Nov 2026 12:08:24 GMT</lastBuildDate>
+    <generator>Hexo</generator>
+    <image>
+      <url>http://example.com/icon.png</url>
+      <title>Memorandum!</title>
+      <link>http://example.com/</link>
+    </image>
+    <atom:link href="http://example.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Syncthing</title>
+      <link>http://example.com/2026/11/17/Syncthing/</link>
+      <description>
+        <![CDATA[<p><img src="https://syncthing.net/img/logo-horizontal.svg"></p>
+<p>Syncthingは、中央のサーバーを介さず、デバイス同士を直接接続してファイルをリアルタイムに自動同期する、無料のオープンソース・P2P（ピアツーピア）ファイル同期ソフトウェアです。</p>
+<p><a href="https://syncthing.net/">https://syncthing.net/</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/syncthing/">syncthing</category>
+      <pubDate>Tue, 17 Nov 2026 11:45:42 GMT</pubDate>
+    </item>
+    <item>
+      <title>WoW AutoGroupChat Addon</title>
+      <link>http://example.com/2026/11/03/WoW-AutoGroupChat-Addon/</link>
+      <description>
+        <![CDATA[<p>チャットモードをグループチャットに自動で切り替えるWorld of Warcraftアドオンを作成しました。</p>
+<p><a href="https://github.com/ktkr3d/AutoGroupChat">https://github.com/ktkr3d/AutoGroupChat</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <pubDate>Mon, 02 Nov 2026 23:48:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>World of Warcraft Forever</title>
+      <link>http://example.com/2026/10/31/World-of-Warcraft-Forever/</link>
+      <description>
+        <![CDATA[<p><img src="/images/camelot-logo-gamepage.png"></p>
+<p>日本時間2026&#x2F;11&#x2F;5 8:00AMにWorld of Warcraft Foreverが開始です。<br>ベータに参加していなかったのでこれから準備します。</p>
+<p><a href="https://worldofwarcraft.blizzard.com/ja-jp/forever">https://worldofwarcraft.blizzard.com/ja-jp/forever</a></p>
+<p>Foreverの地図(2D&#x2F;3D)<br><a href="https://atlas.standards.gg/">https://atlas.standards.gg/</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <pubDate>Sat, 31 Oct 2026 10:41:41 GMT</pubDate>
+    </item>
+    <item>
+      <title>Stability Matrix - ComfyUI</title>
+      <link>http://example.com/2026/10/28/Stability-Matrix-ComfyUI/</link>
+      <description>
+        <![CDATA[<p><img src="/images/ComfyUI_00001_.png"></p>
+<p>ComfyUIで画像を生成してみました。</p>
+<p><a href="https://github.com/LykosAI/StabilityMatrix">https://github.com/LykosAI/StabilityMatrix</a><br><a href="https://github.com/Comfy-Org/ComfyUI">https://github.com/Comfy-Org/ComfyUI</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/ai/">ai</category>
+      <category domain="http://example.com/tags/stability-matrix/">stability_matrix</category>
+      <category domain="http://example.com/tags/comfyui/">comfyui</category>
+      <pubDate>Tue, 27 Oct 2026 15:46:08 GMT</pubDate>
+    </item>
+    <item>
+      <title>Stability Matrix - WebUI reForge</title>
+      <link>http://example.com/2026/10/25/Stability-Matrix-WebUI-reForge/</link>
+      <description>
+        <![CDATA[<p><img src="/images/black_kitten.png"></p>
+<p>生成AIで画像を生成してみました。</p>
+<p><a href="https://github.com/LykosAI/StabilityMatrix">https://github.com/LykosAI/StabilityMatrix</a><br><a href="https://github.com/Panchovix/stable-diffusion-webui-reForge">https://github.com/Panchovix/stable-diffusion-webui-reForge</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/ai/">ai</category>
+      <category domain="http://example.com/tags/stability-matrix/">stability_matrix</category>
+      <category domain="http://example.com/tags/webui-reforge/">webui_reforge</category>
+      <pubDate>Sat, 24 Oct 2026 20:39:29 GMT</pubDate>
+    </item>
+    <item>
+      <title>Noctalia Ollama Remote Chat Plugin</title>
+      <link>http://example.com/2026/10/19/Noctalia-Ollama-Remote-Chat-Plugin/</link>
+      <description>
+        <![CDATA[<p><img src="/images/ollama-remote-chat-thumbnail.webp"></p>
+<p>リモートのOllama APIに接続してチャットするNoctaliaプラグインを作成しました。</p>
+<p><img src="/images/ollama_remote_chat.png"></p>
+<p><img src="/images/ollama_remote_chat_select_model.png"></p>
+<p>利用可能なモデルを選択できます。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/noctalia/">noctalia</category>
+      <category domain="http://example.com/tags/ai/">ai</category>
+      <category domain="http://example.com/tags/ollama/">ollama</category>
+      <pubDate>Sun, 18 Oct 2026 19:15:43 GMT</pubDate>
+    </item>
+    <item>
+      <title>Noctalia Jellyfin Browser</title>
+      <link>http://example.com/2026/10/12/Noctalia-Jellyfin-Browser/</link>
+      <description>
+        <![CDATA[<p><img src="/images/jellyfin-browser-thumbnail.webp"></p>
+<p>Jellyfinサーバに接続してライブラリをブラウズするNoctaliaプラグインを作成しました。MPVで再生します。</p>
+<p><a href="https://github.com/ktkr3d/noctalia-plugins">https://github.com/ktkr3d/noctalia-plugins</a><br><a href="https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser">https://github.com/ktkr3d/noctalia-plugins/tree/main/jellyfin-browser</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/jellyfin/">jellyfin</category>
+      <category domain="http://example.com/tags/noctalia/">noctalia</category>
+      <category domain="http://example.com/tags/mpv/">mpv</category>
+      <pubDate>Sun, 11 Oct 2026 22:15:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>Jellyfin MPV Shim</title>
+      <link>http://example.com/2026/10/08/Jellyfin-MPV-Shim/</link>
+      <description>
+        <![CDATA[<p><img src="/images/jellyfin-mpv-shim-git.png"></p>
+<p>Jellyfin MPV Shimは、高性能なメディアプレイヤー「MPV」をベースにした軽量な Jellyfin 用クライアントです。高速です。<br>最新版をインストールするためのPKGBUILDを作成しました。<br>また、MPRISで動画のカバーアートが表示されるようにMPRISスクリプトを配置しました。</p>
+<ul>
+<li><a href="https://github.com/jellyfin/jellyfin-mpv-shim">https://github.com/jellyfin/jellyfin-mpv-shim</a></li>
+<li><a href="https://github.com/ktkr3d/jellyfin-mpv-shim-git">https://github.com/ktkr3d/jellyfin-mpv-shim-git</a></li>
+<li><a href="https://github.com/ktkr3d/mpv-lua-mpris">https://github.com/ktkr3d/mpv-lua-mpris</a><br>forked from <a href="https://github.com/ruihe774/mpv-lua-mpris">ruihe774&#x2F;mpv-lua-mpris</a></li>
+</ul>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/jellyfin/">jellyfin</category>
+      <pubDate>Thu, 08 Oct 2026 05:27:02 GMT</pubDate>
+    </item>
+    <item>
+      <title>Arch Linux Hyprland Noctalia</title>
+      <link>http://example.com/2026/10/04/Arch-Linux-Hyprland-Noctalia/</link>
+      <description>
+        <![CDATA[<p>Arch Linux &#x2F; Hyprlandの環境にNoctaliaを導入してみました。</p>
+<p><img src="/images/arch-hypr-noctalia.png"></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/hyprland/">hyprland</category>
+      <category domain="http://example.com/tags/noctalia/">noctalia</category>
+      <category domain="http://example.com/tags/arch/">arch</category>
+      <pubDate>Sun, 04 Oct 2026 06:32:33 GMT</pubDate>
+    </item>
+    <item>
+      <title>CachyOS Hyprland Noctalia</title>
+      <link>http://example.com/2026/09/25/CachyOS-Hyprland-Noctalia/</link>
+      <description>
+        <![CDATA[<p><img src="/images/cachyos-hyprland-noctalia.png"></p>
+<p>CachyOS Hyprland Noctaliaをインストールしました。<br>バーを右側に配置できてよいですね。<br>シェルはfishでした。パッケージ管理はshellyでした。<br>メイン環境にしてもよいかもしれないです。</p>
+<ul>
+<li>CachyOS<br>  <a href="https://cachyos.org/">https://cachyos.org/</a></li>
+<li>Noctalia<br>  <a href="https://noctalia.dev/">https://noctalia.dev/</a><br>  <a href="https://github.com/CachyOS/cachyos-hypr-noctalia">https://github.com/CachyOS/cachyos-hypr-noctalia</a></li>
+<li>HyprMod<br>  <a href="https://github.com/BlueManCZ/hyprmod">https://github.com/BlueManCZ/hyprmod</a></li>
+</ul>
+<h3 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h3><h4 id="Noctaliaコントロールセンタ"><a href="#Noctaliaコントロールセンタ" class="headerlink" title="Noctaliaコントロールセンタ"></a>Noctaliaコントロールセンタ</h4><p><kbd>Super</kbd>+<kbd>X</kbd>でホーム画面、<kbd>Super</kbd>+<kbd>A</kbd>で通知画面<br><img src="/images/noctalia-panel.png"></p>
+<h4 id="Noctalia設定画面"><a href="#Noctalia設定画面" class="headerlink" title="Noctalia設定画面"></a>Noctalia設定画面</h4><p><kbd>Super</kbd>+<kbd>Z</kbd><br><img src="/images/cachyos-hyprland-noctalia_ja.png"></p>
+<h4 id="壁紙選択"><a href="#壁紙選択" class="headerlink" title="壁紙選択"></a>壁紙選択</h4><p><kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd><br><img src="/images/noctalia-wallpapers.png"></p>
+<h4 id="タイリング表示"><a href="#タイリング表示" class="headerlink" title="タイリング表示"></a>タイリング表示</h4><p><img src="/images/hyprland-tiling.png"></p>
+<h4 id="HyprMod"><a href="#HyprMod" class="headerlink" title="HyprMod"></a>HyprMod</h4><p>HyprlandをGUIで設定します。<br><kbd>Super</kbd>+<kbd>M</kbd>にバインドしました。<br><img src="/images/hyprmod.png"></p>
+<h4 id="スクリプトランチャ"><a href="#スクリプトランチャ" class="headerlink" title="スクリプトランチャ"></a>スクリプトランチャ</h4><p>Noctaliaランチャのdmenu機能を利用したスクリプトランチャを作りました。<br><kbd>Super</kbd>+<kbd>K</kbd>にバインドしました。<br><img src="/images/noctalia-dmenu.png"></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/hyprland/">hyprland</category>
+      <category domain="http://example.com/tags/cachyos/">cachyos</category>
+      <category domain="http://example.com/tags/noctalia/">noctalia</category>
+      <category domain="http://example.com/tags/hyprmod/">hyprmod</category>
+      <pubDate>Thu, 24 Sep 2026 19:51:02 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hyper-Compressed Ocean</title>
+      <link>http://example.com/2026/09/21/Hyper-Compressed-Ocean/</link>
+      <description>
+        <![CDATA[<p><img src="https://wow.zamimg.com/uploads/screenshots/normal/852908-hyper-compressed-ocean.jpg"></p>
+<p><a href="https://www.wowhead.com/item=168016/hyper-compressed-ocean">Hyper-Compressed Ocean</a>（ハイパー圧縮オーシャン）は、オンラインゲーム『World of Warcraft（WoW）』に登場する、どこでも釣りができるようになる便利なおもちゃ（Toy）アイテムです。実績「<a href="https://www.wowhead.com/achievement=13502/secret-fish-and-where-to-find-them">Secret Fish and Where to Find Them</a>」を達成する（各地で隠し魚を30種類集める）ことで獲得できます。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <pubDate>Mon, 21 Sep 2026 02:07:34 GMT</pubDate>
+    </item>
+    <item>
+      <title>slidev-addon-google-charts</title>
+      <link>http://example.com/2026/09/05/slidev-addon-google-charts/</link>
+      <description>
+        <![CDATA[<p>Slidev用のGoogle Charts用アドオンを作成してみました。</p>
+<ul>
+<li><a href="https://github.com/ktkr3d/slidev-addon-google-charts">https://github.com/ktkr3d/slidev-addon-google-charts</a></li>
+<li><a href="https://sli.dev/">https://sli.dev/</a></li>
+<li><a href="https://developers.google.com/chart">https://developers.google.com/chart</a></li>
+</ul>
+<p>アドオンのテストをしながら、オリジナルのスライドテーマを作るのが楽しい。</p>
+<ul>
+<li>レイアウト例のスライド<br>  <a href="https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground">https://github.com/ktkr3d/slidev-addon-google-charts/tree/main/playground</a></li>
+<li>レイアウト例 （＋スライドテンプレート）  
+
+	<div class="row">
+    <embed src="/images/slidev_addon_google_charts.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+</li>
+</ul>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/slidev/">slidev</category>
+      <category domain="http://example.com/tags/google-charts/">google-charts</category>
+      <pubDate>Sat, 05 Sep 2026 02:21:16 GMT</pubDate>
+    </item>
+    <item>
+      <title>Slidev - Google Charts</title>
+      <link>http://example.com/2026/09/04/Slidev-Google-Charts/</link>
+      <description>
+        <![CDATA[<p><img src="/images/slides_googlecharts-export_1.png"></p>
+<p>SlidevでGoogl Chartsのグラフをスライドにしてみました。</p>
+<p><a href="https://sli.dev/">https://sli.dev/</a><br><a href="https://developers.google.com/chart">https://developers.google.com/chart</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/slidev/">slidev</category>
+      <category domain="http://example.com/tags/googlecharts/">googlecharts</category>
+      <pubDate>Thu, 03 Sep 2026 19:56:28 GMT</pubDate>
+    </item>
+    <item>
+      <title>GeoChart SVG image</title>
+      <link>http://example.com/2026/08/31/GeoChart-SVG-image/</link>
+      <description>
+        <![CDATA[<p><img src="/images/geochart-world.svg"></p>
+<p>Google ChartsのGeoChartで作成した地図をSVGファイル化してみます。</p>
+<p><a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">https://developers.google.com/chart/interactive/docs/gallery/geochart</a></p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/marp/">marp</category>
+      <category domain="http://example.com/tags/google-charts/">google-charts</category>
+      <pubDate>Mon, 31 Aug 2026 09:49:43 GMT</pubDate>
+    </item>
+    <item>
+      <title>Quickshell automatic rebuild</title>
+      <link>http://example.com/2026/08/27/quickshell-automatic-rebuild/</link>
+      <description>
+        <![CDATA[<p>Qt6を最新化したらquickshellが起動しなくなりました。quickshellとQt6の整合性が崩れたことが原因なのでQt6の更新と連動してquickshellをリビルドするようにしてみました。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/qt6/">qt6</category>
+      <category domain="http://example.com/tags/quickshell/">quickshell</category>
+      <pubDate>Wed, 26 Aug 2026 23:36:50 GMT</pubDate>
+    </item>
+    <item>
+      <title>WoW OnUseGear Addon</title>
+      <link>http://example.com/2026/08/15/WoW-OnUseGear-Addon/</link>
+      <description>
+        <![CDATA[<p><img src="/images/onusegear.png"><br><a href="https://github.com/ktkr3d/OnUseGear">https://github.com/ktkr3d/OnUseGear</a></p>
+<p>装備しているアイテムの中で使用(<code>Use</code>)できるものをアクションボタン化するアドオンを作成しました。<br>対象はトリンケットだけではなく、武器や防具で使用できるものを含めて自動的に列挙します。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <category domain="http://example.com/tags/addon/">addon</category>
+      <pubDate>Sat, 15 Aug 2026 09:00:28 GMT</pubDate>
+    </item>
+    <item>
+      <title>SSF</title>
+      <link>http://example.com/2026/08/12/SSF/</link>
+      <description>
+        <![CDATA[<p><img src="/images/vf2_keyassign.png"><br>SSFでセガサターンのゲームを遊んでみました。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/ssf/">ssf</category>
+      <category domain="http://example.com/tags/vf2/">vf2</category>
+      <pubDate>Tue, 11 Aug 2026 18:55:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>WoW Keybinding</title>
+      <link>http://example.com/2026/08/11/WoW-Keybinding/</link>
+      <description>
+        <![CDATA[<p><img src="/images/wow_keybinding.png"><br>Bellularのキーバインドガイドが新しくなっていたので適用してみました。各クラス&#x2F;スペックのおすすめキーバインドを取り込むことができます。<br>また、各クラス&#x2F;スペック間で統一されたキーバインドを実現できます。例えば、防御強化系は<kbd>Z</kbd>、移動加速系は<kbd>X</kbd>、妨害系は<kbd>C</kbd>、インタラプト系は<kbd>V</kbd>、ヒール系は<kbd>Ctrl</kbd>+<kbd>1</kbd>、等。</p>
+<ul>
+<li>アドオン<br>  <a href="https://www.curseforge.com/wow/addons/keybinding">https://www.curseforge.com/wow/addons/keybinding</a></li>
+<li>Webツール<br>  <a href="https://keybinding.bellular.games/">https://keybinding.bellular.games/</a></li>
+</ul>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <pubDate>Tue, 11 Aug 2026 08:53:47 GMT</pubDate>
+    </item>
+    <item>
+      <title>oUF MyLayout Addon v0.3.0</title>
+      <link>http://example.com/2026/08/09/oUF-MyLayout-Addon-v0-3-0/</link>
+      <description>
+        <![CDATA[<p><img src="/images/ouf_mylayout_v0.3.0.jpg"></p>
+<p><a]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/wow/">wow</category>
+      <category domain="http://example.com/tags/oUF/">oUF</category>
+      <pubDate>Sat, 08 Aug 2026 23:40:19 GMT</pubDate>
+    </item>
+    <item>
+      <title>Linux Cluster Monitor</title>
+      <link>http://example.com/2026/08/08/Linux-Cluster-Monitor/</link>
+      <description>
+        <![CDATA[<p><img src="/images/linux_cluster_monitor.png"></p>
+<p>自宅のLinux PCのシステム情報をfastfetchを使って収集して表示するダッシュボードを作ってみました。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/fastfetch/">fastfetch</category>
+      <pubDate>Sat, 08 Aug 2026 08:27:09 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

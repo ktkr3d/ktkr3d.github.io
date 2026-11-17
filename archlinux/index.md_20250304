@@ -1,0 +1,419 @@
+---
+title: Arch Linux
+date: 2024-07-25 21:53:20
+toc: true
+---
+
+### ディストリビューション
+
+- Arch Linux
+    https://archlinux.org/
+
+### スクリーンショット
+
+![](/images/archlinux_minibookx.png)
+
+### Arch Linuxのインストール
+#### インストーラISOファイルのダウンロード
+Arch Linux のGUI インストーラであるCalam Arch Installerを利用します。
+https://sourceforge.net/projects/blue-arch-installer/files/arch-installer/
+Calam-Arch-Installer-YYYY-MM.iso
+月に１回アップデートされます。
+タイミングによっては転送速度がかなり遅いので注意。
+
+#### USBメモリの作成(物理PCにインストールする場合)
+1. USB メモリにVentoyをセットアップ
+  https://ventoy.net/en/index.html
+  特に問題なければUEFIで。
+2. USBメモリにCalam Arch InstallerのISOファイルをコピー
+3. USB メモリからブートして、Calam Arch Installerを選択
+
+#### インストール
+1. Calam Arch Installer起動後にミラーを選択して保存
+    - Japan
+    - Include https mirrors
+2. ディスプレイの設定
+  左上のArchからSettings-Display
+3. Wi-Fi接続
+  タスクトレイの日付の隣のネットワークアイコン
+4. タスクバーから`Terminal Emulator`を選択して日本語フォントをインストール。
+    ```
+    sudo pacman -S otf-ipafont
+    ```
+    これでインストーラの日本語が文字化けしなくなる。重要。
+    一時的利用なのでファイルサイズの小さいフォントで十分。
+5. タスクバーから`Install Arch Linux`を選択してインストールを実行。
+6. EFIパーティションを/boot/efiにマウント
+7. デスクトップ環境に`GNOME`を選択。
+8. パッケージは特に変更せずに継続。
+    - Base-devel + Common Packages
+    - GNOME-Desktop
+9. インストールが完了したら、メディアを取り外して再起動
+10. ログイン画面が文字化けしているが気にせずログイン
+11. Terminal を起動して日本語フォントをインストールして再起動
+    ```bash
+    LANG=C
+    sudo pacman -S noto-fonts-cjk
+    sudo reboot
+    ```
+
+### 環境設定
+
+#### paru(仮)とGoogle Chromeのインストール
+- paru
+  ```bash
+  git clone https://aur.archlinux.org/paru-bin.git
+  cd paru-bin
+  makepkg -si
+  ```
+- google-chrome
+  ```bash
+  paru -S google-chrome
+  ```
+
+#### VirtualboxのゲストOSの場合
+
+VirtualBoxの「デバイス」-「Guest Addition CDの挿入」メニューからメディアをマウントして導入する。
+`virtualbox-guest-utils`は一部の機能が即時有効にならないので使わない。
+
+#### ウィンドウに最小化/最大化ボタンを追加
+
+```bash
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+```
+
+#### ホームフォルダの設定
+
+```bash
+LANG=C xdg-user-dirs-gtk-update
+```
+各種フォルダを英語名に変更する
+
+#### テキストテンプレートファイルの作成
+```
+touch ~/Templates/Text
+```
+Nautilus上の右クリックで空のテキストファイルを作成できるようになる
+
+#### 基本パッケージの導入
+
+```bash
+sudo pacman -Syu
+sudo pacman -S fcitx5 fcitx5-im fcitx5-mozc git gnome-browser-connector vi
+```
+
+#### 日本語キーボードの場合の設定
+
+1. `fcitx5設定`を起動
+2. `キーボード - 英語(US)`を削除
+3. `Mozc`の前に`キーボード - 日本語(JP)`を追加
+4. `適用`または`OK`ボタンを押下！！重要
+
+#### paru (AUR) の導入
+
+```bash
+git clone https://aur.archlinux.org/paru-bin.git
+cd paru-bin
+makepkg -si
+```
+```ini ~/.config/paru/paru.conf
+[options]
+SudoLoop
+SkipReview
+```
+```ini ~/.makepkg.conf
+MAKEFLAGS="-j $(nproc)"
+```
+
+#### マルチブート時の時刻ズレ調整(物理PCにインストールする場合)
+
+```bash
+sudo timedatectl set-local-rtc true
+```
+
+#### fish & starship
+https://ktkr3d.github.io/2024/10/17/fish_starship/
+
+#### エイリアスの設定
+
+```bash ~/.config/fish/config.fish
+alias l='ls'
+alias upd='sudo pacman -Syyu; paru; fisher update'
+```
+
+#### Yaru テーマ(アイコン、GTK、GNOME Shell)の導入
+
+```
+paru -S yaru-icon-theme yaru-gtk-theme yaru-gnome-shell-theme
+```
+
+#### GDMの解像度/向きをユーザセッションの解像度と同じにする
+
+```bash
+sudo cp ~/.config/monitors.xml /var/lib/gdm/.config/monitors.xml
+sudo chown gdm:gdm /var/lib/gdm/.config/monitors.xml
+```
+
+#### nVIdiaのグラフィクスカードの場合
+- Arch Linux NVIDIA drivers installation guide
+  https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
+
+#### Lutiris
+- INSTALLING CLASSIC OR RETAIL WOW IN LINUX (Manjaro/Arch Edition)
+  https://www.reddit.com/r/classicwow/comments/colnzr/installing_classic_or_retail_wow_in_linux/
+
+#### Fastfetch
+https://ktkr3d.github.io/2024/08/01/Fastfetch/?highlight=fast
+
+#### vi
+```bash ~/.exrc
+set showmode
+set number
+set ruler
+set title
+set showcmd
+```
+
+#### RDP Server
+
+```bash
+sudo pacman -S xorg-xinit
+paru -S xrdp xorgxrdp-glamor pulseaudio-module-xrdp 
+sudo systemctl enable xrdp
+sudo systemctl restart xrdp
+```
+```bash ~/.xinitrc
+#unset DBUS_SESSION_BUS_ADDRESS
+exec gnome-session
+```
+同時接続不可。すでにログインしているとセッションがすぐに切れる。要調査。
+
+#### SMB
+```bash
+sudo pacman -S samba
+sudo wget "https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf.default;hb=HEAD" -O /etc/samba/smb.conf
+sudo pdbedit -a -u arch
+```
+```ini /etc/samba/smb.conf
+[global]
+#   log file = /usr/local/samba/var/log.%m
+   log file = /usr/log/samba/%m.%m
+
+[homes]
+   valid users = %S
+
+[share]
+path = /home/arch/Public
+read only = no
+browsable = yes
+writable = yes
+guest ok = yes
+```
+```bash
+sudo systemctl enable smb nmb
+sudo systemctl start smb nmb
+```
+
+#### ディスクの自動マウント
+  - `ディスク`アプリを開く
+  - 対象のパーティションを選択
+  - 歯車アイコンをクリック
+  - マウントオプションを編集
+  - ユーザセッションのデフォルトのチェックを外してOK
+
+#### sshd
+```bash
+sudo pacman -S openssh
+sudo systemctl enable sshd
+sudo systemctl start sshd
+```
+
+#### GDM 自動サスペンドの無効化
+```bash
+sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+```
+
+### GNOME Shell Exensions 設定
+
+https://extensions.gnome.org/
+
+#### Google Chrome拡張: GNOME Shell integrarion
+https://chromewebstore.google.com/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep?hl=ja
+
+#### Extension Manager
+```
+sudo pacman -S extension-manager
+```
+
+#### ArcMenu
+https://extensions.gnome.org/extension/3628/arcmenu/
+
+#### Argos
+https://extensions.gnome.org/extension/1176/argos/
+
+```bash
+git clone https://github.com/p-e-w/argos.git -b WIP-gnome-46
+cp -r argos/argos@pew.worldwidemann.com/ ~/.local/share/gnome-shell/extensions/
+```
+
+```bash ~/.config/argos/argos.sh
+#!/usr/bin/env bash
+
+URL="github.com/p-e-w/argos"
+DIR=$(dirname "$0")
+
+#echo "Argos"
+echo " | iconName=dialog-information-symbolic"
+echo "---"
+echo "$URL | iconName=help-faq-symbolic href='https://$URL'"
+echo "$DIR | iconName=folder-symbolic href='file://$DIR'"
+echo "Update Packages | iconName=software-update-available-symbolic bash='sudo pacman -Syyu; paru; exit'"
+```
+アイコンの名称
+https://github.com/StorageB/icons
+
+#### Caffein
+https://extensions.gnome.org/extension/517/caffeine/
+
+#### Customize clock on lock screen
+https://extensions.gnome.org/extension/4663/customize-clock-on-lock-screen/
+`%Y / %m / %d`
+
+#### Custom OSD
+https://extensions.gnome.org/extension/6142/custom-osd/
+https://ktkr3d.github.io/2024/08/04/Custom-OSD/
+
+#### Dash to Panel
+https://extensions.gnome.org/extension/1160/dash-to-panel/
+
+#### Forge
+https://extensions.gnome.org/extension/4481/forge/
+
+#### Panel Date Format
+https://extensions.gnome.org/extension/1462/panel-date-format/
+```bash
+dconf write /org/gnome/shell/extensions/panel-date-format/format "'%-m/%-d %a%n%H:%M'"
+```
+
+#### Input Method Panel
+https://extensions.gnome.org/extension/261/kimpanel/
+
+#### Space Bar
+https://extensions.gnome.org/extension/5090/space-bar/
+
+#### Wallpaper Slideshow
+https://extensions.gnome.org/extension/6281/wallpaper-slideshow/
+
+### アプリケーション
+
+#### Visual Studio Code 設定
+
+```bash
+paru -S visual-studio-code-bin
+```
+https://ktkr3d.github.io/Visual-Studio-Code/
+
+#### code-server 設定
+
+1. Google Chrome を起動
+2. CA証明書をインポート
+    [設定]-[プライバシーとセキュリティ]-[セキュリティ]-[証明書の管理]、[信頼されたルート証明機関]-[インポート]
+3. 対象サーバにHTTPSで接続
+4. アドレスの右にあるインストールボタンでPWA化
+
+#### Kodi 設定
+
+1. インストール
+    ```bash
+    sudo pacman -S kodi
+    ```
+2. キーマップ設定
+    ```xml ~/.kodi/userdata/keymaps/keyboard.xml
+    <keymap>
+      <global>
+        <keyboard>
+          <f12>ContextMenu</f12>
+          <f12 mod="shift">ActivateWindow(shutdownmenu)</f12>
+          <end>ActivateWindow(shutdownmenu)</end>
+        </keyboard>
+      </global>
+      <FullscreenVideo>
+        <keyboard>
+          <f12>Playlist</f12>
+        </keyboard>
+      </FullscreenVideo>
+    </keymap>
+    ```
+    - F12でコンテキストメニューを表示。`C`でも同様。
+    - Shift-F12で終了メニュー表示。`S`でも同様。
+
+#### Amazon MusicのPWA化
+
+1. Google Chrome でAmazon Music( https://music.amazon.co.jp/ )を開く
+2. 三点リーダから[保存と共有]-[ページをアプリとしてインストール...]
+
+### Wayland関連の拡張設定
+
+#### 分数スケーリングの有効化
+
+```bash
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+```
+
+#### Wayland モードのChrome/Electronで日本語入力する設定
+
+```bash
+paru -S mutter-text-input-v1
+```
+```
+衝突するパッケージがないか確認しています...
+:: mutter-text-input-v1-46.3.1-1 and mutter-46.3.1-1 are in conflict. Remove mutter? [y/N] y
+```
+なお、`Program /usr/bin/glib-mkenums found: NO`が出力される場合は以下を実行する。
+```
+sudo pacman -S glib2-devel
+```
+https://gitlab.archlinux.org/archlinux/packaging/packages/glib2/-/issues/7
+
+#### Google ChromeのWaylandモード起動設定
+
+```ini ~/.config/chrome-flags.conf
+--ozone-platform-hint=auto
+--wayland-text-input-version=3
+```
+
+#### Visual Studio CodeのWaylandモード起動設定
+
+```ini ~/.config/code-flags.conf
+--enable-features=WaylandWindowDecorations
+--ozone-platform-hint=auto
+--enable-wayland-ime
+```
+Waylandモードの場合、app_idやWMClassが適切に設定されないためタスクバーにピン留めした起動アイコンとは別のアプリケーションと認識されてしまう。
+https://github.com/microsoft/vscode/issues/154693
+
+#### Google Chrome設定
+- read.crx
+  ```css
+  article {
+  border-top: dotted 1px #000000 !important;
+  background-color: #FFFFEE !important;
+  }
+  ```
+- Stylus
+  ```css
+  /* ==UserStyle==
+  @name       qiita.com - 2024年4月
+  @version    20240412.21.28
+  @namespace  ?
+  ==/UserStyle== */
+
+  @-moz-document domain("qiita.com") {
+      .style-1y0vgst  {
+          display: none;
+      }
+      .style-5h0vi8 {
+          display: none;
+      }
+  }
+  ```

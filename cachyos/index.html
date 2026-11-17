@@ -1,0 +1,565 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>CachyOS | Memorandum!</title><meta name="author" content="ktkr3d"><meta name="copyright" content="ktkr3d"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="構成 CachyOS  https:&#x2F;&#x2F;cachyos.org&#x2F; Noctalia  https:&#x2F;&#x2F;noctalia.dev&#x2F;  https:&#x2F;&#x2F;github.com&#x2F;CachyOS&#x2F;cachyos-hypr-noctalia Noctalia Plugins  https:&#x2F;&#x2F;noctalia.dev&#x2F;plugins HyprMod  https:&#x2F;&#x2F;github.com&#x2F;BlueManCZ&#x2F;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CachyOS">
+<meta property="og:url" content="http://example.com/cachyos/index.html">
+<meta property="og:site_name" content="Memorandum!">
+<meta property="og:description" content="構成 CachyOS  https:&#x2F;&#x2F;cachyos.org&#x2F; Noctalia  https:&#x2F;&#x2F;noctalia.dev&#x2F;  https:&#x2F;&#x2F;github.com&#x2F;CachyOS&#x2F;cachyos-hypr-noctalia Noctalia Plugins  https:&#x2F;&#x2F;noctalia.dev&#x2F;plugins HyprMod  https:&#x2F;&#x2F;github.com&#x2F;BlueManCZ&#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/avatar.png">
+<meta property="article:published_time" content="2026-11-15T23:26:29.000Z">
+<meta property="article:modified_time" content="2026-11-16T23:08:00.055Z">
+<meta property="article:author" content="ktkr3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://example.com/cachyos/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-MG6LWTJBY0"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-MG6LWTJBY0')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-MG6LWTJBY0', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CachyOS',
+  isHighlightShrink: undefined,
+  isToc: true,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><script type="text/javascript" src="//www.google.com/jsapi"></script><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/rss.xml" title="Memorandum!" type="application/rss+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-color: rgb(227, 233, 199);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">518</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">224</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/cachyos/"><i class="fa-fw fa-solid fa-c"></i><span> CachyOS</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Memorandum!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> Pages</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li><li><a class="site-page child" href="/archlinux/"><i class="fa-fw fa-solid fa-a"></i><span> Arch Linux</span></a></li><li><a class="site-page child" href="/cachyos/"><i class="fa-fw fa-solid fa-c"></i><span> CachyOS</span></a></li><li><a class="site-page child" href="/hexo/"><i class="fa-fw fa-solid fa-h"></i><span> Hexo</span></a></li><li><a class="site-page child" href="/To-Do/"><i class="fa-fw fa-solid fa-list"></i><span> To Do</span></a></li><li><a class="site-page child" href="/Visual-Studio-Code/"><i class="fa-fw fa-solid fa-code"></i><span> Visual Studio Code</span></a></li><li><a class="site-page child" href="/World-of-Warcraft/"><i class="fa-fw fa-solid fa-gamepad"></i><span> World of Warcraft</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">CachyOS</h1></header><main class="layout" id="content-inner"><div id="page"><div class="page-title">CachyOS</div><div class="container" id="article-container"><h3 id="構成"><a href="#構成" class="headerlink" title="構成"></a>構成</h3><ul>
+<li>CachyOS<br>  <a target="_blank" rel="noopener" href="https://cachyos.org/">https://cachyos.org/</a></li>
+<li>Noctalia<br>  <a target="_blank" rel="noopener" href="https://noctalia.dev/">https://noctalia.dev/</a><br>  <a target="_blank" rel="noopener" href="https://github.com/CachyOS/cachyos-hypr-noctalia">https://github.com/CachyOS/cachyos-hypr-noctalia</a></li>
+<li>Noctalia Plugins<br>  <a target="_blank" rel="noopener" href="https://noctalia.dev/plugins">https://noctalia.dev/plugins</a></li>
+<li>HyprMod<br>  <a target="_blank" rel="noopener" href="https://github.com/BlueManCZ/hyprmod">https://github.com/BlueManCZ/hyprmod</a></li>
+</ul>
+<h3 id="スクリーンショット"><a href="#スクリーンショット" class="headerlink" title="スクリーンショット"></a>スクリーンショット</h3><h4 id="Noctaliaコントロールセンタ"><a href="#Noctaliaコントロールセンタ" class="headerlink" title="Noctaliaコントロールセンタ"></a>Noctaliaコントロールセンタ</h4><p><kbd>Super</kbd>+<kbd>X</kbd>でホーム画面、<kbd>Super</kbd>+<kbd>A</kbd>で通知画面<br><img src="/images/noctalia-panel.png"></p>
+<h4 id="Noctalia設定画面"><a href="#Noctalia設定画面" class="headerlink" title="Noctalia設定画面"></a>Noctalia設定画面</h4><p><kbd>Super</kbd>+<kbd>Z</kbd><br><img src="/images/cachyos-hyprland-noctalia_ja.png"></p>
+<h4 id="壁紙選択"><a href="#壁紙選択" class="headerlink" title="壁紙選択"></a>壁紙選択</h4><p><kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd><br><img src="/images/noctalia-wallpapers.png"></p>
+<h4 id="タイリング表示"><a href="#タイリング表示" class="headerlink" title="タイリング表示"></a>タイリング表示</h4><p><img src="/images/hyprland-tiling.png"></p>
+<h4 id="HyprMod"><a href="#HyprMod" class="headerlink" title="HyprMod"></a>HyprMod</h4><p>HyprlandをGUIで設定します。<br><kbd>Super</kbd>+<kbd>M</kbd>にバインドしました。<br><img src="/images/hyprmod.png"></p>
+<h3 id="CachyOSの設定"><a href="#CachyOSの設定" class="headerlink" title="CachyOSの設定"></a>CachyOSの設定</h3><h4 id="ダウンロード"><a href="#ダウンロード" class="headerlink" title="ダウンロード"></a>ダウンロード</h4><p><a target="_blank" rel="noopener" href="https://cachyos.org/">https://cachyos.org/</a> からISOイメージをダウンロードしてインストールメディアを作成します。私は<a target="_blank" rel="noopener" href="https://www.ventoy.net/">Ventoy</a>を使いました。</p>
+<h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><ul>
+<li>ブートローダは<a target="_blank" rel="noopener" href="https://github.com/limine-bootloader/limine">Limine</a>を選択</li>
+<li>Limine用パーティション(8GB, fat32, &#x2F;boot)</li>
+<li>CachyOS用パーティション(400GB, btrfs, &#x2F;)  <div id="googleChart1313"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': ["corechart","geochart","table"]});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.BarChart(document.getElementById("googleChart1313"))).draw(google.visualization.arrayToDataTable([['Name', 'EFI', 'Windows', 'Limine', 'CachyOS'],['変更前', 1, 1999, 0, 0],['変更後', 1, 1591, 8, 400]]),{"isStacked":true,"legend":{"position":"top"},"hAxis":{"viewWindow":{"max":2000}},"title":" ","width":"100%","height":"100%"});
+      });
+    })();
+  }
+</script></li>
+<li>WM&#x2F;DE はHyprlandを選択</li>
+<li>既存のNTFSのリサイズでエラーが発生する場合はNTFSを<code>CHKDSK /f</code></li>
+</ul>
+<h4 id="ユーザディレクトリ"><a href="#ユーザディレクトリ" class="headerlink" title="ユーザディレクトリ"></a>ユーザディレクトリ</h4><ul>
+<li>ユーザディレクトリを英語名に変更  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LANG=C xdg-user-dirs-update --force</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="パッケージ管理"><a href="#パッケージ管理" class="headerlink" title="パッケージ管理"></a>パッケージ管理</h4><ul>
+<li>shelly<br>  GUI版からAURとflatpakを有効化</li>
+</ul>
+<h3 id="Hyprlandの設定"><a href="#Hyprlandの設定" class="headerlink" title="Hyprlandの設定"></a>Hyprlandの設定</h3><p>HyprModで設定します。</p>
+<h4 id="ディスプレイ-Monitors"><a href="#ディスプレイ-Monitors" class="headerlink" title="ディスプレイ (Monitors)"></a>ディスプレイ (Monitors)</h4><ul>
+<li>必要に応じて解像度、拡大率等を変更</li>
+</ul>
+<h4 id="キーボード-Devices-Keyboard"><a href="#キーボード-Devices-Keyboard" class="headerlink" title="キーボード (Devices &gt; Keyboard)"></a>キーボード (Devices &gt; Keyboard)</h4><ul>
+<li>事前準備  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S gnome-desktop-4</span><br></pre></td></tr></table></figure></li>
+<li>日本語キーボードの追加<br>  <code>Keyboard layouts</code>のAdd layoutで<code>jp Default</code>を追加した後で<code>jp</code>を一番上にドラッグ</li>
+</ul>
+<h4 id="マウスカーソル-Cursor"><a href="#マウスカーソル-Cursor" class="headerlink" title="マウスカーソル (Cursor)"></a>マウスカーソル (Cursor)</h4><ul>
+<li>マウスカーソルのテーマをAdwaitaに変更<br>  <code>Theme &gt; Cursor</code>で<code>Adwaita</code>を選択<br>  <code>General</code> &gt; <code>Enable HyprCousor</code> をオフ</li>
+</ul>
+<h4 id="自動起動-Autostart"><a href="#自動起動-Autostart" class="headerlink" title="自動起動 (Autostart)"></a>自動起動 (Autostart)</h4><ul>
+<li>fcitx5を自動起動に追加  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fcitx5 -d</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="環境変数-Env-Variables"><a href="#環境変数-Env-Variables" class="headerlink" title="環境変数 (Env Variables)"></a>環境変数 (Env Variables)</h4><ul>
+<li><p>fcitx関連の環境変数を追加</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">XMODIFIERS</td>
+<td align="left">@im&#x3D;fcitx</td>
+</tr>
+<tr>
+<td align="left">QT_IM_MODULE</td>
+<td align="left">fcitx</td>
+</tr>
+<tr>
+<td align="left">GTK_IM_MODULE</td>
+<td align="left">fcitx</td>
+</tr>
+<tr>
+<td align="left">TERM</td>
+<td align="left">linux</td>
+</tr>
+<tr>
+<td align="left">TERMINAL</td>
+<td align="left">kitty</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="その他-Miscellaneous-Startup"><a href="#その他-Miscellaneous-Startup" class="headerlink" title="その他 (Miscellaneous &gt; Startup)"></a>その他 (Miscellaneous &gt; Startup)</h4><ul>
+<li>Hyprland起動時の表示を無効化<br>  Disable Hypyland logo : on<br>  Disable splash rendering : on</li>
+</ul>
+<h4 id="キーバインド-Keybinds"><a href="#キーバインド-Keybinds" class="headerlink" title="キーバインド (Keybinds)"></a>キーバインド (Keybinds)</h4><ul>
+<li><p>キーバインドの表示と変更（⭐：よく使うもの）</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mod</th>
+<th align="left">+ Key(s)</th>
+<th align="left">Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><kbd>Super</kbd></td>
+<td align="left"><kbd>Enter</kbd></td>
+<td align="left">kitty</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>E</kbd>⭐</td>
+<td align="left">thunar</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>T</kbd>⭐</td>
+<td align="left">kitty</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>C</kbd>⭐</td>
+<td align="left">code</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>W</kbd>⭐</td>
+<td align="left">google chrome</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>Z</kbd>⭐</td>
+<td align="left">noctalia settings</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>X</kbd></td>
+<td align="left">noctalia control-center</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>Space</kbd>⭐</td>
+<td align="left">launcher</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>.</kbd></td>
+<td align="left">launcher &#x2F;emo</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>L</kbd></td>
+<td align="left">lock</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>ALT</kbd>+<kbd>C</kbd></td>
+<td align="left">session menu</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>SHIFT</kbd>+<kbd>W</kbd></td>
+<td align="left">wallpaper</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>V</kbd>⭐</td>
+<td align="left">clipboard</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>A</kbd></td>
+<td align="left">notification</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>Q</kbd>⭐</td>
+<td align="left">close window</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>ALT</kbd>+<kbd>Space</kbd></td>
+<td align="left">floating</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>D</kbd>⭐</td>
+<td align="left">fullscreen (mode&#x3D;1)</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>F</kbd></td>
+<td align="left">fullscreen</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>J</kbd></td>
+<td align="left">split</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>SHIFT</kbd> + <kbd>S</kbd>⭐</td>
+<td align="left">special workspace</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>S</kbd>⭐</td>
+<td align="left">scratchpad</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"><kbd>M</kbd>⭐</td>
+<td align="left">hyprmod</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="Noctaliaの設定"><a href="#Noctaliaの設定" class="headerlink" title="Noctaliaの設定"></a>Noctaliaの設定</h3><p>Noctaliaの設定機能を使います。<br><kbd>Super</kbd>+<kbd>Z</kbd>で起動します。</p>
+<h4 id="テンプレート"><a href="#テンプレート" class="headerlink" title="テンプレート"></a>テンプレート</h4><ul>
+<li>内蔵 &gt; GTK 3のチェックをオフ  <div class="note info flat"><p>Thunarの色が不自然になったためワークアラウンド</p>
+</div></li>
+</ul>
+<h4 id="ロック画面"><a href="#ロック画面" class="headerlink" title="ロック画面"></a>ロック画面</h4><ul>
+<li>ウィジェットでロック画面に時計やカレンダーを配置</li>
+</ul>
+<h4 id="OSD"><a href="#OSD" class="headerlink" title="OSD"></a>OSD</h4><ul>
+<li>種類から変更<br>  キーボード配列: off</li>
+</ul>
+<h4 id="バー-default"><a href="#バー-default" class="headerlink" title="バー :default"></a>バー :default</h4><ul>
+<li>バーを右に配置<br>  General &gt; position : right</li>
+<li>ウィジェットの配置カスタマイズ<br>  Widget List で各ウィジェットの有無と位置を設定<br>  各ウィジェットの設定は各ギアボタンを押下</li>
+<li>clockウィジェットの日付時刻書式変更  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;:%m %d %a %H %M&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Noctalia-Pluginsの設定"><a href="#Noctalia-Pluginsの設定" class="headerlink" title="Noctalia Pluginsの設定"></a>Noctalia Pluginsの設定</h3><p><kbd>super</kbd> + <kbd>Z</kbd></p>
+<ul>
+<li>Plugins</li>
+<li>bar: default &gt; widget list</li>
+</ul>
+<h4 id="Bookmarks-コミュニティ"><a href="#Bookmarks-コミュニティ" class="headerlink" title="Bookmarks (コミュニティ)"></a>Bookmarks (コミュニティ)</h4><ul>
+<li>JSON形式で保存される。  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/.local/state/noctalia/plugins/data/dunarand/bookmarks/data.json</span><br></pre></td></tr></table></figure></li>
+<li>整形して編集するコマンド  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">TARGET_FILE=<span class="string">&quot;<span class="variable">$HOME</span>/.local/state/noctalia/plugins/data/dunarand/bookmarks/data.json&quot;</span> ; jq <span class="string">&#x27;.&#x27;</span> <span class="string">&quot;<span class="variable">$TARGET_FILE</span>&quot;</span> &gt; tmp.json &amp;&amp; <span class="built_in">mv</span> tmp.json <span class="string">&quot;<span class="variable">$TARGET_FILE</span>&quot;</span> &amp;&amp; code <span class="string">&quot;<span class="variable">$TARGET_FILE</span>&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>glyphの変更<br>  ファイルを編集する。利用できるグリフは以下を参照。<br>  <a target="_blank" rel="noopener" href="https://tabler.io/icons">https://tabler.io/icons</a></li>
+<li>デスクトップアプリの起動コマンド  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gio launch /usr/share/applications/XXXxxx.desktop</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gio launch <span class="variable">$HOME</span>/.local/share/applications/XXXxxx.desktop</span><br></pre></td></tr></table></figure></li>
+<li>リモートのディレクトリをThunarで開くコマンド  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gio launch /usr/share/applications/thunar.desktop sftp://USER@HOSTNAME/PATH/TO/TARGET</span><br></pre></td></tr></table></figure>
+  または  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">thunar sftp://USER@HOSTNAME/PATH/TO/TARGET &amp;</span><br></pre></td></tr></table></figure></li>
+<li>リモートのディレクトリをvscodeで開くコマンド  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">code --remote ssh-remote+HOSTNAME /PATH/TO/TARGET</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="Notes-公式"><a href="#Notes-公式" class="headerlink" title="Notes (公式)"></a>Notes (公式)</h4><ul>
+<li>格納フォルダ<br>  ~&#x2F;Documents&#x2F;Notes&#x2F;</li>
+</ul>
+<h3 id="パッケージの設定"><a href="#パッケージの設定" class="headerlink" title="パッケージの設定"></a>パッケージの設定</h3><h4 id="パッケージの追加"><a href="#パッケージの追加" class="headerlink" title="パッケージの追加"></a>パッケージの追加</h4><ul>
+<li>fcitx5-im fcitx5-mozc fcitx5-configtool</li>
+<li>fish-pure-promt</li>
+<li>google-chrome</li>
+<li>hyprmod</li>
+<li>jellyfin-mpv-shim</li>
+<li>kodi</li>
+<li>noto-fonts noto-fonts-cjk</li>
+<li>nwg-look</li>
+<li>papirus-icon-theme</li>
+<li>remmina freerdp</li>
+<li>steam</li>
+<li>thunar gvfs-smb thunar-archive-plugin file-roller</li>
+<li>ttf-hackgen</li>
+<li>vi</li>
+<li>visual-studio-code-bin</li>
+</ul>
+<h4 id="fastfetch"><a href="#fastfetch" class="headerlink" title="fastfetch"></a>fastfetch</h4><ul>
+<li>テーマ指定  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.config/fastfetch</span><br><span class="line"><span class="built_in">cd</span> ~/.config/fastfetch</span><br><span class="line">curl -O https://gist.githubusercontent.com/ktkr3d/40805f88c7c72e67d9da5e28d5118fa8/raw/5667511376bad868192f54a49b8c4c87050c5d27/config.jsonc</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="fish"><a href="#fish" class="headerlink" title="fish"></a>fish</h4><ul>
+<li>alias  <figure class="highlight bash"><figcaption><span>~/.config/fish/config.fish</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> l=<span class="string">&#x27;ls&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>fish-pure-prompt</li>
+<li>カレントディレクトリ、SSH指定の色を補正</li>
+</ul>
+<h4 id="kitty"><a href="#kitty" class="headerlink" title="kitty"></a>kitty</h4><ul>
+<li>フォント指定  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kitty +list-fonts</span><br></pre></td></tr></table></figure>
+  <code>Hackgen Console NF</code>を選択する</li>
+<li>テーマ指定  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kitten themes</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="nwg-look"><a href="#nwg-look" class="headerlink" title="nwg-look"></a>nwg-look</h4><ul>
+<li>アイコンをpapirus-dark</li>
+</ul>
+<h4 id="thunar"><a href="#thunar" class="headerlink" title="thunar"></a>thunar</h4><ul>
+<li>thunarに閉じるボタン追加<br>  編集 &gt; 設定 &gt; カスタムウィンドウ装飾を使用する : オン</li>
+<li>デフォルトファイルマネージャ化<br>  xdg-mime default thunar.desktop inode&#x2F;directory<br>  それでもdolphinが開いてしまう場合は</li>
+<li>スタイル<br>  .config&#x2F;gtk-3.0&#x2F;gtk.css  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import url(&quot;thunar.css&quot;);</span><br></pre></td></tr></table></figure>
+  .config&#x2F;gtk-3.0&#x2F;thunar.css  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.thunar .sidebar treeview.view &#123;</span><br><span class="line">  padding-top: 3px;</span><br><span class="line">  padding-bottom: 3px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.thunar .sidebar &#123;</span><br><span class="line">  padding: 4px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>ツールバー<br>  表示 &gt; ツールバーを設定…</li>
+</ul>
+<h4 id="デスクトップアプリ"><a href="#デスクトップアプリ" class="headerlink" title="デスクトップアプリ"></a>デスクトップアプリ</h4><ul>
+<li>Steam</li>
+<li>Minecraft</li>
+</ul>
+<h3 id="サービス"><a href="#サービス" class="headerlink" title="サービス"></a>サービス</h3><h4 id="Jellyfin"><a href="#Jellyfin" class="headerlink" title="Jellyfin"></a>Jellyfin</h4><h4 id="EPGStation"><a href="#EPGStation" class="headerlink" title="EPGStation"></a>EPGStation</h4></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ktkr3d</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">518</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">224</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">31</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ktkr3d"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ktkr3d" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://gist.github.com/ktkr3d" target="_blank" title="Gist"><i class="fas fa-code" style="color: #24292e;"></i></a><a class="social-icon" href="https://x.com/ktkr3d" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A7%8B%E6%88%90"><span class="toc-number">1.</span> <span class="toc-text">構成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88"><span class="toc-number">2.</span> <span class="toc-text">スクリーンショット</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Noctalia%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%82%BB%E3%83%B3%E3%82%BF"><span class="toc-number">2.1.</span> <span class="toc-text">Noctaliaコントロールセンタ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Noctalia%E8%A8%AD%E5%AE%9A%E7%94%BB%E9%9D%A2"><span class="toc-number">2.2.</span> <span class="toc-text">Noctalia設定画面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A3%81%E7%B4%99%E9%81%B8%E6%8A%9E"><span class="toc-number">2.3.</span> <span class="toc-text">壁紙選択</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%BF%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%B0%E8%A1%A8%E7%A4%BA"><span class="toc-number">2.4.</span> <span class="toc-text">タイリング表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HyprMod"><span class="toc-number">2.5.</span> <span class="toc-text">HyprMod</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CachyOS%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">3.</span> <span class="toc-text">CachyOSの設定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89"><span class="toc-number">3.1.</span> <span class="toc-text">ダウンロード</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><span class="toc-number">3.2.</span> <span class="toc-text">インストール</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA"><span class="toc-number">3.3.</span> <span class="toc-text">ユーザディレクトリ</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%AE%A1%E7%90%86"><span class="toc-number">3.4.</span> <span class="toc-text">パッケージ管理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hyprland%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">4.</span> <span class="toc-text">Hyprlandの設定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4-Monitors"><span class="toc-number">4.1.</span> <span class="toc-text">ディスプレイ (Monitors)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89-Devices-Keyboard"><span class="toc-number">4.2.</span> <span class="toc-text">キーボード (Devices &gt; Keyboard)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%9E%E3%82%A6%E3%82%B9%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB-Cursor"><span class="toc-number">4.3.</span> <span class="toc-text">マウスカーソル (Cursor)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8B%95%E8%B5%B7%E5%8B%95-Autostart"><span class="toc-number">4.4.</span> <span class="toc-text">自動起動 (Autostart)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0-Env-Variables"><span class="toc-number">4.5.</span> <span class="toc-text">環境変数 (Env Variables)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%81%9D%E3%81%AE%E4%BB%96-Miscellaneous-Startup"><span class="toc-number">4.6.</span> <span class="toc-text">その他 (Miscellaneous &gt; Startup)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%AD%E3%83%BC%E3%83%90%E3%82%A4%E3%83%B3%E3%83%89-Keybinds"><span class="toc-number">4.7.</span> <span class="toc-text">キーバインド (Keybinds)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Noctalia%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">5.</span> <span class="toc-text">Noctaliaの設定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88"><span class="toc-number">5.1.</span> <span class="toc-text">テンプレート</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%AD%E3%83%83%E3%82%AF%E7%94%BB%E9%9D%A2"><span class="toc-number">5.2.</span> <span class="toc-text">ロック画面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OSD"><span class="toc-number">5.3.</span> <span class="toc-text">OSD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%90%E3%83%BC-default"><span class="toc-number">5.4.</span> <span class="toc-text">バー :default</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Noctalia-Plugins%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">6.</span> <span class="toc-text">Noctalia Pluginsの設定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Bookmarks-%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3"><span class="toc-number">6.1.</span> <span class="toc-text">Bookmarks (コミュニティ)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Notes-%E5%85%AC%E5%BC%8F"><span class="toc-number">6.2.</span> <span class="toc-text">Notes (公式)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E8%A8%AD%E5%AE%9A"><span class="toc-number">7.</span> <span class="toc-text">パッケージの設定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0"><span class="toc-number">7.1.</span> <span class="toc-text">パッケージの追加</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fastfetch"><span class="toc-number">7.2.</span> <span class="toc-text">fastfetch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fish"><span class="toc-number">7.3.</span> <span class="toc-text">fish</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kitty"><span class="toc-number">7.4.</span> <span class="toc-text">kitty</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nwg-look"><span class="toc-number">7.5.</span> <span class="toc-text">nwg-look</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#thunar"><span class="toc-number">7.6.</span> <span class="toc-text">thunar</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%82%A2%E3%83%97%E3%83%AA"><span class="toc-number">7.7.</span> <span class="toc-text">デスクトップアプリ</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9"><span class="toc-number">8.</span> <span class="toc-text">サービス</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Jellyfin"><span class="toc-number">8.1.</span> <span class="toc-text">Jellyfin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EPGStation"><span class="toc-number">8.2.</span> <span class="toc-text">EPGStation</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/11/17/Syncthing/" title="Syncthing">Syncthing</a><time datetime="2026-11-17T11:45:42.000Z" title="Created 2026-11-17 20:45:42">2026-11-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/11/03/WoW-AutoGroupChat-Addon/" title="WoW AutoGroupChat Addon">WoW AutoGroupChat Addon</a><time datetime="2026-11-02T23:48:03.000Z" title="Created 2026-11-03 08:48:03">2026-11-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/31/World-of-Warcraft-Forever/" title="World of Warcraft Forever">World of Warcraft Forever</a><time datetime="2026-10-31T10:41:41.000Z" title="Created 2026-10-31 19:41:41">2026-10-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/28/Stability-Matrix-ComfyUI/" title="Stability Matrix - ComfyUI">Stability Matrix - ComfyUI</a><time datetime="2026-10-27T15:46:08.000Z" title="Created 2026-10-28 00:46:08">2026-10-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/25/Stability-Matrix-WebUI-reForge/" title="Stability Matrix - WebUI reForge">Stability Matrix - WebUI reForge</a><time datetime="2026-10-24T20:39:29.000Z" title="Created 2026-10-25 05:39:29">2026-10-25</time></div></div></div></div><div class="card-widget card-archives">
+    <div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a></div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/11/">
+            <span class="card-archive-list-date">
+              November 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/10/">
+            <span class="card-archive-list-date">
+              October 2026
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/09/">
+            <span class="card-archive-list-date">
+              September 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/08/">
+            <span class="card-archive-list-date">
+              August 2026
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/07/">
+            <span class="card-archive-list-date">
+              July 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/06/">
+            <span class="card-archive-list-date">
+              June 2026
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              May 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              April 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By ktkr3d</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="Search for Posts" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>
