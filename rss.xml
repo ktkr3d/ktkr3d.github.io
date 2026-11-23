@@ -5,7 +5,7 @@
     <link>http://example.com/</link>
     <language>en</language>
     <copyright>All rights reserved 2026, ktkr3d</copyright>
-    <lastBuildDate>Tue, 17 Nov 2026 12:08:24 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 07:55:01 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>http://example.com/icon.png</url>
@@ -14,11 +14,22 @@
     </image>
     <atom:link href="http://example.com/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Stability Matrix - ComfyUI (2)</title>
+      <link>http://example.com/2026/11/23/Stability-Matrix-ComfyUI-2/</link>
+      <description>
+        <![CDATA[<p><img src="/images/ComfyUI_00057_.png"></p>
+<p>CachyOSに環境を移行しました。</p>]]>
+      </description>
+      <author>ktkr3d</author>
+      <category domain="http://example.com/tags/comfyui/">comfyui</category>
+      <pubDate>Mon, 23 Nov 2026 00:24:26 GMT</pubDate>
+    </item>
+    <item>
       <title>Syncthing</title>
       <link>http://example.com/2026/11/17/Syncthing/</link>
       <description>
         <![CDATA[<p><img src="https://syncthing.net/img/logo-horizontal.svg"></p>
-<p>Syncthingは、中央のサーバーを介さず、デバイス同士を直接接続してファイルをリアルタイムに自動同期する、無料のオープンソース・P2P（ピアツーピア）ファイル同期ソフトウェアです。</p>
+<p>Syncthingは、中央のサーバーを介さず、デバイス同士を直接接続してファイルをリアルタイムに自動同期する、無料のオープンソース・P2P（ピアツーピア）ファイル同期ソフトウェアです。<br>NoctaliaプラグインNotesのデータを複数のPCLAN間で同期してみました。</p>
 <p><a href="https://syncthing.net/">https://syncthing.net/</a></p>]]>
       </description>
       <author>ktkr3d</author>
@@ -285,17 +296,6 @@
       <category domain="http://example.com/tags/wow/">wow</category>
       <category domain="http://example.com/tags/oUF/">oUF</category>
       <pubDate>Sat, 08 Aug 2026 23:40:19 GMT</pubDate>
-    </item>
-    <item>
-      <title>Linux Cluster Monitor</title>
-      <link>http://example.com/2026/08/08/Linux-Cluster-Monitor/</link>
-      <description>
-        <![CDATA[<p><img src="/images/linux_cluster_monitor.png"></p>
-<p>自宅のLinux PCのシステム情報をfastfetchを使って収集して表示するダッシュボードを作ってみました。</p>]]>
-      </description>
-      <author>ktkr3d</author>
-      <category domain="http://example.com/tags/fastfetch/">fastfetch</category>
-      <pubDate>Sat, 08 Aug 2026 08:27:09 GMT</pubDate>
     </item>
   </channel>
 </rss>
